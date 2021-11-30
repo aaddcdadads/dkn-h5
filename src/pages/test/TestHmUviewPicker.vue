@@ -1,0 +1,78 @@
+<template>
+  <view>
+    <hm-uview-picker
+      :show="show1"
+      mode="time"
+      title="时间"
+      confirmText="确认"
+      confirmColor="#2979ff"
+      cancelText="取消"
+      :params="params1"
+      cancelColor="#606266"
+      :maskCloseAble="true"
+      :startYear="1950"
+      :endYear="2050"
+      :showTimeTag="true"
+    ></hm-uview-picker>
+    <u-button @click="show1 = !show1">打开</u-button>
+    <hm-uview-picker
+      :show="show2"
+      mode="region"
+      title="地区"
+      confirmText="确定"
+      confirmColor="red"
+      cancelText="取消"
+      :params="params2"
+      cancelColor="#2979ff"
+      :maskCloseAble="true"
+      :startYear="1950"
+      :endYear="2050"
+      :showTimeTag="true"
+    ></hm-uview-picker>
+    <u-button @click="show2 = !show2">打开</u-button>
+  </view>
+</template>
+
+<script>
+import HmUviewPicker from "@/components/built-in/HmUviewPicker.vue";
+
+export default {
+  components: { HmUviewPicker },
+  data() {
+    return {
+      show1: false,
+      show2: false,
+      params1: {
+        //时间参数
+        year: true,
+        month: true,
+        day: true,
+        hour: true,
+        minute: true,
+        second: true,
+        timestamp: true,
+        //地区参数
+        province: true,
+        city: true,
+        area: true,
+      },
+      params2: {
+        //时间参数
+        year: true,
+        month: true,
+        day: true,
+        hour: true,
+        minute: true,
+        second: true,
+        timestamp: true,
+        //地区参数
+        province: true,
+        city: true,
+        area: true,
+      }
+    };
+  },
+};
+</script>
+
+<style lang="less"></style>

@@ -1,0 +1,235 @@
+[
+    {
+        "id": 1,
+        "name": "布局",
+        "componentList": []
+    },
+    {
+        "id": 2,
+        "name": "容器组件",
+        "componentList": []
+    },
+    {
+        "id": 3,
+        "name": "导航组件",
+        "componentList": [
+            {
+                "name": "HmUviewNavbar",
+                "title": "顶部导航栏",
+                "importPath": "built-in/HmUviewNavbar",
+                "imgUrl": "built-in/img/HmUviewNavbar.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewTabbar",
+                "title": "底部导航栏",
+                "importPath": "built-in/HmUviewTabbar",
+                "imgUrl": "built-in/img/HmUviewTabbar.png",
+                "type": 0,
+                "isBuiltIn": true
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "表单组件",
+        "componentList": [
+            {
+                "name": "HmUviewButton",
+                "title": "按钮",
+                "importPath": "built-in/HmUviewButton",
+                "imgUrl": "built-in/img/HmUviewButton.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewRate",
+                "title": "评分",
+                "importPath": "built-in/HmUviewRate",
+                "imgUrl": "built-in/img/HmUviewRate.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewCalendar",
+                "title": "日期选择",
+                "importPath": "built-in/HmUviewCalendar",
+                "imgUrl": "built-in/img/HmUviewCalendar.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewCheckbox",
+                "title": "多选框",
+                "importPath": "built-in/HmUviewCheckbox",
+                "imgUrl": "built-in/img/HmUviewCheckbox.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewDivider",
+                "title": "分割线",
+                "importPath": "built-in/HmUviewDivider",
+                "imgUrl": "built-in/img/HmUviewDivider.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewField",
+                "title": "输入框",
+                "importPath": "built-in/HmUviewField",
+                "imgUrl": "built-in/img/HmUviewField.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewNoticeBar",
+                "title": "弹幕",
+                "importPath": "built-in/HmUviewNoticeBar",
+                "imgUrl": "built-in/img/HmUviewNoticeBar.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewRadio",
+                "title": "单选框",
+                "importPath": "built-in/HmUviewRadio",
+                "imgUrl": "built-in/img/HmUviewRadio.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewSearch",
+                "title": "搜索框",
+                "importPath": "built-in/HmUviewSearch",
+                "imgUrl": "built-in/img/HmUviewSearch.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewSlider",
+                "title": "进度条",
+                "importPath": "built-in/HmUviewSlider",
+                "imgUrl": "built-in/img/HmUviewSlider.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewPicker",
+                "title": "选择器",
+                "importPath": "built-in/HmUviewPicker",
+                "imgUrl": "built-in/img/HmUviewPicker.png",
+                "type": 0,
+                "isBuiltIn": true
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "数据展示",
+        "componentList": [
+            {
+                "name": "HmUviewBadge",
+                "title": "徽标",
+                "importPath": "built-in/HmUviewBadge",
+                "imgUrl": "built-in/img/HmUviewBadge.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewCell",
+                "title": "单元格",
+                "importPath": "built-in/HmUviewCell",
+                "imgUrl": "built-in/img/HmUviewCell.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewSteps",
+                "title": "滚动条",
+                "importPath": "built-in/HmUviewSteps",
+                "imgUrl": "built-in/img/HmUviewSteps.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewSticky",
+                "title": "顶部吸附",
+                "importPath": "built-in/HmUviewSticky",
+                "imgUrl": "built-in/img/HmUviewSticky.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewTag",
+                "title": "标签",
+                "importPath": "built-in/HmUviewTag",
+                "imgUrl": "built-in/img/HmUviewTag.png",
+                "type": 0,
+                "isBuiltIn": true
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "反馈组件",
+        "componentList": []
+    },
+    {
+        "id": 7,
+        "name": "卡片类",
+        "componentList": []
+    },
+    {
+        "id": 8,
+        "name": "图表",
+        "componentList": []
+    },
+    {
+        "id": 9,
+        "name": "其他",
+        "componentList": [
+            {
+                "name": "HmUviewIcon",
+                "title": "图标文字",
+                "importPath": "built-in/HmUviewIcon",
+                "imgUrl": "built-in/img/HmUviewIcon.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewImage",
+                "title": "图片",
+                "importPath": "built-in/HmUviewImage",
+                "imgUrl": "built-in/img/HmUviewImage.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewEmpty",
+                "title": "空状态",
+                "importPath": "built-in/HmUviewEmpty",
+                "imgUrl": "built-in/img/HmUviewEmpty.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewLoading",
+                "title": "加载",
+                "importPath": "built-in/HmUviewLoading",
+                "imgUrl": "built-in/img/HmUviewLoading.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewCountDown",
+                "title": "倒计时",
+                "importPath": "built-in/HmUviewCountDown",
+                "imgUrl": "built-in/img/HmUviewCountDown.png",
+                "type": 0,
+                "isBuiltIn": true
+            }
+        ]
+    }
+]
