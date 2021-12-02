@@ -15,13 +15,18 @@
       :border-color="borderColor"
       :close-color="closeColor"
       @close="onClose(item)"
-      :style="{marginRight: marginRight}"
+      :style="{ marginRight: marginRight }"
     />
   </view>
 </template>
 
 <script>
+import uTag from "uview-ui/components/u-tag/u-tag";
+
 export default {
+  components: {
+    uTag,
+  },
   name: "HmUviewTag",
   props: {
     /**
@@ -118,8 +123,8 @@ export default {
      */
     marginRight: {
       type: String,
-      default: "10px"
-    }
+      default: "10px",
+    },
   },
   data() {
     return {

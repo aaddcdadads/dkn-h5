@@ -23,7 +23,12 @@
 </template>
 
 <script>
+import uNavbar from "uview-ui/components/u-navbar/u-navbar";
+
 export default {
+  components: {
+    uNavbar,
+  },
   name: "HmUviewNavbar",
   props: {
     /**
@@ -66,14 +71,14 @@ export default {
      */
     height: {
       type: Number,
-      default: 44
+      default: 44,
     },
     /**
      * 左侧图标文字
      */
     isBack: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 左侧图标
@@ -81,7 +86,7 @@ export default {
      */
     backIconName: {
       type: String,
-      default: "nav-back"
+      default: "nav-back",
     },
     /**
      * 左侧图标颜色
@@ -95,14 +100,14 @@ export default {
      */
     backIconSize: {
       type: Number,
-      default: 30
+      default: 30,
     },
     /**
      * 左侧文字
      */
     backText: {
       type: String,
-      default: "返回"
+      default: "返回",
     },
     /**
      * 左侧文字样式
@@ -110,38 +115,40 @@ export default {
     backTextStyle: {
       type: Object,
       default() {
-        return {color: '#606266',fontSize: '16px'}
-      }
+        return { color: "#606266", fontSize: "16px" };
+      },
     },
     /**
      * 导航栏背景
      */
-    background:{
+    background: {
       type: Object,
       default() {
-        return {backgroundImage: 'linear-gradient(45deg, rgb(28, 187, 180), rgb(141, 198, 63))'}
-      }
+        return {
+          backgroundImage:
+            "linear-gradient(45deg, rgb(28, 187, 180), rgb(141, 198, 63))",
+        };
+      },
     },
     /**
      * 是否固定顶部
      */
     isFixed: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 显示下边框
      */
     borderBottom: {
       type: Boolean,
-      default: true
+      default: true,
     },
   },
   data() {
     return {};
   },
-  methods: {
-  },
+  methods: {},
 };
 </script>
 

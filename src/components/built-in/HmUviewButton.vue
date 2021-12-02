@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import uButton from 'uview-ui/components/u-button/u-button';
+import uButton from "uview-ui/components/u-button/u-button";
 export default {
   name: "HmUviewButton",
   components: {
-    uButton
+    uButton,
   },
   props: {
     /**
@@ -95,7 +95,7 @@ export default {
   methods: {
     onClick(e) {
       console.log("e", e);
-      this.$emit("e", e);
+      this.$emit("click", e);
     },
   },
 };

@@ -15,62 +15,66 @@
 </template>
 
 <script>
+import uBadge from "uview-ui/components/u-badge/u-badge";
 export default {
   name: "HmUviewBadge",
+  components: {
+    uBadge,
+  },
   props: {
     /**
      * 类型
-		 * @type Enum
+     * @type Enum
      * @options ["error","success","primary","warning","info"]
      */
     type: {
       type: String,
-      default: "error"
+      default: "error",
     },
     /**
      * 状态指示
      */
     isDot: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * 数值
      */
     count: {
       type: Number,
-      default: 8
+      default: 8,
     },
     /**
      * 字体颜色
      * @type Color
      */
     color: {
-      type: String
+      type: String,
     },
     /**
      * 背景颜色
-		 * @type Color
+     * @type Color
      */
     bgColor: {
-      type: String
+      type: String,
     },
     /**
      * 偏移
      */
     offset: {
       type: Array,
-      default: function() {
+      default: function () {
         return [-8, -8];
-      }
-    }
+      },
+    },
   },
   watch: {},
   mounted() {},
   data() {
     return {};
   },
-  methods: {}
+  methods: {},
 };
 </script>
 

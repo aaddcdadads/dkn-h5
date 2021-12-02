@@ -1,13 +1,15 @@
 <template>
   <view class="radio-class">
-    {{title}}
+    {{ title }}
     <u-radio-group
       v-model:value="cValue"
       :wrap="wrap"
       @change="radioGroupChange"
       v-for="(item, index) in list"
     >
-      <p v-if="textLocation" style="margin-left: 1px;margin-right: 5px;">{{ item.name }}</p>
+      <p v-if="textLocation" style="margin-left: 1px; margin-right: 5px">
+        {{ item.name }}
+      </p>
       <u-radio
         @change="radioChange"
         :key="index"
@@ -24,11 +26,17 @@
 </template>
 
 <script>
+import uRadio from "uview-ui/components/u-radio/u-radio";
+import uRadioGroup from "uview-ui/components/u-radio-group/u-radio-group";
 export default {
+  components: {
+    uRadio,
+    uRadioGroup,
+  },
   name: "HmUviewRadio",
   model: {
-    prop: 'value',
-    event: 'changeValue'
+    prop: "value",
+    event: "changeValue",
   },
   props: {
     /**
@@ -36,51 +44,50 @@ export default {
      * @v-model
      */
     value: {
-      type: String
+      type: String,
     },
     /**
      * 标题
      */
     title: {
       type: String,
-      default: "单选："
+      default: "单选：",
     },
     /**
      * 数据内容
      */
     list: {
       type: Array,
-      default: function() {
+      default: function () {
         return [
           {
             name: "apple",
-            disabled: false
+            disabled: false,
           },
           {
             name: "banner",
-            disabled: false
+            disabled: false,
           },
           {
             name: "orange",
-            disabled: false
-          }
+            disabled: false,
+          },
         ];
-      }
+      },
     },
     /**
      * 排列方向
      */
     wrap: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * 文本位置
      */
     textLocation: {
       type: Boolean,
-      default: false
-
+      default: false,
     },
     /**
      * 形状
@@ -88,35 +95,34 @@ export default {
      * @options ["circle","square"]
      */
     shape: {
-      type: String
+      type: String,
     },
     /**
      * 图标大小
      */
     iconSize: {
-      type: Number
+      type: Number,
     },
     /**
      * 选中颜色
      * @type Color
      */
     activeColor: {
-      type: String
-    }
+      type: String,
+    },
   },
   computed: {
     cValue: {
-      get () {
-        return this.value
+      get() {
+        return this.value;
       },
-      set (val) {
-        this.$emit('changeValue', val)
-      }
-    }
+      set(val) {
+        this.$emit("changeValue", val);
+      },
+    },
   },
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     // 选中某个单选框时，由radio时触发
@@ -129,8 +135,8 @@ export default {
       console.log("2", e);
       this.$emit("update:value", this.cValue);
       this.$emit("radioGroupChange", e);
-    }
-  }
+    },
+  },
 };
 </script>
 

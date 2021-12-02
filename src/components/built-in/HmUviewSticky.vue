@@ -12,13 +12,17 @@
       <!-- 只能有一个根元素 -->
       <!-- <view class="sticky">宝剑锋从磨砺出,梅花香自苦寒来</view> -->
       <slot></slot>
-      
     </u-sticky>
   </view>
 </template>
 
 <script>
+import uSticky from "uview-ui/components/u-sticky/u-sticky";
+
 export default {
+  components: {
+    uSticky,
+  },
   name: "HmUviewSticky",
   props: {
     /**
@@ -26,35 +30,35 @@ export default {
      */
     offsetTop: {
       type: String,
-      default: "100"
+      default: "100",
     },
     /**
      * 自定义标识
      */
     index: {
       type: String,
-      default: ""
+      default: "",
     },
     /**
      * 是否开启吸顶
      */
     enable: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 组件背景颜色
      * @type Color
      */
     bgColor: {
-      type: String ,
-      default:"red"
+      type: String,
+      default: "red",
     },
     /**
      * 吸顶时的z-index值
      */
     zIndex: {
-      type: String
+      type: String,
     },
     // /**
     //  * 导航栏高度
@@ -72,8 +76,8 @@ export default {
     },
     onUnfixed(e) {
       this.$emit("onUnfixed", e);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -85,9 +89,9 @@ export default {
 
 .sticky {
   width: 750rpx;
-		height: 120rpx;
-		background-color: #2979ff;
-		color: #fff;
-		padding: 24rpx;
+  height: 120rpx;
+  background-color: #2979ff;
+  color: #fff;
+  padding: 24rpx;
 }
 </style>

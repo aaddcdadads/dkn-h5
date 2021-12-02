@@ -13,11 +13,16 @@
 </template>
 
 <script>
+import uField from "uview-ui/components/u-field/u-field";
+
 export default {
+  components: {
+    uField,
+  },
   name: "HmUviewField",
   model: {
-    prop: 'value',
-    event: 'changeValue'
+    prop: "value",
+    event: "changeValue",
   },
   props: {
     /**
@@ -25,37 +30,37 @@ export default {
      * @v-model
      */
     value: {
-      type: String
+      type: String,
     },
     /**
      * 标题
      */
     label: {
       type: String,
-      default: "输入："
+      default: "输入：",
     },
     /**
      * 提示文字
      */
     placeholder: {
       type: String,
-      default: "请输入"
+      default: "请输入",
     },
     /**
      * 前缀图标
-		 * @type Icon
+     * @type Icon
      */
     icon: {
       type: String,
-      default: "man"
+      default: "man",
     },
     /**
      * 后缀图标
-		 * @type Icon
+     * @type Icon
      */
     rightIcon: {
       type: String,
-      default: "man"
+      default: "man",
     },
     /**
      * 类型
@@ -64,39 +69,37 @@ export default {
      */
     type: {
       type: String,
-      default: "text"
-    }
+      default: "text",
+    },
   },
   computed: {
     cValue: {
-      get () {
-        return this.value
+      get() {
+        return this.value;
       },
-      set (val) {
-        this.$emit('changeValue', val)
-      }
-    }
+      set(val) {
+        this.$emit("changeValue", val);
+      },
+    },
   },
   data() {
-    return {
-    };
+    return {};
   },
   mounted() {
     // this.cValue = this.value;
   },
   methods: {
-    onInput: function(e) {
+    onInput: function (e) {
       console.log("input: ", e);
 
       this.$emit("update:value", this.cValue);
       this.$emit("onInput", e);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style>
 .field-class {
-  
 }
 </style>

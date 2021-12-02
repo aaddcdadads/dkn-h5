@@ -18,7 +18,12 @@
 </template>
 
 <script>
+import uTabbar from "uview-ui/components/u-tabbar/u-tabbar";
+
 export default {
+  components: {
+    uTabbar,
+  },
   name: "HmUviewTabbar",
   props: {
     /**
@@ -94,7 +99,7 @@ export default {
      */
     bgColor: {
       type: String,
-      default: "#ffffff"
+      default: "#ffffff",
     },
     /**
      * 高度
@@ -108,14 +113,14 @@ export default {
      */
     iconSize: {
       type: String,
-      default: "20px"
+      default: "20px",
     },
     /**
      * 凸起图标大小
      */
     midButtonSize: {
       type: String,
-      default: "45px"
+      default: "45px",
     },
     /**
      * 激活颜色
@@ -123,7 +128,7 @@ export default {
      */
     activeColor: {
       type: String,
-      default: "#303133"
+      default: "#303133",
     },
     /**
      * 未激活颜色
@@ -131,26 +136,26 @@ export default {
      */
     inactiveColor: {
       type: String,
-      default: "#606266"
+      default: "#606266",
     },
     /**
      * 中部凸起按钮
      */
     midButton: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 显示顶部边框
      */
     borderTop: {
       type: Boolean,
-      default: true
+      default: true,
     },
   },
   data() {
     return {
-      cCurrent: '',
+      cCurrent: "",
       cList: [],
     };
   },

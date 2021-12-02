@@ -22,7 +22,13 @@
 </template>
 
 <script>
+import uCellItem from "uview-ui/components/u-cell-item/u-cell-item";
+import uCellGroup from "uview-ui/components/u-cell-group/u-cell-group";
 export default {
+  components: {
+    uCellItem,
+    uCellGroup,
+  },
   name: "HmUviewCell",
   props: {
     /**
@@ -30,7 +36,7 @@ export default {
      */
     list: {
       type: Array,
-      default: function() {
+      default: function () {
         return [
           {
             key: 1,
@@ -47,9 +53,9 @@ export default {
             required: false,
             label: "",
             value: "右侧内容",
-          }
+          },
         ];
-      }
+      },
     },
     /**
      * 显示右侧箭头
@@ -93,7 +99,7 @@ export default {
      */
     iconSize: {
       type: String,
-      default: "17px"
+      default: "17px",
     },
   },
   data() {

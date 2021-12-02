@@ -13,7 +13,12 @@
 </template>
 
 <script>
+import uSteps from "uview-ui/components/u-steps/u-steps";
+
 export default {
+  components: {
+    uSteps,
+  },
   name: "HmUviewSteps",
   props: {
     /**
@@ -23,29 +28,29 @@ export default {
      */
     direction: {
       type: String,
-      default: "row"
+      default: "row",
     },
     /**
      * 数据内容
      */
     list: {
       type: Array,
-      default: function() {
+      default: function () {
         return [
           {
-            name: "下单"
+            name: "下单",
           },
           {
-            name: "出库"
+            name: "出库",
           },
           {
-            name: "运输"
+            name: "运输",
           },
           {
-            name: "签收"
-          }
+            name: "签收",
+          },
         ];
-      }
+      },
     },
     /**
      * 步骤图标
@@ -53,21 +58,21 @@ export default {
      */
     icon: {
       type: String,
-      default: "man"
+      default: "man",
     },
     /**
      * 当前完成颜色
      * @type Color
      */
     activeColor: {
-      type: String
+      type: String,
     },
     /**
      * 未激活颜色
      * @type Color
      */
     unActiveColor: {
-      type: String
+      type: String,
     },
     /**
      * Icon图标加不上去
@@ -79,20 +84,20 @@ export default {
      */
     mode: {
       type: String,
-      default: "number"
+      default: "number",
     },
     /**
      * 当前步骤
      */
     current: {
       type: Number,
-      default: 1
+      default: 1,
     },
   },
   data() {
     return {};
   },
-  methods: {}
+  methods: {},
 };
 </script>
 

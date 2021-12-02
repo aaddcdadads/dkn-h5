@@ -21,7 +21,12 @@
 </template>
 
 <script>
+import uPicker from "uview-ui/components/u-picker/u-picker";
+
 export default {
+  components: {
+    uPicker,
+  },
   name: "HmUviewPicker",
   props: {
     /**
@@ -53,7 +58,7 @@ export default {
      */
     confirmColor: {
       type: String,
-      default: "#2979ff"
+      default: "#2979ff",
     },
     /**
      * 取消按钮文字
@@ -68,7 +73,7 @@ export default {
      */
     cancelColor: {
       type: String,
-      default: "#606266"
+      default: "#606266",
     },
     /**
      * 显示参数
@@ -120,26 +125,26 @@ export default {
       type: Boolean,
       default: true,
     },
-	/**
-	 * 时间中文提示
-	 */
-	show: {
-	  type: Boolean,
-	  default: false,
-	},
+    /**
+     * 时间中文提示
+     */
+    show: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
       cShow: false,
     };
   },
-  watch:{
-	show(val){
-	  this.cShow = val
-	}
+  watch: {
+    show(val) {
+      this.cShow = val;
+    },
   },
-  mounted(){
-	this.cShow = this.show
+  mounted() {
+    this.cShow = this.show;
   },
   methods: {
     confirm(e) {

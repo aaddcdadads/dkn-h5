@@ -10,14 +10,19 @@
       :bg-color="bgColor"
       :is-circular="isCircular"
       @click="onClick"
-			@close="close"
-			@getMore="getMore"
+      @close="close"
+      @getMore="getMore"
     ></u-notice-bar>
   </view>
 </template>
 
 <script>
+import uNoticeBar from "uview-ui/components/u-notice-bar/u-notice-bar";
+
 export default {
+  components: {
+    uNoticeBar,
+  },
   name: "HmUviewNoticeBar",
   props: {
     /**
@@ -27,79 +32,79 @@ export default {
      */
     mode: {
       type: String,
-      default: "horizontal"
+      default: "horizontal",
     },
     /**
      * 是否显示小喇叭图标
      */
     volumeIcon: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 是否显示右边的向右箭头
      */
     moreIcon: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 是否显示关闭图标
      */
     closeIcon: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * 背景颜色
      * @type Color
      */
     bgColor: {
-      type: String
+      type: String,
     },
     /**
      * 文字颜色
      * @type Color
      */
     color: {
-      type: String
+      type: String,
     },
     /**
      * 滚动文字
      */
     list: {
       type: Array,
-      default: function() {
+      default: function () {
         return [
           "寒雨连江夜入吴",
           "平明送客楚山孤",
           "洛阳亲友如相问",
-          "一片冰心在玉壶"
+          "一片冰心在玉壶",
         ];
-      }
+      },
     },
     /**
      * 是否水平衔接滚动
      */
     isCircular: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   data() {
     return {};
   },
   methods: {
     onClick() {
-			this.$emit("onClick");
-		},
-		close(){
-			this.$emit("close");
-		},
-		getMore(){
-			this.$emit("getMore");
-		}
-  }
+      this.$emit("onClick");
+    },
+    close() {
+      this.$emit("close");
+    },
+    getMore() {
+      this.$emit("getMore");
+    },
+  },
 };
 </script>
 

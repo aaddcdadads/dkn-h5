@@ -15,7 +15,12 @@
 </template>
 
 <script>
+import uEmpty from "uview-ui/components/u-empty/u-empty";
+
 export default {
+  components: {
+    uEmpty,
+  },
   name: "HmUviewEmpty",
   props: {
     /**
@@ -23,7 +28,7 @@ export default {
      */
     text: {
       type: String,
-      default: "数据为空"
+      default: "数据为空",
     },
     /**
      * 文字颜色
@@ -31,14 +36,14 @@ export default {
      */
     color: {
       type: String,
-      default: "#c0c4cc"
+      default: "#c0c4cc",
     },
     /**
      * 文字大小
      */
     fontSize: {
       type: String,
-      default: "14px"
+      default: "14px",
     },
     /**
      * 图标
@@ -48,7 +53,7 @@ export default {
      */
     mode: {
       type: String,
-      default: "data"
+      default: "data",
     },
     /**
      * 自定义图标
@@ -63,29 +68,27 @@ export default {
      */
     iconColor: {
       type: String,
-      default: "#c0c4cc"
+      default: "#c0c4cc",
     },
     /**
      * 图标大小
      */
     iconSize: {
       type: String,
-      default: "60px"
+      default: "60px",
     },
     /**
      * 是否显示组件
      */
     show: {
       type: Boolean,
-      default: true
+      default: true,
     },
   },
   data() {
-    return {
-    };
+    return {};
   },
-  methods: {
-  },
+  methods: {},
 };
 </script>
 

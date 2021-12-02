@@ -16,7 +16,12 @@
 </template>
 
 <script>
+import uRate from "uview-ui/components/u-rate/u-rate";
+
 export default {
+  components: {
+    uRate,
+  },
   name: "HmUviewRate",
   props: {
     /**
@@ -73,14 +78,14 @@ export default {
      */
     activeIcon: {
       type: String,
-      default: "star-fill"
+      default: "star-fill",
     },
     /**
      * 未选中图标
      */
     inactiveIcon: {
       type: String,
-      default: "star"
+      default: "star",
     },
   },
   data() {

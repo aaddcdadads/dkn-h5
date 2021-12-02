@@ -23,7 +23,12 @@
 </template>
 
 <script>
+import uCountDown from "uview-ui/components/u-count-down/u-count-down";
+
 export default {
+  components: {
+    uCountDown,
+  },
   name: "HmUviewCountDown",
   props: {
     /**
@@ -31,14 +36,14 @@ export default {
      */
     timestamp: {
       type: Number,
-      default: 86400
+      default: 86400,
     },
     /**
      * 自动倒计时
      */
     autoplay: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 分隔符
@@ -54,7 +59,7 @@ export default {
      */
     separatorSize: {
       type: Number,
-      default: 30
+      default: 30,
     },
     /**
      * 分隔符颜色
@@ -62,14 +67,14 @@ export default {
      */
     separatorColor: {
       type: String,
-      default: "#303133"
+      default: "#303133",
     },
     /**
      * 倒计时大小
      */
     fontSize: {
       type: Number,
-      default: 30
+      default: 30,
     },
     /**
      * 倒计时颜色
@@ -77,7 +82,7 @@ export default {
      */
     color: {
       type: String,
-      default: "#303133"
+      default: "#303133",
     },
     /**
      * 倒计时背景色
@@ -85,14 +90,14 @@ export default {
      */
     bgColor: {
       type: String,
-      default: "#ffffff"
+      default: "#ffffff",
     },
     /**
      * 是否显示边框
      */
     showBorder: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * 边框颜色
@@ -100,61 +105,60 @@ export default {
      */
     borderColor: {
       type: String,
-      default: "#303133"
+      default: "#303133",
     },
     /**
      * 边框大小
      */
     height: {
       type: Number,
-      default: 50
+      default: 50,
     },
     /**
      * 是否显示天
      */
     showDays: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 天为0时隐藏
      */
     showConfirmbar: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 是否显示时
      */
     showHours: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 是否显示分
      */
     showMinutes: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 是否显示秒
      */
     showSeconds: {
       type: Boolean,
-      default: true
+      default: true,
     },
   },
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     // 事件触发，每秒一次
-			onChange(e) {
-        console.log("当前时间",e);
-        this.$emit("change", e);
-			},
+    onChange(e) {
+      console.log("当前时间", e);
+      this.$emit("change", e);
+    },
   },
 };
 </script>
