@@ -87,7 +87,7 @@ export default {
      */
     onClick(index) {
       console.log("点击图片成功", index);
-      this.$emit("index");
+      this.$emit("click");
     },
 
     /**
