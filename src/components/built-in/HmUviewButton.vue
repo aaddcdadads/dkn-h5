@@ -15,11 +15,10 @@
 </template>
 
 <script>
-import uButton from "uview-ui/components/u-button/u-button";
+// import uButton from "uview-ui/components/u-button/u-button";
 export default {
   name: "HmUviewButton",
   components: {
-    uButton,
   },
   props: {
     /**

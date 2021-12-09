@@ -3,7 +3,7 @@ import {
 } from "vue";
 import App from "./App.vue";
 
-import uView from "uview-ui";
+import uView from './uni_modules/vk-uview-ui';
 
 export function createApp() {
 	const app = createSSRApp(App);

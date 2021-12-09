@@ -7,7 +7,7 @@ export default defineConfig({
   ],
   optimizeDeps: {
     include: [
-      "uview-ui"
+      "vk-uview-ui"
     ]
 },
 })

@@ -22,6 +22,7 @@ export default {
     click() {
       console.log("value", this.cValue);
       console.log("value2", this.cValue2);
+      console.log(this.$u);
     }
   }
 };
