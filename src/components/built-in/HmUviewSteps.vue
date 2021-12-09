@@ -13,12 +13,10 @@
 </template>
 
 <script>
-import uSteps from "uview-ui/components/u-steps/u-steps";
+// import uSteps from "uview-ui/components/u-steps/u-steps";
 
 export default {
-  components: {
-    uSteps,
-  },
+  components: {},
   name: "HmUviewSteps",
   props: {
     /**

@@ -23,12 +23,10 @@
 </template>
 
 <script>
-import uCountDown from "uview-ui/components/u-count-down/u-count-down";
+// import uCountDown from "uview-ui/components/u-count-down/u-count-down";
 
 export default {
-  components: {
-    uCountDown,
-  },
+  components: {},
   name: "HmUviewCountDown",
   props: {
     /**

@@ -18,12 +18,10 @@
 </template>
 
 <script>
-import uSlider from "uview-ui/components/u-slider/u-slider";
+// import uSlider from "uview-ui/components/u-slider/u-slider";
 
 export default {
-  components: {
-    uSlider,
-  },
+  components: {},
   name: "HmUviewSlider",
   model: {
     prop: "value",

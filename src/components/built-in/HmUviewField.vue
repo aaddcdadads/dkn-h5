@@ -13,12 +13,10 @@
 </template>
 
 <script>
-import uField from "uview-ui/components/u-field/u-field";
+// import uField from "uview-ui/components/u-field/u-field";
 
 export default {
-  components: {
-    uField,
-  },
+  components: {},
   name: "HmUviewField",
   model: {
     prop: "value",

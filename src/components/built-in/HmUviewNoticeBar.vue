@@ -17,12 +17,10 @@
 </template>
 
 <script>
-import uNoticeBar from "uview-ui/components/u-notice-bar/u-notice-bar";
+// import uNoticeBar from "uview-ui/components/u-notice-bar/u-notice-bar";
 
 export default {
-  components: {
-    uNoticeBar,
-  },
+  components: {},
   name: "HmUviewNoticeBar",
   props: {
     /**

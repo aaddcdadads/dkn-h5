@@ -21,12 +21,10 @@
 </template>
 
 <script>
-import uTag from "uview-ui/components/u-tag/u-tag";
+// import uTag from "uview-ui/components/u-tag/u-tag";
 
 export default {
-  components: {
-    uTag,
-  },
+  components: {},
   name: "HmUviewTag",
   props: {
     /**

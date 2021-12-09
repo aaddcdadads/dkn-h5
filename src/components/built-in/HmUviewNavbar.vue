@@ -23,12 +23,10 @@
 </template>
 
 <script>
-import uNavbar from "uview-ui/components/u-navbar/u-navbar";
+// import uNavbar from "uview-ui/components/u-navbar/u-navbar";
 
 export default {
-  components: {
-    uNavbar,
-  },
+  components: {},
   name: "HmUviewNavbar",
   props: {
     /**

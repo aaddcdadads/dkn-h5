@@ -12,13 +12,10 @@
 </template>
 
 <script>
-import uInput from "uview-ui/components/u-input/u-input";
-import uCalendar from "uview-ui/components/u-calendar/u-calendar";
+// import uInput from "uview-ui/components/u-input/u-input";
+// import uCalendar from "uview-ui/components/u-calendar/u-calendar";
 export default {
-  components: {
-    uCalendar,
-    uInput,
-  },
+  components: {},
   name: "HmUviewCalendar",
   model: {
     prop: "value",

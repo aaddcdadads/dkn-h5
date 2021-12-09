@@ -21,12 +21,10 @@
 </template>
 
 <script>
-import uPicker from "uview-ui/components/u-picker/u-picker";
+// import uPicker from "uview-ui/components/u-picker/u-picker";
 
 export default {
-  components: {
-    uPicker,
-  },
+  components: {},
   name: "HmUviewPicker",
   props: {
     /**

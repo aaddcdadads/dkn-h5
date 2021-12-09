@@ -17,12 +17,10 @@
 </template>
 
 <script>
-import uSticky from "uview-ui/components/u-sticky/u-sticky";
+// import uSticky from "uview-ui/components/u-sticky/u-sticky";
 
 export default {
-  components: {
-    uSticky,
-  },
+  components: {},
   name: "HmUviewSticky",
   props: {
     /**

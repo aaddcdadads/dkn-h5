@@ -15,12 +15,10 @@
 </template>
 
 <script>
-import uDivider from "uview-ui/components/u-divider/u-divider";
+// import uDivider from "uview-ui/components/u-divider/u-divider";
 
 export default {
-  components: {
-    uDivider,
-  },
+  components: {},
 
   name: "HmUviewDivider",
   props: {

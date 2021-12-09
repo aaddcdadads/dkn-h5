@@ -5,12 +5,10 @@
 </template>
 
 <script>
-import uLoading from "uview-ui/components/u-loading/u-loading";
+// import uLoading from "uview-ui/components/u-loading/u-loading";
 
 export default {
-  components: {
-    uLoading,
-  },
+  components: {},
   name: "HmUviewLoading",
   props: {
     /**

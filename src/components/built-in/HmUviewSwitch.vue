@@ -15,11 +15,9 @@
 </template>
 
 <script>
-import uSwitch from "uview-ui/components/u-switch/u-switch";
+// import uSwitch from "uview-ui/components/u-switch/u-switch";
 export default {
-  components: {
-    uSwitch,
-  },
+  components: {},
   name: "HmUviewSwitch",
 
   props: {

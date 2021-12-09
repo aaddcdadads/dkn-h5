@@ -18,12 +18,10 @@
 </template>
 
 <script>
-import uTabbar from "uview-ui/components/u-tabbar/u-tabbar";
+// import uTabbar from "uview-ui/components/u-tabbar/u-tabbar";
 
 export default {
-  components: {
-    uTabbar,
-  },
+  components: {},
   name: "HmUviewTabbar",
   props: {
     /**

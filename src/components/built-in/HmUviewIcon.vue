@@ -14,12 +14,10 @@
 </template>
 
 <script>
-import uIcon from "uview-ui/components/u-icon/u-icon";
+// import uIcon from "uview-ui/components/u-icon/u-icon";
 
 export default {
-  components: {
-    uIcon,
-  },
+  components: {},
   name: "HmUviewIcon",
   props: {
     /**

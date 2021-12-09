@@ -16,12 +16,10 @@
 </template>
 
 <script>
-import uImage from "uview-ui/components/u-image/u-image";
+// import uImage from "uview-ui/components/u-image/u-image";
 
 export default {
-  components: {
-    uImage,
-  },
+  components: {},
   name: "HmUviewImage",
   props: {
     /**

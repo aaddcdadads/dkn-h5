@@ -15,12 +15,10 @@
 </template>
 
 <script>
-import uBadge from "uview-ui/components/u-badge/u-badge";
+//import uBadge from "uview-ui/components/u-badge/u-badge";
 export default {
   name: "HmUviewBadge",
-  components: {
-    uBadge,
-  },
+  components: {},
   props: {
     /**
      * 类型

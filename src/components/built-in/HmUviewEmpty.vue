@@ -15,12 +15,10 @@
 </template>
 
 <script>
-import uEmpty from "uview-ui/components/u-empty/u-empty";
+// import uEmpty from "uview-ui/components/u-empty/u-empty";
 
 export default {
-  components: {
-    uEmpty,
-  },
+  components: {},
   name: "HmUviewEmpty",
   props: {
     /**

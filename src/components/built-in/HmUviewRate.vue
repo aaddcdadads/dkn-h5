@@ -16,12 +16,10 @@
 </template>
 
 <script>
-import uRate from "uview-ui/components/u-rate/u-rate";
+// import uRate from "uview-ui/components/u-rate/u-rate";
 
 export default {
-  components: {
-    uRate,
-  },
+  components: {},
   name: "HmUviewRate",
   props: {
     /**

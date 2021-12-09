@@ -18,13 +18,10 @@
 </template>
 
 <script>
-import uCheckbox from "uview-ui/components/u-checkbox/u-checkbox";
-import uCheckboxGroup from "uview-ui/components/u-checkbox-group/u-checkbox-group";
+// import uCheckbox from "uview-ui/components/u-checkbox/u-checkbox";
+// import uCheckboxGroup from "uview-ui/components/u-checkbox-group/u-checkbox-group";
 export default {
-  components: {
-    uCheckbox,
-    uCheckboxGroup,
-  },
+  components: {},
   name: "HmUviewCheckbox",
   props: {
     /**

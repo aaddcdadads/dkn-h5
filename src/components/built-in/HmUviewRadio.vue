@@ -26,13 +26,10 @@
 </template>
 
 <script>
-import uRadio from "uview-ui/components/u-radio/u-radio";
-import uRadioGroup from "uview-ui/components/u-radio-group/u-radio-group";
+// import uRadio from "uview-ui/components/u-radio/u-radio";
+// import uRadioGroup from "uview-ui/components/u-radio-group/u-radio-group";
 export default {
-  components: {
-    uRadio,
-    uRadioGroup,
-  },
+  components: {},
   name: "HmUviewRadio",
   model: {
     prop: "value",

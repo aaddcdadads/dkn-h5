@@ -16,12 +16,10 @@
 </template>
 
 <script>
-import uSearch from "uview-ui/components/u-search/u-search";
+// import uSearch from "uview-ui/components/u-search/u-search";
 
 export default {
-  components: {
-    uSearch,
-  },
+  components: {},
   name: "HmUviewSearch",
   model: {
     prop: "value",
