@@ -1,5 +1,5 @@
 {
-    "name" : "hello",
+    "name" : "uview组件库",
     "appid" : "__UNI__4DCD124",
     "description" : "",
     "versionName" : "1.0.0",
@@ -50,7 +50,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wxdd7533aae937ed69",
         "setting" : {
             "urlCheck" : false
         },
