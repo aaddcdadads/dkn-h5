@@ -1,16 +1,7 @@
 <template>
   <view>
+    <hm-uview-rate></hm-uview-rate>
     <hm-uview-rate
-      :count="5"
-      :disabled="false"
-      :size="32"
-      inactiveColor="#b2b2b2"
-      activeColor="#FA3534"
-      :gutter="10"
-      activeIcon="star-fill"
-      inactiveIcon="star"
-    ></hm-uview-rate>
-	<hm-uview-rate
       :count="10"
       :disabled="false"
       :size="50"

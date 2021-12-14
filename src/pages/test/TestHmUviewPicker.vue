@@ -1,19 +1,6 @@
 <template>
   <view>
-    <hm-uview-picker
-      :show="show1"
-      mode="time"
-      title="时间"
-      confirmText="确认"
-      confirmColor="#2979ff"
-      cancelText="取消"
-      :params="params1"
-      cancelColor="#606266"
-      :maskCloseAble="true"
-      :startYear="1950"
-      :endYear="2050"
-      :showTimeTag="true"
-    ></hm-uview-picker>
+    <hm-uview-picker :show="show1"></hm-uview-picker>
     <u-button @click="show1 = !show1">打开</u-button>
     <hm-uview-picker
       :show="show2"
@@ -42,20 +29,7 @@ export default {
     return {
       show1: false,
       show2: false,
-      params1: {
-        //时间参数
-        year: true,
-        month: true,
-        day: true,
-        hour: true,
-        minute: true,
-        second: true,
-        timestamp: true,
-        //地区参数
-        province: true,
-        city: true,
-        area: true,
-      },
+
       params2: {
         //时间参数
         year: true,
@@ -69,7 +43,7 @@ export default {
         province: true,
         city: true,
         area: true,
-      }
+      },
     };
   },
 };

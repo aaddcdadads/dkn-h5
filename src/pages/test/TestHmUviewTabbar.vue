@@ -1,5 +1,6 @@
 <template>
   <view>
+    <hm-uview-tabbar></hm-uview-tabbar>
     <hm-uview-tabbar
       v-model:current="cCurrent"
       :list="cList"

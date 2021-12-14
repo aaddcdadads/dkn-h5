@@ -1,7 +1,6 @@
 <template>
   <view>
     <u-button
-      class="button"
       @click="onClick"
       :size="size"
       :type="type"
@@ -15,11 +14,8 @@
 </template>
 
 <script>
-// import uButton from "uview-ui/components/u-button/u-button";
 export default {
   name: "HmUviewButton",
-  components: {
-  },
   props: {
     /**
      * 大小
@@ -42,7 +38,7 @@ export default {
     },
 
     /**
-     * 是否镂空，背景透明
+     * 是否镂空
      *
      */
     plain: {
@@ -78,7 +74,7 @@ export default {
     },
 
     /**
-     * 是否显示按钮的细边框
+     * 是否显示细边框
      */
     hairLine: {
       type: Boolean,
@@ -86,14 +82,11 @@ export default {
     },
   },
   data() {
-    return {
-      //buttonWdith:"200px";
-      //console.log(buttonWdith);
-    };
+    return {};
   },
   methods: {
     onClick(e) {
-      console.log("e", e);
+      //console.log("e", e);
       this.$emit("click", e);
     },
   },

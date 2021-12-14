@@ -23,10 +23,7 @@
 </template>
 
 <script>
-// import uNavbar from "uview-ui/components/u-navbar/u-navbar";
-
 export default {
-  components: {},
   name: "HmUviewNavbar",
   props: {
     /**
@@ -133,7 +130,7 @@ export default {
      */
     isFixed: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     /**
      * 显示下边框

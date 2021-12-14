@@ -1,18 +1,7 @@
 <template>
   <!-- <hm-uview-button @click="click">123</hm-uview-button> -->
   <view>
-    <hm-uview-radio
-      v-model:value="cValue"
-      title="标题"
-      :list="list"
-      :textLocation="true"
-      :wrap="true"
-      shape="circle"
-      :iconSize="10"
-      activeColor="red"
-      @radioChange="radioChange"
-      @radioGroupChange="radioGroupChange"
-    ></hm-uview-radio>
+    <hm-uview-radio v-model:value="cValue" :list="list"></hm-uview-radio>
     <hm-uview-radio
       v-model:value="cValue2"
       title="标题1"
@@ -41,31 +30,31 @@ export default {
       list: [
         {
           name: "apple",
-          disabled: false
+          disabled: false,
         },
         {
           name: "banner",
-          disabled: false
+          disabled: false,
         },
         {
           name: "orange",
-          disabled: false
-        }
+          disabled: false,
+        },
       ],
       list1: [
         {
           name: "apple2",
-          disabled: false
+          disabled: false,
         },
         {
           name: "banner3",
-          disabled: false
+          disabled: false,
         },
         {
           name: "orange1",
-          disabled: false
-        }
-      ]
+          disabled: false,
+        },
+      ],
     };
   },
   methods: {
@@ -84,8 +73,8 @@ export default {
     },
     radioGroupChange1(e) {
       console.log("radioGroupChange1", e);
-    }
-  }
+    },
+  },
 };
 </script>
 

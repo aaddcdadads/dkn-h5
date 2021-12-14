@@ -15,10 +15,8 @@
 </template>
 
 <script>
-//import uBadge from "uview-ui/components/u-badge/u-badge";
 export default {
   name: "HmUviewBadge",
-  components: {},
   props: {
     /**
      * 类型
@@ -41,7 +39,7 @@ export default {
      */
     count: {
       type: Number,
-      default: 8,
+      default: 9,
     },
     /**
      * 字体颜色

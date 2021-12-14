@@ -1,22 +1,6 @@
 <template>
   <view>
-    <hm-uview-navbar
-      title="剑未配妥，出门已是江湖"
-      :titleWidth="250"
-      titleColor="#606266"
-      :titleSize="22"
-      :titleBold="false"
-      :height="44"
-      backIconName="nav-back"
-      backIconColor="#606266"
-      :backIconSize="30"
-      backText="返回"
-      :backTextStyle="backTextStyleA"
-      :isBack="true"
-      :background="backgroundA"
-      :isFixed="true"
-      :borderBottom="false"
-    ></hm-uview-navbar>
+    <hm-uview-navbar></hm-uview-navbar>
     <hm-uview-navbar
       title="剑未配妥，出门已是江湖"
       :titleWidth="150"
@@ -33,7 +17,8 @@
       :background="backgroundB"
       :isFixed="false"
       :borderBottom="true"
-    >插槽</hm-uview-navbar>
+      >插槽</hm-uview-navbar
+    >
   </view>
 </template>
 
@@ -51,7 +36,7 @@ export default {
         color: "red",
         fontSize: "20px",
       },
-      backgroundA: { background: "#ffffff" },
+      backgroundA: { background: "#3ea2ff" },
       backgroundB: { background: "#39CCCC" },
     };
   },

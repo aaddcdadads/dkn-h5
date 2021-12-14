@@ -1,20 +1,7 @@
 <template>
   <!-- <hm-uview-button @click="click">123</hm-uview-button> -->
   <view>
-    <hm-uview-slider
-      v-model:value="cValue"
-      title="标题"
-      :max="500"
-      :min="100"
-      :step="10"
-      blockWidth="输入"
-      height="5"
-      inactiveColor="red"
-      activeColor="#726930"
-      @onStart="onStart"
-      @onMoving="onMoving"
-      @onEnd="onEnd"
-    ></hm-uview-slider>
+    <hm-uview-slider v-model:value="cValue"></hm-uview-slider>
     <hm-uview-slider
       v-model:value="cValue2"
       title="标题123"
@@ -41,7 +28,7 @@ export default {
   data() {
     return {
       cValue: 0,
-      cValue2:0
+      cValue2: 0,
     };
   },
   methods: {
@@ -66,8 +53,8 @@ export default {
     },
     onEnd1() {
       console.log("onEnd1");
-    }
-  }
+    },
+  },
 };
 </script>
 

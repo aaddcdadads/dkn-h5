@@ -1,34 +1,25 @@
 <template>
-	<view>
-		<hm-uview-button
+  <view>
+    <hm-uview-button></hm-uview-button> <br />
 
-		:plain="true"
-		:disabled="false"
-
-		:hair-line="true"
-		
-		></hm-uview-button> <br/>
-		
-		<hm-uview-button
-		size="medium"
-		type="success"
-		:plain="false"
-		:disabled="false"
-		shape="circle"
-		text="微信按钮"
-		></hm-uview-button>
-	</view>
+    <hm-uview-button
+      size="medium"
+      type="success"
+      :plain="true"
+      :disabled="true"
+      shape="circle"
+      text="微信按钮"
+    ></hm-uview-button>
+  </view>
 </template>
 
 <script>
-	import HmUviewButton from "@/components/built-in/HmUviewButton.vue";
+import HmUviewButton from "@/components/built-in/HmUviewButton.vue";
 
-	export default {
-		components: { HmUviewButton }
-		
-	}
+export default {
+  components: { HmUviewButton },
+};
 </script>
 
 <style lang="less">
-
 </style>

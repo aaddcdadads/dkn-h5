@@ -9,6 +9,7 @@
           v-for="(item, index) in list"
           :key="index"
           :name="item.name"
+          :disabled="item.disabled"
           >{{ item.name }}</u-checkbox
         >
       </u-checkbox-group>
@@ -18,10 +19,7 @@
 </template>
 
 <script>
-// import uCheckbox from "uview-ui/components/u-checkbox/u-checkbox";
-// import uCheckboxGroup from "uview-ui/components/u-checkbox-group/u-checkbox-group";
 export default {
-  components: {},
   name: "HmUviewCheckbox",
   props: {
     /**
