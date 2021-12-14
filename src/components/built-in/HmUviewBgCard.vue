@@ -9,7 +9,7 @@
  * 背景卡片
  */
 export default {
-  name: "HmUviewTagBgCard",
+  name: "HmUviewBgCard",
   components: {
   },
   props: {
