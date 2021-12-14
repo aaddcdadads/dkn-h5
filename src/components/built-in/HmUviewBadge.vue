@@ -1,16 +1,14 @@
 <template>
-  <view>
-    <view class="child">
-      <u-badge
-        class="badge-class"
-        :is-dot="isDot"
-        :count="count"
-        :offset="offset"
-        :type="type"
-        :color="color"
-        :bgColor="bgColor"
-      ></u-badge>
-    </view>
+  <view class="child">
+    <u-badge
+      class="badge-class"
+      :is-dot="isDot"
+      :count="count"
+      :offset="offset"
+      :type="type"
+      :color="color"
+      :bgColor="bgColor"
+    ></u-badge>
   </view>
 </template>
 

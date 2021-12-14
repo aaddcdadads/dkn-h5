@@ -1,16 +1,14 @@
 <template>
-  <view>
-    <u-button
-      @click="onClick"
-      :size="size"
-      :type="type"
-      :plain="plain"
-      :disabled="disabled"
-      :shape="shape"
-      :hair-line="hairLine"
-      >{{ text }}</u-button
-    >
-  </view>
+  <u-button
+    @click="onClick"
+    :size="size"
+    :type="type"
+    :plain="plain"
+    :disabled="disabled"
+    :shape="shape"
+    :hair-line="hairLine"
+    >{{ text }}</u-button
+  >
 </template>
 
 <script>

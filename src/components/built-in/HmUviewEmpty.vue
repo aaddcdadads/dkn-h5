@@ -1,17 +1,15 @@
 <template>
-  <view>
-    <u-empty
-      :text="text"
-      :color="color"
-      :mode="mode"
-      :icon-color="iconColor"
-      :icon-size="iconSize"
-      :src="src"
-      :font-size="fontSize"
-      :show="show"
-    >
-    </u-empty>
-  </view>
+  <u-empty
+    :text="text"
+    :color="color"
+    :mode="mode"
+    :icon-color="iconColor"
+    :icon-size="iconSize"
+    :src="src"
+    :font-size="fontSize"
+    :show="show"
+  >
+  </u-empty>
 </template>
 
 <script>

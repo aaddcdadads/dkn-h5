@@ -1,18 +1,16 @@
 <template>
-  <view>
-    <u-image
-      :src="src"
-      :shape="shape"
-      :width="width"
-      :height="height"
-      :border-redius="borderRedius"
-      :loading-icon="loadingIcon"
-      :error-icon="errorIcon"
-      @click="onClick"
-      @load="load"
-      @error="error"
-    />
-  </view>
+  <u-image
+    :src="src"
+    :shape="shape"
+    :width="width"
+    :height="height"
+    :border-redius="borderRedius"
+    :loading-icon="loadingIcon"
+    :error-icon="errorIcon"
+    @click="onClick"
+    @load="load"
+    @error="error"
+  />
 </template>
 
 <script>

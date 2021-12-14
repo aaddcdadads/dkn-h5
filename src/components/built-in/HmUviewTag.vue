@@ -1,23 +1,21 @@
 <template>
-  <view>
-    <u-tag
-      v-for="(item, index) in cList"
-      :key="index"
-      :type="type"
-      :text="item.text"
-      :show="item.show"
-      :size="size"
-      :shape="shape"
-      :mode="mode"
-      :closeable="closeable"
-      :bg-color="bgColor"
-      :color="color"
-      :border-color="borderColor"
-      :close-color="closeColor"
-      @close="onClose(item)"
-      :style="{ marginRight: marginRight }"
-    />
-  </view>
+  <u-tag
+    v-for="(item, index) in cList"
+    :key="index"
+    :type="type"
+    :text="item.text"
+    :show="item.show"
+    :size="size"
+    :shape="shape"
+    :mode="mode"
+    :closeable="closeable"
+    :bg-color="bgColor"
+    :color="color"
+    :border-color="borderColor"
+    :close-color="closeColor"
+    @close="onClose(item)"
+    :style="{ marginRight: marginRight }"
+  />
 </template>
 
 <script>

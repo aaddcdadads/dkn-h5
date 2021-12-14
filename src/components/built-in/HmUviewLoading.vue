@@ -1,7 +1,5 @@
 <template>
-  <view>
-    <u-loading :mode="mode" :color="color" :size="size" :show="show" />
-  </view>
+  <u-loading :mode="mode" :color="color" :size="size" :show="show" />
 </template>
 
 <script>
