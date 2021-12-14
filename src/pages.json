@@ -346,6 +346,20 @@
             }
         },
         {
+            "path": "components/built-in/HmUviewPopup",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "pages/test/TestHmUviewPopup",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "components/built-in/HmUviewBgCard",
             "style": {
                 "navigationBarTitleText": "",
