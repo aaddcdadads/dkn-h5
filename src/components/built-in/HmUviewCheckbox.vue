@@ -1,20 +1,18 @@
 <template>
   <view>
-    <view class="checkbox-class">
-      {{ title }}：
-      <u-checkbox-group @change="checkboxGroupChange">
-        <u-checkbox
-          @change="checkboxChange"
-          v-model="item.checked"
-          v-for="(item, index) in list"
-          :key="index"
-          :name="item.name"
-          :disabled="item.disabled"
-          >{{ item.name }}</u-checkbox
-        >
-      </u-checkbox-group>
-      <!-- <u-button @click="checkedAll">全选</u-button> -->
-    </view>
+    {{ title }}：
+    <u-checkbox-group @change="checkboxGroupChange">
+      <u-checkbox
+        v-for="(item, index) in list"
+        :key="index"
+        @change="checkboxChange"
+        v-model="item.checked"
+        :name="item.name"
+        :disabled="item.disabled"
+        >{{ item.name }}</u-checkbox
+      >
+    </u-checkbox-group>
+    <!-- <u-button @click="checkedAll">全选</u-button> -->
   </view>
 </template>
 

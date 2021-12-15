@@ -5,12 +5,12 @@
       v-model:value="cValue"
       :wrap="wrap"
       @change="radioGroupChange"
-      v-for="(item, index) in list"
     >
       <p v-if="textLocation" style="margin-left: 1px; margin-right: 5px">
         {{ item.name }}
       </p>
       <u-radio
+        v-for="(item, index) in list"
         @change="radioChange"
         :key="index"
         :name="item.name"
