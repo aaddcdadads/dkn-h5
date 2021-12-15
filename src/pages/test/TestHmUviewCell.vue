@@ -1,19 +1,10 @@
 <template>
   <view>
-    <hm-uview-cell
-      :list="list1"
-      :arrow="true"
-      arrowDirection="right"
-      :borderBottom="true"
-      :borderTop="false"
-      bg-color="transparent"
-      iconSize="17px"
-      @click="onClick"
-    ></hm-uview-cell>
+    <hm-uview-cell :list="list1"></hm-uview-cell>
     <hm-uview-cell
       :list="list2"
-      :arrow="false"
-      arrowDirection="up"
+      :arrow="true"
+      arrowDirection="right"
       :borderBottom="false"
       :borderTop="true"
       bg-color="#ffefef"
@@ -32,39 +23,39 @@ export default {
     return {
       list1: [
         {
-            key: 1,
-            title: "左侧标题list1",
-            icon: "setting-fill",
-            required: true,
-            label: "标题下方的描述信息list1",
-            value: "右侧内容list1",
-          },
-          {
-            key: 2,
-            title: "左侧标题list1",
-            icon: "setting-fill",
-            required: false,
-            label: "",
-            value: "右侧内容list1",
-          }
+          key: 1,
+          title: "左侧标题",
+          icon: "setting-fill",
+          required: true,
+          label: "标题下方的描述信息",
+          value: "右侧内容",
+        },
+        {
+          key: 2,
+          title: "左侧标题",
+          icon: "setting-fill",
+          required: false,
+          label: "",
+          value: "右侧内容",
+        },
       ],
       list2: [
         {
-            key: 1,
-            title: "左侧标题list2",
-            icon: "setting-fill",
-            required: true,
-            label: "标题下方的描述信息list2",
-            value: "右侧内容list2",
-          },
-          {
-            key: 2,
-            title: "左侧标题list2",
-            icon: "setting-fill",
-            required: false,
-            label: "",
-            value: "右侧内容list2",
-          }
+          key: 1,
+          title: "左侧标题list2",
+          icon: "setting-fill",
+          required: true,
+          label: "标题下方的描述信息list2",
+          value: "右侧内容list2",
+        },
+        {
+          key: 2,
+          title: "左侧标题list2",
+          icon: "setting-fill",
+          required: false,
+          label: "",
+          value: "右侧内容list2",
+        },
       ],
     };
   },

@@ -1,29 +1,31 @@
 <template>
   <!-- <hm-uview-button @click="click">123</hm-uview-button> -->
   <view>
-    <hm-uview-calendar v-model:value="cValue" title="标题" mode="date" placeholder="输入" width="100"></hm-uview-calendar>
-    <hm-uview-calendar v-model:value="cValue2" title="标题1" mode="range" placeholder="选择" width="50"></hm-uview-calendar>
-    <u-button @click="click">测试取值</u-button>
+    <hm-uview-divider></hm-uview-divider>
+    <hm-uview-divider
+      text="这是一条分割线"
+      halfWidth="300"
+      borderColor="#2a5caa"
+      color="#f8aba6"
+      fontSize="30"
+      bgColor="#585eaa"
+      height="50"
+      type="success"
+    ></hm-uview-divider>
   </view>
 </template>
 
 <script>
-import HmUviewCalendar from "@/components/built-in/HmUviewCalendar.vue";
+import HmUviewDivider from "@/components/built-in/HmUviewDivider.vue";
 export default {
-  name: "TestHmUviewCalendar",
-  components: { HmUviewCalendar },
+  name: "TestHmUviewDivider",
+  components: { HmUviewDivider },
   data() {
-    return {
-      cValue: "",
-      cValue2: ""
-    };
+    return {};
   },
   methods: {
-    click() {
-      console.log("value", this.cValue);
-      console.log("value2", this.cValue2);
-    }
-  }
+    click() {},
+  },
 };
 </script>
 

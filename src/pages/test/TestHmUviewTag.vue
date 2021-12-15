@@ -1,14 +1,6 @@
 <template>
   <view>
-    <hm-uview-tag
-      :cList="list1"
-      type="primary"
-      size="default"
-      shape="square"
-      mode="light"
-      :closeable="true"
-	  marginRight="10px"
-    ></hm-uview-tag>
+    <hm-uview-tag></hm-uview-tag>
     <hm-uview-tag
       :cList="list2"
       type="success"
@@ -20,7 +12,7 @@
       color="black"
       borderColor="black"
       closeColor="black"
-	  marginRight="20px"
+      marginRight="20px"
     ></hm-uview-tag>
   </view>
 </template>
@@ -32,25 +24,15 @@ export default {
   components: { HmUviewTag },
   data() {
     return {
-      list1: [
-        {
-            text: "标签1",
-            show: true,
-          },
-          {
-            text: "标签2",
-            show: true,
-          },
-      ],
       list2: [
         {
-            text: "标签1",
-            show: true,
-          },
-          {
-            text: "标签2",
-            show: true,
-          },
+          text: "标签1",
+          show: true,
+        },
+        {
+          text: "标签2",
+          show: true,
+        },
       ],
     };
   },

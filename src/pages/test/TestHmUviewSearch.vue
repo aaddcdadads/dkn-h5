@@ -1,20 +1,7 @@
 <template>
   <!-- <hm-uview-button @click="click">123</hm-uview-button> -->
   <view>
-    <hm-uview-search
-      v-model:value="cValue"
-      title="标题"
-      actionText="123"
-      placeholder="输入"
-      leftIcon="man"
-      rightIcon="man"
-      shape="round"
-      backgroundColor="red"
-      :clearabled="true"
-      :showAction="true"
-      inputAlign="left"
-      @onChange="onChange"
-    ></hm-uview-search>
+    <hm-uview-search v-model:value="cValue"></hm-uview-search>
     <hm-uview-search
       v-model:value="cValue2"
       title="标题2"
@@ -41,7 +28,7 @@ export default {
   data() {
     return {
       cValue: "",
-      cValue2: ""
+      cValue2: "",
     };
   },
   methods: {
@@ -54,8 +41,8 @@ export default {
     },
     onChange1(e) {
       console.log("onChange1", e);
-    }
-  }
+    },
+  },
 };
 </script>
 

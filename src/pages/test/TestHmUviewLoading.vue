@@ -1,16 +1,7 @@
 <template>
   <view>
-    <hm-uview-loading
-      mode="circle"
-      color="#c7c7c7"
-      size="17px"
-      :show="true"
-    ></hm-uview-loading>
-	<hm-uview-loading
-      mode="flower"
-      size="24px"
-      :show="true"
-    ></hm-uview-loading>
+    <hm-uview-loading></hm-uview-loading>
+    <hm-uview-loading mode="flower" size="100" :show="true"></hm-uview-loading>
   </view>
 </template>
 

@@ -1,24 +1,20 @@
 <template>
-  <view>
-    <view class="child">
-      <u-badge
-        class="badge-class"
-        :is-dot="isDot"
-        :count="count"
-        :offset="offset"
-        :type="type"
-        :color="color"
-        :bgColor="bgColor"
-      ></u-badge>
-    </view>
+  <view class="child">
+    <u-badge
+      class="badge-class"
+      :is-dot="isDot"
+      :count="count"
+      :offset="offset"
+      :type="type"
+      :color="color"
+      :bgColor="bgColor"
+    ></u-badge>
   </view>
 </template>
 
 <script>
-//import uBadge from "uview-ui/components/u-badge/u-badge";
 export default {
   name: "HmUviewBadge",
-  components: {},
   props: {
     /**
      * 类型
@@ -41,7 +37,7 @@ export default {
      */
     count: {
       type: Number,
-      default: 8,
+      default: 9,
     },
     /**
      * 字体颜色

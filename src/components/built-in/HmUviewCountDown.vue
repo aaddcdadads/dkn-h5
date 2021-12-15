@@ -1,25 +1,23 @@
 <template>
-  <view>
-    <u-count-down
-      :timestamp="timestamp"
-      :autoplay="autoplay"
-      :separator="separator"
-      :separator-size="separatorSize"
-      :separator-color="separatorColor"
-      :font-size="fontSize"
-      :color="color"
-      :bg-color="bgColor"
-      :show-border="showBorder"
-      :border-color="borderColor"
-      :height="height"
-      :show-days="showDays"
-      :hide-zero-day="showConfirmbar"
-      :show-hours="showHours"
-      :show-minutes="showMinutes"
-      :show-seconds="showSeconds"
-      @change="onChange"
-    ></u-count-down>
-  </view>
+  <u-count-down
+    :timestamp="timestamp"
+    :autoplay="autoplay"
+    :separator="separator"
+    :separator-size="separatorSize"
+    :separator-color="separatorColor"
+    :font-size="fontSize"
+    :color="color"
+    :bg-color="bgColor"
+    :show-border="showBorder"
+    :border-color="borderColor"
+    :height="height"
+    :show-days="showDays"
+    :hide-zero-day="showConfirmbar"
+    :show-hours="showHours"
+    :show-minutes="showMinutes"
+    :show-seconds="showSeconds"
+    @change="onChange"
+  ></u-count-down>
 </template>
 
 <script>

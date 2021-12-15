@@ -1,47 +1,37 @@
 <template>
   <!-- <hm-uview-button @click="click">123</hm-uview-button> -->
   <view>
-    <hm-uview-divider
-      text="1231231"
-      color="red"
-      halfWidth="600"
-      borderColor="#5c7a29"
-      fontSize="24"
-      bgcolor="#4e72b8"
-      height="50"
-      type="info"
-      @onClick="onClick"
-    ></hm-uview-divider>
-    <hm-uview-divider
-      text="qqqq"
-      color="#4e72b8"
-      halfWidth="100"
-      borderColor="red"
-      fontSize="50"
-      bgcolor="#5c7a29"
-      height="20"
-      type="warning"
-      @onClick="onClick1"
-    ></hm-uview-divider>
+    <hm-uview-badge></hm-uview-badge>
+    <hm-uview-badge
+      :isDot="false"
+      count="15"
+      :offset="arr"
+      type="success"
+      color="#b63131"
+      bgcolor="#121a2a"
+    ></hm-uview-badge>
+    <hm-uview-badge
+      :isDot="true"
+      :count="2"
+      :offset="arr"
+      type="primary"
+      color="#b62521"
+      bgcolor="##2e841a"
+    ></hm-uview-badge>
   </view>
 </template>
 
 <script>
-import HmUviewDivider from "@/components/built-in/HmUviewDivider.vue";
+import HmUviewBadge from "@/components/built-in/HmUviewBadge.vue";
 export default {
-  name: "TestHmUviewDivider",
-  components: { HmUviewDivider },
+  name: "TestHmUviewBadge",
+  components: { HmUviewBadge },
   data() {
     return {
-      onClick() {
-        console.log(1);
-      },
-      onClick1() {
-        console.log(2);
-      }
+      arr: [-8, -8],
     };
   },
-  methods: {}
+  methods: {},
 };
 </script>
 

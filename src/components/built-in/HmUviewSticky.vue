@@ -17,10 +17,7 @@
 </template>
 
 <script>
-// import uSticky from "uview-ui/components/u-sticky/u-sticky";
-
 export default {
-  components: {},
   name: "HmUviewSticky",
   props: {
     /**
@@ -28,7 +25,7 @@ export default {
      */
     offsetTop: {
       type: String,
-      default: "100",
+      default: "0",
     },
     /**
      * 自定义标识

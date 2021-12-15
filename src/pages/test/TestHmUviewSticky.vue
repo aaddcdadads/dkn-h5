@@ -1,34 +1,28 @@
 <template>
   <!-- <hm-uview-button @click="click">123</hm-uview-button> -->
   <view>
-    <hm-uview-sticky
-      offsetTop="123"
-      index="1"
-      :enable="true"
-      bgColor="red"
-      @onFixed="onFixed"
-      @onUnfixed="onUnfixed"
-    ></hm-uview-sticky>
+    <hm-uview-sticky><Hm-uview-image /></hm-uview-sticky>
     <hm-uview-sticky
       offsetTop="321"
       index="2"
-      :enable="false"
+      :enable="true"
       bgColor="#726930"
       zIndex="9999"
       @onFixed="onFixed1"
       @onUnfixed="onUnfixed1"
-    ></hm-uview-sticky>
+      ><Hm-uview-image
+    /></hm-uview-sticky>
   </view>
 </template>
 
 <script>
 import HmUviewSticky from "@/components/built-in/HmUviewSticky.vue";
+import HmUviewImage from "@/components/built-in/HmUviewImage.vue";
 export default {
   name: "TestHmUviewSticky",
-  components: { HmUviewSticky },
+  components: { HmUviewSticky, HmUviewImage },
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     onFixed(e) {
@@ -43,7 +37,7 @@ export default {
     onUnfixed1(e) {
       console.log("onUnfixed1", e);
     },
-  }
+  },
 };
 </script>
 
