@@ -386,6 +386,20 @@
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
+        },
+        {
+            "path": "components/built-in/HmUviewActionSheet",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "pages/test/TestHmUviewActionSheet",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
         }
     ],
     "globalStyle": {
