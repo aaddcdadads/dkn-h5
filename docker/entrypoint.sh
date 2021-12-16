@@ -8,5 +8,6 @@ git add src/pages && git add src/pages.json && git commit -m "chore: restart and
 git stash -u && git pull
 cp /root/code-live-preview/docker/client.mjs /root/code-live-preview/node_modules/vite/dist/client/client.mjs
 rm -rf /root/code-live-preview/node_modules/.vite/*.js.map
-#npm run serve
-node node_modules/vite/bin/vite.js
+# npm run serve
+# node node_modules/vite/bin/vite.js
+npm run dev:h5
