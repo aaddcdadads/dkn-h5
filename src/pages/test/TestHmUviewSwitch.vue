@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import HmUviewSwitch from "@/components/built-in/HmUviewSwitch.vue";
+import HmUviewSwitch from "@/components/built-in/uview/HmUviewSwitch.vue";
 
 export default {
   components: { HmUviewSwitch },

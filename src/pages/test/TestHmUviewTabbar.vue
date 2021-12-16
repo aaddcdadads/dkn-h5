@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import HmUviewTabbar from "@/components/built-in/HmUviewTabbar.vue";
+import HmUviewTabbar from "@/components/built-in/uview/HmUviewTabbar.vue";
 
 export default {
   components: { HmUviewTabbar },

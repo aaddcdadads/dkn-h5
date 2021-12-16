@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import HmUviewBadge from "@/components/built-in/HmUviewBadge.vue";
+import HmUviewBadge from "@/components/built-in/uview/HmUviewBadge.vue";
 export default {
   name: "TestHmUviewBadge",
   components: { HmUviewBadge },

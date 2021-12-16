@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import HmUviewIcon from "@/components/built-in/HmUviewIcon.vue";
+import HmUviewIcon from "@/components/built-in/uview/HmUviewIcon.vue";
 
 export default {
   components: { HmUviewIcon },

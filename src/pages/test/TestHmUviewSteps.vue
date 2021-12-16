@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import HmUviewSteps from "@/components/built-in/HmUviewSteps.vue";
+import HmUviewSteps from "@/components/built-in/uview/HmUviewSteps.vue";
 export default {
   name: "TestHmUviewSteps",
   components: { HmUviewSteps },

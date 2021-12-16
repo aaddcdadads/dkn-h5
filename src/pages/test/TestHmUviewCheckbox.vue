@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import HmUviewCheckbox from "@/components/built-in/HmUviewCheckbox.vue";
+import HmUviewCheckbox from "@/components/built-in/uview/HmUviewCheckbox.vue";
 export default {
   name: "TestHmUviewCheckbox",
   components: { HmUviewCheckbox },

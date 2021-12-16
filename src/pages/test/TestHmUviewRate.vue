@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import HmUviewRate from "@/components/built-in/HmUviewRate.vue";
+import HmUviewRate from "@/components/built-in/uview/HmUviewRate.vue";
 
 export default {
   components: { HmUviewRate },

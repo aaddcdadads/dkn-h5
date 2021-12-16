@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import HmUviewDivider from "@/components/built-in/HmUviewDivider.vue";
+import HmUviewDivider from "@/components/built-in/uview/HmUviewDivider.vue";
 export default {
   name: "TestHmUviewDivider",
   components: { HmUviewDivider },

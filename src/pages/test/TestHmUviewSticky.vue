@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import HmUviewSticky from "@/components/built-in/HmUviewSticky.vue";
-import HmUviewImage from "@/components/built-in/HmUviewImage.vue";
+import HmUviewSticky from "@/components/built-in/uview/HmUviewSticky.vue";
+import HmUviewImage from "@/components/built-in/uview/HmUviewImage.vue";
 export default {
   name: "TestHmUviewSticky",
   components: { HmUviewSticky, HmUviewImage },

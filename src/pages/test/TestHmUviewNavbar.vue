@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import HmUviewNavbar from "@/components/built-in/HmUviewNavbar.vue";
+import HmUviewNavbar from "@/components/built-in/uview/HmUviewNavbar.vue";
 export default {
   components: { HmUviewNavbar },
   data() {

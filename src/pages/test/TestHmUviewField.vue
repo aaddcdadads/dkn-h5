@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import HmUviewField from "@/components/built-in/HmUviewField.vue";
+import HmUviewField from "@/components/built-in/uview/HmUviewField.vue";
 export default {
   name: "TestHmUviewField",
   components: { HmUviewField },

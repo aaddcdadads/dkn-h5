@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import HmUviewCell from "@/components/built-in/HmUviewCell.vue";
+import HmUviewCell from "@/components/built-in/uview/HmUviewCell.vue";
 
 export default {
   components: { HmUviewCell },

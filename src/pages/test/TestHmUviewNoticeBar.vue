@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import HmUviewNoticeBar from "@/components/built-in/HmUviewNoticeBar.vue";
+import HmUviewNoticeBar from "@/components/built-in/uview/HmUviewNoticeBar.vue";
 export default {
   name: "TestHmUviewNoticeBar",
   components: { HmUviewNoticeBar },

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import HmUviewLoading from "@/components/built-in/HmUviewLoading.vue";
+import HmUviewLoading from "@/components/built-in/uview/HmUviewLoading.vue";
 
 export default {
   components: { HmUviewLoading },

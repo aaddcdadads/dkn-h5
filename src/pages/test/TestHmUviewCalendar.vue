@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import HmUviewCalendar from "@/components/built-in/HmUviewCalendar.vue";
+import HmUviewCalendar from "@/components/built-in/uview/HmUviewCalendar.vue";
 export default {
   name: "TestHmUviewCalendar",
   components: { HmUviewCalendar },

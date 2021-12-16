@@ -16,16 +16,16 @@
             {
                 "name": "HmUviewNavbar",
                 "title": "顶部导航栏",
-                "importPath": "built-in/HmUviewNavbar",
-                "imgUrl": "built-in/img/HmUviewNavbar.png",
+                "importPath": "built-in/uview/HmUviewNavbar",
+                "imgUrl": "built-in/uview/img/HmUviewNavbar.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewTabbar",
                 "title": "底部导航栏",
-                "importPath": "built-in/HmUviewTabbar",
-                "imgUrl": "built-in/img/HmUviewTabbar.png",
+                "importPath": "built-in/uview/HmUviewTabbar",
+                "imgUrl": "built-in/uview/img/HmUviewTabbar.png",
                 "type": 0,
                 "isBuiltIn": true
             }
@@ -38,88 +38,88 @@
             {
                 "name": "HmUviewButton",
                 "title": "按钮",
-                "importPath": "built-in/HmUviewButton",
-                "imgUrl": "built-in/img/HmUviewButton.png",
+                "importPath": "built-in/uview/HmUviewButton",
+                "imgUrl": "built-in/uview/img/HmUviewButton.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewRate",
                 "title": "评分",
-                "importPath": "built-in/HmUviewRate",
-                "imgUrl": "built-in/img/HmUviewRate.png",
+                "importPath": "built-in/uview/HmUviewRate",
+                "imgUrl": "built-in/uview/img/HmUviewRate.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewCalendar",
                 "title": "日期选择",
-                "importPath": "built-in/HmUviewCalendar",
-                "imgUrl": "built-in/img/HmUviewCalendar.png",
+                "importPath": "built-in/uview/HmUviewCalendar",
+                "imgUrl": "built-in/uview/img/HmUviewCalendar.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewCheckbox",
                 "title": "多选框",
-                "importPath": "built-in/HmUviewCheckbox",
-                "imgUrl": "built-in/img/HmUviewCheckbox.png",
+                "importPath": "built-in/uview/HmUviewCheckbox",
+                "imgUrl": "built-in/uview/img/HmUviewCheckbox.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewDivider",
                 "title": "分割线",
-                "importPath": "built-in/HmUviewDivider",
-                "imgUrl": "built-in/img/HmUviewDivider.png",
+                "importPath": "built-in/uview/HmUviewDivider",
+                "imgUrl": "built-in/uview/img/HmUviewDivider.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewField",
                 "title": "输入框",
-                "importPath": "built-in/HmUviewField",
-                "imgUrl": "built-in/img/HmUviewField.png",
+                "importPath": "built-in/uview/HmUviewField",
+                "imgUrl": "built-in/uview/img/HmUviewField.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewNoticeBar",
                 "title": "弹幕",
-                "importPath": "built-in/HmUviewNoticeBar",
-                "imgUrl": "built-in/img/HmUviewNoticeBar.png",
+                "importPath": "built-in/uview/HmUviewNoticeBar",
+                "imgUrl": "built-in/uview/img/HmUviewNoticeBar.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewRadio",
                 "title": "单选框",
-                "importPath": "built-in/HmUviewRadio",
-                "imgUrl": "built-in/img/HmUviewRadio.png",
+                "importPath": "built-in/uview/HmUviewRadio",
+                "imgUrl": "built-in/uview/img/HmUviewRadio.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewSearch",
                 "title": "搜索框",
-                "importPath": "built-in/HmUviewSearch",
-                "imgUrl": "built-in/img/HmUviewSearch.png",
+                "importPath": "built-in/uview/HmUviewSearch",
+                "imgUrl": "built-in/uview/img/HmUviewSearch.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewSlider",
                 "title": "进度条",
-                "importPath": "built-in/HmUviewSlider",
-                "imgUrl": "built-in/img/HmUviewSlider.png",
+                "importPath": "built-in/uview/HmUviewSlider",
+                "imgUrl": "built-in/uview/img/HmUviewSlider.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewPicker",
                 "title": "选择器",
-                "importPath": "built-in/HmUviewPicker",
-                "imgUrl": "built-in/img/HmUviewPicker.png",
+                "importPath": "built-in/uview/HmUviewPicker",
+                "imgUrl": "built-in/uview/img/HmUviewPicker.png",
                 "type": 0,
                 "isBuiltIn": true
             }
@@ -132,40 +132,40 @@
             {
                 "name": "HmUviewBadge",
                 "title": "徽标",
-                "importPath": "built-in/HmUviewBadge",
-                "imgUrl": "built-in/img/HmUviewBadge.png",
+                "importPath": "built-in/uview/HmUviewBadge",
+                "imgUrl": "built-in/uview/img/HmUviewBadge.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewCell",
                 "title": "单元格",
-                "importPath": "built-in/HmUviewCell",
-                "imgUrl": "built-in/img/HmUviewCell.png",
+                "importPath": "built-in/uview/HmUviewCell",
+                "imgUrl": "built-in/uview/img/HmUviewCell.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewSteps",
                 "title": "滚动条",
-                "importPath": "built-in/HmUviewSteps",
-                "imgUrl": "built-in/img/HmUviewSteps.png",
+                "importPath": "built-in/uview/HmUviewSteps",
+                "imgUrl": "built-in/uview/img/HmUviewSteps.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewSticky",
                 "title": "顶部吸附",
-                "importPath": "built-in/HmUviewSticky",
-                "imgUrl": "built-in/img/HmUviewSticky.png",
+                "importPath": "built-in/uview/HmUviewSticky",
+                "imgUrl": "built-in/uview/img/HmUviewSticky.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewTag",
                 "title": "标签",
-                "importPath": "built-in/HmUviewTag",
-                "imgUrl": "built-in/img/HmUviewTag.png",
+                "importPath": "built-in/uview/HmUviewTag",
+                "imgUrl": "built-in/uview/img/HmUviewTag.png",
                 "type": 0,
                 "isBuiltIn": true
             }
@@ -193,40 +193,40 @@
             {
                 "name": "HmUviewIcon",
                 "title": "图标文字",
-                "importPath": "built-in/HmUviewIcon",
-                "imgUrl": "built-in/img/HmUviewIcon.png",
+                "importPath": "built-in/uview/HmUviewIcon",
+                "imgUrl": "built-in/uview/img/HmUviewIcon.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewImage",
                 "title": "图片",
-                "importPath": "built-in/HmUviewImage",
-                "imgUrl": "built-in/img/HmUviewImage.png",
+                "importPath": "built-in/uview/HmUviewImage",
+                "imgUrl": "built-in/uview/img/HmUviewImage.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewEmpty",
                 "title": "空状态",
-                "importPath": "built-in/HmUviewEmpty",
-                "imgUrl": "built-in/img/HmUviewEmpty.png",
+                "importPath": "built-in/uview/HmUviewEmpty",
+                "imgUrl": "built-in/uview/img/HmUviewEmpty.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewLoading",
                 "title": "加载",
-                "importPath": "built-in/HmUviewLoading",
-                "imgUrl": "built-in/img/HmUviewLoading.png",
+                "importPath": "built-in/uview/HmUviewLoading",
+                "imgUrl": "built-in/uview/img/HmUviewLoading.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewCountDown",
                 "title": "倒计时",
-                "importPath": "built-in/HmUviewCountDown",
-                "imgUrl": "built-in/img/HmUviewCountDown.png",
+                "importPath": "built-in/uview/HmUviewCountDown",
+                "imgUrl": "built-in/uview/img/HmUviewCountDown.png",
                 "type": 0,
                 "isBuiltIn": true
             }

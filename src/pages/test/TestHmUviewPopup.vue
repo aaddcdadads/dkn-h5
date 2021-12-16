@@ -26,8 +26,8 @@
 </template>
 
 <script>
-import HmUviewPopup from "@/components/built-in/HmUviewPopup.vue";
-import HmUviewImage from "@/components/built-in/HmUviewImage.vue";
+import HmUviewPopup from "@/components/built-in/uview/HmUviewPopup.vue";
+import HmUviewImage from "@/components/built-in/uview/HmUviewImage.vue";
 export default {
   name: "TestHmUviewPopup",
   components: { HmUviewPopup, HmUviewImage },
