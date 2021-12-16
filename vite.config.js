@@ -36,7 +36,7 @@ export default defineConfig({
   plugins: [uni()],
   optimizeCacheDir: resolve(__dirname, "node_modules/.vite/"),
   optimizeDeps: {
-    include: ["vk-uview-ui", "lodash", "moment"],
+    include: ["lodash", "moment"],
   },
   server: {
     // host: os.hostname(),
