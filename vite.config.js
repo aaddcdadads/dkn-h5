@@ -39,8 +39,8 @@ export default defineConfig({
     include: ["lodash", "moment"],
   },
   server: {
-    // host: os.hostname(),
-    host: "0.0.0.0",
+    host: os.hostname(),
+    // host: "0.0.0.0",
     hmr: {
       overlay: false,
     },
