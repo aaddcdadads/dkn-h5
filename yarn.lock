@@ -2723,6 +2723,11 @@ jest-worker@^27.0.6:
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
+jiff@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.nlark.com/jiff/download/jiff-0.7.3.tgz#42db5d9140f1804399bb501747055a9434f40f46"
+  integrity sha1-QttdkUDxgEOZu1AXRwValDT0D0Y=
+
 js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmmirror.com/js-tokens/download/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
