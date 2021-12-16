@@ -1,18 +1,10 @@
 # 定义 stages
 stages:
-  - 1update_components
-  - 1built_in_deploy
-  - 1publish
+  - built_in_deploy
+  - publish
   
 
 # 定义job
-update_components:
-  stage: update_components
-  tags:
-    - block-design-live
-  script:
-    - bash ./UpdateComponents.sh
-
 built_in_deploy:
   stage: built_in_deploy
   cache: {}
