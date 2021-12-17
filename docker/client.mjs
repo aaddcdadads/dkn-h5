@@ -184,7 +184,11 @@ if (customElements && !customElements.get(overlayId)) {
 console.log('[vite] connecting...');
 // use server configuration, then fallback to inference
 const socketProtocol = __HMR_PROTOCOL__ || (location.protocol === 'https:' ? 'wss' : 'ws');
-const socketHost = `${__HMR_HOSTNAME__ || location.hostname}:${__HMR_PORT__}`;
+// const socketHost = `${__HMR_HOSTNAME__ || location.hostname}:${__HMR_PORT__}`;
+function getSocketHost() {
+    return `${location.host}/wss/3000`;
+  }
+const socketHost = getSocketHost();
 const socket = new WebSocket(`${socketProtocol}://${socketHost}`, 'vite-hmr');
 const base = __BASE__ || '/';
 function warnFailedFetch(err, path) {
@@ -234,7 +238,7 @@ async function handleMessage(payload) {
                     // can't use querySelector with `[href*=]` here since the link may be
                     // using relative paths so we need to use link.href to grab the full
                     // URL for the include check.
-                    const el = [].slice.call(document.querySelectorAll(`link`)).find((e) => e.href.includes(path));
+                    const el = Array.from(document.querySelectorAll('link')).find((e) => e.href.includes(path));
                     if (el) {
                         const newPath = `${base}${path.slice(1)}${path.includes('?') ? '&' : '?'}t=${timestamp}`;
                         el.href = new URL(newPath, el.href).href;
@@ -377,8 +381,6 @@ function removeStyle(id) {
     const style = sheetsMap.get(id);
     if (style) {
         if (style instanceof CSSStyleSheet) {
-            // @ts-ignore
-            document.adoptedStyleSheets.indexOf(style);
             // @ts-ignore
             document.adoptedStyleSheets = document.adoptedStyleSheets.filter((s) => s !== style);
         }
