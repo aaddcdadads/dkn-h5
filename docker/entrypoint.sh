@@ -9,4 +9,4 @@ git stash -u && git pull
 rm -rf /root/code-live-preview/node_modules/.vite/*.js.map
 # npm run serve
 # node node_modules/vite/bin/vite.js
-npm run dev:h5
+npm run dev:h5 -- --host `hostname`
