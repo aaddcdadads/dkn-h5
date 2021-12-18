@@ -46,8 +46,8 @@
 </template>
 
 <script>
-import HmUviewBgCard from "@/components/built-in/uview/HmUviewBgCard.vue";
-import HmUviewButton from "@/components/built-in/uview/HmUviewButton.vue";
+import HmUviewBgCard from "@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
+import HmUviewButton from "@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
   components: { HmUviewBgCard, HmUviewButton },

@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import HmUviewCountDown from "@/components/built-in/uview/HmUviewCountDown.vue";
+import HmUviewCountDown from "@/components/built-in/uniapp-uview-vue3/HmUviewCountDown.vue";
 export default {
   name: "TestHmUviewCountDown",
   components: { HmUviewCountDown },

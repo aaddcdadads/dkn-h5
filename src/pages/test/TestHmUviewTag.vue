@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import HmUviewTag from "@/components/built-in/uview/HmUviewTag.vue";
+import HmUviewTag from "@/components/built-in/uniapp-uview-vue3/HmUviewTag.vue";
 
 export default {
   components: { HmUviewTag },

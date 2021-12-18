@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import HmUviewRadio from "@/components/built-in/uview/HmUviewRadio.vue";
+import HmUviewRadio from "@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
 export default {
   name: "TestHmUviewRadio",
   components: { HmUviewRadio },

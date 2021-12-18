@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import HmUviewImage from "@/components/built-in/uview/HmUviewImage.vue";
+import HmUviewImage from "@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 
 export default {
   components: { HmUviewImage },

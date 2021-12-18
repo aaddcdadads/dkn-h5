@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import HmUviewList from "@/components/built-in/uview/HmUviewList.vue";
-import HmUviewButton from "@/components/built-in/uview/HmUviewButton.vue";
+import HmUviewList from "@/components/built-in/uniapp-uview-vue3/HmUviewList.vue";
+import HmUviewButton from "@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
   components: { HmUviewList, HmUviewButton },
