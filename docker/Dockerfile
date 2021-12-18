@@ -17,7 +17,5 @@ RUN eval `ssh-agent` && ssh-add /root/.ssh/id_rsa
 RUN git clone ssh://git@gitlab.haomo-studio.com:15822/block-design-components/uniapp-uview-vite.git /root/code-live-preview
 RUN cd /root/code-live-preview
 COPY entrypoint.sh /root/entrypoint.sh
-RUN echo "pages.json" >> .gitignore
-RUN git rm --cached pages.json
 # 本Dockerfile已经通过gitlab-ci自动构建镜像
 # 执行命令构建：docker build  -t registry.cn-shenzhen.aliyuncs.com/block-design/block-design-live:uniapp-uview-vue3 . --no-cache
