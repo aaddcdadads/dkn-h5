@@ -19,6 +19,6 @@ RUN git clone ssh://git@gitlab.haomo-studio.com:15822/block-design-components/un
 RUN cd /root/code-live-preview
 RUN pwd
 COPY entrypoint.sh /root/entrypoint.sh
-COPY docker/.gitattributes ./.gitattributes
+COPY .gitattributes /root/code-live-preview/.gitattributes
 # 本Dockerfile已经通过gitlab-ci自动构建镜像
 # 执行命令构建：docker build  -t registry.cn-shenzhen.aliyuncs.com/block-design/block-design-live:uniapp-uview-vue3 . --no-cache
