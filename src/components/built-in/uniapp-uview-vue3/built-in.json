@@ -16,16 +16,16 @@
             {
                 "name": "HmUviewNavbar",
                 "title": "顶部导航栏",
-                "importPath": "built-in/uview/HmUviewNavbar",
-                "imgUrl": "built-in/uview/img/HmUviewNavbar.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewNavbar",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewNavbar.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewTabbar",
                 "title": "底部导航栏",
-                "importPath": "built-in/uview/HmUviewTabbar",
-                "imgUrl": "built-in/uview/img/HmUviewTabbar.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewTabbar",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewTabbar.png",
                 "type": 0,
                 "isBuiltIn": true
             }
@@ -38,88 +38,88 @@
             {
                 "name": "HmUviewButton",
                 "title": "按钮",
-                "importPath": "built-in/uview/HmUviewButton",
-                "imgUrl": "built-in/uview/img/HmUviewButton.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewButton",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewButton.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewRate",
                 "title": "评分",
-                "importPath": "built-in/uview/HmUviewRate",
-                "imgUrl": "built-in/uview/img/HmUviewRate.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewRate",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewRate.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewCalendar",
                 "title": "日期选择",
-                "importPath": "built-in/uview/HmUviewCalendar",
-                "imgUrl": "built-in/uview/img/HmUviewCalendar.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewCalendar",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewCalendar.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewCheckbox",
                 "title": "多选框",
-                "importPath": "built-in/uview/HmUviewCheckbox",
-                "imgUrl": "built-in/uview/img/HmUviewCheckbox.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewCheckbox",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewCheckbox.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewDivider",
                 "title": "分割线",
-                "importPath": "built-in/uview/HmUviewDivider",
-                "imgUrl": "built-in/uview/img/HmUviewDivider.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewDivider",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewDivider.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewField",
                 "title": "输入框",
-                "importPath": "built-in/uview/HmUviewField",
-                "imgUrl": "built-in/uview/img/HmUviewField.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewField",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewField.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewNoticeBar",
                 "title": "弹幕",
-                "importPath": "built-in/uview/HmUviewNoticeBar",
-                "imgUrl": "built-in/uview/img/HmUviewNoticeBar.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewNoticeBar",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewNoticeBar.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewRadio",
                 "title": "单选框",
-                "importPath": "built-in/uview/HmUviewRadio",
-                "imgUrl": "built-in/uview/img/HmUviewRadio.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewRadio",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewRadio.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewSearch",
                 "title": "搜索框",
-                "importPath": "built-in/uview/HmUviewSearch",
-                "imgUrl": "built-in/uview/img/HmUviewSearch.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewSearch",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSearch.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewSlider",
                 "title": "进度条",
-                "importPath": "built-in/uview/HmUviewSlider",
-                "imgUrl": "built-in/uview/img/HmUviewSlider.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewSlider",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSlider.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewPicker",
                 "title": "选择器",
-                "importPath": "built-in/uview/HmUviewPicker",
-                "imgUrl": "built-in/uview/img/HmUviewPicker.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewPicker",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewPicker.png",
                 "type": 0,
                 "isBuiltIn": true
             }
@@ -132,40 +132,40 @@
             {
                 "name": "HmUviewBadge",
                 "title": "徽标",
-                "importPath": "built-in/uview/HmUviewBadge",
-                "imgUrl": "built-in/uview/img/HmUviewBadge.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewBadge",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewBadge.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewCell",
                 "title": "单元格",
-                "importPath": "built-in/uview/HmUviewCell",
-                "imgUrl": "built-in/uview/img/HmUviewCell.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewCell",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewCell.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewSteps",
                 "title": "滚动条",
-                "importPath": "built-in/uview/HmUviewSteps",
-                "imgUrl": "built-in/uview/img/HmUviewSteps.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewSteps",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSteps.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewSticky",
                 "title": "顶部吸附",
-                "importPath": "built-in/uview/HmUviewSticky",
-                "imgUrl": "built-in/uview/img/HmUviewSticky.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewSticky",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSticky.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewTag",
                 "title": "标签",
-                "importPath": "built-in/uview/HmUviewTag",
-                "imgUrl": "built-in/uview/img/HmUviewTag.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewTag",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewTag.png",
                 "type": 0,
                 "isBuiltIn": true
             }
@@ -193,40 +193,40 @@
             {
                 "name": "HmUviewIcon",
                 "title": "图标文字",
-                "importPath": "built-in/uview/HmUviewIcon",
-                "imgUrl": "built-in/uview/img/HmUviewIcon.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewIcon",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewIcon.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewImage",
                 "title": "图片",
-                "importPath": "built-in/uview/HmUviewImage",
-                "imgUrl": "built-in/uview/img/HmUviewImage.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewImage",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewImage.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewEmpty",
                 "title": "空状态",
-                "importPath": "built-in/uview/HmUviewEmpty",
-                "imgUrl": "built-in/uview/img/HmUviewEmpty.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewEmpty",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewEmpty.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewLoading",
                 "title": "加载",
-                "importPath": "built-in/uview/HmUviewLoading",
-                "imgUrl": "built-in/uview/img/HmUviewLoading.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewLoading",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewLoading.png",
                 "type": 0,
                 "isBuiltIn": true
             },
             {
                 "name": "HmUviewCountDown",
                 "title": "倒计时",
-                "importPath": "built-in/uview/HmUviewCountDown",
-                "imgUrl": "built-in/uview/img/HmUviewCountDown.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewCountDown",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewCountDown.png",
                 "type": 0,
                 "isBuiltIn": true
             }

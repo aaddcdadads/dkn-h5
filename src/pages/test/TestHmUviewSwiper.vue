@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import HmUviewSwiper from "@/components/built-in/uview/HmUviewSwiper.vue";
+import HmUviewSwiper from "@/components/built-in/uniapp-uview-vue3/HmUviewSwiper.vue";
 
 export default {
   components: {

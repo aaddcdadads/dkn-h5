@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import HmUviewSlider from "@/components/built-in/uview/HmUviewSlider.vue";
+import HmUviewSlider from "@/components/built-in/uniapp-uview-vue3/HmUviewSlider.vue";
 export default {
   name: "TestHmUviewSlider",
   components: { HmUviewSlider },

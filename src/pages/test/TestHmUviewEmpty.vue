@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import HmUviewEmpty from "@/components/built-in/uview/HmUviewEmpty.vue";
+import HmUviewEmpty from "@/components/built-in/uniapp-uview-vue3/HmUviewEmpty.vue";
 
 export default {
   components: { HmUviewEmpty },

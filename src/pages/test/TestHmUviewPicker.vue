@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import HmUviewPicker from "@/components/built-in/uview/HmUviewPicker.vue";
+import HmUviewPicker from "@/components/built-in/uniapp-uview-vue3/HmUviewPicker.vue";
 
 export default {
   components: { HmUviewPicker },

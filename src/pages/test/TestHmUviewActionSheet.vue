@@ -30,8 +30,8 @@
 </template>
 
 <script>
-	import HmUviewActionSheet from "@/components/built-in/uview/HmUviewActionSheet.vue";
-	import HmUviewButton from "@/components/built-in/uview/HmUviewButton.vue";
+	import HmUviewActionSheet from "@/components/built-in/uniapp-uview-vue3/HmUviewActionSheet.vue";
+	import HmUviewButton from "@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 	export default {
 		components: { HmUviewActionSheet, HmUviewButton },

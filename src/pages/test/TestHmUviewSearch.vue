@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import HmUviewSearch from "@/components/built-in/uview/HmUviewSearch.vue";
+import HmUviewSearch from "@/components/built-in/uniapp-uview-vue3/HmUviewSearch.vue";
 export default {
   name: "TestHmUviewSearch",
   components: { HmUviewSearch },
