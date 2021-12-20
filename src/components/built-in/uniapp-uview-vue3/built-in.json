@@ -66,10 +66,10 @@
                 "isBuiltIn": true
             },
             {
-                "name": "HmUviewSwipe",
+                "name": "HmUviewSwiper",
                 "title": "轮播图",
-                "importPath": "built-in/uniapp-uview-vue3/HmUviewSwipe",
-                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSwipe.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewSwiper",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSwiper.png",
                 "type": 0,
                 "isBuiltIn": true
             }
