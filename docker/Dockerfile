@@ -14,8 +14,11 @@ RUN chmod 600 /root/.ssh/id_rsa && touch /root/.ssh/known_hosts
 RUN ssh-keyscan gitlab.haomo-studio.com >> ~/.ssh/known_hosts
 RUN echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
 RUN eval `ssh-agent` && ssh-add /root/.ssh/id_rsa
+RUN git config --global merge.ours.driver true
 RUN git clone ssh://git@gitlab.haomo-studio.com:15822/block-design-components/uniapp-uview-vite.git /root/code-live-preview
 RUN cd /root/code-live-preview
+RUN pwd
 COPY entrypoint.sh /root/entrypoint.sh
+COPY .gitattributes /root/code-live-preview/.gitattributes
 # 本Dockerfile已经通过gitlab-ci自动构建镜像
 # 执行命令构建：docker build  -t registry.cn-shenzhen.aliyuncs.com/block-design/block-design-live:uniapp-uview-vue3 . --no-cache
