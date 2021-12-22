@@ -33,8 +33,8 @@ export default {
      * 大小
      */
     size: {
-      type: [String, Number],
-      default: "50",
+      type: String,
+      default: "25px",
     },
 
     /**
@@ -55,6 +55,7 @@ export default {
 
     /**
      * 打开背景色
+     * @type Color
      */
     activeColor: {
       type: String,
@@ -63,6 +64,7 @@ export default {
 
     /**
      * 关闭背景色
+     * @type Color
      */
     inactiveColor: {
       type: String,

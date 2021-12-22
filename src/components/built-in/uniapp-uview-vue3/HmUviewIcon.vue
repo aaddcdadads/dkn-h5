@@ -20,6 +20,7 @@ export default {
   props: {
     /**
      * 名称
+     * @type Icon
      */
     name: {
       type: String,
@@ -28,6 +29,7 @@ export default {
 
     /**
      * 图标颜色
+     * @type Color
      */
     color: {
       type: String,
@@ -38,12 +40,12 @@ export default {
      * 大小
      */
     size: {
-      type: [String, Number],
-      default: 50,
+      type: String,
+      default: "25px",
     },
 
     /**
-     * 图标右侧/下方文字
+     * 图标文字
      */
     label: {
       type: String,
@@ -54,12 +56,13 @@ export default {
      * 图标文字大小
      */
     labelSize: {
-      type: [String, Number],
-      default: 28,
+      type: String,
+      default: "14px",
     },
 
     /**
      * 图标文字颜色
+     * @type Color
      */
     labelColor: {
       type: String,

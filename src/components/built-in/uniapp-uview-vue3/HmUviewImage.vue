@@ -42,27 +42,28 @@ export default {
      * 	宽度
      */
     width: {
-      type: [String, Number],
-      default: 200,
+      type: String,
+      default: "100px",
     },
     /**
      * 高度
      */
     height: {
-      type: [String, Number],
-      default: 200,
+      type: String,
+      default: "100px",
     },
 
     /**
      * 图片圆角值
      */
     borderRedius: {
-      type: [String, Number],
-      default: 0,
+      type: String,
+      default: "0",
     },
 
     /**
      * 加载中的图标
+     * @type Icon
      */
     loadingIcon: {
       type: String,
@@ -71,6 +72,7 @@ export default {
 
     /**
      * 加载失败的图标
+     * @type Icon
      */
     errorIcon: {
       type: String,

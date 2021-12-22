@@ -41,7 +41,6 @@ export default {
     /**
      * 弹出方向
      * @type Enum
-     * @default left
      * @options ["left","top", "right","bottom","center"]
      */
     mode: {
@@ -59,14 +58,14 @@ export default {
      * 宽度
      */
     width: {
-      type: [String, Number],
+      type: String,
       default: "50%",
     },
     /**
      * 长度
      */
     height: {
-      type: [String, Number],
+      type: String,
       default: "40%",
     },
     /**
@@ -80,8 +79,8 @@ export default {
      * 圆角值
      */
     borderRadius: {
-      type: [String, Number],
-      default: 0,
+      type: String,
+      default: "0px",
     },
     /**
      * 是否显示关闭图标
@@ -92,6 +91,7 @@ export default {
     },
     /**
      * 关闭图标
+     * @type Icon
      */
     closeIcon: {
       type: String,
@@ -100,7 +100,6 @@ export default {
     /**
      * 关闭图标位置
      * @type Enum
-     * @default top-right
      * @options ["top-right", "top-left","bottom-left","bottom-right"];
      */
     closeIconPos: {
@@ -109,6 +108,7 @@ export default {
     },
     /**
      * 关闭图标颜色
+     * @type Color
      */
     closeIconColor: {
       type: String,
@@ -118,8 +118,8 @@ export default {
      * 关闭图标大小
      */
     closeIconSize: {
-      type: [String, Number],
-      default: 30,
+      type: String,
+      default: "15px",
     },
   },
   watch: {
