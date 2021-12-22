@@ -67,8 +67,8 @@ export default {
      * 高度
      */
     height: {
-      type: [String, Number],
-      default: 250,
+      type: String,
+      default: "250px",
     },
     /**
      * 指示器位置
@@ -97,8 +97,8 @@ export default {
      * 轮播间隔
      */
     interval: {
-      type: [String, Number],
-      default: 2500,
+      type: String,
+      default: "2500",
     },
     /**
      * 衔接播放
@@ -111,26 +111,27 @@ export default {
      * 轮播时间
      */
     duration: {
-      type: [String, Number],
-      default: 500,
+      type: String,
+      default: "500",
     },
     /**
      * 图片圆角值
      */
     borderRadius: {
-      type: [String, Number],
-      default: 8,
+      type: String,
+      default: "8",
     },
     /**
      * 前后项距离
      */
     effect3dPreviousMargin: {
       //effect3d为true生效
-      type: [String, Number],
-      default: 50,
+      type: String,
+      default: "50",
     },
     /**
      * 背景颜色
+     * @type Color
      */
     bgColor: {
       type: String,
@@ -140,8 +141,8 @@ export default {
      * 初始第几页
      */
     current: {
-      type: [String, Number],
-      default: 0,
+      type: String,
+      default: "0",
     },
   },
   data() {
