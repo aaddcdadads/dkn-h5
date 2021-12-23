@@ -68,7 +68,21 @@ export default {
      */
     height: {
       type: String,
-      default: "250px",
+      default: "200px",
+    },
+    /**
+     * 宽度
+     */
+    width: {
+      type: String,
+      default: "300px",
+    },
+    /**
+     * 内边距
+     */
+    padding: {
+      type: String,
+      default: "20px",
     },
     /**
      * 指示器位置
@@ -146,7 +160,22 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      cWidth: "",
+      cPadding: "",
+    };
+  },
+  watch: {
+    width(value) {
+      this.cWidth = this.getCssUnit(this.width);
+    },
+    padding(value) {
+      this.cPadding = this.getCssUnit(this.padding);
+    },
+  },
+  mounted() {
+    this.cWidth = this.getCssUnit(this.width);
+    this.cPadding = this.getCssUnit(this.padding);
   },
   methods: {
     onClick(e) {
@@ -155,12 +184,20 @@ export default {
     onChange(e) {
       this.$emit("change", e);
     },
+    getCssUnit(value) {
+      if (isNaN(Number(value))) {
+        console.log("value", value);
+        return value;
+      }
+      return `${value}px`;
+    },
   },
 };
 </script>
 
 <style lang="less">
 .wrap {
-  padding: 40rpx;
+  padding: v-bind(cPadding);
+  width: v-bind(cWidth);
 }
 </style>
