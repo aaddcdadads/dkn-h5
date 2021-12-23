@@ -6,6 +6,8 @@ import App from "./App.vue";
 import uView from './uni_modules/vk-uview-ui';
 import loadBuiltInComponent from './utils/loadBuiltInComponent';
 
+import "./mock/index.js";
+
 import {
 	getAction,
 	downloadFile,

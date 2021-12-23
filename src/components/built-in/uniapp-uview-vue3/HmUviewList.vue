@@ -91,7 +91,6 @@ export default {
   },
   mounted() {
     this.cData = this.data;
-    console.log('123')
     this.getData();
   },
   methods: {
@@ -115,9 +114,10 @@ export default {
         if (resp.data) {
           data = resp.data;
         };
-        
+
         self.cData = self.dataMap ? 
           self.handleDataMapping(data, self.dataMap) : data;
+
       });
     },
     /**
@@ -125,9 +125,11 @@ export default {
      */
     handleDataMapping(data, dataMap){
       return _.map(data, item => {
-        return _.map(dataMap, value => {
-          return item[value] || ''
+        let obj = {}
+        _.each(dataMap, (value, key) => {
+          obj[key] = item[value] || ''
         })
+        return obj
       })
     },
     getCssUnit(value) {
