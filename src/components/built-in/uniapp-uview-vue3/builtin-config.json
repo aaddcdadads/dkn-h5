@@ -80,6 +80,14 @@
         "name": "基础组件",
         "componentList": [
             {
+                "name": "HmUviewText",
+                "title": "文字",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewText",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewText.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
                 "name": "HmUviewIcon",
                 "title": "图标",
                 "importPath": "built-in/uniapp-uview-vue3/HmUviewIcon",
