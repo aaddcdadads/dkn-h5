@@ -16,6 +16,10 @@ function setGlobal(config) {
  * @returns
  */
 function transformAxiosRequest(config) {
+    // 相对路径拼接本地域名
+    if(config.url.indexOf(":") == -1){
+        config.url = window.location.protocol + '//' + window.location.host + config.url
+    }
     let url = new URL(config.url);
     // config.headers['x-api-origin'] = url.origin;
     let schema = url.origin.split(':')[0];
@@ -29,9 +33,6 @@ function transformAxiosRequest(config) {
 
 function setJeecgAuth(config) {
     let token = uni.getStorageSync(TOKEN);
-    if (!token) {
-        return;
-    }
     console.log(`pro__Access-Token: `, token);
     token = token ? JSON.parse(token).value : null;
     config.header[TOKEN] = token ? token : '';
@@ -52,57 +53,25 @@ uni.addInterceptor('request', {
         setGlobal(config)
         setJeecgAuth(config)
         // setEleAdminAuth(config)
-        // transformAxiosRequest(args)
+        transformAxiosRequest(config)
     },
-    fail(err) {
-        console.log('interceptor-fail',err)
-        if (error.response) {
-            let data = error.response.data
-            const token = uni.getStorageSync(TOKEN)
-            switch (error.response.status) {
-                case 403:
-                    notification.error({
-                        message: '系统提示',
-                        description: '拒绝访问',
-                        duration: 4
-                    })
-                    break
-                case 500:
-                    let message = data.message == "Token失效，请重新登录!" ? 'Token失效，请重新登录' : '该账号已在异地登陆，请重新登录'
-                    notification.error({
-                        message: message,
-                        description: '拒绝访问',
-                        duration: 4
-                    })
-                    break
-                case 404:
-                    notification.error({
-                        message: '系统提示',
-                        description: '很抱歉，资源未找到!',
-                        duration: 4
-                    })
-                    break
-                case 504:
-                    notification.error({
-                        message: '系统提示',
-                        description: '网络超时'
-                    })
-                    break
-                case 401:
-                    notification.error({
-                        message: '系统提示',
-                        description: '未授权，请重新登录',
-                        duration: 4
-                    })
-                    break
-                default:
-                    notification.error({
-                        message: '系统提示',
-                        description: data.message,
-                        duration: 4
-                    })
-                    break
-            }
+    complete(response) {
+        let data = response.data
+        switch (response.statusCode) {
+            case 200:
+                break
+            case 403:
+                break
+            case 500:
+                break
+            case 404:
+                break
+            case 504:
+                break
+            case 401:
+                break
+            default:
+                break
         }
     }, 
 })
