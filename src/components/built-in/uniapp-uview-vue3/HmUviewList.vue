@@ -10,6 +10,11 @@
 </template>
 
 <script>
+import _ from 'lodash';
+import {
+  getAction,
+} from "/@/request/http";
+
 /**
  * 背景卡片
  */
@@ -86,6 +91,7 @@ export default {
   },
   mounted() {
     this.cData = this.data;
+    console.log('123')
     this.getData();
   },
   methods: {

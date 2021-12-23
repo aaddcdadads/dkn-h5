@@ -4060,6 +4060,11 @@ vite@^2.6.14:
   optionalDependencies:
     fsevents "~2.3.2"
 
+vue-cookie-next@^1.0.3:
+  version "1.3.0"
+  resolved "https://registry.npmmirror.com/vue-cookie-next/download/vue-cookie-next-1.3.0.tgz#2d7aadf55c2c6a25d02a3d27d8161c3f731a6e15"
+  integrity sha1-LXqt9VwsaiXQKj0n2BYcP3MabhU=
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.npmmirror.com/vue-hot-reload-api/download/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
