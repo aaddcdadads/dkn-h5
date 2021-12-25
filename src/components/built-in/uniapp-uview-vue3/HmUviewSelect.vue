@@ -15,7 +15,7 @@
       @confirm="onConfirm"
       @cancel="onCancel"
     ></u-select>
-    <u-button @click="cShow = true">打开</u-button>
+    <!-- <u-button @click="cShow = true">打开</u-button> -->
   </view>
 </template>
 

@@ -4,10 +4,10 @@
     <Hm-uview-select
       :show="true"
       :list="cList"
-      mode="mutil-column"
+      mode="mutil-column-auto"
       cancelColor="#606266"
       confirmColor="#2979ff"
-      :defaultValue="[1, 1]"
+      :defaultValue="[1, 0, 0]"
       :maskCloseAble="false"
       title="请选择"
       confirmText="选择好了"
@@ -27,26 +27,56 @@ export default {
   data() {
     return {
       cList: [
-        [
-          {
-            value: "1",
-            label: "江",
-          },
-          {
-            value: "2",
-            label: "湖",
-          },
-        ],
-        [
-          {
-            value: "3",
-            label: "夜",
-          },
-          {
-            value: "4",
-            label: "雨",
-          },
-        ],
+        {
+          value: 1,
+          label: "中国",
+          children: [
+            {
+              value: 2,
+              label: "广东",
+              children: [
+                {
+                  value: 3,
+                  label: "深圳",
+                },
+                {
+                  value: 4,
+                  label: "广州",
+                },
+              ],
+            },
+            {
+              value: 5,
+              label: "广西",
+              children: [
+                {
+                  value: 6,
+                  label: "南宁",
+                },
+                {
+                  value: 7,
+                  label: "桂林",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          value: 8,
+          label: "美国",
+          children: [
+            {
+              value: 9,
+              label: "纽约",
+              children: [
+                {
+                  value: 10,
+                  label: "中心广场",
+                },
+              ],
+            },
+          ],
+        },
       ],
     };
   },
