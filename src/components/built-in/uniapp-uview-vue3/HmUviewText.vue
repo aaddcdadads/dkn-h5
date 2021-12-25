@@ -92,7 +92,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="less">
 .hm-bg-text {
   display: inline-flex;
   padding: v-bind(cPadding);

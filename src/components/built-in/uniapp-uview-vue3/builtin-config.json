@@ -212,6 +212,14 @@
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSlider.png",
                 "type": 0,
                 "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewSelect",
+                "title": "列选择器",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewSelect",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSelect.png",
+                "type": 0,
+                "isBuiltIn": true
             }
         ]
     },
