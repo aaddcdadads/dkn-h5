@@ -160,14 +160,18 @@ export default {
      */
     barStyle: {
       type: Object,
-      default: () => {}
+      default: function () {
+        return {}
+      }
     },
     /**
      * 激活tab央视
      */
     activeItemStyle: {
       type: Object,
-      default: () => {}
+      default: function () {
+        return {}
+      }
     },
     /**
      * tab宽度
@@ -180,7 +184,7 @@ export default {
      */
     offset: {
       type: Array,
-      default: () => {
+      default: function () {
         return [5, 20]
       }
     }
