@@ -165,7 +165,7 @@ export default {
       }
     },
     /**
-     * 激活tab央视
+     * 激活tab样式
      */
     activeItemStyle: {
       type: Object,
@@ -180,7 +180,7 @@ export default {
       type: Number
     },
     /**
-     * offset
+     * 徽标位置偏移
      */
     offset: {
       type: Array,
