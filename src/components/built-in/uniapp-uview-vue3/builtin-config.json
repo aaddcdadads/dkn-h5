@@ -264,6 +264,14 @@
                 "isBuiltIn": true
             },
             {
+                "name": "HmUviewTabs",
+                "title": "标签页",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewTabs",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewTabs.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
                 "name": "HmUviewTabbar",
                 "title": "标签栏",
                 "importPath": "built-in/uniapp-uview-vue3/HmUviewTabbar",
