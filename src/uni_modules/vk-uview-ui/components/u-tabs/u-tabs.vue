@@ -3,8 +3,9 @@
 		background: bgColor
 	}">
 		<!-- $u.getRect()对组件根节点无效，因为写了.in(this)，故这里获取内层接点尺寸 -->
-		<view :id="id">
-			<scroll-view scroll-x class="u-scroll-view" :scroll-left="scrollLeft" scroll-with-animation>
+		<view :id="id" style="display: flex;">
+			<view ><slot name="left" /></view>
+			<scroll-view scroll-x :style="{width: widthPercent + '%'}" class="u-scroll-view" :scroll-left="scrollLeft" scroll-with-animation>
 				<view class="u-scroll-box" :class="{'u-tabs-scorll-flex': !isScroll}">
 					<view class="u-tab-item u-line-1" :id="'u-tab-item-' + index" v-for="(item, index) in list" :key="index" @tap="clickTab(index)"
 					 :style="[tabItemStyle(index)]">
@@ -14,6 +15,7 @@
 					<view v-if="showBar" class="u-tab-bar" :style="[tabBarStyle]"></view>
 				</view>
 			</scroll-view>
+			<view ><slot name="right" /></view>
 		</view>
 	</view>
 </template>
@@ -64,6 +66,13 @@
       	type: [Number, String],
       	default: 0
       },
+			/**
+			 * 标签页宽度
+			 */
+			widthPercent: {
+				type: Number,
+				default: 100
+			},
 			// 导航菜单是否需要滚动，如只有2或者3个的时候，就不需要滚动了，此时使用flex平分tab的宽度
 			isScroll: {
 				type: Boolean,
@@ -383,7 +392,7 @@
 	/* #endif */
 
 	.u-scroll-view {
-		width: 100%;
+		// display: inline-block;
 		white-space: nowrap;
 		position: relative;
 	}
