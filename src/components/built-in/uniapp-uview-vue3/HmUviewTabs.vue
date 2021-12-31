@@ -2,7 +2,7 @@
   <u-tabs
     :is-scroll="isScroll"
     :list="list"
-    :current="cCurrent"
+    v-model="cCurrent"
     :widthPercent="widthPercent"
     :height="height"
     :font-size="fontSize"
@@ -199,13 +199,14 @@ export default {
       this.cCurrent = value;
     },
   },
-  mounted() {
+  created() {
     this.cCurrent = this.current;
   },
   methods: {
-    onChange(value) {
-      this.cCurrent = value;
-      this.$emit("change", value);
+    onChange(val) {
+      this.cCurrent = val;
+      console.log('u-tabs change', val)
+      this.$emit("change", val);
     }
   }
 };

@@ -1,6 +1,7 @@
 <template>
   <view>
     <hm-uview-tabs
+      :current="2"
       :widthPercent="20"
     >
       <template #left>
@@ -24,7 +25,7 @@
         ></hm-uview-button>
       </template>
     </hm-uview-tabs>
-    <hm-uview-tabs
+    <!-- <hm-uview-tabs
       :is-scroll="true"
       :list="list"
       :current="2"
@@ -44,7 +45,7 @@
       :item-width="200"
       :offset="[10, 20]"
       @change="onChange"
-    ></hm-uview-tabs>
+    ></hm-uview-tabs> -->
   </view>
 </template>
 
