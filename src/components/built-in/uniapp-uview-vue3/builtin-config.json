@@ -72,6 +72,14 @@
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSwiper.png",
                 "type": 0,
                 "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewPanel",
+                "title": "面板",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewPanel",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewPanel.png",
+                "type": 0,
+                "isBuiltIn": true
             }
         ]
     },
