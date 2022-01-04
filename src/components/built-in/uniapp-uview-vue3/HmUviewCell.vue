@@ -1,6 +1,6 @@
 <template>
   <view>
-    <u-cell-group>
+    <u-cell-group :border="border">
       <u-cell-item
         v-for="(item, key) in list"
         :key="key"
@@ -69,6 +69,13 @@ export default {
      */
     arrowDirection: {
       type: String,
+    },
+    /**
+     * 是否显示外边框
+     */
+    border: {
+      type: Boolean,
+      default: false,
     },
     /**
      * 显示下边框
