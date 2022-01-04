@@ -1,6 +1,6 @@
 <template>
   <view>
-    <u-cell-group :border="border">
+    <u-cell-group :border="isBorder">
       <u-cell-item
         v-for="(item, key) in list"
         :key="key"
@@ -73,7 +73,7 @@ export default {
     /**
      * 是否显示外边框
      */
-    border: {
+    isBorder: {
       type: Boolean,
       default: false,
     },
