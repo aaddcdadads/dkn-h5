@@ -8,12 +8,13 @@
       :bg-color="bgColor"
       :height="height"
       :type="type"
+      :use-slot="useSlot"
       @click="onClick"
       >{{ text }}</u-divider
     >
   </view>
 </template>
-
+ 
 <script>
 // import uDivider from "uview-ui/components/u-divider/u-divider";
 
@@ -72,6 +73,13 @@ export default {
     height: {
       type: String,
       default: "40",
+    },
+    /**
+     * 是否传入内容
+     */
+    useSlot: {
+      type: Boolean,
+      default: true,
     },
     /**
      * 主题色
