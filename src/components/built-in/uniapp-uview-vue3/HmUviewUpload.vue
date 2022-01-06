@@ -113,7 +113,11 @@ export default {
     fileList: {
       type: Array,
       default: function () {
-        return [];
+        return [
+          {
+            url: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2Ftp05%2F19100120461512E-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644055421&t=e70c7723874c5e040900e75daded2cb4",
+          },
+        ];
       },
     },
     /**
@@ -178,11 +182,7 @@ export default {
   data() {
     return {
       cAction: null,
-      cFileList: [
-        {
-          url: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2Ftp05%2F19100120461512E-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644055421&t=e70c7723874c5e040900e75daded2cb4",
-        },
-      ],
+      cFileList: [],
     };
   },
   watch: {
@@ -195,7 +195,7 @@ export default {
   },
   mounted() {
     this.cAction = this.convertUrl(this.action);
-    this.cFileList = this.cFileList;
+    this.cFileList = this.fileList;
   },
   methods: {
     convertUrl(url) {
