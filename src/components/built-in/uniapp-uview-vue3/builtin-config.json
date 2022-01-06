@@ -228,6 +228,14 @@
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSelect.png",
                 "type": 0,
                 "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewUpload",
+                "title": "上传",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewUpload",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewUpload.png",
+                "type": 0,
+                "isBuiltIn": true
             }
         ]
     },
