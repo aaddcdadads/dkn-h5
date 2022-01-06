@@ -11,8 +11,8 @@
         :arrow="arrow"
         :arrow-direction="arrowDirection"
         :required="item.required"
-        :border-bottom="borderBottom"
-        :border-top="borderTop"
+        :border-bottom="item.borderBottom"
+        :border-top="item.borderTop"
         :bg-color="bgColor"
         :icon-size="iconSize"
         @click="onClick(item.key)"
@@ -40,14 +40,18 @@ export default {
             title: "左侧标题",
             icon: "setting-fill",
             required: true,
+            borderTop: false,
+            borderBottom: true,
             label: "标题下方的描述信息",
-            value: "右侧内容",
+            value: "右侧",
           },
           {
             key: 2,
             title: "左侧标题",
             icon: "setting-fill",
             required: false,
+            borderTop: false,
+            borderBottom: true,
             label: "",
             value: "右侧内容",
           },
@@ -77,20 +81,20 @@ export default {
       type: Boolean,
       default: false,
     },
-    /**
-     * 显示下边框
-     */
-    borderBottom: {
-      type: Boolean,
-      default: true,
-    },
-    /**
-     * 显示上边框
-     */
-    borderTop: {
-      type: Boolean,
-      default: false,
-    },
+    // /**
+    //  * 显示下边框
+    //  */
+    // borderBottom: {
+    //   type: Boolean,
+    //   default: true,
+    // },
+    // /**
+    //  * 显示上边框
+    //  */
+    // borderTop: {
+    //   type: Boolean,
+    //   default: false,
+    // },
     /**
      * 背景颜色
      * @type Color
@@ -118,4 +122,8 @@ export default {
 };
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+// .u-cell-box /deep/ .u-border-bottom:after {
+//   border-bottom: none !important;
+// }
+</style>
