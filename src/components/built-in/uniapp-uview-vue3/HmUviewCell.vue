@@ -11,8 +11,8 @@
         :arrow="arrow"
         :arrow-direction="arrowDirection"
         :required="item.required"
-        :border-bottom="item.borderBottom"
-        :border-top="item.borderTop"
+        :border-bottom="borderBottom || item.borderBottom"
+        :border-top="borderTop || item.borderTop"
         :bg-color="bgColor"
         :icon-size="iconSize"
         @click="onClick(item.key)"
@@ -51,7 +51,7 @@ export default {
             icon: "setting-fill",
             required: false,
             borderTop: false,
-            borderBottom: true,
+            borderBottom: false,
             label: "",
             value: "右侧内容",
           },
@@ -81,20 +81,20 @@ export default {
       type: Boolean,
       default: false,
     },
-    // /**
-    //  * 显示下边框
-    //  */
-    // borderBottom: {
-    //   type: Boolean,
-    //   default: true,
-    // },
-    // /**
-    //  * 显示上边框
-    //  */
-    // borderTop: {
-    //   type: Boolean,
-    //   default: false,
-    // },
+    /**
+     * 显示下边框
+     */
+    borderBottom: {
+      type: Boolean,
+      default: true,
+    },
+    /**
+     * 显示上边框
+     */
+    borderTop: {
+      type: Boolean,
+      default: false,
+    },
     /**
      * 背景颜色
      * @type Color
