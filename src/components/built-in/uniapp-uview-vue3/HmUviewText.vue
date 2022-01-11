@@ -1,6 +1,6 @@
 <template>
   <view class="hm-bg-text">
-    {{ text }}
+    <text class="font1">{{ text }}</text>
   </view>
 </template>
 
@@ -99,5 +99,7 @@ export default {
   text-align: v-bind(cTextAlign);
   font-size: v-bind(cFontSize);
   color: v-bind(cColor);
+}
+.font1 {
 }
 </style>
