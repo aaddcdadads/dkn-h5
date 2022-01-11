@@ -264,6 +264,14 @@
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewNoticeBar.png",
                 "type": 0,
                 "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewSwipeAction",
+                "title": "滑动操作",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewSwipeAction",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSwipeAction.png",
+                "type": 0,
+                "isBuiltIn": true
             }
         ]
     },
