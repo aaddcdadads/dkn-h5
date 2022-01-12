@@ -11,6 +11,7 @@
       :bg-color="bgColor"
       @click="click"
       @open="open"
+      class="u-swipeAction"
     >
       <view class="item u-border-bottom">
         <image mode="aspectFill" :src="item.images" v-if="item.images" />
@@ -27,6 +28,13 @@
 export default {
   name: "HmUviewSwipeAction",
   props: {
+    /**
+     * 宽度
+     */
+    width: {
+      type: String,
+      default: "350",
+    },
     /**
      * 组件背景颜色
      * @type Color
@@ -55,6 +63,13 @@ export default {
     show: {
       type: Boolean,
       default: false,
+    },
+    /**
+     * 间距
+     */
+    spacing: {
+      type: String,
+      default: "10",
     },
     /**
      * 按钮配置
@@ -113,16 +128,24 @@ export default {
   },
 
   watch: {
+    width(value) {
+      this.cWidth = this.getCssUnit(value);
+    },
     list(value) {
       this.cList = value;
     },
     options(value) {
       this.cOptions = value;
     },
+    spacing(value) {
+      this.cSpacing = this.getCssUnit(value);
+    },
   },
   mounted() {
+    this.cWidth = this.getCssUnit(this.width);
     this.cList = this.list;
     this.cOptions = this.options;
+    this.cSpacing = this.getCssUnit(this.spacing);
     for (let i = 0; i < this.list.length; i++) {
       if (this.list[i].show == undefined) {
         this.list[i].show = false;
@@ -131,8 +154,10 @@ export default {
   },
   data() {
     return {
+      cWidth: "",
       cList: [],
       cOptions: [],
+      cSpacing: "",
     };
   },
   methods: {
@@ -151,11 +176,24 @@ export default {
       //console.log("open", index);
       this.$emit("onOpen", index);
     },
+    getCssUnit(value) {
+      if (isNaN(Number(value))) {
+        return value;
+      }
+      return `${value}px`;
+    },
   },
 };
 </script>
 
 <style lang="less">
+.u-swipeAction:first-child {
+  margin-top: 0px !important;
+}
+.u-swipeAction {
+  width: v-bind(cWidth);
+  margin-top: v-bind(cSpacing);
+}
 .item {
   display: flex;
   padding: 20rpx;
