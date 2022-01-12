@@ -69,7 +69,7 @@ export default {
      */
     spacing: {
       type: String,
-      default: "10",
+      default: "10px",
     },
     /**
      * 按钮配置
