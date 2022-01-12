@@ -512,6 +512,13 @@
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
+        },
+        {
+            "path": "pages/test/tablede",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
         }
     ],
     "globalStyle": {
