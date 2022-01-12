@@ -142,6 +142,14 @@
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewTag.png",
                 "type": 0,
                 "isBuiltIn": true
+            },
+            {
+                "name": "HmDropDownBox",
+                "title": "下拉框",
+                "importPath": "built-in/uniapp-uview-vue3/HmDropDownBox",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmDropDownBox.png",
+                "type": 0,
+                "isBuiltIn": true
             }
         ]
     },
