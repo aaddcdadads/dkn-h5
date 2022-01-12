@@ -104,7 +104,7 @@ export default {
             id: 3,
             title: "登临送目，正故国晚秋，天气初肃。千里澄江似练，翠峰如簇",
             images: "https://cdn.uviewui.com/uview/common/logo.png",
-            show: false,
+
             disabled: false,
           },
         ];
@@ -123,6 +123,11 @@ export default {
   mounted() {
     this.cList = this.list;
     this.cOptions = this.options;
+    for (let i = 0; i < this.list.length; i++) {
+      if (this.list[i].show == undefined) {
+        this.list[i].show = false;
+      }
+    }
   },
   data() {
     return {
