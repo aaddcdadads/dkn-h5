@@ -3,7 +3,8 @@
     <view class="charts-box">
       <qiun-data-charts
         type="column"
-        :chartData="chartData"
+        canvasId="test"
+        :chartData="cChartData"
         background="none"
       />
     </view>
@@ -11,13 +12,10 @@
 </template>
 
 <script>
-import uCharts from "@/qiun-data-charts/js_sdk/u-charts/u-charts.js";
-import QiunDataCharts from "@/qiun-data-charts/components/u-charts/u-qiun-data-charts/qiun-data-charts.vue";
+
 export default {
-  name: "tablede",
+  name: "TestQiunDataCharts",
   components: {
-    uCharts,
-    QiunDataCharts,
   },
   props: {
     /**
@@ -32,11 +30,7 @@ export default {
             {
               name: "目标值",
               data: [35, 36, 31, 33, 13, 34],
-            },
-            {
-              name: "完成量",
-              data: [18, 27, 21, 24, 6, 28],
-            },
+            }
           ],
         };
       },
@@ -44,17 +38,28 @@ export default {
   },
   data() {
     return {
-      chartData: {},
+      cChartData: {
+          categories: ["2016", "2017", "2018", "2019", "2020", "2021"],
+          series: [
+            {
+              name: "目标值",
+              data: [35, 36, 31, 33, 13, 34],
+            }
+          ],
+        },
     };
   },
-  // watch: {
-  // 	option(value) {
-  // 		this.chartData = value;
-  // 	},
-  // },
-  // mounted() {
-  // 	this.chartData = this.option;
-  // },
+  watch: {
+    chartData: {
+			handler: function(value, oldValue) {
+        this.cChartData = value;
+			},
+			deep: true,
+		},
+  },
+  mounted() {
+  	this.cChartData = this.chartData;
+  },
 };
 </script>
 <style scoped>

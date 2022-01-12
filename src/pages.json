@@ -1,6 +1,6 @@
 {
     "easycom": {
-        "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+        "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
     },
     "pages": [
         {
@@ -514,11 +514,7 @@
             }
         },
         {
-<<<<<<< HEAD
-            "path": "pages/test/tablede",
-=======
-            "path": "components/built-in/uniapp-uview-vue3/HmDropDownBox",
->>>>>>> 7b0d9c321dd0faee2476b077f3591a6ab3b3781a
+            "path": "pages/test/TestQiunDataCharts",
             "style": {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
