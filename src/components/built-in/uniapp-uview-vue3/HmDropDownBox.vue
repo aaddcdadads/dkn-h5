@@ -1,14 +1,16 @@
 <template>
   <view class="u-label" @click.stop="onClick">
     <view class="text_head"
-      ><text class="text_1" :style="{ color: isColor ? mainColor : 'black' }">{{
-        this.cValue
-      }}</text></view
+      ><text
+        class="text_1"
+        :style="{ color: isColor ? mainColor : valueColor }"
+        >{{ this.cValue }}</text
+      ></view
     >
     <u-icon
       class="icon"
       name="arrow-down"
-      :color="isColor ? mainColor : 'black'"
+      :color="isColor ? mainColor : valueColor"
       :size="iconSize"
     ></u-icon>
     <view class="select-class" v-if="show">
@@ -62,6 +64,14 @@ export default {
     valueSize: {
       type: String,
       default: "20px",
+    },
+    /**
+     * 默认值字体颜色
+     * @type Color
+     */
+    valueColor: {
+      type: String,
+      default: "black",
     },
     /**
      * 列表值字体大小
