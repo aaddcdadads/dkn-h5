@@ -514,6 +514,13 @@
             }
         },
         {
+            "path": "components/built-in/uniapp-uview-vue3/HmDropDownBox",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "pages/test/TestQiunDataCharts",
             "style": {
                 "navigationBarTitleText": "",

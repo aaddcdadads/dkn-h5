@@ -1,8 +1,10 @@
 <template>
   <view class="u-label" @click.stop="onClick">
-    <text class="text_1" :style="{ color: isColor ? mainColor : 'black' }">{{
-      this.cValue
-    }}</text>
+    <view class="text_head"
+      ><text class="text_1" :style="{ color: isColor ? mainColor : 'black' }">{{
+        this.cValue
+      }}</text></view
+    >
     <u-icon
       class="icon"
       name="arrow-down"
@@ -25,6 +27,20 @@
 export default {
   name: "HmDropDownBox",
   props: {
+    /**
+     * 字体宽度
+     */
+    textWidth: {
+      type: String,
+      default: "auto",
+    },
+    /**
+     * 选择框宽度
+     */
+    seatWidth: {
+      type: String,
+      default: "120px",
+    },
     /**
      * 默认值
      */
@@ -102,6 +118,12 @@ export default {
   },
 
   watch: {
+    textWidth(value) {
+      this.cTextWidth = this.getCssUnit(value);
+    },
+    seatWidth(value) {
+      this.cSeatWidth = this.getCssUnit(value);
+    },
     mainColor(value) {
       this.cMainColor = value;
     },
@@ -123,6 +145,8 @@ export default {
   },
 
   mounted() {
+    this.cTextWidth = this.getCssUnit(this.textWidth);
+    this.cSeatWidth = this.getCssUnit(this.seatWidth);
     this.cMainColor = this.mainColor;
     this.cValue = this.value;
     this.cValueSize = this.getCssUnit(this.valueSize);
@@ -161,6 +185,8 @@ export default {
       cListSize: "",
       cSeat: "",
       cListColor: "",
+      cTextWidth: "",
+      cSeatWidth: "",
     };
   },
 };
@@ -170,12 +196,15 @@ export default {
 .icon {
   margin-left: 3px;
 }
-
+.text_head {
+  width: v-bind(cTextWidth);
+  display: inline-block;
+}
 .u-label {
   display: inline-block;
   position: relative;
-  display: flex;
-  align-items: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   //border: 1px solid red;
   //margin-left: 30px;
 }
@@ -184,12 +213,15 @@ export default {
   font-size: v-bind(cValueSize);
   font-weight: 500;
   color: black;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .select-class {
   position: absolute;
   top: v-bind(cSeat);
   z-index: 999;
-  width: 120px;
+  width: v-bind(cSeatWidth);
   box-shadow: 0px 0px 12px 0px #dadada;
   background-color: v-bind(cListColor);
   border-radius: 5px;
