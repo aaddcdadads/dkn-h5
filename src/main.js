@@ -4,7 +4,7 @@ import {
 import App from "./App.vue";
 
 import uView from './uni_modules/vk-uview-ui';
-import loadBuiltInComponent from './utils/loadBuiltInComponent';
+import loadComponent from './utils/loadComponent';
 
 import "./mock/index.js";
 
@@ -26,8 +26,8 @@ export function createApp() {
 	app.config.globalProperties.$putAction = putAction;
 
 	app.use(uView);
-	//加载内置组件
-	app.use(loadBuiltInComponent);
+	//加载组件
+	app.use(loadComponent);
 
 	return {
 		app,
