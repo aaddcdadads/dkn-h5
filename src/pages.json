@@ -519,13 +519,6 @@
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
-        },
-        {
-            "path": "pages/test/TestQiunDataCharts",
-            "style": {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
         }
     ],
     "globalStyle": {
