@@ -1,6 +1,7 @@
 import { VueCookieNext } from 'vue-cookie-next';
 import {
-    TOKEN
+    JEECG_TOKEN,
+    BLOCK_DESIGN_TOKEN
 } from "../store/mutation-types";
 
 function setGlobal(config) {
@@ -32,10 +33,18 @@ function transformAxiosRequest(config) {
 }
 
 function setJeecgAuth(config) {
-    let token = uni.getStorageSync(TOKEN);
-    console.log(`pro__Access-Token: `, token);
+    let token = uni.getStorageSync(JEECG_TOKEN);
+    console.log(`pro__X-Access-Token: `, token);
     token = token ? JSON.parse(token).value : null;
-    config.header[TOKEN] = token ? token : '';
+    config.header[JEECG_TOKEN] = token ? token : '';
+    return config;
+}
+
+function setBlockDesignAuth(config) {
+    let token = uni.getStorageSync(BLOCK_DESIGN_TOKEN);
+    console.log(`pro__X-BD-Access-Token: `, token);
+    token = token ? JSON.parse(token).value : null;
+    config.header[BLOCK_DESIGN_TOKEN] = token ? token : '';
     return config;
 }
 
@@ -52,6 +61,7 @@ uni.addInterceptor('request', {
     invoke(config) {
         setGlobal(config)
         setJeecgAuth(config)
+        setBlockDesignAuth(config)
         // setEleAdminAuth(config)
         transformAxiosRequest(config)
     },
