@@ -519,6 +519,13 @@
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
+        },
+        {
+            "path": "pages/test/TestHmColorPicker",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
         }
     ],
     "globalStyle": {

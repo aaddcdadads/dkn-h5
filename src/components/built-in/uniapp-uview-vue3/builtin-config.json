@@ -339,6 +339,14 @@
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewLoading.png",
                 "type": 0,
                 "isBuiltIn": true
+            },
+            {
+                "name": "HmColorPicker",
+                "title": "颜色选择器",
+                "importPath": "built-in/uniapp-uview-vue3/HmColorPicker",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmColorPicker.png",
+                "type": 0,
+                "isBuiltIn": true
             }
         ]
     }

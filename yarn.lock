@@ -1161,6 +1161,16 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
+"@ckpack/vue-color@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.npmmirror.com/@ckpack/vue-color/download/@ckpack/vue-color-1.1.5.tgz#1d11c59351317b7d6f0883794915c8a5bad5e77a"
+  integrity sha512-RFdNxtKyBfOKjmDGSAZvd3pRrYveaI4S62j4tEp4tSpXqgL2pr9jy7SQPiGzxiXUOqVv3Z5JJCpd+C96ZiXNBA==
+  dependencies:
+    clamp "^1.0.1"
+    lodash.throttle "^4.1.1"
+    material-colors "^1.2.6"
+    tinycolor2 "^1.4.2"
+
 "@dcloudio/types@^2.5.16":
   version "2.5.16"
   resolved "https://registry.npmmirror.com/@dcloudio/types/download/@dcloudio/types-2.5.16.tgz#5b7bc573e0c07de7228e5a55398bdcd2cf701c30"
@@ -2200,6 +2210,11 @@ chrome-trace-event@^1.0.2:
   resolved "https://registry.npmmirror.com/chrome-trace-event/download/chrome-trace-event-1.0.3.tgz#1015eced4741e15d06664a957dbbf50d041e26ac"
   integrity sha1-EBXs7UdB4V0GZkqVfbv1DQQeJqw=
 
+clamp@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmmirror.com/clamp/download/clamp-1.0.1.tgz#66a0e64011816e37196828fdc8c8c147312c8634"
+  integrity sha1-ZqDmQBGBbjcZaCj9yMjBRzEshjQ=
+
 color-convert@^1.9.0:
   version "1.9.3"
   resolved "https://registry.npmmirror.com/color-convert/download/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
@@ -3213,6 +3228,11 @@ lodash.debounce@^4.0.8:
   resolved "https://registry.npmmirror.com/lodash.debounce/download/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.npmmirror.com/lodash.throttle/download/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+  integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
+
 lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.21.tgz?cache=0&sync_timestamp=1613835838133&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
@@ -3254,6 +3274,11 @@ make-dir@^3.0.2, make-dir@^3.1.0:
   integrity sha1-QV6WcEazp/HRhSd9hKpYIDcmoT8=
   dependencies:
     semver "^6.0.0"
+
+material-colors@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.npmmirror.com/material-colors/download/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
+  integrity sha1-bRlYhxEmmSzuzHL0vMTY8BCGX0Y=
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -4122,6 +4147,11 @@ terser@^5.7.2:
     commander "^2.20.0"
     source-map "~0.7.2"
     source-map-support "~0.5.20"
+
+tinycolor2@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.npmmirror.com/tinycolor2/download/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
+  integrity sha1-P2pNEHGtB2dtf6Ry4frECnGdiAM=
 
 to-fast-properties@^2.0.0:
   version "2.0.0"

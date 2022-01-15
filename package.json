@@ -30,6 +30,7 @@
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union"
   },
   "dependencies": {
+    "@ckpack/vue-color": "^1.1.5",
     "@dcloudio/uni-app": "^3.0.0-alpha-3030720220111002",
     "@dcloudio/uni-app-plus": "^3.0.0-alpha-3030720220111002",
     "@dcloudio/uni-components": "^3.0.0-alpha-3030720220111002",
