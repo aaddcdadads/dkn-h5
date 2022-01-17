@@ -243,6 +243,14 @@
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewUpload.png",
                 "type": 0,
                 "isBuiltIn": true
+            },
+            {
+                "name": "HmDiscern",
+                "title": "身份证上传",
+                "importPath": "built-in/uniapp-uview-vue3/HmDiscern",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmDiscern.png",
+                "type": 0,
+                "isBuiltIn": true
             }
         ]
     },
