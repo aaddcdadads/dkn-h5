@@ -49,7 +49,7 @@ export default {
      */
     action: {
       type: String,
-      default: "http://192.168.2.21:7001/upload",
+      default: "",
     },
     /**
      * 是否上传
