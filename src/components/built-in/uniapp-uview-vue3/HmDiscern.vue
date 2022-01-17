@@ -35,7 +35,7 @@ export default {
      */
     wdith: {
       type: String,
-      default: "100%",
+      default: "300px",
     },
     /**
      * 高度
@@ -176,6 +176,7 @@ export default {
   justify-content: space-between;
   width: v-bind(cWidth);
   height: v-bind(cHeight);
+  min-width: 200px;
   .leftBtn {
     width: 60%;
     height: 65rpx;
