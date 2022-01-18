@@ -1,19 +1,30 @@
 <template>
   <view>
-    <view class="big">
+    <view
+      class="big"
+      v-for="(item, index) in list"
+      :key="item.id"
+      @click="onClick(item, index)"
+    >
       <view class="head_bg">
-        <view class="head"></view>
+        <view
+          class="head"
+          :style="`background-image: url(${item.image})`"
+        ></view>
       </view>
-      <view class="body">
+      <view
+        class="body"
+        :style="`border-bottom:${isBorder ? '1px solid #e2e2e2' : 'none'}`"
+      >
         <view class="left_bg"
           ><view class="left_bgd"
-            ><text class="left_title">Title</text
-            ><text class="left_descrip"
-              >DescripDescripDescripDescrip</text
-            ></view
+            ><text class="left_title">{{ item.title }}</text
+            ><text class="left_descrip">{{ item.descrip }}</text></view
           >
         </view>
-        <view class="right_bg"><text class="left_Date">2022-01-25</text></view>
+        <view class="right_bg"
+          ><text class="left_date">{{ item.date }}</text></view
+        >
       </view>
     </view>
   </view>
@@ -21,15 +32,14 @@
 
 <script>
 export default {
-  components: {},
   name: "HmCellList",
   props: {
     /**
      * 宽度
      */
-    wdith: {
+    width: {
       type: String,
-      default: "300px",
+      default: "100%",
     },
     /**
      * 高度
@@ -38,22 +48,12 @@ export default {
       type: String,
       default: "80px",
     },
-
     /**
-     * 箭头方向
-     * @type Enum
-     * @default right
-     * @options ["right", "up", "down"]
-     */
-    arrowDirection: {
-      type: String,
-    },
-    /**
-     * 是否显示外边框
+     * 是否显示下边框
      */
     isBorder: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     /**
      * 背景颜色
@@ -61,8 +61,15 @@ export default {
      */
     bgColor: {
       type: String,
+      default: "#ffffff",
     },
-
+    /**
+     * date位置
+     */
+    dateSize: {
+      type: String,
+      default: "16px",
+    },
     /**
      * 数据
      */
@@ -72,22 +79,72 @@ export default {
         return [
           {
             id: "1",
-            title: "左侧标题",
-            descrip: "",
-            date: "标题下方的描述信息",
-            image: "右侧",
+            title: "title 1",
+            descrip: "在吗？",
+            date: "2012-08-21",
+            image:
+              "https://img2.baidu.com/it/u=3886895525,3764775842&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+          },
+          {
+            id: "2",
+            title: "title  2",
+            descrip: "干嘛呢？",
+            date: "2012-08-21",
+            image:
+              "https://img0.baidu.com/it/u=1056811702,4111096278&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+          },
+
+          {
+            id: "3",
+            title: "title  3",
+            descrip: "吃了吗？",
+            date: "2012-08-21",
+            image:
+              "https://img0.baidu.com/it/u=4117713405,2961605581&fm=253&fmt=auto&app=138&f=JPEG?w=400&h=400",
           },
         ];
       },
     },
   },
   data() {
-    return {};
+    return {
+      cWidth: "",
+      cHeight: "",
+      cBgColor: "",
+      cDateSize: "",
+    };
+  },
+  watch: {
+    width(value) {
+      this.cWidth = this.getCssUnit(value);
+    },
+    height(value) {
+      this.cHeight = this.getCssUnit(value);
+    },
+    bgColor(value) {
+      this.cBgColor = value;
+    },
+    dateSize(value) {
+      this.cDateSize = this.getCssUnit(value);
+    },
+  },
+  mounted() {
+    this.cWidth = this.getCssUnit(this.width);
+    this.cHeight = this.getCssUnit(this.height);
+    this.cBgColor = this.bgColor;
+    this.cDateSize = this.getCssUnit(this.dateSize);
   },
   methods: {
-    onClick(e, index) {
-      console.log("onClick", e);
-      this.$emit("onClick", e, index);
+    onClick(item, index) {
+      console.log("onClick", item, index);
+      this.$emit("onClick", item, index);
+    },
+    //单位转换
+    getCssUnit(value) {
+      if (isNaN(Number(value))) {
+        return value;
+      }
+      return `${value}px`;
     },
   },
 };
@@ -95,39 +152,38 @@ export default {
 
 <style lang="less">
 .big {
-  width: 90%;
-  height: 80px;
+  width: v-bind(cWidth);
+  height: v-bind(cHeight);
   display: flex;
+  background-color: v-bind(cBgColor);
 }
 .head_bg {
-  width: 80px;
-  height: 80px;
+  width: v-bind(cHeight);
+  height: v-bind(cHeight);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .head {
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
   border-radius: 50%;
-  background-image: url("https://img2.baidu.com/it/u=3886895525,3764775842&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 50% 50%;
   border: 1px solid rgb(235, 235, 235);
 }
 .body {
-  width: calc(100% - 80px);
-  height: 80px;
+  width: calc(100% - v-bind(cHeight));
+  height: v-bind(cHeight);
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #e2e2e2;
 }
 .body:first-child {
   border-top: 1px solid #e2e2e2;
 }
 .left_bg {
-  width: 60%;
+  width: calc(95% - v-bind(cHeight));
   display: flex;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -139,9 +195,10 @@ export default {
   flex-direction: column;
 }
 .right_bg {
-  width: 35%;
-  padding: 14px 5px;
-  height: 80px;
+  width: 70px;
+  min-width: 70px;
+  padding-top: v-bind(cDateSize);
+  height: v-bind(cHeight);
 }
 .left_title {
   font-size: 16px;
@@ -149,9 +206,11 @@ export default {
 }
 .left_descrip {
   font-size: 12px;
-  margin-top: 10px !important;
+  color: #888888;
+  margin-top: 8px !important;
 }
 .left_date {
+  color: #888888;
   font-size: 12px;
 }
 </style>
