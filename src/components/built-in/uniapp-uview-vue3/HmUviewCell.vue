@@ -15,7 +15,7 @@
         :border-top="borderTop || item.borderTop"
         :bg-color="bgColor"
         :icon-size="iconSize"
-        @click="onClick(item.key)"
+        @click="onClick(item, item.key)"
       ></u-cell-item>
     </u-cell-group>
   </view>
@@ -114,9 +114,9 @@ export default {
     return {};
   },
   methods: {
-    onClick(e) {
-      console.log("e", e);
-      this.$emit("e", e);
+    onClick(e, index) {
+      console.log("onClick", e);
+      this.$emit("onClick", e, index);
     },
   },
 };
