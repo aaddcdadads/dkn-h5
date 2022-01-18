@@ -25,42 +25,20 @@ export default {
   name: "HmCellList",
   props: {
     /**
-     * 数据
+     * 宽度
      */
-    list: {
-      type: Array,
-      default: function () {
-        return [
-          {
-            key: 1,
-            title: "左侧标题",
-            icon: "setting-fill",
-            required: true,
-            borderTop: false,
-            borderBottom: true,
-            label: "标题下方的描述信息",
-            value: "右侧",
-          },
-          {
-            key: 2,
-            title: "左侧标题",
-            icon: "setting-fill",
-            required: false,
-            borderTop: false,
-            borderBottom: false,
-            label: "",
-            value: "右侧内容",
-          },
-        ];
-      },
+    wdith: {
+      type: String,
+      default: "300px",
     },
     /**
-     * 显示右侧箭头
+     * 高度
      */
-    arrow: {
-      type: Boolean,
-      default: false,
+    height: {
+      type: String,
+      default: "80px",
     },
+
     /**
      * 箭头方向
      * @type Enum
@@ -78,32 +56,29 @@ export default {
       default: false,
     },
     /**
-     * 显示下边框
-     */
-    borderBottom: {
-      type: Boolean,
-      default: true,
-    },
-    /**
-     * 显示上边框
-     */
-    borderTop: {
-      type: Boolean,
-      default: false,
-    },
-    /**
      * 背景颜色
      * @type Color
      */
     bgColor: {
       type: String,
     },
+
     /**
-     * 左侧图标大小
+     * 数据
      */
-    iconSize: {
-      type: String,
-      default: "17px",
+    list: {
+      type: Array,
+      default: function () {
+        return [
+          {
+            id: "1",
+            title: "左侧标题",
+            descrip: "",
+            date: "标题下方的描述信息",
+            image: "右侧",
+          },
+        ];
+      },
     },
   },
   data() {
