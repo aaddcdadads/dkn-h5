@@ -1,32 +1,28 @@
 <template>
   <view>
-    <u-cell-group :border="isBorder">
-      <u-cell-item
-        v-for="(item, key) in list"
-        :key="key"
-        :title="item.title"
-        :icon="item.icon"
-        :label="item.label"
-        :value="item.value"
-        :arrow="arrow"
-        :arrow-direction="arrowDirection"
-        :required="item.required"
-        :border-bottom="borderBottom || item.borderBottom"
-        :border-top="borderTop || item.borderTop"
-        :bg-color="bgColor"
-        :icon-size="iconSize"
-        @click="onClick(item, item.key)"
-      ></u-cell-item>
-    </u-cell-group>
+    <view class="big">
+      <view class="head_bg">
+        <view class="head"></view>
+      </view>
+      <view class="body">
+        <view class="left_bg"
+          ><view class="left_bgd"
+            ><text class="left_title">Title</text
+            ><text class="left_descrip"
+              >DescripDescripDescripDescrip</text
+            ></view
+          >
+        </view>
+        <view class="right_bg"><text class="left_Date">2022-01-25</text></view>
+      </view>
+    </view>
   </view>
 </template>
 
 <script>
-// import uCellItem from "uview-ui/components/u-cell-item/u-cell-item";
-// import uCellGroup from "uview-ui/components/u-cell-group/u-cell-group";
 export default {
   components: {},
-  name: "HmUviewCell",
+  name: "HmCellList",
   props: {
     /**
      * 数据
@@ -115,15 +111,72 @@ export default {
   },
   methods: {
     onClick(e, index) {
-      console.log("click", e, index);
-      this.$emit("click", e, index);
+      console.log("onClick", e);
+      this.$emit("onClick", e, index);
     },
   },
 };
 </script>
 
 <style lang="less">
-// .u-cell-box /deep/ .u-border-bottom:after {
-//   border-bottom: none !important;
-// }
+.big {
+  width: 90%;
+  height: 80px;
+  display: flex;
+}
+.head_bg {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.head {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-image: url("https://img2.baidu.com/it/u=3886895525,3764775842&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%;
+  border: 1px solid rgb(235, 235, 235);
+}
+.body {
+  width: calc(100% - 80px);
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e2e2;
+}
+.body:first-child {
+  border-top: 1px solid #e2e2e2;
+}
+.left_bg {
+  width: 60%;
+  display: flex;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  align-items: center;
+}
+.left_bgd {
+  display: flex;
+  flex-direction: column;
+}
+.right_bg {
+  width: 35%;
+  padding: 14px 5px;
+  height: 80px;
+}
+.left_title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.left_descrip {
+  font-size: 12px;
+  margin-top: 10px !important;
+}
+.left_date {
+  font-size: 12px;
+}
 </style>
