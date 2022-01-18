@@ -39,7 +39,7 @@ export default {
      */
     width: {
       type: String,
-      default: "100%",
+      default: "350px",
     },
     /**
      * 高度
