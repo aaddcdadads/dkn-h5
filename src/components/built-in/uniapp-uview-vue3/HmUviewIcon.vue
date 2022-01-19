@@ -20,7 +20,6 @@ export default {
   props: {
     /**
      * 名称
-     * @type Icon
      */
     name: {
       type: String,
