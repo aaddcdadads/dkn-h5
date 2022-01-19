@@ -34,7 +34,7 @@ function transformAxiosRequest(config) {
 
 function setJeecgAuth(config) {
     let token = uni.getStorageSync(JEECG_TOKEN);
-    console.log(`pro__X-Access-Token: `, token);
+    console.log(`pro__Access-Token: `, token);
     token = token ? JSON.parse(token).value : null;
     config.header[JEECG_TOKEN] = token ? token : '';
     return config;
