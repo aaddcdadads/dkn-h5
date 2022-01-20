@@ -31,13 +31,14 @@ export default {
   },
   methods: {
     scanCode() {
+      let self = this;
       uni.scanCode({
         success: function (res) {
           ///console.log(JSON.stringify(res));
-          this.onDecode(res);
+          self.onDecode(res);
         },
         fail: function () {
-          this.onReturn();
+          self.onReturn();
         },
       });
     },
