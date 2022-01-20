@@ -7,7 +7,15 @@
       :icon="icon"
       :right-icon="rightIcon"
       :type="type"
+      :clearable="clearable"
+      :border-top="borderTop"
+      :border-bottom="borderBottom"
+      :label-width="labelWidth"
+      :input-align="inputAlign"
+      :icon-color="iconColor"
+      :required="required"
       @input="onInput"
+      ><slot></slot
     ></u-field>
   </view>
 </template>
@@ -44,6 +52,25 @@ export default {
       type: String,
       default: "请输入",
     },
+
+    /**
+     * 标题对齐方式
+     * @type Enum
+     * @options ["left", "center", "right"]
+     */
+    labelWidth: {
+      type: String,
+      default: "left",
+    },
+    /**
+     * 内容对齐方式
+     * @type Enum
+     * @options ["left", "center", "right"]
+     */
+    inputAlign: {
+      type: String,
+      default: "left",
+    },
     /**
      * 前缀图标
      * @type Icon
@@ -53,12 +80,56 @@ export default {
       default: "man",
     },
     /**
+     * 前缀图标颜色
+     * @type Color
+     */
+    iconColor: {
+      type: String,
+      default: "#606266",
+    },
+    /**
      * 后缀图标
      * @type Icon
      */
     rightIcon: {
       type: String,
       default: "man",
+    },
+    /**
+     * 清除图标
+     */
+    clearable: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 上边框
+     */
+    borderTop: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 下边框
+     */
+    borderBottom: {
+      type: Boolean,
+      default: true,
+    },
+
+    /**
+     * 密码输入
+     */
+    password: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 必填
+     */
+    required: {
+      type: Boolean,
+      default: false,
     },
     /**
      * 类型
