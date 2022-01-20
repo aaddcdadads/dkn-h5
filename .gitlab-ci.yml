@@ -18,6 +18,6 @@ publish:
   tags:
     - block-design-live
   script:
-    - cd docker && cp /home/gitlab-runner/.tmp/id_rsa* ./ && cp /home/gitlab-runner/.tmp/install.zsh.sh ./
+    - cd docker && cp /home/gitlab-runner/.tmp/id_rsa* ./ && cp /home/gitlab-runner/.tmp/install.zsh.sh ./ && cp /home/gitlab-runner/.tmp/zshrc ./
     - docker build -t registry.cn-shenzhen.aliyuncs.com/block-design/block-design-live:uniapp-uview-vue3 . --no-cache
     - docker push registry.cn-shenzhen.aliyuncs.com/block-design/block-design-live:uniapp-uview-vue3
