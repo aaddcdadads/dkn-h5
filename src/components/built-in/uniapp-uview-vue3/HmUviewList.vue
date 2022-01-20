@@ -1,27 +1,24 @@
 <template>
   <view>
-    <slot 
+    <!-- <slot 
       v-for="(item, index) in cData" 
       :key="index"
       v-bind="item"
     >
-    </slot>
+    </slot> -->
   </view>
 </template>
 
 <script>
-import _ from 'lodash';
-import {
-  getAction,
-} from "/@/request/http";
+import _ from "lodash";
+import { getAction } from "/@/request/http";
 
 /**
  * 背景卡片
  */
 export default {
   name: "HmUviewList",
-  components: {
-  },
+  components: {},
   props: {
     /**
      * 数据
@@ -58,20 +55,20 @@ export default {
      * 数据映射
      */
     dataMap: {
-      type: Object
-    }
+      type: Object,
+    },
   },
   data() {
     return {
-      cData: []
-    }
+      cData: [],
+    };
   },
   watch: {
     data: {
       handler: function (value, oldValue) {
         this.cData = JSONfn.parse(JSONfn.stringify(value));
       },
-      deep: true
+      deep: true,
     },
     url(value) {
       this.getData(value);
@@ -84,11 +81,10 @@ export default {
         }
         this.getData(null, value);
       },
-      deep: true
+      deep: true,
     },
   },
-  computed: {
-  },
+  computed: {},
   mounted() {
     this.cData = this.data;
     this.getData();
@@ -101,7 +97,8 @@ export default {
     _getData(url, params) {
       let self = this;
       url = url || this.url;
-      params = params || (this.params ? JSON.parse(JSON.stringify(this.params)) : {});
+      params =
+        params || (this.params ? JSON.parse(JSON.stringify(this.params)) : {});
 
       getAction(url, params).then((resp) => {
         console.log(`get list data: `, resp);
@@ -113,35 +110,34 @@ export default {
         }
         if (resp.data) {
           data = resp.data;
-        };
+        }
 
-        self.cData = self.dataMap ? 
-          self.handleDataMapping(data, self.dataMap) : data;
-
+        self.cData = self.dataMap
+          ? self.handleDataMapping(data, self.dataMap)
+          : data;
       });
     },
     /**
      * 处理数据映射
      */
-    handleDataMapping(data, dataMap){
-      return _.map(data, item => {
-        let obj = {}
+    handleDataMapping(data, dataMap) {
+      return _.map(data, (item) => {
+        let obj = {};
         _.each(dataMap, (value, key) => {
-          obj[key] = item[value] || ''
-        })
-        return obj
-      })
+          obj[key] = item[value] || "";
+        });
+        return obj;
+      });
     },
     getCssUnit(value) {
       if (isNaN(Number(value))) {
         return value;
       }
       return `${value}px`;
-    }
+    },
   },
 };
 </script>
 
 <style scoped>
-
 </style>
