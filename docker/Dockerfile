@@ -20,5 +20,10 @@ RUN cd /root/code-live-preview
 RUN pwd
 COPY entrypoint.sh /root/entrypoint.sh
 COPY .gitattributes /root/code-live-preview/.gitattributes
+RUN apk add zsh
+COPY install.zsh.sh /root/install.zsh.sh
+RUN sh /root/install.zsh.sh
+COPY zshrc /root/zshrc
+RUN cat /root/zshrc >> /root/.zshrc
 # 本Dockerfile已经通过gitlab-ci自动构建镜像
 # 执行命令构建：docker build  -t registry.cn-shenzhen.aliyuncs.com/block-design/block-design-live:uniapp-uview-vue3 . --no-cache
