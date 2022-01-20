@@ -1,6 +1,6 @@
 <template >
   <view>
-    <view class="code">请打开扫码</view>
+    <view class="code"></view>
   </view>
 </template>
 
