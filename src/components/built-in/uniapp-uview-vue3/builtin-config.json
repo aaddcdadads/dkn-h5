@@ -371,6 +371,14 @@
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmColorPicker.png",
                 "type": 0,
                 "isBuiltIn": true
+            },
+            {
+                "name": "HmCheckList",
+                "title": "多选列表",
+                "importPath": "built-in/uniapp-uview-vue3/HmCheckList",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmCheckList.png",
+                "type": 0,
+                "isBuiltIn": true
             }
         ]
     }
