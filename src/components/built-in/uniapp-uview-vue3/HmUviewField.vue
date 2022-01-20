@@ -14,6 +14,7 @@
       :input-align="inputAlign"
       :icon-color="iconColor"
       :required="required"
+      :disabled="disabled"
       @input="onInput"
       ><slot></slot
     ></u-field>
@@ -128,6 +129,13 @@ export default {
      * 必填
      */
     required: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 不可输入
+     */
+    disabled: {
       type: Boolean,
       default: false,
     },
