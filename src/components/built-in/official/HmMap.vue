@@ -60,14 +60,14 @@ export default {
      */
     longitude: {
       type: Number,
-      default: 116.0
+      default: 116.397428
     },
     /**
      * 中心纬度
      */
     latitude: {
       type: Number,
-      default: 39.0
+      default: 39.90765
     },
     /**
      * 缩放级别
@@ -117,7 +117,17 @@ export default {
      */
     controls: {
       type: Array,
-      default: []
+      default: [{
+        id: 'move-to-location',
+        position: {
+          width: 32,
+          height: 32,
+          left: 32,
+          top: 32
+        },
+        iconPath: '/h5/static/components/img/locate.png',
+        clickable: true
+      }]
     },
     /**
      * 显示3D楼块
