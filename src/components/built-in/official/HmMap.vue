@@ -39,7 +39,7 @@
 <script>
 // 参考：https://uniapp.dcloud.io/component/map
 export default {
-  name: "HmUviewButton",
+  name: "HmMap",
   props: {
     /**
      * 宽度
@@ -145,7 +145,27 @@ export default {
      */
     polygons: {
       type: Array,
-      default: []
+      default: [{
+        points: [{
+          longitude: 116.398428,
+          latitude: 39.90765
+        }, {
+          longitude: 116.398428,
+          latitude: 39.91065
+        }, {
+          longitude: 116.398928,
+          latitude: 39.91065
+        }, {
+          longitude: 116.398928,
+          latitude: 39.90765
+        }, {
+          longitude: 116.398428,
+          latitude: 39.90765
+        }],
+        strokeWidth: 2,
+        strokeColor: '#0000FF',
+        fillColor: '#000000'
+      }]
     },
     /**
      * 视野包含点
