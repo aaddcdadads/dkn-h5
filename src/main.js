@@ -28,6 +28,13 @@ export function createApp() {
   app.config.globalProperties.$deleteAction = deleteAction;
   app.config.globalProperties.$putAction = putAction;
 
+  app.config.globalProperties.$getCssUnit = function(value) {
+    if (isNaN(Number(value))) {
+        return value;
+      }
+    return `${value}px`;
+  }
+
   app.use(uView);
 
   //加载组件
