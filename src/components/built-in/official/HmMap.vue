@@ -89,7 +89,15 @@ export default {
         title: '测试标记点',
         iconPath: 'https://block-design.oss-cn-shenzhen.aliyuncs.com/component-libs/uniapp/red-marker.png',
         width: 32,
-        height: 32
+        height: 32,
+        callout: {
+          display: 'BYCLICK',
+          content: '气泡内容',
+          color: 'red',
+          fontSize: 28,
+          borderRadius: 5,
+          bgColor: 'blue'
+        }
       }]
     },
     /**
