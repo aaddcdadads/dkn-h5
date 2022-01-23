@@ -82,7 +82,15 @@ export default {
      */
     markers: {
       type: Array,
-      default: []
+      default: [{
+        id: 1,
+        longitude: 116.397628,
+        latitude: 39.90925,
+        title: '测试标记点',
+        iconPath: 'https://block-design.oss-cn-shenzhen.aliyuncs.com/component-libs/uniapp/red-marker.png',
+        width: 32,
+        height: 32
+      }]
     },
     /**
      * 路线标记
@@ -125,7 +133,7 @@ export default {
           left: 32,
           top: 32
         },
-        iconPath: '/h5/static/components/img/locate.png',
+        iconPath: 'https://block-design.oss-cn-shenzhen.aliyuncs.com/component-libs/uniapp/%E5%AE%9A%E4%BD%8D.png',
         clickable: true
       }]
     },
