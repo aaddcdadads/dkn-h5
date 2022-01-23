@@ -39,6 +39,9 @@ export default {
       enableIndoorMap: "enableIndoorMap",
     };
   },
+  onReady() {
+    console.log('onReady');
+  }
 };
 </script>
 
