@@ -90,6 +90,13 @@ export default {
         iconPath: 'https://block-design.oss-cn-shenzhen.aliyuncs.com/component-libs/uniapp/red-marker.png',
         width: 32,
         height: 32,
+        label: {
+          content: '测试标记点',
+          color: 'red',
+          fontSize: 12,
+          anchorX: 16,
+          anchorY: -16
+        },
         callout: {
           display: 'BYCLICK',
           content: '气泡内容',
