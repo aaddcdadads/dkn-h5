@@ -4,7 +4,10 @@ import {
 import App from "./App.vue";
 
 import uView from './uni_modules/vk-uview-ui';
-// import loadComponent from './utils/loadComponent';
+
+#ifdef H5
+import loadComponent from './utils/loadComponent';
+#endif
 
 import "./mock/index.js";
 
@@ -25,9 +28,12 @@ export function createApp() {
     app.config.globalProperties.$deleteAction = deleteAction;
     app.config.globalProperties.$putAction = putAction;
 
-    app.use(uView);
-    //加载组件
-    //app.use(loadComponent);
+	app.use(uView);
+
+	//加载组件
+	#ifdef H5
+	app.use(loadComponent);
+	#endif
 
     return {
         app,

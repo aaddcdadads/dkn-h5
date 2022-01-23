@@ -547,9 +547,24 @@
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
+        },
+        {
+            "path": "pages/test/TestHmCheckList",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "pages/test/HmScanCode",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
         }
     ],
     "globalStyle": {
+        "navigationStyle": "custom",
         "navigationBarTextStyle": "black",
         "navigationBarTitleText": "uni-app",
         "navigationBarBackgroundColor": "#F8F8F8",
