@@ -112,7 +112,26 @@ export default {
      */
     polyline: {
       type: Array,
-      default: []
+      default: [{
+        points: [{
+          longitude: 116.397428,
+          latitude: 39.90765
+        }, {
+          longitude: 116.397428,
+          latitude: 39.91065
+        }, {
+          longitude: 116.397928,
+          latitude: 39.91065
+        }, {
+          longitude: 116.397928,
+          latitude: 39.90765
+        }, {
+          longitude: 116.397428,
+          latitude: 39.90765
+        }],
+        color: '#00FF00',
+        width: 2
+      }]
     },
     /**
      * 圆形标记
