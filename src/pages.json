@@ -554,13 +554,6 @@
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
-        },
-        {
-            "path": "pages/test/HmScanCode",
-            "style": {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
         }
     ],
     "globalStyle": {
