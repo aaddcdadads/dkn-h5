@@ -286,7 +286,7 @@
                 "name": "HmMap",
                 "title": "地图组件",
                 "importPath": "built-in/official/HmMap",
-                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewCountDown.png",
+                "imgUrl": "built-in/official/img/HmMap.png",
                 "type": 0,
                 "isBuiltIn": true
             }

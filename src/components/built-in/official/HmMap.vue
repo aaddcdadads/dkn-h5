@@ -46,7 +46,7 @@ export default {
      */
     width: {
       type: String,
-      default: '375'
+      default: '100%'
     },
     /**
      * 高度
@@ -206,7 +206,7 @@ export default {
   },
   data() {
     return {
-      cWidth: '375px',
+      cWidth: '100%',
       cHeight: '500px',
     };
   },
