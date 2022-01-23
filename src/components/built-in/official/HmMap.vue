@@ -138,7 +138,14 @@ export default {
      */
     circles: {
       type: Array,
-      default: []
+      default: [{
+        longitude: 116.399428,
+        latitude: 39.90765,
+        strokeWidth: 2,
+        color: 'rgba(120, 187, 255, 1)',
+        fillColor: 'rgba(120, 187, 255, 0.3)',
+        radius: 60
+      }]
     },
     /**
      * 多边形标记
