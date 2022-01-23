@@ -4,7 +4,10 @@ import {
 import App from "./App.vue";
 
 import uView from './uni_modules/vk-uview-ui';
+
+#ifdef H5
 import loadComponent from './utils/loadComponent';
+#endif
 
 import "./mock/index.js";
 
@@ -26,8 +29,11 @@ export function createApp() {
 	app.config.globalProperties.$putAction = putAction;
 
 	app.use(uView);
+
 	//加载组件
+	#ifdef H5
 	app.use(loadComponent);
+	#endif
 
 	return {
 		app,
