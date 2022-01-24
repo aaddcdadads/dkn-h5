@@ -285,8 +285,8 @@
             {
                 "name": "HmMap",
                 "title": "地图组件",
-                "importPath": "built-in/official/HmMap",
-                "imgUrl": "built-in/official/img/HmMap.png",
+                "importPath": "built-in/uniapp/HmMap",
+                "imgUrl": "built-in/uniapp/img/HmMap.png",
                 "type": 0,
                 "isBuiltIn": true
             }
