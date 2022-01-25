@@ -327,10 +327,10 @@
         "name": "导航组件",
         "componentList": [
             {
-                "name": "HmUviewNavBar",
+                "name": "HmUviewNavbar",
                 "title": "导航栏",
-                "importPath": "built-in/uniapp-uview-vue3/HmUviewNavBar",
-                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewNavBar.png",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewNavbar",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewNavbar.png",
                 "type": 0,
                 "isBuiltIn": true
             },
