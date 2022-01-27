@@ -563,7 +563,7 @@
             }
         },
         {
-            "path": "components/built-in/official/HmMap",
+            "path": "components/built-in/uniapp/HmMap",
             "style": {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
@@ -592,7 +592,7 @@
 			},
             {
 				"name": "HmMap",
-				"path": "components/built-in/official/HmMap",
+				"path": "components/built-in/uniapp/HmMap",
 				"query": ""
 			}
 		]

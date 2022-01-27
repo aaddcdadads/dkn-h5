@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import HmMap from "@/components/built-in/official/HmMap.vue";
+import HmMap from "@/components/built-in/uniapp/HmMap.vue";
 
 export default {
   components: { HmMap },
