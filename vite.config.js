@@ -74,11 +74,11 @@ export default defineConfig({
         "**/*.sh",
         "**/vite.config.js",
         "**/yarn.lock",
+        "**/src/uni_modules/**",
       ].concat(
         isInServerContainer()
           ? [
               "**/src/components/built-in/**",
-              "**/src/uni_modules/**",
               "**/src/pages/test/**",
               "**/src/router/test.js",
               "**/src/components/HmBlock.vue",
