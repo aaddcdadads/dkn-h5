@@ -78,6 +78,7 @@ export default defineConfig({
         isInServerContainer()
           ? [
               "**/src/components/built-in/**",
+              "**/src/uni_modules/**",
               "**/src/pages/test/**",
               "**/src/router/test.js",
               "**/src/components/HmBlock.vue",
