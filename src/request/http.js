@@ -17,6 +17,7 @@ function setGlobal(config) {
  * @returns
  */
 function transformAxiosRequest(config) {
+    if(!config.url) return;
     // 相对路径拼接本地域名
     if(config.url.indexOf(":") == -1){
         config.url = window.location.protocol + '//' + window.location.host + config.url
