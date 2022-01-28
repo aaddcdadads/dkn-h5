@@ -74,6 +74,7 @@ export default defineConfig({
         "**/*.sh",
         "**/vite.config.js",
         "**/yarn.lock",
+        "**/src/uni_modules/**",
       ].concat(
         isInServerContainer()
           ? [
