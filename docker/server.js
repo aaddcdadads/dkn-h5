@@ -12,16 +12,51 @@ const express_1 = __importDefault(require("express"));
 const uni_cli_shared_1 = require("@dcloudio/uni-cli-shared");
 const utils_1 = require("./utils");
 async function createServer(options) {
+    let serverOptions = (0, utils_1.cleanOptions)(options);
+    serverOptions.watch = Object.assign(serverOptions.watch, {
+        ignored: [
+            "**/src/static/**",
+            "**/src/assets/**",
+            "**/tests/**",
+            "**/cypress/**",
+            "**/docker/**",
+            "**/docs/**",
+            "**/public/**",
+            // 忽略生成的json文件
+            "**/src/pages/**/config.json",
+            "**/src/pages/**/page.json",
+            // 忽略根目录下的文件
+            "**/.babelrc",
+            "**/.eslintrc.js",
+            "**/.gitignore",
+            "**/.gitlab-ci.yml",
+            "**/babel.config.js",
+            "**/cpress.json",
+            "**/index.html",
+            "**/jest.config.js",
+            "**/package*",
+            "**/README.md",
+            "**/sonar*",
+            "**/*.sh",
+            "**/vite.config.js",
+            "**/yarn.lock",
+            "**/src/uni_modules/**",
+            "**/src/components/built-in/**",
+            "**/src/pages/test/**",
+            "**/src/router/test.js",
+            "**/src/components/HmBlock.vue",
+        ]
+    })
+    console.log(`serverOptions: `, JSON.stringify(serverOptions, null, 2));
+
     const server = await (0, vite_1.createServer)((0, utils_1.addConfigFile)({
         root: process.env.VITE_ROOT_DIR,
         mode: options.mode,
         logLevel: options.logLevel,
         clearScreen: options.clearScreen,
-        // server: (0, utils_1.cleanOptions)(options),
-        server: options,
+        server: serverOptions,
     }));
     await server.listen();
-    server.config.server.host = server.config.inlineConfig.server.host;
     const logger = server.config.logger;
     logger.info(chalk_1.default.cyan(`\n  vite v${require('vite/package.json').version}`) +
         chalk_1.default.green(` dev server running at:\n`), {

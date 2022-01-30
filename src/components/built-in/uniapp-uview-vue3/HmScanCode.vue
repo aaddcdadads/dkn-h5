@@ -13,7 +13,7 @@ export default {
      */
     show: {
       type: Boolean,
-      default: true,
+      default: false,
     },
   },
   data() {
@@ -23,32 +23,23 @@ export default {
   onload() {},
   mounted() {
     let self = this;
-    if (this.show) {
-      setTimeout(function () {
+    setTimeout(function () {
+      if (this.show) {
         self.scanCode();
-      }, 200);
-    }
+      }
+    }, 200);
   },
   methods: {
     scanCode() {
-      let self = this;
       uni.scanCode({
         success: function (res) {
           ///console.log(JSON.stringify(res));
-          self.onDecode(res);
+          this.$emit("onDecode", res);
         },
         fail: function () {
-          self.onReturn();
+          this.$emit("onReturn");
         },
       });
-    },
-    onDecode(res) {
-      //console.log(res);
-      this.$emit("onDecode", res);
-    },
-    onReturn() {
-      //console.log("onReturn");
-      this.$emit("onReturn");
     },
   },
 };
@@ -57,6 +48,6 @@ export default {
 <style scoped>
 .code {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 </style>

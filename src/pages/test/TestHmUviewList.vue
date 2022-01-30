@@ -1,13 +1,13 @@
 <template>
   <view>
-    <hm-uview-list 
+    <hm-uview-list
       url="http://dev.block-design.cn/api/design/code/list"
-      :dataMap="{text: 'name'}"
+      :dataMap="{ text: 'name' }"
       v-slot="slotProps"
     >
-      <hm-uview-button
+      <!-- <hm-uview-button
         v-bind="slotProps"
-      ></hm-uview-button>
+      ></hm-uview-button> -->
     </hm-uview-list>
   </view>
 </template>
@@ -19,8 +19,7 @@ import HmUviewButton from "@/components/built-in/uniapp-uview-vue3/HmUviewButton
 export default {
   components: { HmUviewList, HmUviewButton },
   data() {
-    return {
-    };
+    return {};
   },
 };
 </script>

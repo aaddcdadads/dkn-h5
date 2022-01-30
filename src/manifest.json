@@ -1,13 +1,20 @@
 {
     "name" : "uview组件库",
-    "appid" : "__UNI__4DCD124",
+    "appid" : "__UNI__EC8B4A9",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
     "transformPx" : false,
-    "h5": {
-        "router": {
-            "mode": "history"
+    "h5" : {
+        "router" : {
+            "mode" : "history"
+        },
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "PP2BZ-23N3W-C2DR7-OQWNF-3STRT-OIFHH"
+                }
+            }
         }
     },
     /* 5+App特有相关 */
@@ -48,14 +55,21 @@
             /* ios打包配置 */
             "ios" : {},
             /* SDK配置 */
-            "sdkConfigs" : {}
+            "sdkConfigs" : {
+                "maps" : {
+                    "amap" : {
+                        "appkey_ios" : "",
+                        "appkey_android" : ""
+                    }
+                }
+            }
         }
     },
     /* 快应用特有相关 */
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wxdd7533aae937ed69",
+        "appid" : "wx6ccc0b32c683e6eb",
         "setting" : {
             "urlCheck" : false
         },
@@ -70,8 +84,8 @@
     "mp-toutiao" : {
         "usingComponents" : true
     },
-    "uniStatistics": {  
-        "enable": false
+    "uniStatistics" : {
+        "enable" : false
     },
     "vueVersion" : "3"
 }

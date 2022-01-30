@@ -11,7 +11,7 @@ function pathResolve(dir) {
 /**
  * 判断代码是否在服务器上的容器里运行
  */
- function isInServerContainer() {
+function isInServerContainer() {
   return os.hostname().indexOf('block-design-live-pid') >= 0
 }
 
@@ -74,6 +74,7 @@ export default defineConfig({
         "**/*.sh",
         "**/vite.config.js",
         "**/yarn.lock",
+        "**/src/uni_modules/**",
       ].concat(
         isInServerContainer()
           ? [
