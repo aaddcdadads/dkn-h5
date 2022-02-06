@@ -303,19 +303,11 @@
                 "imgUrl": "built-in/qiun-data-charts/img/HmQiunCharts.png",
                 "type": 0,
                 "isBuiltIn": true
-            },
-            {
-                "name": "HmMap",
-                "title": "地图组件",
-                "importPath": "built-in/uniapp/HmMap",
-                "imgUrl": "built-in/uniapp/img/HmMap.png",
-                "type": 0,
-                "isBuiltIn": true
             }
         ]
     },
     {
-        "id": 6,
+        "id": 7,
         "name": "反馈组件",
         "componentList": [
             {
@@ -338,7 +330,7 @@
         ]
     },
     {
-        "id": 7,
+        "id": 8,
         "name": "导航组件",
         "componentList": [
             {
@@ -384,7 +376,7 @@
         ]
     },
     {
-        "id": 8,
+        "id": 9,
         "name": "其他",
         "componentList": [
             {
