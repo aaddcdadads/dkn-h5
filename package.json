@@ -27,8 +27,10 @@
     "build:mp-weixin": "uni build -p mp-weixin",
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
-    "build:quickapp-webview-union": "uni build -p quickapp-webview-union"
+    "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
+    "pub": "npm run build && npm publish"
   },
+  "main": "src/components/index.js",
   "dependencies": {
     "@ckpack/vue-color": "^1.1.5",
     "@dcloudio/uni-app": "^3.0.0-alpha-3031020220124001",
