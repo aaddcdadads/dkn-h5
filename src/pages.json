@@ -598,6 +598,11 @@
 				"query": ""
 			},
             {
+				"name": "TestHmQiunCharts",
+				"path": "pages/test/TestHmQiunCharts",
+				"query": ""
+			},
+            {
 				"name": "HmMap",
 				"path": "components/built-in/uniapp/HmMap",
 				"query": ""

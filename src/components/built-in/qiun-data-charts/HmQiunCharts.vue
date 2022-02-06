@@ -17,9 +17,19 @@ export default {
       type: String,
       default: "line",
     },
+    /**
+     * 宽度
+     */
     width: {
       type: String,
       default: '100%'
+    },
+    /**
+     * 高度
+     */
+    height: {
+      type: String,
+      default: '300rpx'
     },
     /**
      * 图表数据
@@ -76,7 +86,14 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      cWidth: "100%",
+			cHeight: "300rpx",
+    };
+  },
+  mounted() {
+    this.cWidth = this.$getCssUnit(this.width);
+		this.cHeight = this.$getCssUnit(this.height);
   },
   methods: {
     onClick(e) {
@@ -89,7 +106,7 @@ export default {
 
 <style lang="less">
 .charts-box {
-  width: 100%;
-  height: 300px;
+  width: v-bind(cWidth);
+	height: v-bind(cHeight);
 }
 </style>

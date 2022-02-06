@@ -294,6 +294,28 @@
     },
     {
         "id": 6,
+        "name": "图表",
+        "componentList": [
+            {
+                "name": "HmQiunCharts",
+                "title": "秋云图表",
+                "importPath": "built-in/qiun-data-charts/HmQiunCharts",
+                "imgUrl": "built-in/qiun-data-charts/img/HmQiunCharts.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmMap",
+                "title": "地图组件",
+                "importPath": "built-in/uniapp/HmMap",
+                "imgUrl": "built-in/uniapp/img/HmMap.png",
+                "type": 0,
+                "isBuiltIn": true
+            }
+        ]
+    },
+    {
+        "id": 6,
         "name": "反馈组件",
         "componentList": [
             {
