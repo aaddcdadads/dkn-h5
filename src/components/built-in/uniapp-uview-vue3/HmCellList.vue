@@ -49,7 +49,7 @@ export default {
       default: "80px",
     },
     /**
-     * 是否显示下边框
+     * 下边框
      */
     isBorder: {
       type: Boolean,
@@ -64,7 +64,7 @@ export default {
       default: "#ffffff",
     },
     /**
-     * date位置
+     * 时间位置
      */
     dateSize: {
       type: String,
