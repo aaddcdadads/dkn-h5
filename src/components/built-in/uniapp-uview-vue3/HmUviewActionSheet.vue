@@ -77,7 +77,7 @@ export default {
       default: true,
     },
     /**
-     * 弹出部分顶部左右的圆角值
+     * 弹出顶部圆角
      */
     borderRadius: {
       type: Number,
@@ -91,7 +91,7 @@ export default {
       default: true,
     },
     /**
-     * 是否开启底部安全区适配
+     * 底部适配
      */
     safeAreaInsetBottom: {
       type: Boolean,
