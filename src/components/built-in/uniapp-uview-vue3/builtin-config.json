@@ -152,7 +152,7 @@
             },
             {
                 "name": "HmCellList",
-                "title": "用户列表",
+                "title": "单元列表",
                 "importPath": "built-in/uniapp-uview-vue3/HmCellList",
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmCellList.png",
                 "type": 0,
