@@ -9,7 +9,7 @@ export default {
   name: "HmScanCode",
   props: {
     /**
-     * 是否可见
+     * 是否打开
      */
     show: {
       type: Boolean,

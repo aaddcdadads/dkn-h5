@@ -152,7 +152,7 @@
             },
             {
                 "name": "HmCellList",
-                "title": "用户列表",
+                "title": "单元列表",
                 "importPath": "built-in/uniapp-uview-vue3/HmCellList",
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmCellList.png",
                 "type": 0,
@@ -325,8 +325,15 @@
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSwipeAction.png",
                 "type": 0,
                 "isBuiltIn": true
+            },
+            {
+                "name": "HmScanCode",
+                "title": "扫码",
+                "importPath": "built-in/uniapp-uview-vue3/HmScanCode",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmScanCode.png",
+                "type": 0,
+                "isBuiltIn": true
             }
-            
         ]
     },
     {
