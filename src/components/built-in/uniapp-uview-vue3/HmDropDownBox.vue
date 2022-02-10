@@ -95,7 +95,7 @@ export default {
       default: "30px",
     },
     /**
-     * 列表背景颜色
+     * 背景颜色
      * @type Color
      */
     listColor: {

@@ -33,21 +33,21 @@ export default {
       default: "horizontal",
     },
     /**
-     * 是否显示小喇叭图标
+     * 小喇叭图标
      */
     volumeIcon: {
       type: Boolean,
       default: true,
     },
     /**
-     * 是否显示右边的向右箭头
+     * 向右箭头
      */
     moreIcon: {
       type: Boolean,
       default: true,
     },
     /**
-     * 是否显示关闭图标
+     * 关闭图标
      */
     closeIcon: {
       type: Boolean,
@@ -82,7 +82,7 @@ export default {
       },
     },
     /**
-     * 是否水平衔接滚动
+     * 水平衔接滚动
      */
     isCircular: {
       type: Boolean,
