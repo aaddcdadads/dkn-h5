@@ -72,9 +72,7 @@ export default {
     unActiveColor: {
       type: String,
     },
-    /**
-     * Icon图标加不上去
-     */
+
     /**
      * 模式
      * @type Enum
