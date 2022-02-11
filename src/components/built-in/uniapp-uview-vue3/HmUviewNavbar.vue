@@ -48,14 +48,14 @@ export default {
       default: "#606266",
     },
     /**
-     * 标题字体大小
+     * 标题大小
      */
     titleSize: {
       type: Number,
       default: 16,
     },
     /**
-     * 标题是否加粗
+     * 标题加粗
      */
     titleBold: {
       type: Boolean,

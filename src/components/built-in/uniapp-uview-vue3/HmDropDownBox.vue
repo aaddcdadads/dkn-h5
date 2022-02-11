@@ -59,14 +59,14 @@ export default {
       default: "#1CB9C2",
     },
     /**
-     * 默认值字体大小
+     * 默认值大小
      */
     valueSize: {
       type: String,
       default: "20px",
     },
     /**
-     * 默认值字体颜色
+     * 默认值颜色
      * @type Color
      */
     valueColor: {
@@ -74,7 +74,7 @@ export default {
       default: "black",
     },
     /**
-     * 列表值字体大小
+     * 列表值大小
      */
     listSize: {
       type: String,
@@ -95,7 +95,7 @@ export default {
       default: "30px",
     },
     /**
-     * 列表背景颜色
+     * 背景颜色
      * @type Color
      */
     listColor: {

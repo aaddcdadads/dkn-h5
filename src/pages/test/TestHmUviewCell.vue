@@ -9,7 +9,7 @@
       :borderTop="true"
       bg-color="#ffefef"
       iconSize="20px"
-      @click="onClick"
+      @e="onClick"
     ></hm-uview-cell>
   </view>
 </template>

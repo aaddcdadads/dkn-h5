@@ -22,7 +22,7 @@ export default {
 
   props: {
     /**
-     * 是否处于加载中
+     * 加载中
      */
     loading: {
       type: Boolean,

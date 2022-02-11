@@ -72,7 +72,7 @@ export default {
     },
 
     /**
-     * 是否显示细边框
+     * 显示边框
      */
     hairLine: {
       type: Boolean,

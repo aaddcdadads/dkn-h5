@@ -50,7 +50,7 @@ export default {
       default: "red",
     },
     /**
-     * 吸顶时的z-index值
+     *z-index值
      */
     zIndex: {
       type: String,

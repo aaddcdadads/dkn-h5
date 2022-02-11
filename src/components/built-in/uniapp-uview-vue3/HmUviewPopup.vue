@@ -69,7 +69,7 @@ export default {
       default: "40%",
     },
     /**
-     * 点击遮罩是否关闭
+     * 点击遮罩关闭
      */
     maskCloseAble: {
       type: Boolean,
@@ -83,7 +83,7 @@ export default {
       default: "0px",
     },
     /**
-     * 是否显示关闭图标
+     * 显示关闭图标
      */
     closeable: {
       type: Boolean,

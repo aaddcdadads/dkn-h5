@@ -92,9 +92,6 @@ export default {
       type: Boolean,
       default: true,
     },
-    /**
-     * 清除图标时机
-     */
 
     /**
      * 取消按钮
@@ -103,9 +100,6 @@ export default {
       type: Boolean,
       default: true,
     },
-    /**
-     * 输入内容标红
-     */
 
     /**
      * 对齐方式

@@ -37,7 +37,7 @@ export default {
 
   props: {
     /**
-     * 服务器上传地址
+     * 服务器地址
      */
     action: {
       type: String,
@@ -51,7 +51,7 @@ export default {
       default: "file",
     },
     /**
-     * 上传图片最大数量
+     * 上传最大数量
      */
     maxCount: {
       type: String,
@@ -72,7 +72,7 @@ export default {
       default: "200",
     },
     /**
-     * 是否显示进度条
+     * 显示进度条
      */
     showProgress: {
       type: Boolean,
@@ -94,14 +94,14 @@ export default {
       default: true,
     },
     /**
-     * 是否显示删除图片按钮
+     * 删除图片按钮
      */
     deletable: {
       type: Boolean,
       default: true,
     },
     /**
-     * 图片最大大小(byte)
+     * 最大大小(byte)
      */
     maxSize: {
       type: String,
@@ -121,7 +121,7 @@ export default {
       },
     },
     /**
-     * 选择图片提示文字
+     * 图片提示文字
      */
     uploadText: {
       type: String,
@@ -149,14 +149,14 @@ export default {
       default: true,
     },
     /**
-     * 右上角图标样式
+     * 删除图标样式
      */
     delIcon: {
       type: String,
       default: "close",
     },
     /**
-     * 右上角图标背景颜色
+     * 删除背景颜色
      * @type Color
      */
     delBgColor: {
@@ -164,7 +164,7 @@ export default {
       default: "#fa3534",
     },
     /**
-     * 右上角图标颜色
+     * 删除图标颜色
      * @type Color
      */
     delColor: {
@@ -172,7 +172,7 @@ export default {
       default: "#ffffff",
     },
     /**
-     * 回调事件的最后一个参数
+     * 回调最后参数
      */
     index: {
       type: String,

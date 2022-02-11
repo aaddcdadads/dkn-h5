@@ -15,7 +15,7 @@
         :border-top="borderTop || item.borderTop"
         :bg-color="bgColor"
         :icon-size="iconSize"
-        @click="onClick(item, item.key)"
+        @click="onClick(item, key)"
       ></u-cell-item>
     </u-cell-group>
   </view>
@@ -75,21 +75,21 @@ export default {
       type: String,
     },
     /**
-     * 是否显示外边框
+     * 外边框
      */
     isBorder: {
       type: Boolean,
       default: false,
     },
     /**
-     * 显示下边框
+     * 下边框
      */
     borderBottom: {
       type: Boolean,
       default: true,
     },
     /**
-     * 显示上边框
+     * 上边框
      */
     borderTop: {
       type: Boolean,

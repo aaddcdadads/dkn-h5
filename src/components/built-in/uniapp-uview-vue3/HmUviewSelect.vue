@@ -92,7 +92,7 @@ export default {
     },
 
     /**
-     * 自定义children属性名
+     * children属性名
      */
     childName: {
       type: String,

@@ -89,7 +89,7 @@ export default {
       default: "#ffffff",
     },
     /**
-     * 是否显示边框
+     * 边框
      */
     showBorder: {
       type: Boolean,

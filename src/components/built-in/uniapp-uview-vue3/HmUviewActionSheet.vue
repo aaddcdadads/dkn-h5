@@ -20,38 +20,40 @@ export default {
   name: "HmUviewActionSheet",
   components: {},
   props: {
-		/**
-		 * 按钮的文字数组
-		 */
+    /**
+     * 按钮文字数组
+     */
     list: {
       type: Array,
       default: function () {
         return [
           {
-            text: '点赞',
-            color: 'blue',
+            text: "点赞",
+            color: "blue",
             fontSize: 28,
-            subText: '感谢您的点赞'
-          }, {
-            text: '分享'
-          }, {
-            text: '评论' 
-          }
+            subText: "感谢您的点赞",
+          },
+          {
+            text: "分享",
+          },
+          {
+            text: "评论",
+          },
         ];
       },
     },
-		/**
-		 * 顶部的提示文字
-		 */
+    /**
+     * 顶部提示文字
+     */
     tips: {
       type: Object,
-      default: function() {
-				return {
-					text: '在水一方',
-					color: '#909399',
-					fontSize: 24
-				}
-      }
+      default: function () {
+        return {
+          text: "在水一方",
+          color: "#909399",
+          fontSize: 24,
+        };
+      },
     },
     /**
      * 是否可见
@@ -60,9 +62,9 @@ export default {
       type: Boolean,
       default: false,
     },
-		/**
-		 * 取消按钮文字
-		 */
+    /**
+     * 取消按钮文字
+     */
     cancelText: {
       type: String,
       default: "取消",
@@ -74,38 +76,38 @@ export default {
       type: Boolean,
       default: true,
     },
-		/**
-     * 弹出部分顶部左右的圆角值
+    /**
+     * 弹出顶部圆角
      */
     borderRadius: {
       type: Number,
       default: 0,
     },
-		/**
-		 * 点击遮罩是否可以关闭
-		 */
+    /**
+     * 遮罩是否关闭
+     */
     maskCloseAble: {
       type: Boolean,
       default: true,
     },
     /**
-     * 是否开启底部安全区适配
+     * 底部适配
      */
     safeAreaInsetBottom: {
       type: Boolean,
       default: false,
     },
-		/**
-		 * z-index值
-		 */
+    /**
+     * z-index值
+     */
     zIndex: {
       type: Number,
-      default: 1075
+      default: 1075,
     },
   },
   data() {
     return {
-      cVisible: false
+      cVisible: false,
     };
   },
   watch: {
@@ -113,8 +115,8 @@ export default {
       this.cVisible = !!value;
     },
     cVisible(value) {
-      if(value == false) this.handleClose()
-    }
+      if (value == false) this.handleClose();
+    },
   },
   computed: {},
   mounted() {
@@ -123,14 +125,14 @@ export default {
   },
   methods: {
     handleClick(e) {
-      console.log('click: ', e);
+      console.log("click: ", e);
       this.$emit("click", e);
     },
     handleClose() {
-      console.log('close: ');
+      console.log("close: ");
       this.$emit("close");
-    }
-  }
+    },
+  },
 };
 </script>
 

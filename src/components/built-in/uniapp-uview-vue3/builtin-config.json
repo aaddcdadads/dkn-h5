@@ -152,7 +152,7 @@
             },
             {
                 "name": "HmCellList",
-                "title": "用户列表",
+                "title": "单元列表",
                 "importPath": "built-in/uniapp-uview-vue3/HmCellList",
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmCellList.png",
                 "type": 0,
@@ -294,6 +294,20 @@
     },
     {
         "id": 6,
+        "name": "图表",
+        "componentList": [
+            {
+                "name": "HmQiunCharts",
+                "title": "秋云图表",
+                "importPath": "built-in/qiun-data-charts/HmQiunCharts",
+                "imgUrl": "built-in/qiun-data-charts/img/HmQiunCharts.png",
+                "type": 0,
+                "isBuiltIn": true
+            }
+        ]
+    },
+    {
+        "id": 7,
         "name": "反馈组件",
         "componentList": [
             {
@@ -323,7 +337,7 @@
         ]
     },
     {
-        "id": 7,
+        "id": 8,
         "name": "导航组件",
         "componentList": [
             {
@@ -369,7 +383,7 @@
         ]
     },
     {
-        "id": 8,
+        "id": 9,
         "name": "其他",
         "componentList": [
             {

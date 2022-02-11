@@ -1,0 +1,14 @@
+node_modules
+.DS_Store
+cypress/
+*.local
+src/
+public/
+docker/
+*.sh
+*.log
+docs/
+dist/dev/
+dist/build/
+!dist/build/h5/
+*.sh

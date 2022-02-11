@@ -62,7 +62,7 @@ export default {
     },
 
     /**
-     * 加载中的图标
+     * 加载中图标
      * @type Icon
      */
     loadingIcon: {
@@ -71,7 +71,7 @@ export default {
     },
 
     /**
-     * 加载失败的图标
+     * 加载失败图标
      * @type Icon
      */
     errorIcon: {

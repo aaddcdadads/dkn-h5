@@ -41,60 +41,64 @@ export default {
      */
     isScroll: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 标签数组
      */
     list: {
       type: Array,
-      default: function() {
-        return [{
-          name:"标签一",
-          count: 1
-        },{
-          name:"标签二",
-          count: 1
-        },{
-          name:"标签三",
-          count: 1
-        }]
-      }
+      default: function () {
+        return [
+          {
+            name: "标签一",
+            count: 1,
+          },
+          {
+            name: "标签二",
+            count: 1,
+          },
+          {
+            name: "标签三",
+            count: 1,
+          },
+        ];
+      },
     },
     /**
      * 当前页
      */
     current: {
       type: Number,
-      default: 0
+      default: 0,
     },
     /**
-     * 标签页宽度百分比
+     * 标签页宽度
      */
     widthPercent: {
       type: Number,
-      default: 100
+      default: 100,
     },
     /**
      * 高度
      */
     height: {
       type: Number,
-      default: 80
+      default: 80,
     },
     /**
      * 文字大小
      */
     fontSize: {
       type: Number,
-      default: 30
+      default: 30,
     },
     /**
      * 滑动时间(秒)
      */
     duration: {
       type: Number,
-      default: 0.5
+      default: 0.5,
     },
     /**
      * tab激活颜色
@@ -102,7 +106,7 @@ export default {
      */
     activeColor: {
       type: String,
-      default: "#2979ff"
+      default: "#2979ff",
     },
     /**
      * tabs文字颜色
@@ -110,28 +114,28 @@ export default {
      */
     inactiveColor: {
       type: String,
-      default: "#303133"
+      default: "#303133",
     },
     /**
      * 滑块宽度
      */
     barWidth: {
       type: Number,
-      default: 40
+      default: 40,
     },
     /**
      * 滑块高度
      */
     barHeight: {
       type: Number,
-      default: 6
+      default: 6,
     },
     /**
-     * 单个tab内边距
+     * tab内边距
      */
     gutter: {
       type: Number,
-      default: 40
+      default: 40,
     },
     /**
      * 背景颜色
@@ -139,21 +143,21 @@ export default {
      */
     bgColor: {
       type: String,
-      default: "#ffffff"
+      default: "#ffffff",
     },
     /**
-     * tab激活是否加粗
+     * tab激活加粗
      */
     bold: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
-     * 是否展示滑块
+     * 展示滑块
      */
     showBar: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 滑块样式
@@ -161,8 +165,8 @@ export default {
     barStyle: {
       type: Object,
       default: function () {
-        return {}
-      }
+        return {};
+      },
     },
     /**
      * 激活tab样式
@@ -170,14 +174,14 @@ export default {
     activeItemStyle: {
       type: Object,
       default: function () {
-        return {}
-      }
+        return {};
+      },
     },
     /**
      * tab宽度
      */
     itemWidth: {
-      type: Number
+      type: Number,
     },
     /**
      * 徽标位置偏移
@@ -185,13 +189,13 @@ export default {
     offset: {
       type: Array,
       default: function () {
-        return [5, 20]
-      }
-    }
+        return [5, 20];
+      },
+    },
   },
   data() {
     return {
-      cCurrent: 0
+      cCurrent: 0,
     };
   },
   watch: {
@@ -205,10 +209,10 @@ export default {
   methods: {
     onChange(val) {
       this.cCurrent = val;
-      console.log('u-tabs change', val)
+      console.log("u-tabs change", val);
       this.$emit("change", val);
-    }
-  }
+    },
+  },
 };
 </script>
 
