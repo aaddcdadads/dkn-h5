@@ -15,7 +15,7 @@
         :border-top="borderTop || item.borderTop"
         :bg-color="bgColor"
         :icon-size="iconSize"
-        @click="onClick(item, item.key)"
+        @click="onClick(item, key)"
       ></u-cell-item>
     </u-cell-group>
   </view>
