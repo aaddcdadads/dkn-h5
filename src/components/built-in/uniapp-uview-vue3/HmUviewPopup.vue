@@ -8,10 +8,11 @@
       :mask="mask"
       :width="width"
       :height="height"
+      :negative-top="negativeTop"
       :mask-close-able="maskCloseAble"
       :border-radius="borderRadius"
       :closeable="closeable"
-      :closeIcon="closeIcon"
+      :close-icon="closeIcon"
       :close-icon-pos="closeIconPos"
       :close-icon-color="closeIconColor"
       :close-icon-size="closeIconSize"
@@ -35,7 +36,7 @@ export default {
      */
     show: {
       type: Boolean,
-      default: false,
+      default: true,
     },
 
     /**
@@ -45,7 +46,7 @@ export default {
      */
     mode: {
       type: String,
-      default: "left",
+      default: "center",
     },
     /**
      * 是否显示遮罩
@@ -67,6 +68,13 @@ export default {
     height: {
       type: String,
       default: "40%",
+    },
+    /**
+     * 中部弹出偏移
+     */
+    negativeTop: {
+      type: String,
+      default: "0",
     },
     /**
      * 点击遮罩关闭
