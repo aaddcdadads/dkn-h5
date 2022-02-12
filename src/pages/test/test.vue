@@ -1,317 +1,298 @@
 <template>
-  <view class="flex-col page">
-    <view class="section_1"> </view>
-    <view class="flex-col section_2">
-      <view class="flex-col">
-        <text class="text">{{ wagesText }}</text>
-        <text class="text_1">¥{{ this.onMoney(wagesSize) }}</text>
-      </view>
-      <view class="justify-between">
-        <view class="flex-row group_2">
-          <text class="text_2">{{ wagesPeople }}</text>
-          <text class="text_3">{{ time }}</text>
+	<view class="inbox flex-col">
+		<view class="flex-row topbox">
+			<picker @change="condChange" :title="title" :value="index" :range="array">
+				<view class="toptext">
+          <text>{{array[index].substring(2,6)}}</text>
+          <image
+				src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/612c9040718459001197fea4/61c527e72ffc780012400355/16403107674901033051.png"
+				class="img_arrow"/>
         </view>
-        <view
-          class="flex-col items-center text-wrapper"
-          @click="onClick(wagesPeople, wagesSize, time)"
-        >
-          <text>{{ butText }}</text>
-        </view>
-      </view>
-    </view>
-    <image
-      src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/612c9040718459001197fea4/61db996c2608c80011b0f648/16417974836076575019.png"
-      class="image"
-    />
-    <view class="justify-between section_3">
-      <text class="text_5">{{ title }}</text>
-      <text class="text_6">{{ tips }}</text>
-    </view>
-  </view>
+			</picker>
+		</view>
+		<view class="flex-col">
+			<view v-for="(item,index) in cTimingList" :key="item.index" class="listbox flex-row"
+       @touchstart="getTouchStartCond()"
+      @touchend="getTouchEndCond()">
+				<view class="halfw lefttext">
+					<image
+						src="https://project-user-resource-1256085488.cos.ap-guangzhou.myqcloud.com/612c9040718459001197fea4/61c527e72ffc780012400355/16403107726929788831.png"
+						v-show="showclear1" class="img_clear" @click="condclearLine(index)" />
+					<text decode="decode">{{item.name}}</text>
+				</view>
+				<view class="halfw righttext">
+					<text decode="decode">{{item.action}}</text>
+				</view>
+			</view>
+			<view class="flex-row addbox">
+				<text decode="decode" class="lefttext addtext" @click="condaddLine()">继续添加</text>
+			</view>
+		</view>
+		<view class="hrbox"><hr/></view>
+		<view class="flex-col bottom">
+			<view class="topbox">
+				<text decode="decode" class="toptext">就执行:</text>
+			</view>
+			<view v-for="(cont,seq) in cActionList" :key="cont.seq" class="listbox flex-row" 
+      @touchstart="getTouchStartAct()"
+      @touchend="getTouchEndAct()">
+				<view class="lefttext">
+					<image
+						src="https://project-user-resource-1256085488.cos.ap-guangzhou.myqcloud.com/612c9040718459001197fea4/61c527e72ffc780012400355/16403107726929788831.png"
+						v-show="showclear2" class="img_clear" @click="actclearLine(seq)" />
+					<text decode="decode">{{cont.imact}}</text>
+				</view>
+			</view>
+			<view class="flex-row addbox">
+				<text decode="decode" class="lefttext addtext" @click="actaddLine()">继续添加</text>
+			</view>
+		</view>
+	</view>
 </template>
 
 <script>
-export default {
-  name: "HmPayrollCard",
-  props: {
-    /**
-     * 宽度
-     */
-    width: {
-      type: String,
-      default: "350px",
+	export default {
+		name:"timingpage",
+		props: {
+			/**
+			 * 条件数据
+			 */
+			timingList: {
+				type: Array,
+				default: function(){return[{
+						id: "123",
+						name: "定时",
+						action: "每天 7:00"
+					},
+					{
+						id: "133",
+						name: "灯21",
+						action: "打开"
+					},
+					{
+						id: "333",
+						name: "灯22",
+						action: "关闭"
+					}
+				];}
+			},
+			/**
+			 * 动作数据
+			 */
+			actionList: {
+				type: Array,
+				default: function(){return[{
+						id: "123",
+						imact: "灯全开"
+					},
+				];
+				},
+			},
+		},
+		data() {
+			return {
+        title: '请选择多条件关系',
+				array: ['如果同时满足时', '如果任意满足时'],
+				index: 0,
+        timeOutEvent:0,
+				showclear1: false,
+				showclear2: false,
+				cTimingList:[
+					{
+							id: "123",
+							name: "定时",
+							action: "每天 7:00"
+						},
+						{
+							id: "133",
+							name: "灯21",
+							action: "打开"
+						},
+						{
+							id: "333",
+							name: "灯22",
+							action: "关闭"
+						}
+				],
+				cActionList:[
+					{
+							id: "123",
+							imact: "灯全开"
+						}
+				]
+			}
+		},
+		methods: {
+			condChange: function(e) {
+				console.log('picker发送选择改变，携带值为', e.detail.value)
+				this.index = e.detail.value
+			},
+			timing() {
+				this.$emit("timing")
+				console.log("选择时间")
+			},
+			condclearLine(e) {
+				this.$emit("condclearLine", e);
+				console.log("触发关闭点击事件");
+			},
+			actclearLine(e) {
+				this.$emit("actclearLine", e);
+				console.log("触发关闭点击事件");
+				},
+			condaddLine() {
+				this.$emit("condaddLine")
+				console.log("添加一行")
+			},
+			actaddLine() {
+				this.$emit("actaddLine")
+				console.log("添加一行")
+			},
+       getTouchStartCond: function (item) {
+      var self = this;
+      this.timeOutEvent = setTimeout(function () {
+        console.log("进入长按");
+        self.condlongtap(item);
+      }, 500);
     },
-    /**
-     * 标题
-     */
-    title: {
-      type: String,
-      default: "工资单确认",
+    getTouchStartAct: function (item) {
+      var self = this;
+      this.timeOutEvent = setTimeout(function () {
+        console.log("进入长按");
+        self.actlongtap(item);
+      }, 500);
     },
-    /**
-     * 提示文字
-     */
-    tips: {
-      type: String,
-      default: "请于工资结算前确认",
+    getTouchEndCond(item) {
+      clearTimeout(this.timeOutEvent);
     },
-    /**
-     * 工资文字
-     */
-    wagesText: {
-      type: String,
-      default: "实发工资",
+    getTouchEndAct(item) {
+      clearTimeout(this.timeOutEvent);
     },
-    /**
-     * 工资数
-     */
-    wagesSize: {
-      type: String,
-      default: "77775555",
-    },
-    /**
-     * 工资人员
-     */
-    wagesPeople: {
-      type: String,
-      default: "小明",
-    },
-    /**
-     * 按钮文字
-     */
-    butText: {
-      type: String,
-      default: "签字确认",
-    },
-    /**
-     * 时间
-     */
-    time: {
-      type: String,
-      default: "2021.12.31",
-    },
-  },
-
-  watch: {
-    width(value) {
-      this.cWidth = this.getCssUnit(value);
-    },
-  },
-
-  mounted() {
-    this.cWidth = this.getCssUnit(this.width);
-  },
-  methods: {
-    getCssUnit(value) {
-      if (isNaN(Number(value))) {
-        return value;
-      }
-      return `${value}px`;
-    },
-    onClick(wagesPeople, wagesSize, time) {
-      //console.log("11", wagesPeople, wagesSize, time);
-      this.$emit("onClick", wagesPeople, wagesSize, time);
-    },
-    onMoney: function (n) {
-      let b = n + "";
-      let len = b.length;
-      if (len <= 3) {
-        return b;
-      }
-      let r = len % 3;
-      return r > 0
-        ? b.slice(0, r) + "," + b.slice(r, len).match(/\d{3}/g).join(",")
-        : b.slice(r, len).match(/\d{3}/g).join(",");
-    },
-  },
-
-  data() {
-    return {
-      cWidth: "",
-    };
-  },
-};
+			condlongtap() {
+				this.$emit("condlongtap")
+        this.timeOutEvent = 0;
+				this.showclear1 = true
+				console.log("进入长按")
+			},
+			actlongtap() {
+				this.$emit("actlongtap")
+        this.timeOutEvent = 0;
+				this.showclear2 = true
+				console.log("进入长按")
+			}
+		},
+		watch:{
+			timingList(value){
+				this.cTimingList = value;
+			},
+			actionList(value){
+				this.cActionList = value;
+			}
+		},
+		mounted() {
+			this.cTimingList = this.timingList;
+			this.cActionList = this.actionList;
+		}
+	}
 </script>
 
-<style lang="less">
-.page {
-  padding-bottom: 83px;
-  background-color: #8f8686;
-  width: v-bind(cWidth);
-  border-radius: 4px;
-  overflow-y: auto;
-  position: relative;
-  box-shadow: 0px 2px 12px 0px rgba(100, 101, 102, 0.08);
-}
-.section_1 {
-  margin: 0 8px;
-  background-image: linear-gradient(
-    99.6deg,
-    rgb(24, 144, 255) 0%,
-    rgb(24, 144, 255) -20.69%,
-    rgb(79, 170, 255) 117.75%,
-    rgb(79, 170, 255) 100%
-  );
-  border-radius: 4px 4px 0px 0px;
-  width: 327px;
-  height: 58px;
-}
-.section_2 {
-  padding: 22px 12px 10px;
-  background-color: rgb(255, 255, 255);
-  //box-shadow: 0px 2px 12px 0px rgba(100, 101, 102, 0.08);
-  border-radius: 0px 0px 0px 4px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 36px;
-}
-.image {
-  width: 108px;
-  height: 83px;
+<style>
+	page {
+		width: 100vw;
+		height: 100vh;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+			'Droid Sans', 'Helvetica Neue', 'Microsoft Yahei', sans-serif;
+	}
 
-  position: absolute;
-  left: 210px;
-  top: 15px;
-}
-.section_3 {
-  padding: 12px 12px 10px;
-  background-image: linear-gradient(
-    96.7deg,
-    rgb(24, 144, 255) 0%,
-    rgb(24, 144, 255) -20.69%,
-    rgb(71, 167, 255) 117.75%,
-    rgb(71, 167, 255) 100%
-  );
-  border-radius: 4px 4px 0px 0px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-}
-.text_5 {
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  white-space: nowrap;
-}
-.text_6 {
-  margin: 3px 0;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 10px;
-  line-height: 14px;
-  white-space: nowrap;
-}
-.text {
-  color: rgba(153, 153, 153, 0.8);
-  font-size: 12px;
-  line-height: 17px;
-  white-space: nowrap;
-}
-.text_1 {
-  margin-top: 2px;
-  color: rgb(51, 51, 51);
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 23px;
-  white-space: nowrap;
-}
-.group_2 {
-  margin-top: 15px;
-}
-.text-wrapper {
-  padding: 6px 0;
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  white-space: nowrap;
-  background-color: rgb(24, 144, 255);
-  border-radius: 4px;
-  width: 88px;
-  height: 32px;
-}
-.text_2 {
-  color: rgb(102, 102, 102);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 17px;
-  white-space: nowrap;
-}
-.text_3 {
-  margin-left: 20px;
-  color: rgb(102, 102, 102);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 15px;
-  white-space: nowrap;
-}
+	view,
+	image,
+	text {
+		box-sizing: border-box;
+		flex-shrink: 0;
+	}
 
-view,
-image,
-text {
-  box-sizing: border-box;
-  flex-shrink: 0;
-}
+	.flex-row {
+		display: flex;
+		flex-direction: row;
+	}
 
-#app {
-  width: 100vw;
-  height: 100vh;
-}
+	.flex-col {
+		display: flex;
+		flex-direction: column;
+	}
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
+	.halfw {
+		width: 50%;
+	}
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
+	text {
+		font-size: 16px;
+		color: #333333;
+		line-height: 24px;
+		font-weight: 400;
+	}
 
-.justify-start {
-  display: flex;
-  justify-content: flex-start;
-}
+	.lefttext {
+		text-align: left;
+	}
 
-.justify-center {
-  display: flex;
-  justify-content: center;
-}
+	.righttext {
+		text-align: right;
+	}
 
-.justify-end {
-  display: flex;
-  justify-content: flex-end;
-}
+	.inbox {
+		width: 100%;
+		min-width: 200px;
+		padding: 12px;
+		background-color: #ffffff;
+	}
 
-.justify-evenly {
-  display: flex;
-  justify-content: space-evenly;
-}
+	.listbox {
+		margin: 10px 0px;
+		min-height: 20px;
+	}
 
-.justify-around {
-  display: flex;
-  justify-content: space-around;
-}
+	.topbox {
+		margin: 6px 0px;
+	}
 
-.justify-between {
-  display: flex;
-  justify-content: space-between;
-}
+	.addbox {
+		margin-top: 14px;
+	}
+	.hrbox{
+		margin:32px 0px;
+		padding:0px 32px;
+	}
+	.hrbox hr{
+		border: 0.5px solid #EEEEEE;
+	}
+	.toptext {
+		font-size: 14px;
+		color: #666666;
+		line-height: 22px;
+		letter-spacing: 1px;
+		font-weight: 400;
 
-.items-start {
-  display: flex;
-  align-items: flex-start;
-}
+	}
 
-.items-center {
-  display: flex;
-  align-items: center;
-}
+	.img_arrow {
+		width: 6px;
+		height: 12px;
+		margin: 0px 4px;
+		margin-top: 6px;
+	}
 
-.items-end {
-  display: flex;
-  align-items: flex-end;
-}
+	.img_clear {
+		width: 12px;
+		height: 12px;
+		margin-right: 12px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.addtext {
+		font-size: 16px;
+		color: #999999;
+		line-height: 24px;
+		font-weight: 400;
+	}
 </style>
