@@ -25,11 +25,6 @@
 <script>
 export default {
   name: "HmUviewPopup",
-  data() {
-    return {
-      cShow: false,
-    };
-  },
   props: {
     /**
      * 是否弹出
@@ -130,9 +125,14 @@ export default {
       default: "15px",
     },
   },
+  data() {
+    return {
+      cShow: false,
+    };
+  },
   watch: {
-    show(old) {
-      this.cShow = old;
+    show(value) {
+      this.cShow = value;
     },
   },
   mounted() {
