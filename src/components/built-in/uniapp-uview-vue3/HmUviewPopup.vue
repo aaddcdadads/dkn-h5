@@ -28,6 +28,7 @@ export default {
   props: {
     /**
      * 是否弹出
+     * @v-model
      */
     show: {
       type: Boolean,
@@ -144,6 +145,7 @@ export default {
       this.$emit("open");
     },
     onClose() {
+      this.$emit("update:show", false);
       this.$emit("close");
     },
   },
