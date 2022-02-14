@@ -22,8 +22,6 @@
 </template>
 
 <script>
-// import uCellItem from "uview-ui/components/u-cell-item/u-cell-item";
-// import uCellGroup from "uview-ui/components/u-cell-group/u-cell-group";
 export default {
   components: {},
   name: "HmUviewCell",
@@ -114,9 +112,9 @@ export default {
     return {};
   },
   methods: {
-    onClick(e, index) {
-      console.log("click", e, index);
-      this.$emit("click", e, index);
+    onClick(item, index) {
+      console.log("click", item, index);
+      this.$emit("click", item, index);
     },
   },
 };
