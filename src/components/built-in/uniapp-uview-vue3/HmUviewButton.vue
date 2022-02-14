@@ -7,6 +7,7 @@
     :disabled="disabled"
     :shape="shape"
     :hair-line="hairLine"
+    :custom-style="customStyle"
     >{{ text }}</u-button
   >
 </template>
@@ -70,13 +71,25 @@ export default {
       type: String,
       default: "按钮",
     },
-
     /**
      * 显示边框
      */
     hairLine: {
       type: Boolean,
-      default: true,
+      default: false,
+    },
+    /**
+     * 按钮颜色
+     */
+    customStyle: {
+      type: Object,
+      default: function () {
+        return {
+          color: "#ffffff",
+          width: "400rpx",
+          backgroundColor: "red",
+        };
+      },
     },
   },
   data() {
