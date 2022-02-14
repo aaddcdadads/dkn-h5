@@ -84,11 +84,7 @@ export default {
     customStyle: {
       type: Object,
       default: function () {
-        return {
-          color: "#ffffff",
-          width: "400rpx",
-          backgroundColor: "red",
-        };
+        return {};
       },
     },
   },
