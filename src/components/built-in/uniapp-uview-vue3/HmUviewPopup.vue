@@ -104,7 +104,7 @@ export default {
     /**
      * 关闭图标位置
      * @type Enum
-     * @options ["top-right", "top-left","bottom-left","bottom-right"];
+     * @options ["top-right", "top-left","bottom-left","bottom-right"]
      */
     closeIconPos: {
       type: String,
