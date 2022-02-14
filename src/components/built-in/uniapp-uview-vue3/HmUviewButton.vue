@@ -79,7 +79,7 @@ export default {
       default: false,
     },
     /**
-     * 按钮颜色
+     * 按钮配置
      */
     customStyle: {
       type: Object,
