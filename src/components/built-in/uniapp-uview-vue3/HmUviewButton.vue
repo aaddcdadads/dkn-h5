@@ -94,7 +94,7 @@ export default {
   methods: {
     onClick(e) {
       //console.log("e", e);
-      this.$emit("click", e);
+      this.$emit("onClick", e);
     },
   },
 };
