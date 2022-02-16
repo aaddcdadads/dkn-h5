@@ -96,7 +96,7 @@ export default {
     // 即使不监听此事件，this.checked此时也会相应的变成true或者false
     onChange(e) {
       //console.log("onChange.checked", this.checked);
-      this.$emit("change", e);
+      this.$emit("onChange", e);
     },
   },
 };

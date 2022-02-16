@@ -137,11 +137,11 @@ export default {
   methods: {
     onConfirm(e) {
       //console.log(e);
-      this.$emit("confirm", e);
+      this.$emit("onConfirm", e);
     },
     onCancel(e) {
       //console.log(e);
-      this.$emit("cancel", e);
+      this.$emit("onCancel", e);
     },
   },
 };

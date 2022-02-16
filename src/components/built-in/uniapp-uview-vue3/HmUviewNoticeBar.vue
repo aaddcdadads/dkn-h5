@@ -97,7 +97,7 @@ export default {
       this.$emit("onClick");
     },
     close() {
-      this.$emit("close");
+      this.$emit("onClose");
     },
     getMore() {
       this.$emit("getMore");

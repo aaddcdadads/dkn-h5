@@ -92,7 +92,7 @@ export default {
   methods: {
     onChange(value) {
       console.log("当前值：", value);
-      this.$emit("change", value);
+      this.$emit("onChange", value);
     },
   },
 };
