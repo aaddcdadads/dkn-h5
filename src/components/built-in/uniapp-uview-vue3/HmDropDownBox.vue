@@ -16,7 +16,7 @@
     <view class="select-class" v-if="show">
       <view
         class="list-item"
-        @click="onList(item, index)"
+        @click.stop="onList(item, index)"
         v-for="(item, index) in list"
         :key="index"
         ><text class="text_list">{{ item.value }}</text></view

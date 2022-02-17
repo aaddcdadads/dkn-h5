@@ -2,8 +2,8 @@
   <view>
     <u-popup
       v-model="cShow"
-      @open="onOpen"
-      @close="onClose"
+      @open.stop="onOpen"
+      @close.stop="onClose"
       :mode="mode"
       :mask="mask"
       :width="width"
@@ -142,11 +142,11 @@ export default {
 
   methods: {
     onOpen() {
-      this.$emit("onOpen");
+      this.$emit("open");
     },
     onClose() {
       this.$emit("update:show", false);
-      this.$emit("onClose");
+      this.$emit("close");
     },
   },
 };

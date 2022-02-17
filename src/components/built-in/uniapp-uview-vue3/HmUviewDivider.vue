@@ -9,7 +9,7 @@
       :height="height"
       :type="type"
       :use-slot="useSlot"
-      @click="onClick"
+      @click.stop="onClick"
       >{{ text }}</u-divider
     >
   </view>
@@ -98,7 +98,7 @@ export default {
   },
   methods: {
     onClick() {
-      this.$emit("onClick");
+      this.$emit("click");
     },
   },
 };

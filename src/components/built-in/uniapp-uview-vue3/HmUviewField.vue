@@ -15,7 +15,7 @@
       :icon-color="iconColor"
       :required="required"
       :disabled="disabled"
-      @input="onInput"
+      @input.stop="onInput"
       ><slot></slot
     ></u-field>
   </view>
@@ -175,7 +175,7 @@ export default {
   methods: {
     onInput: function (e) {
       this.$emit("update:value", e);
-      this.$emit("onInput", e);
+      this.$emit("input", e);
       //console.log("input: ", this.value, this.cValue);
     },
   },

@@ -6,8 +6,8 @@
       :enable="enable"
       :bg-color="bgColor"
       :z-index="zIndex"
-      @fixed="onFixed"
-      @unfixed="onUnfixed"
+      @fixed.stop="onFixed"
+      @unfixed.stop="onUnfixed"
     >
       <!-- 只能有一个根元素 -->
       <!-- <view class="sticky">宝剑锋从磨砺出,梅花香自苦寒来</view> -->
@@ -67,10 +67,10 @@ export default {
   },
   methods: {
     onFixed(e) {
-      this.$emit("onFixed", e);
+      this.$emit("fixed", e);
     },
     onUnfixed(e) {
-      this.$emit("onUnfixed", e);
+      this.$emit("unfixed", e);
     },
   },
 };

@@ -15,8 +15,8 @@
       :effect3dPreviousMargin="effect3dPreviousMargin"
       :bgColor="bgColor"
       :current="current"
-      @click="onClick"
-      @change="onChange"
+      @click.stop="onClick"
+      @change.stop="onChange"
     ></u-swiper>
   </view>
 </template>
@@ -167,10 +167,10 @@ export default {
   },
   watch: {
     width(value) {
-      this.cWidth = this.getCssUnit(this.width);
+      this.cWidth = this.getCssUnit(value);
     },
     padding(value) {
-      this.cPadding = this.getCssUnit(this.padding);
+      this.cPadding = this.getCssUnit(value);
     },
   },
   mounted() {
@@ -179,10 +179,10 @@ export default {
   },
   methods: {
     onClick(e) {
-      this.$emit("onClick", e);
+      this.$emit("click", e);
     },
     onChange(e) {
-      this.$emit("onChange", e);
+      this.$emit("change", e);
     },
     getCssUnit(value) {
       if (isNaN(Number(value))) {

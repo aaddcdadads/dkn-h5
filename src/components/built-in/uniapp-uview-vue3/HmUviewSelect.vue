@@ -12,8 +12,8 @@
       :confirm-text="confirmText"
       :cancel-Text="cancelText"
       :child-name="childName"
-      @confirm="onConfirm"
-      @cancel="onCancel"
+      @confirm.stop="onConfirm"
+      @cancel.stop="onCancel"
     ></u-select>
     <!-- <u-button @click="cShow = true">打开</u-button> -->
   </view>
@@ -137,11 +137,11 @@ export default {
   methods: {
     onConfirm(e) {
       //console.log(e);
-      this.$emit("onConfirm", e);
+      this.$emit("confirm", e);
     },
     onCancel(e) {
       //console.log(e);
-      this.$emit("onCancel", e);
+      this.$emit("cancel", e);
     },
   },
 };

@@ -7,7 +7,11 @@
       :mode="mode"
       @change="calendarChange"
     ></u-calendar>
-    <u-input v-model:value="cValue" @click="click" :placeholder="placeholder" />
+    <u-input
+      v-model:value="cValue"
+      @click.stop="click"
+      :placeholder="placeholder"
+    />
   </view>
 </template>
 

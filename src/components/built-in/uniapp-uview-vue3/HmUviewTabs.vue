@@ -20,7 +20,7 @@
     :item-width="itemWidth"
     :offset="offset"
     class="hm-tabs"
-    @change="onChange"
+    @change.stop="onChange"
   >
     <template #right>
       <slot name="right"></slot>
@@ -210,7 +210,7 @@ export default {
     onChange(val) {
       this.cCurrent = val;
       console.log("u-tabs change", val);
-      this.$emit("onChange", val);
+      this.$emit("change", val);
     },
   },
 };

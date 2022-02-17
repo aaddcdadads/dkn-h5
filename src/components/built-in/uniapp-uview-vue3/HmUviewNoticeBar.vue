@@ -9,8 +9,8 @@
       :color="color"
       :bg-color="bgColor"
       :is-circular="isCircular"
-      @click="onClick"
-      @close="close"
+      @click.stop="onClick"
+      @close.stop="close"
       @getMore="getMore"
     ></u-notice-bar>
   </view>
@@ -94,10 +94,10 @@ export default {
   },
   methods: {
     onClick() {
-      this.$emit("onClick");
+      this.$emit("click");
     },
     close() {
-      this.$emit("onClose");
+      this.$emit("close");
     },
     getMore() {
       this.$emit("getMore");

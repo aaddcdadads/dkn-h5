@@ -9,7 +9,7 @@
     :safeAreaInsetBottom="safeAreaInsetBottom"
     :zIndex="zIndex"
     :cancelText="cancelText"
-    @click="handleClick"
+    @click.stop="handleClick"
   >
     <slot />
   </u-action-sheet>
@@ -126,11 +126,11 @@ export default {
   methods: {
     handleClick(e) {
       console.log("click: ", e);
-      this.$emit("onClick", e);
+      this.$emit("click", e);
     },
     handleClose() {
       console.log("close: ");
-      this.$emit("onClose");
+      this.$emit("close");
     },
   },
 };

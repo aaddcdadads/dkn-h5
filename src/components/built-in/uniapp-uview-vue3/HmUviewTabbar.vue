@@ -12,7 +12,7 @@
       :inactive-color="inactiveColor"
       :mid-button="midButton"
       :border-top="borderTop"
-      @change="onChange"
+      @change.stop="onChange"
     ></u-tabbar>
   </view>
 </template>
@@ -173,7 +173,7 @@ export default {
   methods: {
     onChange(e) {
       console.log("change", e);
-      this.$emit("onChange", e);
+      this.$emit("change", e);
     },
   },
 };

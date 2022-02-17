@@ -7,7 +7,7 @@
     :border-redius="borderRedius"
     :loading-icon="loadingIcon"
     :error-icon="errorIcon"
-    @click="onClick"
+    @click.stop="onClick"
     @load="load"
     @error="error"
   />
@@ -85,7 +85,7 @@ export default {
      */
     onClick(index) {
       console.log("点击图片成功", index);
-      this.$emit("onClick");
+      this.$emit("click");
     },
 
     /**

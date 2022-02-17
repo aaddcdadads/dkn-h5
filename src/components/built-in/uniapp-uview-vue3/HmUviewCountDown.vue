@@ -4,8 +4,8 @@
     :format="format"
     :autoplay="autoplay"
     :millisecond="millisecond"
-    @change="onChange"
-    @finish="onFinish"
+    @change.stop="onChange"
+    @finish.stop="onFinish"
   ></u-count-down>
 </template>
 
@@ -51,10 +51,10 @@ export default {
     // 事件触发，每秒一次
     onChange(e) {
       //console.log("当前时间", e);
-      this.$emit("onChange", e);
+      this.$emit("change", e);
     },
     onFinish() {
-      this.$emit("onFinish");
+      this.$emit("finish");
     },
   },
 };
