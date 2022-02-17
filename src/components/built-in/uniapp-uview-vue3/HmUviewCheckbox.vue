@@ -3,12 +3,13 @@
     {{ title }}：
     <u-checkbox-group @change="checkboxGroupChange">
       <u-checkbox
-        v-for="(item, index) in list"
+        v-for="(item, index) in cList"
         :key="index"
-        @change="checkboxChange"
         v-model="item.checked"
-        :name="item.name"
+        name="checkboxs"
+        :vakue="item.name"
         :disabled="item.disabled"
+        @change="checkboxChange(item, index)"
         >{{ item.name }}</u-checkbox
       >
     </u-checkbox-group>
@@ -35,16 +36,19 @@ export default {
       default: function () {
         return [
           {
+            key: 1,
             name: "123",
             checked: true,
             disabled: false,
           },
           {
+            key: 2,
             name: "321",
             checked: false,
             disabled: false,
           },
           {
+            key: 3,
             name: "44",
             checked: false,
             disabled: false,
@@ -54,13 +58,44 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      cList: [
+        {
+            key: 1,
+            name: "123",
+            checked: true,
+            disabled: false,
+          },
+          {
+            key: 2,
+            name: "321",
+            checked: false,
+            disabled: false,
+          },
+          {
+            key: 3,
+            name: "44",
+            checked: false,
+            disabled: false,
+          },
+      ],
+    };
+  },
+  watch: {
+    list(value) {
+      this.cList = value;
+    },
+  },
+  mounted() {
+    this.cList = this.list;
   },
   methods: {
     // 选中某个复选框时，由checkbox时触发
-    checkboxChange(e) {
-      console.log("1", e);
+    checkboxChange(e, index) {
       this.$emit("checkboxChange", e);
+      console.log("0", e);
+      this.cList[index].checked = !e.checked;
+      console.log("1", e);
     },
     // 选中任一checkbox时，由checkbox-group触发
     checkboxGroupChange(e) {
