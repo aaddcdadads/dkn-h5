@@ -7,7 +7,7 @@
         :key="index"
         v-model="item.checked"
         name="checkboxs"
-        :vakue="item.name"
+        :value="item.name"
         :disabled="item.disabled"
         @change="checkboxChange(item, index)"
         >{{ item.name }}</u-checkbox
