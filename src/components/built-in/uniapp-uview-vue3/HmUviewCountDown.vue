@@ -30,7 +30,7 @@ export default {
     },
 
     /**
-     * 自动倒计时
+     * 展示毫秒
      */
     millisecond: {
       type: Boolean,
