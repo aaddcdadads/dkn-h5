@@ -179,10 +179,10 @@ export default {
   },
   methods: {
     onClick(e) {
-      this.$emit("click", e);
+      this.$emit("onClick", e);
     },
     onChange(e) {
-      this.$emit("change", e);
+      this.$emit("onChange", e);
     },
     getCssUnit(value) {
       if (isNaN(Number(value))) {

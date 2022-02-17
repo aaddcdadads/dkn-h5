@@ -1,7 +1,7 @@
 <template>
   <view class="field-class">
     <u-field
-      v-model:value="cValue"
+      v-model="cValue"
       :label="label"
       :placeholder="placeholder"
       :icon="icon"
@@ -150,27 +150,33 @@ export default {
     },
   },
   computed: {
-    cValue: {
-      get() {
-        return this.value;
-      },
-      set(val) {
-        this.$emit("changeValue", val);
-      },
-    },
+    // cValue: {
+    //   get() {
+    //     return this.value;
+    //   },
+    //   set(val) {
+    //     this.$emit("changeValue", val);
+    //   },
+    // },
   },
   data() {
-    return {};
+    return {
+      cValue: "",
+    };
+  },
+  watch: {
+    value(val) {
+      this.cValue = val;
+    },
   },
   mounted() {
-    // this.cValue = this.value;
+    this.cValue = this.value;
   },
   methods: {
     onInput: function (e) {
-      console.log("input: ", e);
-
-      this.$emit("update:value", this.cValue);
+      this.$emit("update:value", e);
       this.$emit("onInput", e);
+      //console.log("input: ", this.value, this.cValue);
     },
   },
 };

@@ -74,7 +74,7 @@ export default {
   methods: {
     onClick(e) {
       console.log("点击图标", e);
-      this.$emit("click");
+      this.$emit("onClick");
     },
   },
 };

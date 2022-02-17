@@ -126,11 +126,11 @@ export default {
   methods: {
     handleClick(e) {
       console.log("click: ", e);
-      this.$emit("click", e);
+      this.$emit("onClick", e);
     },
     handleClose() {
       console.log("close: ");
-      this.$emit("close");
+      this.$emit("onClose");
     },
   },
 };

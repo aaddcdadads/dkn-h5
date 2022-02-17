@@ -9,7 +9,7 @@
       :borderTop="true"
       bg-color="#ffefef"
       iconSize="20px"
-      @e="onClick"
+      @click="onClick"
     ></hm-uview-cell>
   </view>
 </template>
@@ -60,9 +60,8 @@ export default {
     };
   },
   methods: {
-    onClick(e) {
-      console.log("e", e);
-      this.$emit("e", e);
+    onClick(item, index) {
+      console.log("e", item, index);
     },
   },
 };

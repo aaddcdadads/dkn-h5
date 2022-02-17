@@ -2,8 +2,8 @@
   <view>
     <u-cell-group :border="isBorder">
       <u-cell-item
-        v-for="(item, key) in list"
-        :key="key"
+        v-for="(item, index) in list"
+        :key="index"
         :title="item.title"
         :icon="item.icon"
         :label="item.label"
@@ -15,15 +15,13 @@
         :border-top="borderTop || item.borderTop"
         :bg-color="bgColor"
         :icon-size="iconSize"
-        @click="onClick(item, key)"
+        @click="onClick(item, index)"
       ></u-cell-item>
     </u-cell-group>
   </view>
 </template>
 
 <script>
-// import uCellItem from "uview-ui/components/u-cell-item/u-cell-item";
-// import uCellGroup from "uview-ui/components/u-cell-group/u-cell-group";
 export default {
   components: {},
   name: "HmUviewCell",
@@ -114,9 +112,9 @@ export default {
     return {};
   },
   methods: {
-    onClick(e, index) {
-      console.log("click", e, index);
-      this.$emit("click", e, index);
+    onClick(item, index) {
+      console.log("click", item, index);
+      this.$emit("onClick", item, index);
     },
   },
 };

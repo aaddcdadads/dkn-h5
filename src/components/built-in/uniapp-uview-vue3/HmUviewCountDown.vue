@@ -153,7 +153,7 @@ export default {
     // 事件触发，每秒一次
     onChange(e) {
       console.log("当前时间", e);
-      this.$emit("change", e);
+      this.$emit("onChange", e);
     },
   },
 };

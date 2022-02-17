@@ -27,11 +27,12 @@ export default {
   },
   methods: {
     click() {
-      console.log("value2", this.cValue2);
+      //console.log("value2", this.cValue2);
     },
 
     onInput1(e) {
       console.log("onInput1", e);
+      console.log("value2", this.cValue2);
     },
   },
 };

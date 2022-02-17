@@ -8,10 +8,11 @@
       :mask="mask"
       :width="width"
       :height="height"
+      :negative-top="negativeTop"
       :mask-close-able="maskCloseAble"
       :border-radius="borderRadius"
       :closeable="closeable"
-      :closeIcon="closeIcon"
+      :close-icon="closeIcon"
       :close-icon-pos="closeIconPos"
       :close-icon-color="closeIconColor"
       :close-icon-size="closeIconSize"
@@ -24,18 +25,14 @@
 <script>
 export default {
   name: "HmUviewPopup",
-  data() {
-    return {
-      cShow: false,
-    };
-  },
   props: {
     /**
      * 是否弹出
+     * @v-model
      */
     show: {
       type: Boolean,
-      default: false,
+      default: true,
     },
 
     /**
@@ -45,7 +42,7 @@ export default {
      */
     mode: {
       type: String,
-      default: "left",
+      default: "center",
     },
     /**
      * 是否显示遮罩
@@ -67,6 +64,13 @@ export default {
     height: {
       type: String,
       default: "40%",
+    },
+    /**
+     * 中部弹出偏移
+     */
+    negativeTop: {
+      type: String,
+      default: "0",
     },
     /**
      * 点击遮罩关闭
@@ -100,7 +104,7 @@ export default {
     /**
      * 关闭图标位置
      * @type Enum
-     * @options ["top-right", "top-left","bottom-left","bottom-right"];
+     * @options ["top-right", "top-left","bottom-left","bottom-right"]
      */
     closeIconPos: {
       type: String,
@@ -122,9 +126,14 @@ export default {
       default: "15px",
     },
   },
+  data() {
+    return {
+      cShow: false,
+    };
+  },
   watch: {
-    show(old) {
-      this.cShow = old;
+    show(value) {
+      this.cShow = value;
     },
   },
   mounted() {
@@ -133,10 +142,11 @@ export default {
 
   methods: {
     onOpen() {
-      this.$emit("open");
+      this.$emit("onOpen");
     },
     onClose() {
-      this.$emit("close");
+      this.$emit("update:show", false);
+      this.$emit("onClose");
     },
   },
 };
