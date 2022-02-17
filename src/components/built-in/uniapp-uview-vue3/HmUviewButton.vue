@@ -1,6 +1,6 @@
 <template>
   <u-button
-    @click="onClick"
+    @click.stop="onClick"
     :size="size"
     :type="type"
     :plain="plain"
@@ -94,7 +94,7 @@ export default {
   methods: {
     onClick(e) {
       //console.log("e", e);
-      this.$emit("onClick", e);
+      this.$emit("click", e);
     },
   },
 };
