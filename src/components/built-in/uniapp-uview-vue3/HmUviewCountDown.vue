@@ -1,28 +1,15 @@
 <template>
   <u-count-down
     :timestamp="timestamp"
+    :format="format"
     :autoplay="autoplay"
-    :separator="separator"
-    :separator-size="separatorSize"
-    :separator-color="separatorColor"
-    :font-size="fontSize"
-    :color="color"
-    :bg-color="bgColor"
-    :show-border="showBorder"
-    :border-color="borderColor"
-    :height="height"
-    :show-days="showDays"
-    :hide-zero-day="showConfirmbar"
-    :show-hours="showHours"
-    :show-minutes="showMinutes"
-    :show-seconds="showSeconds"
+    :millisecond="millisecond"
     @change="onChange"
+    @finish="onFinish"
   ></u-count-down>
 </template>
 
 <script>
-// import uCountDown from "uview-ui/components/u-count-down/u-count-down";
-
 export default {
   components: {},
   name: "HmUviewCountDown",
@@ -32,7 +19,7 @@ export default {
      */
     timestamp: {
       type: Number,
-      default: 86400,
+      default: 60 * 1000,
     },
     /**
      * 自动倒计时
@@ -41,109 +28,20 @@ export default {
       type: Boolean,
       default: true,
     },
+
     /**
-     * 分隔符
-     * @type Enum
-     * @default colon
-     * @options ["colon", "zh"]
+     * 自动倒计时
      */
-    separator: {
-      type: String,
-    },
-    /**
-     * 分隔符大小
-     */
-    separatorSize: {
-      type: Number,
-      default: 30,
-    },
-    /**
-     * 分隔符颜色
-     * @type Color
-     */
-    separatorColor: {
-      type: String,
-      default: "#303133",
-    },
-    /**
-     * 倒计时大小
-     */
-    fontSize: {
-      type: Number,
-      default: 30,
-    },
-    /**
-     * 倒计时颜色
-     * @type Color
-     */
-    color: {
-      type: String,
-      default: "#303133",
-    },
-    /**
-     * 倒计时背景色
-     * @type Color
-     */
-    bgColor: {
-      type: String,
-      default: "#ffffff",
-    },
-    /**
-     * 边框
-     */
-    showBorder: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * 边框颜色
-     * @type Color
-     */
-    borderColor: {
-      type: String,
-      default: "#303133",
-    },
-    /**
-     * 边框大小
-     */
-    height: {
-      type: Number,
-      default: 50,
-    },
-    /**
-     * 是否显示天
-     */
-    showDays: {
+    millisecond: {
       type: Boolean,
       default: true,
     },
     /**
-     * 天为0时隐藏
+     * 时间格式
      */
-    showConfirmbar: {
-      type: Boolean,
-      default: true,
-    },
-    /**
-     * 是否显示时
-     */
-    showHours: {
-      type: Boolean,
-      default: true,
-    },
-    /**
-     * 是否显示分
-     */
-    showMinutes: {
-      type: Boolean,
-      default: true,
-    },
-    /**
-     * 是否显示秒
-     */
-    showSeconds: {
-      type: Boolean,
-      default: true,
+    format: {
+      type: String,
+      default: "HH:mm:ss:SSS",
     },
   },
   data() {
@@ -152,8 +50,11 @@ export default {
   methods: {
     // 事件触发，每秒一次
     onChange(e) {
-      console.log("当前时间", e);
+      //console.log("当前时间", e);
       this.$emit("onChange", e);
+    },
+    onFinish() {
+      this.$emit("onFinish");
     },
   },
 };

@@ -4,21 +4,11 @@
     <hm-uview-count-down></hm-uview-count-down>
     <hm-uview-count-down
       :timestamp="86400"
-      :autoplay="true"
-      separator="zh"
-      :separatorSize="50"
-      separatorColor="#639cff"
-      :fontSize="50"
-      color="#639cff"
-      bgColor="#c3d9ff"
-      :showBorder="true"
-      borderColor="#639cff"
-      :height="70"
-      :showDays="true"
-      :showConfirmbar="true"
-      :showHours="true"
-      :showMinutes="true"
-      :showSeconds="true"
+      format="mm:ss"
+      :autoplay="false"
+      :millisecond="false"
+      @change="onChange"
+      @finish="onFinish"
     ></hm-uview-count-down>
   </view>
 </template>
@@ -31,7 +21,14 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    onChange(e) {
+      console.log("e", e);
+    },
+    onFinish() {
+      console.log("essss");
+    },
+  },
 };
 </script>
 
