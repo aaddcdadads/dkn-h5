@@ -19,7 +19,7 @@ export default {
      */
     timestamp: {
       type: Number,
-      default: 60 * 1000,
+      default: 60000,
     },
     /**
      * 自动倒计时
