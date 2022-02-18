@@ -20,7 +20,7 @@
     :item-width="itemWidth"
     :offset="offset"
     class="hm-tabs"
-    @change.stop="onChange"
+    @change="onChange"
   >
     <template #right>
       <slot name="right"></slot>
