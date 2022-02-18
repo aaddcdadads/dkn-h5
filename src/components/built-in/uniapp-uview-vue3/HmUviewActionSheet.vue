@@ -4,12 +4,13 @@
     :list="list"
     :tips="tips"
     :cancelBtn="cancelBtn"
-    :borderRadius="borderRadius"
-    :maskCloseAble="maskCloseAble"
-    :safeAreaInsetBottom="safeAreaInsetBottom"
-    :zIndex="zIndex"
-    :cancelText="cancelText"
-    @click.stop="handleClick"
+    :border-radius="borderRadius"
+    :mask-close-able="maskCloseAble"
+    :safe-area-inset-bottom="safeAreaInsetBottom"
+    :z-index="zIndex"
+    :cancel-text="cancelText"
+    @click="handleClick"
+    @close.stop="handleClose"
   >
     <slot />
   </u-action-sheet>
@@ -57,10 +58,11 @@ export default {
     },
     /**
      * 是否可见
+     * @v-model
      */
     visible: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     /**
      * 取消按钮文字
@@ -112,7 +114,7 @@ export default {
   },
   watch: {
     visible(value) {
-      this.cVisible = !!value;
+      this.cVisible = value;
     },
     cVisible(value) {
       if (value == false) this.handleClose();
@@ -121,15 +123,16 @@ export default {
   computed: {},
   mounted() {
     let self = this;
-    self.cVisible = !!self.visible;
+    self.cVisible = self.visible;
   },
   methods: {
     handleClick(e) {
-      console.log("click: ", e);
-      this.$emit("click", e);
+      //console.log("click: ", e);
+      this.$emit("lsitClick", e);
     },
     handleClose() {
-      console.log("close: ");
+      //console.log("close: ", this.cVisible, this.visible);
+      this.$emit("update:visible", this.cVisible);
       this.$emit("close");
     },
   },
