@@ -10,7 +10,6 @@
     :z-index="zIndex"
     :cancel-text="cancelText"
     @click="handleClick"
-    @close.stop="handleClose"
   >
     <slot />
   </u-action-sheet>
@@ -127,11 +126,11 @@ export default {
   },
   methods: {
     handleClick(e) {
-      //console.log("click: ", e);
+      console.log("click: ", e);
       this.$emit("lsitClick", e);
     },
     handleClose() {
-      //console.log("close: ", this.cVisible, this.visible);
+      console.log("close: ", this.cVisible, this.visible);
       this.$emit("update:visible", this.cVisible);
       this.$emit("close");
     },
