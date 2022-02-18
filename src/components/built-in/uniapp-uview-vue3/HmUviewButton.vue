@@ -1,6 +1,5 @@
 <template>
   <u-button
-    @click.stop="onClick"
     :size="size"
     :type="type"
     :plain="plain"

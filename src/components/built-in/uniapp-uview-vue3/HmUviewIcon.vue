@@ -7,7 +7,6 @@
     :label="label"
     :label-size="labelSize"
     :label-color="labelColor"
-    @click="onClick"
   ></u-icon>
 </template>
 
@@ -73,7 +72,7 @@ export default {
   },
   methods: {
     onClick(e) {
-      console.log("点击图标", e);
+      //console.log("点击图标", e);
       this.$emit("click");
     },
   },
