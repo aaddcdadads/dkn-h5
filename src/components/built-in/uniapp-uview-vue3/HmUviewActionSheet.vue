@@ -131,7 +131,7 @@ export default {
     },
     handleClose() {
       console.log("close: ", this.cVisible, this.visible);
-      this.$emit("update:visible", this.cVisible);
+      this.$emit("update:visible", false);
       this.$emit("close");
     },
   },
