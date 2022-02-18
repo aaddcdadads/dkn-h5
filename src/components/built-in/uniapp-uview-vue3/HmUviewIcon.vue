@@ -7,7 +7,7 @@
     :label="label"
     :label-size="labelSize"
     :label-color="labelColor"
-    @click.stop="onClick"
+    @click="onClick"
   ></u-icon>
 </template>
 
