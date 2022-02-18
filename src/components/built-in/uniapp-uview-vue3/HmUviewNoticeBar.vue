@@ -9,8 +9,8 @@
       :color="color"
       :bg-color="bgColor"
       :is-circular="isCircular"
-      @click.stop="onClick"
-      @close.stop="close"
+      @click="onClick"
+      @close="close"
       @getMore="getMore"
     ></u-notice-bar>
   </view>

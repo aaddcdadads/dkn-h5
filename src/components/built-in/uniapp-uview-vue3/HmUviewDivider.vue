@@ -9,7 +9,7 @@
       :height="height"
       :type="type"
       :use-slot="useSlot"
-      @click.stop="onClick"
+      @click="onClick"
       >{{ text }}</u-divider
     >
   </view>

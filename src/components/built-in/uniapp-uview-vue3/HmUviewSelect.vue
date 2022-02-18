@@ -12,8 +12,8 @@
       :confirm-text="confirmText"
       :cancel-Text="cancelText"
       :child-name="childName"
-      @confirm.stop="onConfirm"
-      @cancel.stop="onCancel"
+      @confirm="onConfirm"
+      @cancel="onCancel"
     ></u-select>
     <!-- <u-button @click="cShow = true">打开</u-button> -->
   </view>

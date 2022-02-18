@@ -2,8 +2,8 @@
   <view>
     <u-popup
       v-model="cShow"
-      @open.stop="onOpen"
-      @close.stop="onClose"
+      @open="onOpen"
+      @close="onClose"
       :mode="mode"
       :mask="mask"
       :width="width"

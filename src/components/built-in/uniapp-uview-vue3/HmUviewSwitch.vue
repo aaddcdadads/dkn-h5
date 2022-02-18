@@ -3,7 +3,7 @@
     <view>{{ title }}</view>
     <u-switch
       v-model="cChecked"
-      @change.stop="onChange"
+      @change="onChange"
       :loading="loading"
       :size="size"
       :disabled="disabled"

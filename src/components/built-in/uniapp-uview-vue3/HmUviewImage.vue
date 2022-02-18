@@ -7,7 +7,7 @@
     :border-redius="borderRedius"
     :loading-icon="loadingIcon"
     :error-icon="errorIcon"
-    @click.stop="onClick"
+    @click="onClick"
     @load="load"
     @error="error"
   />

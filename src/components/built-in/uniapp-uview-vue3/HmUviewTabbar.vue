@@ -12,7 +12,7 @@
       :inactive-color="inactiveColor"
       :mid-button="midButton"
       :border-top="borderTop"
-      @change.stop="onChange"
+      @change="onChange"
     ></u-tabbar>
   </view>
 </template>

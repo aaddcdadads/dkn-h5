@@ -10,7 +10,7 @@
       :clearabled="clearabled"
       :show-action="showAction"
       :input-align="inputAlign"
-      @change.stop="onChange"
+      @change="onChange"
     ></u-search>
   </view>
 </template>

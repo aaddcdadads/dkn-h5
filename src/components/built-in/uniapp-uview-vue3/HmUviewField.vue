@@ -15,7 +15,7 @@
       :icon-color="iconColor"
       :required="required"
       :disabled="disabled"
-      @input.stop="onInput"
+      @input="onInput"
       ><slot></slot
     ></u-field>
   </view>

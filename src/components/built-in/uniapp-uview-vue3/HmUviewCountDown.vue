@@ -4,8 +4,8 @@
     :format="format"
     :autoplay="autoplay"
     :millisecond="millisecond"
-    @change.stop="onChange"
-    @finish.stop="onFinish"
+    @change="onChange"
+    @finish="onFinish"
   ></u-count-down>
 </template>
 

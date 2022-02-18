@@ -15,8 +15,8 @@
       :effect3dPreviousMargin="effect3dPreviousMargin"
       :bgColor="bgColor"
       :current="current"
-      @click.stop="onClick"
-      @change.stop="onChange"
+      @click="onClick"
+      @change="onChange"
     ></u-swiper>
   </view>
 </template>

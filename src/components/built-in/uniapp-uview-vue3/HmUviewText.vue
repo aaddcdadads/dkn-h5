@@ -1,6 +1,6 @@
 <template>
   <view class="hm-bg-text">
-    <text class="font1" @click.stop="onClick">{{ text }}</text>
+    <text class="font1" @click="onClick">{{ text }}</text>
   </view>
 </template>
 

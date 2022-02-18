@@ -6,8 +6,8 @@
       :enable="enable"
       :bg-color="bgColor"
       :z-index="zIndex"
-      @fixed.stop="onFixed"
-      @unfixed.stop="onUnfixed"
+      @fixed="onFixed"
+      @unfixed="onUnfixed"
     >
       <!-- 只能有一个根元素 -->
       <!-- <view class="sticky">宝剑锋从磨砺出,梅花香自苦寒来</view> -->

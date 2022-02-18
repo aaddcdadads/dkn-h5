@@ -9,8 +9,8 @@
       :options="cOptions"
       :btn-width="btnWidth"
       :bg-color="bgColor"
-      @click.stop="click"
-      @open.stop="open"
+      @click="click"
+      @open="open"
       class="u-swipeAction"
     >
       <view class="item u-border-bottom">
