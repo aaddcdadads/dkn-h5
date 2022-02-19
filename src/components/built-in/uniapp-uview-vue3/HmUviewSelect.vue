@@ -54,6 +54,7 @@ export default {
 
     /**
      * 是否显示
+     * @v-model
      */
     show: {
       type: Boolean,
@@ -138,11 +139,11 @@ export default {
   },
   methods: {
     onConfirm(e) {
-      //this.$emit("update:show", this.cShow);
+      this.$emit("update:show", this.cShow);
       this.$emit("confirm", e);
     },
     onCancel(e) {
-      //this.$emit("update:show", this.cShow);
+      this.$emit("update:show", this.cShow);
       this.$emit("cancel", e);
     },
   },
