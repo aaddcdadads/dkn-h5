@@ -1,9 +1,9 @@
 <template>
   <view>
-    <hm-uview-picker :show="show1"></hm-uview-picker>
-    <u-button @click="show1 = !show1">打开</u-button>
+    <hm-uview-picker v-model:show="show1"></hm-uview-picker>
+    <u-button @click="show1 = true">打开</u-button>
     <hm-uview-picker
-      :show="show2"
+      v-model:show="show2"
       mode="region"
       title="地区"
       confirmText="确定"
