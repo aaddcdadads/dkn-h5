@@ -1,8 +1,12 @@
 <template>
   <view>
-    <Hm-uview-select></Hm-uview-select>
     <Hm-uview-select
-      :show="true"
+      v-model:show="show1"
+      @confirm="confirm"
+      @cancel="cancel"
+    ></Hm-uview-select>
+    <Hm-uview-select
+      :show="show2"
       :list="cList"
       mode="mutil-column-auto"
       cancelColor="#606266"
@@ -26,6 +30,8 @@ export default {
   components: { HmUviewSelect },
   data() {
     return {
+      show1: true,
+      show2: false,
       cList: [
         {
           value: 1,
