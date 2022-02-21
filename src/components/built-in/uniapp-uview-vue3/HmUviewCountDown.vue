@@ -5,8 +5,6 @@
     :format="format"
     :autoStart="autoStart"
     :millisecond="millisecond"
-    @change="onChange"
-    @finish="onFinish"
   ></u-count-down>
 </template>
 

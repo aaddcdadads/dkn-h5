@@ -6,7 +6,7 @@
       :autoStart="false"
     ></hm-uview-count-down>
     <hm-uview-count-down
-      :timestamp="86400"
+      :timestamp="5400"
       format="mm:ss"
       :autoStart="autoStart"
       :millisecond="false"
@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       autoStart: false,
-      countStatus1: "start",
+      countStatus1: "stop",
       countStatus2: "stop",
     };
   },
