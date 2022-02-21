@@ -1,5 +1,6 @@
 <template>
   <u-count-down
+    ref="countDown"
     :timestamp="timestamp"
     :format="format"
     :autoStart="autoStart"
@@ -43,9 +44,27 @@ export default {
       type: String,
       default: "HH:mm:ss:SSS",
     },
+    /**
+     * 状态
+     */
+    countStatus: {
+      type: String,
+      default: "stop",
+    },
   },
   data() {
     return {};
+  },
+  mounted() {},
+  watch: {
+    countStatus(val) {
+      if (val == "start") {
+        this.$refs.countDown.start();
+      }
+      if (val == "stop") {
+        this.$refs.countDown.pause();
+      }
+    },
   },
   methods: {
     // 事件触发，每秒一次
