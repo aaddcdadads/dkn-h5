@@ -1,24 +1,26 @@
 <template>
-  <view class="field-class">
-    <u-field
-      v-model="cValue"
-      :label="label"
-      :placeholder="placeholder"
-      :icon="icon"
-      :right-icon="rightIcon"
-      :type="type"
-      :clearable="clearable"
-      :border-top="borderTop"
-      :border-bottom="borderBottom"
-      :label-width="labelWidth"
-      :input-align="inputAlign"
-      :icon-color="iconColor"
-      :required="required"
-      :disabled="disabled"
-      @input="onInput"
-      ><slot></slot
-    ></u-field>
-  </view>
+  <u-field
+    v-model="cValue"
+    :label="label"
+    :placeholder="placeholder"
+    :icon="icon"
+    :right-icon="rightIcon"
+    :type="type"
+    :clearable="clearable"
+    :clear-size="clearSize"
+    :border-top="borderTop"
+    :border-bottom="borderBottom"
+    :label-width="labelWidth"
+    :label-align="labelAlign"
+    :input-align="inputAlign"
+    :maxlength="maxlength"
+    :icon-color="iconColor"
+    :required="required"
+    :focus="focus"
+    :disabled="disabled"
+    @input="onInput"
+    ><slot></slot
+  ></u-field>
 </template>
 
 <script>
@@ -40,6 +42,15 @@ export default {
       type: String,
     },
     /**
+     * 输入框类型
+     * @type Enum
+     * @options ["text", "textarea"]
+     */
+    type: {
+      type: String,
+      default: "text",
+    },
+    /**
      * 标题
      */
     label: {
@@ -53,13 +64,19 @@ export default {
       type: String,
       default: "请输入",
     },
-
+    /**
+     * 标题宽度
+     */
+    labelWidth: {
+      type: String,
+      default: "130",
+    },
     /**
      * 标题对齐方式
      * @type Enum
      * @options ["left", "center", "right"]
      */
-    labelWidth: {
+    labelAlign: {
       type: String,
       default: "left",
     },
@@ -71,6 +88,13 @@ export default {
     inputAlign: {
       type: String,
       default: "left",
+    },
+    /**
+     * 输入最大长度
+     */
+    maxlength: {
+      type: String,
+      default: "140",
     },
     /**
      * 前缀图标
@@ -104,6 +128,13 @@ export default {
       default: false,
     },
     /**
+     * 清除图标大小
+     */
+    clearSize: {
+      type: String,
+      default: "30",
+    },
+    /**
      * 上边框
      */
     borderTop: {
@@ -132,6 +163,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    /**
+     * 自动获得焦点
+     */
+    focus: {
+      type: Boolean,
+      default: false,
+    },
+
     /**
      * 不可输入
      */
@@ -175,7 +214,7 @@ export default {
   methods: {
     onInput: function (e) {
       this.$emit("update:value", e);
-      this.$emit("onInput", e);
+      this.$emit("input", e);
       //console.log("input: ", this.value, this.cValue);
     },
   },

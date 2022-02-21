@@ -114,7 +114,7 @@ export default {
   methods: {
     onClick(item, index) {
       console.log("click", item, index);
-      this.$emit("onClick", item, index);
+      this.$emit("click", item, index);
     },
   },
 };

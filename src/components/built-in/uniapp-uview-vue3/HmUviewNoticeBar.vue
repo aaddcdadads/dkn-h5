@@ -94,10 +94,10 @@ export default {
   },
   methods: {
     onClick() {
-      this.$emit("onClick");
+      this.$emit("click");
     },
     close() {
-      this.$emit("onClose");
+      this.$emit("close");
     },
     getMore() {
       this.$emit("getMore");

@@ -13,8 +13,8 @@
       :start-year="startYear"
       :end-year="endYear"
       :show-time-tag="showTimeTag"
-      @confirm="confirm"
-      @cancel="cancel"
+      @confirm="onConfirm"
+      @cancel="onCancel"
     ></u-picker>
     <!-- <u-button @click="cShow = !cShow">打开</u-button> -->
   </view>
@@ -27,6 +27,13 @@ export default {
   components: {},
   name: "HmUviewPicker",
   props: {
+    /**
+     * 是否显示
+     */
+    show: {
+      type: Boolean,
+      default: true,
+    },
     /**
      * 类型
      * @type Enum
@@ -123,13 +130,6 @@ export default {
       type: Boolean,
       default: true,
     },
-    /**
-     * 时间中文提示
-     */
-    show: {
-      type: Boolean,
-      default: false,
-    },
   },
   data() {
     return {
@@ -140,19 +140,20 @@ export default {
     show(val) {
       this.cShow = val;
     },
+    cShow(value) {
+      if (value == false) this.onCancel();
+    },
   },
   mounted() {
     this.cShow = this.show;
   },
   methods: {
-    confirm(e) {
-      console.log("confirm", e);
-      this.cShow = false;
+    onConfirm(e) {
       this.$emit("confirm", e);
     },
-    cancel(e) {
-      console.log("cancel", e);
+    onCancel(e) {
       this.cShow = false;
+      this.$emit("update:show", this.cShow);
       this.$emit("cancel", e);
     },
   },

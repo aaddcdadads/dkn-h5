@@ -10,7 +10,7 @@
       :gutter="gutter"
       :active-icon="activeIcon"
       :inactive-icon="inactiveIcon"
-      @change="onChange"
+      @change.stop="onChange"
     />
   </view>
 </template>
@@ -92,7 +92,7 @@ export default {
   methods: {
     onChange(value) {
       console.log("当前值：", value);
-      this.$emit("onChange", value);
+      this.$emit("change", value);
     },
   },
 };

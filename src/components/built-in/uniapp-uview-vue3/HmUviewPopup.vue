@@ -142,11 +142,11 @@ export default {
 
   methods: {
     onOpen() {
-      this.$emit("onOpen");
+      this.$emit("open");
     },
     onClose() {
       this.$emit("update:show", false);
-      this.$emit("onClose");
+      this.$emit("close");
     },
   },
 };

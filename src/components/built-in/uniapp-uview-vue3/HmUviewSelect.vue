@@ -15,7 +15,6 @@
       @confirm="onConfirm"
       @cancel="onCancel"
     ></u-select>
-    <!-- <u-button @click="cShow = true">打开</u-button> -->
   </view>
 </template>
 
@@ -55,6 +54,7 @@ export default {
 
     /**
      * 是否显示
+     * @v-model
      */
     show: {
       type: Boolean,
@@ -130,18 +130,21 @@ export default {
     show(value) {
       this.cShow = value;
     },
+    cShow(value) {
+      if (value == false) this.onCancel();
+    },
   },
   mounted() {
     this.cShow = this.show;
   },
   methods: {
     onConfirm(e) {
-      //console.log(e);
-      this.$emit("onConfirm", e);
+      this.$emit("update:show", this.cShow);
+      this.$emit("confirm", e);
     },
     onCancel(e) {
-      //console.log(e);
-      this.$emit("onCancel", e);
+      this.$emit("update:show", this.cShow);
+      this.$emit("cancel", e);
     },
   },
 };

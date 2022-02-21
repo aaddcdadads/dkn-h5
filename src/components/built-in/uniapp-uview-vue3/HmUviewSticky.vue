@@ -67,10 +67,10 @@ export default {
   },
   methods: {
     onFixed(e) {
-      this.$emit("onFixed", e);
+      this.$emit("fixed", e);
     },
     onUnfixed(e) {
-      this.$emit("onUnfixed", e);
+      this.$emit("unfixed", e);
     },
   },
 };

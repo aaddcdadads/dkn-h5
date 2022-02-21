@@ -173,7 +173,7 @@ export default {
   methods: {
     onChange(e) {
       console.log("change", e);
-      this.$emit("onChange", e);
+      this.$emit("change", e);
     },
   },
 };

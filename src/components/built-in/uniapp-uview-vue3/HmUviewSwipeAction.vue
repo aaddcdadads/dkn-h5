@@ -163,7 +163,7 @@ export default {
   methods: {
     click(index, index1) {
       //console.log("haha", index, index1);
-      this.$emit("onClick", index, index1);
+      this.$emit("click", index, index1);
     },
     // 如果打开一个的时候，不需要关闭其他，则无需实现本方法
     open(index) {
@@ -174,7 +174,7 @@ export default {
         if (index != idx) this.cList[idx].show = false;
       });
       //console.log("open", index);
-      this.$emit("onOpen", index);
+      this.$emit("open", index);
     },
     getCssUnit(value) {
       if (isNaN(Number(value))) {

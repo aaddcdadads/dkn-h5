@@ -130,7 +130,7 @@ export default {
       console.log(this.cValue, "e");
       // this.value = e;
       this.$emit("update:value", this.cValue);
-      this.$emit("onChange", e);
+      this.$emit("change", e);
     },
   },
 };

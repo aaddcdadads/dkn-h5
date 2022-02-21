@@ -98,7 +98,7 @@ export default {
   },
   methods: {
     onClick() {
-      this.$emit("onClick");
+      this.$emit("click");
     },
   },
 };
