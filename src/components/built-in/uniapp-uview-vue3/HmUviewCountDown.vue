@@ -2,7 +2,7 @@
   <u-count-down
     :timestamp="timestamp"
     :format="format"
-    :autoplay="autoplay"
+    :autoStart="autoStart"
     :millisecond="millisecond"
     @change="onChange"
     @finish="onFinish"
@@ -24,9 +24,9 @@ export default {
     /**
      * 自动倒计时
      */
-    autoplay: {
+    autoStart: {
       type: Boolean,
-      default: true,
+      default: false,
     },
 
     /**
