@@ -27,7 +27,7 @@ export default {
      */
     autoStart: {
       type: Boolean,
-      default: false,
+      default: true,
     },
 
     /**
@@ -46,6 +46,8 @@ export default {
     },
     /**
      * 状态
+     * @type Enum
+     * @options ["start", "stop"]
      */
     countStatus: {
       type: String,

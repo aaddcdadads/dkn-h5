@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       autoStart: false,
-      countStatus1: "stop",
+      countStatus1: "start",
       countStatus2: "stop",
     };
   },
