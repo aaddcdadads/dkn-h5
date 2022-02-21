@@ -3,14 +3,16 @@
   <view>
     <hm-uview-count-down></hm-uview-count-down>
     <hm-uview-count-down
+      ref="countDown"
       :timestamp="86400"
       format="mm:ss"
-      :autoplay="false"
+      :autoStart="autoStart"
       :millisecond="false"
       @change="onChange"
       @finish="onFinish"
     ></hm-uview-count-down>
   </view>
+  <u-button @click="onClick">开始</u-button>
 </template>
 
 <script>
@@ -19,7 +21,9 @@ export default {
   name: "TestHmUviewCountDown",
   components: { HmUviewCountDown },
   data() {
-    return {};
+    return {
+      autoStart: false,
+    };
   },
   methods: {
     onChange(e) {
@@ -27,6 +31,11 @@ export default {
     },
     onFinish() {
       console.log("essss");
+    },
+    onClick() {
+      //this.autoStart = true;
+      this.$refs.countDown.start();
+      console.log("开始倒计时");
     },
   },
 };
