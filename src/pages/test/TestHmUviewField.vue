@@ -7,6 +7,7 @@
       label="标题123"
       placeholder="输入"
       icon="level"
+      labelWidth="160"
       rightIcon="woman"
       type="textarea"
       @onInput="onInput1"
