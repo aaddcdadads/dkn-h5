@@ -1,6 +1,6 @@
 <template >
   <view>
-    <view class="code"></view>
+    <view class="code">请打开扫码</view>
   </view>
 </template>
 
@@ -9,11 +9,11 @@ export default {
   name: "HmScanCode",
   props: {
     /**
-     * 是否打开
+     * 是否可见
      */
     show: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
   data() {
@@ -23,23 +23,32 @@ export default {
   onload() {},
   mounted() {
     let self = this;
-    setTimeout(function () {
-      if (this.show) {
+    if (this.show) {
+      setTimeout(function () {
         self.scanCode();
-      }
-    }, 200);
+      }, 200);
+    }
   },
   methods: {
     scanCode() {
+      let self = this;
       uni.scanCode({
         success: function (res) {
           ///console.log(JSON.stringify(res));
-          this.$emit("onDecode", res);
+          self.onDecode(res);
         },
         fail: function () {
-          this.$emit("onReturn");
+          self.onReturn();
         },
       });
+    },
+    onDecode(res) {
+      //console.log(res);
+      this.$emit("success", res);
+    },
+    onReturn() {
+      //console.log("onReturn");
+      this.$emit("fail");
     },
   },
 };
