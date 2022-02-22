@@ -1,20 +1,25 @@
 <template>
-  <view>
-    {{ title }}：
-    <u-checkbox-group @change="checkboxGroupChange">
-      <u-checkbox
-        v-for="(item, index) in cList"
-        :key="index"
-        v-model="item.checked"
-        name="checkboxs"
-        :value="item.name"
-        :disabled="item.disabled"
-        @change="checkboxChange(item, index)"
-        >{{ item.name }}</u-checkbox
-      >
-    </u-checkbox-group>
-    <!-- <u-button @click="checkedAll">全选</u-button> -->
-  </view>
+  <u-checkbox-group
+    @change="checkboxGroupChange"
+    :disabled="disabled"
+    :icon-size="iconSize"
+    :size="size"
+    :shape="shape"
+    :active-color="activeColor"
+    :label-disabled="labelDisabled"
+    :width="width"
+    :wrap="wrap"
+  >
+    <u-checkbox
+      v-for="(item, index) in cList"
+      :key="index"
+      v-model="item.checked"
+      :name="index"
+      :disabled="item.disabled"
+      @change="checkboxChange"
+      >{{ item.name }}</u-checkbox
+    >
+  </u-checkbox-group>
 </template>
 
 <script>
@@ -22,11 +27,63 @@ export default {
   name: "HmUviewCheckbox",
   props: {
     /**
-     * 标题
+     * 禁用所有复选
      */
-    title: {
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 图标大小
+     */
+    iconSize: {
       type: String,
-      default: "多选",
+      default: "20",
+    },
+    /**
+     * 整体大小
+     */
+    size: {
+      type: String,
+      default: "34",
+    },
+    /**
+     * 形状
+     * @type Enum
+     * @options ["circle","square"]
+     */
+    shape: {
+      type: String,
+      default: "square",
+    },
+    /**
+     * 选中颜色
+     * @type Color
+     */
+    activeColor: {
+      type: String,
+      default: "#2979ff",
+    },
+    /**
+     * 禁用文本点击
+     */
+    labelDisabled: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 宽度
+     */
+    width: {
+      type: String,
+      default: "auto",
+    },
+    /**
+     * 各自占一行
+     */
+    wrap: {
+      type: Boolean,
+      default: false,
     },
     /**
      * 数据
@@ -38,20 +95,18 @@ export default {
           {
             key: 1,
             name: "123",
-            checked: true,
+            checked: false,
             disabled: false,
           },
           {
             key: 2,
             name: "321",
             checked: false,
-            disabled: false,
           },
           {
             key: 3,
             name: "44",
             checked: false,
-            disabled: false,
           },
         ];
       },
@@ -59,31 +114,15 @@ export default {
   },
   data() {
     return {
-      cList: [
-        {
-            key: 1,
-            name: "123",
-            checked: true,
-            disabled: false,
-          },
-          {
-            key: 2,
-            name: "321",
-            checked: false,
-            disabled: false,
-          },
-          {
-            key: 3,
-            name: "44",
-            checked: false,
-            disabled: false,
-          },
-      ],
+      cList: [],
     };
   },
   watch: {
-    list(value) {
-      this.cList = value;
+    list: {
+      handler: function (value) {
+        this.cList = value;
+      },
+      deep: true,
     },
   },
   mounted() {
@@ -91,23 +130,12 @@ export default {
   },
   methods: {
     // 选中某个复选框时，由checkbox时触发
-    checkboxChange(e, index) {
+    checkboxChange(e) {
       this.$emit("checkboxChange", e);
-      console.log("0", e);
-      this.cList[index].checked = !e.checked;
-      console.log("1", e);
     },
-    // 选中任一checkbox时，由checkbox-group触发
     checkboxGroupChange(e) {
-      console.log("2", e);
       this.$emit("checkboxGroupChange", e);
     },
-    // 全选
-    // checkedAll() {
-    //   this.list.map(val => {
-    //     val.checked = true;
-    //   });
-    // }
   },
 };
 </script>

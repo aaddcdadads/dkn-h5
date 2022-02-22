@@ -1,9 +1,8 @@
 <template>
   <!-- <hm-uview-button @click="click">123</hm-uview-button> -->
   <view>
-    <hm-uview-checkbox></hm-uview-checkbox>
+    <!-- <hm-uview-checkbox></hm-uview-checkbox> -->
     <hm-uview-checkbox
-      title="321"
       :list="list1"
       @checkboxGroupChange="checkboxGroupChange1"
       @checkboxChange="checkboxChange1"
@@ -27,12 +26,12 @@ export default {
         {
           name: "www",
           checked: true,
-          disabled: true,
+          disabled: false,
         },
         {
           name: "eee",
           checked: false,
-          disabled: true,
+          disabled: false,
         },
       ],
     };

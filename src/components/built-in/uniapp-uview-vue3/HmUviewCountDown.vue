@@ -45,7 +45,7 @@ export default {
     /**
      * 状态
      * @type Enum
-     * @options ["start", "stop"]
+     * @options ["start", "stop","info"]
      */
     countStatus: {
       type: String,
@@ -63,6 +63,9 @@ export default {
       }
       if (val == "stop") {
         this.$refs.countDown.pause();
+      }
+      if (val == "info") {
+        this.$refs.countDown.reset();
       }
     },
   },
