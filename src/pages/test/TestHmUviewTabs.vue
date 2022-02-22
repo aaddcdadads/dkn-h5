@@ -1,27 +1,24 @@
 <template>
   <view>
-    <hm-uview-tabs
-      :current="2"
-      :widthPercent="20"
-    >
-      <template #left>
+    <hm-uview-tabs :current="2" :widthPercent="20" @change="onChange">
+      <!-- <template #left>
         <hm-uview-button
-        size="medium"
-        type="success"
-        :plain="false"
-        :disabled="false"
-        shape="circle"
-        text="左插槽"
+          size="medium"
+          type="success"
+          :plain="false"
+          :disabled="false"
+          shape="circle"
+          text="左插槽"
         ></hm-uview-button>
-      </template>
+      </template> -->
       <template #right>
         <hm-uview-button
-        size="medium"
-        type="success"
-        :plain="false"
-        :disabled="false"
-        shape="circle"
-        text="右插槽"
+          size="medium"
+          type="success"
+          :plain="false"
+          :disabled="false"
+          shape="circle"
+          text="右插槽"
         ></hm-uview-button>
       </template>
     </hm-uview-tabs>
@@ -53,14 +50,20 @@
 export default {
   data() {
     return {
-      list: [{name: "1", count: 100},{name: "2", count: 100},{name: "3", count: 100},{name: "4", count: 100},{name: "5", count: 100}]
+      list: [
+        { name: "1", count: 100 },
+        { name: "2", count: 100 },
+        { name: "3", count: 100 },
+        { name: "4", count: 100 },
+        { name: "5", count: 100 },
+      ],
     };
   },
-  methods:{
-    onChange(val){
-      console.log('cahnge', val)
-    }
-  }
+  methods: {
+    onChange(val) {
+      console.log("cahnge", val);
+    },
+  },
 };
 </script>
 
