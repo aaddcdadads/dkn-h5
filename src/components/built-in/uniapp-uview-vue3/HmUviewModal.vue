@@ -21,7 +21,7 @@
 	
 <script>
 export default {
-  name: "HmModal",
+  name: "HmUviewModal",
   components:{},
   props: {
     /**
@@ -29,7 +29,7 @@ export default {
      */
     visible: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     /**
      * 显示标题

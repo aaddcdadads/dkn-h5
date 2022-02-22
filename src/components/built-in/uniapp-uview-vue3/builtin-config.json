@@ -49,6 +49,14 @@
                 "isBuiltIn": true
             },
             {
+                "name": "HmUviewModal",
+                "title": "对话框",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewModal",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewModal.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
                 "name": "HmUviewSticky",
                 "title": "吸顶",
                 "importPath": "built-in/uniapp-uview-vue3/HmUviewSticky",
