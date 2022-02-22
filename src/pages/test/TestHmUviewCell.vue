@@ -1,15 +1,15 @@
 <template>
   <view>
-    <hm-uview-cell :list="list1"></hm-uview-cell>
+    <!-- <hm-uview-cell :list="list1"></hm-uview-cell> -->
     <hm-uview-cell
       :list="list2"
-      :arrow="true"
+      :arrow="false"
       arrowDirection="right"
       :borderBottom="false"
       :borderTop="true"
       bg-color="#ffefef"
       iconSize="20px"
-      @click="onClick"
+      @itemClick="onClick"
     ></hm-uview-cell>
   </view>
 </template>
@@ -60,8 +60,8 @@ export default {
     };
   },
   methods: {
-    onClick(item, index) {
-      console.log("e", item, index);
+    onClick(index) {
+      console.log("index", index);
     },
   },
 };

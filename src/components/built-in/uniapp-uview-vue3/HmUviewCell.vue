@@ -2,20 +2,22 @@
   <view>
     <u-cell-group :border="isBorder">
       <u-cell-item
-        v-for="(item, index) in list"
+        v-for="(item, index) in cList"
         :key="index"
         :title="item.title"
         :icon="item.icon"
         :label="item.label"
+        :index="index"
         :value="item.value"
         :arrow="arrow"
+        :hover-class="hoverClass"
         :arrow-direction="arrowDirection"
         :required="item.required"
         :border-bottom="borderBottom || item.borderBottom"
         :border-top="borderTop || item.borderTop"
         :bg-color="bgColor"
         :icon-size="iconSize"
-        @click="onClick(item, index)"
+        @click="onClick"
       ></u-cell-item>
     </u-cell-group>
   </view>
@@ -72,6 +74,14 @@ export default {
     arrowDirection: {
       type: String,
     },
+
+    /**
+     * 点击反馈
+     */
+    hoverClass: {
+      type: String,
+      default: "none",
+    },
     /**
      * 外边框
      */
@@ -109,12 +119,25 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      cList: [],
+    };
+  },
+  watch: {
+    list: {
+      handler: function (value) {
+        this.cList = value;
+      },
+      deep: true,
+    },
+  },
+  mounted() {
+    this.cList = this.list;
   },
   methods: {
-    onClick(item, index) {
-      console.log("click", item, index);
-      this.$emit("click", item, index);
+    onClick(index) {
+      console.log("click", index);
+      this.$emit("itemClick", index);
     },
   },
 };
