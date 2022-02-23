@@ -54,7 +54,7 @@ export default {
 
     /**
      * 是否显示
-     * @v-model
+     * @model
      */
     show: {
       type: Boolean,
