@@ -21,10 +21,6 @@
 export default {
   components: {},
   name: "HmUviewSearch",
-  model: {
-    prop: "value",
-    event: "changeValue",
-  },
   props: {
     /**
      * 值
@@ -112,22 +108,31 @@ export default {
     },
   },
   computed: {
-    cValue: {
-      get() {
-        return this.value;
-      },
-      set(val) {
-        this.$emit("changeValue", val);
-      },
-    },
+    // cValue: {
+    //   get() {
+    //     return this.value;
+    //   },
+    //   set(val) {
+    //     this.$emit("changeValue", val);
+    //   },
+    // },
   },
   data() {
-    return {};
+    return {
+      cValue: "",
+    };
   },
-  mounted() {},
+  watch: {
+    value(val) {
+      this.cValue = val;
+    },
+  },
+  mounted() {
+    this.cValue = this.value;
+  },
   methods: {
     onChange(e) {
-      console.log(this.cValue, "e");
+      //console.log(this.cValue, "e");
       // this.value = e;
       this.$emit("update:value", this.cValue);
       this.$emit("change", e);
