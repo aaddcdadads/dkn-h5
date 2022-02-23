@@ -1,6 +1,6 @@
 <template>
   <u-field
-    v-model="cValue"
+    v-model:value="cValue"
     :label="label"
     :placeholder="placeholder"
     :icon="icon"
@@ -29,14 +29,10 @@
 export default {
   components: {},
   name: "HmUviewField",
-  model: {
-    prop: "value",
-    event: "changeValue",
-  },
   props: {
     /**
      * 值
-     * @v-model
+     * @model
      */
     value: {
       type: String,

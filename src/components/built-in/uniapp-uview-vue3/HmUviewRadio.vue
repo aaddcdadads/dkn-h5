@@ -38,7 +38,7 @@ export default {
   props: {
     /**
      * 值
-     * @v-model
+     * @model
      */
     value: {
       type: String,

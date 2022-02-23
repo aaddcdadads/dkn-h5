@@ -31,7 +31,7 @@ export default {
     },
     /**
      * 展示日期
-     * @v-model
+     * @model
      * @type Date
      */
     value: {

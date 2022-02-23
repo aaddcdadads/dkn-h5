@@ -1,28 +1,28 @@
 <template>
-    <u-modal
-      v-model="cVisible"
-      :show-title="showTitle"
-      :title="title"
-      :show-confirm-button="showConfirmBtn"
-      :show-cancel-button="showCancelBtn"
-      :confirm-text="confirmText"
-      :confirm-color="confirmColor"
-      :cancel-text="cancelText"
-      :cancel-color="cancelColor"
-      :mask-close-able="false"
-      :border-radius="borderRadius"
-      :width="width"
-      @confirm="onConfirm"
-      @cancel="onCancel"
-    >
-      <slot />
-    </u-modal>
+  <u-modal
+    v-model="cVisible"
+    :show-title="showTitle"
+    :title="title"
+    :show-confirm-button="showConfirmBtn"
+    :show-cancel-button="showCancelBtn"
+    :confirm-text="confirmText"
+    :confirm-color="confirmColor"
+    :cancel-text="cancelText"
+    :cancel-color="cancelColor"
+    :mask-close-able="false"
+    :border-radius="borderRadius"
+    :width="width"
+    @confirm="onConfirm"
+    @cancel="onCancel"
+  >
+    <slot />
+  </u-modal>
 </template>
 	
 <script>
 export default {
   name: "HmUviewModal",
-  components:{},
+  components: {},
   props: {
     /**
      * 是否可见
@@ -92,7 +92,7 @@ export default {
     /**
      * 圆角
      */
-    borderRadius:{
+    borderRadius: {
       type: String,
     },
     /**
@@ -105,10 +105,10 @@ export default {
     /**
      * 高度
      */
-    height:{
-      type:String,
-      default:"150px"
-    }
+    height: {
+      type: String,
+      default: "150px",
+    },
   },
   data() {
     return {
@@ -122,7 +122,7 @@ export default {
     },
     visible(value) {
       this.cVisible = !!value;
-    }
+    },
   },
   computed: {},
   mounted() {
@@ -131,7 +131,7 @@ export default {
     self.cVisible = !!self.visible;
   },
   methods: {
-     getCssUnit(value) {
+    getCssUnit(value) {
       if (isNaN(Number(value))) {
         return value;
       }
@@ -146,8 +146,8 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style lang="less">
 /deep/ .u-model__content {
-  height:v-bind(cHeight);
+  height: v-bind(cHeight);
 }
 </style>
