@@ -1,7 +1,10 @@
 <template>
   <!-- <hm-uview-button @click="click">123</hm-uview-button> -->
   <view>
-    <hm-uview-search v-model:value="cValue"></hm-uview-search>
+    <hm-uview-search
+      v-model:value="cValue"
+      @change="onChange"
+    ></hm-uview-search>
     <hm-uview-search
       v-model:value="cValue2"
       title="标题2"
@@ -14,7 +17,7 @@
       :clearabled="false"
       :showAction="false"
       inputAlign="center"
-      @onChange="onChange1"
+      @change="onChange1"
     ></hm-uview-search>
     <u-button @click="click">测试取值</u-button>
   </view>

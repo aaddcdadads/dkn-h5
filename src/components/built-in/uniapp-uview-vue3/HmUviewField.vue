@@ -1,6 +1,6 @@
 <template>
   <u-field
-    v-model:value="cValue"
+    v-model="cValue"
     :label="label"
     :placeholder="placeholder"
     :icon="icon"
@@ -32,7 +32,7 @@ export default {
   props: {
     /**
      * 值
-     * @model
+     * @v-model
      */
     value: {
       type: String,
@@ -210,7 +210,7 @@ export default {
   methods: {
     onInput: function (e) {
       this.$emit("update:value", e);
-      this.$emit("input", e);
+      this.$emit("after-input", e);
       //console.log("input: ", this.value, this.cValue);
     },
   },

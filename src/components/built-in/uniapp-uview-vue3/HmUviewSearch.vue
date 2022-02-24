@@ -2,7 +2,7 @@
   <view :style="{ backgroundColor: backgroundColor }">
     {{ title }}
     <u-search
-      v-model:value="cValue"
+      v-model="cValue"
       :action-text="actionText"
       :placeholder="placeholder"
       :search-icon="leftIcon"
