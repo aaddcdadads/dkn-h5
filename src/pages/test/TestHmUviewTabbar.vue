@@ -11,6 +11,7 @@
       midButtonSize="45px"
       activeColor="#303133"
       inactiveColor="#606266"
+      :hideTabBar="true"
       :midButton="true"
       :borderTop="true"
     ></hm-uview-tabbar>
@@ -24,7 +25,7 @@ export default {
   components: { HmUviewTabbar },
   data() {
     return {
-      value: "0",
+      value: 0,
       cList: [
         {
           //未激活的图标
