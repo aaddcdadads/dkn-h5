@@ -2,7 +2,7 @@
   <view :style="{ backgroundColor: backgroundColor }">
     {{ title }}
     <u-search
-      v-model:value="cValue"
+      v-model="cValue"
       :action-text="actionText"
       :placeholder="placeholder"
       :search-icon="leftIcon"
@@ -21,14 +21,10 @@
 export default {
   components: {},
   name: "HmUviewSearch",
-  model: {
-    prop: "value",
-    event: "changeValue",
-  },
   props: {
     /**
      * 值
-     * @v-model
+     * @model
      */
     value: {
       type: String,
@@ -112,22 +108,31 @@ export default {
     },
   },
   computed: {
-    cValue: {
-      get() {
-        return this.value;
-      },
-      set(val) {
-        this.$emit("changeValue", val);
-      },
-    },
+    // cValue: {
+    //   get() {
+    //     return this.value;
+    //   },
+    //   set(val) {
+    //     this.$emit("changeValue", val);
+    //   },
+    // },
   },
   data() {
-    return {};
+    return {
+      cValue: "",
+    };
   },
-  mounted() {},
+  watch: {
+    value(val) {
+      this.cValue = val;
+    },
+  },
+  mounted() {
+    this.cValue = this.value;
+  },
   methods: {
     onChange(e) {
-      console.log(this.cValue, "e");
+      //console.log(this.cValue, "e");
       // this.value = e;
       this.$emit("update:value", this.cValue);
       this.$emit("change", e);

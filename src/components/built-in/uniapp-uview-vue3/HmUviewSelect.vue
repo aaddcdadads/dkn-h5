@@ -6,7 +6,7 @@
       :mode="mode"
       :cancel-color="cancelColor"
       :confirm-color="confirmColor"
-      :default-value="defaultValue"
+      :default-value="value"
       :mask-Close-Able="maskCloseAble"
       :title="title"
       :confirm-text="confirmText"
@@ -54,7 +54,7 @@ export default {
 
     /**
      * 是否显示
-     * @v-model
+     * @model
      */
     show: {
       type: Boolean,
@@ -79,7 +79,7 @@ export default {
     /**
      * 默认选中下标
      */
-    defaultValue: {
+    value: {
       type: Array,
       default: [0],
     },

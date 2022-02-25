@@ -28,7 +28,7 @@ export default {
   props: {
     /**
      * 是否弹出
-     * @v-model
+     * @model
      */
     show: {
       type: Boolean,

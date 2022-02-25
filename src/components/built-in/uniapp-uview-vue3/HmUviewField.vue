@@ -29,10 +29,6 @@
 export default {
   components: {},
   name: "HmUviewField",
-  model: {
-    prop: "value",
-    event: "changeValue",
-  },
   props: {
     /**
      * 值
@@ -214,7 +210,7 @@ export default {
   methods: {
     onInput: function (e) {
       this.$emit("update:value", e);
-      this.$emit("input", e);
+      this.$emit("after-input", e);
       //console.log("input: ", this.value, this.cValue);
     },
   },

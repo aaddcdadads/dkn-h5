@@ -2,7 +2,7 @@
   <view>
     <hm-uview-tabbar></hm-uview-tabbar>
     <hm-uview-tabbar
-      v-model:current="cCurrent"
+      v-model:value="value"
       :list="cList"
       :show="true"
       bgColor="#ffffff"
@@ -24,7 +24,7 @@ export default {
   components: { HmUviewTabbar },
   data() {
     return {
-      cCurrent: "0",
+      value: "0",
       cList: [
         {
           //未激活的图标

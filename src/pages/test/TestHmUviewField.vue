@@ -1,7 +1,7 @@
 <template>
   <!-- <hm-uview-button @click="click">123</hm-uview-button> -->
   <view>
-    <hm-uview-field></hm-uview-field>
+    <!-- <hm-uview-field></hm-uview-field> -->
     <hm-uview-field
       v-model:value="cValue2"
       label="标题123"
@@ -10,7 +10,7 @@
       labelWidth="160"
       rightIcon="woman"
       type="textarea"
-      @onInput="onInput1"
+      @afterInput="onInput1"
     ></hm-uview-field>
   </view>
 </template>
@@ -32,7 +32,7 @@ export default {
     },
 
     onInput1(e) {
-      console.log("onInput1", e);
+      //console.log("onInput1", e);
       console.log("value2", this.cValue2);
     },
   },
