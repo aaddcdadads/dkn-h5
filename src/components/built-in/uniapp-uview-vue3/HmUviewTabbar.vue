@@ -188,7 +188,7 @@ export default {
   },
   methods: {
     onChange(e) {
-      console.log("change", e);
+      //console.log("change", e);
       this.$emit("update:value", e);
       this.$emit("change", e);
     },

@@ -1,6 +1,6 @@
 <template>
   <view>
-    <hm-uview-tabbar></hm-uview-tabbar>
+    <!-- <hm-uview-tabbar></hm-uview-tabbar> -->
     <hm-uview-tabbar
       v-model:value="value"
       :list="cList"
