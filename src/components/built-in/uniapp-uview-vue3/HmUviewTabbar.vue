@@ -1,7 +1,7 @@
 <template>
   <view>
     <u-tabbar
-      v-model:current="cCurrent"
+      v-model="cValue"
       :list="cList"
       :show="show"
       :bg-color="bgColor"
@@ -26,10 +26,11 @@ export default {
   props: {
     /**
      * 当前值
+     * @model
      */
-    current: {
-      type: Number,
-      default: 0,
+    value: {
+      type: String,
+      default: "0",
     },
     /**
      * 数据
@@ -52,6 +53,8 @@ export default {
             midButton: false,
             // 如果使用自定义扩展的图标库字体，需配置此值为true
             customIcon: false,
+            // 点击某一个item时，跳转的路径，此路径必须是pagees.json中tabBar字段中定义的路径
+            pagePath: "", // 1.5.6新增，路径需要以"/"开头
           },
           {
             iconPath: "photo",
@@ -138,6 +141,7 @@ export default {
     },
     /**
      * 中部凸起按钮
+     *
      */
     midButton: {
       type: Boolean,
@@ -153,26 +157,30 @@ export default {
   },
   data() {
     return {
-      cCurrent: "",
+      cValue: "",
       cList: [],
     };
   },
   watch: {
-    list(val) {
-      this.cList = val;
+    list: {
+      handler: function (value, oldValue) {
+        this.cList = value;
+      },
+      deep: true,
     },
-    current(value) {
-      this.cCurrent = value;
+    value(value) {
+      this.cValue = value;
     },
   },
 
   mounted() {
     this.cList = this.list;
-    this.cCurrent = this.current;
+    this.cValue = this.value;
   },
   methods: {
     onChange(e) {
       console.log("change", e);
+      this.$emit("update:value", e);
       this.$emit("change", e);
     },
   },
