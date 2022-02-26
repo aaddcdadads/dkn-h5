@@ -1,6 +1,7 @@
 <template>
   <view>
     <u-upload
+      ref="uUpload"
       :action="cAction"
       :file-list="cFileList"
       :name="name"
@@ -19,6 +20,8 @@
       :del-icon="delIcon"
       :del-bg-color="delBgColor"
       :delColor="delColor"
+      :header="header"
+      :form-data="formData"
       :index="index"
       @on-remove="onRemove"
       @on-success="onSuccess"
@@ -44,11 +47,29 @@ export default {
       default: "",
     },
     /**
+     * 上传额外参数
+     */
+    formData: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+    /**
+     * 请求头
+     */
+    header: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+    /**
      * 上传文件名
      */
     name: {
       type: String,
-      default: "file",
+      default: "img",
     },
     /**
      * 上传最大数量
@@ -113,11 +134,7 @@ export default {
     fileList: {
       type: Array,
       default: function () {
-        return [
-          {
-            url: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2Ftp05%2F19100120461512E-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644055421&t=e70c7723874c5e040900e75daded2cb4",
-          },
-        ];
+        return [];
       },
     },
     /**
@@ -132,7 +149,14 @@ export default {
      */
     autoUpload: {
       type: Boolean,
-      default: true,
+      default: false,
+    },
+    /**
+     * 是否上传
+     */
+    isUpload: {
+      type: Boolean,
+      default: false,
     },
     /**
      * 提示
@@ -171,12 +195,13 @@ export default {
       type: String,
       default: "#ffffff",
     },
+
     /**
      * 回调最后参数
      */
     index: {
       type: String,
-      default: "1",
+      default: "upload",
     },
   },
   data() {
@@ -190,28 +215,21 @@ export default {
       this.cFileList = value;
     },
     action(value) {
-      this.cAction = this.convertUrl(value);
+      this.cAction = value;
+    },
+    isUpload(value) {
+      if (value) {
+        this.imgUpload();
+      }
     },
   },
   mounted() {
-    this.cAction = this.convertUrl(this.action);
+    this.cAction = this.action;
     this.cFileList = this.fileList;
   },
   methods: {
-    convertUrl(url) {
-      if (!url) {
-        return null;
-      }
-      if (window.location.origin.indexOf("block-design.cn") < 0) {
-        return url;
-      }
-      let urlObj = new URL(url);
-      let schema = urlObj.origin.split(":")[0];
-      let port = urlObj.port || (schema === "http" ? 80 : 443);
-      VueCookieNext.setCookie("x-project-api-schema", schema);
-      VueCookieNext.setCookie("x-project-api-hostname", urlObj.hostname);
-      VueCookieNext.setCookie("x-project-api-port", port);
-      return `/project-api${urlObj.pathname}`;
+    imgUpload() {
+      this.$refs.uUpload.upload();
     },
     //移除图片时触发
     onRemove(index, lists, name) {
@@ -220,7 +238,7 @@ export default {
     },
     //图片上传成功时触发
     onSuccess(data, index, lists, name) {
-      //console.log("onSuccess", data, index, lists, name);
+      console.log("onSuccess", data, index, lists, name);
       this.$emit("onSuccess", data, index, lists, name);
     },
     //图片上传后，无论成功或者失败都会触发
@@ -230,7 +248,7 @@ export default {
     },
     //图片上传失败时触发
     onError(res, index, lists, name) {
-      // console.log("onError", res, index, lists, name);
+      console.log("onError", res, index, lists, name);
       this.$emit("onError", res, index, lists, name);
     },
     //所有图片上传完毕触发

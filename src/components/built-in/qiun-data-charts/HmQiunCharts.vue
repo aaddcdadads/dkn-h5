@@ -1,6 +1,9 @@
 <template>
   <view class="charts-box">
-    <qiun-data-charts type="line" :chartData="chartData" background="none" />
+    <qiun-data-charts 
+    :type="type" 
+    :chartData="chartData" 
+    background="none" />
   </view>
 </template>
 
@@ -15,7 +18,7 @@ export default {
      */
     type: {
       type: String,
-      default: "line",
+      default: "column",
     },
     /**
      * 宽度
