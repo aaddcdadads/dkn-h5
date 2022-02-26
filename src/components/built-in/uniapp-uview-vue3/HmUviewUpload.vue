@@ -215,7 +215,7 @@ export default {
       this.cFileList = value;
     },
     action(value) {
-      this.cAction = this.convertUrl(value);
+      this.cAction = value;
     },
     isUpload(value) {
       if (value) {
