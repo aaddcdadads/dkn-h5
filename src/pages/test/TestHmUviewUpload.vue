@@ -1,10 +1,13 @@
 <template>
   <view>
-    <hm-uview-upload></hm-uview-upload>
+    <!-- <hm-uview-upload></hm-uview-upload> -->
     <hm-uview-upload
-      action="http://www.example.com/upload"
+      action="https://yuos.x2intell.com/api/userapp/upload"
       :fileList="cFileList"
-      name="names"
+      :formData="formData"
+      :header="header"
+      :isUpload="isUpload"
+      name="img"
       maxCount="55"
       width="300"
       height="300"
@@ -21,8 +24,11 @@
       delBgColor="#ffffff"
       delColor="#fa3534"
       index="2"
+      @onSuccess="success"
+      @onError="error"
       @onRemove="remove"
     ></hm-uview-upload>
+    <u-button @click="click">上传</u-button>
   </view>
 </template>
 
@@ -33,16 +39,29 @@ export default {
   components: { HmUviewUpload },
   data() {
     return {
-      cFileList: [
-        {
-          url: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2Ftp05%2F19100122420C335-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644055421&t=8a17927351c6025dc8c1b191fdeb4aa0",
-        },
-      ],
+      cFileList: [],
+      isUpload: false,
+      formData: {
+        type: "question",
+      },
+      header: {
+        token: "ebe49f90f93ebb87ace6ce4ef9d8c14a",
+      },
     };
   },
   methods: {
+    success(data, index, lists, name) {
+      console.log("success", data, index, lists, name);
+    },
+    error(res, index, lists, name) {
+      console.log("error", res, index, lists, name);
+    },
     remove(index, lists, name) {
       console.log("onRemove", index, lists, name);
+    },
+    click() {
+      console.log("cFileList", this.cFileList);
+      this.isUpload = true;
     },
   },
 };
