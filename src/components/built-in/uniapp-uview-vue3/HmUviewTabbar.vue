@@ -12,6 +12,7 @@
       :inactive-color="inactiveColor"
       :mid-button="midButton"
       :border-top="borderTop"
+      :hide-tab-bar="hideTabBar"
       @change="onChange"
     ></u-tabbar>
   </view>
@@ -29,8 +30,8 @@ export default {
      * @model
      */
     value: {
-      type: String,
-      default: "0",
+      type: Number,
+      default: 0,
     },
     /**
      * 数据
@@ -154,10 +155,18 @@ export default {
       type: Boolean,
       default: true,
     },
+
+    /**
+     *隐藏原生tabbar
+     */
+    hideTabBar: {
+      type: Boolean,
+      default: true,
+    },
   },
   data() {
     return {
-      cValue: "",
+      cValue: -1,
       cList: [],
     };
   },
@@ -179,7 +188,7 @@ export default {
   },
   methods: {
     onChange(e) {
-      console.log("change", e);
+      //console.log("change", e);
       this.$emit("update:value", e);
       this.$emit("change", e);
     },
