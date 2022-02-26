@@ -318,6 +318,20 @@
             }
         },
         {
+            "path": "components/built-in/qiun-data-charts/HmQiunCharts",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "components/built-in/qiun-data-charts/HmBarCharts",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "components/built-in/uniapp-uview-vue3/HmUviewCountDown",
             "style": {
                 "navigationBarTitleText": "",
