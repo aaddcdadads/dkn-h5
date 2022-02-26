@@ -1,9 +1,36 @@
 <template>
-	<view class="hm-map">
+	<view class="search-view" v-if="searchView">
+		<view class="search-top">
+			<view class="search-top__div">
+				<u-search 
+					class="search-top__search"
+					v-model="keyword"
+					:showAction="false"
+					shape="square"
+					bgColor="transparent"
+					@change="search"
+				/>
+			</view>
+			<view class="search-top__text" @click="cancel">取消</view>
+		</view>
+		<view class="search-list">
+			<view 
+				v-for="item in addressList" 
+				:key="item.id" 
+				class="search-list__item"
+				@click="selectAddress(item)"
+			>
+				{{item.address}}
+			</view>
+		</view>
+	</view>
+	<view class="hm-map" v-if="!searchView">
 		<map
 			class="map"
-			:latitude="latitude"
-			:longitude="longitude"
+			id="map"
+			ref="map"
+			:latitude="cLatitude"
+			:longitude="cLongitude"
 			:scale="scale"
 			:markers="markers"
 			:polyline="polyline"
@@ -33,12 +60,19 @@
 			@anchorpointtap="onAnchorpointtap"
 			@poitap="onPoitap"
 		>
+		<cover-view class="serch-div" @click="showSearchView">
+			{{address}}
+		</cover-view>
 		</map>
 	</view>
 </template>
 
 <script>
 // 参考：https://uniapp.dcloud.io/component/map
+import {
+  getAction,
+} from "/@/request/http";
+
 export default {
 	name: "HmMap",
 	props: {
@@ -225,8 +259,8 @@ export default {
 						position: {
 							width: 32,
 							height: 32,
-							left: 32,
-							top: 32,
+							left: 5,
+							top: 50,
 						},
 						iconPath:
 							"https://block-design.oss-cn-shenzhen.aliyuncs.com/component-libs/uniapp/%E5%AE%9A%E4%BD%8D.png",
@@ -240,14 +274,14 @@ export default {
 		 */
 		enable3D: {
 			type: Boolean,
-			default: true,
+			default: false,
 		},
 		/**
 		 * 显示指南针
 		 */
 		showCompass: {
 			type: Boolean,
-			default: true,
+			default: false,
 		},
 		/**
 		 * 支持缩放
@@ -319,16 +353,31 @@ export default {
 			type: Boolean,
 			default: true,
 		},
+		/**
+		 * 显示搜索框
+		 */
+		showSearch: {
+			type: Boolean,
+			default: true,
+		},
 	},
 	data() {
 		return {
+			cLatitude: 0,
+			cLongitude: 0,
+			address: '',
 			cWidth: "100%",
 			cHeight: "500px",
+			searchView: false,
+			keyword: '',
+			addressList: []
 		};
 	},
-	mounted() {
+	created() {
 		this.cWidth = this.$getCssUnit(this.width);
 		this.cHeight = this.$getCssUnit(this.height);
+		this.cLatitude = this.latitude
+		this.cLongitude = this.longitude
 	},
 	methods: {
 		/**
@@ -394,13 +443,117 @@ export default {
 			console.log(`onPoitap: `, event);
 			this.$emit("onPoitap", event);
 		},
+		/**
+		 * 打开搜索界面
+		 */
+		showSearchView() {
+			this.searchView = true
+			console.log('showSearchView', this.searchView)
+		},
+		/**
+		 * 取消
+		 */
+		cancel(){
+			this.searchView = false
+		},
+		/**
+		 * 搜索
+		 */
+		search(val){
+			console.log('search', val)
+			// #ifdef H5
+			let url = '/qqmap/ws/place/v1/suggestion'
+			// #endif
+
+			// #ifdef APP-PLUS ||MP
+			let url = 'https://apis.map.qq.com/ws/place/v1/suggestion'
+			// #endif
+
+			getAction(url, {
+				key: "423BZ-I6S3D-PVU4X-HH7XG-26MFJ-SGF7M",
+				// boundary: `nearby(${this.latitude},${this.longitude},1000,1)`,
+				keyword: val,
+			}).then(res => {
+				console.log('res', res)
+				this.addressList = res.data;
+			}).catch(e => {
+				console.log('error', e)
+			})
+		},
+		selectAddress(item){
+			this.searchView = false
+			this.address = item.address
+			this.cLatitude = item.location.lat
+			this.cLongitude = item.location.lng
+			this.$emit("onAddressSelect", item);
+		}
 	},
 };
 </script>
 
 <style lang="less" scoped>
-.map {
+.hm-map {
 	width: v-bind(cWidth);
 	height: v-bind(cHeight);
+}
+.map {
+	width: 100%;
+	height: 100%;
+}
+.serch-div{
+	position: fixed;
+	background-color: #FAFAFA;
+	width: 85%;
+	left: 10%;
+	top: 5%;
+	height: 40px;
+	line-height: 40px;
+	z-index: 999;
+	box-shadow: 1px 1px 1px #B7B6B5;
+}
+
+.search-view{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.search-top{
+	display: flex;
+	margin-top: 10px;
+	height: 35px;
+	justify-content: space-between;
+
+	&__div{
+		background-color: #FAFAFA;
+		width: 85%;
+		height: 35px;
+		box-shadow: 1px 1px 1px #B7B6B5;
+	}
+
+	&__search{
+		background-color: transparent;
+		height: 35px;
+		box-shadow: 1px 1px 1px #B7B6B5;
+	}
+
+	&__text{
+		width: 10%;
+		height: 35px;
+		line-height: 35px;
+	}
+}
+
+.search-list{
+	margin-top: 20px;
+	&__item{
+		margin-top: 10px;
+		background-color: #FAFAFA;
+		// height: 35px;
+		line-height: 35px;
+	}
+}
+
+.search{
+	height: 100%;
 }
 </style>

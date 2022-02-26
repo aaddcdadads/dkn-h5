@@ -12,7 +12,7 @@
         "sdkConfigs" : {
             "maps" : {
                 "qqmap" : {
-                    "key" : "PP2BZ-23N3W-C2DR7-OQWNF-3STRT-OIFHH"
+                    "key" : "423BZ-I6S3D-PVU4X-HH7XG-26MFJ-SGF7M"
                 }
             }
         }
@@ -59,7 +59,7 @@
                 "maps" : {
                     "amap" : {
                         "appkey_ios" : "",
-                        "appkey_android" : ""
+                        "appkey_android" : "aba48fb814b630651e8ae8cf753a26fd"
                     }
                 }
             }

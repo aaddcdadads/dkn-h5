@@ -1,11 +1,11 @@
 <template>
   <view>
-    <hm-map></hm-map> 
+    <hm-map height="850"></hm-map> 
     
     <br />
 
-    <hm-map
-    ></hm-map>
+    <!-- <hm-map
+    ></hm-map> -->
   </view>
 </template>
 
