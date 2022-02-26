@@ -224,25 +224,10 @@ export default {
     },
   },
   mounted() {
-    this.cAction = this.convertUrl(this.action);
+    this.cAction = this.action;
     this.cFileList = this.fileList;
   },
   methods: {
-    convertUrl(url) {
-      if (!url) {
-        return null;
-      }
-      if (window.location.origin.indexOf("block-design.cn") < 0) {
-        return url;
-      }
-      let urlObj = new URL(url);
-      let schema = urlObj.origin.split(":")[0];
-      let port = urlObj.port || (schema === "http" ? 80 : 443);
-      VueCookieNext.setCookie("x-project-api-schema", schema);
-      VueCookieNext.setCookie("x-project-api-hostname", urlObj.hostname);
-      VueCookieNext.setCookie("x-project-api-port", port);
-      return `/project-api${urlObj.pathname}`;
-    },
     imgUpload() {
       this.$refs.uUpload.upload();
     },
