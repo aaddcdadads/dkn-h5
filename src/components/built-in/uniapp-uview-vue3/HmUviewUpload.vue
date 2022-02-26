@@ -44,7 +44,7 @@ export default {
      */
     action: {
       type: String,
-      default: "https://yuos.x2intell.com/api/userapp/upload",
+      default: "",
     },
     /**
      * 上传额外参数
