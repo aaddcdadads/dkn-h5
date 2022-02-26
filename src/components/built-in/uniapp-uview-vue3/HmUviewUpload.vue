@@ -149,7 +149,7 @@ export default {
      */
     autoUpload: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     /**
      * 是否上传
