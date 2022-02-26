@@ -95,6 +95,14 @@ export default defineConfig({
           return path.replace(/^\/project-api/, "");
         },
       },
+      "/qqmap":{
+        target: "https://apis.map.qq.com",
+        changeOrigin: true,
+        rewrite: (path) => {
+          console.log(`path: `, path);
+          return path.replace(/^\/qqmap/, "");
+        },
+      }
     },
   },
 
