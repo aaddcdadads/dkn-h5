@@ -311,6 +311,14 @@
                 "imgUrl": "built-in/qiun-data-charts/img/HmQiunCharts.png",
                 "type": 0,
                 "isBuiltIn": true
+            },
+            {
+                "name": "HmCharts",
+                "title": "饼状图",
+                "importPath": "built-in/qiun-data-charts/HmCharts",
+                "imgUrl": "",
+                "type": 0,
+                "isBuiltIn": true
             }
         ]
     },
