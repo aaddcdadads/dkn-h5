@@ -316,7 +316,15 @@
                 "name": "HmColumnCharts",
                 "title": "饼状图",
                 "importPath": "built-in/qiun-data-charts/HmColumnCharts",
-                "imgUrl": "",
+                "imgUrl": "built-in/qiun-data-charts/img/HmColumnCharts.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmPieCharts",
+                "title": "饼状图",
+                "importPath": "built-in/qiun-data-charts/HmPieCharts",
+                "imgUrl": "built-in/qiun-data-charts/img/HmPieCharts.png",
                 "type": 0,
                 "isBuiltIn": true
             }
