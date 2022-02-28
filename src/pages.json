@@ -325,7 +325,7 @@
             }
         },
         {
-            "path": "components/built-in/qiun-data-charts/HmCharts",
+            "path": "components/built-in/qiun-data-charts/HmColumnCharts",
             "style": {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false

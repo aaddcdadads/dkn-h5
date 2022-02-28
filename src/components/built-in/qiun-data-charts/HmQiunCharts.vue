@@ -18,7 +18,7 @@ export default {
      */
     type: {
       type: String,
-      default: "column",
+      default: "line",
     },
     /**
      * 宽度

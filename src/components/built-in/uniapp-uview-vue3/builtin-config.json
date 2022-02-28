@@ -313,9 +313,9 @@
                 "isBuiltIn": true
             },
             {
-                "name": "HmCharts",
+                "name": "HmColumnCharts",
                 "title": "饼状图",
-                "importPath": "built-in/qiun-data-charts/HmCharts",
+                "importPath": "built-in/qiun-data-charts/HmColumnCharts",
                 "imgUrl": "",
                 "type": 0,
                 "isBuiltIn": true

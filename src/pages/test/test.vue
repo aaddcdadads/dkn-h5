@@ -1,153 +1,183 @@
 <template>
-    <u-modal
-      v-model="cVisible"
-      :show-title="showTitle"
-      :title="title"
-      :show-confirm-button="showConfirmBtn"
-      :show-cancel-button="showCancelBtn"
-      :confirm-text="confirmText"
-      :confirm-color="confirmColor"
-      :cancel-text="cancelText"
-      :cancel-color="cancelColor"
-      :mask-close-able="false"
-      :border-radius="borderRadius"
-      :width="width"
-      @confirm="onConfirm"
-      @cancel="onCancel"
-    >
-      <slot />
-    </u-modal>
+  <view @click="onClick"
+    ><text>{{ cText }}</text>
+    <u-icon name="arrow-down"></u-icon>
+  </view>
+  <u-picker
+    v-model="cShow"
+    :mode="mode"
+    :title="title"
+    :confirm-text="confirmText"
+    :confirm-color="confirmColor"
+    :cancel-text="cancelText"
+    :cancel-color="cancelColor"
+    :params="params"
+    :mask-close-able="maskCloseAble"
+    :start-year="startYear"
+    :end-year="endYear"
+    :show-time-tag="showTimeTag"
+    @confirm="onConfirm"
+    @cancel="onCancel"
+  ></u-picker>
 </template>
-	
 <script>
 export default {
-  name: "HmModal",
-  components:{},
+  name: "timeDownPicker",
   props: {
     /**
-     * 是否可见
+     * 文字
      */
-    visible: {
-      type: Boolean,
-      default: true,
+    text: {
+      type: String,
+      default: "2022-02-22",
     },
     /**
-     * 显示标题
+     * 是否显示
      */
-    showTitle: {
+    show: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     /**
-     * 对话框标题
+     * 类型
+     * @type Enum
+     * @default time
+     * @options ["time", "region"]
+     */
+    mode: {
+      type: String,
+    },
+    /**
+     * 标题文字
      */
     title: {
       type: String,
-      default: "标题:对话框",
+      default: "时间",
     },
     /**
-     * 显示确认按钮
-     */
-    showConfirmBtn: {
-      type: Boolean,
-      default: true,
-    },
-    /**
-     * 确认文字
+     * 确认按钮文字
      */
     confirmText: {
       type: String,
       default: "确认",
     },
     /**
-     * 确认颜色
+     * 确认按钮颜色
      * @type Color
      */
     confirmColor: {
       type: String,
-      default: "#000000",
+      default: "#2979ff",
     },
     /**
-     * 显示取消按钮
-     */
-    showCancelBtn: {
-      type: Boolean,
-      default: true,
-    },
-    /**
-     * 取消文字
+     * 取消按钮文字
      */
     cancelText: {
       type: String,
       default: "取消",
     },
     /**
-     * 取消颜色
+     * 取消按钮颜色
      * @type Color
      */
     cancelColor: {
       type: String,
-      default: "#000000",
+      default: "#606266",
     },
     /**
-     * 圆角
+     * 显示参数
      */
-    borderRadius:{
-      type: String,
+    params: {
+      type: Object,
+      default: function () {
+        return {
+          //时间参数
+          year: true,
+          month: true,
+          day: true,
+          hour: false,
+          minute: false,
+          second: false,
+          timestamp: false,
+          //地区参数
+          province: false,
+          city: false,
+          area: false,
+        };
+      },
     },
     /**
-     * 宽度
+     * 点击遮罩关闭
      */
-    width: {
-      type: String,
-      default: "300px",
+    maskCloseAble: {
+      type: Boolean,
+      default: false,
     },
     /**
-     * 高度
+     * 开始年份
      */
-    height:{
-      type:String,
-      default:"150px"
-    }
+    startYear: {
+      type: Number,
+      default: 1950,
+    },
+    /**
+     * 结束年份
+     */
+    endYear: {
+      type: Number,
+      default: 2050,
+    },
+    /**
+     * 时间中文提示
+     */
+    showTimeTag: {
+      type: Boolean,
+      default: true,
+    },
   },
   data() {
     return {
-      cHeight: "150px",
-      cVisible: false,
+      cText: "2022-02-22",
+      cShow: false,
     };
   },
   watch: {
-    height(value) {
-      this.cHeight = this.getCssUnit(value);
+    show(val) {
+      this.cShow = val;
     },
-    visible(value) {
-      this.cVisible = !!value;
-    }
+    cShow(value) {
+      if (value == false) this.onCancel();
+    },
+    text(value) {
+      this.cText = value;
+    },
   },
-  computed: {},
   mounted() {
-    let self = this;
-    this.cHeight = this.getCssUnit(this.height);
-    self.cVisible = !!self.visible;
+    this.cText = this.text;
+    this.cShow = this.show;
   },
   methods: {
-     getCssUnit(value) {
-      if (isNaN(Number(value))) {
-        return value;
-      }
-      return `${value}px`;
+    onClick(e) {
+      this.$emit("click", e);
+      this.cShow = !this.cShow;
+      console.log("click,e", e);
     },
     onConfirm(e) {
-      this.$emit("onConfirm", e);
+      this.$emit("confirm", e);
+      var y, m, d, time;
+      y = e["year"];
+      m = e["month"];
+      d = e["day"];
+      time = y + "年" + m + "月" + d + "日";
+      this.cText = time;
+      console.log("confirm,e", time, this.cText);
     },
-    onCancel(e) {
-      this.$emit("onCancel", e);
+    onCancel() {
+      this.cShow = false;
+      this.$emit("update:show", this.cShow);
+      this.$emit("cancel");
+      console.log("cancel,e");
     },
   },
 };
 </script>
-<style scoped>
-/deep/ .u-model__content {
-  height:v-bind(cHeight);
-}
-</style>
