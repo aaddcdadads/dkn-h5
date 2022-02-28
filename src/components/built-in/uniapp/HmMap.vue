@@ -60,7 +60,7 @@
 			@anchorpointtap="onAnchorpointtap"
 			@poitap="onPoitap"
 		>
-		<cover-view class="serch-div" @click="showSearchView">
+		<cover-view v-if="showSearch" class="serch-div" @click="showSearchView">
 			{{address}}
 		</cover-view>
 		</map>
