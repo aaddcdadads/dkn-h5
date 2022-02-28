@@ -314,7 +314,7 @@
             },
             {
                 "name": "HmColumnCharts",
-                "title": "饼状图",
+                "title": "柱状图",
                 "importPath": "built-in/qiun-data-charts/HmColumnCharts",
                 "imgUrl": "built-in/qiun-data-charts/img/HmColumnCharts.png",
                 "type": 0,
@@ -325,6 +325,14 @@
                 "title": "饼状图",
                 "importPath": "built-in/qiun-data-charts/HmPieCharts",
                 "imgUrl": "built-in/qiun-data-charts/img/HmPieCharts.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmRingCharts",
+                "title": "圆环图",
+                "importPath": "built-in/qiun-data-charts/HmRingCharts",
+                "imgUrl": "built-in/qiun-data-charts/img/HmRingCharts.png",
                 "type": 0,
                 "isBuiltIn": true
             }
