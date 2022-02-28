@@ -495,7 +495,7 @@ export default {
 	height: 100%;
 }
 .serch-div{
-	position: fixed;
+	position: relative;
 	background-color: #FAFAFA;
 	width: 85%;
 	left: 10%;
