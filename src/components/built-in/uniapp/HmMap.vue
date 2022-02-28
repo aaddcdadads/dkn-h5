@@ -460,14 +460,8 @@ export default {
 		 * 搜索
 		 */
 		search(val){
-			console.log('search', val)
-			// #ifdef H5
-			let url = '/qqmap/ws/place/v1/suggestion'
-			// #endif
-
-			// #ifdef APP-PLUS ||MP
+			
 			let url = 'https://apis.map.qq.com/ws/place/v1/suggestion'
-			// #endif
 
 			getAction(url, {
 				key: "423BZ-I6S3D-PVU4X-HH7XG-26MFJ-SGF7M",
