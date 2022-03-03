@@ -6,15 +6,15 @@
       class="listbox"
       :class="[{ highBigBox: index == activeindex }]"
       @click="Highlight(item, index)"
-      @touchstart="getTouchStart()"
-      @touchend="getTouchEnd()"
+      @touchstart="getTouchStart(item)"
+      @touchend="getTouchEnd(item)"
     >
       <view class="flex-col bigbox">
         <view
           v-show="setup1"
           class="img_tool"
           @click.stop=""
-          @click="setup(index)"
+          @click="setup(item,index)"
         ></view>
         <checkbox value="cb" v-show="setup2" class="checkbox" @click.stop="" />
         <view class="textbox flex-col">
@@ -165,8 +165,8 @@ export default {
     getTouchEnd(item) {
       clearTimeout(this.timeOutEvent);
     },
-    longPress() {
-      this.$emit("longPress");
+    longPress(e) {
+      this.$emit("longPress",e);
       this.timeOutEvent = 0;
       console.log("执行的内容");
       this.setup1 = false;
@@ -178,9 +178,9 @@ export default {
       this.setup1 = false;
       this.setup2 = true;
     },
-    setup: function (e) {
-      this.$emit("setup", e);
-      console.log("进入设置", e);
+    setup: function (e,index) {
+      this.$emit("setup", e,index);
+      console.log("进入设置", e,index);
     },
   },
 };

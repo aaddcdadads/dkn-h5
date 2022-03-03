@@ -2,9 +2,14 @@
   <view class="charts-box">
     <qiun-data-charts
       type="pie"
-      :rotate="rotate"
+      :ontap="ontap"
+      :ontouch="ontouch"
+      :onmouse="onmouse"
       :chartData="chartData"
       :opts="chartDeploy"
+      @complete="onComplete"
+      @getIndex="getIndex"
+      @click="onClick"
     />
   </view>
 </template>
@@ -12,6 +17,27 @@
 export default {
   name: "HmColumnCharts",
   props: {
+    /**
+     * 监听点击事件
+     */
+    ontap: {
+      type: Boolean,
+      default: true,
+    },
+    /**
+     * 监听拖动事件
+     */
+    ontouch: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 监听滑动事件
+     */
+    onmouse: {
+      type: Boolean,
+      default: true,
+    },
     /**
      * 宽度
      */
@@ -25,13 +51,6 @@ export default {
     height: {
       type: String,
       default: "300rpx",
-    },
-    /**
-     * 横屏模式
-     */
-    rotate: {
-      type: Boolean,
-      default: false,
     },
     /**
      * 图表数据
@@ -107,8 +126,17 @@ export default {
     this.cHeight = this.$getCssUnit(this.height);
   },
   methods: {
+    onComplete(e) {
+      this.$emit("complete", e);
+      console.log(e);
+    },
     onClick(e) {
       this.$emit("click", e);
+      console.log(e);
+    },
+    getIndex(e) {
+      this.$emit("getIndex", e);
+      console.log(e);
     },
   },
 };
