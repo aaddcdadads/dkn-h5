@@ -325,6 +325,13 @@
             }
         },
         {
+            "path": "components/built-in/qiun-data-charts/testCharts",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "components/built-in/qiun-data-charts/HmColumnCharts",
             "style": {
                 "navigationBarTitleText": "",

@@ -1,183 +1,151 @@
 <template>
-  <view @click="onClick"
-    ><text>{{ cText }}</text>
-    <u-icon name="arrow-down"></u-icon>
+  <view class="tag-item-box">
+    <view class="tag-item" v-for="(item, index) in cRadios" :key="index">
+      <u-tag
+        :text="item.text"
+        :name="index"
+        :bgColor="bgColor"
+        :color="color"
+        :class="[{ highBigBox: index == activeindex }]"
+        @click="radioClick(item, index)"
+      >
+      </u-tag>
+    </view>
   </view>
-  <u-picker
-    v-model="cShow"
-    :mode="mode"
-    :title="title"
-    :confirm-text="confirmText"
-    :confirm-color="confirmColor"
-    :cancel-text="cancelText"
-    :cancel-color="cancelColor"
-    :params="params"
-    :mask-close-able="maskCloseAble"
-    :start-year="startYear"
-    :end-year="endYear"
-    :show-time-tag="showTimeTag"
-    @confirm="onConfirm"
-    @cancel="onCancel"
-  ></u-picker>
 </template>
 <script>
 export default {
-  name: "timeDownPicker",
   props: {
     /**
-     * 文字
+     * 间距
      */
-    text: {
+    space: {
       type: String,
-      default: "2022-02-22",
+      default: "12px",
     },
     /**
-     * 是否显示
-     */
-    show: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * 类型
-     * @type Enum
-     * @default time
-     * @options ["time", "region"]
-     */
-    mode: {
-      type: String,
-    },
-    /**
-     * 标题文字
-     */
-    title: {
-      type: String,
-      default: "时间",
-    },
-    /**
-     * 确认按钮文字
-     */
-    confirmText: {
-      type: String,
-      default: "确认",
-    },
-    /**
-     * 确认按钮颜色
+     * 背景颜色
      * @type Color
      */
-    confirmColor: {
+    bgColor: {
       type: String,
-      default: "#2979ff",
+      default: "#ffffff",
     },
     /**
-     * 取消按钮文字
-     */
-    cancelText: {
-      type: String,
-      default: "取消",
-    },
-    /**
-     * 取消按钮颜色
+     * 变化背景颜色
      * @type Color
      */
-    cancelColor: {
+    highBgColor: {
       type: String,
-      default: "#606266",
+      default: "rgb(255,255,0)",
     },
     /**
-     * 显示参数
+     * 变化文字颜色
+     * @type Color
      */
-    params: {
+    highColor: {
+      type: String,
+      default: "rgb(255,0,0)",
+    },
+    /**
+     * 字体颜色
+     * @type Color
+     */
+    color: {
+      type: String,
+      default: "#000000",
+    },
+    /**
+     * 数据项
+     */
+    radios: {
       type: Object,
       default: function () {
-        return {
-          //时间参数
-          year: true,
-          month: true,
-          day: true,
-          hour: false,
-          minute: false,
-          second: false,
-          timestamp: false,
-          //地区参数
-          province: false,
-          city: false,
-          area: false,
-        };
+        return [
+          {
+            text: "123345677",
+            checked: true,
+          },
+          {
+            text: "124",
+            checked: false,
+          },
+          {
+            text: "125",
+            checked: false,
+          },
+        ];
       },
     },
-    /**
-     * 点击遮罩关闭
-     */
-    maskCloseAble: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * 开始年份
-     */
-    startYear: {
-      type: Number,
-      default: 1950,
-    },
-    /**
-     * 结束年份
-     */
-    endYear: {
-      type: Number,
-      default: 2050,
-    },
-    /**
-     * 时间中文提示
-     */
-    showTimeTag: {
-      type: Boolean,
-      default: true,
-    },
-  },
-  data() {
-    return {
-      cText: "2022-02-22",
-      cShow: false,
-    };
   },
   watch: {
-    show(val) {
-      this.cShow = val;
+    radios(value) {
+      this.cRadios = value;
     },
-    cShow(value) {
-      if (value == false) this.onCancel();
+    space(value) {
+      this.spacing = this.getCssUnit(value);
     },
-    text(value) {
-      this.cText = value;
+    highBgColor(value) {
+      this.HighBgColor = value;
+    },
+    highColor(value) {
+      this.HighColor = value;
     },
   },
   mounted() {
-    this.cText = this.text;
-    this.cShow = this.show;
+    this.cRadios = this.radios;
+    this.HighBgColor = this.highBgColor;
+    this.HighColor = this.highColor;
+    this.spacing = this.getCssUnit(this.space);
+  },
+  data() {
+    return {
+      HighColor: "",
+      HighBgColor:"",
+      spacing: "",
+      activeindex: null,
+      cRadios: [],
+      ind: -1,
+    };
   },
   methods: {
-    onClick(e) {
-      this.$emit("click", e);
-      this.cShow = !this.cShow;
-      console.log("click,e", e);
+    getCssUnit(value) {
+      if (isNaN(Number(value))) {
+        return value;
+      }
+      return `${value}px`;
     },
-    onConfirm(e) {
-      this.$emit("confirm", e);
-      var y, m, d, time;
-      y = e["year"];
-      m = e["month"];
-      d = e["day"];
-      time = y + "年" + m + "月" + d + "日";
-      this.cText = time;
-      console.log("confirm,e", time, this.cText);
-    },
-    onCancel() {
-      this.cShow = false;
-      this.$emit("update:show", this.cShow);
-      this.$emit("cancel");
-      console.log("cancel,e");
+    radioClick(e, index) {
+      this.$emit("click", e, index);
+      if (this.ind === index) {
+        this.activeindex = null;
+        this.ind = false;
+      } else {
+        this.activeindex = index;
+        this.ind = index;
+      }
     },
   },
 };
 </script>
+<style lang="less">
+.tag-item-box {
+  display: flex;
+  flex-direction: row;
+}
+.tag-item {
+  margin-right: v-bind(spacing);
+  display: inline-block;
+}
+.tag-item:last-child {
+  margin-right: 0px;
+  display: inline-block;
+}
+.tag-item /deep/ .u-mode-light-primary {
+  border: none;
+}
+.highBigBox {
+  background-color: v-bind(HighBgColor) !important;
+  color: v-bind(HighColor) !important;
+}
+</style>

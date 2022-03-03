@@ -2,9 +2,9 @@
   <view class="charts-box">
     <qiun-data-charts
       type="pie"
-      :chartData="chartData"
       :rotate="rotate"
-      background="none"
+      :chartData="chartData"
+      :opts="chartDeploy"
     />
   </view>
 </template>
@@ -66,6 +66,32 @@ export default {
               ],
             },
           ],
+        };
+      },
+    },
+    /**
+     * 图表配置
+     */
+    chartDeploy: {
+      type: Object,
+      default: function () {
+        return {
+          //  此方式调用组件chartData需自行按图表类型需求的数据格式拼接
+          //  配置参数请用在线生成工具(http://demo.ucharts.cn/)生成
+          color: ["#1890FF", "#91CB74", "#FAC858", "#EE6666", "#73C0DE"],
+          extra: {
+            pie: {
+              activeOpacity: 0.5,
+              activeRadius: 10,
+              offsetAngle: 0,
+              customRadius: 0,
+              labelWidth: 15,
+              border: true,
+              borderWidth: 3,
+              borderColor: "#FFFFFF",
+              linearType: "none",
+            },
+          },
         };
       },
     },
