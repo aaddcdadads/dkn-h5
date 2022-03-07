@@ -1,6 +1,6 @@
 <template>
   <view class="hm-bg-text">
-    <text class="font1">{{ text }}</text>
+    <text class="font1" @click="onClick">{{ text }}</text>
   </view>
 </template>
 
@@ -89,7 +89,7 @@ export default {
       return `${value}px`;
     },
     onClick() {
-      this.$emit("click");
+      this.$emit("onClick");
     },
   },
 };
