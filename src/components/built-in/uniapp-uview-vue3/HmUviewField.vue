@@ -15,6 +15,7 @@
     :input-align="inputAlign"
     :maxlength="maxlength"
     :icon-color="iconColor"
+    :password="password"
     :required="required"
     :focus="focus"
     :disabled="disabled"

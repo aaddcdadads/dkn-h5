@@ -9,7 +9,8 @@
       icon="level"
       labelWidth="160"
       rightIcon="woman"
-      type="textarea"
+      type="text"
+      :password="true"
       @afterInput="onInput1"
     ></hm-uview-field>
   </view>
