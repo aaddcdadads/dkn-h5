@@ -37,6 +37,7 @@ export default {
      */
     value: {
       type: String,
+      default: "",
     },
     /**
      * 输入框类型

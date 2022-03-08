@@ -10,6 +10,7 @@
       labelWidth="160"
       rightIcon="woman"
       type="text"
+      :clearable="true"
       :password="true"
       @afterInput="onInput1"
     ></hm-uview-field>
