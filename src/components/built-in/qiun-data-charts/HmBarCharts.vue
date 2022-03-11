@@ -1,7 +1,7 @@
 <template>
   <view class="charts-box">
     <qiun-data-charts
-      :type="type"
+      type="bar"
       :chartData="chartData"
       :ontap="ontap"
       :ontouch="ontouch"
@@ -13,10 +13,9 @@
     />
   </view>
 </template>
-
 <script>
 export default {
-  name: "HmQiunCharts",
+  name: "HmColumnCharts",
   props: {
     /**
      * 监听点击事件
@@ -38,15 +37,6 @@ export default {
     onmouse: {
       type: Boolean,
       default: true,
-    },
-    /**
-     * 图表类型
-     * @type Enum
-     * @options ["line", "pie", "ring", "rose", "word", "funnel", "map", "arcbar", "column", "bar", "area", "radar", "gauge", "candle", "mix", "tline", "tarea", "scatter", "bubble"]
-     */
-    type: {
-      type: String,
-      default: "line",
     },
     /**
      * 宽度
@@ -72,16 +62,12 @@ export default {
           categories: ["2016", "2017", "2018", "2019", "2020", "2021"],
           series: [
             {
-              name: "成交量A",
-              data: [35, 8, 25, 37, 4, 20],
+              name: "目标值",
+              data: [35, 36, 31, 33, 13, 34],
             },
             {
-              name: "成交量B",
-              data: [70, 40, 65, 100, 44, 68],
-            },
-            {
-              name: "成交量C",
-              data: [100, 80, 95, 150, 112, 132],
+              name: "完成量",
+              data: [18, 27, 21, 24, 6, 28],
             },
           ],
         };
@@ -97,7 +83,7 @@ export default {
           //  此方式调用组件chartData需自行按图表类型需求的数据格式拼接
           //  配置参数请用在线生成工具(http://demo.ucharts.cn/)生成
           //  较完整的默认配置
-          type: "line",
+          type: "bar",
           canvasId: "",
           canvas2d: false,
           background: "none",
@@ -115,7 +101,7 @@ export default {
             "#9A60B4",
             "#ea7ccc",
           ],
-          padding: [15, 10, 0, 15],
+          padding: [15, 30, 0, 5],
           rotate: false,
           errorReload: true,
           fontSize: 13,
@@ -129,15 +115,15 @@ export default {
           tapLegend: true,
           xAxis: {
             disabled: false,
-            axisLine: true,
+            axisLine: false,
             axisLineColor: "#CCCCCC",
             calibration: false,
             fontColor: "#666666",
             fontSize: 13,
             rotateLabel: false,
             itemCount: 5,
-            boundaryGap: "center",
-            disableGrid: true,
+            boundaryGap: "justify",
+            disableGrid: false,
             gridColor: "#CCCCCC",
             gridType: "solid",
             dashLength: 4,
@@ -146,14 +132,15 @@ export default {
             scrollAlign: "left",
             scrollColor: "#A6A6A6",
             scrollBackgroundColor: "#EFEBEF",
+            min: 0,
             format: "",
           },
           yAxis: {
             disabled: false,
             disableGrid: false,
             splitNumber: 5,
-            gridType: "dash",
-            dashLength: 2,
+            gridType: "solid",
+            dashLength: 8,
             gridColor: "#CCCCCC",
             padding: 10,
             showTitle: false,
@@ -175,9 +162,19 @@ export default {
             itemGap: 10,
           },
           extra: {
-            line: {
-              type: "straight",
-              width: 2,
+            bar: {
+              type: "group",
+              width: 30,
+              seriesGap: 2,
+              categoryGap: 3,
+              barBorderCircle: false,
+              linearType: "none",
+              linearOpacity: 1,
+              colorStop: 0,
+              activeBgColor: "#000000",
+              activeBgOpacity: 0.08,
+              meterBorde: 1,
+              meterFillColor: "#FFFFFF",
             },
             tooltip: {
               showBox: true,
