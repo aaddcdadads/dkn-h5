@@ -1,9 +1,20 @@
 <template>
+  <!-- #ifdef H5 -->
   <view class="t-box" @mouseup="touchend($event, 0)" @mouseleave="touchend($event, 0)">
+  <!-- #endif -->
+  <!-- #ifndef H5 -->
+  <view class="t-box">
+  <!-- #endif -->
+  <!-- <view class="t-box" @mouseup="touchend($event, 0)" @mouseleave="touchend($event, 0)"> -->
     <view class="t-color__box" :style="{ background: 'rgb(' + bgcolor.r + ',' + bgcolor.g + ',' + bgcolor.b + ')'}">
+      <!-- #ifdef H5 -->
       <view class="t-background boxs" 
-      @mousedown="touchstart($event, 0)"  @mousemove="touchmove($event, 0)" @mouseup="touchend($event, 0)"
+      @mousedown="touchstart($event, 0)"  @mousemove="touchmove($event, 0)" @mouseup="touchend($event, 0)">
+      <!-- #endif -->
+      <!-- #ifndef H5 -->
+      <view class="t-background boxs" 
       @touchstart="touchstart($event, 0)" @touchmove="touchmove($event, 0)" @touchend="touchend($event, 0)">
+      <!-- #endif -->
         <view class="t-color-mask"></view>
         <view class="t-pointer" :style="{ top: site[0].top - 8 + 'px', left: site[0].left - 8 + 'px' }"></view>
       </view>
@@ -13,16 +24,26 @@
         <view class="t-control__color-content" :style="{ background: 'rgba(' + rgba.r + ',' + rgba.g + ',' + rgba.b + ',' + rgba.a + ')' }"></view>
       </view>
       <view class="t-control-box__item">
+        <!-- #ifdef H5 -->
         <view class="t-controller boxs" 
-        @mousedown="touchstart($event, 1)"  @mousemove="touchmove($event, 1)" @mouseup="touchend($event, 1)"
+        @mousedown="touchstart($event, 1)"  @mousemove="touchmove($event, 1)" @mouseup="touchend($event, 1)">
+        <!-- #endif -->
+        <!-- #ifndef H5 -->
+        <view class="t-controller boxs" 
         @touchstart="touchstart($event, 1)" @touchmove="touchmove($event, 1)" @touchend="touchend($event, 1)">
+        <!-- #endif -->
           <view class="t-hue">
             <view class="t-circle" :style="{ left: site[1].left - 12 + 'px' }"></view>
           </view>
         </view>
+        <!-- #ifdef H5 -->
         <view class="t-controller boxs" 
-        @mousedown="touchstart($event, 2)"  @mousemove="touchmove($event, 2)" @mouseup="touchend($event, 2)"
+        @mousedown="touchstart($event, 2)"  @mousemove="touchmove($event, 2)" @mouseup="touchend($event, 2)">
+        <!-- #endif -->
+        <!-- #ifndef H5 -->
+        <view class="t-controller boxs" 
         @touchstart="touchstart($event, 2)" @touchmove="touchmove($event, 2)" @touchend="touchend($event, 2)">
+        <!-- #endif -->
           <view class="t-transparency" :style="{
             background: `linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(${rgba.r}, ${rgba.g}, ${rgba.b}, 1))`
           }">
@@ -166,6 +187,7 @@ export default {
       this.setColorBySelect(item)
     },
     touchstart(e, index) {
+      console.log('e',e)
       const {
         pageX,
         pageY
@@ -204,7 +226,6 @@ export default {
         height
       } = this.position[index];
       // 设置最大最小值
-
       this.site[index].left = Math.max(0, Math.min(parseInt(x - left), width));
       if (index === 0) {
         this.site[index].top = Math.max(0, Math.min(parseInt(y - top), height));
