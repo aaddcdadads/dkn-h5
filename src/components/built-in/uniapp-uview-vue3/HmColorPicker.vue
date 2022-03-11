@@ -56,9 +56,10 @@
       </template>
       <view class="t-result__item t-select" role="button" aria-label="Change another color definition" @click="select">
         <view class="vc-chrome-toggle-icon">
-          <svg style="width:24px; height:24px" viewBox="0 0 24 24">
+          <image style="width:24px; height:24px" src="./img/color-switch.png" />
+          <!-- <svg style="width:24px; height:24px" viewBox="0 0 24 24">
             <path fill="#333" d="M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z" />
-          </svg>
+          </svg> -->
         </view>
       </view>
     </view>
@@ -128,7 +129,10 @@ export default {
     this.hex = this.value;
   },
   mounted(){
-    this.getSelectorQuery()
+    let self = this
+    self.$nextTick(() => {
+      self.getSelectorQuery()
+    })
   },
   watch:{
     hex(val){
