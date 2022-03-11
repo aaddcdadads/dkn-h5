@@ -610,6 +610,13 @@
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
+        },
+        {
+            "path": "pages/test/TestHmColorPicker",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
         }
     ],
     "globalStyle": {
@@ -640,6 +647,11 @@
             {
 				"name": "HmMap",
 				"path": "components/built-in/uniapp/HmMap",
+				"query": ""
+			},
+            {
+				"name": "TestHmColorPicker",
+				"path": "pages/test/TestHmColorPicker",
 				"query": ""
 			}
 		]
