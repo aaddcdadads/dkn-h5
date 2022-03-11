@@ -313,6 +313,14 @@
                 "isBuiltIn": true
             },
             {
+                "name": "HmBarCharts",
+                "title": "条状图",
+                "importPath": "built-in/qiun-data-charts/HmBarCharts",
+                "imgUrl": "built-in/qiun-data-charts/img/HmBarCharts.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
                 "name": "HmColumnCharts",
                 "title": "柱状图",
                 "importPath": "built-in/qiun-data-charts/HmColumnCharts",
