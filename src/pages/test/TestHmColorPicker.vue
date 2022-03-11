@@ -1,20 +1,26 @@
 <template>
 	<view>
 		<hm-color-picker
-		
 		></hm-color-picker>
-		<!-- <hm-color-picker
-			:value="value"
+		<br/>
+		<hm-color-picker
+			v-model:value="value"
+			:width="300"
 			@colorChange="colorChange"
-		></hm-color-picker> -->
+		></hm-color-picker>
+		{{value}}
 	</view>
 </template>
 
 <script>
+import HmColorPicker from '@/components/built-in/uniapp-uview-vue3/HmColorPicker.vue';
 export default {
+	components: { 
+		HmColorPicker
+	},
 	data() {
 		return {
-			value: '#693939FF'
+			value: '#693939'
 		};
 	},
 	methods:{
