@@ -1,5 +1,5 @@
 <template>
-  <view class="hm-bg-card" v-show="!hidden" :style="{'background-image': `url('${backgroundImage}')`}">
+  <view class="hm-bg-card" v-if="!hidden" :style="{'background-image': `url('${backgroundImage}')`}">
     <slot></slot>
   </view>
 </template>

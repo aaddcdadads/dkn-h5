@@ -1,13 +1,15 @@
 <template>
 	<view>
-		<hm-color-picker
-		></hm-color-picker>
+		<!-- <hm-color-picker
+		></hm-color-picker> -->
 		<br/>
-		<hm-color-picker
-			v-model:value="value"
-			:width="300"
-			@colorChange="colorChange"
-		></hm-color-picker>
+		<view>
+			<hm-color-picker
+				v-model:value="value"
+				:width="300"
+				@colorChange="colorChange"
+			></hm-color-picker>
+		</view>
 		{{value}}
 	</view>
 </template>
@@ -20,7 +22,7 @@ export default {
 	},
 	data() {
 		return {
-			value: '#693939'
+			value: '#693939',
 		};
 	},
 	methods:{
