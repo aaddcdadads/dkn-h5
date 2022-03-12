@@ -1,26 +1,83 @@
 <template>
-  <view class="inbox flex-row">
-    <view
-      v-for="(item, index) in cSeceneList"
-      :key="item.index"
-      class="listbox"
-      :class="[{ highBigBox: index == activeindex }]"
-      @click="Highlight(item, index)"
-      @touchstart="getTouchStart(item)"
-      @touchend="getTouchEnd(item)"
-    >
-      <view class="flex-col bigbox">
-        <view
-          v-show="setup1"
-          class="img_tool"
-          @click.stop=""
-          @click="setup(item,index)"
-        ></view>
-        <checkbox value="cb" v-show="setup2" class="checkbox" @click.stop="" />
-        <view class="textbox flex-col">
-          <text decode="decode" class="boldtext">{{ item.scenename }}</text>
-          <text decode="decode" class="putext">{{ item.scenealert }}</text>
+  <view class="inbox flex-col">
+    <view class="flex-row topbox">
+      <picker
+        :title="title"
+        :value="cIndex"
+        :range="array"
+        @change="pickerChange"
+        @confirm="pickerConfirm"
+        @cancel="pickerCancel"
+      >
+        <view class="toptext">
+          <text>{{ array[cIndex].substring(2, 6) }}</text>
+          <image
+            src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/612c9040718459001197fea4/61c527e72ffc780012400355/16403107674901033051.png"
+            class="img_arrow"
+          />
         </view>
+      </picker>
+    </view>
+    <view class="flex-col">
+      <view
+        v-for="(item, index) in cTimingList"
+        :key="item.index"
+        class="listbox flex-row"
+        @click="timingClick(item, index)"
+        @touchstart="getTouchStartCond(item)"
+        @touchend="getTouchEndCond(item)"
+      >
+        <view class="halfw lefttext">
+          <image
+            src="https://project-user-resource-1256085488.cos.ap-guangzhou.myqcloud.com/612c9040718459001197fea4/61c527e72ffc780012400355/16403107726929788831.png"
+            v-show="condShow"
+            class="img_clear"
+            @click.stop=""
+            @click="condclearLine(index)"
+          />
+          <text decode="decode">{{ item.name }}</text>
+        </view>
+        <view class="halfw righttext">
+          <text decode="decode">{{ item.action }}</text>
+        </view>
+      </view>
+      <view class="flex-row addbox">
+        <text
+          decode="decode"
+          class="lefttext addtext"
+          @click="condaddLine(item)"
+          >继续添加</text
+        >
+      </view>
+    </view>
+    <view class="hrbox"><hr /></view>
+    <view class="flex-col bottom">
+      <view class="topbox">
+        <text decode="decode" class="toptext">就执行:</text>
+      </view>
+      <view
+        v-for="(cont, seq) in cActionList"
+        :key="cont.seq"
+        class="listbox flex-row"
+        @click="actionClick(cont, seq)"
+        @touchstart="getTouchStartAct(cont)"
+        @touchend="getTouchEndAct(cont)"
+      >
+        <view class="lefttext">
+          <image
+            src="https://project-user-resource-1256085488.cos.ap-guangzhou.myqcloud.com/612c9040718459001197fea4/61c527e72ffc780012400355/16403107726929788831.png"
+            v-show="actShow"
+            class="img_clear"
+            @click.stop=""
+            @click="actclearLine(seq)"
+          />
+          <text decode="decode">{{ cont.imact }}</text>
+        </view>
+      </view>
+      <view class="flex-row addbox">
+        <text decode="decode" class="lefttext addtext" @click="actaddLine(cont)"
+          >继续添加</text
+        >
       </view>
     </view>
   </view>
@@ -28,165 +85,201 @@
 
 <script>
 export default {
-  name: "sceneCard",
+  name: "timingpage",
   props: {
     /**
-     * 数据内容
+     * 条件默认值
      */
-    seceneList: {
+    ind: {
+      type: Number,
+      default: 1,
+    },
+    /**
+     * 条件删除图标
+     */
+    condclear: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 动作删除图标
+     */
+    actclear: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 条件数据
+     */
+    timingList: {
       type: Array,
       default: function () {
         return [
           {
-            id: "1",
-            scenename: "场景名称1",
-            scenealert: "场景位置说明",
+            id: "123",
+            name: "定时",
+            action: "每天 7:00",
           },
           {
-            id: "2",
-            scenename: "场景名称2",
-            scenealert: "场景位置说明",
+            id: "133",
+            name: "灯21",
+            action: "打开",
           },
           {
-            id: "3",
-            scenename: "场景名称2",
-            scenealert: "场景位置说明",
-          },
-          {
-            id: "4",
-            scenename: "场景名称2",
-            scenealert: "场景位置说明",
+            id: "333",
+            name: "灯22",
+            action: "关闭",
           },
         ];
       },
     },
     /**
-     * 卡片背景颜色
-     * @type Color
+     * 动作数据
      */
-    listbgcolor: {
-      type: String,
-      default: "#ffffff",
-    },
-    /**
-     * 粗体字大小
-     */
-    btextsize: {
-      type: String,
-      default: "16px",
-    },
-    /**
-     * 描述字大小
-     */
-    mtextsize: {
-      type: String,
-      default: "12px",
+    actionList: {
+      type: Array,
+      default: function () {
+        return [
+          {
+            id: "123",
+            imact: "灯全开",
+          },
+        ];
+      },
     },
   },
   watch: {
-    bgcolor(value) {
-      this.bgcolor = value;
+    ind(val) {
+      this.cIndex = val;
     },
-    boldtextsize(value) {
-      this.boldtextsize = this.getCssUnit(value);
+    condclear(val){
+this.condShow = val;
     },
-    putextsize(value) {
-      this.putextsize = this.getCssUnit(value);
-    },
-    seceneList(value) {
-      this.cSeceneList = value;
-    },
+    actclear(val){
+this.actShow = val;
+    }
   },
   mounted() {
-    this.cSeceneList = this.seceneList;
-    this.bgcolor = this.listbgcolor;
-    this.boldtextsize = this.getCssUnit(this.textsize);
-    this.putextsize = this.getCssUnit(this.mtextsize);
+    this.cIndex = this.ind;
   },
   data() {
     return {
+      title: "请选择多条件关系",
+      array: ["如果同时满足时", "如果任意满足时"],
+      cIndex: 1,
+      condShow:false,
+      actShow :false,
       timeOutEvent: 0,
-      bgcolor: "", //背景颜色
-      boldtextsize: "", //粗体字大小
-      putextsize: "", //描述字大小
-      setup1: true,
-      setup2: false,
-      activeindex: null,
-      ind: -1,
-      cSeceneList: [
+      cTimingList: [
         {
-          id: "1",
-          scenename: "场景名称1",
-          scenealert: "场景位置说明",
+          id: "123",
+          name: "定时",
+          action: "每天 7:00",
         },
         {
-          id: "2",
-          scenename: "场景名称2",
-          scenealert: "场景位置说明",
+          id: "133",
+          name: "灯21",
+          action: "打开",
         },
         {
-          id: "3",
-          scenename: "场景名称2",
-          scenealert: "场景位置说明",
+          id: "333",
+          name: "灯22",
+          action: "关闭",
         },
+      ],
+      cActionList: [
         {
-          id: "4",
-          scenename: "场景名称2",
-          scenealert: "场景位置说明",
+          id: "123",
+          imact: "灯全开",
         },
       ],
     };
   },
   methods: {
-    getCssUnit(value) {
-      if (isNaN(Number(value))) {
-        return value;
-      }
-      return `${value}px`;
+    pickerChange: function (e) {
+      this.$emit("pickerChange", e);
+      console.log("picker发送选择改变，携带值为", e.detail.value);
+      this.cIndex = e.detail.value;
     },
-    Highlight: function (item, index) {
-      this.$emit("Highlight", item, index);
-      console.log("高亮事件");
-      if (this.ind === index) {
-        this.activeindex = null;
-        this.ind = false;
-      } else {
-        this.activeindex = index;
-        this.ind = index;
-      }
+    pickerConfirm: function (e) {
+      this.$emit("pickerConfirm", e);
     },
-    getTouchStart: function (item) {
+    pickerCancel: function (e) {
+      this.$emit("pickerCancel", e);
+    },
+    condclearLine(e) {
+      this.$emit("condclearLine", e);
+      console.log("条件,删除一行");
+    },
+    actclearLine(e) {
+      this.$emit("actclearLine", e);
+      console.log("动作,删除一行");
+    },
+    timingClick: function (item, index) {
+      this.$emit("timingClick", item, index);
+      console.log("触发条件点击事件", item, index);
+    },
+    actionClick: function (cont, seq) {
+      this.$emit("actionClick", cont, seq);
+      console.log("触发动作点击事件", cont, seq);
+    },
+    condaddLine(e) {
+      this.$emit("condaddLine", e);
+      console.log("添加一行");
+    },
+    actaddLine(e) {
+      this.$emit("actaddLine", e);
+      console.log("添加一行");
+    },
+    getTouchStartCond: function (item) {
+      //条件
       var self = this;
       this.timeOutEvent = setTimeout(function () {
         console.log("进入长按");
-        self.longPress(item);
+        self.condlongtap(item);
       }, 500);
     },
-    getTouchEnd(item) {
+    getTouchStartAct: function (item) {
+      //动作
+      var self = this;
+      this.timeOutEvent = setTimeout(function () {
+        console.log("进入长按");
+        self.actlongtap(item);
+      }, 500);
+    },
+    getTouchEndCond(item) {
       clearTimeout(this.timeOutEvent);
     },
-    longPress(e) {
-      this.$emit("longPress",e);
+    getTouchEndAct(item) {
+      clearTimeout(this.timeOutEvent);
+    },
+    condlongtap(e) {
+      this.$emit("condlongtap", e);
       this.timeOutEvent = 0;
-      console.log("执行的内容");
-      this.setup1 = false;
-      this.setup2 = true;
-    },
-    longtap: function (e) {
-      this.$emit("longtap");
       console.log("进入长按", e);
-      this.setup1 = false;
-      this.setup2 = true;
     },
-    setup: function (e,index) {
-      this.$emit("setup", e,index);
-      console.log("进入设置", e,index);
+    actlongtap(e) {
+      this.$emit("actlongtap", e);
+      this.timeOutEvent = 0;
+      console.log("进入长按", e);
     },
+  },
+  watch: {
+    timingList(value) {
+      this.cTimingList = value;
+    },
+    actionList(value) {
+      this.cActionList = value;
+    },
+  },
+  mounted() {
+    this.cTimingList = this.timingList;
+    this.cActionList = this.actionList;
   },
 };
 </script>
 
-<style lang="less">
+<style>
 page {
   width: 100vw;
   height: 100vh;
@@ -212,93 +305,78 @@ text {
   flex-direction: column;
 }
 
-.img_tool {
-  width: 24px;
-  height: 22px;
-  margin-left: calc(100% - 24px);
-  display: block;
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  z-index: 9;
-  background: url("https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/612c9040718459001197fea4/61c527e72ffc780012400355/16403107674708847028.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-.checkbox {
-  width: 24px;
-  height: 22px;
-  margin-left: calc(100% - 24px);
-  display: block;
-  position: absolute;
-  top: 2px;
-  right: 2px;
-}
-.inbox {
-  background-color: transparent;
-  width: 100%;
-  padding: 12px 0px;
+.halfw {
+  width: 50%;
 }
 
-.listbox {
-  width: 150px;
-  height: 92px;
-  background-color: v-bind(bgcolor);
-  border-radius: 4px;
-  padding: 12px;
-  margin-right: 12px;
-}
-
-.bigbox {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.highBigBox {
-  background-color: cyan;
-  background-image: linear-gradient(225deg, #74dee0 0%, #23bec5 100%);
-  .boldtext {
-    color: #ffffff;
-  }
-  .putext {
-    color: #ffffff;
-  }
-  .img_tool {
-    width: 24px;
-    height: 22px;
-    margin-left: calc(100% - 24px);
-    display: block;
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    z-index: 9;
-    background: url("https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/612c9040718459001197fea4/61c527e72ffc780012400355/16403107674643339674.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-}
-
-.boldtext {
-  height: 34px;
-  line-height: 22px;
-  font-size: v-bind(boldtextsize);
-  color: #000000;
-  font-weight: 500;
-  padding-top: 10px;
-}
-
-.putext {
-  width: 100%;
-  max-height: 34px;
-  overflow: auto;
-  line-height: 17px;
-  font-size: v-bind(putextsize);
-  color: #8c8c8c;
+text {
+  font-size: 16px;
+  color: #333333;
+  line-height: 24px;
   font-weight: 400;
 }
 
-/deep/ .uni-checkbox-input {
-  border-radius: 50% !important;
+.lefttext {
+  text-align: left;
+}
+
+.righttext {
+  text-align: right;
+}
+
+.inbox {
+  width: 100%;
+  min-width: 200px;
+  padding: 12px;
+  background-color: #ffffff;
+}
+
+.listbox {
+  margin: 10px 0px;
+  min-height: 20px;
+}
+
+.topbox {
+  margin: 6px 0px;
+}
+
+.addbox {
+  margin-top: 14px;
+}
+.hrbox {
+  margin: 32px 0px;
+  padding: 0px 32px;
+}
+.hrbox hr {
+  border: 0.5px solid #eeeeee;
+}
+.toptext {
+  font-size: 14px;
+  color: #666666;
+  line-height: 22px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.img_arrow {
+  width: 6px;
+  height: 12px;
+  margin: 0px 4px;
+  margin-top: 6px;
+}
+
+.img_clear {
+  width: 12px;
+  height: 12px;
+  margin-right: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.addtext {
+  font-size: 16px;
+  color: #999999;
+  line-height: 24px;
+  font-weight: 400;
 }
 </style>

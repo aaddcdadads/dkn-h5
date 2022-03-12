@@ -17,6 +17,13 @@
             }
         },
         {
+            "path": "pages/test/Testtest",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "pages/test/test",
             "style": {
                 "navigationBarTitleText": "",
