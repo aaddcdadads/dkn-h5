@@ -23,14 +23,14 @@
         v-for="(item, index) in cTimingList"
         :key="item.index"
         class="listbox flex-row"
-        @click="timingClick(item, index)"
+        @click="!showclear1 && timingClick(item, index)"
         @touchstart="getTouchStartCond(item)"
         @touchend="getTouchEndCond(item)"
       >
         <view class="halfw lefttext">
           <image
             src="https://project-user-resource-1256085488.cos.ap-guangzhou.myqcloud.com/612c9040718459001197fea4/61c527e72ffc780012400355/16403107726929788831.png"
-            v-show="condShow"
+            v-show="showclear1"
             class="img_clear"
             @click.stop=""
             @click="condclearLine(index)"
@@ -59,14 +59,14 @@
         v-for="(cont, seq) in cActionList"
         :key="cont.seq"
         class="listbox flex-row"
-        @click="actionClick(cont, seq)"
+        @click="!showclear2 && actionClick(cont, seq)"
         @touchstart="getTouchStartAct(cont)"
         @touchend="getTouchEndAct(cont)"
       >
         <view class="lefttext">
           <image
             src="https://project-user-resource-1256085488.cos.ap-guangzhou.myqcloud.com/612c9040718459001197fea4/61c527e72ffc780012400355/16403107726929788831.png"
-            v-show="actShow"
+            v-show="showclear2"
             class="img_clear"
             @click.stop=""
             @click="actclearLine(seq)"
@@ -80,6 +80,9 @@
         >
       </view>
     </view>
+    <view class="toastBox">
+      <u-toast ref="uToast"> </u-toast>
+    </view>
   </view>
 </template>
 
@@ -92,21 +95,7 @@ export default {
      */
     ind: {
       type: Number,
-      default: 1,
-    },
-    /**
-     * 条件删除图标
-     */
-    condclear: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * 动作删除图标
-     */
-    actclear: {
-      type: Boolean,
-      default: false,
+      default: 0,
     },
     /**
      * 条件数据
@@ -117,16 +106,19 @@ export default {
         return [
           {
             id: "123",
+            type: 0,
             name: "定时",
             action: "每天 7:00",
           },
           {
             id: "133",
+            type: 0,
             name: "灯21",
             action: "打开",
           },
           {
             id: "333",
+            type: 1,
             name: "灯22",
             action: "关闭",
           },
@@ -149,56 +141,65 @@ export default {
     },
   },
   watch: {
-    ind(val) {
-      this.cIndex = val;
+    ind(value) {
+      this.cIndex = value;
     },
-    condclear(val){
-this.condShow = val;
+    timingList(value) {
+      this.cTimingList = value;
     },
-    actclear(val){
-this.actShow = val;
-    }
-  },
-  mounted() {
-    this.cIndex = this.ind;
+    actionList(value) {
+      this.cActionList = value;
+    },
   },
   data() {
     return {
       title: "请选择多条件关系",
       array: ["如果同时满足时", "如果任意满足时"],
-      cIndex: 1,
-      condShow:false,
-      actShow :false,
+      cIndex: this.ind,
       timeOutEvent: 0,
-      cTimingList: [
-        {
-          id: "123",
-          name: "定时",
-          action: "每天 7:00",
-        },
-        {
-          id: "133",
-          name: "灯21",
-          action: "打开",
-        },
-        {
-          id: "333",
-          name: "灯22",
-          action: "关闭",
-        },
-      ],
-      cActionList: [
-        {
-          id: "123",
-          imact: "灯全开",
-        },
-      ],
+      showclear1: false,
+      showclear2: false,
+      cTimingList: [],
+      cActionList: [],
+      num: 0,
     };
   },
+  mounted() {
+    this.cIndex = this.ind;
+    this.cTimingList = this.timingList;
+    this.cActionList = this.actionList;
+    this.listChange(this.cIndex);
+  },
   methods: {
+    listChange() {
+      console.log("this.cIndex", this.cIndex);
+      let itemArr = [];
+      let i, str;
+      for (i = 0; i < this.cTimingList.length; i++) {
+        str = this.cTimingList[i]["type"];
+        if (str == "0") {
+          this.num++;
+        }
+        itemArr.push(str);
+      }
+      if (this.num > 1) {
+        this.cIndex = 1;
+      } else {
+        this.cIndex = this.cIndex;
+      }
+      console.log("this.cIndex", this.cIndex);
+    },
     pickerChange: function (e) {
       this.$emit("pickerChange", e);
-      console.log("picker发送选择改变，携带值为", e.detail.value);
+      if (this.num > 1 && e.detail.value == 0) {
+        e.detail.value = 1;
+        this.$refs.uToast.show({
+          title: "已有两个定时条件，无法同时满足",
+          type: "default",
+          duration: "1500",
+        });
+      }
+      console.log("picker发送选择改变,携带值为", e.detail.value, this.num);
       this.cIndex = e.detail.value;
     },
     pickerConfirm: function (e) {
@@ -232,7 +233,6 @@ this.actShow = val;
       console.log("添加一行");
     },
     getTouchStartCond: function (item) {
-      //条件
       var self = this;
       this.timeOutEvent = setTimeout(function () {
         console.log("进入长按");
@@ -240,7 +240,6 @@ this.actShow = val;
       }, 500);
     },
     getTouchStartAct: function (item) {
-      //动作
       var self = this;
       this.timeOutEvent = setTimeout(function () {
         console.log("进入长按");
@@ -256,25 +255,15 @@ this.actShow = val;
     condlongtap(e) {
       this.$emit("condlongtap", e);
       this.timeOutEvent = 0;
+      this.showclear1 = !this.showclear1;
       console.log("进入长按", e);
     },
     actlongtap(e) {
       this.$emit("actlongtap", e);
       this.timeOutEvent = 0;
+      this.showclear2 = !this.showclear2;
       console.log("进入长按", e);
     },
-  },
-  watch: {
-    timingList(value) {
-      this.cTimingList = value;
-    },
-    actionList(value) {
-      this.cActionList = value;
-    },
-  },
-  mounted() {
-    this.cTimingList = this.timingList;
-    this.cActionList = this.actionList;
   },
 };
 </script>
