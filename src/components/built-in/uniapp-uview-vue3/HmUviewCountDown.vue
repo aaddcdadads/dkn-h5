@@ -74,7 +74,7 @@ export default {
   },
   methods: {
     //开始
-    staet() {
+    start() {
       this.$refs.countDown.start();
     },
     //暂停
