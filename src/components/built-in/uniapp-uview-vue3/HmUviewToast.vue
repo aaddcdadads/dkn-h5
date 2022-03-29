@@ -5,34 +5,16 @@
 <script>
 export default {
   name: "HmUviewToast",
-  props: {
-    /**
-     * 属性配置
-     */
-    options: {
-      type: Object,
-      default: function () {
-        return {};
-      },
-    },
-  },
+  props: {},
   data() {
     return {};
   },
   mounted() {
     //this.showToast(this.options);
   },
-  watch: {
-    options: {
-      handler: function (value) {
-        this.showToast(value);
-      },
-      deep: true,
-    },
-  },
+  watch: {},
   methods: {
-    showToast(options) {
-      console.log("12121212");
+    show(options) {
       this.$refs.uToast.show(options);
     },
   },

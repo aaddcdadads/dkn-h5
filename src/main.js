@@ -11,7 +11,6 @@ import loadComponent from './utils/loadComponent';
 
 import "./mock/index.js";
 
-import message from './utils/message';
 
 import {
     getAction,
@@ -30,7 +29,6 @@ export function createApp() {
     app.config.globalProperties.$deleteAction = deleteAction;
     app.config.globalProperties.$putAction = putAction;
 
-    app.config.globalProperties.$message = message;
     app.config.globalProperties.$getCssUnit = function (value) {
         if (isNaN(Number(value))) {
             return value;

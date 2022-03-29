@@ -631,13 +631,6 @@
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
-        },
-        {
-            "path": "pages/test/TestMessage",
-            "style": {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
         }
     ],
     "globalStyle": {

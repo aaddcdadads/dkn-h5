@@ -373,6 +373,14 @@
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmScanCode.png",
                 "type": 0,
                 "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewToast",
+                "title": "消息提示",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewToast",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewToast.png",
+                "type": 0,
+                "isBuiltIn": true
             }
         ]
     },
