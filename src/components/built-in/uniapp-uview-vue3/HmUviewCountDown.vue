@@ -42,47 +42,23 @@ export default {
       type: String,
       default: "HH:mm:ss:SSS",
     },
-    /**
-     * 状态
-     * @type Enum
-     * @options ["start", "stop","info"]
-     */
-    countStatus: {
-      type: String,
-      default: "stop",
-    },
   },
   data() {
     return {};
   },
   mounted() {},
-  watch: {
-    countStatus(val) {
-      //开始
-      if (val == "start") {
-        this.$refs.countDown.start();
-      }
-      //暂停
-      if (val == "stop") {
-        this.$refs.countDown.pause();
-      }
-      //重置
-      if (val == "info") {
-        this.$refs.countDown.reset();
-      }
-    },
-  },
+  watch: {},
   methods: {
     //开始
     start() {
       this.$refs.countDown.start();
     },
     //暂停
-    stop() {
+    pause() {
       this.$refs.countDown.pause();
     },
     //重置
-    info() {
+    reset() {
       this.$refs.countDown.reset();
     },
     // 事件触发，每秒一次
