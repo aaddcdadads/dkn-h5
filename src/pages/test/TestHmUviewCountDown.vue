@@ -1,11 +1,12 @@
 <template>
   <!-- <hm-uview-button @click="click">123</hm-uview-button> -->
   <view>
-    <hm-uview-count-down
+    <!-- <hm-uview-count-down
       :countStatus="countStatus2"
       :autoStart="false"
-    ></hm-uview-count-down>
+    ></hm-uview-count-down> -->
     <hm-uview-count-down
+      ref="count"
       :timestamp="5400"
       format="mm:ss"
       :autoStart="autoStart"
@@ -41,15 +42,16 @@ export default {
     start() {
       //this.autoStart = true;
       //   this.$refs.countDown.start();
-      this.countStatus1 = "start";
-      this.countStatus2 = "start";
+      //this.countStatus1 = "start";
+      //this.countStatus2 = "start";
+      this.$refs.count.start();
       console.log("开始倒计时");
     },
     stop() {
-      this.autoStart = false;
+      //this.autoStart = false;
       //   this.$refs.countDown.start();
-      this.countStatus1 = "stop";
-      this.countStatus2 = "stop";
+      //this.countStatus1 = "stop";
+      //this.countStatus2 = "stop";
       console.log("开始倒计时");
     },
   },

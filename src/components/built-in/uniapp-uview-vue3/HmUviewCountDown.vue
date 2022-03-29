@@ -58,18 +58,33 @@ export default {
   mounted() {},
   watch: {
     countStatus(val) {
+      //开始
       if (val == "start") {
         this.$refs.countDown.start();
       }
+      //暂停
       if (val == "stop") {
         this.$refs.countDown.pause();
       }
+      //重置
       if (val == "info") {
         this.$refs.countDown.reset();
       }
     },
   },
   methods: {
+    //开始
+    staet() {
+      this.$refs.countDown.start();
+    },
+    //暂停
+    stop() {
+      this.$refs.countDown.pause();
+    },
+    //重置
+    info() {
+      this.$refs.countDown.reset();
+    },
     // 事件触发，每秒一次
     onChange(e) {
       //console.log("当前时间", e);
