@@ -460,9 +460,13 @@ export default {
 		 * 搜索
 		 */
 		search(val){
-			
+			// #ifdef H5
+			let url = '/ws/place/v1/suggestion'
+			// #endif
+			// #ifndef H5
 			let url = 'https://apis.map.qq.com/ws/place/v1/suggestion'
-
+			// #endif
+			
 			getAction(url, {
 				key: "423BZ-I6S3D-PVU4X-HH7XG-26MFJ-SGF7M",
 				// boundary: `nearby(${this.latitude},${this.longitude},1000,1)`,
