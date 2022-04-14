@@ -32,7 +32,7 @@ export default {
       console.log("打开相机");
       let self = this;
       uni.scanCode({
-        onlyFromCamera: onlyFromCamera,
+        onlyFromCamera: this.onlyFromCamera,
         success: function (res) {
           ///console.log(JSON.stringify(res));
           self.onDecode(res);
