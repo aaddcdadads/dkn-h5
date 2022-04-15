@@ -35,20 +35,27 @@ export default {
         onlyFromCamera: this.onlyFromCamera,
         success: function (res) {
           ///console.log(JSON.stringify(res));
-          self.onDecode(res);
+          self.onSuccess(res);
         },
         fail: function () {
-          self.onReturn();
+          self.onFail();
+        },
+        complete: function () {
+          self.onComplete();
         },
       });
     },
-    onDecode(res) {
+    onSuccess(res) {
       //console.log(res);
       this.$emit("success", res);
     },
-    onReturn() {
+    onFail(res) {
       //console.log("onReturn");
-      this.$emit("fail");
+      this.$emit("fail", res);
+    },
+    onComplete(res) {
+      //console.log("onReturn");
+      this.$emit("complete", res);
     },
   },
 };
