@@ -275,6 +275,14 @@
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmAutograph.png",
                 "type": 0,
                 "isBuiltIn": true
+            },
+            {
+                "name": "HmUviewCountDownInput",
+                "title": "倒计时输入框",
+                "importPath": "built-in/uniapp-uview-vue3/HmUviewCountDownInput",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewCountDownInput.png",
+                "type": 0,
+                "isBuiltIn": true
             }
         ]
     },
