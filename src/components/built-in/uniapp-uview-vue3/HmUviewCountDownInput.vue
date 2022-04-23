@@ -1,18 +1,22 @@
 <template>
   <view class="countDown">
-    <text decode="decode" class="titleBox" v-if="title">{{ title }}</text>
-    <input
+    <u-field
       class="inputBox"
+      :label="label"
+      :label-width="labelWidth"
+      :label-align="labelAlign"
       :placeholder="placeholder"
       type="text"
       v-model="cValue"
       :maxlength="maxlength"
+      :required="required"
       @input="onInput"
       @focus="onFocus"
       @blur="onBlur"
       @confirm="onConfirm"
       @keyboardheightchange="onKeyboard"
-    />
+      ><slot></slot
+    ></u-field>
     <button type="text" class="btnBox" @click="btnState != 2 && getClick()">
       <text decode="decode" v-if="btnState == 1">获取验证码</text>
       <u-count-down
@@ -34,9 +38,25 @@ export default {
     /**
      * 标题
      */
-    title: {
+    label: {
       type: String,
       default: "验证码:",
+    },
+    /**
+     * 标题宽度
+     */
+    labelWidth: {
+      type: String,
+      default: "130",
+    },
+    /**
+     * 标题对齐方式
+     * @type Enum
+     * @options ["left", "center", "right"]
+     */
+    labelAlign: {
+      type: String,
+      default: "left",
     },
     /**
      * 值
@@ -60,9 +80,19 @@ export default {
       type: Number,
       default: 4,
     },
+    /**
+     * 字体大小
+     */
     size: {
       type: String,
       default: "14px",
+    },
+    /**
+     * 必填
+     */
+    required: {
+      type: Boolean,
+      default: false,
     },
     /**
      * 倒计时
@@ -161,7 +191,6 @@ export default {
   flex-wrap: nowrap;
   align-items: center;
 }
-.titleBox,
 .inputBox,
 .btnBox {
   display: flex;
@@ -174,7 +203,7 @@ export default {
   font-size: v-bind(fontSize);
 }
 .inputBox {
-  width:60%;
+  width: 60%;
 }
 .btnBox {
   width: 24%;
