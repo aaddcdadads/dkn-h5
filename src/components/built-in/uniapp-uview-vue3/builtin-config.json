@@ -278,7 +278,7 @@
             },
             {
                 "name": "HmUviewCountDownInput",
-                "title": "倒计时输入框",
+                "title": "验证码",
                 "importPath": "built-in/uniapp-uview-vue3/HmUviewCountDownInput",
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewCountDownInput.png",
                 "type": 0,

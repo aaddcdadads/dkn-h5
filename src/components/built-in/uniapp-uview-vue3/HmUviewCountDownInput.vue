@@ -197,13 +197,8 @@ export default {
   height: 100%;
   align-items: center;
 }
-.titleBox {
-  width: 16%;
-  min-width: 80px;
-  font-size: v-bind(fontSize);
-}
 .inputBox {
-  width: 60%;
+  width: 76%;
 }
 .btnBox {
   width: 24%;
