@@ -29,10 +29,11 @@
 			class="map"
 			id="map"
 			ref="map"
+			:key="key"
 			:latitude="cLatitude"
 			:longitude="cLongitude"
 			:scale="scale"
-			:markers="markers"
+			:markers="cMarkers"
 			:polyline="polyline"
 			:circles="circles"
 			:polygons="polygons"
@@ -118,33 +119,7 @@ export default {
 		markers: {
 			type: Array,
 			default: function () {
-				return [
-					{
-						id: 1,
-						longitude: 116.397628,
-						latitude: 39.90925,
-						title: "测试标记点",
-						iconPath:
-							"https://block-design.oss-cn-shenzhen.aliyuncs.com/component-libs/uniapp/red-marker.png",
-						width: 32,
-						height: 32,
-						label: {
-							content: "测试标记点",
-							color: "red",
-							fontSize: 12,
-							anchorX: 16,
-							anchorY: -16,
-						},
-						callout: {
-							display: "BYCLICK",
-							content: "气泡内容",
-							color: "red",
-							fontSize: 28,
-							borderRadius: 5,
-							bgColor: "blue",
-						},
-					},
-				];
+				return [];
 			},
 		},
 		/**
@@ -153,34 +128,7 @@ export default {
 		polyline: {
 			type: Array,
 			default: function () {
-				return [
-					{
-						points: [
-							{
-								longitude: 116.397428,
-								latitude: 39.90765,
-							},
-							{
-								longitude: 116.397428,
-								latitude: 39.91065,
-							},
-							{
-								longitude: 116.397928,
-								latitude: 39.91065,
-							},
-							{
-								longitude: 116.397928,
-								latitude: 39.90765,
-							},
-							{
-								longitude: 116.397428,
-								latitude: 39.90765,
-							},
-						],
-						color: "#00FF00",
-						width: 2,
-					},
-				];
+				return [];
 			},
 		},
 		/**
@@ -189,16 +137,7 @@ export default {
 		circles: {
 			type: Array,
 			default: function () {
-				return [
-					{
-						longitude: 116.399428,
-						latitude: 39.90765,
-						strokeWidth: 2,
-						color: "rgba(120, 187, 255, 1)",
-						fillColor: "rgba(120, 187, 255, 0.3)",
-						radius: 60,
-					},
-				];
+				return [];
 			},
 		},
 		/**
@@ -207,35 +146,7 @@ export default {
 		polygons: {
 			type: Array,
 			default: function () {
-				return [
-					{
-						points: [
-							{
-								longitude: 116.398428,
-								latitude: 39.90765,
-							},
-							{
-								longitude: 116.398428,
-								latitude: 39.91065,
-							},
-							{
-								longitude: 116.398928,
-								latitude: 39.91065,
-							},
-							{
-								longitude: 116.398928,
-								latitude: 39.90765,
-							},
-							{
-								longitude: 116.398428,
-								latitude: 39.90765,
-							},
-						],
-						strokeWidth: 2,
-						strokeColor: "#0000FF",
-						fillColor: "#000000",
-					},
-				];
+				return [];
 			},
 		},
 		/**
@@ -363,15 +274,30 @@ export default {
 	},
 	data() {
 		return {
-			cLatitude: 0,
-			cLongitude: 0,
+			key: 0,
+			cLatitude: 39.90925,
+			cLongitude: 116.397628,
 			address: '',
 			cWidth: "100%",
 			cHeight: "500px",
 			searchView: false,
 			keyword: '',
-			addressList: []
+			addressList: [],
+			centerMarker: {
+				id: 1,
+				longitude: 116.397628,
+				latitude: 39.90925,
+				iconPath:
+					"https://block-design.oss-cn-shenzhen.aliyuncs.com/component-libs/uniapp/red-marker.png",
+				width: 32,
+				height: 32,
+			},
 		};
+	},
+	computed: {
+		cMarkers: function() {
+			return this.markers.concat([this.centerMarker])
+		}
 	},
 	created() {
 		this.cWidth = this.$getCssUnit(this.width);
@@ -407,13 +333,22 @@ export default {
 		onControltap(event) {
 			console.log(`onControltap: `, event);
 			this.$emit("onControltap", event);
+			if(event.detail.controlId == "move-to-location"){
+				this.location()
+			}
 		},
 		/**
 		 * 视野发生变化时触发
 		 */
 		onRegionchange(event) {
+			let self = this;
 			console.log(`onMarkertap: `, event);
 			this.$emit("onMarkertap", event);
+			self.centerMarker = {
+				...self.centerMarker,
+				longitude: self.cLongitude,
+				latitude: self.cLatitude,
+			}
 		},
 		/**
 		 * 点击地图时触发; App-nuve、微信小程序2.9支持返回经纬度
@@ -457,6 +392,38 @@ export default {
 			this.searchView = false
 		},
 		/**
+		 * 获取当前定位
+		 */
+		async location(){
+			let self = this
+			// #ifdef H5
+			let addressUrl = '/ws/geocoder/v1'
+			// #endif
+			// #ifndef H5
+			let addressUrl = 'https://apis.map.qq.com/ws/geocoder/v1'
+			// #endif
+			uni.getLocation({
+				type: 'wgs84',
+				geocode: true,
+				success: async function (res) {
+					console.log('当前位置的经度：' + res.longitude);
+					console.log('当前位置的纬度：' + res.latitude);
+					console.log('addressUrl', addressUrl)
+					getAction(addressUrl, {
+						location: res.latitude + "," + res.longitude,
+						key: "423BZ-I6S3D-PVU4X-HH7XG-26MFJ-SGF7M",
+					}).then(addressRes => {
+						self.address = addressRes.result.address
+						self.cLatitude = addressRes.result.location.lat
+						self.cLongitude = addressRes.result.location.lng
+						self.key++;
+					}).catch(e => {
+						console.log('error', e)
+					})
+				}
+			})
+		},
+		/**
 		 * 搜索
 		 */
 		search(val){
@@ -479,11 +446,12 @@ export default {
 			})
 		},
 		selectAddress(item){
-			this.searchView = false
-			this.address = item.address
-			this.cLatitude = item.location.lat
-			this.cLongitude = item.location.lng
-			this.$emit("onAddressSelect", item);
+			let self = this
+			self.searchView = false
+			self.address = item.address
+			self.cLatitude = item.location.lat
+			self.cLongitude = item.location.lng
+			self.$emit("onAddressSelect", item);
 		}
 	},
 };

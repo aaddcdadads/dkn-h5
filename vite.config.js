@@ -44,6 +44,7 @@ export default defineConfig({
   server: {
     // host: os.hostname(),
     host: "0.0.0.0",
+    https: true,
     hmr: {
       overlay: false,
     },
@@ -87,22 +88,20 @@ export default defineConfig({
       ),
     },
     proxy: {
+      "/project-api/ws":{
+        target: "https://apis.map.qq.com",
+        changeOrigin: true,
+        rewrite: (path) => {
+          return path.replace(/^\/project-api/, "");
+        },
+      },
       "/project-api": {
         target: "http://ckjd.dev.haomo-tech.com",
         changeOrigin: true,
         rewrite: (path) => {
-          console.log(`path: `, path);
           return path.replace(/^\/project-api/, "");
         },
       },
-      "/qqmap":{
-        target: "https://apis.map.qq.com",
-        changeOrigin: true,
-        rewrite: (path) => {
-          console.log(`path: `, path);
-          return path.replace(/^\/qqmap/, "");
-        },
-      }
     },
   },
 
