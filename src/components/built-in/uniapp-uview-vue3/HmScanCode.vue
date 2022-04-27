@@ -1,7 +1,5 @@
 <template >
-  <view>
-    <view class="code">请打开扫码</view>
-  </view>
+  <view> </view>
 </template>
 
 <script>
@@ -9,11 +7,11 @@ export default {
   name: "HmScanCode",
   props: {
     /**
-     * 是否可见
+     *只允许相机扫码
      */
-    show: {
+    onlyFromCamera: {
       type: Boolean,
-      default: true,
+      default: false,
     },
   },
   data() {
@@ -22,41 +20,46 @@ export default {
 
   onload() {},
   mounted() {
-    let self = this;
+    /*let self = this;
     if (this.show) {
       setTimeout(function () {
         self.scanCode();
       }, 200);
-    }
+    }*/
   },
   methods: {
-    scanCode() {
+    open() {
+      console.log("打开相机");
       let self = this;
       uni.scanCode({
+        onlyFromCamera: this.onlyFromCamera,
         success: function (res) {
           ///console.log(JSON.stringify(res));
-          self.onDecode(res);
+          self.onSuccess(res);
         },
         fail: function () {
-          self.onReturn();
+          self.onFail();
+        },
+        complete: function () {
+          self.onComplete();
         },
       });
     },
-    onDecode(res) {
+    onSuccess(res) {
       //console.log(res);
       this.$emit("success", res);
     },
-    onReturn() {
+    onFail(res) {
       //console.log("onReturn");
-      this.$emit("fail");
+      this.$emit("fail", res);
+    },
+    onComplete(res) {
+      //console.log("onReturn");
+      this.$emit("complete", res);
     },
   },
 };
 </script>
 
 <style scoped>
-.code {
-  width: 100%;
-  height: 100vh;
-}
 </style>
