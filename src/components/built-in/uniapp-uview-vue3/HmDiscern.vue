@@ -3,8 +3,8 @@
   <view>
     <view class="container">
       <view class="uploadBox">
-        <view style="width: 48%" @click="uploadImg(1)">
-          <view class="uploadItem uploadImg1">
+        <view style="width: 48%">
+          <view class="uploadItem uploadImg1" @click="uploadImg(1)">
             <view class="imgBox imgEx1"> </view>
             <image class="imgUrl" :src="imgUrl1"></image>
           </view>
