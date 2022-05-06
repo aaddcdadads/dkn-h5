@@ -44,7 +44,6 @@ export default defineConfig({
   server: {
     // host: os.hostname(),
     host: "0.0.0.0",
-    https: true,
     hmr: {
       overlay: false,
     },
