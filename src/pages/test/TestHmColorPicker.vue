@@ -27,7 +27,6 @@ export default {
 	},
 	methods:{
 		colorChange(val){
-			console.log('val',val)
 			this.value = val
 		}
 	}

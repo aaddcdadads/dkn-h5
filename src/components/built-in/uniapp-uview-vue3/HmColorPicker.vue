@@ -140,14 +140,14 @@ export default {
         b: 0,
         a: 1
       },
-      hex: '#000000',
+      hex: '',
       mode: true,
       highlight: false,
     };
   },
   created() {
     this.cWidth = this.$getCssUnit(this.width);
-    this.hex = this.value;
+    this.rgba = this.hexToRgb(this.value)
   },
   mounted(){
     let self = this
@@ -156,9 +156,12 @@ export default {
     })
   },
   watch:{
-    hex(val){
-      this.$emit("update:value", val);
-      this.$emit("colorChange", val);
+    hex: {
+      handler(val){
+        this.$emit("update:value", val);
+        this.$emit("colorChange", val);
+      },
+      immediate: false
     }
   },
   methods: {
