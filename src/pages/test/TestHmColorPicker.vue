@@ -7,7 +7,6 @@
 			<hm-color-picker
 				v-model:value="value"
 				:width="300"
-				@colorChange="colorChange"
 			></hm-color-picker>
 		</view>
 		{{value}}
@@ -27,7 +26,8 @@ export default {
 	},
 	methods:{
 		colorChange(val){
-			this.value = val
+			// this.value = val
+      console.log(val,'val');
 		}
 	}
 }
