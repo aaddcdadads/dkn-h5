@@ -1,16 +1,28 @@
 <template>
   <view :style="{ backgroundColor: backgroundColor }">
-    {{ title }}
     <u-search
       v-model="cValue"
-      :action-text="actionText"
-      :placeholder="placeholder"
-      :search-icon="leftIcon"
+      :height="height"
       :shape="shape"
+      :bg-color="bgColor"
+      :border-color="borderColor"
+      :placeholder="placeholder"
       :clearabled="clearabled"
+      :focus="focus"
       :show-action="showAction"
+      :action-text="actionText"
+      :action-style="actionStyle"
       :input-align="inputAlign"
+      :disabled="disabled"
+      :search-icon-color="searchIconColor"
+      :search-icon="leftIcon"
       @change="onChange"
+      @search="onSearch"
+      @custom="onCustom"
+      @blur="onBlur"
+      @focus="onFocus"
+      @clear="onClear"
+      @click="onClick"
     ></u-search>
   </view>
 </template>
@@ -23,6 +35,13 @@ export default {
   name: "HmUviewSearch",
   props: {
     /**
+     * 关闭输入框
+     */
+    disabled:{
+      type: Boolean,
+      default: false,
+    },
+    /**
      * 值
      * @model
      */
@@ -30,11 +49,34 @@ export default {
       type: String,
     },
     /**
-     * 标题
+     * 高度
      */
-    title: {
+    height: {
       type: String,
-      default: "输入：",
+      default: "64",
+    },
+    
+    /**
+     * 背景框颜色
+     * @type Color
+     */
+    bgColor: {
+      type: String,
+      default: "#f2f2f2",
+    },
+    /**
+     * 边框颜色
+     * @type Color
+     */
+    borderColor: {
+      type: String,
+    },
+    /**
+     * 自动获取焦点
+     */
+    focus:{
+      type: Boolean,
+      default: false,
     },
     /**
      * 按钮文字
@@ -42,6 +84,15 @@ export default {
     actionText: {
       type: String,
       default: "搜索",
+    },
+    /**
+     * 文字样式
+     */
+    actionStyle: {
+      type: Object,
+      default: function(){
+          return {}
+      },
     },
     /**
      * 占位提示文字
@@ -57,6 +108,13 @@ export default {
     leftIcon: {
       type: String,
       default: "search",
+    },
+    /**
+     * 左侧图标颜色
+     * @type Color
+     */
+    searchIconColor: {
+      type: String,
     },
     /**
      * 右侧图标
@@ -136,6 +194,29 @@ export default {
       // this.value = e;
       this.$emit("update:value", this.cValue);
       this.$emit("change", e);
+    },
+    onSearch(e) {
+        console.log("onSearch",e);
+      this.$emit("search", e);
+    },
+    onCustom(e) {
+        console.log("onCustom",e);
+      this.$emit("custom", e);
+    },
+    onBlur(e) {
+        console.log("onBlur",e);
+      this.$emit("blur", e);
+    },
+    onFocus(e) {
+        console.log("onFocus",e);
+      this.$emit("focus", e);
+    },
+    onClear() {
+      this.$emit("clear");
+    },
+    onClick() {
+        console.log("disabled为true时，点击输入框，发出此事件，用于跳转搜索页");
+      this.$emit("click");
     },
   },
 };

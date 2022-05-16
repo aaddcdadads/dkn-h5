@@ -1,5 +1,6 @@
   <template>
-	<u-collapse 
+	<u-collapse
+        class="uCollapse" 
         :accordion="accordion"
         :arrow="arrow"
         :arrow-color="arrowColor"
@@ -10,7 +11,7 @@
         >
 		<u-collapse-item
             :align="align"
-            v-for="(item, index) in list" 
+            v-for="(item, index) in cList" 
             :index="index"
             :key="index"
             :open="item.open" 
@@ -31,6 +32,13 @@
 export default {
   name: "HmDateList",
   props: {
+     /**
+     * 宽度
+     */
+    width: {
+      type: String,
+      default: "300px",
+    },
     /**
      * 手风琴模式
      */
@@ -47,6 +55,7 @@ export default {
     },
     /**
      * 箭头颜色
+     * @type Color
      */
     arrowColor: {
       type: String,
@@ -70,7 +79,7 @@ export default {
       type: Object,
       default:function (){
         return {
-            margin:'2px 0 2px 15px',
+            margin:'2px 15px 2px 15px',
             fontSize: '18px',
         }
       },
@@ -103,8 +112,8 @@ export default {
         return [
           {
             head: "单位基本信息",
-            open: true,
-            disabled: false
+            open: false,
+            disabled: false,
           },
           {
             head: "探测回路类型",
@@ -113,9 +122,7 @@ export default {
           {
             head: "配电箱",
             open: false,
-            activeStyle:{
-                
-            }
+            
           }
         ];
       },
@@ -123,16 +130,25 @@ export default {
   },
 
   watch: {
-    
+    list: {
+      handler: function (value, oldValue) {
+        this.cList = this.value;
+      },
+      deep: true,
+    },
+    width(value) {
+      this.cWidth = this.getCssUnit(value);
+    },
   },
 
   mounted() {
-   
+      this.cList = this.list;
+      this.cWidth = this.width;
   },
   methods: {
     onChange(activeNames){
         //console.log("activeNames",activeNames);
-        this.$emit("change",activeNames);
+        this.$emit("onChange",activeNames);
     },
     onChangeItem(active){
         //console.log("active",active);
@@ -148,17 +164,21 @@ export default {
 
   data() {
     return {
-      
+      cList:"",
+      cWidth:"",
     };
   },
 };
 </script>
 
 <style lang="less">
+.uCollapse{
+    width:v-bind(cWidth);
+}
 .hm-slot {
   background-color: rgb(235, 238, 240);
   width: 100%;
-  height: 100%;
+  height: 100px;
 }
 
 </style>

@@ -2,15 +2,12 @@
   <view>
     <!-- <hm-uview-cell :list="list1"></hm-uview-cell> -->
     <hm-uview-collapse
-      :list="list1"
+    
       :accordion="false"
       :arrow="true"
       arrowColor="red"
       
     >
-        <template >
-
-        </template>
     </hm-uview-collapse>
   </view>
 </template>
@@ -26,7 +23,8 @@ export default {
         {
             head: "单位基本信息",
             open: true,
-            disabled: false
+            disabled: false,
+            isTitleHtml: true
           },
           {
             head: "探测回路类型",
