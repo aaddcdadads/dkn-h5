@@ -159,8 +159,7 @@ export default {
   watch:{
     hex: {
       handler(val){
-        this.$emit("update:value", val);
-        this.$emit("colorChange", val);
+        this.emitHexChange(val)
       },
       immediate: false
     }
@@ -181,6 +180,10 @@ export default {
         rgba: this.rgba,
         hex: this.hex
       })
+    },
+    emitHexChange(val) {
+      this.$emit("update:value", val);
+      this.$emit("colorChange", val);
     },
     // 选择模式
     select() {
