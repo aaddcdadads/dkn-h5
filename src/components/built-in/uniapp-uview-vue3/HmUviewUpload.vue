@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view :class="{uploadContainer: this.showUpload}">
     <u-upload
       ref="uUpload"
       :action="cAction"
@@ -29,6 +29,7 @@
       @on-error="onError"
       @on-uploaded="onUploaded"
       @on-choose-complete="onChooseComplete"
+
     ></u-upload
   ></view>
 </template>
@@ -159,6 +160,13 @@ export default {
       default: false,
     },
     /**
+     * 隐藏上传按钮
+     */
+    showUpload: {
+      type: Boolean,
+      default: false,
+    },
+    /**
      * 提示
      */
     showTips: {
@@ -219,7 +227,7 @@ export default {
     },
     isUpload(value) {
       if (value) {
-        this.imgUpload();
+        this.upload();
       }
     },
   },
@@ -228,7 +236,7 @@ export default {
     this.cFileList = this.fileList;
   },
   methods: {
-    imgUpload() {
+    upload() {
       this.$refs.uUpload.upload();
     },
     //移除图片时触发
@@ -266,4 +274,9 @@ export default {
 </script>
 
 <style lang="less">
+    .uploadContainer {
+        /deep/ .u-add-wrap{
+            display:none;
+        }
+    }
 </style>
