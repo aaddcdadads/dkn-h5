@@ -1,6 +1,10 @@
 <template>
   <view>
-    <hm-uview-picker v-model:show="show1"></hm-uview-picker>
+    <hm-uview-picker 
+        v-model:show="show1"
+        :params="params1"
+        defaultTime="00:02:20"
+    ></hm-uview-picker>
     <u-button @click="show1 = true">打开</u-button>
     <hm-uview-picker
       v-model:show="show2"
@@ -29,7 +33,13 @@ export default {
     return {
       show1: false,
       show2: false,
-
+        params1: {
+        //时间参数
+        
+        minute: true,
+        second: true,
+        
+      },
       params2: {
         //时间参数
         year: true,
