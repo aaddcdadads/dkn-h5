@@ -18,6 +18,7 @@ function setGlobal(config) {
  */
 function transformAxiosRequest(config) {
     if(!config.url) return;
+    console.log('转换前的Url:  ',config.url, config)
     //转换proxy
     transformUrlProxy(config)
     console.log('转换后的Url:  ',config.url, config)
