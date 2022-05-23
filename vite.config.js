@@ -87,20 +87,7 @@ export default defineConfig({
       ),
     },
     proxy: {
-      "/project-api/ws":{
-        target: "https://apis.map.qq.com",
-        changeOrigin: true,
-        rewrite: (path) => {
-          return path.replace(/^\/project-api/, "");
-        },
-      },
-      "/project-api": {
-        target: "http://ckjd.dev.haomo-tech.com",
-        changeOrigin: true,
-        rewrite: (path) => {
-          return path.replace(/^\/project-api/, "");
-        },
-      },
+      
     },
   },
 
