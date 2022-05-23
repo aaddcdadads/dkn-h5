@@ -18,6 +18,8 @@ function setGlobal(config) {
  */
 function transformAxiosRequest(config) {
     if(!config.url) return;
+    //转换proxy
+    transformUrlProxy(config)
     // 相对路径拼接本地域名
     if(config.url.indexOf(":") == -1){
         config.url = window.location.protocol + '//' + window.location.host + config.url
@@ -31,6 +33,18 @@ function transformAxiosRequest(config) {
     VueCookieNext.setCookie('x-project-api-port', port);
     config.url = `/project-api${url.pathname}`;
     return config;
+}
+
+function transformUrlProxy(config) {
+  if(!localStorage.getItem('pro__msg')) return;
+
+  let { proxy } = JSON.parse(JSON.parse(localStorage.getItem('pro__msg')).value)
+
+  if(!proxy) return;
+
+  proxy.forEach(item => {
+    config.url = config.url.indexOf(item[0]) == 0 ? `${item[1]}${config.url}` : config.url
+  })
 }
 
 function setJeecgAuth(config) {
