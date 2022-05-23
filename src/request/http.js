@@ -20,7 +20,7 @@ function transformAxiosRequest(config) {
     if(!config.url) return;
     //转换proxy
     transformUrlProxy(config)
-    console.log('转换后的Url:  ',config.url)
+    console.log('转换后的Url:  ',config.url, config)
     // 相对路径拼接本地域名
     if(config.url.indexOf(":") == -1){
         config.url = window.location.protocol + '//' + window.location.host + config.url
@@ -33,7 +33,7 @@ function transformAxiosRequest(config) {
     VueCookieNext.setCookie('x-project-api-hostname', url.hostname);
     VueCookieNext.setCookie('x-project-api-port', port);
     config.url = `/project-api${url.pathname}`;
-    console.log('最终的Url:  ',config.url)
+    console.log('最终的Url:  ',config.url, config)
     return config;
 }
 
