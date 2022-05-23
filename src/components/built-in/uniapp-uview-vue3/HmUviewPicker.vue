@@ -9,6 +9,8 @@
       :cancel-text="cancelText"
       :cancel-color="cancelColor"
       :params="params"
+      :default-time="defaultTime"
+      :default-region="defaultRegion"
       :mask-close-able="maskCloseAble"
       :start-year="startYear"
       :end-year="endYear"
@@ -43,6 +45,23 @@ export default {
     mode: {
       type: String,
     },
+    /**
+     * 默认选中时间
+     */
+    defaultTime: {
+      type: String,
+      default: "",
+    },
+    /**
+     * 默认选中地区
+     */
+    defaultRegion: {
+      type: Array,
+      default: function(){
+          return []
+      },
+    },
+
     /**
      * 标题文字
      */
