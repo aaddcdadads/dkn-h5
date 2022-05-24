@@ -19,8 +19,14 @@
 				>
 					<slot></slot>
 				</view>
-				<view class="u-swipe-del" v-if="showBtn" @tap.stop="btnClick(index)" :style="[btnStyle(item.style)]" v-for="(item, index) in options" :key="index">
-					<view class="u-btn-text">{{ item.text }}</view>
+				<view 
+                    class="u-swipe-del" 
+                    v-if="showBtn" 
+                    @tap.stop="btnClick(index)" 
+                    :style="[btnStyle(item.style)]" 
+                    v-for="(item, index) in options" :key="index">
+					<view class="u-btn-text" v-if="!item.icon" >{{ item.text }}</view>
+                    <image v-if="item.icon" class="u-btn-icon" :src="item.icon"/>
 				</view>
 			</movable-view>
 		</movable-area>
@@ -248,6 +254,14 @@ export default {
 }
 
 .u-btn-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.u-btn-icon{
+    width:50%;
+    height:50%;
 	position: absolute;
 	top: 50%;
 	left: 50%;

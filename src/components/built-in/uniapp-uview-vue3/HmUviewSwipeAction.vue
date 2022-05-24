@@ -48,7 +48,7 @@ export default {
      */
     btnWidth: {
       type: String,
-      default: "180",
+      default: "160",
     },
     /**
      * 是否禁用按钮
@@ -69,7 +69,7 @@ export default {
      */
     spacing: {
       type: String,
-      default: "10px",
+      default: "0px",
     },
     /**
      * 按钮配置
@@ -79,15 +79,15 @@ export default {
       default: function () {
         return [
           {
-            text: "收藏",
             style: {
-              backgroundColor: "#007aff",
+              backgroundColor: "#f1f2f3",
             },
+            icon:"https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/gongkan/%E7%BC%96%E8%BE%91.png"
           },
           {
             text: "删除",
             style: {
-              backgroundColor: "#dd524d",
+              backgroundColor: "red",
             },
           },
         ];
