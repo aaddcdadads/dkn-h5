@@ -20,6 +20,8 @@ RUN cd /root/code-live-preview
 RUN pwd
 COPY entrypoint.sh /root/entrypoint.sh
 COPY .gitattributes /root/code-live-preview/.gitattributes
+
+# 构建zsh
 RUN apk add zsh
 COPY install.zsh.sh /root/install.zsh.sh
 RUN sh /root/install.zsh.sh
