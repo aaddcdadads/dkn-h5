@@ -396,11 +396,12 @@ export default {
 		 */
 		async location(){
 			let self = this
+			let addressUrl;
 			// #ifdef H5
-			let addressUrl = '/ws/geocoder/v1'
+			addressUrl = '/ws/geocoder/v1'
 			// #endif
 			// #ifndef H5
-			let addressUrl = 'https://apis.map.qq.com/ws/geocoder/v1'
+			addressUrl = 'https://apis.map.qq.com/ws/geocoder/v1'
 			// #endif
 			uni.getLocation({
 				type: 'wgs84',
@@ -427,11 +428,12 @@ export default {
 		 * 搜索
 		 */
 		search(val){
+			let url;
 			// #ifdef H5
-			let url = '/ws/place/v1/suggestion'
+			url = '/ws/place/v1/suggestion'
 			// #endif
 			// #ifndef H5
-			let url = 'https://apis.map.qq.com/ws/place/v1/suggestion'
+			url = 'https://apis.map.qq.com/ws/place/v1/suggestion'
 			// #endif
 			
 			getAction(url, {
