@@ -1,31 +1,35 @@
 <template>
-  <u-field
-    v-model="cValue"
-    :label="label"
-    :label-width="labelWidth"
-    :label-align="labelAlign"
-    :placeholder="placeholder"
-    :placeholder-style="placeholderStyle"
-    :icon="icon"
-    :right-icon="rightIcon"
-    :type="type"
-    :clearable="clearable"
-    :clear-size="clearSize"
-    :border-top="borderTop"
-    :border-bottom="borderBottom"
-    :input-align="inputAlign"
-    :maxlength="maxlength"
-    :icon-color="iconColor"
-    :password="password"
-    :required="required"
-    :focus="focus"
-    :fixed="fixed"
-    :disabled="disabled"
-    @input="onInput"
-    @blur="onBlur"
-    @focus="onFocus"
-    ><slot></slot
-  ></u-field>
+    <view :class="{
+        uField: borderColor,
+      }">
+        <u-field
+            v-model="cValue"
+            :label="label"
+            :label-width="labelWidth"
+            :label-align="labelAlign"
+            :placeholder="placeholder"
+            :placeholder-style="placeholderStyle"
+            :icon="icon"
+            :right-icon="rightIcon"
+            :type="type"
+            :clearable="clearable"
+            :clear-size="clearSize"
+            :border-top="borderTop"
+            :border-bottom="borderBottom"
+            :input-align="inputAlign"
+            :maxlength="maxlength"
+            :icon-color="iconColor"
+            :password="password"
+            :required="required"
+            :focus="focus"
+            :fixed="fixed"
+            :disabled="disabled"
+            @input="onInput"
+            @blur="onBlur"
+            @focus="onFocus"
+            ><slot></slot
+        ></u-field>
+    </view>
 </template>
 
 <script>
@@ -70,12 +74,8 @@ export default {
      * 提示文字样式
      */
     placeholderStyle: {
-      type: Object,
-      default: function(){
-          return {
-
-          }
-      },
+      type: String,
+      default: ''
     },
     /**
      * 标题宽度
@@ -159,7 +159,14 @@ export default {
       type: Boolean,
       default: true,
     },
-
+    /**
+     * 边框颜色
+     * @type Color
+     */
+    borderColor: {
+      type: String,
+      default: '',
+    },
     /**
      * 密码输入
      */
@@ -218,15 +225,20 @@ export default {
   data() {
     return {
       cValue: "",
+      cBorderColor:'',
     };
   },
   watch: {
     value(val) {
       this.cValue = val;
     },
+    borderColor(val) {
+      this.cBorderColor = val;
+    },
   },
   mounted() {
     this.cValue = this.value;
+    this.cBorderColor = this.borderColor;
   },
   methods: {
     onBlur(e) {
@@ -246,7 +258,26 @@ export default {
 };
 </script>
 
-<style>
-.field-class {
+<style lang="less">
+.uField {
+    .u-border-top {
+        border-top: 1px solid ;
+        border-top-color: v-bind(cBorderColor);
+    };
+    .u-border-right {
+        border-right: 1px solid ;
+        border-right-color: v-bind(cBorderColor);
+
+    };
+    .u-border-bottom {
+        border-bottom: 1px solid ;
+        border-bottom-color: v-bind(cBorderColor);
+    };
+    .u-border-left {
+        border-left: 1px solid ;
+        border-left-color: v-bind(cBorderColor);
+    };
 }
+
+
 </style>
