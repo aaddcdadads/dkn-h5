@@ -20,6 +20,8 @@
     :focus="focus"
     :disabled="disabled"
     @input="onInput"
+    @blur="onBlur"
+    @focus="onFocus"
     ><slot></slot
   ></u-field>
 </template>
@@ -210,6 +212,14 @@ export default {
     this.cValue = this.value;
   },
   methods: {
+    onBlur(e) {
+      this.$emit("onBlur", e);
+      console.log("onBlur", e);
+    },
+    onFocus(e) {
+      this.$emit("onfocus", e);
+      console.log("onfocus", e);
+    },
     onInput: function (e) {
       this.$emit("update:value", e);
       this.$emit("after-input", e);
