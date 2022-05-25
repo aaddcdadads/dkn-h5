@@ -2,7 +2,10 @@
   <u-field
     v-model="cValue"
     :label="label"
+    :label-width="labelWidth"
+    :label-align="labelAlign"
     :placeholder="placeholder"
+    :placeholder-style="placeholderStyle"
     :icon="icon"
     :right-icon="rightIcon"
     :type="type"
@@ -10,14 +13,13 @@
     :clear-size="clearSize"
     :border-top="borderTop"
     :border-bottom="borderBottom"
-    :label-width="labelWidth"
-    :label-align="labelAlign"
     :input-align="inputAlign"
     :maxlength="maxlength"
     :icon-color="iconColor"
     :password="password"
     :required="required"
     :focus="focus"
+    :fixed="fixed"
     :disabled="disabled"
     @input="onInput"
     @blur="onBlur"
@@ -65,6 +67,17 @@ export default {
       default: "请输入",
     },
     /**
+     * 提示文字样式
+     */
+    placeholderStyle: {
+      type: Object,
+      default: function(){
+          return {
+
+          }
+      },
+    },
+    /**
      * 标题宽度
      */
     labelWidth: {
@@ -98,7 +111,6 @@ export default {
     },
     /**
      * 前缀图标
-     * @type Icon
      */
     icon: {
       type: String,
@@ -114,7 +126,6 @@ export default {
     },
     /**
      * 后缀图标
-     * @type Icon
      */
     rightIcon: {
       type: String,
@@ -170,11 +181,17 @@ export default {
       type: Boolean,
       default: false,
     },
-
     /**
      * 不可输入
      */
     disabled: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 组件在position:fixed定位需指明true
+     */
+    fixed: {
       type: Boolean,
       default: false,
     },

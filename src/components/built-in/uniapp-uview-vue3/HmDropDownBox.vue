@@ -80,7 +80,7 @@ export default {
      */
     icon: {
       type: String,
-      default: "arrow-right",
+      default: "arrow-down",
     },
     /**
      * 图标大小
@@ -97,13 +97,19 @@ export default {
       default: "120px",
     },
     /**
-     * 选择框位置
+     * 选项上下位置
      */
     seat: {
       type: String,
       default: "30px",
     },
-
+    /**
+     * 选项左右位置
+     */
+    leftSeat: {
+      type: String,
+      default: "0px",
+    },
     /**
      * 列表背景颜色
      * @type Color
@@ -166,6 +172,9 @@ export default {
     seat(value) {
       this.cSeat = this.getCssUnit(value);
     },
+    leftSeat(value) {
+      this.cLeftSeat = this.getCssUnit(value);
+    },
     list(value) {
       this.cList = value;
     },
@@ -180,11 +189,12 @@ export default {
   mounted() {
     this.cTextWidth = this.getCssUnit(this.textWidth);
     this.cSeatWidth = this.getCssUnit(this.seatWidth);
-    this.cValue = this.value ? this.value : this.list[0].value;
+    this.cList = this.list;
+    this.cValue = this.value ? this.value : this.cList[0].value;
     this.cValueSize = this.getCssUnit(this.valueSize);
     this.cListSize = this.getCssUnit(this.listSize);
     this.cSeat = this.getCssUnit(this.seat);
-    this.cList = this.list;
+    this.cLeftSeat = this.getCssUnit(this.leftSeat);
     this.cListColor = this.listColor;
     this.cMainColor = this.mainColor;
     window.addEventListener("click", this.handleClick);
@@ -227,6 +237,7 @@ export default {
       cValueSize: "",
       cListSize: "",
       cSeat: "",
+      cListColor:"",
       cListColor: "",
       cTextWidth: "",
       cSeatWidth: "",
@@ -266,6 +277,7 @@ export default {
 .select-class {
   position: absolute;
   top: v-bind(cSeat);
+  left: v-bind(cLeftSeat);
   z-index: 999;
   width: v-bind(cSeatWidth);
   box-shadow: 0px 0px 12px 0px #dadada;
@@ -296,5 +308,4 @@ export default {
   border-radius: 0 0 5px 5px;
 }
 </style>
-
 
