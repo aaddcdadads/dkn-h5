@@ -5,7 +5,11 @@
         v-for="(item, index) in cList"
         :key="index"
         :title="item.title"
+        :title-style="titleStyle"
         :icon="item.icon"
+        :icon-style="iconStyle"
+        :value-style="valueStyle"
+        :label-style="labelStyle"
         :label="item.label"
         :index="index"
         :value="item.value"
@@ -65,6 +69,7 @@ export default {
       type: Boolean,
       default: false,
     },
+
     /**
      * 箭头方向
      * @type Enum
@@ -74,7 +79,47 @@ export default {
     arrowDirection: {
       type: String,
     },
-
+    /**
+     * 图标样式
+     */
+    iconStyle:{
+      type: Object,
+      default: function () {
+          return{
+          }
+      }
+    },
+    /**
+     * 标题样式
+     */
+    titleStyle:{
+      type: Object,
+      default: function () {
+          return{
+              color:'#999999'
+          }
+      }
+    },
+    /**
+     * 标题样式
+     */
+    valueStyle:{
+      type: Object,
+      default: function () {
+          return{
+          }
+      }
+    },
+    /**
+     * 描述样式
+     */
+    labelStyle:{
+      type: Object,
+      default: function () {
+          return{
+          }
+      }
+    },
     /**
      * 点击反馈
      */
@@ -103,6 +148,7 @@ export default {
       type: Boolean,
       default: false,
     },
+    
     /**
      * 背景颜色
      * @type Color
