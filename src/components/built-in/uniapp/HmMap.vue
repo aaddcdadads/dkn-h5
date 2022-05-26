@@ -356,10 +356,12 @@ export default {
 		onTap(event) {
 			console.log(`onTap: `, event);
       let self = this
-      self.centerMarker = {
-        ...self.centerMarker,
-        longitude: event.detail.longitude,
-        latitude: event.detail.latitude,
+      if (event.detail.longitude) {
+        self.centerMarker = {
+          ...self.centerMarker,
+          longitude: event.detail.longitude,
+          latitude: event.detail.latitude,
+        }
       }
 			this.$emit("onTap", event);
       
