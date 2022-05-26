@@ -5,7 +5,7 @@
         v-for="(item, index) in cList"
         :key="index"
         :title="item.title"
-        :title-style="titleStyle"
+        :title-style="cTitleStyle"
         :icon="item.icon"
         :icon-style="iconStyle"
         :value-style="valueStyle"
@@ -96,7 +96,6 @@ export default {
       type: Object,
       default: function () {
           return{
-              color:'#999999'
           }
       }
     },
@@ -167,6 +166,7 @@ export default {
   data() {
     return {
       cList: [],
+      cTitleStyle:{}
     };
   },
   watch: {
@@ -176,9 +176,16 @@ export default {
       },
       deep: true,
     },
+    titleStyle: {
+      handler: function (value) {
+        this.cTitleStyle = value;
+      },
+      deep: true,
+    },
   },
   mounted() {
     this.cList = this.list;
+    this.cTitleStyle = this.titleStyle;
   },
   methods: {
     onClick(index) {
