@@ -355,7 +355,14 @@ export default {
 		 */
 		onTap(event) {
 			console.log(`onTap: `, event);
+      let self = this
+      self.centerMarker = {
+        ...self.centerMarker,
+        longitude: event.detail.longitude,
+        latitude: event.detail.latitude,
+      }
 			this.$emit("onTap", event);
+      
 		},
 		/**
 		 * 在地图渲染更新完成时触发
