@@ -2,13 +2,10 @@
 
 	<view>
 		<!-- 扫码页面 -->
-		<!-- #ifndef APP-PLUS -->
 		<view class="wrap">
 			<view class="u-tips-color">
-
 			</view>
 		</view>
-		<!-- #endif -->
 	</view>
 </template>
 
@@ -34,20 +31,20 @@
 			if (tip) {
 				this.tip = tip
 			}
-            // #ifdef APP-PLUS
-			plus.navigator.setFullscreen(true); //全屏
-			let currentWebview = this.$scope.$getAppWebview();
-			this.createBarcode(currentWebview)
-			this.createTipInfoView(currentWebview)
-			this.createFlashBarView(currentWebview)
-            // #endif
+            
 		},
 		mounted() {
 
 		},
 		methods: {
             open(){
-                this.barcode.start()
+                // #ifdef APP-PLUS
+                plus.navigator.setFullscreen(true); //全屏
+                let currentWebview = this.$scope.$getAppWebview();
+                this.createBarcode(currentWebview)
+                this.createTipInfoView(currentWebview)
+                this.createFlashBarView(currentWebview)
+                // #endif
             },
 			/**
 			 * 创建二维码
@@ -73,6 +70,7 @@
 					currentWebview.append(this.barcode);
 				}
                 //console.log("start",this.barcode);
+                this.barcode.start()
 			},
 
 			/**
