@@ -591,6 +591,13 @@
             }
         },
         {
+            "path": "components/built-in/uniapp-uview-vue3/HmBarcode",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "pages/test/TestHmCheckList",
             "style": {
                 "navigationBarTitleText": "",
@@ -655,6 +662,11 @@
                 "path": "components/built-in/uniapp-uview-vue3/HmScanCode",
                 "query": ""
             },
+						{
+						    "name": "HmBarcode",
+						    "path": "components/built-in/uniapp-uview-vue3/HmBarcode",
+						    "query": ""
+						},
             {
                 "name": "TestHmMap",
                 "path": "pages/test/TestHmMap",

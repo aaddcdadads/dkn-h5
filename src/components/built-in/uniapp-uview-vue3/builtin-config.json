@@ -384,9 +384,17 @@
             },
             {
                 "name": "HmScanCode",
-                "title": "扫码",
+                "title": "ScanCode扫码",
                 "importPath": "built-in/uniapp-uview-vue3/HmScanCode",
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmScanCode.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmBarcode",
+                "title": "Barcode扫码",
+                "importPath": "built-in/uniapp-uview-vue3/HmBarcode",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmBarcode.png",
                 "type": 0,
                 "isBuiltIn": true
             },
