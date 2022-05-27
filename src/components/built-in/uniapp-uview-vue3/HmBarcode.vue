@@ -158,9 +158,10 @@
 				}]
 			},
 			// 扫码成功回调
-			onmarked(type, result) {
-				console.log('条码类型：' , type);
-				console.log('条码内容：' , result);
+			onmarked(type, result,file) {
+                this.$emit("success",{type, result,file});
+				//console.log('条码类型：' , type);
+				//console.log('条码内容：' , result);
 				// 业务代码
 				// 核对扫描结果
 				// 判断是否是正确的格式
@@ -169,7 +170,8 @@
 			},
             // 扫码失败回调
 			onerror(error) {
-				console.log('扫码失败' , error);
+				//console.log('扫码失败' , error);
+                this.$emit("error",error);
 			}
 
 		}
@@ -178,10 +180,6 @@
 
 <style scoped>
 	.wrap {
-		height: calc(100vh);
-		/* #ifdef H5 */
-		height: calc(100vh - var(--window-top));
-		/* #endif */
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
