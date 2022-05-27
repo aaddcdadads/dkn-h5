@@ -356,12 +356,41 @@ export default {
 		onTap(event) {
 			console.log(`onTap: `, event);
       let self = this
+      let addressUrl;
+			// #ifdef H5
+			addressUrl = '/ws/geocoder/v1'
+			// #endif
+			// #ifndef H5
+			addressUrl = 'https://apis.map.qq.com/ws/geocoder/v1'
+			// #endif
       if (event.detail.longitude) {
         self.centerMarker = {
           ...self.centerMarker,
           longitude: event.detail.longitude,
           latitude: event.detail.latitude,
         }
+        getAction(addressUrl, {
+          location: event.detail.latitude + "," + event.detail.longitude,
+          key: "423BZ-I6S3D-PVU4X-HH7XG-26MFJ-SGF7M",
+        }).then(addressRes => {
+          let res = {
+            longitude: event.detail.longitude,
+            latitude: event.detail.latitude,
+            name: addressRes.result.formatted_addresses.recommend,
+            province: addressRes.result.address_component.province,
+            city: addressRes.result.address_component.city,
+            area: addressRes.result.address_component.district,
+            address: addressRes.result.address
+          }
+          event.detail = res
+          this.$emit("onTap", event);
+          // self.address = addressRes.result.address
+          // self.cLatitude = addressRes.result.location.lat
+          // self.cLongitude = addressRes.result.location.lng
+          // self.key++;
+        }).catch(e => {
+          console.log('error', e)
+        })
       }
 			this.$emit("onTap", event);
       
