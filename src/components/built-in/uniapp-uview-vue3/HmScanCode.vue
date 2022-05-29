@@ -1,6 +1,6 @@
 <template >
   <view class="wrap">
-    <button @click="open">打开</button>
+    
   </view>
 </template>
 
