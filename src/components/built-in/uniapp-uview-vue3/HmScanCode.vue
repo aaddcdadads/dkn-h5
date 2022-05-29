@@ -58,7 +58,7 @@ export default {
       // #endif
       // #ifdef APP-PLUS
       plus.navigator.setFullscreen(true); //全屏
-      let currentWebview = this.$scope.$getAppWebview();
+      let currentWebview = this.$parent.$scope.$getAppWebview();
       this.createBarcode(currentWebview);
       this.createTipInfoView(currentWebview);
       this.createFlashBarView(currentWebview);
