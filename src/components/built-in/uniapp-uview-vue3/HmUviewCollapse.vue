@@ -1,38 +1,38 @@
   <template>
-	<u-collapse
-        class="uCollapse" 
-        :accordion="accordion"
-        :arrow="arrow"
-        :arrow-color="arrowColor"
-        :item-style="itemStyle"
-        :head-style="headStyle"
-        :body-style="bodyStyle"
-        @change="onChange"
-        >
-		<u-collapse-item
-            :align="align"
-            v-for="(item, index) in cList" 
-            :index="index"
-            :key="index"
-            :open="item.open" 
-            :disabled="item.disabled"
-            :active-style="item.activeStyle"
-            :title="item.head" 
-            @change="onChangeItem"
-            >
-			<slot :name="`collapse-slot-${index}`">
-                <view class="hm-slot" :data-slot-name="`collapse-slot-${index}`">
-                </view>
-            </slot>
-		</u-collapse-item>
-	</u-collapse>
+  <u-collapse
+    class="uCollapse"
+    :accordion="accordion"
+    :arrow="arrow"
+    :arrow-color="arrowColor"
+    :item-style="itemStyle"
+    :head-style="headStyle"
+    :body-style="bodyStyle"
+    @change="onChange"
+  >
+    <u-collapse-item
+      :align="align"
+      v-for="(item, index) in cList"
+      :index="index"
+      :key="index"
+      :open="item.open"
+      :disabled="item.disabled"
+      :active-style="item.activeStyle"
+      :title="item.head"
+      @change="onChangeItem"
+    >
+      <slot :name="`collapse-slot-${index}`">
+        <view class="hm-slot" :data-slot-name="`collapse-slot-${index}`">
+        </view>
+      </slot>
+    </u-collapse-item>
+  </u-collapse>
 </template>
 
 <script>
 export default {
   name: "HmDateList",
   props: {
-     /**
+    /**
      * 宽度
      */
     width: {
@@ -66,10 +66,10 @@ export default {
      */
     itemStyle: {
       type: Object,
-      default:function (){
+      default: function () {
         return {
-            borderBottom:'1px solid rgb(205, 204, 204)'
-        }
+          borderBottom: "1px solid rgb(205, 204, 204)",
+        };
       },
     },
     /**
@@ -77,11 +77,11 @@ export default {
      */
     headStyle: {
       type: Object,
-      default:function (){
+      default: function () {
         return {
-            margin:'2px 15px 2px 15px',
-            fontSize: '18px',
-        }
+          margin: "2px 15px 2px 15px",
+          fontSize: "18px",
+        };
       },
     },
     /**
@@ -89,9 +89,8 @@ export default {
      */
     bodyStyle: {
       type: Object,
-      default:function (){
-        return {
-        }
+      default: function () {
+        return {};
       },
     },
     /**
@@ -122,8 +121,7 @@ export default {
           {
             head: "配电箱",
             open: false,
-            
-          }
+          },
         ];
       },
     },
@@ -132,7 +130,7 @@ export default {
   watch: {
     list: {
       handler: function (value, oldValue) {
-        this.cList = this.value;
+        this.cList = value;
       },
       deep: true,
     },
@@ -142,17 +140,17 @@ export default {
   },
 
   mounted() {
-      this.cList = this.list;
-      this.cWidth = this.width;
+    this.cList = this.list;
+    this.cWidth = this.width;
   },
   methods: {
-    onChange(activeNames){
-        //console.log("activeNames",activeNames);
-        this.$emit("onChange",activeNames);
+    onChange(activeNames) {
+      //console.log("activeNames",activeNames);
+      this.$emit("onChange", activeNames);
     },
-    onChangeItem(active){
-        //console.log("active",active);
-        this.$emit("onChangeItem",active);
+    onChangeItem(active) {
+      //console.log("active",active);
+      this.$emit("onChangeItem", active);
     },
     getCssUnit(value) {
       if (isNaN(Number(value))) {
@@ -164,21 +162,20 @@ export default {
 
   data() {
     return {
-      cList:"",
-      cWidth:"",
+      cList: "",
+      cWidth: "",
     };
   },
 };
 </script>
 
 <style lang="less">
-.uCollapse{
-    width:v-bind(cWidth);
+.uCollapse {
+  width: v-bind(cWidth);
 }
 .hm-slot {
   background-color: rgb(235, 238, 240);
   width: 100%;
   height: 100px;
 }
-
 </style>

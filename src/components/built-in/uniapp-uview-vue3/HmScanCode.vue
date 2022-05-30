@@ -27,7 +27,6 @@ export default {
       this.tip = tip;
     }
   },
-  onload() {},
   mounted() {
     /*let self = this;
     if (this.show) {
