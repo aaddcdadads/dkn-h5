@@ -50,9 +50,6 @@ export default {
         fail: function () {
           self.onFail();
         },
-        complete: function () {
-          self.onComplete();
-        },
       });
       // #endif
       // #ifdef APP-PLUS
@@ -200,10 +197,6 @@ export default {
     onFail(res) {
       //console.log("onReturn");
       this.$emit("fail", res);
-    },
-    onComplete(res) {
-      //console.log("onReturn");
-      this.$emit("complete", res);
     },
 
     // 扫码成功回调
