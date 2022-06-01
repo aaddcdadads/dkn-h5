@@ -1,33 +1,34 @@
 <template>
-    <view v-show="show" :class="{uField: borderColor,}">
-        <u-field
-            v-model="cValue"
-            :label="label"
-            :label-width="labelWidth"
-            :label-align="labelAlign"
-            :placeholder="placeholder"
-            :placeholder-style="placeholderStyle"
-            :icon="icon"
-            :right-icon="rightIcon"
-            :type="type"
-            :clearable="clearable"
-            :clear-size="clearSize"
-            :border-top="borderTop"
-            :border-bottom="borderBottom"
-            :input-align="inputAlign"
-            :maxlength="maxlength"
-            :icon-color="iconColor"
-            :password="password"
-            :required="required"
-            :focus="focus"
-            :fixed="fixed"
-            :disabled="disabled"
-            @input="onInput"
-            @blur="onBlur"
-            @focus="onFocus"
-            ><slot></slot
-        ></u-field>
-    </view>
+  <view :class="{ uField: borderColor }">
+    <u-field
+      v-show="show"
+      v-model="cValue"
+      :label="label"
+      :label-width="labelWidth"
+      :label-align="labelAlign"
+      :placeholder="placeholder"
+      :placeholder-style="placeholderStyle"
+      :icon="icon"
+      :right-icon="rightIcon"
+      :type="type"
+      :clearable="clearable"
+      :clear-size="clearSize"
+      :border-top="borderTop"
+      :border-bottom="borderBottom"
+      :input-align="inputAlign"
+      :maxlength="maxlength"
+      :icon-color="iconColor"
+      :password="password"
+      :required="required"
+      :focus="focus"
+      :fixed="fixed"
+      :disabled="disabled"
+      @input="onInput"
+      @blur="onBlur"
+      @focus="onFocus"
+      ><slot></slot
+    ></u-field>
+  </view>
 </template>
 
 <script>
@@ -73,7 +74,7 @@ export default {
      */
     placeholderStyle: {
       type: String,
-      default: ''
+      default: "",
     },
     /**
      * 标题宽度
@@ -163,7 +164,7 @@ export default {
      */
     borderColor: {
       type: String,
-      default: '',
+      default: "",
     },
     /**
      * 密码输入
@@ -212,10 +213,10 @@ export default {
     /**
      * 是否展示
      */
-    show:{
-      type:Boolean,
-      default:true
-    }
+    show: {
+      type: Boolean,
+      default: true,
+    },
   },
   computed: {
     // cValue: {
@@ -230,7 +231,7 @@ export default {
   data() {
     return {
       cValue: "",
-      cBorderColor:'',
+      cBorderColor: "",
     };
   },
   watch: {
@@ -265,24 +266,21 @@ export default {
 
 <style lang="less">
 .uField {
-    .u-border-top {
-        border-top: 1px solid ;
-        border-top-color: v-bind(cBorderColor);
-    };
-    .u-border-right {
-        border-right: 1px solid ;
-        border-right-color: v-bind(cBorderColor);
-
-    };
-    .u-border-bottom {
-        border-bottom: 1px solid ;
-        border-bottom-color: v-bind(cBorderColor);
-    };
-    .u-border-left {
-        border-left: 1px solid ;
-        border-left-color: v-bind(cBorderColor);
-    };
+  .u-border-top {
+    border-top: 1px solid;
+    border-top-color: v-bind(cBorderColor);
+  }
+  .u-border-right {
+    border-right: 1px solid;
+    border-right-color: v-bind(cBorderColor);
+  }
+  .u-border-bottom {
+    border-bottom: 1px solid;
+    border-bottom-color: v-bind(cBorderColor);
+  }
+  .u-border-left {
+    border-left: 1px solid;
+    border-left-color: v-bind(cBorderColor);
+  }
 }
-
-
 </style>
