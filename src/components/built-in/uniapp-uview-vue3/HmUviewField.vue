@@ -1,7 +1,5 @@
 <template>
-    <view :class="{
-        uField: borderColor,
-      }">
+    <view v-show="show" :class="{uField: borderColor,}">
         <u-field
             v-model="cValue"
             :label="label"
@@ -211,6 +209,13 @@ export default {
       type: String,
       default: "text",
     },
+    /**
+     * 是否展示
+     */
+    show:{
+      type:Boolean,
+      default:true
+    }
   },
   computed: {
     // cValue: {
