@@ -11,20 +11,20 @@ import loadComponent from './utils/loadComponent';
 
 import "./mock/index.js";
 
-import {
+/*import {
     map,
     filter,
     reduce,
     array2tree
-} from '/@/utils/flowUtils';
+} from '/@/utils/flowUtils';*/
 
-/*import {
+import {
     getAction,
     downloadFile,
     postAction,
     deleteAction,
     putAction,
-} from "./request/http";*/
+} from "./request/http";
 
 export function createApp() {
     const app = createSSRApp(App);
