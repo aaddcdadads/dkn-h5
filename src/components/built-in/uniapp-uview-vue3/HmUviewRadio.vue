@@ -10,7 +10,7 @@
         {{ item.name }}
       </p>
       <u-radio
-        v-for="(item, index) in list"
+        v-for="(item, index) in cList"
         @change="radioChange"
         :key="index"
         :name="item.name"
@@ -28,6 +28,12 @@
 <script>
 // import uRadio from "uview-ui/components/u-radio/u-radio";
 // import uRadioGroup from "uview-ui/components/u-radio-group/u-radio-group";
+import {
+  getAction,
+  postAction,
+  deleteAction,
+  putAction,
+} from "/@/request/http";
 export default {
   components: {},
   name: "HmUviewRadio",
@@ -49,6 +55,34 @@ export default {
     title: {
       type: String,
       default: "单选：",
+    },
+    /**
+     * GET URL
+     */
+    url: {
+      type: String,
+      default: "",
+    },
+    /**
+     * GET Params
+     */
+    params: {
+      type: Object,
+      default: function () {
+        return {};
+      },
+    },
+    /**
+     * 远程数据映射
+     */
+    dataMap: {
+      type: Object,
+      default: function () {
+        return {
+          name: "name",
+          disabled: "disabled",
+        };
+      },
     },
     /**
      * 数据内容
@@ -119,7 +153,33 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      cList: [],
+    };
+  },
+  mounted() {
+    this.cList = this.list;
+    this.getData();
+  },
+  watch: {
+    url(value) {
+      this.getData(value);
+    },
+    params: {
+      handler: function (value, oldValue) {
+        if (JSON.stringify(value) == JSON.stringify(oldValue)) {
+          return;
+        }
+        this.getData(null, value);
+      },
+      deep: true,
+    },
+    list: {
+      handler: function (value, oldValue) {
+        this.cList = this.mapData(value);
+      },
+      deep: true,
+    },
   },
   methods: {
     // 选中某个单选框时，由radio时触发
@@ -132,6 +192,45 @@ export default {
       console.log("2", e);
       this.$emit("update:value", this.cValue);
       this.$emit("radioGroupChange", e);
+    },
+    //将查询接口的数据渲染到list中
+    getData(url, params) {
+      let self = this;
+      url = url || this.url;
+      params =
+        params || (this.params ? JSON.parse(JSON.stringify(this.params)) : {});
+      if (!url) return;
+      console.log("getData", url, params);
+      getAction(url, params).then((resp) => {
+        console.log("res", resp);
+        //查询数据库的数组
+        self.cList = [];
+        let data = [];
+        if (resp.data) {
+          data = resp.data.list;
+        }
+        if (resp.result) {
+          data = resp.result.records || resp.result;
+        }
+
+        self.cList = self.mapData(data);
+      });
+      //console.log("请求使用的url和参数", url, params);
+    },
+    //处理数据
+    mapData(data) {
+      let self = this;
+      if (!this.dataMap || Object.keys(this.dataMap).length == 0) {
+        return data;
+      }
+      let keys = Object.keys(this.dataMap);
+      data.forEach((item) => {
+        keys.forEach((key) => {
+          item[key] = item[self.dataMap[key]];
+        });
+      });
+      console.log("data", data);
+      return data;
     },
   },
 };
