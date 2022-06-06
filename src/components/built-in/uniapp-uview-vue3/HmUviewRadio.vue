@@ -10,7 +10,7 @@
         {{ item.name }}
       </p>
       <u-radio
-        v-for="(item, index) in cList"
+        v-for="(item, index) in list"
         @change="radioChange"
         :key="index"
         :name="item.name"
@@ -154,11 +154,11 @@ export default {
   },
   data() {
     return {
-      cList: [],
+      //cList: [],
     };
   },
   mounted() {
-    this.cList = this.mapData(this.list);
+    this.list = this.mapData(this.list);
     this.getData();
   },
   watch: {
@@ -176,7 +176,7 @@ export default {
     },
     list: {
       handler: function (value, oldValue) {
-        this.cList = this.mapData(value);
+        this.list = this.mapData(value);
       },
       deep: true,
     },
@@ -204,7 +204,7 @@ export default {
       getAction(url, params).then((resp) => {
         //console.log("res", resp);
         //查询数据库的数组
-        self.cList = [];
+        //self.cList = [];
         let data = [];
         if (resp.data) {
           data = resp.data.list;
@@ -213,7 +213,7 @@ export default {
           data = resp.result.records || resp.result;
         }
 
-        self.cList = self.mapData(data);
+        self.list = self.mapData(data);
       });
       //console.log("请求使用的url和参数", url, params);
     },
