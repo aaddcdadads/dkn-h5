@@ -158,7 +158,7 @@ export default {
     };
   },
   mounted() {
-    this.cList = this.list;
+    this.cList = this.mapData(this.list);
     this.getData();
   },
   watch: {
