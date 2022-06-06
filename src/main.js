@@ -35,10 +35,10 @@ export function createApp() {
     app.config.globalProperties.$deleteAction = deleteAction;
     app.config.globalProperties.$putAction = putAction;
 
-    app.config.globalProperties.$map = map;
+    /*app.config.globalProperties.$map = map;
     app.config.globalProperties.$filter = filter;
     app.config.globalProperties.$reduce = reduce;
-    app.config.globalProperties.$array2tree = array2tree;
+    app.config.globalProperties.$array2tree = array2tree;*/
 
     app.config.globalProperties.$getCssUnit = function (value) {
         if (isNaN(Number(value))) {
