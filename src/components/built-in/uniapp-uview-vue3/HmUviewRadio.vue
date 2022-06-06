@@ -202,7 +202,7 @@ export default {
       if (!url) return;
       console.log("getData", url, params);
       getAction(url, params).then((resp) => {
-        console.log("res", resp);
+        //console.log("res", resp);
         //查询数据库的数组
         self.cList = [];
         let data = [];
@@ -229,7 +229,7 @@ export default {
           item[key] = item[self.dataMap[key]];
         });
       });
-      console.log("data", data);
+      //console.log("data", data);
       return data;
     },
   },
