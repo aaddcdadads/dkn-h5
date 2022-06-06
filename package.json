@@ -46,6 +46,7 @@
     "@dcloudio/uni-mp-weixin": "^3.0.0-alpha-3031020220124001",
     "@dcloudio/uni-quickapp-webview": "^3.0.0-alpha-3031020220124001",
     "jiff": "^0.7.3",
+    "jsonpath": "^1.1.1",
     "lodash": "^4.17.21",
     "mockjs": "^1.1.0",
     "moment": "^2.29.1",
