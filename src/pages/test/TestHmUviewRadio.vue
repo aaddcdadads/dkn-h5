@@ -25,8 +25,8 @@ export default {
   components: { HmUviewRadio },
   data() {
     return {
-      cValue: "",
-      cValue2: "",
+      cValue: "apple",
+      cValue2: "apple2",
       list: [
         {
           name: "apple",

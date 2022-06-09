@@ -37,10 +37,6 @@ import {
 export default {
   components: {},
   name: "HmUviewRadio",
-  model: {
-    prop: "value",
-    event: "changeValue",
-  },
   props: {
     /**
      * 值
@@ -48,6 +44,7 @@ export default {
      */
     value: {
       type: String,
+      default: "",
     },
     /**
      * 标题
@@ -142,26 +139,22 @@ export default {
       type: String,
     },
   },
-  computed: {
-    cValue: {
-      get() {
-        return this.value;
-      },
-      set(val) {
-        this.$emit("changeValue", val);
-      },
-    },
-  },
+  computed: {},
   data() {
     return {
       cList: [],
+      cValue: "",
     };
   },
   mounted() {
+    this.cValue = this.value;
     this.cList = this.mapData(this.list);
     this.getData();
   },
   watch: {
+    value(value) {
+      this.cValue = value;
+    },
     url(value) {
       this.getData(value);
     },
@@ -190,7 +183,8 @@ export default {
     // 选中任一radio时，由radio-group触发
     radioGroupChange(e) {
       console.log("2", e);
-      this.$emit("update:value", this.cValue);
+      console.log("3", this.cValue);
+      this.$emit("update:value", e);
       this.$emit("radioGroupChange", e);
     },
     //将查询接口的数据渲染到list中
