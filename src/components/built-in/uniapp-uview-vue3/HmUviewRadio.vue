@@ -177,13 +177,13 @@ export default {
   methods: {
     // 选中某个单选框时，由radio时触发
     radioChange(e) {
-      console.log("1", e);
+      //console.log("1", e);
       this.$emit("radioChange", e);
     },
     // 选中任一radio时，由radio-group触发
     radioGroupChange(e) {
-      console.log("2", e);
-      console.log("3", this.cValue);
+      //console.log("2", e);
+      //console.log("3", this.cValue);
       this.$emit("update:value", e);
       this.$emit("radioGroupChange", e);
     },
