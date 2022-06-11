@@ -1,7 +1,6 @@
 <template>
-  <view :class="{ uField: borderColor }">
+  <view :class="{ uField: borderColor }" v-show="cShow">
     <u-field
-      v-show="show"
       v-model="cValue"
       :label="label"
       :label-width="labelWidth"
@@ -232,11 +231,15 @@ export default {
     return {
       cValue: "",
       cBorderColor: "",
+      cShow: true,
     };
   },
   watch: {
     value(val) {
       this.cValue = val;
+    },
+    show(val) {
+      this.cShow = val;
     },
     borderColor(val) {
       this.cBorderColor = val;
@@ -244,6 +247,7 @@ export default {
   },
   mounted() {
     this.cValue = this.value;
+    this.cShow = this.show;
     this.cBorderColor = this.borderColor;
   },
   methods: {
