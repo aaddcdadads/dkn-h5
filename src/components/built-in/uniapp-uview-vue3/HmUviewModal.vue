@@ -9,7 +9,7 @@
     :confirm-color="confirmColor"
     :cancel-text="cancelText"
     :cancel-color="cancelColor"
-    :mask-close-able="false"
+    closeOnClickOverlay
     :border-radius="borderRadius"
     :width="width"
     @confirm="onConfirm"
