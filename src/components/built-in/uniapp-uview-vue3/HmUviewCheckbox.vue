@@ -1,7 +1,6 @@
 <template>
   <u-checkbox-group
     @change="checkboxGroupChange"
-    :disabled="disabled"
     :icon-size="iconSize"
     :size="size"
     :shape="shape"
@@ -15,10 +14,9 @@
       :key="index"
       v-model="item.checked"
       :name="index"
-      :disabled="item.disabled"
+      :disabled="disabled || item.disabled"
       @change="checkboxChange"
-      >{{ item.name }}</u-checkbox
-    >
+    >{{ item.name }}</u-checkbox>
   </u-checkbox-group>
 </template>
 
@@ -31,7 +29,7 @@ export default {
      */
     disabled: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     /**
      * 图标大小
@@ -90,7 +88,7 @@ export default {
      */
     list: {
       type: Array,
-      default: function () {
+      default: function() {
         return [
           {
             key: 1,
@@ -119,7 +117,7 @@ export default {
   },
   watch: {
     list: {
-      handler: function (value) {
+      handler: function(value) {
         this.cList = value;
       },
       deep: true,
