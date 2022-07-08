@@ -29,7 +29,7 @@ export default {
      */
     disabled: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     /**
      * 图标大小
