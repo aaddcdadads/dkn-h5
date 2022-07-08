@@ -1,20 +1,14 @@
 <template>
   <view class="radio-class">
     {{ title }}
-    <u-radio-group
-      v-model:value="cValue"
-      :wrap="wrap"
-      @change="radioGroupChange"
-    >
-      <p v-if="textLocation" style="margin-left: 1px; margin-right: 5px">
-        {{ item.name }}
-      </p>
+    <u-radio-group v-model:value="cValue" :wrap="wrap" @change="radioGroupChange">
+      <p v-if="textLocation" style="margin-left: 1px; margin-right: 5px">{{ item.name }}</p>
       <u-radio
         v-for="(item, index) in cList"
         @change="radioChange"
         :key="index"
         :name="item.name"
-        :disabled="item.disabled"
+        :disabled=" disabled || item.disabled"
         :shape="shape"
         :icon-size="iconSize"
         :active-color="activeColor"
@@ -65,7 +59,7 @@ export default {
      */
     params: {
       type: Object,
-      default: function () {
+      default: function() {
         return {};
       },
     },
@@ -74,7 +68,7 @@ export default {
      */
     dataMap: {
       type: Object,
-      default: function () {
+      default: function() {
         return {
           name: "name",
           disabled: "disabled",
@@ -86,7 +80,7 @@ export default {
      */
     list: {
       type: Array,
-      default: function () {
+      default: function() {
         return [
           {
             name: "apple",
@@ -138,6 +132,13 @@ export default {
     activeColor: {
       type: String,
     },
+    /**
+     * 禁用
+     */
+    disabled: {
+      type: Boolean,
+      default: false
+    },
   },
   computed: {},
   data() {
@@ -159,7 +160,7 @@ export default {
       this.getData(value);
     },
     params: {
-      handler: function (value, oldValue) {
+      handler: function(value, oldValue) {
         if (JSON.stringify(value) == JSON.stringify(oldValue)) {
           return;
         }
@@ -168,7 +169,7 @@ export default {
       deep: true,
     },
     list: {
-      handler: function (value, oldValue) {
+      handler: function(value, oldValue) {
         this.cList = this.mapData(value);
       },
       deep: true,
