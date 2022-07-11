@@ -57,7 +57,7 @@ export default {
     },
     /**
      * 是否可见
-     * @v-model
+     * @model
      */
     visible: {
       type: Boolean,

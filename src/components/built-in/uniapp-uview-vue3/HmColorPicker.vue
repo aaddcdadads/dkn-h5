@@ -92,7 +92,7 @@ export default {
   props: {
     /**
      * 当前颜色
-     * @v-model
+     * @model
      * @type Color
      */
     value: {

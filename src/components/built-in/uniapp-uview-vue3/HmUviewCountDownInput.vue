@@ -60,7 +60,7 @@ export default {
     },
     /**
      * 值
-     * @v-model
+     * @model
      */
     value: {
       type: String,
