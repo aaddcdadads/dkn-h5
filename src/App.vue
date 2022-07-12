@@ -1,7 +1,13 @@
 <script>
+import * as HmWxUtils from '/@/utils/HmWxUtils';
+
 export default {
   onLaunch: function () {
     console.log('App Launch')
+    HmWxUtils.uniStorage();
+    #ifdef MP-WEIXIN
+    HmWxUtils.requestWxInfo();
+    #endif
   },
   onShow: function () {
     console.log('App Show')
