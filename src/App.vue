@@ -5,9 +5,9 @@ export default {
   onLaunch: function () {
     console.log('App Launch')
     HmWxUtils.uniStorage();
-    #ifdef MP-WEIXIN
+    // #ifdef MP-WEIXIN
     HmWxUtils.requestWxInfo();
-    #endif
+    // #endif
   },
   onShow: function () {
     console.log('App Show')
