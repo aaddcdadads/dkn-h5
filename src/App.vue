@@ -1,5 +1,5 @@
 <script>
-import * as HmWxUtils from '/@/utils/HmWxUtils.js';
+import * as HmWxUtils from '/@/utils/hmWxUtils.js';
 
 export default {
   onLaunch: function () {
