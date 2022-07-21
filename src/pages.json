@@ -619,6 +619,20 @@
             }
         },
         {
+            "path": "components/built-in/uniapp/HmIcon",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "components/built-in/uniapp/HmText",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "pages/test/TestHmQiunCharts",
             "style": {
                 "navigationBarTitleText": "",
