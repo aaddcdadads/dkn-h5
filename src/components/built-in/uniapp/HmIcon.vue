@@ -6,6 +6,8 @@ export default {
   data() {
     return {
       cSize: "20px",
+      color: "inherit",
+      name: "photo",
     };
   },
   watch: {

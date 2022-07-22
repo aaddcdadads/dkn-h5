@@ -1,6 +1,13 @@
 <template>
   <view>
-    <text class="font1" @click="onClick">
+    <text
+      class="font1"
+      @click="onClick"
+      :selectable="selectable"
+      :userSelect="userSelect"
+      :space="space"
+      :decode="decode"
+    >
       {{ text }}
     </text>
   </view>
@@ -9,7 +16,10 @@
 export default {
   data() {
     return {
-      cFontSize: "24px",
+      selectable: "false",
+      userSelect: "false",
+      decode: "&nbsp",
+      cFontSize: ".32rem",
       cColor: "rgba(0,0,0,1)",
     };
   },
@@ -28,7 +38,7 @@ export default {
      */
     fontSize: {
       type: String,
-      default: "24px",
+      default: ".32rem",
     },
     /**
      * 文字颜色
@@ -37,6 +47,34 @@ export default {
     color: {
       type: String,
       default: "rgba(0,0,0,1)",
+    },
+    /**
+     * 文本是否可选
+     */
+    selectable: {
+      type: Boolean,
+      default: "false",
+    },
+    /**
+     * 文本是否可选
+     */
+    userSelect: {
+      type: Boolean,
+      default: "false",
+    },
+    /**
+     * 显示连续空格
+     */
+    space: {
+      type: String,
+      default: "&nbsp",
+    },
+    /**
+     * 是否解码
+     */
+    decode: {
+      type: Boolean,
+      default: "false",
     },
   },
   mounted() {
