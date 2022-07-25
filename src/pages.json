@@ -626,6 +626,13 @@
             }
         },
         {
+            "path": "components/built-in/uniapp/HmIcon",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "components/built-in/uniapp/HmEditor",
             "style": {
                 "navigationBarTitleText": "",
@@ -633,7 +640,28 @@
             }
         },
         {
+            "path": "components/built-in/uniapp/HmText",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "components/built-in/uniapp/HmRadio",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "components/built-in/uniapp/HmRichText",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "components/built-in/uniapp/HmProgress",
             "style": {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
