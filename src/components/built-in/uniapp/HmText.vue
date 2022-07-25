@@ -24,7 +24,7 @@ export default {
     };
   },
   components: {},
-  name: "HmUviewText",
+  name: "HmText",
   props: {
     /**
      * 文字

@@ -29,7 +29,7 @@ export default {
     };
   },
   components: {},
-  name: "HmUviewRichText",
+  name: "HmRichText",
   props: {
     /**
      * 节点列表
