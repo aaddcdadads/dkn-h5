@@ -1,6 +1,9 @@
 <template>
-  <u-icon class="icon" :name="name" :color="color" :size="cSize"></u-icon>
+  <view>
+    <u-icon class="icon" :name="name" :color="color" :size="cSize"></u-icon>
+  </view>
 </template>
+
 <script>
 export default {
   data() {
@@ -19,7 +22,7 @@ export default {
     this.cSize = this.getCssUnit(this.cSize);
   },
   components: {},
-  name: "HmUviewIcon",
+  name: "HmIcon",
   props: {
     /**
      * 名称
