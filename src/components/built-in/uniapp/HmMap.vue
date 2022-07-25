@@ -1,4 +1,5 @@
 <template>
+   <div>
 	<view class="search-view" v-if="searchView">
 		<view class="search-top">
 			<view class="search-top__div">
@@ -66,6 +67,7 @@
 		</cover-view>
 		</map>
 	</view>
+	</div>
 </template>
 
 <script>
