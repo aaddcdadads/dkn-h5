@@ -1,6 +1,6 @@
 <template>
   <view>
-    <u-icon class="icon" :name="name" :color="color" :size="cSize"></u-icon>
+    <icon class="icon" :name="name" :color="color" :size="cSize"></icon>
   </view>
 </template>
 

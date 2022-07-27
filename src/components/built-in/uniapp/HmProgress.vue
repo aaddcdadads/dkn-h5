@@ -3,15 +3,14 @@
     <progress
       :percent="percent"
       :showInfo="showInfo"
-      :borderRadius="borderRadius"
-      :fontSize="fontSize"
-      :strokeWidth="strokeWidth"
-      :activeColor="activeColor"
+      :border-radius="borderRadius"
+      :font-size="fontSize"
+      :stroke-width="strokeWidth"
+      :active-color="activeColor"
       :backgroundColor="backgroundColor"
       :active="active"
-      :activeMode="activeMode"
+      :active-mode="activeMode"
       :duration="duration"
-      :@activeend="activeend"
     ></progress>
   </view>
 </template>
@@ -28,48 +27,50 @@ export default {
      */
     percent: {
       type: Number,
-      default: "50",
+      default: 50,
     },
     /**
      * 右侧显示%
      */
     showInfo: {
       type: Boolean,
-      default: "false",
+      default: false,
     },
     /**
      * 圆角大小
      */
     borderRadius: {
       type: Number,
-      default: "8",
+      default: 8,
     },
     /**
      * 右侧%字大小
      */
     fontSize: {
-      type: Boolean,
-      default: "16",
+      type: Number,
+      default: 16,
     },
     /**
      * 进度条线宽度
      */
     strokeWidth: {
       type: Number,
-      default: "6",
+      default: 6,
     },
     /**
      * 已选进度条颜色
+     * @type Color
      */
     activeColor: {
-      type: Color,
+      type: String,
       default: "#09BB07",
     },
     /**
      * 未选进度条颜色
+     * @type Color
      */
     backgroundColor: {
-      type: Color,
+      type: String,
       default: "#EBEBEB",
     },
     /**
@@ -77,7 +78,7 @@ export default {
      */
     active: {
       type: Boolean,
-      default: "false",
+      default: false,
     },
     /**
      * 动画播放方式

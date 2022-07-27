@@ -1,6 +1,6 @@
 <template>
   <view>
-    <u-button
+    <button
       :size="size"
       :type="type"
       :plain="plain"
@@ -8,7 +8,7 @@
       :shape="shape"
     >
       {{ text }}
-    </u-button>
+    </button>
   </view>
 </template>
 <script>
@@ -75,9 +75,12 @@ export default {
       default: "按钮",
     },
   },
-  mounted() {},
-  methods: {},
-  watch: {},
+  methods: {
+    onClick(e) {
+      //console.log("e", e);
+      this.$emit("click", e);
+    },
+  },
 };
 </script>
 <style lang="less">
