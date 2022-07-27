@@ -642,12 +642,26 @@
         {
             "path": "components/built-in/uniapp/HmText",
             "style": {
-                "navigationBarTitleText": "",
+                "navigationBarTitleTgitext": "",
                 "enablePullDownRefresh": false
             }
         },
         {
             "path": "components/built-in/uniapp/HmRadio",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "components/built-in/uniapp/HmInput",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "components/built-in/uniapp/HmPicker",
             "style": {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
