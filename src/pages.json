@@ -619,6 +619,13 @@
             }
         },
         {
+            "path": "components/built-in/uniapp/HmCheckbox",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "components/built-in/uniapp/HmIcon",
             "style": {
                 "navigationBarTitleText": "",
@@ -626,7 +633,21 @@
             }
         },
         {
+            "path": "components/built-in/uniapp/HmEditor",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "components/built-in/uniapp/HmText",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "components/built-in/uniapp/HmRadio",
             "style": {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
