@@ -4,7 +4,7 @@
       :nodes="nodes"
       :space="space"
       :selectable="selectable"
-      :imageMenuPrevent="imageMenuPrevent"
+      :image-menu-prevent="imageMenuPrevent"
       :preview="preview"
       @itemclick="itemclick"
       :name="name"
@@ -50,21 +50,21 @@ export default {
      */
     selectable: {
       type: Boolean,
-      default: "true",
+      default: true,
     },
     /**
      * 默认菜单
      */
     imageMenuPrevent: {
       type: Boolean,
-      default: "false",
+      default: false,
     },
     /**
      * 点击预览图片
      */
     preview: {
       type: Boolean,
-      default: "false",
+      default: false,
     },
     /**
      * 标签名
