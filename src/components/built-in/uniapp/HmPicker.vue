@@ -13,7 +13,6 @@
     </label>
   </view>
 </template>
-rf5
 <script>
 export default {
   name: 'HmPicker',

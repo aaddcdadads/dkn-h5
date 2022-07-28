@@ -668,6 +668,27 @@
             }
         },
         {
+            "path": "components/built-in/uniapp/HmScrollView",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "components/built-in/uniapp/HmSwiper",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "components/built-in/uniapp/HmMatchMedia",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "components/built-in/uniapp/HmRichText",
             "style": {
                 "navigationBarTitleText": "",
