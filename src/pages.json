@@ -640,6 +640,20 @@
             }
         },
         {
+            "path": "components/built-in/uniapp/HmPickerView",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "components/built-in/uniapp/HmVideo",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "components/built-in/uniapp/HmText",
             "style": {
                 "navigationBarTitleTgitext": "",
