@@ -738,6 +738,13 @@
             }
         },
         {
+            "path": "components/built-in/uniapp/HmFrom",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "pages/test/TestHmQiunCharts",
             "style": {
                 "navigationBarTitleText": "",
