@@ -16,10 +16,7 @@
 export default {
   data() {
     return {
-      selectable: "false",
-      userSelect: "false",
-      decode: "&nbsp",
-      cFontSize: ".32rem",
+      cFontSize: "14px",
       cColor: "rgba(0,0,0,1)",
     };
   },
@@ -53,14 +50,14 @@ export default {
      */
     selectable: {
       type: Boolean,
-      default: "false",
+      default: false,
     },
     /**
      * 文本是否可选
      */
     userSelect: {
       type: Boolean,
-      default: "false",
+      default: false,
     },
     /**
      * 显示连续空格
@@ -74,7 +71,7 @@ export default {
      */
     decode: {
       type: Boolean,
-      default: "false",
+      default: false,
     },
   },
   mounted() {

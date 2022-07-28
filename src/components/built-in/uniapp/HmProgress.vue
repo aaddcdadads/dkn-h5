@@ -20,7 +20,7 @@ export default {
     return {};
   },
   components: {},
-  name: "HmUviewProgress",
+  name: "HmProgress",
   props: {
     /**
      * 百分比0~100
@@ -90,6 +90,10 @@ export default {
     /**
      * 进度增加1%所需毫秒数
      */
+    duration: {
+      type: Number,
+      default: 30,
+    },
   },
   mounted() {},
   methods: {},
