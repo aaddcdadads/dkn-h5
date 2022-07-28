@@ -1,29 +1,34 @@
 <template>
   <view>
-    <icon class="icon" :name="name" :color="color" :size="cSize"></icon>
+    <icon
+      class="icon"
+      :type="type"
+      :name="name"
+      :color="color"
+      :size="size"
+    ></icon>
   </view>
 </template>
 
 <script>
 export default {
   data() {
-    return {
-      cSize: "20px",
-      color: "inherit",
-      name: "photo",
-    };
+    return {};
   },
-  watch: {
-    size(value) {
-      this.cSize = this.getCssUnit(value);
-    },
-  },
-  mounted() {
-    this.cSize = this.getCssUnit(this.cSize);
-  },
+  watch: {},
+  mounted() {},
   components: {},
   name: "HmIcon",
   props: {
+    /**
+     * 类型
+     * @type Enum
+     * @options ['success', 'success_no_circle', 'info', 'warn', 'waiting', 'cancel', 'download', 'search','clear']
+     */
+    type: {
+      type: String,
+      default: "success",
+    },
     /**
      * 名称
      */
@@ -43,19 +48,13 @@ export default {
      * 图标大小
      */
     size: {
-      type: String,
-      default: "20px",
+      type: Number,
+      default: 20,
     },
   },
   methods: {
     onClick(e) {
       this.$emit("click");
-    },
-    getCssUnit(value) {
-      if (isNaN(Number(value))) {
-        return value;
-      }
-      return `${value}px`;
     },
   },
 };

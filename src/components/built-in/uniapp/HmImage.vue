@@ -1,10 +1,9 @@
 <template>
   <image
     :src="src"
-    :mode="mode"
-    :lazy-load="lazyLoad"
-    :width="width"
-    :height="height"
+    :shape="shape"
+    :loading-icon="loadingIcon"
+    :error-icon="errorIcon"
     @error="error"
     @load="load"
   >
@@ -26,36 +25,58 @@ export default {
       default: "https://img.yzcdn.cn/vant/cat.jpeg",
     },
     /**
-     * 图片裁剪缩放
+     *
+     * 图片形状
+     * @type Enum
+     * @options ["square","circle"]
      */
-    mode: {
+    shape: {
       type: String,
-      default: "scaleToFill",
+      default: "square",
     },
     /**
-     * 图片懒加载
+     * 加载中图标
+     * @type Icon
      */
-    lazyLoad: {
-      type: Boolean,
-      default: "false",
-    },
-    /**
-     * 	宽度
-     */
-    width: {
+    loadingIcon: {
       type: String,
-      default: "100px",
+      default: "photo",
     },
+
     /**
-     * 高度
+     * 加载失败图标
+     * @type Icon
      */
-    height: {
+    errorIcon: {
       type: String,
-      default: "100px",
+      default: "error-circle",
     },
   },
-  methods: {},
   watch: {},
+  mounted() {},
+  methods: {
+    /**
+     * 点击图片时触发
+     */
+    onClick(index) {
+      console.log("点击图片成功", index);
+      this.$emit("click");
+    },
+
+    /**
+     * 加载完触发
+     */
+    load() {
+      console.log("图片加载");
+    },
+
+    /**
+     * 加载失败触发
+     */
+    error() {
+      console.log("图片加载失败");
+    },
+  },
 };
 </script>
 <style lang="less">
