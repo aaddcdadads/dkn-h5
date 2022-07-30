@@ -1,17 +1,22 @@
 <template>
-  <view class="container">
+  <view>
     <editor
-      id="editor"
-      class="ql-container"
       :placeholder="placeholder"
       :read-only="readOnly"
-      @ready="onEditorReady"
+      :show-img-size="showImgSize"
+      :show-img-toolbar="showImgToolbar"
+      :show-img-resize="showImgResize"
+      @ready="onready"
+      @focus="onfocus"
+      @blur="onblur"
+      @input="oninput"
+      @statuschange="onstatuschange"
     ></editor>
-    <button type="warn" @tap="undo">撤销</button>
   </view>
 </template>
 <script>
 export default {
+  name: "HmEditor",
   props: {
     /**
      * 是否设置只读
@@ -26,48 +31,51 @@ export default {
     placeholder: {
       type: String,
       default: "开始输入内容"
-	},
-	
+    },
+    /**
+     * 图片大小控件
+     */
+    showImgSize: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * 工具栏控件
+     */
+    showImgToolbar: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * 修改尺寸控件
+     */
+    showImgResize: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {};
   },
   methods: {
-    onEditorReady() {
-      // #ifdef MP-BAIDU
-      this.editorCtx = requireDynamicLib("editorLib").createEditorContext(
-        "editorId"
-      );
-      // #endif
-
-      // #ifdef APP-PLUS || H5 ||MP-WEIXIN
-      uni
-        .createSelectorQuery()
-        .select("#editor")
-        .context(res => {
-          this.editorCtx = res.context;
-        })
-        .exec();
-      // #endif
+    onready() {
+      this.$emit("ready");
     },
-    undo() {
-      this.editorCtx.undo();
+    onfocus() {
+      this.$emit("focus");
+    },
+    onblur() {
+      this.$emit("blur");
+    },
+    oninput() {
+      this.$emit("input");
+    },
+    onstatuschange() {
+      this.$emit("statuschange");
     }
   }
 };
 </script>
 <style>
-.container {
-  padding: 10px;
-}
 
-#editor {
-  width: 100%;
-  height: 300px;
-  background-color: #cccccc;
-}
-
-button {
-  margin-top: 10px;
-}
 </style>
