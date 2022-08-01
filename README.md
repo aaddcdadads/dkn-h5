@@ -14,6 +14,12 @@ npm run dev:h5          # 运行h5
 npm run dev:mp-weixin   # 运行小程序
 ```
 
+## FAQ
+
+> 如何确定 uniapp 的版本号？
+
+查看文件：/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli-vite/package.json
+
 ## 参考
 
 * [Vue3简单整合uView@1.8.4解决方案](https://blog.csdn.net/weixin_43272781/article/details/116867437)
