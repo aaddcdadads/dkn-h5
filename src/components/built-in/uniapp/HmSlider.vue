@@ -1,0 +1,112 @@
+<template>
+  <view class="slider-class">
+    {{ title }}
+    <slider
+      :max="max"
+      :min="min"
+      :step="step"
+      :block-width="blockWidth"
+      :height="height"
+      :inactive-color="inactiveColor"
+      :active-color="activeColor"
+      @start="onStart"
+      @moving="onMoving"
+      @end="onEnd"
+    />
+  </view>
+</template>
+<script>
+export default {
+  data() {
+    return {};
+  },
+  components: {},
+  name: "HmSlider",
+  props: {
+    /**
+     * 标题
+     */
+    title: {
+      type: String,
+      default: "进度条：",
+    },
+    /**
+     *最大值
+     */
+    max: {
+      type: Number,
+      default: 100,
+    },
+    /**
+     *最小值
+     */
+    min: {
+      type: Number,
+      default: 0,
+    },
+    /**
+     *步长
+     */
+    step: {
+      type: Number,
+      default: 1,
+    },
+    /**
+     *按钮大小
+     */
+    blockWidth: {
+      type: String,
+      default: "30",
+    },
+    /**
+     *进度条高度
+     */
+    height: {
+      type: String,
+      default: "6",
+    },
+    /**
+     * 激活颜色
+     * @type Color
+     */
+    inactiveColor: {
+      type: String,
+    },
+    /**
+     * 非激活颜色
+     * @type Color
+     */
+    activeColor: {
+      type: String,
+    },
+  },
+  computed: {
+    cValue: {
+      get() {
+        return this.value;
+      },
+      set(val) {
+        this.$emit("changeValue", val);
+      },
+    },
+  },
+  methods: {
+    onStart() {
+      this.$emit("update:value", this.cValue);
+      this.$emit("onStart");
+    },
+    onMoving() {
+      this.$emit("update:value", this.cValue);
+      this.$emit("onMoving");
+    },
+    onEnd() {
+      console.log(this.cValue);
+      this.value = this.cValue;
+      this.$emit("update:value", this.cValue);
+      this.$emit("onEnd");
+    },
+  },
+};
+</script>
+<style lang="less">
+</style>
