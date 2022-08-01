@@ -2,7 +2,6 @@
   <view>
     <view>{{ title }}</view>
     <switch
-      v-model="cChecked"
       @change="onChange"
       :loading="loading"
       :size="size"
@@ -16,9 +15,7 @@
 <script>
 export default {
   data() {
-    return {
-      cChecked: false,
-    };
+    return {};
   },
   components: {},
   name: "HmSwitch",

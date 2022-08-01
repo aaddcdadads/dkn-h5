@@ -2,7 +2,6 @@
   <view class="slider-class">
     {{ title }}
     <slider
-      v-model:value="cValue"
       :max="max"
       :min="min"
       :step="step"
@@ -23,18 +22,7 @@ export default {
   },
   components: {},
   name: "HmSlider",
-  model: {
-    prop: "value",
-    event: "changeValue",
-  },
   props: {
-    /**
-     * 值
-     * @model
-     */
-    value: {
-      type: Number,
-    },
     /**
      * 标题
      */
