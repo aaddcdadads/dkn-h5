@@ -18,7 +18,7 @@ npm run dev:mp-weixin   # 运行小程序
 
 > 如何确定 uniapp 的版本号？
 
-查看文件：/Volumes/data/codes/block-design-components/uniapp-uview-vite/node_modules/@dcloudio/vite-plugin-uni/package.json
+查看文件：/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli-vite/package.json
 
 ## 参考
 
