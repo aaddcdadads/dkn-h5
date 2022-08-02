@@ -3,15 +3,13 @@
     <view>
       <view></view>
     </view>
-    <picker-view
-      :indicator-style="indicatorStyle" 
-    >
+    <picker-view :value="value" :indicator-style="indicatorStyle">
       <picker-view-column v-for="(item,index) in testList" :key="index">
-        <view>{{item}}</view>
+        <view v-for="(item2,index2) in test" :key="index2">{{item}}</view>
       </picker-view-column>
     </picker-view>
   </view>
-</template>
+</template> 
 <script>
 export default {
   name: "HmPickerView",
@@ -22,9 +20,7 @@ export default {
     testList: {
       type: Array,
       default: function() {
-        return [
-           1,2,3,4,5
-        ];
+        return ["中国", "美国", "俄罗斯", "日本"];
       }
     },
     /**

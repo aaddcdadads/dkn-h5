@@ -662,6 +662,20 @@
       }
     },
     {
+        "path": "components/built-in/uniapp/HmLivePlayer",
+        "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false
+        }
+    },
+    {
+        "path": "components/built-in/uniapp/HmLivePusher",
+        "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false
+        }
+    },
+    {
       "path": "components/built-in/uniapp/HmRadio",
       "style": {
         "navigationBarTitleText": "",
