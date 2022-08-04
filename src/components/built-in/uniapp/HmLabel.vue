@@ -15,19 +15,7 @@
 <script>
 export default {
   data() {
-    return {
-      checkboxItems: [
-        {
-          name: "USA",
-          value: "美国",
-        },
-        {
-          name: "CHN",
-          value: "中国",
-          checked: "true",
-        },
-      ],
-    };
+    return {};
   },
   components: {},
   name: "HmLabel",
