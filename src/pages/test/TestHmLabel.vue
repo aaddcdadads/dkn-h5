@@ -12,8 +12,12 @@
     </label>
   </checkbox-group>
 </template>
+
 <script>
+import HmLabel from "@/components/built-in/uniapp/HmLabel.vue";
+
 export default {
+  components: { HmLabel },
   data() {
     return {
       checkboxItems: [
@@ -29,8 +33,6 @@ export default {
       ],
     };
   },
-  components: {},
-  name: "HmLabel",
   props: {
     /**
      * 默认配置项
@@ -71,5 +73,6 @@ export default {
   },
 };
 </script>
+
 <style lang="less">
 </style>

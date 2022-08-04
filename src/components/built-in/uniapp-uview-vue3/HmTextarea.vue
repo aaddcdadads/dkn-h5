@@ -35,7 +35,7 @@ export default {
      */
     value: {
       type: String,
-      default: "",
+      default: "请输入",
     },
     /**
      * 占位符

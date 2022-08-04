@@ -92,7 +92,7 @@ export default {
       this.cFontSize = this.getCssUnit(value);
     },
     color(value) {
-      this.color = value;
+      this.cColor = value;
     },
   },
 };

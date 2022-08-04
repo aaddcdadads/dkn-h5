@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import HmAudio from "@/components/built-in/uniapp/HmAudio.vue";
+
 function sToHs(s) {
   //计算分钟
   let h;
@@ -41,72 +43,20 @@ function sToHs(s) {
   return h + ":" + s;
 }
 export default {
-  name: "HmAudio",
-  props: {
-    /**
-     * 播放或暂停
-     */
-    play: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * 音频地址
-     */
-    src: {
-      type: String,
-      default:
-        "https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-hello-uniapp/2cc220e0-c27a-11ea-9dfb-6da8e309e0d8.mp3",
-    },
-    /**
-     * 封面图片地址
-     */
-    poster: {
-      type: String,
-      default:
-        "https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/7fbf26a0-4f4a-11eb-b680-7980c8a877b8.png",
-    },
-    /**
-     * 控件音频名字
-     */
-    name: {
-      type: String,
-      default: "致爱丽丝",
-    },
-    /**
-     * 控件作者名字
-     */
-    author: {
-      type: String,
-      default: "未知作者",
-    },
-    /**
-     * 是否自动开始播放
-     */
-    autoplay: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * 是否循环播放
-     */
-    loop: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * 是否遵循系统静音
-     */
-    obeyMuteSwitch: {
-      type: Boolean,
-      default: true,
-    },
-  },
+  components: { HmAudio },
   data() {
     return {
       audioTimeUpdate: "00:00",
       videoIsPlay: false,
-      // innerAudioContext: ''
+      play: false,
+      src: "https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-hello-uniapp/2cc220e0-c27a-11ea-9dfb-6da8e309e0d8.mp3",
+      poster:
+        "https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/7fbf26a0-4f4a-11eb-b680-7980c8a877b8.png",
+      name: "致爱丽丝1",
+      author: "未知作者",
+      autoplay: false,
+      loop: false,
+      obeyMuteSwitch: true,
     };
   },
   watch: {
@@ -212,7 +162,7 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 .luch-audio--text-eill {
   /*超出省略号*/
   overflow: hidden;

@@ -173,6 +173,54 @@
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmCellList.png",
                 "type": 0,
                 "isBuiltIn": true
+            },
+            {
+                "name": "HmButton",
+                "title": "按钮",
+                "importPath": "built-in/uniapp-uview-vue3/HmButton",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmButton.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmIcon",
+                "title": "图标",
+                "importPath": "built-in/uniapp-uview-vue3/HmIcon",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmIcon.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmImage",
+                "title": "图标",
+                "importPath": "built-in/uniapp-uview-vue3/HmImage",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmImage.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmProgress",
+                "title": "进度条",
+                "importPath": "built-in/uniapp-uview-vue3/HmProgress",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmProgress.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmRichText",
+                "title": "富文本",
+                "importPath": "built-in/uniapp-uview-vue3/HmRichText",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmRichText.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmText",
+                "title": "文本",
+                "importPath": "built-in/uniapp-uview-vue3/HmText",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmText.png",
+                "type": 0,
+                "isBuiltIn": true
             }
         ]
     },
@@ -289,6 +337,38 @@
                 "title": "验证码",
                 "importPath": "built-in/uniapp-uview-vue3/HmUviewCountDownInput",
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewCountDownInput.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmInput",
+                "title": "输入框",
+                "importPath": "built-in/uniapp-uview-vue3/HmHmInput",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmHmInput.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmLabel",
+                "title": "控件",
+                "importPath": "built-in/uniapp-uview-vue3/HmLabel",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmLabel.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmSlider",
+                "title": "滑动选择器",
+                "importPath": "built-in/uniapp-uview-vue3/HmSlider",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmSlider.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmSwitch",
+                "title": "开关选择器",
+                "importPath": "built-in/uniapp-uview-vue3/HmSwitch",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmSwitch.png",
                 "type": 0,
                 "isBuiltIn": true
             }
@@ -471,6 +551,30 @@
                 "title": "多选列表",
                 "importPath": "built-in/uniapp-uview-vue3/HmCheckList",
                 "imgUrl": "built-in/uniapp-uview-vue3/img/HmCheckList.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmAudio",
+                "title": "音乐播放器",
+                "importPath": "built-in/uniapp-uview-vue3/HmAudio",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmAudio.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmCamera",
+                "title": "相机",
+                "importPath": "built-in/uniapp-uview-vue3/HmCamera",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmCamera.png",
+                "type": 0,
+                "isBuiltIn": true
+            },
+            {
+                "name": "HmProgress",
+                "title": "进度条",
+                "importPath": "built-in/uniapp-uview-vue3/HmProgress",
+                "imgUrl": "built-in/uniapp-uview-vue3/img/HmProgress.png",
                 "type": 0,
                 "isBuiltIn": true
             }

@@ -6,7 +6,7 @@
       :min="min"
       :step="step"
       :disabled="disabled"
-      :value="cValue"
+      :value="value"
       :active-color="activeColor"
       :backgroundColor="backgroundColor"
       :block-size="blockSize"
