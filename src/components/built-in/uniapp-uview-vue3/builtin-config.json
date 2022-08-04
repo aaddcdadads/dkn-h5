@@ -957,6 +957,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "HmUviewAction",
+        "title": "滑动操作",
+        "importPath": "built-in/uniapp-uview-vue3/HmUviewAction",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewAction.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmUviewSwipeAction",
         "title": "滑动操作",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewSwipeAction",
