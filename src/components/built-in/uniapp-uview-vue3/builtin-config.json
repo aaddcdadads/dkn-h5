@@ -577,6 +577,14 @@
         "imgUrl": "built-in/uniapp/img/HmProgress.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmVideo",
+        "title": "视频播放器",
+        "importPath": "built-in/uniapp/HmUviewVideo",
+        "imgUrl": "built-in/uniapp/img/HmUviewVideo.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   }
