@@ -16,7 +16,13 @@
         "enablePullDownRefresh": false
       }
     },
-
+    {
+      "path": "components/built-in/uniapp/HmUviewVideo",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
     {
       "path": "pages/test/Testtest",
       "style": {
