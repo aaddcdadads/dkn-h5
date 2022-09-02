@@ -2,11 +2,11 @@
   <view class="charts-box">
     <qiun-data-charts
       type="bar"
-      :chartData="chartData"
+      :chartData="cChartData"
       :ontap="ontap"
       :ontouch="ontouch"
       :onmouse="onmouse"
-      :opts="chartDeploy"
+      :opts="cChartDeploy"
       @complete="onComplete"
       @getIndex="getIndex"
       @click="onClick"
@@ -212,13 +212,37 @@ export default {
     return {
       cWidth: "100%",
       cHeight: "300rpx",
+      cChartData:{},
+      cChartDeploy:{}
     };
   },
+  watch:{
+    width(val){
+      this.cWidth = this.getCssUnit(val);
+    },
+    height(val){
+      this.cHeight = this.getCssUnit(val);
+    },
+    chartData(val){
+      this.cChartData = JSON.parse(JSON.stringify(val));
+    },
+    chartDeploy(val){
+      this.cChartDeploy = JSON.parse(JSON.stringify(val));
+    }
+  },
   mounted() {
-    this.cWidth = this.$getCssUnit(this.width);
-    this.cHeight = this.$getCssUnit(this.height);
+    this.cWidth = this.getCssUnit(this.width);
+    this.cHeight = this.getCssUnit(this.height);
+    this.cChartData = JSON.parse(JSON.stringify(this.chartData));
+    this.cChartDeploy = JSON.parse(JSON.stringify(this.chartDeploy));
   },
   methods: {
+    getCssUnit(value) {
+      if (isNaN(Number(value))) {
+        return value;
+      }
+      return `${value}px`;
+    },
     onComplete(e) {
       this.$emit("complete", e);
       console.log(e);
