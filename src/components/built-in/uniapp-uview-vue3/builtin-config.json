@@ -564,22 +564,6 @@
         "isBuiltIn": true
       },
       {
-        "name": "HmAudio",
-        "title": "音乐播放器",
-        "importPath": "built-in/uniapp/HmAudio",
-        "imgUrl": "built-in/uniapp/img/HmAudio.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "HmCamera",
-        "title": "相机",
-        "importPath": "built-in/uniapp/HmCamera",
-        "imgUrl": "built-in/uniapp/img/HmCamera.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
         "name": "HmVideo",
         "title": "视频播放器",
         "importPath": "built-in/uniapp/HmUviewVideo",
