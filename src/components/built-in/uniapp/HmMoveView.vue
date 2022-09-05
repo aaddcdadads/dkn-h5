@@ -1,15 +1,8 @@
 <template>
   <view>
-    <view
-      class="xuanfu"
-      id="moveDiv"
-      :style="moveStyle"
-      @touchstart="down"
-      @touchmove="move"
-      @touchend="end"
-      @click="click"
-    >
-      <!-- <slot name="moveDiv"></slot> -->
+    <view class="xuanfu" id="moveDiv" :style="moveStyle" @touchstart="down" @touchmove="move" @touchend="end"
+      @click="click">
+      <slot name="moveDiv"></slot>
     </view>
   </view>
 </template>
@@ -20,20 +13,55 @@ export default {
   components: {},
   props: {
     /**
+     * 宽度
+     */
+    width: {
+      type: String,
+      default: "100px"
+    },
+    /**
+     * 高度
+     */
+    height: {
+      type: String,
+      default: "100px"
+    },
+    /**
      * 移动盒子样式
      */
     moveStyle: {
       type: Object,
       default: function () {
         return {
-          width: "50px",
-          height: "50px",
           background: "cyan",
           borderRadius: "50%",
-          top: "calc(90% - 25px)",
-          left: "calc(90% - 25px)",
+          right: "25px",
+          bottom: "25px",
         };
       },
+    },
+
+    /**
+     * 隐藏比例
+     */
+    hideScale: {
+      type: String,
+      default: "0.875"
+    },
+    /**
+     * 点击还原距离
+     */
+    restoreDistance: {
+      type: Number,
+      default: "12"
+    },
+    /**
+     * css定位
+     * @options ["fixed","absolute","relative","inherit"]
+     */
+    position: {
+      type: String,
+      default: "fixed"
     },
     /**
      * 是否固定
@@ -53,18 +81,50 @@ export default {
       dy: "",
       xPum: "",
       yPum: "",
+      cWidth:"50px",
+      cHeight:"50px",
+      cHideScale: "0.875",
+      cPosition: "fixed"
     };
   },
-  watch: {},
-  computed: {},
+  watch: {
+    width(value) {
+      this.cWidth = this.getCssUnit(value);
+    },
+    height(value) {
+      this.cHeight = this.getCssUnit(value);
+    },
+    hideScale(value) {
+      this.cHideScale = this.percentage(value);
+    },
+    position(value) {
+      this.cPosition = value;
+    }
+  },
+  mounted() {
+    this.cWidth = this.getCssUnit(this.width);
+    this.cHeight = this.getCssUnit(this.height);
+    this.cHideScale = this.percentage(this.hideScale);
+    this.cPosition = this.position;
+  },
   methods: {
+    percentage(e) {
+
+    },
+    getCssUnit(value) {
+      if (isNaN(Number(value))) {
+        return value;
+      }
+      return `${value}px`;
+    },
     click(event) {
       let windowWidth = document.documentElement.clientWidth;
-      var y = this.xPum + moveDiv.clientWidth > windowWidth;
-      console.info("click", this.xPum, this.yPum, y);
-      if (this.xPum < 0 && this.xPum + moveDiv.clientWidth > windowWidth) {
-          moveDiv.style.left = 0 + "px !important";
+      if (this.xPum < 0) {
+        moveDiv.style.left = 0 + this.restoreDistance + "px";
+      } else if (this.xPum + moveDiv.clientWidth > windowWidth) {
+        moveDiv.style.left = windowWidth - moveDiv.clientWidth - this.restoreDistance + "px";
       }
+      this.$emit("onClick", event);
     },
     down(event) {
       if (this.fixed) {
@@ -101,9 +161,6 @@ export default {
 
         let windowWidth = document.documentElement.clientWidth;
         let windowHeight = document.documentElement.clientHeight;
-        // console.log("window.clientWidth", windowWidth)
-        // console.log(this.xPum)
-        // console.log(" moveDiv.clientWidth", moveDiv.clientWidth)
 
         if (this.xPum >= 0 && this.xPum + moveDiv.clientWidth <= windowWidth) {
           // movediv的左右边，未出界
@@ -111,11 +168,10 @@ export default {
         } else if (this.xPum < 0) {
           // 左边出界，则左边缘贴边
           //moveDiv.style.left = 0 + "px";
-          moveDiv.style.left = "calc(-0.875 * " + this.moveStyle.width + ")";
+          moveDiv.style.left = "calc(-" + this.hideScale + " * " + this.cWidth + ")";
         } else if (this.xPum + moveDiv.clientWidth > windowWidth) {
           // 右边缘出界
-          moveDiv.style.left = windowWidth - moveDiv.clientWidth + "px";
-          console.log("右边缘出界", moveDiv.style.left);
+          moveDiv.style.left = "calc(" + (windowWidth - moveDiv.clientWidth) + "px + calc(" + this.hideScale + " * " + this.cWidth + "))";
           // console.log("dx", windowWidth - moveDiv.clientWidth)
         }
         // 上下未出界
@@ -149,7 +205,7 @@ export default {
     },
     //鼠标释放时候的函数，鼠标释放，移除之前添加的侦听事件，将passive设置为true，不然背景会滑动不了
     end(event) {
-        
+
       this.flags = false;
       // 注意事项，在添加和删除监听事件时，其function必须是同名的函数，不能为匿名函数。
       document.removeEventListener("touchmove", this.preventDefault, false);
@@ -166,15 +222,16 @@ export default {
       e.preventDefault();
     },
   },
-  created() {},
-  mounted() {},
 };
 </script>
 
 <style scoped>
 .xuanfu {
   /* 如果碰到滑动问题，1.3 请检查 z-index。z-index需比web大一级*/
+  width: v-bind(cWidth);
+  height: v-bind(cHeight);
+  position: v-bind(cPosition);
+  /* fixed */
   z-index: 999;
-  position: fixed;
 }
 </style>
