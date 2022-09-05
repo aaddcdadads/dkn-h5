@@ -17,6 +17,13 @@
       }
     },
     {
+      "path": "components/built-in/uniapp/HmMoveView",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "components/built-in/uniapp/HmUviewVideo",
       "style": {
         "navigationBarTitleText": "",

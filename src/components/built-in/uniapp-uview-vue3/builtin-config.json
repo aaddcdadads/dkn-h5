@@ -95,7 +95,15 @@
         "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewCollapse.png",
         "type": 0,
         "isBuiltIn": true
-      }
+      },
+      {
+        "name": "HmMoveView",
+        "title": "可移动盒子",
+        "importPath": "built-in/uniapp/HmMoveView",
+        "imgUrl": "// built-in/uniapp-uview-vue3/img/HmMoveView.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
     ]
   },
   {
