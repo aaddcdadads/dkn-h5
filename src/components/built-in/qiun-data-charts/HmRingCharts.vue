@@ -11,8 +11,10 @@
   </view>
 </template>
 <script>
+import qiunDataCharts from '@/components/built-in/qiun-data-charts/HmQiunCharts.vue';
 export default {
   name: "HmColumnCharts",
+  components:{qiunDataCharts},
   props: {
     /**
      * 宽度
@@ -39,8 +41,9 @@ export default {
             {
               data: [
                 {
-                  name: "一班",
+                  name: "1班",
                   value: 50,
+                  "labelText": "四班:18人"
                 },
                 {
                   name: "二班",

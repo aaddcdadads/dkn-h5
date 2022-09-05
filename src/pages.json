@@ -353,7 +353,7 @@
       }
     },
     {
-      "path": "components/built-in/qiun-data-charts/HmColumnCharts",
+      "path": "components/built-in/qiun-data-charts/HmMixCharts",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
