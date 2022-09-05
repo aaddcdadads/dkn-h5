@@ -10,13 +10,6 @@
         "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewGrid.png",
         "type": 0,
         "isBuiltIn": true
-      },
-      {
-        "name": "HmUviewList",
-        "title": "列表布局",
-        "importPath": "built-in/uniapp-uview-vue3/HmUviewList",
-        "type": 0,
-        "isBuiltIn": true
       }
     ]
   },
@@ -100,10 +93,10 @@
         "name": "HmMoveView",
         "title": "可移动盒子",
         "importPath": "built-in/uniapp/HmMoveView",
-        "imgUrl": "// built-in/uniapp-uview-vue3/img/HmMoveView.png",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmMoveView.png",
         "type": 0,
         "isBuiltIn": true
-      },
+      }
     ]
   },
   {
@@ -200,7 +193,7 @@
       },
       {
         "name": "HmImage",
-        "title": "图标",
+        "title": "图片",
         "importPath": "built-in/uniapp/HmImage",
         "imgUrl": "built-in/uniapp/img/HmImage.png",
         "type": 0,
@@ -302,7 +295,7 @@
       },
       {
         "name": "HmUviewSlider",
-        "title": "进度条",
+        "title": "滑块",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewSlider",
         "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSlider.png",
         "type": 0,
@@ -352,7 +345,7 @@
         "name": "HmInput",
         "title": "输入框",
         "importPath": "built-in/uniapp/HmInput",
-        "imgUrl": "built-in/uniapp-uview-vue3/img/HmInput.png",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewField.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -583,14 +576,6 @@
         "title": "相机",
         "importPath": "built-in/uniapp/HmCamera",
         "imgUrl": "built-in/uniapp/img/HmCamera.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "HmProgress",
-        "title": "进度条",
-        "importPath": "built-in/uniapp/HmProgress",
-        "imgUrl": "built-in/uniapp/img/HmProgress.png",
         "type": 0,
         "isBuiltIn": true
       },
