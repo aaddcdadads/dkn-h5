@@ -2,11 +2,8 @@
   <view class="charts-box">
     <qiun-data-charts
       :type="type"
-      :chartData="chartData"
-      :ontap="ontap"
-      :ontouch="ontouch"
-      :onmouse="onmouse"
-      :opts="chartDeploy"
+      :chartData="cChartData"   
+      :opts="cChartDeploy"
       @complete="onComplete"
       @getIndex="getIndex"
       @click="onClick"
@@ -18,27 +15,6 @@
 export default {
   name: "HmQiunCharts",
   props: {
-    /**
-     * 监听点击事件
-     */
-    ontap: {
-      type: Boolean,
-      default: true,
-    },
-    /**
-     * 监听拖动事件
-     */
-    ontouch: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * 监听滑动事件
-     */
-    onmouse: {
-      type: Boolean,
-      default: true,
-    },
     /**
      * 图表类型
      * @type Enum
@@ -211,17 +187,41 @@ export default {
       },
     },
   },
+  watch:{
+    width(val){
+      this.cWidth = this.getCssUnit(val);
+    },
+    height(val){
+      this.cHeight = this.getCssUnit(val);
+    },
+    chartData(val){
+      this.cChartData = JSON.parse(JSON.stringify(val));
+    },
+    chartDeploy(val){
+      this.cChartDeploy = JSON.parse(JSON.stringify(val));
+    }
+  },
   data() {
     return {
       cWidth: "100%",
       cHeight: "300rpx",
+      cChartData:{},
+      cChartDeploy:{}
     };
   },
   mounted() {
-    this.cWidth = this.$getCssUnit(this.width);
-    this.cHeight = this.$getCssUnit(this.height);
+    this.cWidth = this.getCssUnit(this.width);
+    this.cHeight = this.getCssUnit(this.height);
+    this.cChartData = JSON.parse(JSON.stringify(this.chartData));
+    this.cChartDeploy = JSON.parse(JSON.stringify(this.chartDeploy));
   },
   methods: {
+    getCssUnit(value) {
+      if (isNaN(Number(value))) {
+        return value;
+      }
+      return `${value}px`;
+    },
     onComplete(e) {
       this.$emit("complete", e);
       console.log(e);

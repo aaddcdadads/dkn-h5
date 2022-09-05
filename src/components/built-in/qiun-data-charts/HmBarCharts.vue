@@ -2,10 +2,7 @@
   <view class="charts-box">
     <qiun-data-charts
       type="bar"
-      :chartData="cChartData"
-      :ontap="ontap"
-      :ontouch="ontouch"
-      :onmouse="onmouse"
+      :chartData="cChartData"   
       :opts="cChartDeploy"
       @complete="onComplete"
       @getIndex="getIndex"
@@ -17,27 +14,6 @@
 export default {
   name: "HmColumnCharts",
   props: {
-    /**
-     * 监听点击事件
-     */
-    ontap: {
-      type: Boolean,
-      default: true,
-    },
-    /**
-     * 监听拖动事件
-     */
-    ontouch: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * 监听滑动事件
-     */
-    onmouse: {
-      type: Boolean,
-      default: true,
-    },
     /**
      * 宽度
      */
