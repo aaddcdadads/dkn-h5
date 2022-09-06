@@ -6,10 +6,8 @@
     </view>
 </template>
 <script>
-import qiunDataCharts from '@/components/built-in/qiun-data-charts/HmQiunCharts.vue';
 export default {
     name: "HmMixCharts",
-    components: { qiunDataCharts },
     props: {
         /**
          * 宽度
