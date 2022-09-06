@@ -10,10 +10,13 @@
         </uni-tr>
         <uni-tr v-for="(item, index) in cData" :key="index">
           <uni-td align="center" v-for="column in columns">{{ item[column.dataIndex] }}</uni-td>
-          <uni-td>
-            <view class="uni-group">
-              <button class="uni-button" size="mini" type="primary">修改</button>
-              <button class="uni-button" size="mini" type="warn">删除</button>
+          <uni-td v-if="actions.length > 0">
+            <view class="uni-group action">
+              <button v-for="(action, index) in actions" :key="index" 
+                class="uni-button" 
+                :size="action.size || 'mini'"
+                :type="action.type || 'primary'"
+                @click="action.callback">{{ action.name }}</button>
             </view>
           </uni-td>
         </uni-tr>
@@ -74,13 +77,7 @@ export default {
             dataIndex: "school",
             key: "school",
             ellipsis: true,
-          },
-          {
-            title: "操作",
-            dataIndex: "",
-            key: "action",
-            slots: { customRender: "action" },
-          },
+          }
         ];
       },
     },
@@ -93,27 +90,27 @@ export default {
         return [
           {
             key: "1",
-            name: "John Brown",
+            name: "胡小根",
             age: 32,
-            address: "New York No. 1 Lake Park, New York No. 1 Lake Park",
+            address: "深圳市龙岗区坂田街道",
             sexual: "男",
-            school: "加里敦大学",
+            school: "毫末科技",
           },
           {
             key: "2",
-            name: "Jim Green",
+            name: "胡小根",
             age: 42,
-            address: "London No. 2 Lake Park, London No. 2 Lake Park",
+            address: "深圳市龙岗区坂田街道",
             sexual: "男",
-            school: "加里敦大学",
+            school: "毫末科技",
           },
           {
             key: "3",
-            name: "Joe Black",
+            name: "胡小根",
             age: 32,
-            address: "Sidney No. 1 Lake Park, Sidney No. 1 Lake Park",
+            address: "深圳市龙岗区坂田街道",
             sexual: "男",
-            school: "加里敦大学",
+            school: "毫末科技",
           },
         ];
       },
@@ -213,6 +210,7 @@ export default {
           },
           {
             name: "删除",
+            type: 'warn',
             callback: function (item) {
               console.log("点击删除: ", item);
             },
@@ -267,23 +265,18 @@ export default {
     backgroundColor: {
       type: String,
       default: "",
-    },
-    /**
-     * 行类名
-     */
-    rowClassName: {
-      type: Object,
-      default: function () {
-        return {
-          class: null,
-        };
-      },
-    },
+    }
   },
   data() {
     return {
       cData: []
     }
+  },
+  watch: {
+
+  },
+  mounted() {
+    this.cData = this.data;
   },
   methods: {
     onClick(e) {
@@ -295,4 +288,11 @@ export default {
 </script>
 
 <style lang="less">
+.action.uni-group {
+  width: 140px;
+
+  button {
+    margin-left: 5px;
+  }
+}
 </style>
