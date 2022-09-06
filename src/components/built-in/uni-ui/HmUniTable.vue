@@ -1,0 +1,298 @@
+<template>
+  <view>
+    <view class="uni-container">
+      <uni-table ref="table" :loading="loading" border stripe type="selection" emptyText="暂无更多数据"
+        @selection-change="selectionChange">
+        <uni-tr>
+          <uni-th v-for="column in columns" 
+            :width="column.width || 100" 
+            :align="column.align || 'center'">{{ column.title }}</uni-th>
+        </uni-tr>
+        <uni-tr v-for="(item, index) in cData" :key="index">
+          <uni-td align="center" v-for="column in columns">{{ item[column.dataIndex] }}</uni-td>
+          <uni-td>
+            <view class="uni-group">
+              <button class="uni-button" size="mini" type="primary">修改</button>
+              <button class="uni-button" size="mini" type="warn">删除</button>
+            </view>
+          </uni-td>
+        </uni-tr>
+      </uni-table>
+      <view class="uni-pagination-box">
+        <uni-pagination show-icon :page-size="pageSize" :current="pageCurrent" :total="total" @change="change" />
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+import _ from "lodash";
+import {
+  getAction,
+  postAction,
+  deleteAction,
+  putAction,
+} from "/@/request/http";
+
+export default {
+  name: "HmUniTable",
+  components: {},
+  name: "HmButton",
+  props: {
+    /**
+         * 列定义
+         */
+    columns: {
+      type: Array,
+      default: function () {
+        return [
+          {
+            title: "姓名",
+            dataIndex: "name",
+            key: "name",
+          },
+          {
+            title: "年龄",
+            dataIndex: "age",
+            key: "age",
+            width: 80,
+          },
+          {
+            title: "地址",
+            dataIndex: "address",
+            key: "address",
+            ellipsis: true,
+          },
+          {
+            title: "性别",
+            dataIndex: "sexual",
+            key: "sexual",
+            ellipsis: true,
+          },
+          {
+            title: "毕业院校",
+            dataIndex: "school",
+            key: "school",
+            ellipsis: true,
+          },
+          {
+            title: "操作",
+            dataIndex: "",
+            key: "action",
+            slots: { customRender: "action" },
+          },
+        ];
+      },
+    },
+    /**
+     * 数据
+     */
+    data: {
+      type: Array,
+      default: function () {
+        return [
+          {
+            key: "1",
+            name: "John Brown",
+            age: 32,
+            address: "New York No. 1 Lake Park, New York No. 1 Lake Park",
+            sexual: "男",
+            school: "加里敦大学",
+          },
+          {
+            key: "2",
+            name: "Jim Green",
+            age: 42,
+            address: "London No. 2 Lake Park, London No. 2 Lake Park",
+            sexual: "男",
+            school: "加里敦大学",
+          },
+          {
+            key: "3",
+            name: "Joe Black",
+            age: 32,
+            address: "Sidney No. 1 Lake Park, Sidney No. 1 Lake Park",
+            sexual: "男",
+            school: "加里敦大学",
+          },
+        ];
+      },
+    },
+    /**
+     * 隐藏翻页控件
+     */
+    paginationHidden: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 翻页参数
+     */
+    pagination: {
+      type: Object,
+      default: function () {
+        return {
+          current: 1,
+          pageSize: 10,
+        };
+      },
+    },
+    /**
+     * 显示序号列
+     */
+    showColumnNo: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * GET URL
+     */
+    url: {
+      type: String,
+    },
+    /**
+     * GET Params
+     */
+    params: {
+      type: Object,
+      default: function () {
+        return {}
+      }
+    },
+    /**
+     * 请求结果映射
+     * @desc list为列表数据路径；total为总数路径。路径采用JSONPath格式（去掉前面的 $.）
+     */
+    getDataMap: {
+      type: Object,
+      default: function () {
+        return {
+          list: '',
+          total: ''
+        }
+      }
+    },
+    /**
+     * 分页参数映射
+     */
+    paginationMap: {
+      type: Object,
+      default: function () {
+        return {
+          pageNo: 'pageNo',
+          pageSize: 'pageSize'
+        }
+      }
+    },
+    /**
+     * 可选择行
+     */
+    rowSelectFlag: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 带边框
+     */
+    bordered: {
+      type: Boolean,
+      default: true,
+    },
+    /**
+     * 操作按钮
+     */
+    actions: {
+      type: Array,
+      default: function () {
+        return [
+          {
+            name: "编辑",
+            callback: function (item) {
+              console.log("点击编辑: ", item);
+            },
+          },
+          {
+            name: "删除",
+            callback: function (item) {
+              console.log("点击删除: ", item);
+            },
+          },
+        ];
+      },
+    },
+    /**
+     * 操作按钮展开
+     */
+    isFlatAction: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 固定行列
+     */
+    scroll: {
+      type: Object,
+      default: function () {
+        return {
+          x: "100%",
+        };
+      },
+    },
+    /**
+     * 自动合并单元
+     * @description 数据相同的内容自动合并. 形如 ["r1c1:r10c1", "r2c2:r10c2", "r1:r2", "c4"]，这里的r1c1表示的是第1行（row 1），第1列（column 1）。第1列不包含表格，指的是数据行。
+     */
+    combined: {
+      type: Array,
+      default: [],
+    },
+    /**
+     * 清空过滤排序
+     */
+    clearFiltersAndSortersFlag: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 行高
+     */
+    rowHeight: {
+      type: String,
+      default: "42",
+    },
+    /**
+     * 表格背景颜色
+     * @type Color
+     * */
+    backgroundColor: {
+      type: String,
+      default: "",
+    },
+    /**
+     * 行类名
+     */
+    rowClassName: {
+      type: Object,
+      default: function () {
+        return {
+          class: null,
+        };
+      },
+    },
+  },
+  data() {
+    return {
+      cData: []
+    }
+  },
+  methods: {
+    onClick(e) {
+      //console.log("e", e);
+      this.$emit("click", e);
+    },
+  },
+};
+</script>
+
+<style lang="less">
+</style>

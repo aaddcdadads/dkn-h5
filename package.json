@@ -45,6 +45,7 @@
     "@dcloudio/uni-mp-toutiao": "^3.0.0-alpha-3040420220402002",
     "@dcloudio/uni-mp-weixin": "^3.0.0-alpha-3040420220402002",
     "@dcloudio/uni-quickapp-webview": "^3.0.0-alpha-3040420220402002",
+    "@dcloudio/uni-ui": "^1.4.20",
     "jiff": "^0.7.3",
     "jsonpath": "^1.1.1",
     "lodash": "^4.17.21",
