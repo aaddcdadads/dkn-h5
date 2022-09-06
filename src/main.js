@@ -44,7 +44,7 @@ export function createApp() {
         if (isNaN(Number(value))) {
             return value;
         }
-        return `${value}px`;
+        return `${value}rpx`;
     }
 
     // app.use(message);
