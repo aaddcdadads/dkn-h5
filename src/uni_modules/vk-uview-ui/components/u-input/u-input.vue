@@ -324,6 +324,7 @@ export default {
 			if (this.trim) value = this.$u.trim(value);
 			// vue 原生的方法 return 出去
 			this.$emit("input", value);
+			this.$emit("change", value);
 			this.$emit("update:modelValue", value);
 			// 当前model 赋值
 			this.defaultValue = value;
