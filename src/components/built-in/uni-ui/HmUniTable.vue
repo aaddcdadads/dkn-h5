@@ -7,6 +7,8 @@
           <uni-th v-for="column in columns" 
             :width="column.width || 100" 
             :align="column.align || 'center'">{{ column.title }}</uni-th>
+
+          <uni-th v-if="actions.length > 0" :width="220">操作</uni-th>
         </uni-tr>
         <uni-tr v-for="(item, index) in cData" :key="index">
           <uni-td align="center" v-for="column in columns">{{ item[column.dataIndex] }}</uni-td>
@@ -61,21 +63,9 @@ export default {
             width: 80,
           },
           {
-            title: "地址",
-            dataIndex: "address",
-            key: "address",
-            ellipsis: true,
-          },
-          {
             title: "性别",
             dataIndex: "sexual",
             key: "sexual",
-            ellipsis: true,
-          },
-          {
-            title: "毕业院校",
-            dataIndex: "school",
-            key: "school",
             ellipsis: true,
           }
         ];
