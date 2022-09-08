@@ -922,6 +922,11 @@
         "name": "TestHmColorPicker",
         "path": "pages/test/TestHmColorPicker",
         "query": ""
+      },
+      {
+        "name": "TestHmUviewFormily",
+        "path": "pages/test/TestHmUviewFormily",
+        "query": ""
       }
     ]
   }
