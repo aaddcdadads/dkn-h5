@@ -2,6 +2,9 @@ import {
     createSSRApp
 } from "vue";
 import App from "./App.vue";
+/* #ifdef H5 */
+import "./static/css/index.css";
+/* #endif */
 
 import uView from './uni_modules/vk-uview-ui';
 

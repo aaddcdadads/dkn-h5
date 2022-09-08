@@ -380,6 +380,14 @@
     "name": "数据组件",
     "componentList": [
       {
+        "name": "HmUniTable",
+        "title": "表格uTable",
+        "importPath": "built-in/uni-ui/HmUniTable",
+        "imgUrl": "built-in/uni-ui/img/HmUniTable.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmUviewCountDown",
         "title": "倒计时",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewCountDown",

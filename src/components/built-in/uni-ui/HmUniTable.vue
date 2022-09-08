@@ -4,9 +4,11 @@
       <uni-table ref="table" :loading="loading" border stripe type="selection" emptyText="暂无更多数据"
         @selection-change="selectionChange">
         <uni-tr>
-          <uni-th v-for="column in columns" :width="column.width || 100" :align="column.align || 'center'">{{
-              column.title
-          }}</uni-th>
+          <uni-th v-for="column in columns" 
+            :width="column.width || 100" 
+            :align="column.align || 'center'">{{ column.title }}</uni-th>
+
+          <uni-th v-if="actions.length > 0" :width="220">操作</uni-th>
         </uni-tr>
         <uni-tr v-for="(item, index) in cData" :key="index">
           <uni-td align="center" v-for="column in columns">{{ item[column.dataIndex] }}</uni-td>
@@ -60,21 +62,9 @@ export default {
             width: 80,
           },
           {
-            title: "地址",
-            dataIndex: "address",
-            key: "address",
-            ellipsis: true,
-          },
-          {
             title: "性别",
             dataIndex: "sexual",
             key: "sexual",
-            ellipsis: true,
-          },
-          {
-            title: "毕业院校",
-            dataIndex: "school",
-            key: "school",
             ellipsis: true,
           }
         ];
@@ -279,6 +269,9 @@ export default {
     }
   },
   watch: {
+    paginationHidden(value) {
+      this.cPaginationHidden = value;
+    },
     pagination: {
       handler(value) {
         if (Object.keys(value).length === 0) {
@@ -316,7 +309,7 @@ export default {
     this.cData = JSONfn.parse(JSONfn.stringify(this.data));
     this.cColumns = JSONfn.parse(JSONfn.stringify(this.columns));
     this.processShowColumnNo(true, true);
-
+    this.cPaginationHidden=this.paginationHidden;
     if (Object.keys(this.pagination).length === 0) {
       this.cPaginationHidden = true;
     } else {
@@ -351,9 +344,9 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .action.uni-group {
-  width: 140px;
+  width: v-bind(actionTdWidth);
 
   button {
     margin-left: 5px;
