@@ -269,27 +269,30 @@ export default {
   },
   data() {
     return {
-      cData: []
+      cData: [],
+
+      actionTdWidth: '140rpx'
     }
   },
   watch: {
+    actions: {
+      handler: function(value, oldValue) {
 
+      },
+      deep: true
+    }
   },
   mounted() {
     this.cData = this.data;
   },
   methods: {
-    onClick(e) {
-      //console.log("e", e);
-      this.$emit("click", e);
-    },
   },
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .action.uni-group {
-  width: 140px;
+  width: v-bind(actionTdWidth);
 
   button {
     margin-left: 5px;
