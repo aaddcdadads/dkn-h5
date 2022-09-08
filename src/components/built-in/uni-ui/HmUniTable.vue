@@ -7,22 +7,22 @@
           <uni-th v-for="column in columns" 
             :width="column.width || 100" 
             :align="column.align || 'center'">{{ column.title }}</uni-th>
+
+          <uni-th v-if="actions.length > 0" :width="220">操作</uni-th>
         </uni-tr>
         <uni-tr v-for="(item, index) in cData" :key="index">
           <uni-td align="center" v-for="column in columns">{{ item[column.dataIndex] }}</uni-td>
           <uni-td v-if="actions.length > 0">
             <view class="uni-group action">
-              <button v-for="(action, index) in actions" :key="index" 
-                class="uni-button" 
-                :size="action.size || 'mini'"
-                :type="action.type || 'primary'"
-                @click="action.callback">{{ action.name }}</button>
+              <button v-for="(action, index) in actions" :key="index" class="uni-button" :size="action.size || 'mini'"
+                :type="action.type || 'primary'" @click="action.callback">{{ action.name }}</button>
             </view>
           </uni-td>
         </uni-tr>
       </uni-table>
-      <view class="uni-pagination-box">
-        <uni-pagination show-icon :page-size="pageSize" :current="pageCurrent" :total="total" @change="change" />
+      <view v-if="!cPaginationHidden" class="uni-pagination-box">
+        <uni-pagination show-icon :page-size="pagination.pageSize" :current="pagination.current" :total="total"
+          @change="change" />
       </view>
     </view>
   </view>
@@ -30,6 +30,7 @@
 
 <script>
 import _ from "lodash";
+import JSONfn from "/@/utils/jsonfn";
 import {
   getAction,
   postAction,
@@ -43,8 +44,8 @@ export default {
   name: "HmButton",
   props: {
     /**
-         * 列定义
-         */
+     * 列定义
+     */
     columns: {
       type: Array,
       default: function () {
@@ -61,21 +62,9 @@ export default {
             width: 80,
           },
           {
-            title: "地址",
-            dataIndex: "address",
-            key: "address",
-            ellipsis: true,
-          },
-          {
             title: "性别",
             dataIndex: "sexual",
             key: "sexual",
-            ellipsis: true,
-          },
-          {
-            title: "毕业院校",
-            dataIndex: "school",
-            key: "school",
             ellipsis: true,
           }
         ];
@@ -269,16 +258,84 @@ export default {
   },
   data() {
     return {
-      cData: []
+      cColumns: [],
+      cData: [],
+      cPaginationHidden: false,
+      cPagination: {
+        current: 1,
+        pageSize: 10,
+        total: 0
+      },
     }
   },
   watch: {
-
+    paginationHidden(value) {
+      this.cPaginationHidden = value;
+    },
+    pagination: {
+      handler(value) {
+        if (Object.keys(value).length === 0) {
+          this.cPaginationHidden = true;
+        } else {
+          this.cPagination = Object.assign(this.cPagination, this.pagination);
+        }
+        console.log(
+          `table watch pagination: `,
+          this.cPagination,
+          this.pagination
+        );
+        // this.getData();
+      },
+      deep: true,
+    },
+    columns: {
+      handler: function (value, oldValue) {
+        console.log("watch columns");
+        this.cColumns = JSONfn.parse(JSONfn.stringify(this.columns));
+        this.processShowColumnNo(true, false);
+      },
+      deep: true,
+    },
+    data: {
+      handler: function (value, oldValue) {
+        console.log("watch data");
+        this.cData = JSONfn.parse(JSONfn.stringify(value));
+        this.processShowColumnNo(false, true);
+      },
+      deep: true,
+    },
   },
   mounted() {
-    this.cData = this.data;
+    this.cData = JSONfn.parse(JSONfn.stringify(this.data));
+    this.cColumns = JSONfn.parse(JSONfn.stringify(this.columns));
+    this.processShowColumnNo(true, true);
+    this.cPaginationHidden=this.paginationHidden;
+    if (Object.keys(this.pagination).length === 0) {
+      this.cPaginationHidden = true;
+    } else {
+      this.cPagination = Object.assign(this.cPagination, this.pagination);
+    }
   },
   methods: {
+    processShowColumnNo(columnFlag, dataFlag) {
+      if (!this.showColumnNo) {
+        return;
+      }
+      if (columnFlag) {
+        this.cColumns.unshift({
+          title: "序号",
+          dataIndex: "hmNo",
+          key: "hmNo",
+          width: 60,
+        });
+      }
+
+      if (dataFlag) {
+        _.each(this.cData, (item, index) => {
+          item.hmNo = index + 1;
+        });
+      }
+    },
     onClick(e) {
       //console.log("e", e);
       this.$emit("click", e);
@@ -287,9 +344,9 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .action.uni-group {
-  width: 140px;
+  width: v-bind(actionTdWidth);
 
   button {
     margin-left: 5px;

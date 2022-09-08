@@ -87,7 +87,15 @@ export default defineConfig({
       ),
     },
     proxy: {
-      
+      '/api': {
+        target: 'http://jeecgboot-vue3.dev.haomo-tech.com:8000/',
+        changeOrigin: true,
+      },
+      '/project-api/api': {
+        target: 'http://jeecgboot-vue3.dev.haomo-tech.com:8000/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/project-api/, ""),
+      },
     },
   },
 
