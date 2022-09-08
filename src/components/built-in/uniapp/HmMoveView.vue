@@ -2,7 +2,9 @@
   <view>
     <view class="xuanfu" id="moveDiv" :style="moveStyle" @touchstart="down" @touchmove="move" @touchend="end"
       @click="click">
+      <view class="slot-box">
       <slot name="moveDiv"></slot>
+    </view>
     </view>
   </view>
 </template>
@@ -81,8 +83,8 @@ export default {
       dy: "",
       xPum: "",
       yPum: "",
-      cWidth:"50px",
-      cHeight:"50px",
+      cWidth: "50px",
+      cHeight: "50px",
       cHideScale: "0.875",
       cPosition: "fixed"
     };
@@ -233,5 +235,12 @@ export default {
   position: v-bind(cPosition);
   /* fixed */
   z-index: 999;
+}
+.slot-box{
+  width:100%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
