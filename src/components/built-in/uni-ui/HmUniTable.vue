@@ -4,25 +4,23 @@
       <uni-table ref="table" :loading="loading" border stripe type="selection" emptyText="暂无更多数据"
         @selection-change="selectionChange">
         <uni-tr>
-          <uni-th v-for="column in columns" 
-            :width="column.width || 100" 
-            :align="column.align || 'center'">{{ column.title }}</uni-th>
+          <uni-th v-for="column in columns" :width="column.width || 100" :align="column.align || 'center'">{{
+              column.title
+          }}</uni-th>
         </uni-tr>
         <uni-tr v-for="(item, index) in cData" :key="index">
           <uni-td align="center" v-for="column in columns">{{ item[column.dataIndex] }}</uni-td>
           <uni-td v-if="actions.length > 0">
             <view class="uni-group action">
-              <button v-for="(action, index) in actions" :key="index" 
-                class="uni-button" 
-                :size="action.size || 'mini'"
-                :type="action.type || 'primary'"
-                @click="action.callback">{{ action.name }}</button>
+              <button v-for="(action, index) in actions" :key="index" class="uni-button" :size="action.size || 'mini'"
+                :type="action.type || 'primary'" @click="action.callback">{{ action.name }}</button>
             </view>
           </uni-td>
         </uni-tr>
       </uni-table>
-      <view class="uni-pagination-box">
-        <uni-pagination show-icon :page-size="pageSize" :current="pageCurrent" :total="total" @change="change" />
+      <view v-if="!cPaginationHidden" class="uni-pagination-box">
+        <uni-pagination show-icon :page-size="pagination.pageSize" :current="pagination.current" :total="total"
+          @change="change" />
       </view>
     </view>
   </view>
@@ -30,6 +28,7 @@
 
 <script>
 import _ from "lodash";
+import JSONfn from "/@/utils/jsonfn";
 import {
   getAction,
   postAction,
@@ -43,8 +42,8 @@ export default {
   name: "HmButton",
   props: {
     /**
-         * 列定义
-         */
+     * 列定义
+     */
     columns: {
       type: Array,
       default: function () {
@@ -269,16 +268,81 @@ export default {
   },
   data() {
     return {
-      cData: []
+      cColumns: [],
+      cData: [],
+      cPaginationHidden: false,
+      cPagination: {
+        current: 1,
+        pageSize: 10,
+        total: 0
+      },
     }
   },
   watch: {
-
+    pagination: {
+      handler(value) {
+        if (Object.keys(value).length === 0) {
+          this.cPaginationHidden = true;
+        } else {
+          this.cPagination = Object.assign(this.cPagination, this.pagination);
+        }
+        console.log(
+          `table watch pagination: `,
+          this.cPagination,
+          this.pagination
+        );
+        // this.getData();
+      },
+      deep: true,
+    },
+    columns: {
+      handler: function (value, oldValue) {
+        console.log("watch columns");
+        this.cColumns = JSONfn.parse(JSONfn.stringify(this.columns));
+        this.processShowColumnNo(true, false);
+      },
+      deep: true,
+    },
+    data: {
+      handler: function (value, oldValue) {
+        console.log("watch data");
+        this.cData = JSONfn.parse(JSONfn.stringify(value));
+        this.processShowColumnNo(false, true);
+      },
+      deep: true,
+    },
   },
   mounted() {
-    this.cData = this.data;
+    this.cData = JSONfn.parse(JSONfn.stringify(this.data));
+    this.cColumns = JSONfn.parse(JSONfn.stringify(this.columns));
+    this.processShowColumnNo(true, true);
+
+    if (Object.keys(this.pagination).length === 0) {
+      this.cPaginationHidden = true;
+    } else {
+      this.cPagination = Object.assign(this.cPagination, this.pagination);
+    }
   },
   methods: {
+    processShowColumnNo(columnFlag, dataFlag) {
+      if (!this.showColumnNo) {
+        return;
+      }
+      if (columnFlag) {
+        this.cColumns.unshift({
+          title: "序号",
+          dataIndex: "hmNo",
+          key: "hmNo",
+          width: 60,
+        });
+      }
+
+      if (dataFlag) {
+        _.each(this.cData, (item, index) => {
+          item.hmNo = index + 1;
+        });
+      }
+    },
     onClick(e) {
       //console.log("e", e);
       this.$emit("click", e);
