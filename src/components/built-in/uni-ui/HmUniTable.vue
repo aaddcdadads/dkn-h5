@@ -1,14 +1,14 @@
 <template>
   <view>
     <view class="uni-container">
-      <uni-table ref="table" :loading="loading" border stripe type="selection" emptyText="暂无更多数据"
+      <uni-table ref="table" :loading="loading" border stripe :type="rowSelectFlag ? 'selection' : ''" emptyText="暂无更多数据"
         @selection-change="selectionChange">
         <uni-tr>
           <uni-th v-for="column in columns" 
             :width="column.width || 100" 
             :align="column.align || 'center'">{{ column.title }}</uni-th>
 
-          <uni-th v-if="actions.length > 0" :width="220">操作</uni-th>
+          <uni-th v-if="actions.length > 0" :width="140">操作</uni-th>
         </uni-tr>
         <uni-tr v-for="(item, index) in cData" :key="index">
           <uni-td align="center" v-for="column in columns">{{ item[column.dataIndex] }}</uni-td>
