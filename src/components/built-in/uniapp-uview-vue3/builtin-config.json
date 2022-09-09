@@ -230,6 +230,14 @@
     "name": "表单组件",
     "componentList": [
       {
+        "name": "HmUviewFormily",
+        "title": "formily表单",
+        "importPath": "built-in/uniapp-uview-vue3/HmUviewFormily",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewFormily.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmUviewCalendar",
         "title": "日期选择",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewCalendar",

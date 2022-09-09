@@ -9,28 +9,6 @@
 <script>
 import { h, defineComponent } from "vue";
 
-// import {
-//   Form,
-//   FormItem,
-//   Button,
-//   Checkbox,
-//   CheckboxGroup,
-//   RangePicker,
-//   DatePicker,
-//   Input,
-//   Textarea,
-//   InputNumber,
-//   Radio,
-//   RadioGroup,
-//   Cascader,
-//   Select,
-//   Slider,
-//   Switch as AntSwitch,
-//   TreeSelect,
-//   TimePicker,
-//   Upload,
-// } from '@/uni_modules/vk-uview-ui'
-
 import Form from '@/uni_modules/vk-uview-ui/components/u-form/u-form.vue'
 import FormItem from '@/uni_modules/vk-uview-ui/components/u-form-item/u-form-item.vue'
 import UInput from '@/uni_modules/vk-uview-ui/components/u-input/u-input.vue'
