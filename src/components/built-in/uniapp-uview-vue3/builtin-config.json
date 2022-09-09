@@ -357,14 +357,7 @@
         "type": 0,
         "isBuiltIn": true
       },
-      {
-        "name": "HmLabel",
-        "title": "控件",
-        "importPath": "built-in/uniapp/HmLabel",
-        "imgUrl": "built-in/uniapp/img/HmLabel.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
+      
       {
         "name": "HmSlider",
         "title": "滑动选择器",
