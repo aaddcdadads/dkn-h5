@@ -21,8 +21,8 @@
         </uni-tr>
       </uni-table>
       <view v-if="!cPaginationHidden" class="uni-pagination-box">
-        <uni-pagination show-icon :page-size="pagination.pageSize" :current="pagination.current" :total="total"
-          @change="change" />
+        <uni-pagination show-icon :page-size="cPagination.pageSize" :current="cPagination.current"
+          :total="cPagination.total" @change="onPaginationChange" />
       </view>
     </view>
   </view>
@@ -451,6 +451,17 @@ export default {
       }
       return this.cPagination.pageSize;
     },
+
+    /**
+     * 翻页
+     */
+    onPaginationChange(event) {
+      console.log(`onPaginationChange: `, event);
+      this.cPagination.current = event.current;
+      this.getData();
+      this.$emit("pagination-change", event);
+    },
+
     processShowColumnNo(columnFlag, dataFlag) {
       if (!this.showColumnNo) {
         return;
