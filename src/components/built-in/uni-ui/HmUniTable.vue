@@ -1,7 +1,7 @@
 <template>
   <view>
     <view class="uni-container">
-      <uni-table ref="table" :loading="loading" border stripe :type="rowSelectFlag ? 'selection' : ''"
+      <uni-table ref="table" :loading="loading" :border="bordered" stripe :type="rowSelectFlag ? 'selection' : ''"
         emptyText="暂无更多数据" @selection-change="selectionChange">
         <uni-tr>
           <uni-th v-for="column in columns" :width="column.width || 100" :align="column.align || 'center'">{{
