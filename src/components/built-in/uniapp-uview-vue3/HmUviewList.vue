@@ -1,11 +1,11 @@
 <template>
   <view>
-    <slot 
+    <!-- <slot 
       v-for="(item, index) in cData" 
       :key="index"
       v-bind="item"
     >
-    </slot>
+    </slot> -->
   </view>
 </template>
 
