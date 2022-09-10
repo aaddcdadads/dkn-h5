@@ -379,7 +379,7 @@ export default {
      * 从接口返回结果里取到数组
      */
     getDataList(resp) {
-      if (this.getDataMap.list) {
+      if (this.getDataMap && this.getDataMap.list) {
         let listPath = this.getDataMap.list;
         listPath = listPath.indexOf('$') === 0 ? listPath : `$.${listPath}`;
         return jp.query(resp, listPath)[0];
@@ -392,6 +392,8 @@ export default {
       if (resp.data) {
         return resp.data;
       }
+      console.warn(`接口数据格式不兼容: `, resp);
+      return [];
     },
     /**
      *  从接口返回结果里取到总数
