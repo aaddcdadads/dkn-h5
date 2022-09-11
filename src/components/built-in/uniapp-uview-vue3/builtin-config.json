@@ -82,6 +82,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "HmImportPage",
+        "title": "引用页面",
+        "importPath": "built-in/uniapp-uview-vue3/layout/HmImportPage",
+        "imgUrl": "built-in/uniapp-uview-vue3/layout/img/HmBgCard.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmUviewCollapse",
         "title": "折叠面板",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewCollapse",
