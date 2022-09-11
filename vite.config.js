@@ -101,6 +101,7 @@ export default defineConfig({
 
   // 打包为库
   build: {
+    sourcemap: true,
     lib: {
       entry: resolve(__dirname, "src/components/index.js"),
       name: "uniapp-uview-vue3",
