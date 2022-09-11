@@ -1,6 +1,8 @@
 <template>
   <view class="hm-import-page" v-show="!hidden">
+    <!-- #ifdef APP-PLUS || H5 -->
     <component ref="component" :is="pageComponent"></component>
+    <!-- #endif -->
   </view>
 </template>
 
