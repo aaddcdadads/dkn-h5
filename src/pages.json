@@ -28,6 +28,13 @@
       }
     },
     {
+      "path": "components/built-in/uniapp/HmUviewFab",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "components/built-in/uniapp/HmUviewVideo",
       "style": {
         "navigationBarTitleText": "",
