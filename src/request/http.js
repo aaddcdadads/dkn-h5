@@ -18,6 +18,15 @@ function setGlobal(config) {
  */
 function transformAxiosRequest(config) {
     if(!config.url) return;
+
+    // 本地调试不转换
+    let host = window.location.host;
+    if (host.indexOf('localhost') !== -1 
+      || host.indexOf('127.0.0.1') !== -1 
+      || host.indexOf('192.168') !== -1) {
+      return;
+    }
+
     console.log('转换前的Url:  ',config.url, config)
     //转换proxy
     transformUrlProxy(config)

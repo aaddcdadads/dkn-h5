@@ -28,6 +28,13 @@
       }
     },
     {
+      "path": "components/built-in/uniapp/HmUviewFab",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "components/built-in/uniapp/HmUviewVideo",
       "style": {
         "navigationBarTitleText": "",
@@ -876,6 +883,13 @@
     },
     {
       "path": "pages/test/TestHmUviewFormily",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/test/TestHmImportPage",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false

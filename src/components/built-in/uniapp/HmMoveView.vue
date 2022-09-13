@@ -19,14 +19,14 @@ export default {
      */
     width: {
       type: String,
-      default: "100px"
+      default: "50px"
     },
     /**
      * 高度
      */
     height: {
       type: String,
-      default: "100px"
+      default: "50px"
     },
     /**
      * 移动盒子样式
@@ -55,7 +55,7 @@ export default {
      */
     restoreDistance: {
       type: Number,
-      default: "12"
+      default: 12
     },
     /**
      * css定位

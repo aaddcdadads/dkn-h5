@@ -1,14 +1,14 @@
 <template>
   <view>
     <view class="uni-container">
-      <uni-table ref="table" :loading="loading" border stripe type="selection" emptyText="暂无更多数据"
-        @selection-change="selectionChange">
+      <uni-table ref="table" :loading="loading" :border="bordered" stripe :type="rowSelectFlag ? 'selection' : ''"
+        emptyText="暂无更多数据" @selection-change="selectionChange">
         <uni-tr>
-          <uni-th v-for="column in columns" 
-            :width="column.width || 100" 
-            :align="column.align || 'center'">{{ column.title }}</uni-th>
+          <uni-th v-for="column in columns" :width="column.width || 100" :align="column.align || 'center'">{{
+              column.title
+          }}</uni-th>
 
-          <uni-th v-if="actions.length > 0" :width="220">操作</uni-th>
+          <uni-th v-if="actions.length > 0" :width="140">操作</uni-th>
         </uni-tr>
         <uni-tr v-for="(item, index) in cData" :key="index">
           <uni-td align="center" v-for="column in columns">{{ item[column.dataIndex] }}</uni-td>
@@ -21,8 +21,8 @@
         </uni-tr>
       </uni-table>
       <view v-if="!cPaginationHidden" class="uni-pagination-box">
-        <uni-pagination show-icon :page-size="pagination.pageSize" :current="pagination.current" :total="total"
-          @change="change" />
+        <uni-pagination show-icon :page-size="cPagination.pageSize" :current="cPagination.current"
+          :total="cPagination.total" @change="onPaginationChange" />
       </view>
     </view>
   </view>
@@ -208,52 +208,11 @@ export default {
       },
     },
     /**
-     * 操作按钮展开
-     */
-    isFlatAction: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * 固定行列
-     */
-    scroll: {
-      type: Object,
-      default: function () {
-        return {
-          x: "100%",
-        };
-      },
-    },
-    /**
-     * 自动合并单元
-     * @description 数据相同的内容自动合并. 形如 ["r1c1:r10c1", "r2c2:r10c2", "r1:r2", "c4"]，这里的r1c1表示的是第1行（row 1），第1列（column 1）。第1列不包含表格，指的是数据行。
-     */
-    combined: {
-      type: Array,
-      default: [],
-    },
-    /**
      * 清空过滤排序
      */
     clearFiltersAndSortersFlag: {
       type: Boolean,
       default: false,
-    },
-    /**
-     * 行高
-     */
-    rowHeight: {
-      type: String,
-      default: "42",
-    },
-    /**
-     * 表格背景颜色
-     * @type Color
-     * */
-    backgroundColor: {
-      type: String,
-      default: "",
     }
   },
   data() {
@@ -309,14 +268,161 @@ export default {
     this.cData = JSONfn.parse(JSONfn.stringify(this.data));
     this.cColumns = JSONfn.parse(JSONfn.stringify(this.columns));
     this.processShowColumnNo(true, true);
-    this.cPaginationHidden=this.paginationHidden;
+    this.cPaginationHidden = this.paginationHidden;
     if (Object.keys(this.pagination).length === 0) {
       this.cPaginationHidden = true;
     } else {
       this.cPagination = Object.assign(this.cPagination, this.pagination);
     }
+    this.getData();
   },
   methods: {
+    getData(url, params) {
+      let self = this;
+      self._getData(url, params);
+    },
+    _getData(url, params) {
+      let self = this;
+      url = url || this.url;
+
+      if (!url) {
+        return;
+      }
+
+      params =
+        params || (this.params ? JSON.parse(JSON.stringify(this.params)) : {});
+
+      // 跟表格自带的翻页过滤排序功能结合
+      // 翻页
+      if (typeof this.cPagination !== "boolean") {
+        params = Object.assign(params, {
+          [this.paginationMap.pageNo]: this.cPagination.current,
+          [this.paginationMap.pageSize]: this.cPagination.pageSize,
+        });
+      }
+
+      // 排序
+      if (this.sorter && this.sorter.field) {
+        params.column = this.sorter.field;
+        params.order = this.sorter.order === "descend" ? "desc" : "asc";
+      }
+
+      // 过滤
+      if (this.filters) {
+        params = Object.assign(params, this.filters);
+        Object.entries(this.filters).forEach(e => {
+          if (typeof e[1] === 'object') {
+            params[e[0]] = e[1].join(",")
+          }
+        })
+      }
+
+      // 加载全部，默认为最多加载100万条
+      if (Number.isNaN(params.pageSize)) {
+        params.pageNo = 1;
+        params.pageSize = 1000000;
+        self.cPagination.current = 1;
+        self.cPagination.pageSize = params.pageSize;
+      }
+
+      if (Number.isNaN(params.pageNo)) {
+        params.pageNo = 1;
+      }
+
+      getAction(url, params).then((resp) => {
+        console.log(`get table data: `, resp);
+        self.cData = [];
+        setTimeout(() => {
+          self.cData = self.getDataList(resp);
+          if (typeof self.cPagination !== "boolean") {
+            self.cPagination.total = self.getDataTotal(resp);
+          }
+          _.each(self.cData, (item, index) => {
+            item.hmNo = index + 1;
+          });
+
+          // 处理翻页为全部的情况
+          if (self.cPagination.pageSize === 1000000) {
+            self.cPagination.pageSize = '全部';
+          }
+          self.$nextTick(function () {
+            let eleTable = self.$refs.table.$el;
+            let eleUl = eleTable.querySelector('.ant-table-pagination');
+            if (!eleUl) return;
+
+            let display = self.cPagination.pageSize === '全部' ? 'none' : 'inline-block';
+
+            for (let i = 1; i < eleUl.children.length; i++) {
+              let eleLi = eleUl.children[i];
+              let text = eleLi["innerText" in eleLi ? "innerText" : "textContent"];
+              if (text.indexOf('NaN') >= 0) {
+                eleLi.style.display = display;
+              }
+            }
+
+            if (eleUl.children.length < 8) {
+              return;
+            }
+
+            for (let i = 3; i < 8; i++) {
+              eleUl.children[i].style.display = display;
+            }
+            let quickJumper = eleTable.querySelector('.ant-pagination-options-quick-jumper')
+            if (!quickJumper) return;
+
+            quickJumper.style.display = display;
+          });
+        }, 0);
+      });
+    },
+    /**
+     * 从接口返回结果里取到数组
+     */
+    getDataList(resp) {
+      if (this.getDataMap && this.getDataMap.list) {
+        let listPath = this.getDataMap.list;
+        listPath = listPath.indexOf('$') === 0 ? listPath : `$.${listPath}`;
+        return jp.query(resp, listPath)[0];
+      }
+
+      if (resp.result) {
+        return resp.result.records || resp.result;
+      }
+
+      if (resp.data) {
+        return resp.data;
+      }
+      console.warn(`接口数据格式不兼容: `, resp);
+      return [];
+    },
+    /**
+     *  从接口返回结果里取到总数
+     */
+    getDataTotal(resp) {
+      if (this.getDataMap.total) {
+        let totalPath = this.getDataMap.total;
+        totalPath = totalPath.indexOf('$') === 0 ? totalPath : `$.${totalPath}`;
+        return jp.query(resp, totalPath)[0];
+      }
+      if (resp.result) {
+        return resp.result.total || this.cPagination.pageSize;
+      }
+      if (resp.data) {
+        return resp.total || this.cPagination.pageSize;
+      }
+      return this.cPagination.pageSize;
+    },
+
+    /**
+     * 翻页
+     */
+    onPaginationChange(event) {
+      console.log(`onPaginationChange: `, event);
+      this.cPagination.current = event.current;
+      this.getData();
+      this.$emit("pagination-change", event);
+    },
+
     processShowColumnNo(columnFlag, dataFlag) {
       if (!this.showColumnNo) {
         return;

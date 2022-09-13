@@ -1,5 +1,7 @@
 <template>
   <hm-uni-table></hm-uni-table>
+
+  <hm-uni-table :columns="columns" :url="url"></hm-uni-table>
 </template>
 
 <script>
@@ -9,7 +11,24 @@ export default {
   components: { HmUniTable },
   data() {
     return {
-      columns: [],
+      url: '/api/restify/sysUser/list',
+      columns: [
+        {
+          title: "姓名",
+          dataIndex: "realname",
+          key: "realname",
+        },
+        {
+          title: "账号",
+          dataIndex: "username",
+          key: "username",
+        },
+        {
+          title: "邮箱",
+          dataIndex: "email",
+          key: "email",
+        },
+      ],
       data: []
     };
   },
