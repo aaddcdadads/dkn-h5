@@ -5,6 +5,8 @@
     <u-button @click="reset">reset</u-button>
     <u-button @click="getValues">getValues</u-button>
     <u-button @click="setValues">setValues</u-button>
+    <u-button @click="getFormValues">getFormValues</u-button>
+    <u-button @click="setFormValues">setFormValues</u-button>
     <u-button @click="changeSelectOption">changeSelectOption</u-button>
   </div>
 </template>
@@ -449,6 +451,10 @@ export default {
       let values = this.$refs.test.getValues()
       console.log('values', values)
     },
+    getFormValues(){
+      let values = this.$refs.test.getFormValues()
+      console.log('values', values)
+    },
     setValues(){
       let values = {
         select: '2',
@@ -463,6 +469,12 @@ export default {
         }
       }
       this.$refs.test.setValues(values)
+    },
+    setFormValues(){
+      let values = {
+        input: '2',
+      }
+      this.$refs.test.setFormValues(values)
     },
     changeSelectOption(){
       this.schema.properties.form.properties.select['x-component-props'].options = [{
