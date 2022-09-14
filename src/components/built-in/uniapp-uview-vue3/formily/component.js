@@ -1,12 +1,15 @@
 import { h, defineComponent } from "vue";
 import UForm from '@/uni_modules/vk-uview-ui/components/u-form/u-form.vue'
 import UFormItem from '@/uni_modules/vk-uview-ui/components/u-form-item/u-form-item.vue'
+import UButton from '@/uni_modules/vk-uview-ui/components/u-button/u-button.vue'
 import UInput from '@/uni_modules/vk-uview-ui/components/u-input/u-input.vue'
 import USwitch from '@/uni_modules/vk-uview-ui/components/u-switch/u-switch.vue'
 
 export const Form = UForm;
 
 export const FormItem = UFormItem;
+
+export const Button = UButton;
 
 export const Input = defineComponent({
   name: 'Input',
