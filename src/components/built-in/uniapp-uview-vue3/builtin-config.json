@@ -557,6 +557,14 @@
     "name": "其他",
     "componentList": [
       {
+        "name": "HmUviewFab",
+        "title": "悬浮按钮",
+        "importPath": "built-in/uniapp/HmUviewFab",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewFab.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmUviewLoading",
         "title": "加载",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewLoading",

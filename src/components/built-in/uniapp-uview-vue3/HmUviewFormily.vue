@@ -9,84 +9,46 @@
 <script>
 import { h, defineComponent } from "vue";
 
-import Form from '@/uni_modules/vk-uview-ui/components/u-form/u-form.vue'
-import FormItem from '@/uni_modules/vk-uview-ui/components/u-form-item/u-form-item.vue'
-import UInput from '@/uni_modules/vk-uview-ui/components/u-input/u-input.vue'
-import USwitch from '@/uni_modules/vk-uview-ui/components/u-switch/u-switch.vue'
 
+import {
+  Form,
+  FormItem,
+  Button,
+  // Checkbox,
+  // CheckboxGroup,
+  // RangePicker,
+  // DatePicker,
+  Input,
+  // Textarea,
+  // InputNumber,
+  // Radio,
+  // RadioGroup,
+  // Cascader,
+  // Select,
+  // Slider,
+  // // HmSwitch,
+  Switch,
+  // TreeSelect,
+  // TimePicker,
+  // Upload,
+  // UploadImage,
+  // HmAntInput,
+  // HmAntSelect,
+  // HmAntUpload,
+  Span,
+  Pre,
+  Img
+} from "./formily/component"
 import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/vue'
-import moment from 'moment'
 import _ from 'lodash'
 
-const Input = defineComponent({
-  name: 'Input',
-  render() {
-    const props = this.$attrs
-    return h(
-      UInput,
-      {
-        ...props,
-        modelValue: props.value
-      }
-    )
-  },
-})
-
-const Switch = defineComponent({
-  name: 'Switch',
-  render() {
-    const props = this.$attrs
-    return h(
-      USwitch,
-      {
-        ...props,
-        modelValue: props.value
-      }
-    )
-  },
-})
-
-const Span = defineComponent({
-  name: 'Span',
-  render() {
-    const props = this.$attrs
-    return h(
-      'span',
-      {
-        ...props,
-      },
-      props.value
-    )
-  },
-})
-const Pre = defineComponent({
-  name: 'Pre',
-  render() {
-    const props = this.$attrs
-    return h(
-      'pre',
-      {
-        ...props,
-      },
-      props.value
-    )
-  },
-})
-
-const Img = defineComponent({
-  name: 'Img',
-  render() {
-    const props = this.$attrs
-    return h(
-      'img',
-      {
-        ...props,
-        src: props.value
-      }
-    )
-  },
-})
+import {
+  getFeiqiFilterValue, 
+  getFilterValue,
+  getFormValue,
+  setFormValue,
+} from "./formily/util"
 
 const { SchemaField } = createSchemaField({
   components: {
@@ -115,99 +77,12 @@ const { SchemaField } = createSchemaField({
     // HmAntSelect,
     // HmAntUpload,
     Span,
-    // Pre,
-    // Img
+    Pre,
+    Img
   },
 })
 
-function getFilterValue(type, values, key) {
-  // 处理input组件
-  if (isInput(type) && type !='InputNumber') {
-    values[key] = `*${values[key]}*`;
-    return;
-  }
-  // 处理日期组件
-  if (isDate(type)) {
-    values[key] = values[key]?.format('YYYY-MM-DD HH:mm:ss');
-    return;
-  }
-  // 处理时间组件
-  if (isTime(type)) {
-    values[key] = values[key]?.format('HH:mm:ss');
-    return;
-  }
-  // 处理范围日期组件
-  if (isRangeDate(type)) {
-    values[`${key}_begin`] = values[key]?.[0]?.format('YYYY-MM-DD HH:mm:ss');
-    values[`${key}_end`] = values[key]?.[1]?.format('YYYY-MM-DD HH:mm:ss');
-    values[key] = undefined;
-    return;
-  }
-}
 
-function getFeiqiFilterValue(type, values, key) {
-  // 处理日期组件
-  if (isDate(type)) {
-    values[key] = values[key]?.format('YYYY-MM-DD HH:mm:ss');
-    return;
-  }
-  // 处理时间组件
-  if (isTime(type)) {
-    values[key] = values[key]?.format('HH:mm:ss');
-    return;
-  }
-}
-
-function getFormValue(type, values, key) {
-  // 处理日期组件
-  if (isDate(type) && values[key]) {
-    values[key] = values[key].format('YYYY-MM-DD HH:mm:ss');
-    return;
-  }
-  // 处理时间组件
-  if (isTime(type) && values[key]) {
-    values[key] = values[key].format('HH:mm:ss');
-    return;
-  }
-}
-
-function setFormValue(type, values, key) {
-  // 处理日期\时间组件
-  if (isDate(type) || isTime(type)) {
-    return moment(values[key]);
-  }
-
-  // 处理日期\时间组件
-  // if (isSelect(type) && typeof values[key] == 'number') {
-  //     return String(values[key]);
-  // }
-
-  return values[key];
-}
-
-function isSelect(type) {
-  return type.indexOf("Select") > -1;
-}
-
-function isInput(type) {
-  return type.indexOf("Input") > -1;
-}
-
-function isDate(type) {
-  return type == "DatePicker";
-}
-
-function isTime(type) {
-  return type == "TimePicker";
-}
-
-function isRangeDate(type) {
-  return type == "RangePicker";
-}
-
-function isRangeTime(type) {
-  return type == "RangePicker";
-}
 
 export default {
   components: { FormProvider, SchemaField },
@@ -734,18 +609,11 @@ export default {
         this.form.validate().then(() => {
           resolve(values)
         }).catch(e => {
-          // _(e).forEach(item => {
-          //   this.$message.error(h('span',
-          //     { style: { 'whiteSpace': 'pre-wrap' } },
-          //     fields[item.address].decoratorProps.label + "：" + _(item.messages)
-          //   ))
-          //   reject(e)
-          // })
-            this.$message.error(h('span',
-              { style: { 'whiteSpace': 'pre-wrap' } },
-              fields[e[0].address].decoratorProps.label + "：" + _(e[0].messages)
-            ))
-            reject(e)
+          this.$message.error(h('span',
+            { style: { 'whiteSpace': 'pre-wrap' } },
+            fields[e[0].address].decoratorProps.label + "：" + _(e[0].messages)
+          ))
+          reject(e)
         })
       })
     }
