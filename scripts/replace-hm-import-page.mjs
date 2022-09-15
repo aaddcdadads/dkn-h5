@@ -45,7 +45,7 @@ Object.keys(stat).forEach(async (pageId) => {
     let pageComponentName = stat[pageId].stat[importPageId];
     let pagePath = pagePathMap[importPageId];
     console.log(`pageComponentName=${pageComponentName}, path=${pagePath}`)
-    return `import ${pageComponentName} from ${pagePath.replace('../src', '/@')};`
+    return `import ${pageComponentName} from '${pagePath.replace('../src', '/@')}';`
   }).join('\n');
   pageContent = pageContent.replace(/export default {/, `${imports}\n\nexport default {`);
 
