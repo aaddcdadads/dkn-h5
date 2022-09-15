@@ -56,4 +56,6 @@ uni-page-body {
   display: inline-block;
 }
 
-
+.ele-wrapper:empty {
+  display: none;
+}
