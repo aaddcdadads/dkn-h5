@@ -294,6 +294,7 @@
 			},
 			// 点击某一个tab菜单
 			clickTab(index) {
+        console.log(`clickTab: index=${index}, this.currentIndex=${this.currentIndex}`)
 				// 点击当前活动tab，不触发事件
 				if(index == this.currentIndex) return ;
 				// 发送事件给父组件

@@ -22,6 +22,7 @@
         ></hm-uview-button>
       </template>
     </hm-uview-tabs> -->
+    <hm-uview-tabs @change="onChange"/>
     <hm-uview-tabs
       :is-scroll="true"
       :list="list"
@@ -66,7 +67,7 @@ export default {
   },
   methods: {
     onChange(val) {
-      console.log("cahnge", val);
+      console.log("onChange", val);
     },
   },
 };
