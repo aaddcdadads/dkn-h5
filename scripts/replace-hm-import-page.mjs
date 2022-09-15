@@ -18,14 +18,16 @@ async function getPagePathMap() {
 let pagePathMap = await getPagePathMap();
 
 Object.keys(stat).forEach(async (pageId) => {
-  let pageContent = fs.readFileSync(stat[pageId].path, 'utf8');
+  let pagePath = pagePathMap[pageId];
+
+  let pageContent = fs.readFileSync(pagePath, 'utf8');
   // /<hm-import-page[^<]*1566734066567352321[^\/]*<\/hm-import-page>/gs
   let importPageIds = Object.keys(stat[pageId].stat);
   if (!importPageIds.length) {
     return;
   }
 
-  console.log(`replace file ${stat[pageId].path}`)
+  console.log(`replace file ${pagePath}`)
 
   // 1. 替换 html 标签
   importPageIds.forEach(importPageId => {
@@ -43,9 +45,9 @@ Object.keys(stat).forEach(async (pageId) => {
   // 3. 添加对每个页面的引入
   let imports = _.map(importPageIds, importPageId => {
     let pageComponentName = stat[pageId].stat[importPageId];
-    let pagePath = pagePathMap[importPageId];
-    console.log(`pageComponentName=${pageComponentName}, path=${pagePath}`)
-    return `import ${pageComponentName} from '${pagePath.replace('../src', '/@')}';`
+    let importPagePath = pagePathMap[importPageId];
+    console.log(`pageComponentName=${pageComponentName}, path=${importPagePath}`)
+    return `import ${pageComponentName} from '${importPagePath.replace('../src', '/@')}';`
   }).join('\n');
   pageContent = pageContent.replace(/export default {/, `${imports}\n\nexport default {`);
 
@@ -55,8 +57,8 @@ Object.keys(stat).forEach(async (pageId) => {
   }).join('\n');
   pageContent = pageContent.replace(/components:\s*{/, `components: {\n${components}\n`)
 
-  fs.writeFileSync(stat[pageId].path, pageContent, {encoding: 'utf8', flag: 'w+'});
-  console.log(`finish replace file ${stat[pageId].path}`)
+  fs.writeFileSync(pagePath, pageContent, {encoding: 'utf8', flag: 'w+'});
+  console.log(`finish replace file ${pagePath}`)
 })
 
 
