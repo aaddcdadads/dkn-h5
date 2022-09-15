@@ -6,12 +6,13 @@ import {
 
 function setGlobal(config) {
     config.timeout = 60 * 1000;
-    if(config.header && !config.header['content-type']){
-        config.header['content-type'] = 'application/json;charset=UTF-8'
-    }else{
+    if(!config.header){
         config.header = {
             'content-type': 'application/json;charset=UTF-8',
         }
+    }
+    if(config.header && !config.header['content-type']){
+        config.header['content-type'] = 'application/json;charset=UTF-8'
     }
 }
 
