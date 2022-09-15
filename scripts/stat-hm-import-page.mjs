@@ -1,5 +1,4 @@
 #!/usr/bin/env zx
-import fs from 'fs'
 import _ from 'lodash'
 
 // 1. 拿到所有的page.json路径列表
