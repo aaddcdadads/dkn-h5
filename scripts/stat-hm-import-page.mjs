@@ -31,7 +31,10 @@ function statOne(pageJson) {
 let stat = {}
 pageJsonFiles.forEach((pageJsonFile) => {
   let pageJson = JSON.parse(fs.readFileSync(pageJsonFile, 'utf8'));
-  stat[pageJson.component.id] =  statOne(pageJson);
+  stat[pageJson.component.id] = {
+    path: pageJsonFile.replace('page.json', 'page.vue'),
+    stat: statOne(pageJson)
+  };
 })
 
 fs.writeFileSync('../docs/stat-hm-import-page.json', JSON.stringify(stat, null, 2), { encoding: 'utf8', flag: 'w+'})
