@@ -9,20 +9,21 @@ pageJsonFiles = pageJsonFiles.slice(0, pageJsonFiles.length - 1)
 // 2. 遍历所有的page.json，读取page.json里的HmImportPage组件信息并统计
 function readPageComponentName(pageId) {
   let pageJson = JSON.parse(fs.readFileSync(`../src/pages/${pageId}/page.json`, 'utf8'));
-  return _.camelCase(pageJson.component.name);
+  return _.upperFirst(_.camelCase(pageJson.component.name));
 }
 
 function statOne(pageJson) {
   let pageStat = {};
-  pageJson.topics.forEach(topic => {
-    if (topic.component.name === 'HmImportPage') {
-      let pageId = topic.note.props['page-id'].value.value;
-      pageStat[pageId] = readPageComponentName(pageId);
-    }
 
-    topic.topics.forEach(childTopic => {
-      pageStat = Object.assign(pageStat, statOne(childTopic));
-    })
+  let topic = pageJson;
+
+  if (topic.component.name === 'HmImportPage') {
+    let pageId = topic.note.props['page-id'].value.value;
+    pageStat[pageId] = readPageComponentName(pageId);
+  }
+
+  pageJson.topics.forEach(childTopic => {
+    pageStat = Object.assign(pageStat, statOne(childTopic));
   })
   return pageStat;
 }
