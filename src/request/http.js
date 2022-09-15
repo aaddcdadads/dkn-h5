@@ -95,7 +95,10 @@ uni.addInterceptor('request', {
         setJeecgAuth(config)
         setBlockDesignAuth(config)
         // setEleAdminAuth(config)
-        transformAxiosRequest(config)
+
+        if(window) {
+          transformAxiosRequest(config)
+        }
     },
     complete(response) {
         let data = response.data

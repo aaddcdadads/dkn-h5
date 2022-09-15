@@ -14,7 +14,7 @@
       }
     },
     {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewButton",
+      "path": "pages/test/TestHmUviewTabs",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
@@ -43,13 +43,6 @@
     },
     {
       "path": "pages/test/Testtest",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/test",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
@@ -526,13 +519,6 @@
     },
     {
       "path": "components/built-in/uniapp-uview-vue3/HmUviewTabs",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewTabs",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
