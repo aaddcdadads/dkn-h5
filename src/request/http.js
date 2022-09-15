@@ -152,11 +152,12 @@ export function downloadFile(url) {
  * @param {String} url [请求的url地址]
  * @param {Object} params [请求时携带的参数]
  */
-export function postAction(url, params, config) {
+export function postAction(url, params, header) {
     return new Promise((resolve, reject) => {
         uni.request({
             url: url,
             data: params,
+            header,
             method: "POST",
             success: (res) => {
                 resolve(res.data)
