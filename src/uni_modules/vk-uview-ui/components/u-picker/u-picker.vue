@@ -97,9 +97,9 @@
 </template>
 
 <script>
-import provinces from '../../libs/address/provinces.json';
-import citys from '../../libs/address/citys.json';
-import areas from '../../libs/address/areas.json';
+//  import provinces from '../../libs/address/provinces.json';
+//  import citys from '../../libs/address/citys.json';
+//  import areas from '../../libs/address/areas.json';
 /**
  * picker picker弹出选择器
  * @description 此选择器有两种弹出模式：一是时间模式，可以配置年，日，月，时，分，秒参数 二是地区模式，可以配置省，市，区参数
@@ -126,6 +126,10 @@ import areas from '../../libs/address/areas.json';
  * @event {Function} cancel 点击取消按钮，返回当前选择的值
  * @example <u-picker v-model="show" mode="time"></u-picker>
  */
+let provinces = [];
+let citys = [];
+let areas = [];
+
 export default {
 	name: 'u-picker',
 	emits: ["update:modelValue", "input", "confirm", "cancel"],
@@ -274,9 +278,9 @@ export default {
 			startDate: '',
 			endDate: '',
 			valueArr: [],
-			provinces: provinces,
-			citys: citys[0],
-			areas: areas[0][0],
+			provinces: [],
+			citys: [],
+			areas: [],
 			province: 0,
 			city: 0,
 			area: 0,
@@ -398,7 +402,7 @@ export default {
 			this.minute = time.getMinutes();
 			this.second = time.getSeconds();
 		},
-		init() {
+		async init() {
 			this.valueArr = [];
 			this.reset = false;
 			if (this.mode == 'time') {
@@ -430,15 +434,15 @@ export default {
 			} else if (this.mode == 'region') {
 				if (this.params.province) {
 					this.valueArr.push(0);
-					this.setProvinces();
+					await this.setProvinces();
 				}
 				if (this.params.city) {
 					this.valueArr.push(0);
-					this.setCitys();
+					await this.setCitys();
 				}
 				if (this.params.area) {
 					this.valueArr.push(0);
-					this.setAreas();
+					await this.setAreas();
 				}
 			} else if (this.mode == 'selector') {
 				this.valueArr = this.defaultSelector;
@@ -486,9 +490,10 @@ export default {
 			this.seconds = this.generateArray(0, 59);
 			this.valueArr.splice(this.valueArr.length - 1, 1, this.getIndex(this.seconds, this.second));
 		},
-		setProvinces() {
+		async setProvinces() {
 			// 判断是否需要province参数
 			if (!this.params.province) return;
+			provinces = await this.$getAction("https://block-design.oss-cn-shenzhen.aliyuncs.com/uview/provinces.json")
 			let tmp = '';
 			let useCode = false;
 			// 如果同时配置了defaultRegion和areaCode，优先使用areaCode参数
@@ -508,8 +513,9 @@ export default {
 			// 设置默认省份的值
 			this.valueArr.splice(0, 1, this.province);
 		},
-		setCitys() {
+		async setCitys() {
 			if (!this.params.city) return;
+			citys = await this.$getAction("https://block-design.oss-cn-shenzhen.aliyuncs.com/uview/citys.json")
 			let tmp = '';
 			let useCode = false;
 			if (this.areaCode.length) {
@@ -526,8 +532,9 @@ export default {
 			this.citys = citys[this.province];
 			this.valueArr.splice(1, 1, this.city);
 		},
-		setAreas() {
+		async setAreas() {
 			if (!this.params.area) return;
+			areas = await this.$getAction("https://block-design.oss-cn-shenzhen.aliyuncs.com/uview/areas.json")
 			let tmp = '';
 			let useCode = false;
 			if (this.areaCode.length) {
