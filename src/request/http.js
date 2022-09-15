@@ -157,7 +157,7 @@ export function postAction(url, params, config = {}) {
         uni.request({
             url: url,
             data: params,
-            header: config.header,
+            header: config.headers,
             method: "POST",
             success: (res) => {
                 resolve(res.data)
