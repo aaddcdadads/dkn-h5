@@ -6,8 +6,13 @@ import {
 
 function setGlobal(config) {
     config.timeout = 60 * 1000;
-    config.header = {
-        'content-type': 'application/json;charset=UTF-8'
+    if(!config.header){
+        config.header = {
+            'content-type': 'application/json;charset=UTF-8',
+        }
+    }
+    if(config.header && !config.header['content-type']){
+        config.header['content-type'] = 'application/json;charset=UTF-8'
     }
 }
 
@@ -152,12 +157,12 @@ export function downloadFile(url) {
  * @param {String} url [请求的url地址]
  * @param {Object} params [请求时携带的参数]
  */
-export function postAction(url, params, header) {
+export function postAction(url, params, config = {}) {
     return new Promise((resolve, reject) => {
         uni.request({
             url: url,
             data: params,
-            header,
+            header: config.headers,
             method: "POST",
             success: (res) => {
                 resolve(res.data)
