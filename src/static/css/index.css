@@ -59,3 +59,9 @@ uni-page-body {
 .ele-wrapper:empty {
   display: none;
 }
+
+/* #ifdef MP-WEIXIN */
+.ele-wrapper {
+  float: left;
+}
+/* #endif */
