@@ -1,7 +1,7 @@
 <template>
   <view>
-    <hm-uview-tabs :current="2" :widthPercent="20" @change="onChange">
-      <!-- <template #left>
+    <!-- <hm-uview-tabs :current="2" :widthPercent="20" @change="onChange">
+      <template #left>
         <hm-uview-button
           size="medium"
           type="success"
@@ -10,7 +10,7 @@
           shape="circle"
           text="左插槽"
         ></hm-uview-button>
-      </template> -->
+      </template>
       <template #right>
         <hm-uview-button
           size="medium"
@@ -21,8 +21,9 @@
           text="右插槽"
         ></hm-uview-button>
       </template>
-    </hm-uview-tabs>
-    <!-- <hm-uview-tabs
+    </hm-uview-tabs> -->
+    <hm-uview-tabs @change="onChange"/>
+    <hm-uview-tabs
       :is-scroll="true"
       :list="list"
       :current="2"
@@ -42,12 +43,17 @@
       :item-width="200"
       :offset="[10, 20]"
       @change="onChange"
-    ></hm-uview-tabs> -->
+    ></hm-uview-tabs>
   </view>
 </template>
 
 <script>
+import HmUviewTabs from "@/components/built-in/uniapp-uview-vue3/HmUviewTabs.vue";
+
 export default {
+  components: {
+    HmUviewTabs
+  },
   data() {
     return {
       list: [
@@ -61,7 +67,7 @@ export default {
   },
   methods: {
     onChange(val) {
-      console.log("cahnge", val);
+      console.log("onChange", val);
     },
   },
 };

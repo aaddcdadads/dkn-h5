@@ -14,7 +14,7 @@
       }
     },
     {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewButton",
+      "path": "pages/test/TestHmUviewTabs",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
@@ -43,13 +43,6 @@
     },
     {
       "path": "pages/test/Testtest",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/test",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
@@ -532,13 +525,6 @@
       }
     },
     {
-      "path": "pages/test/TestHmUviewTabs",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
       "path": "components/built-in/uniapp-uview-vue3/HmUviewPanel",
       "style": {
         "navigationBarTitleText": "",
@@ -904,7 +890,7 @@
     }
   ],
   "globalStyle": {
-    "navigationStyle": "custom",
+    "navigationStyle": "default",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",

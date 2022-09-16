@@ -34,6 +34,11 @@ export default defineConfig({
         find: "/@/pages",
         replacement: resolve(__dirname, "src/pages"),
       },
+      {
+        // 参考：https://zhuanlan.zhihu.com/p/61031739
+        find: "moment",
+        replacement: "dayjs",
+      },
     ],
   },
   plugins: [uni()],

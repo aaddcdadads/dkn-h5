@@ -70,8 +70,13 @@
     /* 小程序特有相关 */
     "mp-weixin" : {
         "appid" : "wx6ccc0b32c683e6eb",
+        "lazyCodeLoading" : "requiredComponents",
+        "ignoreDevUnusedFiles" : false,
+        "ignoreUploadUnusedFiles" : false,
         "setting" : {
-            "urlCheck" : false
+            "urlCheck" : false,
+            "es6" : true,
+            "minified" : true
         },
         "usingComponents" : true
     },
