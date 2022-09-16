@@ -98,7 +98,7 @@ export default {
 </script>
 <style scoped>
 .hm-block {
-  /* display: inline-flex; */
+  display: inline-block;
   min-height: 30px;
   min-width: 30px;
   border: 1px dashed hsla(0, 0%, 66.7%, 0.7);
