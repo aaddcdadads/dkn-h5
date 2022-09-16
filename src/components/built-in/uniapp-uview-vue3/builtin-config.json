@@ -246,6 +246,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "HmUviewFilter",
+        "title": "过滤器",
+        "importPath": "built-in/uniapp-uview-vue3/HmUviewFilter",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewFilter.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmUviewCalendar",
         "title": "日期选择",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewCalendar",
