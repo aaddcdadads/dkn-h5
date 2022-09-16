@@ -257,7 +257,21 @@ export default {
       this.filterShow = false
     },
     search(){
-
+      this.$emit("search", {
+        filter: this.getFilterValues(),
+        sort: this.getSortValues()
+      })
+    },
+    getFilterValues(){
+      let obj = {}
+      this.cFilterOption.forEach(item => {
+        obj[item.code] = item.value
+      })
+      return obj
+    },
+    getSortValues(){
+      let obj = {}
+      return obj
     }
   },
 };
