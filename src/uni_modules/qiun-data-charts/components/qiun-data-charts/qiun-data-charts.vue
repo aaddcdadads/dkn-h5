@@ -1,5 +1,5 @@
 <!-- 
- * qiun-data-charts 秋云高性能跨全端图表组件 v2.3.7-20220118
+ * qiun-data-charts 秋云高性能跨全端图表组件
  * Copyright (c) 2021 QIUN® 秋云 https://www.ucharts.cn All rights reserved.
  * Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
  * 复制使用请保留本段注释，感谢支持开源！
@@ -97,7 +97,7 @@
     </block>
     <!-- #endif -->
     <!-- 其他小程序通过vue渲染图表 -->
-    <!-- #ifdef MP-360 || MP-BAIDU || MP-QQ || MP-TOUTIAO || MP-WEIXIN -->
+    <!-- #ifdef MP-360 || MP-BAIDU || MP-QQ || MP-TOUTIAO || MP-WEIXIN || MP-KUAISHOU || MP-LARK || MP-JD -->
     <block v-if="type2d">
       <view v-if="ontouch" @tap="_tap">
         <canvas
@@ -175,7 +175,7 @@ function deepCloneAssign(origin = {}, ...args) {
 
 function formatterAssign(args,formatter) {
   for (let key in args) {
-    if(args[key] !== null && typeof args[key] === 'object'){
+    if(args.hasOwnProperty(key) && args[key] !== null && typeof args[key] === 'object'){
       formatterAssign(args[key],formatter)
     }else if(key === 'format' && typeof args[key] === 'string'){
       args['formatter'] = formatter[args[key]] ? formatter[args[key]] : undefined;
@@ -306,6 +306,14 @@ export default {
       type: Boolean,
       default: false
     },
+    optsWatch: {
+      type: Boolean,
+      default: true
+    },
+    onzoom: {
+      type: Boolean,
+      default: false
+    },
     ontap: {
       type: Boolean,
       default: true
@@ -426,15 +434,16 @@ export default {
     if (this.canvas2d === false || systemInfo.platform === 'windows' || systemInfo.platform === 'mac') {
       this.type2d = false;
     }else{
+      this.type2d = true;
       this.pixel = systemInfo.pixelRatio;
-      if (this.canvasId === 'uchartsid' || this.canvasId == '') {
-        console.log('[uCharts]:开启canvas2d模式，必须指定canvasId，否则会出现偶尔获取不到dom节点的问题！');
-      }
     }
     // #endif
     //非微信小程序端强制关闭canvas2d模式
     // #ifndef MP-WEIXIN
     this.type2d = false;
+    // #endif
+    // #ifdef  MP-TOUTIAO || MP-LARK || MP-ALIPAY
+    this.type2d = this.canvas2d;
     // #endif
     // #ifdef MP-ALIPAY
     this.inAli = true;
@@ -511,11 +520,11 @@ export default {
       handler(val, oldval) {
         if (typeof val === 'object') {
           if (JSON.stringify(val) !== JSON.stringify(oldval)) {
+            this._clearChart();
             if (val.series && val.series.length > 0) {
               this.beforeInit();
             }else{
               this.mixinDatacomLoading = true;
-              this._clearChart();
               this.showchart = false;
               this.mixinDatacomErrorMessage = null;
             }
@@ -549,7 +558,7 @@ export default {
     optsProps: {
       handler(val, oldval) {
         if (typeof val === 'object') {
-          if (JSON.stringify(val) !== JSON.stringify(oldval) && this.echarts === false) {
+          if (JSON.stringify(val) !== JSON.stringify(oldval) && this.echarts === false && this.optsWatch == true) {
             this.checkData(this.drawData);
           }
         } else {
@@ -854,10 +863,12 @@ export default {
     },
     _clearChart() {
       let cid = this.cid
-      if (this.echrts !== true) {
-        const ctx = uni.createCanvasContext(cid, this);
-        ctx.clearRect(0, 0, this.cWidth, this.cHeight);
-        ctx.draw();
+      if (this.echrts !== true && cfu.option[cid] && cfu.option[cid].context) {
+        const ctx = cfu.option[cid].context;
+        if(typeof ctx === "object" && !cfu.option[cid].update){
+          ctx.clearRect(0, 0, this.cWidth, this.cHeight);
+          ctx.draw();
+        }
       }
     },
     init() {
@@ -882,6 +893,7 @@ export default {
               cfu.option[cid].animation = this.animation;
               cfu.option[cid].width = data.width * this.pixel;
               cfu.option[cid].height = data.height * this.pixel;
+              cfu.option[cid].onzoom = this.onzoom;
               cfu.option[cid].ontap = this.ontap;
               cfu.option[cid].ontouch = this.ontouch;
               cfu.option[cid].onmouse = this.openmouse;
@@ -924,14 +936,14 @@ export default {
                         const canvas = res[0].node;
                         const ctx = canvas.getContext('2d');
                         cfu.option[cid].context = ctx;
-                        canvas.width = data.width * this.pixel;
-                        canvas.height = data.height * this.pixel;
-                        canvas._width = data.width * this.pixel;
-                        canvas._height = data.height * this.pixel;
                         cfu.option[cid].rotateLock = cfu.option[cid].rotate;
                         if(cfu.instance[cid] && cfu.option[cid] && cfu.option[cid].update === true){
                           this._updataUChart(cid)
                         }else{
+                          canvas.width = data.width * this.pixel;
+                          canvas.height = data.height * this.pixel;
+                          canvas._width = data.width * this.pixel;
+                          canvas._height = data.height * this.pixel;
                           setTimeout(()=>{
                             cfu.option[cid].context.restore();
                             cfu.option[cid].context.save();
@@ -983,17 +995,38 @@ export default {
     	    //#endif
     	    //#ifndef H5
     	      uni.saveImageToPhotosAlbum({
-    	          filePath: res.tempFilePath,
-    	          success: function () {
-    	              uni.showToast({
-    	                  title: '保存成功',
-    	                  duration: 2000
-    	              });
-    	          }
+              filePath: res.tempFilePath,
+              success: function () {
+                uni.showToast({
+                  title: '保存成功',
+                  duration: 2000
+                });
+              }
     	      });
     	    //#endif
     	  } 
     	},this);
+    },
+    getImage(){
+      if(this.type2d == false){
+        uni.canvasToTempFilePath({
+          canvasId: this.cid,
+          success: res=>{
+            this.emitMsg({name: 'getImage', params: {type:"getImage", base64: res.tempFilePath}});
+          }
+        },this);
+      }else{
+        const query = uni.createSelectorQuery().in(this)
+        query
+          .select('#' + this.cid)
+          .fields({ node: true, size: true })
+          .exec(res => {
+            if (res[0]) {
+              const canvas = res[0].node;
+              this.emitMsg({name: 'getImage', params: {type:"getImage", base64: canvas.toDataURL('image/png')}});
+            }
+          });
+      }
     },
     // #ifndef APP-VUE || H5
     _newChart(cid) {
@@ -1124,7 +1157,7 @@ export default {
     _touchStart(e) {
       let cid = this.cid
       lastMoveTime=Date.now();
-      if(cfu.option[cid].enableScroll === true){
+      if(cfu.option[cid].enableScroll === true && e.touches.length == 1){
         cfu.instance[cid].scrollStart(e);
       }
       this.emitMsg({name:'getTouchStart', params:{type:"touchStart", event:e.changedTouches[0], id:cid}});
@@ -1133,19 +1166,23 @@ export default {
       let cid = this.cid
       let currMoveTime = Date.now();
       let duration = currMoveTime - lastMoveTime;
-      if (duration < Math.floor(1000 / 60)) return;//每秒60帧
+      let touchMoveLimit = cfu.option[cid].touchMoveLimit || 24;
+      if (duration < Math.floor(1000 / touchMoveLimit)) return;//每秒60帧
       lastMoveTime = currMoveTime;
-      if(cfu.option[cid].enableScroll === true){
+      if(cfu.option[cid].enableScroll === true && e.changedTouches.length == 1){
         cfu.instance[cid].scroll(e);
       }
-      this.emitMsg({name: 'getTouchMove', params: {type:"touchMove", event:e.changedTouches[0], id: cid}});
       if(this.ontap === true && cfu.option[cid].enableScroll === false && this.onmovetip === true){
         this._tap(e,true)
       }
+      if(this.ontouch === true && cfu.option[cid].enableScroll === true && this.onzoom === true && e.changedTouches.length == 2){
+        cfu.instance[cid].dobuleZoom(e);
+      }
+      this.emitMsg({name: 'getTouchMove', params: {type:"touchMove", event:e.changedTouches[0], id: cid}});
     },
     _touchEnd(e) {
       let cid = this.cid
-      if(cfu.option[cid].enableScroll === true){
+      if(cfu.option[cid].enableScroll === true && e.touches.length == 0){
         cfu.instance[cid].scrollEnd(e);
       }
       this.emitMsg({name:'getTouchEnd', params:{type:"touchEnd", event:e.changedTouches[0], id:cid}});
@@ -1195,7 +1232,7 @@ function rddeepCloneAssign(origin = {}, ...args) {
 
 function rdformatterAssign(args,formatter) {
   for (let key in args) {
-    if(args[key] !== null && typeof args[key] === 'object'){
+    if(args.hasOwnProperty(key) && args[key] !== null && typeof args[key] === 'object'){
       rdformatterAssign(args[key],formatter)
     }else if(key === 'format' && typeof args[key] === 'string'){
       args['formatter'] = formatter[args[key]] ? formatter[args[key]] : undefined;
@@ -1246,19 +1283,22 @@ export default {
         cfe.option[cid] = rddeepCloneAssign({}, eopts);
       }
       let newData = eopts.chartData;
-      //挂载categories和series
-      if(cfe.option[cid].xAxis && cfe.option[cid].xAxis.type && cfe.option[cid].xAxis.type === 'category'){
-        cfe.option[cid].xAxis.data = newData.categories
+      if(newData){
+        //挂载categories和series
+        if(cfe.option[cid].xAxis && cfe.option[cid].xAxis.type && cfe.option[cid].xAxis.type === 'category'){
+          cfe.option[cid].xAxis.data = newData.categories
+        }
+        if(cfe.option[cid].yAxis && cfe.option[cid].yAxis.type && cfe.option[cid].yAxis.type === 'category'){
+          cfe.option[cid].yAxis.data = newData.categories
+        }
+        cfe.option[cid].series = []
+        for (var i = 0; i < newData.series.length; i++) {
+          cfe.option[cid].seriesTemplate = cfe.option[cid].seriesTemplate ? cfe.option[cid].seriesTemplate : {}
+          let Template = rddeepCloneAssign({},cfe.option[cid].seriesTemplate,newData.series[i])
+          cfe.option[cid].series.push(Template)
+        }
       }
-      if(cfe.option[cid].yAxis && cfe.option[cid].yAxis.type && cfe.option[cid].yAxis.type === 'category'){
-        cfe.option[cid].yAxis.data = newData.categories
-      }
-      cfe.option[cid].series = []
-      for (var i = 0; i < newData.series.length; i++) {
-        cfe.option[cid].seriesTemplate = cfe.option[cid].seriesTemplate ? cfe.option[cid].seriesTemplate : {}
-        let Template = rddeepCloneAssign({},cfe.option[cid].seriesTemplate,newData.series[i])
-        cfe.option[cid].series.push(Template)
-      }
+      
       if (typeof window.echarts === 'object') {
           this.newEChart()
       }else{
@@ -1267,9 +1307,9 @@ export default {
         script.src = './uni_modules/qiun-data-charts/static/app-plus/echarts.min.js'
         // #endif
         // #ifdef H5
-        const rooturl = window.location.origin 
-        const directory = instance.getDataset().directory
-        script.src = rooturl + directory + 'uni_modules/qiun-data-charts/static/h5/echarts.min.js'
+        const { origin, pathname } = window.location
+        const rooturl = origin + pathname
+        script.src = rooturl + 'uni_modules/qiun-data-charts/static/h5/echarts.min.js'
         // #endif
         script.onload = this.newEChart
         document.head.appendChild(script)
@@ -1294,7 +1334,7 @@ export default {
           })
           // 增加ECharts的highlight消息，实现按下移动返回索引功能。add by onefish 创建于 2021-12-11 09:50
           cfe.instance[cid].on('highlight', resdata => {
-            that[cid].callMethod('emitMsg',{name:"getHighlight", params:{type:"highlight", dataIndex:resdata.batch[0].dataIndex, id:cid}})
+            that[cid].callMethod('emitMsg',{name:"getHighlight", params:{type:"highlight", res:resdata, id:cid}})
           })
         }
         this.updataEChart(cid,cfe.option[cid])
@@ -1471,30 +1511,38 @@ export default {
       let cid = this.rid
       let ontouch = cfu.option[cid].ontouch
       if(ontouch == false) return;
-      cfu.instance[cid].scrollStart(e)
+      if(cfu.option[cid].enableScroll === true && e.touches.length == 1){
+        cfu.instance[cid].scrollStart(e);
+      }
       that[cid].callMethod('emitMsg',{name:"getTouchStart",params:{type:"touchStart",event:e.changedTouches[0],id:cid}})
     },
     touchMove(e) {
       let cid = this.rid
       let ontouch = cfu.option[cid].ontouch
       if(ontouch == false) return;
-      cfu.instance[cid].scroll(e)
-      that[cid].callMethod('emitMsg',{name:"getTouchMove",params:{type:"touchMove",event:e.changedTouches[0],id:cid}})
+      if(cfu.option[cid].enableScroll === true && e.changedTouches.length == 1){
+        cfu.instance[cid].scroll(e);
+      }
       if(cfu.option[cid].ontap === true && cfu.option[cid].enableScroll === false && cfu.option[cid].onmovetip === true){
         let rchartdom = document.getElementById('UC'+cid).getBoundingClientRect()
         let tmpe = { x: e.changedTouches[0].clientX - rchartdom.left, y:e.changedTouches[0].clientY - rchartdom.top + rootdom.top}
-        e.changedTouches = [];
         e.changedTouches.unshift(tmpe)
         if(cfu.option[cid].tooltipShow === true){
           this.showTooltip(e,cid)
         }
       }
+      if(ontouch === true && cfu.option[cid].enableScroll === true && cfu.option[cid].onzoom === true && e.changedTouches.length == 2){
+        cfu.instance[cid].dobuleZoom(e);
+      }
+      that[cid].callMethod('emitMsg',{name:"getTouchMove",params:{type:"touchMove",event:e.changedTouches[0],id:cid}})
     },
     touchEnd(e) {
       let cid = this.rid
       let ontouch = cfu.option[cid].ontouch
       if(ontouch == false) return;
-      cfu.instance[cid].scrollEnd(e)
+      if(cfu.option[cid].enableScroll === true && e.touches.length == 0){
+        cfu.instance[cid].scrollEnd(e);
+      }
       that[cid].callMethod('emitMsg',{name:"getTouchEnd",params:{type:"touchEnd",event:e.changedTouches[0],id:cid}})
     },
     mouseDown(e) {

@@ -34,6 +34,11 @@ export default defineConfig({
         find: "/@/pages",
         replacement: resolve(__dirname, "src/pages"),
       },
+      {
+        // 参考：https://zhuanlan.zhihu.com/p/61031739
+        find: "moment",
+        replacement: "dayjs",
+      },
     ],
   },
   plugins: [uni()],
@@ -87,26 +92,35 @@ export default defineConfig({
       ),
     },
     proxy: {
-      
+      '/api': {
+        target: 'http://jeecgboot-vue3.dev.haomo-tech.com:8000/',
+        changeOrigin: true,
+      },
+      '/project-api/api': {
+        target: 'http://jeecgboot-vue3.dev.haomo-tech.com:8000/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/project-api/, ""),
+      },
     },
   },
 
   // 打包为库
   build: {
-    lib: {
-      entry: resolve(__dirname, "src/components/index.js"),
-      name: "uniapp-uview-vue3",
-      fileName: (format) => `uniapp-uview-vue3.${format}.js`,
-    },
-    rollupOptions: {
-      // 确保外部化处理那些你不想打包进库的依赖
-      external: ["vue"],
-      output: {
-        // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
-        globals: {
-          vue: "Vue",
-        },
-      },
-    },
+    sourcemap: true,
+    // lib: {
+    //   entry: resolve(__dirname, "src/components/index.js"),
+    //   name: "uniapp-uview-vue3",
+    //   fileName: (format) => `uniapp-uview-vue3.${format}.js`,
+    // },
+    // rollupOptions: {
+    //   // 确保外部化处理那些你不想打包进库的依赖
+    //   external: ["vue"],
+    //   output: {
+    //     // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
+    //     globals: {
+    //       vue: "Vue",
+    //     },
+    //   },
+    // },
   },
 });

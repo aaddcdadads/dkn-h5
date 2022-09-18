@@ -1,6 +1,10 @@
 {
   "easycom": {
-    "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+    "autoscan": true, 
+    "custom": { 
+      "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue" 
+    }
   },
   "pages": [
     {
@@ -10,22 +14,35 @@
       }
     },
     {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewButton",
+      "path": "pages/test/TestHmUviewTabs",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
       }
     },
-
+    {
+      "path": "components/built-in/uniapp/HmMoveView",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "components/built-in/uniapp/HmUviewFab",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "components/built-in/uniapp/HmUviewVideo",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
     {
       "path": "pages/test/Testtest",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/test",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
@@ -340,7 +357,7 @@
       }
     },
     {
-      "path": "components/built-in/qiun-data-charts/HmColumnCharts",
+      "path": "components/built-in/qiun-data-charts/HmMixCharts",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
@@ -502,13 +519,6 @@
     },
     {
       "path": "components/built-in/uniapp-uview-vue3/HmUviewTabs",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewTabs",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
@@ -856,10 +866,38 @@
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
       }
+    },
+    {
+      "path": "pages/test/TestHmUniTable",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/test/TestHmUviewFormily",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/test/TestHmImportPage",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/test/TestHmUviewFilter",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
     }
   ],
   "globalStyle": {
-    "navigationStyle": "custom",
+    "navigationStyle": "default",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
@@ -897,6 +935,11 @@
       {
         "name": "TestHmColorPicker",
         "path": "pages/test/TestHmColorPicker",
+        "query": ""
+      },
+      {
+        "name": "TestHmUviewFormily",
+        "path": "pages/test/TestHmUviewFormily",
         "query": ""
       }
     ]

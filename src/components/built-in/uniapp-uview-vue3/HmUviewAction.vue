@@ -206,13 +206,14 @@ export default {
     };
   },
   methods: {
-    onClick(index, index1) {
-      //console.log({ index, index1 });
-      this.$emit("slideClick", { index, index1 });
+    onClick(index,index1) {
+      let id = this.cList[index].id;
+      //console.log( index, index1,id );
+      this.$emit("btnClick",index,index1,id);
     },
     contentClick(item, index) {
       //console.log("contentClick", item, index);
-      this.$emit("onClick", { item, index });
+      this.$emit("contentClick", { item, index });
     },
     // 如果打开一个的时候，不需要关闭其他，则无需实现本方法
     open(index) {

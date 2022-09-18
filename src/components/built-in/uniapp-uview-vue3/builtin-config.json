@@ -10,13 +10,6 @@
         "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewGrid.png",
         "type": 0,
         "isBuiltIn": true
-      },
-      {
-        "name": "HmUviewList",
-        "title": "列表布局",
-        "importPath": "built-in/uniapp-uview-vue3/HmUviewList",
-        "type": 0,
-        "isBuiltIn": true
       }
     ]
   },
@@ -89,10 +82,26 @@
         "isBuiltIn": true
       },
       {
+        "name": "HmImportPage",
+        "title": "引用页面",
+        "importPath": "built-in/uniapp-uview-vue3/layout/HmImportPage",
+        "imgUrl": "built-in/uniapp-uview-vue3/layout/img/HmBgCard.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmUviewCollapse",
         "title": "折叠面板",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewCollapse",
         "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewCollapse.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "HmMoveView",
+        "title": "可移动盒子",
+        "importPath": "built-in/uniapp/HmMoveView",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmMoveView.png",
         "type": 0,
         "isBuiltIn": true
       }
@@ -192,7 +201,7 @@
       },
       {
         "name": "HmImage",
-        "title": "图标",
+        "title": "图片",
         "importPath": "built-in/uniapp/HmImage",
         "imgUrl": "built-in/uniapp/img/HmImage.png",
         "type": 0,
@@ -228,6 +237,22 @@
     "id": 4,
     "name": "表单组件",
     "componentList": [
+      {
+        "name": "HmUviewFormily",
+        "title": "formily表单",
+        "importPath": "built-in/uniapp-uview-vue3/HmUviewFormily",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewFormily.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "HmUviewFilter",
+        "title": "过滤器",
+        "importPath": "built-in/uniapp-uview-vue3/HmUviewFilter",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewFilter.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
       {
         "name": "HmUviewCalendar",
         "title": "日期选择",
@@ -294,7 +319,7 @@
       },
       {
         "name": "HmUviewSlider",
-        "title": "进度条",
+        "title": "滑块",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewSlider",
         "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSlider.png",
         "type": 0,
@@ -344,18 +369,11 @@
         "name": "HmInput",
         "title": "输入框",
         "importPath": "built-in/uniapp/HmInput",
-        "imgUrl": "built-in/uniapp-uview-vue3/img/HmInput.png",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewField.png",
         "type": 0,
         "isBuiltIn": true
       },
-      {
-        "name": "HmLabel",
-        "title": "控件",
-        "importPath": "built-in/uniapp/HmLabel",
-        "imgUrl": "built-in/uniapp/img/HmLabel.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
+      
       {
         "name": "HmSlider",
         "title": "滑动选择器",
@@ -378,6 +396,14 @@
     "id": 5,
     "name": "数据组件",
     "componentList": [
+      {
+        "name": "HmUniTable",
+        "title": "表格uTable",
+        "importPath": "built-in/uni-ui/HmUniTable",
+        "imgUrl": "built-in/uni-ui/img/HmUniTable.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
       {
         "name": "HmUviewCountDown",
         "title": "倒计时",
@@ -437,6 +463,14 @@
         "title": "圆环图",
         "importPath": "built-in/qiun-data-charts/HmRingCharts",
         "imgUrl": "built-in/qiun-data-charts/img/HmRingCharts.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "HmMixCharts",
+        "title": "混合图",
+        "importPath": "built-in/qiun-data-charts/HmMixCharts",
+        "imgUrl": "built-in/qiun-data-charts/img/HmMixCharts.png",
         "type": 0,
         "isBuiltIn": true
       }
@@ -531,6 +565,14 @@
     "name": "其他",
     "componentList": [
       {
+        "name": "HmUviewFab",
+        "title": "悬浮按钮",
+        "importPath": "built-in/uniapp/HmUviewFab",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewFab.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmUviewLoading",
         "title": "加载",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewLoading",
@@ -555,26 +597,10 @@
         "isBuiltIn": true
       },
       {
-        "name": "HmAudio",
-        "title": "音乐播放器",
-        "importPath": "built-in/uniapp/HmAudio",
-        "imgUrl": "built-in/uniapp/img/HmAudio.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "HmCamera",
-        "title": "相机",
-        "importPath": "built-in/uniapp/HmCamera",
-        "imgUrl": "built-in/uniapp/img/HmCamera.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "HmProgress",
-        "title": "进度条",
-        "importPath": "built-in/uniapp/HmProgress",
-        "imgUrl": "built-in/uniapp/img/HmProgress.png",
+        "name": "HmVideo",
+        "title": "视频播放器",
+        "importPath": "built-in/uniapp/HmUviewVideo",
+        "imgUrl": "built-in/uniapp/img/HmUviewVideo.png",
         "type": 0,
         "isBuiltIn": true
       }

@@ -6,8 +6,13 @@ import {
 
 function setGlobal(config) {
     config.timeout = 60 * 1000;
-    config.header = {
-        'content-type': 'application/json;charset=UTF-8'
+    if(!config.header){
+        config.header = {
+            'content-type': 'application/json;charset=UTF-8',
+        }
+    }
+    if(config.header && !config.header['content-type']){
+        config.header['content-type'] = 'application/json;charset=UTF-8'
     }
 }
 
@@ -18,6 +23,15 @@ function setGlobal(config) {
  */
 function transformAxiosRequest(config) {
     if(!config.url) return;
+
+    // 本地调试不转换
+    let host = window.location.host;
+    if (host.indexOf('localhost') !== -1 
+      || host.indexOf('127.0.0.1') !== -1 
+      || host.indexOf('192.168') !== -1) {
+      return;
+    }
+
     console.log('转换前的Url:  ',config.url, config)
     //转换proxy
     transformUrlProxy(config)
@@ -81,7 +95,10 @@ uni.addInterceptor('request', {
         setJeecgAuth(config)
         setBlockDesignAuth(config)
         // setEleAdminAuth(config)
-        transformAxiosRequest(config)
+
+        if(window) {
+          transformAxiosRequest(config)
+        }
     },
     complete(response) {
         let data = response.data
@@ -143,11 +160,12 @@ export function downloadFile(url) {
  * @param {String} url [请求的url地址]
  * @param {Object} params [请求时携带的参数]
  */
-export function postAction(url, params, config) {
+export function postAction(url, params, config = {}) {
     return new Promise((resolve, reject) => {
         uni.request({
             url: url,
             data: params,
+            header: config.headers,
             method: "POST",
             success: (res) => {
                 resolve(res.data)

@@ -2,6 +2,9 @@ import {
     createSSRApp
 } from "vue";
 import App from "./App.vue";
+/* #ifdef H5 */
+import "./static/css/index.css";
+/* #endif */
 
 import uView from './uni_modules/vk-uview-ui';
 
@@ -44,7 +47,7 @@ export function createApp() {
         if (isNaN(Number(value))) {
             return value;
         }
-        return `${value}px`;
+        return `${value}rpx`;
     }
 
     // app.use(message);

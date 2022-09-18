@@ -1,4 +1,4 @@
-FROM node:12.22.7-alpine3.12
+FROM node:16.17.0-alpine3.16
 RUN echo http://mirrors.aliyun.com/alpine/v3.12/main/ > /etc/apk/repositories && \
     echo http://mirrors.aliyun.com/alpine/v3.12/community/ >> /etc/apk/repositories
 RUN apk update
@@ -27,5 +27,6 @@ COPY install.zsh.sh /root/install.zsh.sh
 RUN sh /root/install.zsh.sh
 COPY zshrc /root/zshrc
 RUN cat /root/zshrc >> /root/.zshrc
+WORKDIR /root/code-live-preview
 # 本Dockerfile已经通过gitlab-ci自动构建镜像
 # 执行命令构建：docker build  -t registry.cn-shenzhen.aliyuncs.com/block-design/block-design-live:uniapp-uview-vue3 . --no-cache

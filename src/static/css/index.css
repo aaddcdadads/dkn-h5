@@ -56,4 +56,12 @@ uni-page-body {
   display: inline-block;
 }
 
+.ele-wrapper:empty {
+  display: none;
+}
 
+/* #ifdef MP-WEIXIN */
+.ele-wrapper {
+  float: left;
+}
+/* #endif */

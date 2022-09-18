@@ -19,6 +19,7 @@
     :active-item-style="activeItemStyle"
     :item-width="itemWidth"
     :offset="offset"
+    @change="onChange"
     class="hm-tabs"
   >
     <template #right>
@@ -208,7 +209,7 @@ export default {
   methods: {
     onChange(val) {
       this.cCurrent = val;
-      //console.log("u-tabs change", val);
+      console.log("u-tabs change", val);
       this.$emit("change", val);
     },
   },

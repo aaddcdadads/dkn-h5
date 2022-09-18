@@ -110,6 +110,7 @@
 					// 使手机产生短促震动，微信小程序有效，APP(HX 2.6.8)和H5无效
 					if(this.vibrateShort) uni.vibrateShort();
 					this.$emit('input', !this.getValue());
+					this.$emit('change', !this.getValue());
           this.$emit("update:modelValue", !this.getValue());
 					// 放到下一个生命周期，因为双向绑定的value修改父组件状态需要时间，且是异步的
 					this.$nextTick(() => {
