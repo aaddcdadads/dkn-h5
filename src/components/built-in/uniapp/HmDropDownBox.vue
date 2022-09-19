@@ -1,9 +1,11 @@
 <template>
   <view class="u-label" @click.stop="onClick">
-    <view class="text_head"
+    <view 
+      class="text_head" 
+      :style="{ width: cTextWidth}"
       ><text
         class="text_1"
-        :style="{ color: isColor ? mainColor : valueColor }"
+        :style="{ color: isColor ? mainColor : valueColor , fontSize : cValueSize }"
         >{{ this.cValue }}</text
       ></view
     >
@@ -14,10 +16,13 @@
       :color="isColor ? mainColor : valueColor"
       :size="iconSize"
     ></u-icon>
-    <view class="select-class" v-if="show">
+    <view 
+      class="select-class"  
+      :style="{ backgroundColor: cListColor,top :cSeat,left: cLeftSeat,width:cSeatWidth}"
+      v-if="show">
       <view
         class="list-item"
-        :class="{ list_itemColor: this.cValue == item.value }"
+        :style="{ backgroundColor: this.cValue == item.value ? cMainColor:'', color: this.cValue == item.value ? 'aliceblue':'',fontSize : cListSize }"
         @click.stop="onChange(item, index)"
         v-for="(item, index) in cList"
         :key="index"
@@ -182,7 +187,7 @@ export default {
       this.cListColor = value;
     },
     mainColor(value) {
-      this.cListColor = value;
+      this.cMainColor = value;
     },
   },
 
@@ -240,7 +245,6 @@ export default {
       cListSize: "",
       cSeat: "",
       cListColor:"",
-      cListColor: "",
       cTextWidth: "",
       cSeatWidth: "",
       cMainColor: "",
@@ -265,11 +269,10 @@ export default {
   //margin-left: 30px;
 }
 .text_head {
-  width: v-bind(cTextWidth);
   display: inline-block;
 }
 .text_1 {
-  font-size: v-bind(cValueSize);
+  //font-size: v-bind(cValueSize);
   font-weight: 500;
   color: black;
   text-overflow: ellipsis;
@@ -278,17 +281,17 @@ export default {
 }
 .select-class {
   position: absolute;
-  top: v-bind(cSeat);
-  left: v-bind(cLeftSeat);
+  //top: v-bind(cSeat);
+  //left: v-bind(cLeftSeat);
   z-index: 999;
-  width: v-bind(cSeatWidth);
+  //width: v-bind(cSeatWidth);
   box-shadow: 0px 0px 12px 0px #dadada;
-  background-color: v-bind(cListColor);
+  //background-color: v-bind(cListColor);
   border-radius: 5px;
 }
 .list-item {
   height: 35px;
-  font-size: v-bind(cListSize);
+  //font-size: v-bind(cListSize);
   padding: 0 10px 0 10px;
   display: flex;
   align-items: center;
@@ -299,10 +302,6 @@ export default {
   overflow: hidden;
 }
 
-.list_itemColor {
-  background-color: v-bind(cMainColor);
-  color: aliceblue;
-}
 .list-item:first-child {
   border-radius: 5px 5px 0 0;
 }
