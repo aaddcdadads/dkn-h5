@@ -29,7 +29,6 @@ export default {
     function getPage(pageId) {
       let page;
       Object.keys(modules).forEach((key) => {
-        console.log(key, modules[key])
         if (key == `/src/pages/${pageId}/page.vue`) {
           page = defineAsyncComponent(modules[key]);
         }
