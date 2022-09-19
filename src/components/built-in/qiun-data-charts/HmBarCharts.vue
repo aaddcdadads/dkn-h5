@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  name: "HmColumnCharts",
+  name: "HmBarCharts",
   props: {
     /**
      * 宽度

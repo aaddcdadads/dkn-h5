@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  name: "HmColumnCharts",
+  name: "HmPieCharts",
   props: {
     /**
      * 宽度
