@@ -9,7 +9,6 @@
 <script>
 import { h, defineAsyncComponent, toRefs } from 'vue';
 const modules = import.meta.glob('/src/pages/**/page.vue') || {};
-console.log(`HmImportPage modules: `, modules)
 
 /**
  * 背景卡片
