@@ -24,6 +24,10 @@ function setGlobal(config) {
 function transformAxiosRequest(config) {
     if(!config.url) return;
 
+    if (!window) {
+      return;
+    }
+
     // 本地调试不转换
     let host = window.location.host;
     if (host.indexOf('localhost') !== -1 
