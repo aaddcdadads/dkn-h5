@@ -3,10 +3,7 @@
     :nodes="nodes"
     :space="space"
     :selectable="selectable"
-    :image-menu-prevent="imageMenuPrevent"
-    :preview="preview"
     @itemclick="itemclick"
-    :type="type"
   ></rich-text>
 </template>
 <script>
@@ -20,11 +17,11 @@ export default {
     /**
      * 类型
      * @type Enum
-     * @options ["node","text"]
+     * @options ["Array","String"]
      */
     type: {
       type: String,
-      default: "text",
+      default: "Array",
     },
     /**
      * 节点列表
@@ -63,21 +60,6 @@ export default {
       type: Boolean,
       default: true,
     },
-    /**
-     * 默认菜单
-     */
-    imageMenuPrevent: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * 点击预览图片
-     */
-    preview: {
-      type: Boolean,
-      default: false,
-    },
-
     /**
      * 子节点列表
      */

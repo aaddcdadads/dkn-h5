@@ -840,6 +840,13 @@
       }
     },
     {
+      "path": "pages/test/TestHmRichText",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "pages/test/TestHmColorPicker",
       "style": {
         "navigationBarTitleText": "",

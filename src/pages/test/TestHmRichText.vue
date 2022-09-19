@@ -1,11 +1,9 @@
 <template>
   <rich-text
+    :nodes="nodes"
     space="&nbsp"
     selectable="true"
-    image-menu-prevent="false"
-    preview="false"
     @itemclick="itemclick"
-    type="text"
   ></rich-text>
 </template>
 
