@@ -18,12 +18,12 @@
       <map class="map" id="map" ref="map" :key="key" :latitude="cLatitude" :longitude="cLongitude" :scale="scale"
         :markers="cMarkers" :polyline="polyline" :circles="circles" :polygons="polygons" :includePoints="includePoints"
         :controls="controls" :enable3D="enable3D" :showCompass="showCompass" :enableZoom="enableZoom"
-        :enableScroll="enableScroll" :enableRotate="enableRotate" :enableOverlooking="enableOverlooking"
-        :enableSatellite="enableSatellite" :enableTraffic="enableTraffic" :enablePoi="enablePoi"
-        :enableBuilding="enableBuilding" :showLocation="showLocation" :enableIndoorMap="enableIndoorMap"
-        @markertap="onMarkertap" @labeltap="onLabeltap" @callouttap="onCallouttap" @controltap="onControltap"
-        @regionchange="onRegionchange" @tap="onTap" @updated="onUpdated" @anchorpointtap="onAnchorpointtap"
-        @poitap="onPoitap">
+        :layer-style="layerStyle" :enableScroll="enableScroll" :enableRotate="enableRotate"
+        :enableOverlooking="enableOverlooking" :enableSatellite="enableSatellite" :enableTraffic="enableTraffic"
+        :enablePoi="enablePoi" :enableBuilding="enableBuilding" :showLocation="showLocation"
+        :enableIndoorMap="enableIndoorMap" @markertap="onMarkertap" @labeltap="onLabeltap" @callouttap="onCallouttap"
+        @controltap="onControltap" @regionchange="onRegionchange" @tap="onTap" @updated="onUpdated"
+        @anchorpointtap="onAnchorpointtap" @poitap="onPoitap">
         <cover-view v-if="showSearch" class="serch-div" @click="showSearchView">
           {{address}}
         </cover-view>
@@ -76,6 +76,13 @@ export default {
     scale: {
       type: Number,
       default: 16,
+    },
+    /**
+     * 个性化地图
+     */
+    layerStyle: {
+      type: String,
+      default: "b688c625f9fa4d1d3b2788385d346611"
     },
     /**
      * 点标记
