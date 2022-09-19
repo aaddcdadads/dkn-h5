@@ -82,7 +82,7 @@ export default {
      */
     layerStyle: {
       type: String,
-      default: "b688c625f9fa4d1d3b2788385d346611"
+      default: "1"
     },
     /**
      * 点标记
