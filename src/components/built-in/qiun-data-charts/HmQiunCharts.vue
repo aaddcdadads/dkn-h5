@@ -244,7 +244,7 @@ export default {
     this.cWidth = this.getCssUnit(this.width);
     this.cHeight = this.getCssUnit(this.height);
     this.cChartData = JSON.parse(JSON.stringify(this.chartData));
-    this.cChartDeploy = JSON.parse(JSON.stringify(this.chartDeploy));
+    this.cChartDeploy = this.cleanOptions(JSON.parse(JSON.stringify(this.chartDeploy)));
 
     // 调整接口返回数据的赋值
     this.getData();
@@ -303,6 +303,15 @@ export default {
           return newSerie;
         })
       }
+    },
+    cleanOptions(options) {
+      if (!options.color) {
+        return;
+      }
+
+      options.color.forEach((color, index) => {
+        options.color[index] = color.trim();
+      })
     },
     getCssUnit(value) {
       if (isNaN(Number(value))) {

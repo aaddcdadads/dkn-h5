@@ -197,7 +197,9 @@ export default {
     this.cLeftSeat = this.getCssUnit(this.leftSeat);
     this.cListColor = this.listColor;
     this.cMainColor = this.mainColor;
+    // #ifdef H5
     window.addEventListener("click", this.handleClick);
+    // #endif
   },
   methods: {
     getCssUnit(value) {
