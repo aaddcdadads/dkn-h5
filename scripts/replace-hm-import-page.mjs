@@ -19,7 +19,9 @@ let pagePathMap = await getPagePathMap();
 
 Object.keys(stat).forEach(async (pageId) => {
   let pagePath = pagePathMap[pageId];
-
+  if (!fs.existsSync(pagePath)) {
+    return;
+  }
   let pageContent = fs.readFileSync(pagePath, 'utf8');
   // /<hm-import-page[^<]*1566734066567352321[^\/]*<\/hm-import-page>/gs
   let importPageIds = Object.keys(stat[pageId].stat);
