@@ -266,9 +266,9 @@ export default {
   },
 }
 </script>
-<style scoped>
-.charts-box {
-  width: 100%;
-  height: 300px;
-}
+<style lang="less" scoped>
+  .charts-box {
+    width: v-bind(cWidth);
+    height: v-bind(cHeight);
+  }
 </style>

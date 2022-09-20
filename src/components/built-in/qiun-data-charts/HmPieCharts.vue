@@ -235,9 +235,9 @@ export default {
 };
 </script>
 
-<style lang="less">
-.charts-box {
-  width: v-bind(cWidth);
-  height: v-bind(cHeight);
-}
+<style lang="less" scoped>
+  .charts-box {
+    width: v-bind(cWidth);
+    height: v-bind(cHeight);
+  }
 </style>
