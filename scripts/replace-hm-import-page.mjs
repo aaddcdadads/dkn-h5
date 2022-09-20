@@ -5,7 +5,7 @@ let stat = JSON.parse(fs.readFileSync('../docs/stat-hm-import-page.json'));
 
 async function getPagePathMap() {
   let pagePathMap = {}
-  let pages = await $`find ../src/page* -name 'page.vue'`
+  let pages = await $`find ../src/pages -name 'page.vue'`
   pages = pages.stdout.split('\n')
   pages = pages.slice(0, pages.length - 1)
   pages.forEach(page => {
