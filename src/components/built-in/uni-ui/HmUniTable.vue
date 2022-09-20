@@ -345,33 +345,6 @@ export default {
           if (self.cPagination.pageSize === 1000000) {
             self.cPagination.pageSize = '全部';
           }
-          self.$nextTick(function () {
-            let eleTable = self.$refs.table.$el;
-            let eleUl = eleTable.querySelector('.ant-table-pagination');
-            if (!eleUl) return;
-
-            let display = self.cPagination.pageSize === '全部' ? 'none' : 'inline-block';
-
-            for (let i = 1; i < eleUl.children.length; i++) {
-              let eleLi = eleUl.children[i];
-              let text = eleLi["innerText" in eleLi ? "innerText" : "textContent"];
-              if (text.indexOf('NaN') >= 0) {
-                eleLi.style.display = display;
-              }
-            }
-
-            if (eleUl.children.length < 8) {
-              return;
-            }
-
-            for (let i = 3; i < 8; i++) {
-              eleUl.children[i].style.display = display;
-            }
-            let quickJumper = eleTable.querySelector('.ant-pagination-options-quick-jumper')
-            if (!quickJumper) return;
-
-            quickJumper.style.display = display;
-          });
         }, 0);
       });
     },
