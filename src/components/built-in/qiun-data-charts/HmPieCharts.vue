@@ -1,6 +1,7 @@
 <template>
   <view class="charts-box">
     <qiun-data-charts
+      :reshow="cReshow"
       type="pie"
       :chartData="cChartData"   
       :opts="cChartDeploy"
@@ -116,6 +117,13 @@ export default {
           seriesColumns: []
         }
       }
+    },
+    /**
+     * 是否重绘
+     */
+    reshow: {
+      type: Boolean,
+      default: false
     }
   },
   watch:{
@@ -140,13 +148,17 @@ export default {
       },
       deep: true,
     },
+    reshow(val) {
+      this.cReshow = val;
+    }
   },
   data() {
     return {
       cWidth: "100%",
       cHeight: "300rpx",
       cChartData:{},
-      cChartDeploy:{}
+      cChartDeploy:{},
+      cReshow: false
     };
   },
   mounted() {
@@ -154,6 +166,7 @@ export default {
     this.cHeight = this.getCssUnit(this.height);
     this.cChartData = JSON.parse(JSON.stringify(this.chartData));
     this.cChartDeploy = JSON.parse(JSON.stringify(this.chartDeploy));
+    this.cReshow = this.reshow;
 
     // 调整接口返回数据的赋值
     this.getData();
@@ -235,9 +248,9 @@ export default {
 };
 </script>
 
-<style lang="less">
-.charts-box {
-  width: v-bind(cWidth);
-  height: v-bind(cHeight);
-}
+<style lang="less" scoped>
+  .charts-box {
+    width: v-bind(cWidth);
+    height: v-bind(cHeight);
+  }
 </style>

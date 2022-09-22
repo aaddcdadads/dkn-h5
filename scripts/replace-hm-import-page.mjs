@@ -5,7 +5,7 @@ let stat = JSON.parse(fs.readFileSync('../docs/stat-hm-import-page.json'));
 
 async function getPagePathMap() {
   let pagePathMap = {}
-  let pages = await $`find ../src/page* -name 'page.vue'`
+  let pages = await $`find ../src/pages -name 'page.vue'`
   pages = pages.stdout.split('\n')
   pages = pages.slice(0, pages.length - 1)
   pages.forEach(page => {
@@ -19,7 +19,9 @@ let pagePathMap = await getPagePathMap();
 
 Object.keys(stat).forEach(async (pageId) => {
   let pagePath = pagePathMap[pageId];
-
+  if (!fs.existsSync(pagePath)) {
+    return;
+  }
   let pageContent = fs.readFileSync(pagePath, 'utf8');
   // /<hm-import-page[^<]*1566734066567352321[^\/]*<\/hm-import-page>/gs
   let importPageIds = Object.keys(stat[pageId].stat);
