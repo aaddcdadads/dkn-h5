@@ -5,6 +5,10 @@ import {
 } from "../store/mutation-types";
 
 function setGlobal(config) {
+    // 配置基础路径
+    let baseUrl = ''
+    config.url = baseUrl + config.url;
+
     config.timeout = 60 * 1000;
     if(!config.header){
         config.header = {
