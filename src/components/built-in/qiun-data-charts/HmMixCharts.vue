@@ -172,11 +172,19 @@ export default {
     height(val) {
       this.cHeight = this.getCssUnit(val);
     },
-    chartData(val) {
-      this.cChartData = JSON.parse(JSON.stringify(val));
+    chartData: {
+      handler: function(val, oldVal) {
+        this.cReshow = false;
+        this.cChartData = JSON.parse(JSON.stringify(val));
+        this.cReshow = true;
+      },
+      deep: true
     },
-    chartDeploy(val) {
-      this.cChartDeploy = JSON.parse(JSON.stringify(val));
+    chartDeploy: {
+      handler: function(val, oldVal) {
+        this.cChartDeploy = JSON.parse(JSON.stringify(val));
+      },
+      deep: true
     },
     url(value) {
       this.getData(value);
@@ -188,6 +196,7 @@ export default {
       deep: true,
     },
     reshow(val) {
+      console.log(`watch HmMixCharts reshow: `, val);
       this.cReshow = val;
     }
   },
@@ -206,6 +215,7 @@ export default {
       url = url || this.url;
       params = params || this.params;
       if (!url) return;
+      this.cReshow = false;
       getAction(url, params).then((resp) => {
         this.cChartData = this.getDataSource(resp)
         this.$refs.chart.setOption(this.cOption, {
@@ -213,6 +223,7 @@ export default {
           lazyUpdate: true,
           silent: false,
         });
+        this.cReshow = true;
       });
     },
     /**
