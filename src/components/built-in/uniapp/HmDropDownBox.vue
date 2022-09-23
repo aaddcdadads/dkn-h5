@@ -22,7 +22,7 @@
       v-if="show">
       <view
         class="list-item"
-        :style="{ backgroundColor: this.cValue == item.value ? cMainColor:'', color: this.cValue == item.value ? 'aliceblue':'',fontSize : cListSize }"
+        :style="{ backgroundColor: this.cValue == item.value ? cMainColor:'', color: this.cValue == item.value ? mainTextColor:'',fontSize : cListSize }"
         @click.stop="onChange(item, index)"
         v-for="(item, index) in cList"
         :key="index"
@@ -44,12 +44,20 @@ export default {
       default: "auto",
     },
     /**
-     * 主题色
+     * 选中颜色
      * @type Color
      */
     mainColor: {
       type: String,
       default: "#1CB9C2",
+    },
+    /**
+     * 选中文字颜色
+     * @type Color
+     */
+     mainTextColor: {
+      type: String,
+      default: "#ffffff",
     },
     /**
      * 默认值
