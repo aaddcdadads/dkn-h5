@@ -1,6 +1,6 @@
 <template>
-  <view class="charts-box">
-    <qiun-data-charts :style="[chartsBoxStyle]" :reshow="cReshow" type="mix" :opts="cChartDeploy" :chartData="cChartData" @complete="onComplete"
+  <view :style="[chartsBoxStyle]" class="charts-box">
+    <qiun-data-charts :reshow="cReshow" type="mix" :opts="cChartDeploy" :chartData="cChartData" @complete="onComplete"
       @getIndex="getIndex" @click="onClick">
     </qiun-data-charts>
   </view>
