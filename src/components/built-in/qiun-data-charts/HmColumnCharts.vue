@@ -1,6 +1,7 @@
 <template>
   <view class="charts-box">
     <qiun-data-charts
+      :style="[chartsBoxStyle]"
       :reshow="cReshow"
       type="column"
       :chartData="cChartData"   
@@ -222,9 +223,11 @@ export default {
   watch:{
     width(val){
       this.cWidth = this.getCssUnit(val);
+      this.chartsBoxStyle.width = this.cWidth;
     },
     height(val){
       this.cHeight = this.getCssUnit(val);
+      this.chartsBoxStyle.height = this.cHeight;
     },
     chartData: {
       handler: function(val, oldVal) {
@@ -260,7 +263,8 @@ export default {
       cHeight: "300rpx",
       cChartData:{},
       cChartDeploy:{},
-      cReshow: false
+      cReshow: false,
+      chartsBoxStyle: {}
     };
   },
   mounted() {
@@ -269,6 +273,10 @@ export default {
     this.cChartData = JSON.parse(JSON.stringify(this.chartData));
     this.cChartDeploy = JSON.parse(JSON.stringify(this.chartDeploy));
     this.cReshow = this.reshow;
+    this.chartsBoxStyle = {
+      width: this.cWidth,
+      height: this.cHeight
+    }
 
     // 调整接口返回数据的赋值
     this.getData();
