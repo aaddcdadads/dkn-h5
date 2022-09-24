@@ -232,9 +232,7 @@ export default {
     },
     chartData: {
       handler: function(val, oldVal) {
-        this.cReshow = false;
         this.cChartData = JSON.parse(JSON.stringify(val));
-        this.cReshow = true;
       },
       deep: true
     },
