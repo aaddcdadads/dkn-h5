@@ -5,7 +5,7 @@
       :style="{ width: cTextWidth}"
       ><text
         class="text_1"
-        :style="{ color: isColor ? mainColor : valueColor , fontSize : cValueSize }"
+        :style="{ color: valueColor , fontSize : cValueSize }"
         >{{ this.cValue }}</text
       ></view
     >
@@ -13,7 +13,7 @@
       v-if="this.icon"
       class="icon"
       :name="icon"
-      :color="isColor ? mainColor : valueColor"
+      :color="valueColor"
       :size="iconSize"
     ></u-icon>
     <view 
@@ -52,7 +52,7 @@ export default {
       default: "#1CB9C2",
     },
     /**
-     * 选中文字颜色
+     * 选择框文字颜色
      * @type Color
      */
      mainTextColor: {
@@ -273,7 +273,6 @@ export default {
   position: relative;
   text-overflow: ellipsis;
   white-space: nowrap;
-
   //margin-left: 30px;
 }
 .text_head {
