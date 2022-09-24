@@ -2,6 +2,8 @@
   <view :style="[chartsBoxStyle]" class="charts-box">
     <qiun-data-charts
       :reshow="cReshow"
+      :canvasId="canvasId"
+      :canvas2d="true"
       type="column"
       :chartData="cChartData"   
       :opts="cChartDeploy"
@@ -27,7 +29,7 @@ export default {
      */
     height: {
       type: String,
-      default: "300rpx",
+      default: "300px",
     },
     /**
      * 图表数据
@@ -258,8 +260,9 @@ export default {
   },
   data() {
     return {
+      canvasId: `canvas-id-${new Date().getTime()}-${parseInt(Math.random() * 1000000)}`,
       cWidth: "100%",
-      cHeight: "300rpx",
+      cHeight: "300px",
       cChartData:{},
       cChartDeploy:{},
       cReshow: false,

@@ -31,7 +31,7 @@ export default {
      */
     height: {
       type: String,
-      default: "300rpx",
+      default: "300px",
     },
     /**
      * 图表数据
@@ -256,7 +256,7 @@ export default {
   data() {
     return {
       cWidth: "100%",
-      cHeight: "300rpx",
+      cHeight: "300px",
       cChartData: {},
       cChartDeploy: {},
       cReshow: false,
