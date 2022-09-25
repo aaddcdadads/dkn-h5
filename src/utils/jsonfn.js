@@ -32,6 +32,8 @@ const JSONfn = {
       if (iso8061 && value.match(iso8061)) {
         return new Date(value);
       }
+
+      // #ifdef APP-PLUS || H5
       if (prefix === 'function') {
         value = value.trim();
         if (value[value.length - 1] === ';') {
@@ -45,6 +47,7 @@ const JSONfn = {
       if (prefix === '_NuFrRa_') {
         return eval(value.slice(8));
       }
+      // #endif
       return value;
     });
   },
