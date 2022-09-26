@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import _ from 'lodash';
 import {
   getAction,
 } from "/@/request/http";
