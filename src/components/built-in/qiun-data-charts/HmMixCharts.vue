@@ -1,6 +1,9 @@
 <template>
   <view :style="[chartsBoxStyle]" class="charts-box">
-    <qiun-data-charts :reshow="cReshow" type="mix" :opts="cChartDeploy" :chartData="cChartData" @complete="onComplete"
+    <qiun-data-charts :reshow="cReshow" type="mix" :opts="cChartDeploy" :chartData="cChartData" 
+    :tooltipCustom="tooltipCustom" 
+      :tooltipFormat="tooltipFormat"
+    @complete="onComplete"
       @getIndex="getIndex" @click="onClick">
     </qiun-data-charts>
   </view>
@@ -154,6 +157,24 @@ export default {
     reshow: {
       type: Boolean,
       default: false
+    },
+    /**
+     * 提示框自定义
+     */
+    tooltipCustom: {
+      type: Object,
+      default: function () {
+        return {
+          
+        }
+      }
+    },
+    /**
+     * 调用格式化
+     */
+     tooltipFormat: {
+      type: String,
+      default: "tooltipDemo1"
     }
   },
   data() {

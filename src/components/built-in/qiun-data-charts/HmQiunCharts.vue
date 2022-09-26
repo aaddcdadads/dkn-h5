@@ -1,7 +1,7 @@
 <template>
   <view :style="[chartsBoxStyle]" class="charts-box">
     <qiun-data-charts :reshow="cReshow" :type="type" :chartData="cChartData" :opts="cChartDeploy" @complete="onComplete"
-      @getIndex="getIndex" @click="onClick" />
+      @getIndex="getIndex" @click="onClick" :tooltipCustom="tooltipCustom" :tooltipFormat="tooltipFormat" />
   </view>
 </template>
 
@@ -214,25 +214,43 @@ export default {
     reshow: {
       type: Boolean,
       default: false
+    },
+    /**
+     * 提示框自定义
+     */
+    tooltipCustom: {
+      type: Object,
+      default: function () {
+        return {
+          
+        }
+      }
+    },
+    /**
+     * 调用格式化
+     */
+     tooltipFormat: {
+      type: String,
+      default: "tooltipDemo1"
     }
   },
   watch: {
-    width(val){
+    width(val) {
       this.cWidth = this.getCssUnit(val);
       this.chartsBoxStyle.width = this.cWidth;
     },
-    height(val){
+    height(val) {
       this.cHeight = this.getCssUnit(val);
       this.chartsBoxStyle.height = this.cHeight;
     },
     chartData: {
-      handler: function(val, oldVal) {
+      handler: function (val, oldVal) {
         this.cChartData = JSON.parse(JSON.stringify(val));
       },
       deep: true
     },
     chartDeploy: {
-      handler: function(val, oldVal) {
+      handler: function (val, oldVal) {
         this.cChartDeploy = JSON.parse(JSON.stringify(val));
       },
       deep: true
@@ -271,7 +289,6 @@ export default {
       width: this.cWidth,
       height: this.cHeight
     }
-
     // 调整接口返回数据的赋值
     this.getData();
   },
@@ -310,8 +327,8 @@ export default {
         return {
           categories: _.map(respDataList, this.getDataMap.categoryColumn),
           series: _.map(this.chartData.series, (serie, index) => {
-            let newSerie =  JSON.parse(JSON.stringify(serie))
-            newSerie.data =  _.map(respDataList, this.getDataMap.seriesColumns[index])
+            let newSerie = JSON.parse(JSON.stringify(serie))
+            newSerie.data = _.map(respDataList, this.getDataMap.seriesColumns[index])
             return newSerie;
           })
         }
@@ -320,8 +337,8 @@ export default {
       // 返回非直角坐标系的数据
       return {
         series: _.map(this.chartData.series, (serie, index) => {
-          let newSerie =  JSON.parse(JSON.stringify(serie))
-          newSerie.data =  _.map(respDataList, item => {
+          let newSerie = JSON.parse(JSON.stringify(serie))
+          newSerie.data = _.map(respDataList, item => {
             let map = this.getDataMap.seriesColumns[index];
             return {
               name: item[map.name],
@@ -364,8 +381,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  .charts-box {
-    width: v-bind(cWidth);
-    height: v-bind(cHeight);
-  }
+.charts-box {
+  width: v-bind(cWidth);
+  height: v-bind(cHeight);
+}
 </style>
