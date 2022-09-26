@@ -1,8 +1,7 @@
 <template>
     <uni-fab ref="fab" :pattern="pattern" :content="content" :horizontal="horizontal" :vertical="vertical"
-        :direction="direction" :popMenu="popMenu" @trigger="trigger" 
-        @fabClick="popMenu && fabClick($event)" 
-        @click="!popMenu && addClick($event)"/>
+        :direction="direction" :popMenu="popMenu" @trigger="trigger" @fabClick="popMenu && fabClick($event)"
+        @click="!popMenu && addClick($event)" />
 </template>
 <script>
 export default {
@@ -98,7 +97,7 @@ export default {
         },
         fabClick(e) {
             this.$emit("fabClick", e);
-             console.log("fabClick", e);
+            console.log("fabClick", e);
         },
         addClick(e) {
             this.$emit("addClick", e);
