@@ -9,11 +9,12 @@
     :confirm-color="confirmColor"
     :cancel-text="cancelText"
     :cancel-color="cancelColor"
-    closeOnClickOverlay
+		:mask-close-able="maskCloseAble"
     :border-radius="borderRadius"
     :width="width"
     @confirm="onConfirm"
     @cancel="onCancel"
+		@update:modelValue="close"
   >
     <slot />
   </u-modal>
@@ -109,6 +110,13 @@ export default {
       type: String,
       default: "150px",
     },
+    /**
+     * 点击遮罩关闭
+     */
+    maskCloseAble:{
+      type: Boolean,
+      default: false,
+    }
   },
   data() {
     return {
@@ -142,6 +150,9 @@ export default {
     },
     onCancel(e) {
       this.$emit("onCancel", e);
+    },
+    close(e) {
+      this.$emit("close", e);
     },
   },
 };
