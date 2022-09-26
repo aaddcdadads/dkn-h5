@@ -15,7 +15,7 @@
           <uni-td v-if="actions.length > 0">
             <view class="uni-group action">
               <button v-for="(action, index) in actions" :key="index" class="uni-button" :size="action.size || 'mini'"
-                :type="action.type || 'primary'" @click="action.callback(item)">{{ action.name }}</button>
+                :type="action.type || 'primary'" @click="action.callback">{{ action.name }}</button>
             </view>
           </uni-td>
         </uni-tr>
@@ -29,10 +29,10 @@
 </template>
 
 <script>
-import _ from "lodash";
 import JSONfn from "/@/utils/jsonfn";
 import {
   getAction,
+  getCiticAction,
   postAction,
   deleteAction,
   putAction,
@@ -329,7 +329,7 @@ export default {
         params.pageNo = 1;
       }
 
-      getAction(url, params).then((resp) => {
+      getCiticAction(url, params).then((resp) => {
         console.log(`get table data: `, resp);
         self.cData = [];
         setTimeout(() => {
@@ -337,7 +337,7 @@ export default {
           if (typeof self.cPagination !== "boolean") {
             self.cPagination.total = self.getDataTotal(resp);
           }
-          _.each(self.cData, (item, index) => {
+          self.cData.forEach((item, index) => {
             item.hmNo = index + 1;
           });
 
@@ -410,7 +410,7 @@ export default {
       }
 
       if (dataFlag) {
-        _.each(this.cData, (item, index) => {
+        this.cData.forEach((item, index) => {
           item.hmNo = index + 1;
         });
       }
