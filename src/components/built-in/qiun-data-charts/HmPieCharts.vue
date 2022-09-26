@@ -133,8 +133,7 @@ export default {
     tooltipCustom: {
       type: Object,
       default: function () {
-        return {
-          
+        return { 
         }
       }
     },
@@ -143,7 +142,7 @@ export default {
      */
      tooltipFormat: {
       type: String,
-      default: "tooltipDemo1"
+      default: ""
     }
   },
   watch:{

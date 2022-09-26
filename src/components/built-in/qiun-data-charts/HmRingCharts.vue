@@ -136,7 +136,6 @@ export default {
       type: Object,
       default: function () {
         return {
-          
         }
       }
     },
@@ -145,7 +144,7 @@ export default {
      */
      tooltipFormat: {
       type: String,
-      default: "tooltipDemo1"
+      default: ""
     }
   },
   watch:{
