@@ -41,7 +41,7 @@ import {
 } from "./formily/component"
 import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/vue'
-import _ from 'lodash'
+import cloneDeep from 'lodash/cloneDeep'
 
 import {
   getFeiqiFilterValue, 
@@ -529,8 +529,8 @@ export default {
      * 获取飞企过滤器values
      */
     getFeiqiFilterValues() {
-      let newValues = _.cloneDeep(this.getValues());
-      _.each(this.schema.properties.form.properties, (item, key) => {
+      let newValues = cloneDeep(this.getValues());
+      this.schema.properties.form.properties.forEach((item, key) => {
         if (newValues[key]) {
           getFeiqiFilterValue(item['x-component'], newValues, key)
         }
@@ -549,8 +549,8 @@ export default {
      * 获取过滤器values
      */
     getFilterValues() {
-      let newValues = _.cloneDeep(this.getValues());
-      _.each(this.schema.properties.form.properties, (item, key) => {
+      let newValues = cloneDeep(this.getValues());
+      this.schema.properties.form.properties.forEach((item, key) => {
         if (newValues[key] != undefined) {
           getFilterValue(item['x-component'], newValues, key)
         }
@@ -561,8 +561,8 @@ export default {
      * 获取表单values
      */
     getFormValues() {
-      let newValues = _.cloneDeep(this.getValues());
-      _.each(this.schema.properties.form.properties, (item, key) => {
+      let newValues = cloneDeep(this.getValues());
+      this.schema.properties.form.properties.forEach((item, key) => {
         if (newValues[key] != undefined) {
           getFormValue(item['x-component'], newValues, key);
         }
@@ -574,7 +574,7 @@ export default {
      */
     setFormValues(values) {
       let newValues = {};
-      _.each(this.schema.properties.form.properties, (item, key) => {
+      this.schema.properties.form.properties.forEach((item, key) => {
         if (values[key] != null || values[key] != undefined) {
           newValues[key] = setFormValue(item['x-component'], values, key);
         }
