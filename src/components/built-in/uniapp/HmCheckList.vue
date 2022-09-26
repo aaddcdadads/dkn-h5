@@ -165,11 +165,11 @@ export default {
      * 处理数据映射
      */
     handleDataMapping(data, dataMap){
-      return _.map(data, item => {
+      return data.map(item => {
         let obj = {}
-        _.each(dataMap, (value, key) => {
+        dataMap.forEach((value, key) => {
           obj[key] = item[value] || ''
-        })
+        });
         return obj
       })
     },
@@ -184,9 +184,9 @@ export default {
       this.$emit('change', this.selected)
     },
     checkAll(flag){
-      _.each(this.cData, item => {
-        item.checked = flag
-      })
+      this.cData.forEach((item, index) => {
+        item.checked = flag;
+      });
       this.$emit('change', this.selected)
     }
   },
