@@ -18,7 +18,7 @@
     ></u-icon>
     <view 
       class="select-class"  
-      :style="{ backgroundColor: cListColor,top :cSeat,left: cLeftSeat,width:cSeatWidth}"
+      :style="{ backgroundColor: cListColor,top :cSeat,left: cLeftSeat,width:cSeatWidth,maxHeight:cMaxHeight}"
       v-if="show">
       <view
         class="list-item"
@@ -110,6 +110,13 @@ export default {
       default: "120px",
     },
     /**
+     * 最大高度
+     */
+    maxHeight:{
+      type: String,
+      default: "140px",
+    },
+    /**
      * 选项上下位置
      */
     seat: {
@@ -173,6 +180,9 @@ export default {
     seatWidth(value) {
       this.cSeatWidth = this.getCssUnit(value);
     },
+    maxHeight(value) {
+      this.cMaxHeight = this.getCssUnit(value);
+    },
     value(value) {
       this.cValue = value;
     },
@@ -202,6 +212,7 @@ export default {
   mounted() {
     this.cTextWidth = this.getCssUnit(this.textWidth);
     this.cSeatWidth = this.getCssUnit(this.seatWidth);
+    this.cMaxHeight = this.getCssUnit(this.maxHeight);
     this.cList = this.list;
     this.cValue = this.value ? this.value : this.cList[0].value;
     this.cValueSize = this.getCssUnit(this.valueSize);
@@ -256,6 +267,7 @@ export default {
       cTextWidth: "",
       cSeatWidth: "",
       cMainColor: "",
+      cMaxHeight:"",
       defaultColorIndex: -1,
     };
   },
@@ -295,6 +307,7 @@ export default {
   box-shadow: 0px 0px 12px 0px #dadada;
   //background-color: v-bind(cListColor);
   border-radius: 5px;
+  overflow: auto;
 }
 .list-item {
   height: 35px;
