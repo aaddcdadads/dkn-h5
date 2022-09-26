@@ -208,6 +208,14 @@ export default {
       },
     },
     /**
+     * 自动合并单元
+     * @description 数据相同的内容自动合并. 形如 ["r1c1:r10c1", "r2c2:r10c2", "r1:r2", "c4"]，这里的r1c1表示的是第1行（row 1），第1列（column 1）。第1列不包含表格，指的是数据行。
+     */
+    combined: {
+      type: Array,
+      default: [],
+    },
+    /**
      * 清空过滤排序
      */
     clearFiltersAndSortersFlag: {
