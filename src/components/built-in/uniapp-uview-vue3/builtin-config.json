@@ -98,10 +98,10 @@
         "isBuiltIn": true
       },
       {
-        "name": "HmMoveView",
-        "title": "可移动盒子",
-        "importPath": "built-in/uniapp/HmMoveView",
-        "imgUrl": "built-in/uniapp-uview-vue3/img/HmMoveView.png",
+        "name": "HmUviewSticky",
+        "title": "吸顶盒子",
+        "importPath": "built-in/uniapp-uview-vue3/HmUviewSticky",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewSticky.png",
         "type": 0,
         "isBuiltIn": true
       }
@@ -597,10 +597,10 @@
         "isBuiltIn": true
       },
       {
-        "name": "HmVideo",
+        "name": "HmVideoList",
         "title": "视频播放器",
-        "importPath": "built-in/uniapp/HmUviewVideo",
-        "imgUrl": "built-in/uniapp/img/HmUviewVideo.png",
+        "importPath": "built-in/uniapp/HmVideoList",
+        "imgUrl": "built-in/uniapp/img/HmVideoList.png",
         "type": 0,
         "isBuiltIn": true
       }

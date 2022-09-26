@@ -5,6 +5,8 @@
       type="pie"
       :chartData="cChartData"   
       :opts="cChartDeploy"
+      :tooltipCustom="tooltipCustom" 
+      :tooltipFormat="tooltipFormat"
       @complete="onComplete"
       @getIndex="getIndex"
       @click="onClick"
@@ -124,6 +126,23 @@ export default {
     reshow: {
       type: Boolean,
       default: false
+    },
+    /**
+     * 提示框自定义
+     */
+    tooltipCustom: {
+      type: Object,
+      default: function () {
+        return { 
+        }
+      }
+    },
+    /**
+     * 调用格式化
+     */
+     tooltipFormat: {
+      type: String,
+      default: ""
     }
   },
   watch:{

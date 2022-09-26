@@ -60,6 +60,7 @@ const cfu = {
     "xAxisDemo2":function(val, index, opts){return formatDateTime(val,'h:m')},
     "seriesDemo1":function(val, index, series, opts){return val+'元'},
     "tooltipDemo1":function(item, category, index, opts){
+	  // console.log("tooltipDemo1",item, category, index, opts);
       if(index==0){
       	return '随便用'+item.data+'年'
       }else{
