@@ -36,14 +36,14 @@
       }
     },
     {
-      "path": "components/built-in/uniapp/HmUviewFab",
+      "path": "components/built-in/uniapp/HmFab",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
       }
     },
     {
-      "path": "components/built-in/uniapp/HmUviewVideo",
+      "path": "components/built-in/uniapp/HmVideoList",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
