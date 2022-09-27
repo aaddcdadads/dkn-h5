@@ -1,14 +1,14 @@
 <template>
   <view>
-    <hm-uview-swipe-action></hm-uview-swipe-action>
-    <hm-uview-swipe-action
+    <hm-uview-swipe-action width="100%"></hm-uview-swipe-action>
+    <!-- <hm-uview-swipe-action
       :list="list1"
       :options="list2"
       arrowDirection="right"
       btn-width="200"
       bg-color="#ffefef"
       @onClick="onClick"
-    ></hm-uview-swipe-action>
+    ></hm-uview-swipe-action> -->
   </view>
 </template>
 
