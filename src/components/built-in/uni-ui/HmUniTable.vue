@@ -29,11 +29,9 @@
 </template>
 
 <script>
-import JSONfn from "/@/utils/jsonfn";
 import cloneDeep from 'lodash/cloneDeep'
 import {
   getAction,
-  getCiticAction,
   postAction,
   deleteAction,
   putAction,
@@ -330,7 +328,7 @@ export default {
         params.pageNo = 1;
       }
 
-      getCiticAction(url, params).then((resp) => {
+      getAction(url, params).then((resp) => {
         console.log(`get table data: `, resp);
         self.cData = [];
         setTimeout(() => {
