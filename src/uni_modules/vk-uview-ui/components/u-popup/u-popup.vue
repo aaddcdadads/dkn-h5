@@ -191,7 +191,10 @@ export default {
 		maskCustomStyle: {
 			type: Object,
 			default() {
-				return {}
+				return {
+          width: '100%',
+          height: '100%'
+        }
 			}
 		},
 		// 遮罩打开或收起的动画过渡时间，单位ms
@@ -308,6 +311,7 @@ export default {
 			// 造成@close事件触发两次
 			this.closeFromInner = true;
 			this.change('showDrawer', 'visibleSync', false);
+      this.$emit("close", false);
 		},
 		// 中部弹出时，需要.u-drawer-content将居中内容，此元素会铺满屏幕，点击需要关闭弹窗
 		// 让其只在mode=center时起作用

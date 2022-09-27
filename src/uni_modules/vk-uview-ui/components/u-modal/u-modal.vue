@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<u-popup :zoom="zoom" mode="center" :popup="false" :z-index="uZIndex" v-model="popupValue" :length="width"
+		<u-popup :closeable="showCloseIcon" :zoom="zoom" mode="center" :popup="true" :z-index="uZIndex" v-model="popupValue" :length="width"
 		 :mask-close-able="maskCloseAble" :border-radius="borderRadius" @close="popupClose" :negative-top="negativeTop">
 			<view class="u-model">
 				<view v-if="showTitle" class="u-model__title u-line-1" :style="[titleStyle]">{{ title }}</view>
@@ -109,6 +109,11 @@
 				type: Boolean,
 				default: false
 			},
+      // 显示关闭按钮
+      showCloseIcon: {
+        type: Boolean,
+				default: true
+      },
 			// 确认文案
 			confirmText: {
 				type: String,
@@ -250,6 +255,7 @@
 			popupClose() {
 				this.$emit('input', false);
         this.$emit("update:modelValue", false);
+        this.$emit('close', false);
 			},
 			// 清除加载中的状态
 			clearLoading() {

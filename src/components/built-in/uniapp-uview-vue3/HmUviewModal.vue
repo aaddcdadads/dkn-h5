@@ -5,6 +5,7 @@
     :title="title"
     :show-confirm-button="showConfirmBtn"
     :show-cancel-button="showCancelBtn"
+    :show-close-icon="showCloseIcon"
     :confirm-text="confirmText"
     :confirm-color="confirmColor"
     :cancel-text="cancelText"
@@ -14,7 +15,7 @@
     :width="width"
     @confirm="onConfirm"
     @cancel="onCancel"
-		@update:modelValue="close"
+		@close="close"
   >
     <slot />
   </u-modal>
@@ -27,6 +28,7 @@ export default {
   props: {
     /**
      * 是否可见
+     * @model
      */
     visible: {
       type: Boolean,
@@ -91,6 +93,13 @@ export default {
       default: "#000000",
     },
     /**
+     * 显示关闭按钮
+     */
+     showCloseIcon: {
+      type: Boolean,
+      default: true,
+    },
+    /**
      * 圆角
      */
     borderRadius: {
@@ -153,6 +162,7 @@ export default {
     },
     close(e) {
       this.$emit("close", e);
+      this.$emit("update:visible", false);
     },
   },
 };
