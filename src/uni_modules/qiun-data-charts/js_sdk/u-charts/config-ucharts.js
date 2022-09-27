@@ -57,12 +57,8 @@ const cfu = {
 		"yAxisDemo1": function (val, index, opts) { return val + '元' },
 		"yAxisDemo2": function (val, index, opts) { return val.toFixed(2) },
 		"yAxisDemo3": function (val, index, opts) {
-			console.log("配置", val, index, opts);
-			if (val.length > 4) {
-				return val.slice(0, 4) + '...';
-			} else {
-				return val;
-			}
+			//console.log("配置", val, index, opts);
+			return val.length > 4 ? val.slice(0, 4) + '...':val;
 		},
 		"xAxisDemo1": function (val, index, opts) { return val + '年'; },
 		"xAxisDemo2": function (val, index, opts) { return formatDateTime(val, 'h:m') },
