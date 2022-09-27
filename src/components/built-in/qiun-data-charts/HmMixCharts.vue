@@ -1,10 +1,18 @@
 <template>
   <view :style="[chartsBoxStyle]" class="charts-box">
-    <qiun-data-charts :reshow="cReshow" type="mix" :opts="cChartDeploy" :chartData="cChartData" 
-    :tooltipCustom="tooltipCustom" 
+    <qiun-data-charts
+      :reshow="cReshow"
+      :canvasId="canvasId"
+      :canvas2d="canvas2d"
+      type="mix"
+      :opts="cChartDeploy"
+      :chartData="cChartData"
+      :tooltipCustom="tooltipCustom"
       :tooltipFormat="tooltipFormat"
-    @complete="onComplete"
-      @getIndex="getIndex" @click="onClick">
+      @complete="onComplete"
+      @getIndex="getIndex"
+      @click="onClick"
+    >
     </qiun-data-charts>
   </view>
 </template>
@@ -39,19 +47,19 @@ export default {
               name: "曲面",
               type: "area",
               style: "curve",
-              data: [70, 50, 85, 130, 64, 88]
+              data: [70, 50, 85, 130, 64, 88],
             },
             {
               name: "柱1",
               index: 1,
               type: "column",
-              data: [40, { "value": 30, "color": "#f04864" }, 55, 110, 24, 58]
+              data: [40, { value: 30, color: "#f04864" }, 55, 110, 24, 58],
             },
             {
               name: "柱2",
               index: 1,
               type: "column",
-              data: [50, 20, 75, 60, 34, 38]
+              data: [50, 20, 75, 60, 34, 38],
             },
             {
               name: "曲线",
@@ -59,24 +67,24 @@ export default {
               style: "curve",
               color: "#1890ff",
               disableLegend: true,
-              data: [70, 50, 85, 130, 64, 88]
+              data: [70, 50, 85, 130, 64, 88],
             },
             {
               name: "折线",
               type: "line",
               color: "#2fc25b",
-              data: [120, 140, 105, 170, 95, 160]
+              data: [120, 140, 105, 170, 95, 160],
             },
             {
               name: "点",
               index: 2,
               type: "point",
               color: "#f04864",
-              data: [100, 80, 125, 150, 112, 132]
-            }
-          ]
-        }
-      }
+              data: [100, 80, 125, 150, 112, 132],
+            },
+          ],
+        };
+      },
     },
     /**
      * 图表配置
@@ -85,11 +93,21 @@ export default {
       type: Object,
       default: function () {
         return {
-          color: ["#1890FF", "#91CB74", "#FAC858", "#EE6666", "#73C0DE", "#3CA272", "#FC8452", "#9A60B4", "#ea7ccc"],
+          color: [
+            "#1890FF",
+            "#91CB74",
+            "#FAC858",
+            "#EE6666",
+            "#73C0DE",
+            "#3CA272",
+            "#FC8452",
+            "#9A60B4",
+            "#ea7ccc",
+          ],
           padding: [15, 15, 0, 15],
           legend: {},
           xAxis: {
-            disableGrid: true
+            disableGrid: true,
           },
           yAxis: {
             disabled: false,
@@ -103,26 +121,26 @@ export default {
             data: [
               {
                 position: "left",
-                title: "折线"
+                title: "折线",
               },
               {
                 position: "right",
                 min: 0,
                 max: 200,
                 title: "柱状图",
-                textAlign: "left"
+                textAlign: "left",
               },
               {
                 position: "right",
                 min: 0,
                 max: 200,
                 title: "点",
-                textAlign: "left"
-              }
-            ]
-          }
+                textAlign: "left",
+              },
+            ],
+          },
         };
-      }
+      },
     },
     /**
      * GET URL
@@ -138,7 +156,7 @@ export default {
     },
     /**
      * 数据映射
-     * @desc 
+     * @desc
      *  直角坐标系：categoryColumn不为空(如 'category')，seriesColumns形如['num', 'money']，其中num/money为返回数组的列
      *  非直角坐标系：categoryColumn为空，seriesColumns形如：[{'name': 'year', 'value': 'num'}]，其中year/num为返回数组的列
      */
@@ -146,17 +164,24 @@ export default {
       type: Object,
       default: function () {
         return {
-          categoryColumn: '',
-          seriesColumns: []
-        }
-      }
+          categoryColumn: "",
+          seriesColumns: [],
+        };
+      },
     },
     /**
      * 是否重绘
      */
     reshow: {
       type: Boolean,
-      default: false
+      default: false,
+    },
+    /**
+     * canvas模式
+     */
+    canvas2d: {
+      type: Boolean,
+      default: true,
     },
     /**
      * 提示框自定义
@@ -164,48 +189,50 @@ export default {
     tooltipCustom: {
       type: Object,
       default: function () {
-        return {  
-        }
-      }
+        return {};
+      },
     },
     /**
      * 调用格式化
      */
-     tooltipFormat: {
+    tooltipFormat: {
       type: String,
-      default: ""
-    }
+      default: "",
+    },
   },
   data() {
     return {
+      canvasId: `canvas-id-${new Date().getTime()}-${parseInt(
+        Math.random() * 1000000
+      )}`,
       cWidth: "100%",
       cHeight: "300px",
       cChartData: {},
       cChartDeploy: {},
       cReshow: false,
-      chartsBoxStyle: {}
-    }
+      chartsBoxStyle: {},
+    };
   },
   watch: {
-    width(val){
+    width(val) {
       this.cWidth = this.getCssUnit(val);
       this.chartsBoxStyle.width = this.cWidth;
     },
-    height(val){
+    height(val) {
       this.cHeight = this.getCssUnit(val);
       this.chartsBoxStyle.height = this.cHeight;
     },
     chartData: {
-      handler: function(val, oldVal) {
+      handler: function (val, oldVal) {
         this.cChartData = JSON.parse(JSON.stringify(val));
       },
-      deep: true
+      deep: true,
     },
     chartDeploy: {
-      handler: function(val, oldVal) {
+      handler: function (val, oldVal) {
         this.cChartDeploy = JSON.parse(JSON.stringify(val));
       },
-      deep: true
+      deep: true,
     },
     url(value) {
       this.getData(value);
@@ -219,7 +246,7 @@ export default {
     reshow(val) {
       console.log(`watch HmMixCharts reshow: `, val);
       this.cReshow = val;
-    }
+    },
   },
   mounted() {
     this.cWidth = this.getCssUnit(this.width);
@@ -229,8 +256,8 @@ export default {
     this.cReshow = this.reshow;
     this.chartsBoxStyle = {
       width: this.cWidth,
-      height: this.cHeight
-    }
+      height: this.cHeight,
+    };
 
     // 调整接口返回数据的赋值
     this.getData();
@@ -242,7 +269,7 @@ export default {
       if (!url) return;
       this.cReshow = false;
       getAction(url, params).then((resp) => {
-        this.cChartData = this.getDataSource(resp)
+        this.cChartData = this.getDataSource(resp);
         this.$refs.chart.setOption(this.cOption, {
           notMerge: true,
           lazyUpdate: true,
@@ -270,27 +297,30 @@ export default {
         return {
           categories: _.map(respDataList, this.getDataMap.categoryColumn),
           series: _.map(this.chartData.series, (serie, index) => {
-            let newSerie =  JSON.parse(JSON.stringify(serie))
-            newSerie.data =  _.map(respDataList, this.getDataMap.seriesColumns[index])
+            let newSerie = JSON.parse(JSON.stringify(serie));
+            newSerie.data = _.map(
+              respDataList,
+              this.getDataMap.seriesColumns[index]
+            );
             return newSerie;
-          })
-        }
+          }),
+        };
       }
 
       // 返回非直角坐标系的数据
       return {
         series: _.map(this.chartData.series, (serie, index) => {
-          let newSerie =  JSON.parse(JSON.stringify(serie))
-          newSerie.data =  _.map(respDataList, item => {
+          let newSerie = JSON.parse(JSON.stringify(serie));
+          newSerie.data = _.map(respDataList, (item) => {
             let map = this.getDataMap.seriesColumns[index];
             return {
               name: item[map.name],
-              value: item[map.value]
-            }
+              value: item[map.value],
+            };
           });
           return newSerie;
-        })
-      }
+        }),
+      };
     },
     getCssUnit(value) {
       if (isNaN(Number(value))) {
@@ -310,13 +340,12 @@ export default {
       this.$emit("getIndex", e);
       console.log(e);
     },
-
   },
-}
+};
 </script>
 <style lang="less" scoped>
-  .charts-box {
-    width: v-bind(cWidth);
-    height: v-bind(cHeight);
-  }
+.charts-box {
+  width: v-bind(cWidth);
+  height: v-bind(cHeight);
+}
 </style>

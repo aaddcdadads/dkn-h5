@@ -2,6 +2,8 @@
   <view :style="[chartsBoxStyle]" class="charts-box">
     <qiun-data-charts
       :reshow="cReshow"
+      :canvasId="canvasId"
+      :canvas2d="canvas2d"
       type="ring"
       :chartData="cChartData"   
       :opts="cChartDeploy"
@@ -130,6 +132,13 @@ export default {
       default: false
     },
     /**
+     * canvas模式
+     */
+     canvas2d: {
+      type: Boolean,
+      default: true
+    },
+    /**
      * 提示框自定义
      */
     tooltipCustom: {
@@ -184,6 +193,7 @@ export default {
   },
   data() {
     return {
+      canvasId: `canvas-id-${new Date().getTime()}-${parseInt(Math.random() * 1000000)}`,
       cWidth: "100%",
       cHeight: "300px",
       cChartData:{},

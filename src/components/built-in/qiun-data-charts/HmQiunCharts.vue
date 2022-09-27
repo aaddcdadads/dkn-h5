@@ -1,7 +1,18 @@
 <template>
   <view :style="[chartsBoxStyle]" class="charts-box">
-    <qiun-data-charts :reshow="cReshow" :type="type" :chartData="cChartData" :opts="cChartDeploy" @complete="onComplete"
-      @getIndex="getIndex" @click="onClick" :tooltipCustom="tooltipCustom" :tooltipFormat="tooltipFormat" />
+    <qiun-data-charts
+      :reshow="cReshow"
+      :canvasId="canvasId"
+      :canvas2d="canvas2d"
+      :type="type"
+      :chartData="cChartData"
+      :opts="cChartDeploy"
+      @complete="onComplete"
+      @getIndex="getIndex"
+      @click="onClick"
+      :tooltipCustom="tooltipCustom"
+      :tooltipFormat="tooltipFormat"
+    />
   </view>
 </template>
 
@@ -195,7 +206,7 @@ export default {
     },
     /**
      * 数据映射
-     * @desc 
+     * @desc
      *  直角坐标系：categoryColumn不为空(如 'category')，seriesColumns形如['num', 'money']，其中num/money为返回数组的列
      *  非直角坐标系：categoryColumn为空，seriesColumns形如：[{'name': 'year', 'value': 'num'}]，其中year/num为返回数组的列
      */
@@ -203,17 +214,24 @@ export default {
       type: Object,
       default: function () {
         return {
-          categoryColumn: '',
-          seriesColumns: []
-        }
-      }
+          categoryColumn: "",
+          seriesColumns: [],
+        };
+      },
     },
     /**
      * 是否重绘
      */
     reshow: {
       type: Boolean,
-      default: false
+      default: false,
+    },
+    /**
+     * canvas模式
+     */
+    canvas2d: {
+      type: Boolean,
+      default: true,
     },
     /**
      * 提示框自定义
@@ -221,17 +239,16 @@ export default {
     tooltipCustom: {
       type: Object,
       default: function () {
-        return {
-        }
-      }
+        return {};
+      },
     },
     /**
      * 调用格式化
      */
-     tooltipFormat: {
+    tooltipFormat: {
       type: String,
-      default: ""
-    }
+      default: "",
+    },
   },
   watch: {
     width(val) {
@@ -246,13 +263,13 @@ export default {
       handler: function (val, oldVal) {
         this.cChartData = JSON.parse(JSON.stringify(val));
       },
-      deep: true
+      deep: true,
     },
     chartDeploy: {
       handler: function (val, oldVal) {
         this.cChartDeploy = JSON.parse(JSON.stringify(val));
       },
-      deep: true
+      deep: true,
     },
     url(value) {
       this.getData(value);
@@ -266,28 +283,33 @@ export default {
     reshow(val) {
       console.log(`watch HmQiunCharts reshow: `, val);
       this.cReshow = val;
-    }
+    },
   },
   data() {
     return {
+      canvasId: `canvas-id-${new Date().getTime()}-${parseInt(
+        Math.random() * 1000000
+      )}`,
       cWidth: "100%",
       cHeight: "300px",
       cChartData: {},
       cChartDeploy: {},
       cReshow: false,
-      chartsBoxStyle: {}
+      chartsBoxStyle: {},
     };
   },
   mounted() {
     this.cWidth = this.getCssUnit(this.width);
     this.cHeight = this.getCssUnit(this.height);
     this.cChartData = JSON.parse(JSON.stringify(this.chartData));
-    this.cChartDeploy = this.cleanOptions(JSON.parse(JSON.stringify(this.chartDeploy)));
+    this.cChartDeploy = this.cleanOptions(
+      JSON.parse(JSON.stringify(this.chartDeploy))
+    );
     this.cReshow = this.reshow;
     this.chartsBoxStyle = {
       width: this.cWidth,
-      height: this.cHeight
-    }
+      height: this.cHeight,
+    };
     // 调整接口返回数据的赋值
     this.getData();
   },
@@ -298,7 +320,7 @@ export default {
       if (!url) return;
       this.cReshow = false;
       getAction(url, params).then((resp) => {
-        this.cChartData = this.getDataSource(resp)
+        this.cChartData = this.getDataSource(resp);
         this.$refs.chart.setOption(this.cOption, {
           notMerge: true,
           lazyUpdate: true,
@@ -326,27 +348,30 @@ export default {
         return {
           categories: _.map(respDataList, this.getDataMap.categoryColumn),
           series: _.map(this.chartData.series, (serie, index) => {
-            let newSerie = JSON.parse(JSON.stringify(serie))
-            newSerie.data = _.map(respDataList, this.getDataMap.seriesColumns[index])
+            let newSerie = JSON.parse(JSON.stringify(serie));
+            newSerie.data = _.map(
+              respDataList,
+              this.getDataMap.seriesColumns[index]
+            );
             return newSerie;
-          })
-        }
+          }),
+        };
       }
 
       // 返回非直角坐标系的数据
       return {
         series: _.map(this.chartData.series, (serie, index) => {
-          let newSerie = JSON.parse(JSON.stringify(serie))
-          newSerie.data = _.map(respDataList, item => {
+          let newSerie = JSON.parse(JSON.stringify(serie));
+          newSerie.data = _.map(respDataList, (item) => {
             let map = this.getDataMap.seriesColumns[index];
             return {
               name: item[map.name],
-              value: item[map.value]
-            }
+              value: item[map.value],
+            };
           });
           return newSerie;
-        })
-      }
+        }),
+      };
     },
     cleanOptions(options) {
       if (!options.color) {
@@ -355,7 +380,7 @@ export default {
 
       options.color.forEach((color, index) => {
         options.color[index] = color.trim();
-      })
+      });
     },
     getCssUnit(value) {
       if (isNaN(Number(value))) {
