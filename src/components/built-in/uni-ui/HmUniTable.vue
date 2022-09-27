@@ -30,6 +30,7 @@
 
 <script>
 import JSONfn from "/@/utils/jsonfn";
+import cloneDeep from 'lodash/cloneDeep'
 import {
   getAction,
   getCiticAction,
@@ -208,14 +209,6 @@ export default {
       },
     },
     /**
-     * 自动合并单元
-     * @description 数据相同的内容自动合并. 形如 ["r1c1:r10c1", "r2c2:r10c2", "r1:r2", "c4"]，这里的r1c1表示的是第1行（row 1），第1列（column 1）。第1列不包含表格，指的是数据行。
-     */
-    combined: {
-      type: Array,
-      default: [],
-    },
-    /**
      * 清空过滤排序
      */
     clearFiltersAndSortersFlag: {
@@ -258,7 +251,7 @@ export default {
     columns: {
       handler: function (value, oldValue) {
         console.log("watch columns");
-        this.cColumns = JSONfn.parse(JSONfn.stringify(this.columns));
+        this.cColumns = cloneDeep(this.columns);
         this.processShowColumnNo(true, false);
       },
       deep: true,
@@ -266,15 +259,15 @@ export default {
     data: {
       handler: function (value, oldValue) {
         console.log("watch data");
-        this.cData = JSONfn.parse(JSONfn.stringify(value));
+        this.cData = cloneDeep(value);
         this.processShowColumnNo(false, true);
       },
       deep: true,
     },
   },
   mounted() {
-    this.cData = JSONfn.parse(JSONfn.stringify(this.data));
-    this.cColumns = JSONfn.parse(JSONfn.stringify(this.columns));
+    this.cData = cloneDeep(this.data);
+    this.cColumns = cloneDeep(this.columns);
     this.processShowColumnNo(true, true);
     this.cPaginationHidden = this.paginationHidden;
     if (Object.keys(this.pagination).length === 0) {
