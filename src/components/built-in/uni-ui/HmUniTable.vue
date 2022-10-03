@@ -249,7 +249,7 @@ export default {
     columns: {
       handler: function (value, oldValue) {
         console.log("watch columns");
-        this.cColumns = cloneDeep(this.columns);
+        this.cColumns = cloneDeep(value);
         this.processShowColumnNo(true, false);
       },
       deep: true,
