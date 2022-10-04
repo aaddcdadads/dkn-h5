@@ -11,7 +11,10 @@
           <uni-th v-if="actions.length > 0" :width="140">操作</uni-th>
         </uni-tr>
         <uni-tr v-for="(item, index) in cData" :key="index">
-          <uni-td align="center" v-for="column in columns">{{ item[column.dataIndex] }}</uni-td>
+          <uni-td align="center" v-for="column in columns">
+            {{ column.customRender ? "" : item[column.dataIndex] }}
+            <render-dom v-if="column.customRender" :vNode="column.customRender(item[column.dataIndex], item, index).children"/>
+          </uni-td>
           <uni-td v-if="actions.length > 0">
             <view class="uni-group action">
               <button v-for="(action, index) in actions" :key="index" class="uni-button" :size="action.size || 'mini'"
@@ -29,6 +32,7 @@
 </template>
 
 <script>
+import { h, defineComponent } from "vue";
 import cloneDeep from 'lodash/cloneDeep'
 import {
   getAction,
@@ -39,7 +43,20 @@ import {
 
 export default {
   name: "HmUniTable",
-  components: {},
+  components: {
+    RenderDom: {
+      props: {
+        vNode: [Array, String, Object, Number]
+      },
+      render (h) {
+        if (typeof this.vNode === 'object') {
+          return this.vNode
+        } else {
+          return h('view', this.vNode)
+        }
+      }
+    }
+  },
   name: "HmButton",
   props: {
     /**
@@ -59,6 +76,13 @@ export default {
             dataIndex: "age",
             key: "age",
             width: 80,
+            customRender: function(item, row, index) {
+              console.log(`item, row, index: `, item, row, index);
+              console.log(h('a', {}, item + '岁'))
+              return {
+                children: h('a', {}, item + '岁')
+              }
+            }
           },
           {
             title: "性别",

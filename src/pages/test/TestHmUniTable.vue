@@ -16,10 +16,7 @@ export default {
         {
           title: "姓名",
           dataIndex: "realname",
-          key: "realname",
-          customRender: function(value, index) {
-            console.log(`customRender: `, value, index)
-          }
+          key: "realname"
         },
         {
           title: "账号",
