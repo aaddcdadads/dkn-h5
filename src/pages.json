@@ -870,6 +870,13 @@
       }
     },
     {
+      "path": "pages/test/TestHmUniEleTable",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "pages/test/TestHmUviewFormily",
       "style": {
         "navigationBarTitleText": "",
