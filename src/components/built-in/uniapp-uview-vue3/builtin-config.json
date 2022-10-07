@@ -26,6 +26,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "HmCoverView",
+        "title": "覆盖框",
+        "importPath": "built-in/uniapp/HmCoverView",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewBgCard.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmUviewActionSheet",
         "title": "动作面板",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewActionSheet",

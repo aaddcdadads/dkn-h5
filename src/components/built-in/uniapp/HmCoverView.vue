@@ -1,68 +1,73 @@
 <template>
-  <view>
-    <label>
-      <cover-view class="alVideo" :scroll-top="scrollTop">
-      </cover-view>
-    </label>
-  </view>
+  <cover-view
+    class="cover-card"
+    v-if="!hidden"
+    :scroll-top="scrollTop"
+    :style="cStyle"
+    @click="onClick"
+  >
+    <slot name="cover-view"></slot>
+  </cover-view>
 </template>
 <script>
 export default {
-  name: 'HmCoverView',
+  name: "HmCoverView",
   props: {
-    /**
-     * 页面宽度
-     */
-    width: {
-      type: Number,
-      default: 500,
-    },
-    /**
-     * 页面高度
-     */
-    height: {
-      type: Number,
-      default: 500,
-    },
     /**
      * 顶部滚动偏移量
      */
     scrollTop: {
       type: Number,
-      default: 100,
+      default: 0,
+    },
+    /**
+     * 盒子样式
+     */
+    style: {
+      type: Object,
+      default: function () {
+        return {
+          width: "100%",
+          height: "100%",
+          margin:"0rpx",
+          padding:"0rpx",
+          textAlign:"left",
+          border:"none",
+          borderRadius:"0rpx",
+          backgroundColor:"#fff"
+        };
+      },
+    },
+    /**
+     * 是否隐藏
+     */
+    hidden: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
     return {
-      cWidth: '',
-      cHeight: '',
-    }
-  },
-  methods: {
-    getCssUnit(value) {
-      if (isNaN(Number(value))) {
-        return value
-      }
-      return `${value}px`
-    },
+      cStyle: {},
+    };
   },
   mounted() {
-    this.cWidth = this.width
-    this.cHeight = this.height
+    this.cStyle = JSON.parse(JSON.stringify(this.style));
   },
   watch: {
-    width(value) {
-      this.cWidth = getCssUnit(value)
-    },
-    height(value) {
-      this.cHeight = getCssUnit(value)
+    style(value) {
+      this.cStyle = JSON.parse(JSON.stringify(value));
     },
   },
-}
+  methods: {
+    onClick(e) {
+      this.$emit("click", e);
+    },
+  },
+};
 </script>
 <style lang="less">
-.alVideo {
-  width: v-bind(cWidth);
-  height: v-bind(cHeight);
+.cover-card {
+  overflow-y: scroll;
 }
 </style>
