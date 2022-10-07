@@ -6,7 +6,7 @@
     :style="cStyle"
     @click="onClick"
   >
-    <slot name="cover-view"></slot>
+    <slot></slot>
   </cover-view>
 </template>
 <script>
