@@ -419,6 +419,14 @@
         "imgUrl": "built-in/uniapp/img/HmMap.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmCalendar",
+        "title": "日历",
+        "importPath": "built-in/uniapp/HmCalendar",
+        "imgUrl": "built-in/uniapp/img/HmCalendar.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },
