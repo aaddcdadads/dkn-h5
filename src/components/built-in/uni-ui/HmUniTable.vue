@@ -48,7 +48,7 @@ export default {
       props: {
         vNode: [Array, String, Object, Number]
       },
-      render (h) {
+      render () {
         if (typeof this.vNode === 'object') {
           return this.vNode
         } else {
