@@ -41,21 +41,24 @@ import {
   putAction,
 } from "/@/request/http";
 
+const RenderDom = defineComponent({
+  name: 'RenderDom',
+  props: {
+    vNode: [Array, String, Object, Number]
+  },
+  render() {
+    if (typeof this.vNode === 'object') {
+      return this.vNode
+    } else {
+      return h('view', this.vNode)
+    }
+  }
+})
+
 export default {
   name: "HmUniTable",
   components: {
-    RenderDom: {
-      props: {
-        vNode: [Array, String, Object, Number]
-      },
-      render () {
-        if (typeof this.vNode === 'object') {
-          return this.vNode
-        } else {
-          return h('view', this.vNode)
-        }
-      }
-    }
+    RenderDom
   },
   name: "HmButton",
   props: {
