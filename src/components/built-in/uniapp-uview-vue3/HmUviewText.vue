@@ -1,6 +1,7 @@
 <template>
   <view class="hm-bg-text">
-    <text class="font1" @click="onClick">{{ text }}</text>
+    <text class="font1" @click="onClick" v-if="showHtml" v-html="text"> </text>
+    <text class="font1" @click="onClick" v-if="!showHtml">{{ text }}</text>
   </view>
 </template>
 
@@ -17,7 +18,7 @@ export default {
      */
     text: {
       type: String,
-      default: "文字",
+      default: "文字"
     },
     /**
      * 文字大小
@@ -50,6 +51,13 @@ export default {
     padding: {
       type: String,
       default: "5",
+    },
+    /**
+     * html模式
+     */
+     showHtml: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
