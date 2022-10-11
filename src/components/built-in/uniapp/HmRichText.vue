@@ -15,19 +15,10 @@ export default {
   name: "HmRichText",
   props: {
     /**
-     * 类型
-     * @type Enum
-     * @options ["Array","String"]
-     */
-    type: {
-      type: String,
-      default: "Array",
-    },
-    /**
      * 节点列表
      */
     nodes: {
-      type: Array,
+      type: [Array, String],
       default: function () {
         return [
           {
@@ -59,15 +50,6 @@ export default {
     selectable: {
       type: Boolean,
       default: true,
-    },
-    /**
-     * 子节点列表
-     */
-    children: {
-      type: Array,
-      default: function () {
-        return [];
-      },
     },
   },
   mounted() {},
