@@ -1,15 +1,19 @@
 <template>
   <rich-text
-    :nodes="nodes"
+    :nodes="cNodes"
     :space="space"
     :selectable="selectable"
     @itemclick="itemclick"
   ></rich-text>
 </template>
 <script>
+import htmlParser from "@/static/weixin/html-parser.js";
+
 export default {
   data() {
-    return {};
+    return {
+      cNodes:''
+    };
   },
   components: {},
   name: "HmRichText",
@@ -52,13 +56,19 @@ export default {
       default: true,
     },
   },
-  mounted() {},
+  mounted() {
+    this.cNodes =this.nodes instanceof  Array ? this.nodes : htmlParser(this.nodes);
+  },
   methods: {
     itemclick() {
       this.$emit("itemclick");
-    },
+    }
   },
-  watch: {},
+  watch: {
+    nodes(value){
+      this.cNodes = value instanceof  Array ? value : htmlParser(this.nodes);
+    }
+  },
 };
 </script>
 <style lang="less">
