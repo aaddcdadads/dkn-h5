@@ -7,7 +7,7 @@
   ></rich-text>
 </template>
 <script>
-import htmlParser from "@/static/weixin/html-parser.js";
+import htmlParser from "@/components/built-in/third-party/HmRichText/html-parser.js";
 
 export default {
   data() {
