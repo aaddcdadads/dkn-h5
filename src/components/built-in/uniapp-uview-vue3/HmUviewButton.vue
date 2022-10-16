@@ -1,4 +1,5 @@
 <template>
+  <!-- #ifndef MP-WEIXIN -->
   <u-button
     :size="size"
     :type="type"
@@ -9,6 +10,20 @@
     :custom-style="customStyle"
     >{{ text }}</u-button
   >
+	<!-- #endif -->
+  <!-- #ifdef MP-WEIXIN -->
+  <u-button
+    :size="size"
+    :type="type"
+    :plain="plain"
+    :disabled="disabled"
+    :shape="shape"
+    :hair-line="hairLine"
+    :custom-style="customStyle"
+    @click="onClick"
+    >{{ text }}</u-button
+  >
+	<!-- #endif -->
 </template>
 
 <script>

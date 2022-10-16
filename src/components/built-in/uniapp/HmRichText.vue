@@ -1,33 +1,28 @@
 <template>
   <rich-text
-    :nodes="nodes"
+    :nodes="cNodes"
     :space="space"
     :selectable="selectable"
     @itemclick="itemclick"
   ></rich-text>
 </template>
 <script>
+import htmlParser from "@/components/built-in/third-party/HmRichText/html-parser.js";
+
 export default {
   data() {
-    return {};
+    return {
+      cNodes:''
+    };
   },
   components: {},
   name: "HmRichText",
   props: {
     /**
-     * 类型
-     * @type Enum
-     * @options ["Array","String"]
-     */
-    type: {
-      type: String,
-      default: "Array",
-    },
-    /**
      * 节点列表
      */
     nodes: {
-      type: Array,
+      type: [Array, String],
       default: function () {
         return [
           {
@@ -60,23 +55,20 @@ export default {
       type: Boolean,
       default: true,
     },
-    /**
-     * 子节点列表
-     */
-    children: {
-      type: Array,
-      default: function () {
-        return [];
-      },
-    },
   },
-  mounted() {},
+  mounted() {
+    this.cNodes =this.nodes instanceof  Array ? this.nodes : htmlParser(this.nodes);
+  },
   methods: {
     itemclick() {
       this.$emit("itemclick");
-    },
+    }
   },
-  watch: {},
+  watch: {
+    nodes(value){
+      this.cNodes = value instanceof  Array ? value : htmlParser(this.nodes);
+    }
+  },
 };
 </script>
 <style lang="less">
