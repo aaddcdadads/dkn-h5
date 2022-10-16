@@ -12,7 +12,7 @@
         </uni-tr>
         <uni-tr v-for="(item, index) in cData" :key="index">
           <uni-td align="center" v-for="column in columns">
-            {{ column.customRender ? "" : item[column.dataIndex] }}
+            {{ column.customRender ? "" : (column.formatter ? column.formatter(item[column.dataIndex]) : item[column.dataIndex]) }}
             <render-dom v-if="column.customRender" :vNode="column.customRender(item[column.dataIndex], item, index).children"/>
           </uni-td>
           <uni-td v-if="actions.length > 0">
@@ -92,6 +92,9 @@ export default {
             dataIndex: "sexual",
             key: "sexual",
             ellipsis: true,
+            formatter: function(value) {
+              return value;
+            }
           }
         ];
       },
