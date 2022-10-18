@@ -4,12 +4,31 @@ import UFormItem from '@/uni_modules/vk-uview-ui/components/u-form-item/u-form-i
 import UButton from '@/uni_modules/vk-uview-ui/components/u-button/u-button.vue'
 import UInput from '@/uni_modules/vk-uview-ui/components/u-input/u-input.vue'
 import USwitch from '@/uni_modules/vk-uview-ui/components/u-switch/u-switch.vue'
+import UCheckboxGroup from '@/uni_modules/vk-uview-ui/components/u-checkbox-group/u-checkbox-group.vue'
+import UCheckbox from '@/uni_modules/vk-uview-ui/components/u-checkbox/u-checkbox.vue'
 
 export const Form = UForm;
 
 export const FormItem = UFormItem;
 
 export const Button = UButton;
+
+export const CheckboxGroup = defineComponent({
+  name: 'CheckboxGroup',
+  render() {
+    const props = this.$attrs
+    return h(
+      UCheckboxGroup,
+      {
+        ...props,
+        modelValue: props.value
+      },
+      props.options.map(item => {
+        return h(UCheckbox, {})
+      })
+    )
+  },
+})
 
 export const Input = defineComponent({
   name: 'Input',

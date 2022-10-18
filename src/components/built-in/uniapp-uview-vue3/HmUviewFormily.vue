@@ -15,7 +15,7 @@ import {
   FormItem,
   Button,
   // Checkbox,
-  // CheckboxGroup,
+  CheckboxGroup,
   // RangePicker,
   // DatePicker,
   Input,
@@ -168,28 +168,28 @@ export default {
 
                 //   }
                 // },
-                // checkbox: {
-                //   type: 'array',
-                //   default: ['Apple', 'Pear'],
-                //   'x-decorator': 'FormItem',
-                //   'x-decorator-props': {
-                //     label: '多选框',
-                //     name: 'checkbox',
-                //     'label-col': { span: 4 },
-                //     'wrapper-col': { span: 14 },
-                //     'style': {
-                //       width: '50%',
-                //     }
-                //   },
-                //   'x-component': 'CheckboxGroup',
-                //   'x-component-props': {
-                //     'options': [
-                //       { label: 'Apple', value: 'Apple' },
-                //       { label: 'Pear', value: 'Pear' },
-                //       { label: 'Orange', value: 'Orange' },
-                //     ]
-                //   }
-                // },
+                checkbox: {
+                  type: 'array',
+                  default: ['Apple', 'Pear'],
+                  'x-decorator': 'FormItem',
+                  'x-decorator-props': {
+                    label: '多选框',
+                    name: 'checkbox',
+                    'label-col': { span: 4 },
+                    'wrapper-col': { span: 14 },
+                    'style': {
+                      width: '50%',
+                    }
+                  },
+                  'x-component': 'CheckboxGroup',
+                  'x-component-props': {
+                    'options': [
+                      { label: 'Apple', value: 'Apple' },
+                      { label: 'Pear', value: 'Pear' },
+                      { label: 'Orange', value: 'Orange' },
+                    ]
+                  }
+                },
                 // textarea: {
                 //   type: 'string',
                 //   maxLength: 1,
@@ -567,7 +567,7 @@ export default {
       for (let key in obj) {
         let item = obj[key]
         if (newValues[key] != undefined) {
-          getFilterValue(item['x-component'], newValues, key)
+          getFormValue(item['x-component'], newValues, key);
         }
       }
       return newValues;
