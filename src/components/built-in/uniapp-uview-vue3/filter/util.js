@@ -1,7 +1,7 @@
 import moment from 'moment'
 
 export function getFilterValue(item, obj) {
-  let {type, value, code} = item.type;
+  let {type, value, code} = item;
   // 处理input组件
   if (isInput(type) && type !='InputNumber') {
     obj[code] = `*${value}*`;
