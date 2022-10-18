@@ -8,7 +8,7 @@
         placeholder="请输入内容"
         border="surround"
         shape="circle"
-        v-model="value"
+        v-model="keyValue"
         @change="change"
       ></u-input>
     </u-col>
@@ -113,6 +113,10 @@
 </template>
 
 <script>
+import {
+  getFilterValue,
+} from "./filter/util"
+
 export default {
   name: "HmUviewFilter",
   props: {
@@ -181,6 +185,10 @@ export default {
           show: true
         }]
       }
+    },
+    keyColumn: {
+      type: String,
+      default: "key"
     }
   },
   watch: {
@@ -207,6 +215,7 @@ export default {
       currentFilter: null,
       currentCloneFilter: null,
       order: 'asc',
+      keyValue: ''
     };
   },
   methods: {
@@ -260,7 +269,6 @@ export default {
     },
     search(){
       this.$emit("search", {
-        key:this.value,
         filter: this.getFilterValues(),
         sort: this.getSortValues()
       })
@@ -268,8 +276,13 @@ export default {
     getFilterValues(){
       let obj = {}
       this.cFilterOption.forEach(item => {
-        obj[item.code] = item.value
+        if (item.value != undefined) {
+          getFilterValue(item, obj)
+        }
       })
+      if(this.keyValue){
+        obj[this.keyColumn] = `*${this.keyValue}*`
+      }
       return obj
     },
     getSortValues(){
