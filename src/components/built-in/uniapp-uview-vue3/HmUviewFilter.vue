@@ -111,6 +111,10 @@
 </template>
 
 <script>
+import {
+  getFilterValue,
+} from "./filter/util"
+
 export default {
   name: "HmUviewFilter",
   props: {
@@ -265,7 +269,9 @@ export default {
     getFilterValues(){
       let obj = {}
       this.cFilterOption.forEach(item => {
-        obj[item.code] = item.value
+        if (newValues[key] != undefined) {
+          getFilterValue(item, obj)
+        }
       })
       return obj
     },
