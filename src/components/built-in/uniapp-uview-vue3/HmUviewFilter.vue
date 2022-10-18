@@ -12,8 +12,10 @@
         @change="change"
       ></u-input>
     </u-col>
-    <u-col span="2" class="search__text-div" @click="search">
-      搜索
+    <u-col span="2" class="search__text-div" >
+      <view @click="search">
+        搜索
+      </view>
     </u-col>
   </u-row>
   <u-row class="sort">
@@ -258,6 +260,7 @@ export default {
     },
     search(){
       this.$emit("search", {
+        key:this.value,
         filter: this.getFilterValues(),
         sort: this.getSortValues()
       })
