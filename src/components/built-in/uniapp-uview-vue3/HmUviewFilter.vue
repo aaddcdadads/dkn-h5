@@ -281,7 +281,7 @@ export default {
         }
       })
       if(this.keyValue){
-        obj[this.keyColumn] = this.keyValue
+        obj[this.keyColumn] = `*${this.keyValue}*`
       }
       return obj
     },
