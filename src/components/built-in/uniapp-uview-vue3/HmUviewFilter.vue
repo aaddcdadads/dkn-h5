@@ -276,7 +276,7 @@ export default {
     getFilterValues(){
       let obj = {}
       this.cFilterOption.forEach(item => {
-        if (item[value] != undefined) {
+        if (item.value != undefined) {
           getFilterValue(item, obj)
         }
       })
