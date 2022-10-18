@@ -269,7 +269,6 @@ export default {
     },
     search(){
       this.$emit("search", {
-        key:this.value,
         filter: this.getFilterValues(),
         sort: this.getSortValues()
       })
