@@ -8,7 +8,7 @@
         placeholder="请输入内容"
         border="surround"
         shape="circle"
-        v-model="value"
+        v-model="keyValue"
         @change="change"
       ></u-input>
     </u-col>
@@ -185,6 +185,10 @@ export default {
           show: true
         }]
       }
+    },
+    keyColumn: {
+      type: String,
+      default: "key"
     }
   },
   watch: {
@@ -211,6 +215,7 @@ export default {
       currentFilter: null,
       currentCloneFilter: null,
       order: 'asc',
+      keyValue: ''
     };
   },
   methods: {
@@ -276,6 +281,9 @@ export default {
           getFilterValue(item, obj)
         }
       })
+      if(this.keyValue){
+        obj[this.keyColumn] = this.keyValue
+      }
       return obj
     },
     getSortValues(){
