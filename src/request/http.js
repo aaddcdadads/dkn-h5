@@ -216,7 +216,7 @@ export function putAction(url, params) {
 export function deleteAction(url, params) {
     return new Promise((resolve, reject) => {
         uni.request({
-            url: url,
+            url: `${url}${params.id ? '?id='+ params.id : ''}`,
             data: params,
             method: "DELETE",
             success: (res) => {
