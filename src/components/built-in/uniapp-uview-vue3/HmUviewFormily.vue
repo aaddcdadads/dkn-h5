@@ -530,17 +530,16 @@ export default {
      */
     getFeiqiFilterValues() {
       let newValues = cloneDeep(this.getValues());
-      this.schema.properties.form.properties.forEach((item, key) => {
+      let obj = this.schema.properties.form.properties;
+      for (let key in obj) {
+        let item = obj[key]
         if (newValues[key]) {
           getFeiqiFilterValue(item['x-component'], newValues, key)
         }
-      })
-      newValues = _(newValues)
-        .map((value, key) => {
-          return { name: key, value }
-        })
-        .filter(item => item.value)
-        .value()
+      }
+      newValues = newValues.map((value, key) => {
+        return { name: key, value }
+      }).filter(item => item.value)
 
       return JSON.stringify(newValues);
     },
@@ -550,11 +549,13 @@ export default {
      */
     getFilterValues() {
       let newValues = cloneDeep(this.getValues());
-      this.schema.properties.form.properties.forEach((item, key) => {
+      let obj = this.schema.properties.form.properties;
+      for (let key in obj) {
+        let item = obj[key]
         if (newValues[key] != undefined) {
           getFilterValue(item['x-component'], newValues, key)
         }
-      })
+      }
       return newValues;
     },
     /**
@@ -562,11 +563,13 @@ export default {
      */
     getFormValues() {
       let newValues = cloneDeep(this.getValues());
-      this.schema.properties.form.properties.forEach((item, key) => {
+      let obj = this.schema.properties.form.properties;
+      for (let key in obj) {
+        let item = obj[key]
         if (newValues[key] != undefined) {
-          getFormValue(item['x-component'], newValues, key);
+          getFilterValue(item['x-component'], newValues, key)
         }
-      })
+      }
       return newValues;
     },
     /**
@@ -574,11 +577,13 @@ export default {
      */
     setFormValues(values) {
       let newValues = {};
-      this.schema.properties.form.properties.forEach((item, key) => {
+      let obj = this.schema.properties.form.properties;
+      for (let key in obj) {
+        let item = obj[key]
         if (values[key] != null || values[key] != undefined) {
           newValues[key] = setFormValue(item['x-component'], values, key);
         }
-      })
+      }
       this.setValues(newValues);
     },
     /**
@@ -611,7 +616,7 @@ export default {
         }).catch(e => {
           this.$message.error(h('span',
             { style: { 'whiteSpace': 'pre-wrap' } },
-            fields[e[0].address].decoratorProps.label + "：" + _(e[0].messages)
+            fields[e[0].address].decoratorProps.label + "：" + e[0].messages
           ))
           reject(e)
         })
