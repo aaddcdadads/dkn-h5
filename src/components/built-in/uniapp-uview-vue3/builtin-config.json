@@ -611,6 +611,14 @@
         "imgUrl": "built-in/uniapp/img/HmVideoList.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmSwipeList",
+        "title": "滑动列表",
+        "importPath": "built-in/uniapp-uview-vue3/HmSwipeList",
+        "imgUrl": "built-in/uniapp-uview-vue3/HmSwipeList.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   }

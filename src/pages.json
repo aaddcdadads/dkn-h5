@@ -14,6 +14,12 @@
       }
     },
     {
+      "path": "components/built-in/uniapp-uview-vue3/HmSwipeList",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
       "path": "components/built-in/uniapp/HmMap",
       "style": {
         "navigationBarTitleText": "",
@@ -189,7 +195,7 @@
       }
     },
     {
-      "path": "pages/test/TestHmUviewBadge",
+      "path": "pages/test/test",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
