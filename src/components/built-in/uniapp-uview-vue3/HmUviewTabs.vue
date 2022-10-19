@@ -210,7 +210,7 @@ export default {
     onChange(val) {
       this.cCurrent = val;
       console.log("u-tabs change", val);
-      this.$emit("change", val);
+      this.$emit("onChange", val);
     },
   },
 };
