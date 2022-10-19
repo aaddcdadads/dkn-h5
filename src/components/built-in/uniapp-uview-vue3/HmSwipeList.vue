@@ -3,8 +3,8 @@
       <scroll-view :style="{height: scrollHeight,width:'100%'}" :refresher-triggered="cRefresherTriggered"
         :refresher-enabled="cRefresherEnabled" :scroll-y="true" :scroll-x="false" :show-scrollbar="showScrollbar"
         @refresherrefresh="refresherrefresh" @scrolltolower="scrolltolower">
-        <uni-swipe-action-item :class="leftAction?'list-left':'list-right'" v-for="(item,index) in cList" :key="index"
-          :left-options="leftAction?options:null" :right-options="!leftAction?options:null" :auto-close="autoClose"
+        <uni-swipe-action-item :class="leftAction ? 'list-left' : 'list-right'" v-for="(item,index) in cList" :key="index"
+          :left-options="leftAction ? options:null" :right-options="!leftAction ? options:null" :auto-close="autoClose"
           @change="change($event,item,index)" @click="bindClick($event,item,index)">
           <view class="content-box" :style="{flexDirection: leftAction ? 'row-reverse' : 'row'}">
             <view class="image">
@@ -33,7 +33,7 @@
        */
       leftAction: {
         type: Boolean,
-        default: false
+        default: true
       },
       /**
        * 滑动配置
