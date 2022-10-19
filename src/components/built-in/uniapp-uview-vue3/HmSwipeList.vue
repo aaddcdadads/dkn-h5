@@ -108,6 +108,19 @@ export default {
       }
     },
     /**
+     * 数据映射
+     */
+     dataMap: {
+      type: Object,
+      default: function() {
+        return {
+          imgSrc:'imgSrc',
+          name: "name",
+          text: "text"
+        };
+      },
+    },
+    /**
      * 自动关闭
      */
     autoClose: {
@@ -155,7 +168,7 @@ export default {
   watch: {
     list: {
       handler: function (value, oldValue) {
-        this.cList = value;
+        this.cList = this.mapData(value);
       },
       deep: true,
     },
@@ -164,8 +177,9 @@ export default {
     }
   },
   mounted() {
-    this.cList = this.list;
+    this.cList = this.mapData(this.list);
     this.cLeftAction = this.leftAction;
+
   },
   data() {
     return {
@@ -204,7 +218,22 @@ export default {
     },
     clickLoadMore(e) {
       this.$emit("clickLoadMore", e);
-    }
+    },
+    //处理数据
+    mapData(data) {
+      let self = this;
+      if (!this.dataMap || Object.keys(this.dataMap).length == 0) {
+        return data;
+      }
+      let keys = Object.keys(this.dataMap);
+      data.forEach((item) => {
+        keys.forEach((key) => {
+          item[key] = item[self.dataMap[key]];
+        });
+      });
+      //console.log("data", data);
+      return data;
+    },
   }
 }
 </script>
