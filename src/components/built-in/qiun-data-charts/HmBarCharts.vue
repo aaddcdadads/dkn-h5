@@ -16,6 +16,7 @@
   </view>
 </template>
 <script>
+import cloneDeep from 'lodash/cloneDeep';
 export default {
   name: "HmBarCharts",
   props: {
@@ -273,11 +274,8 @@ export default {
       },
       deep: true
     },
-    chartDeploy: {
-      handler: function(val, oldVal) {
-        this.cChartDeploy = JSON.parse(JSON.stringify(val));
-      },
-      deep: true
+    chartDeploy(val) {
+        this.cChartDeploy = cloneDeep(val);
     },
     url(value) {
       this.getData(value);
@@ -297,7 +295,7 @@ export default {
     this.cWidth = this.getCssUnit(this.width);
     this.cHeight = this.getCssUnit(this.height);
     this.cChartData = JSON.parse(JSON.stringify(this.chartData));
-    this.cChartDeploy = JSON.parse(JSON.stringify(this.chartDeploy));
+    this.cChartDeploy = cloneDeep(this.chartDeploy);
     this.cReshow = this.reshow;
     this.chartsBoxStyle = {
       width: this.cWidth,

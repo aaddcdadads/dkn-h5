@@ -1,21 +1,12 @@
 <template>
   <view :style="[chartsBoxStyle]" class="charts-box">
-    <qiun-data-charts
-      :reshow="cReshow"
-      :canvasId="canvasId"
-      :canvas2d="canvas2d"
-      type="pie"
-      :chartData="cChartData"   
-      :opts="cChartDeploy"
-      :tooltipCustom="tooltipCustom" 
-      :tooltipFormat="tooltipFormat"
-      @complete="onComplete"
-      @getIndex="getIndex"
-      @click="onClick"
-    />
+    <qiun-data-charts :reshow="cReshow" :canvasId="canvasId" :canvas2d="canvas2d" type="pie" :chartData="cChartData"
+      :opts="cChartDeploy" :tooltipCustom="tooltipCustom" :tooltipFormat="tooltipFormat" @complete="onComplete"
+      @getIndex="getIndex" @click="onClick" />
   </view>
 </template>
 <script>
+import cloneDeep from 'lodash/cloneDeep';
 export default {
   name: "HmPieCharts",
   props: {
@@ -98,7 +89,7 @@ export default {
     /**
      * GET URL
      */
-     url: {
+    url: {
       type: String,
     },
     /**
@@ -132,7 +123,7 @@ export default {
     /**
      * canvas模式
      */
-     canvas2d: {
+    canvas2d: {
       type: Boolean,
       default: true
     },
@@ -142,38 +133,35 @@ export default {
     tooltipCustom: {
       type: Object,
       default: function () {
-        return { 
+        return {
         }
       }
     },
     /**
      * 调用格式化
      */
-     tooltipFormat: {
+    tooltipFormat: {
       type: String,
       default: ""
     }
   },
-  watch:{
-    width(val){
+  watch: {
+    width(val) {
       this.cWidth = this.getCssUnit(val);
       this.chartsBoxStyle.width = this.cWidth;
     },
-    height(val){
+    height(val) {
       this.cHeight = this.getCssUnit(val);
       this.chartsBoxStyle.height = this.cHeight;
     },
     chartData: {
-      handler: function(val, oldVal) {
+      handler: function (val, oldVal) {
         this.cChartData = JSON.parse(JSON.stringify(val));
       },
       deep: true
     },
-    chartDeploy: {
-      handler: function(val, oldVal) {
-        this.cChartDeploy = JSON.parse(JSON.stringify(val));
-      },
-      deep: true
+    chartDeploy(val) {
+      this.cChartDeploy = cloneDeep(val);
     },
     url(value) {
       this.getData(value);
@@ -194,8 +182,8 @@ export default {
       canvasId: `canvas-id-${new Date().getTime()}-${parseInt(Math.random() * 1000000)}`,
       cWidth: "100%",
       cHeight: "300px",
-      cChartData:{},
-      cChartDeploy:{},
+      cChartData: {},
+      cChartDeploy: {},
       cReshow: false,
       chartsBoxStyle: {}
     };
@@ -204,7 +192,7 @@ export default {
     this.cWidth = this.getCssUnit(this.width);
     this.cHeight = this.getCssUnit(this.height);
     this.cChartData = JSON.parse(JSON.stringify(this.chartData));
-    this.cChartDeploy = JSON.parse(JSON.stringify(this.chartDeploy));
+    this.cChartDeploy = cloneDeep(this.chartDeploy);
     this.cReshow = this.reshow;
     this.chartsBoxStyle = {
       width: this.cWidth,
@@ -249,8 +237,8 @@ export default {
         return {
           categories: _.map(respDataList, this.getDataMap.categoryColumn),
           series: _.map(this.chartData.series, (serie, index) => {
-            let newSerie =  JSON.parse(JSON.stringify(serie))
-            newSerie.data =  _.map(respDataList, this.getDataMap.seriesColumns[index])
+            let newSerie = JSON.parse(JSON.stringify(serie))
+            newSerie.data = _.map(respDataList, this.getDataMap.seriesColumns[index])
             return newSerie;
           })
         }
@@ -259,8 +247,8 @@ export default {
       // 返回非直角坐标系的数据
       return {
         series: _.map(this.chartData.series, (serie, index) => {
-          let newSerie =  JSON.parse(JSON.stringify(serie))
-          newSerie.data =  _.map(respDataList, item => {
+          let newSerie = JSON.parse(JSON.stringify(serie))
+          newSerie.data = _.map(respDataList, item => {
             let map = this.getDataMap.seriesColumns[index];
             return {
               name: item[map.name],
@@ -294,8 +282,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  .charts-box {
-    width: v-bind(cWidth);
-    height: v-bind(cHeight);
-  }
+.charts-box {
+  width: v-bind(cWidth);
+  height: v-bind(cHeight);
+}
 </style>
