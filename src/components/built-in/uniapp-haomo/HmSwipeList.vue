@@ -6,20 +6,28 @@
       <uni-swipe-action-item :class="cLeftAction ? 'list-left' : 'list-right'" v-for="(item,index) in cList"
         :key="index" :left-options="cLeftAction ? options:null" :right-options="!cLeftAction ? options:null"
         :auto-close="autoClose" @change="change($event,item,index)" @click="bindClick($event,item,index)">
-        <view class="content-box" :style="{flexDirection: cLeftAction ? 'row-reverse' : 'row'}">
-          <view class="image">
-            <image :style="{width:width,height:height}" :mode="mode" :src="item.imgSrc"></image>
+
+        <!-- 
+          @prop item - 数组条目数据
+        -->
+        <slot :item="item">
+
+          <view class="content-box" :style="{flexDirection: cLeftAction ? 'row-reverse' : 'row'}">
+            <view class="image">
+              <image :style="{width:width,height:height}" :mode="mode" :src="item.imgSrc"></image>
+            </view>
+            <view class="content">
+              <text class="content-title">{{item.title}}</text>
+              <text class="content-text">{{item.description}}</text>
+            </view>
+            <view class="icon-box">
+              <u-icon v-if="img.iconname" :name="img.iconname" :size="img.size" @click="imgClick(item,index)" />
+              <image v-else :src="img.imgsrc" mode="aspectFill" :style="{width:img.size+'px',height:img.size+'px'}"
+                @click="imgClick(item,index)" />
+            </view>
           </view>
-          <view class="content">
-            <text class="content-title">{{item.title}}</text>
-            <text class="content-text">{{item.description}}</text>
-          </view>
-          <view class="icon-box">
-            <u-icon v-if="img.iconname" :name="img.iconname" :size="img.size" @click="imgClick(item,index)" />
-            <image v-else :src="img.imgsrc" mode="aspectFill" :style="{width:img.size+'px',height:img.size+'px'}"
-              @click="imgClick(item,index)" />
-          </view>
-        </view>
+
+        </slot>
       </uni-swipe-action-item>
       <uni-load-more v-if="contentText.show" :status="status" :showText="contentText.show" :contentText="contentText"
         @clickLoadMore="clickLoadMore"></uni-load-more>
