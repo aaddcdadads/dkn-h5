@@ -12,7 +12,7 @@
           </view>
           <view class="content">
             <text class="content-title">{{item.title}}</text>
-            <text class="content-text">{{item.text}}</text>
+            <text class="content-text">{{item.description}}</text>
           </view>
           <view class="icon-box">
             <u-icon v-if="img.iconname" :name="img.iconname" :size="img.size" @click="imgClick(item,index)" />
@@ -88,8 +88,8 @@ export default {
       type: Array,
       default: function () {
         return [
-          { title: "123", text: "321", imgSrc: "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg" },
-          { title: "123", text: "321", imgSrc: "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg" }
+          { title: "123", description: "321", imgSrc: "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg" },
+          { title: "123", description: "321", imgSrc: "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg" }
         ]
       }
     },

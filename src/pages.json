@@ -14,13 +14,13 @@
       }
     },
     {
-      "path": "components/built-in/uniapp-uview-vue3/HmImageCardList",
+      "path": "components/built-in/uniapp-haomo/HmImageCardList",
       "style": {
         "navigationBarTitleText": "uni-app"
       }
     },
     {
-      "path": "components/built-in/uniapp-uview-vue3/HmSwipeList",
+      "path": "components/built-in/uniapp-haomo/HmSwipeList",
       "style": {
         "navigationBarTitleText": "uni-app"
       }
