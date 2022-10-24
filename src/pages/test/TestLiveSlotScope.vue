@@ -42,11 +42,12 @@
               @refresherrefresh="onPointTaskListRefresherrefresh"
               class="ele-pointTaskList"
             >
-              <view
-                class="ele-wrapper ele-wrapper-b70e8d1f-f89c-490f-b678-cf0068fa8fdc"
-              >
-                <hm-uview-icon> </hm-uview-icon>
-              </view>
+              <template #default="{ item }">
+                <view class="ele-wrapper ele-wrapper-itemTest">
+                  <hm-uview-button ref="itemTest" :text="item.title">
+                  </hm-uview-button>
+                </view>
+              </template>
             </hm-swipe-list>
           </view>
           <view class="ele-wrapper ele-wrapper-editPointTaskPopup">
@@ -126,18 +127,12 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewFilter from "/@/components/built-in/uniapp-uview-vue3/HmUviewFilter.vue";
 import HmSwipeList from "/@/components/built-in/uniapp-haomo/HmSwipeList.vue";
-import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
+import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import HmUviewFormily from "/@/components/built-in/uniapp-uview-vue3/HmUviewFormily.vue";
-import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 import HmUviewModal from "/@/components/built-in/uniapp-uview-vue3/HmUviewModal.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 
-import {
-  getPointTaskList,
-  editPointTask,
-  deleteSysUser,
-} from "/@/logics/listPointTaskGroup";
 
 export default {
   name: "ListPage",
@@ -145,10 +140,9 @@ export default {
     HmUviewBgCard,
     HmUviewFilter,
     HmSwipeList,
-    HmUviewIcon,
+    HmUviewButton,
     HmUviewPopup,
     HmUviewFormily,
-    HmUviewButton,
     HmUviewModal,
     HmUviewText,
   },
@@ -173,6 +167,9 @@ export default {
           },
         ],
         keyColumn: "name",
+      },
+      itemTest: {
+        text: "按钮",
       },
       editPointTaskForm: {
         schema: {
@@ -257,8 +254,6 @@ export default {
     onMounted() {
       //当前页
       this.pointTaskPageNo = 1;
-
-      getPointTaskList(this);
     },
 
     onPointTaskFilterSearch(item) {
@@ -273,7 +268,6 @@ export default {
       if (item.filter.remark) {
         this.pointTaskParams.remark = item.filter.remark;
       }
-      getPointTaskList(this);
     },
     onPointTaskListBindClick(data, item, index) {
       let self = this;
@@ -291,25 +285,20 @@ export default {
     onPointTaskListScrolltolower(data) {
       console.log("到底", data);
       this.pointTaskPageNo++;
-      getPointTaskList(this);
     },
     onPointTaskListRefresherrefresh() {
-      getPointTaskList(this, arguments);
     },
     onCancelClick() {
       this.editPointTaskPopup.show = false;
     },
     onSubmitClick() {
-      editPointTask(this, arguments);
     },
     onDeletePointTaskModalOnConfirm() {
-      deleteSysUser(this, arguments);
     },
     onDeletePointTaskModalOnCancel() {
       this.deletePointTaskModal.visible = false;
     },
     onEle6Bd00A02F6B14836957FC36Aa7Db3B3BClick() {
-      getPointTaskList(this, arguments);
     },
   },
 };
