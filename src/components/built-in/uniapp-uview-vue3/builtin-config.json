@@ -615,16 +615,16 @@
       {
         "name": "HmSwipeList",
         "title": "滑动列表",
-        "importPath": "built-in/uniapp-uview-vue3/HmSwipeList",
-        "imgUrl": "built-in/uniapp-uview-vue3/img/HmSwipeList.png",
+        "importPath": "built-in/uniapp-haomo/HmSwipeList",
+        "imgUrl": "built-in/uniapp-haomo/img/HmSwipeList.png",
         "type": 0,
         "isBuiltIn": true
       },
       {
         "name": "HmImageCardList",
         "title": "图卡列表",
-        "importPath": "built-in/uniapp-uview-vue3/HmImageCardList",
-        "imgUrl": "built-in/uniapp-uview-vue3/img/HmImageCardList.png",
+        "importPath": "built-in/uniapp-haomo/HmImageCardList",
+        "imgUrl": "built-in/uniapp-haomo/img/HmImageCardList.png",
         "type": 0,
         "isBuiltIn": true
       }
