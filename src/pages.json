@@ -14,6 +14,12 @@
       }
     },
     {
+      "path": "pages/test/TestHmImageCardList",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
       "path": "pages/test/TestLiveSlotScope",
       "style": {
         "navigationBarTitleText": "uni-app"

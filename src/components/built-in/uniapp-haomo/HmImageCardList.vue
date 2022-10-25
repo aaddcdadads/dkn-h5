@@ -6,11 +6,11 @@
       <view class="imgbox flex-content" :style="{height:setImgHeight(showMode,imgHeight)}">
         <img :src="item.imghref" />
       </view>
-      <view class="titlebox flex-content">
+      <view v-if="item.title" class="titlebox flex-content">
         <text decode="decode" class="adrstext"
           :style="{fontSize:boldtextsize,color:boldtextcolor}">{{item.title}}</text>
       </view>
-      <view class="textbox">
+      <view v-if="item.text" class="textbox">
         <text decode="decode" class="putext" :style="{fontSize:putextsize,color:putextcolor}">{{item.text}}</text>
       </view>
     </view>
@@ -112,7 +112,6 @@ export default {
     mtextsize: {
       type: String,
       default: "12px",
-
     },
     /**
      * 描述字颜色
@@ -272,7 +271,7 @@ img {
   vertical-align: middle;
 }
 .titlebox{
-  margin: 10rpx 16rpx 0rpx;
+  margin: 10rpx 16rpx;
 }
 
 .adrstext {
