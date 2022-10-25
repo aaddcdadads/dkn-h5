@@ -250,12 +250,12 @@ text {
   min-width: 256px;
   column-count: 2;
   column-gap: 12rpx;
-  padding: 24rpx 24rpx 0rpx;
+  padding: 24rpx 12rpx 0rpx;
 }
 
 .inbox {
   width: 100%;
-  padding: 24rpx 24rpx 0rpx;
+  padding: 24rpx 0rpx 0rpx;
   flex-wrap: wrap;
   background: transparent;
 }
