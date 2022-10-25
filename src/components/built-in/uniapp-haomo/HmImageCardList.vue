@@ -8,10 +8,10 @@
       </view>
       <view class="titlebox flex-content">
         <text decode="decode" class="adrstext"
-          :style="{fontSize:boldtextsize,color:boldtextcolor}">{{item.addres}}</text>
+          :style="{fontSize:boldtextsize,color:boldtextcolor}">{{item.title}}</text>
       </view>
-      <view class="textbox flex-content">
-        <text decode="decode" class="putext" :style="{fontSize:putextsize,color:putextcolor}">{{item.id}}</text>
+      <view class="textbox">
+        <text decode="decode" class="putext" :style="{fontSize:putextsize,color:putextcolor}">{{item.text}}</text>
       </view>
     </view>
   </view>
@@ -52,50 +52,32 @@ export default {
         return [{
           id: "1",
           imghref: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.defanli.com%2Fi2%2F1875411720%2FO1CN01UcMFyq1OZntRgFFU2_%21%211875411720.jpg_q90.jpg&refer=http%3A%2F%2Fimg.defanli.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668564849&t=c24b9ed6666906d828da99179e4dd94b",
-          addres: "客厅",
-          eqius: "灯1"
+          title: "这是一段比较长的描述标题,超出两行才出现省略号",
+          text: "灯1"
         },
         {
           id: "2",
           imghref: "https://img0.baidu.com/it/u=3182847715,4123160739&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=424",
-          addres: "客厅",
-          eqius: "灯1"
+          title: "客厅",
+          text: "这是描述文字，超出一行就出现省略号"
         },
         {
           id: "3",
           imghref: "https://img0.baidu.com/it/u=3182847715,4123160739&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=424",
-          addres: "客厅",
-          eqius: "灯1"
+          title: "客厅",
+          text: "灯1"
         },
         {
           id: "4",
           imghref: "https://img0.baidu.com/it/u=1458576126,4143555283&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
-          addres: "客厅",
-          eqius: "灯1"
+          title: "客厅",
+          text: "灯1"
         },
         {
           id: "5",
           imghref: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.defanli.com%2Fi2%2F1875411720%2FO1CN01UcMFyq1OZntRgFFU2_%21%211875411720.jpg_q90.jpg&refer=http%3A%2F%2Fimg.defanli.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668564849&t=c24b9ed6666906d828da99179e4dd94b",
-          addres: "客厅",
-          eqius: "灯1"
-        },
-        {
-          id: "6",
-          imghref: "https://img0.baidu.com/it/u=1895837640,2691329714&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
-          addres: "客厅",
-          eqius: "灯1"
-        },
-        {
-          id: "7",
-          imghref: "https://img0.baidu.com/it/u=1895837640,2691329714&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
-          addres: "客厅",
-          eqius: "灯1"
-        },
-        {
-          id: "8",
-          imghref: "https://img0.baidu.com/it/u=1458576126,4143555283&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
-          addres: "客厅",
-          eqius: "灯1"
+          title: "客厅",
+          text: "灯1"
         }
         ];
       },
@@ -289,15 +271,28 @@ img {
   height: 100%;
   vertical-align: middle;
 }
-.titlebox,.textbox{
-  margin: 0rpx 16rpx;
+.titlebox{
+  margin: 10rpx 16rpx 0rpx;
 }
+
 .adrstext {
   letter-spacing: 0;
   font-weight: 600;
+  overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
 }
-
+.textbox{
+  margin: auto 16rpx 12rpx;
+}
 .putext {
+  overflow: hidden;
+	text-overflow: ellipsis;
+  display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
   letter-spacing: 0;
   font-weight: 400;
 }
