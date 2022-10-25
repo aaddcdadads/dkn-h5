@@ -1,9 +1,9 @@
 <template>
-  <view :class="showMode=='waterfallFlow' ? 'multi-column' : 'inbox flex-row'">
+  <view :class="this.cShowMode=='waterfallFlow' ? 'multi-column' : 'inbox flex-row'">
     <view v-for="(item,index) in cImgsList" :key="item.index" class="listbox flex-col"
-      :style="{width:setBoxWidth(showMode,cAboutMargin),margin:'0rpx '+cAboutMargin+' 24rpx',background:listboxbgcolor}"
+      :style="{width:setBoxWidth(this.cShowMode,this.cAboutMargin),margin:'0rpx '+cAboutMargin+' 24rpx',background:listboxbgcolor}"
       @click="onClick(item,index)">
-      <view class="imgbox flex-content" :style="{height:setImgHeight(showMode,imgHeight)}">
+      <view class="imgbox flex-content" :style="{height:setImgHeight(this.cShowMode,imgHeight)}">
         <img :src="item.imghref" />
       </view>
       <view v-if="item.title" class="titlebox flex-content">
@@ -129,9 +129,13 @@ export default {
       },
       deep: true,
     },
+    showMode(value){
+      this.cShowMode = value;
+      this.cWidth = this.setBoxWidth(value, this.cAboutMargin);
+    },
     aboutMargin(value) {
       this.cAboutMargin = value;
-      this.cWidth = this.setBoxWidth(this.showMode, value);
+      this.cWidth = this.setBoxWidth(this.cShowMode, value);
     },
     listbgColor(value) {
       this.listboxbgcolor = value;
@@ -157,11 +161,13 @@ export default {
     this.putextsize = this.getCssUnit(this.mtextsize);
     this.putextcolor = this.mtextcolor;
     this.cAboutMargin = this.aboutMargin;
-    this.cWidth = this.setBoxWidth(this.showMode, this.cAboutMargin);
+    this.cShowMode = this.showMode;
+    this.cWidth = this.setBoxWidth(this.cShowMode, this.cAboutMargin);
   },
   data() {
     return {
-      cAboutMargin: "",
+      cShowMode:"doubleRank",
+      cAboutMargin: "12rpx",
       listboxbgcolor: "", //卡片背景颜色
       boldtextsize: "", //标题字大小
       boldtextcolor: "", //标题字颜色
