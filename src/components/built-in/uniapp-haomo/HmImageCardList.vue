@@ -95,7 +95,7 @@ export default {
      */
     btextsize: {
       type: String,
-      default: "12px",
+      default: "16px",
 
     },
     /**
@@ -111,7 +111,7 @@ export default {
      */
     mtextsize: {
       type: String,
-      default: "12px",
+      default: "14px",
     },
     /**
      * 描述字颜色
