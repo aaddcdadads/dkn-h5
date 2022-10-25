@@ -19,6 +19,7 @@
     :active-item-style="activeItemStyle"
     :item-width="itemWidth"
     :offset="offset"
+    @change="onChange"
     class="hm-tabs"
   >
     <template #right>
