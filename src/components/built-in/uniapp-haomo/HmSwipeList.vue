@@ -1,36 +1,77 @@
 <template>
   <uni-swipe-action class="outbox">
-    <scroll-view :style="{height: scrollHeight,width:'100%'}" :refresher-triggered="cRefresherTriggered"
-      :refresher-enabled="cRefresherEnabled" :scroll-y="true" :scroll-x="false" :show-scrollbar="showScrollbar"
-      @refresherrefresh="refresherrefresh" @scrolltolower="scrolltolower">
-      <uni-swipe-action-item :class="cLeftAction ? 'list-left' : 'list-right'" v-for="(item,index) in cList"
-        :key="index" :left-options="cLeftAction ? options:null" :right-options="!cLeftAction ? options:null"
-        :auto-close="autoClose" @change="change($event,item,index)" @click="bindClick($event,item,index)">
-
+    <scroll-view
+      :style="{ height: scrollHeight, width: '100%' }"
+      :refresher-triggered="cRefresherTriggered"
+      :refresher-enabled="cRefresherEnabled"
+      :scroll-y="true"
+      :scroll-x="false"
+      :show-scrollbar="showScrollbar"
+      @refresherrefresh="refresherrefresh"
+      @scrolltolower="scrolltolower"
+    >
+      <uni-swipe-action-item
+        class="list-right"
+        v-for="(item, index) in cList"
+        :key="index"
+        :left-options="cLeftAction ? options : null"
+        :right-options="!cLeftAction ? options : null"
+        :auto-close="autoClose"
+        @change="change($event, item, index)"
+        @click="bindClick($event, item, index)"
+      >
         <!-- 
           @prop item - 数组条目数据
         -->
         <slot :item="item">
-
-          <view class="content-box" :style="{flexDirection: cLeftAction ? 'row-reverse' : 'row'}">
-            <view class="image">
-              <image :style="{width:width,height:height}" :mode="mode" :src="item.imgSrc"></image>
+          <view class="content-box">
+            <view v-if="item.leftImgSrc" class="image">
+              <image
+                :style="{ width: width, height: height }"
+                :mode="mode"
+                :src="item.leftImgSrc"
+              ></image>
             </view>
-            <view class="content">
-              <text class="content-title">{{item.title}}</text>
-              <text class="content-text">{{item.description}}</text>
+            <view
+              :class="item.leftImgSrc ? 'content' : 'content content-false'"
+            >
+              <text class="content-title">{{ item.title }}</text>
+              <text class="content-text">{{ item.content }}</text>
             </view>
-            <view class="icon-box">
-              <u-icon v-if="img.iconname" :name="img.iconname" :size="img.size" @click="imgClick(item,index)" />
-              <image v-else :src="img.imgsrc" mode="aspectFill" :style="{width:img.size+'px',height:img.size+'px'}"
-                @click="imgClick(item,index)" />
+            <view
+              :class="item.rightImgSrc ? 'icon-box icon-box-true' : 'icon-box'"
+            >
+              <u-icon
+                v-if="img.iconname"
+                :name="img.iconname"
+                :size="img.size"
+                @click="imgClick(item, index)"
+              />
+              <image
+                v-else
+                :src="img.imgsrc"
+                mode="aspectFill"
+                :style="{ width: img.size + 'px', height: img.size + 'px' }"
+                @click="imgClick(item, index)"
+              />
+            </view>
+            <view v-if="item.rightImgSrc" class="image">
+              <image
+                :style="{ width: width, height: height }"
+                :mode="mode"
+                :src="item.rightImgSrc"
+              ></image>
             </view>
           </view>
-
         </slot>
       </uni-swipe-action-item>
-      <uni-load-more v-if="contentText.show" :status="status" :showText="contentText.show" :contentText="contentText"
-        @clickLoadMore="clickLoadMore"></uni-load-more>
+      <uni-load-more
+        v-if="contentText.show"
+        :status="status"
+        :showText="contentText.show"
+        :contentText="contentText"
+        @clickLoadMore="clickLoadMore"
+      ></uni-load-more>
     </scroll-view>
   </uni-swipe-action>
 </template>
@@ -42,7 +83,7 @@ export default {
      */
     leftAction: {
       type: Boolean,
-      default: true
+      default: true,
     },
     /**
      * 滑动配置
@@ -52,33 +93,33 @@ export default {
       default: function () {
         return [
           {
-            text: '编辑',
+            text: "编辑",
             style: {
-              backgroundColor: '#3B89FF'
-            }
+              backgroundColor: "#3B89FF",
+            },
           },
           {
-            text: '删除',
+            text: "删除",
             style: {
-              backgroundColor: '#FF8B00'
-            }
+              backgroundColor: "#FF8B00",
+            },
           },
-        ]
-      }
+        ];
+      },
     },
     /**
      * 图片宽度
      */
     width: {
       type: String,
-      default: "80px"
+      default: "80px",
     },
     /**
      * 图片高度
      */
     height: {
       type: String,
-      default: "50px"
+      default: "50px",
     },
     /**
      * 图片模式
@@ -87,7 +128,7 @@ export default {
      */
     mode: {
       type: String,
-      default: ""
+      default: "",
     },
     /**
      * 数据项
@@ -96,10 +137,30 @@ export default {
       type: Array,
       default: function () {
         return [
-          { title: "123", description: "321", imgSrc: "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg" },
-          { title: "123", description: "321", imgSrc: "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg" }
-        ]
-      }
+          {
+            title: "123",
+            content: "321",
+            leftImgSrc: "",
+            rightImgSrc:
+              "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg",
+          },
+          {
+            title: "123",
+            content: "321",
+            leftImgSrc:
+              "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg",
+            rightImgSrc: "",
+          },
+          {
+            title: "123",
+            content: "321",
+            leftImgSrc:
+              "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg",
+            rightImgSrc:
+              "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg",
+          },
+        ];
+      },
     },
     /**
      * 图片图标配置
@@ -109,22 +170,23 @@ export default {
       default: function () {
         return {
           iconname: "",
-          imgsrc: "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg",
+          imgsrc:
+            "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg",
           color: "",
           size: "22",
-        }
-      }
+        };
+      },
     },
     /**
      * 数据映射
      */
-     dataMap: {
+    dataMap: {
       type: Object,
-      default: function() {
+      default: function () {
         return {
-          imgSrc:'imgSrc',
+          imgSrc: "imgSrc",
           name: "name",
-          text: "text"
+          text: "text",
         };
       },
     },
@@ -133,7 +195,7 @@ export default {
      */
     autoClose: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * 下拉高度
@@ -156,7 +218,7 @@ export default {
      */
     status: {
       type: String,
-      default: "more"
+      default: "more",
     },
     /**
      * 上滑文本
@@ -168,10 +230,10 @@ export default {
           show: false,
           contentdown: "显示更多",
           contentrefresh: "正在加载...",
-          contentnomore: "没有更多数据了"
-        }
-      }
-    }
+          contentnomore: "没有更多数据了",
+        };
+      },
+    },
   },
   watch: {
     list: {
@@ -182,12 +244,11 @@ export default {
     },
     leftAction(value) {
       this.cLeftAction = value;
-    }
+    },
   },
   mounted() {
     this.cList = this.mapData(this.list);
     this.cLeftAction = this.leftAction;
-
   },
   data() {
     return {
@@ -195,7 +256,7 @@ export default {
       cLeftAction: true,
       cRefresherTriggered: false,
       cRefresherEnabled: true,
-    }
+    };
   },
   methods: {
     change(e, item, index) {
@@ -242,16 +303,15 @@ export default {
       //console.log("data", data);
       return data;
     },
-  }
-}
+  },
+};
 </script>
 <style scoped>
 .outbox {
   width: 100%;
 }
 
-.list-right:not(:last-child),
-.list-left:not(:last-child) {
+.list-right:not(:last-child) {
   width: 100%;
   margin-bottom: 24rpx;
 }
@@ -261,15 +321,6 @@ export default {
   background: #fff;
   padding: 12rpx 16rpx;
 }
-
-.list-right .content {
-  margin-left: 24rpx;
-}
-
-.list-left .content {
-  margin-right: 24rpx;
-}
-
 .content {
   display: flex;
   justify-content: center;
@@ -291,21 +342,19 @@ export default {
 .content {
   display: flex;
   flex-direction: column;
+  margin-left: 24rpx;
 }
-
-.list-right .icon-box {
+.content-false {
+  margin-left: 0rpx;
+}
+.icon-box {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: auto;
   margin-right: 0rpx;
 }
-
-.list-left .icon-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: auto;
-  margin-left: 0rpx;
+.icon-box-true{
+  margin-right: 12rpx;
 }
 </style>
