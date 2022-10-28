@@ -27,7 +27,7 @@
           <view class="content-box">
             <view v-if="item.leftImgSrc" class="image">
               <image
-                :style="{ width: width, height: height }"
+                :style="cImgStyle"
                 :mode="mode"
                 :src="item.leftImgSrc"
               ></image>
@@ -57,7 +57,7 @@
             </view>
             <view v-if="item.rightImgSrc" class="image">
               <image
-                :style="{ width: width, height: height }"
+                :style="cImgStyle"
                 :mode="mode"
                 :src="item.rightImgSrc"
               ></image>
@@ -108,18 +108,17 @@ export default {
       },
     },
     /**
-     * 图片宽度
+     * 图片样式
      */
-    width: {
-      type: String,
-      default: "80px",
-    },
-    /**
-     * 图片高度
-     */
-    height: {
-      type: String,
-      default: "50px",
+    imgStyle: {
+      type: Object,
+      default: function () {
+        return {
+          width: "80px",
+          height: "50px",
+          borderRadius: "8px",
+        };
+      },
     },
     /**
      * 图片模式
@@ -245,14 +244,19 @@ export default {
     leftAction(value) {
       this.cLeftAction = value;
     },
+    imgStyle(value) {
+      this.cImgStyle = value;
+    },
   },
   mounted() {
     this.cList = this.mapData(this.list);
     this.cLeftAction = this.leftAction;
+    this.cImgStyle = this.imgStyle;
   },
   data() {
     return {
       cList: [],
+      cImgStyle: {},
       cLeftAction: true,
       cRefresherTriggered: false,
       cRefresherEnabled: true,
@@ -354,7 +358,7 @@ export default {
   margin-left: auto;
   margin-right: 0rpx;
 }
-.icon-box-true{
+.icon-box-true {
   margin-right: 12rpx;
 }
 </style>
