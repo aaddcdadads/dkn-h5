@@ -79,7 +79,7 @@
 export default {
   props: {
     /**
-     * 是否右滑
+     * 是否左边操作
      */
     leftAction: {
       type: Boolean,
