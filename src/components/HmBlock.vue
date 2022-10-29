@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import _ from "lodash";
+import { toCamelCase } from '/@/utils/util';
 
 export default {
   name: "HmBlock",
@@ -81,15 +81,13 @@ export default {
 
       let items = css.split(";");
       let style = {};
-      _.each(items, (item) => {
-        let cssItem = _.trim(item);
+      items.forEach(item => {
+        let cssItem = item.trim();
         if (!cssItem) {
           return;
         }
 
-        style[_.camelCase(_.trim(cssItem.split(":")[0]))] = _.trim(
-          cssItem.split(":")[1]
-        );
+        style[toCamelCase(cssItem.split(":")[0].trim())] = cssItem.split(":")[1].trim();
       });
       return style;
     },
