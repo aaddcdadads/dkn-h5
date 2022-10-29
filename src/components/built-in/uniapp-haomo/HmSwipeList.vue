@@ -24,43 +24,64 @@
           @prop item - 数组条目数据
         -->
         <slot :item="item">
-          <view class="content-box">
-            <view v-if="item.leftImgSrc" class="image">
+          <view class="content-box flex-row">
+            <view class="left-box flex-row">
+              <view
+                v-if="(img.iconname || img.imgsrc) && cLayout['leftIconBtn']"
+                class="icon"
+              >
+                <u-icon
+                  v-if="img.iconname"
+                  :name="img.iconname"
+                  :size="img.size"
+                  @click="imgClick(item, index)"
+                />
+                <image
+                  v-else
+                  :src="img.imgsrc"
+                  mode="aspectFill"
+                  :style="{ width: img.size + 'px', height: img.size + 'px' }"
+                  @click="imgClick(item, index)"
+                />
+              </view>
               <image
+                v-if="item.leftImgSrc && cLayout['leftImg']"
+                class="image"
                 :style="cImgStyle"
                 :mode="mode"
                 :src="item.leftImgSrc"
               ></image>
             </view>
-            <view
-              :class="item.leftImgSrc ? 'content' : 'content content-false'"
-            >
+            <view class="center-box flex-col" :style="{ textAlign: cTextAlign }">
               <text class="content-title">{{ item.title }}</text>
               <text class="content-text">{{ item.content }}</text>
             </view>
-            <view
-              :class="item.rightImgSrc ? 'icon-box icon-box-true' : 'icon-box'"
-            >
-              <u-icon
-                v-if="img.iconname"
-                :name="img.iconname"
-                :size="img.size"
-                @click="imgClick(item, index)"
-              />
+            <view class="right-box flex-row">
               <image
-                v-else
-                :src="img.imgsrc"
-                mode="aspectFill"
-                :style="{ width: img.size + 'px', height: img.size + 'px' }"
-                @click="imgClick(item, index)"
-              />
-            </view>
-            <view v-if="item.rightImgSrc" class="image">
-              <image
+                v-if="item.rightImgSrc && cLayout['rightImg']"
+                class="image"
                 :style="cImgStyle"
                 :mode="mode"
                 :src="item.rightImgSrc"
               ></image>
+              <view
+                v-if="(img.iconname || img.imgsrc) && cLayout['rightIcon']"
+                class="icon"
+              >
+                <u-icon
+                  v-if="img.iconname"
+                  :name="img.iconname"
+                  :size="img.size"
+                  @click="imgClick(item, index)"
+                />
+                <image
+                  v-else
+                  :src="img.imgsrc"
+                  mode="aspectFill"
+                  :style="{ width: img.size + 'px', height: img.size + 'px' }"
+                  @click="imgClick(item, index)"
+                />
+              </view>
             </view>
           </view>
         </slot>
@@ -95,17 +116,44 @@ export default {
           {
             text: "编辑",
             style: {
-              backgroundColor: "#3B89FF",
+              backgroundColor: "#588BE6",
+              color: "#ffffff",
+              fontSize: "16px",
             },
           },
           {
             text: "删除",
             style: {
-              backgroundColor: "#FF8B00",
+              backgroundColor: "#E65E58",
+              color: "#ffffff",
+              fontSize: "16px",
             },
           },
         ];
       },
+    },
+    /**
+     * 列表布局
+     */
+    layout: {
+      type: Object,
+      default: function () {
+        return {
+          leftIconBtn: false,
+          leftImg: false,
+          rightImg: true,
+          rightIcon: false,
+        };
+      },
+    },
+    /**
+     * 文字对齐
+     * @type Enum
+     * @options ["left","center","right"]
+     */
+    textAlign: {
+      type: String,
+      default: "left",
     },
     /**
      * 图片样式
@@ -114,9 +162,10 @@ export default {
       type: Object,
       default: function () {
         return {
-          width: "80px",
-          height: "50px",
+          width: "63.72px",
+          height: "64px",
           borderRadius: "8px",
+          border:"#f1f2f3 1px solid"
         };
       },
     },
@@ -127,7 +176,7 @@ export default {
      */
     mode: {
       type: String,
-      default: "",
+      default: "aspectFill",
     },
     /**
      * 数据项
@@ -137,26 +186,26 @@ export default {
       default: function () {
         return [
           {
-            title: "123",
-            content: "321",
-            leftImgSrc: "",
+            title: "天安物业",
+            content: "今日周年活动注意观察.",
+            leftImgSrc: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
             rightImgSrc:
-              "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg",
+              "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
           },
           {
-            title: "123",
-            content: "321",
+            title: "天安物业",
+            content: "今日周年活动注意观察.",
             leftImgSrc:
-              "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg",
-            rightImgSrc: "",
+              "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
+            rightImgSrc: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
           },
           {
-            title: "123",
-            content: "321",
+            title: "天安物业",
+            content: "今日周年活动注意观察.今日周年活动注意观察.",
             leftImgSrc:
-              "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg",
+              "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
             rightImgSrc:
-              "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg",
+              "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
           },
         ];
       },
@@ -168,9 +217,8 @@ export default {
       type: Object,
       default: function () {
         return {
-          iconname: "",
-          imgsrc:
-            "https://scpic.chinaz.net/files/pic/pic9/202206/apic41543.jpg",
+          iconname: "search",
+          imgsrc:"",
           color: "",
           size: "22",
         };
@@ -241,6 +289,12 @@ export default {
       },
       deep: true,
     },
+    layout(value) {
+      this.cLayout = value;
+    },
+    textAlign(value) {
+      this.cTextAlign = value;
+    },
     leftAction(value) {
       this.cLeftAction = value;
     },
@@ -250,12 +304,16 @@ export default {
   },
   mounted() {
     this.cList = this.mapData(this.list);
+    this.cLayout = this.layout;
+    this.cTextAlign = this.textAlign;
     this.cLeftAction = this.leftAction;
     this.cImgStyle = this.imgStyle;
   },
   data() {
     return {
       cList: [],
+      cLayout:{},
+      cTextAlign:"",
       cImgStyle: {},
       cLeftAction: true,
       cRefresherTriggered: false,
@@ -311,54 +369,73 @@ export default {
 };
 </script>
 <style scoped>
+* {
+  margin: 0rpx;
+  padding: 0rpx;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
 .outbox {
   width: 100%;
 }
-
 .list-right:not(:last-child) {
   width: 100%;
   margin-bottom: 24rpx;
 }
-
+/* 控制滑动按钮宽度,高度由图片高度+内边距控制 */
+.list-right /deep/ .uni-swipe_button {
+  padding: 0rpx 67rpx !important;
+}
 .content-box {
-  display: flex;
   background: #fff;
-  padding: 12rpx 16rpx;
+  padding: 24rpx 36rpx;
 }
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content-title {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 600;
-}
-
-.content-text {
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  margin-left: 24rpx;
-}
-.content-false {
-  margin-left: 0rpx;
-}
-.icon-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.right-box {
   margin-left: auto;
   margin-right: 0rpx;
 }
-.icon-box-true {
-  margin-right: 12rpx;
+.icon {
+  display: flex;
+  align-items: center;
+}
+.left-box .icon,
+.left-box .image {
+  margin-right: 24rpx;
+}
+.right-box .icon,
+.right-box .image {
+  margin-left: 24rpx;
+}
+.center-box {
+  width: 100%;
+  height: 128rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.content-title {
+  font-size: 16px;
+  color: #0d0d0d;
+  line-height: 24px;
+  font-weight: 500;
+}
+.content-text {
+  font-size: 12px;
+  color: #404040;
+  font-weight: 400;
+}
+.content-title,
+.content-text {
+  letter-spacing: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 </style>
