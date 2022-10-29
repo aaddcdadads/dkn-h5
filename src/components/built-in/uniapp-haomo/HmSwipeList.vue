@@ -165,7 +165,7 @@ export default {
           width: "63.72px",
           height: "64px",
           borderRadius: "8px",
-          border:"#f1f2f3 1px solid"
+          border:"#f1f2f3 2rpx solid"
         };
       },
     },
