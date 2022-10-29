@@ -1,4 +1,86 @@
-import _ from 'lodash';
+/**
+ * 转换成小写驼峰
+ */
+ export function toCamelCase (str) {
+	let STR = str.toLowerCase()
+		.trim()
+		.split(/[ -_]/g)
+		.map(word => word.replace(word[0], word[0].toString().toUpperCase()))
+		.join('');
+	return STR.replace(STR[0], STR[0].toLowerCase());
+};
+
+export function upperFirst(str) {
+  return str.substring(0, 1).toUpperCase() + str.substring(1);
+}
+
+function isFunction(val) {
+  return Object.prototype.toString.call(val) === '[object Function]'
+}
+function isObject(val) {
+  return Object.prototype.toString.call(val) === '[object Object]'
+}
+function isArray(val) {
+  return Object.prototype.toString.call(val) === '[object Array]'
+}
+function isSet(val) {
+  return Object.prototype.toString.call(val) === '[object Set]'
+}
+function isMap(val) {
+  return Object.prototype.toString.call(val) === '[object Map]'
+}
+function isSymbol(val) {
+  return Object.prototype.toString.call(val) === '[object Symbol]'
+}
+function isDate(val) {
+  return Object.prototype.toString.call(val) === '[object Date]'
+}
+
+function ArrayBuffer(val) {
+  return Object.prototype.toString.call(val) === '[object ArrayBuffer]'
+}
+
+const forEachValue = (obj, fn) =>  Object.keys(obj).forEach(key => fn(obj[key], key))
+  
+export function cloneDeep(val, weakMap = new WeakMap()) {
+  if (isDate(val)) return new Date(+val)
+    
+  if (isMap(val)) {
+    const map = new Map()
+    for (const item of val) map.set(cloneDeep(item[0], weakMap), cloneDeep(item[1], weakMap))
+    return map
+  }
+
+  if (isSet(val)) {
+    const set = new Set()
+    val.forEach(item => set.add(cloneDeep(item), weakMap))
+    return set
+  }
+
+  if (isSymbol(val)) return Symbol(val.description)
+
+  if (isFunction(val)) {
+    if (/^function|^\(\)/.test(val.toString())) {
+      return new Function(`return ${val.toString()}`)()
+    } else {
+      return new Function(`return function ${val.toString()}`)()
+    }
+  }
+    
+  if (!isObject(val)) return val
+  
+  const obj = isArray(val) ? [] : {}
+
+  if(weakMap.has(val)) return weakMap.get(val)
+
+  weakMap.set(val, obj)
+  forEachValue(val, (val, key) => obj[key] = cloneDeep(val, weakMap))
+
+  const symbols = Object.getOwnPropertySymbols(val)
+  forEachValue(symbols, key => obj[Symbol(key.description)] = cloneDeep(symbols[key], weakMap))
+
+  return obj
+}
 
 export function convertCssToVueStyle(css) {
   if (!css) {
@@ -9,27 +91,13 @@ export function convertCssToVueStyle(css) {
 
   let items = css.split(';')
   let style = {}
-  _.each(items, item => {
-    let cssItem = _.trim(item)
+  items.forEach(item => {
+    let cssItem = item.trim()
     if (!cssItem) {
       return;
     }
 
-    style[_.camelCase(_.trim(cssItem.split(':')[0]))] = _.trim(cssItem.split(':')[1])
+    style[toCamelCase(cssItem.split(':')[0].trim())] = cssItem.split(':')[1].trim()
   })
   return style;
-}
-
-export function getAntTableFlattenedColumns(columns) {
-  let self = this;
-  if (typeof columns === 'undefined') {
-    columns = this.columns;
-  }
-  let flattenedColumns = JSON.parse(JSON.stringify(columns))
-  _.each(columns, column => {
-    if (column.children && column.children.length > 0) {
-      flattenedColumns = _.concat(flattenedColumns, self.getFlattenedColumns(column.children))
-    }
-  })
-  return flattenedColumns;
 }

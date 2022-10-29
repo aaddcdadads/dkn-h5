@@ -41,7 +41,7 @@ import {
 } from "./formily/component"
 import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/vue'
-import cloneDeep from 'lodash/cloneDeep'
+import { cloneDeep } from '/@/utils/util';
 
 import {
   getFeiqiFilterValue, 

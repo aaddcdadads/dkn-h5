@@ -1,5 +1,5 @@
 import jp from "jsonpath";
-import _ from "lodash";
+import { cloneDeep } from '/@/utils/util';
 
 /**
  * js-filter
@@ -17,7 +17,7 @@ export function filter({ input, filterExpr }) {
  */
 function mapJsonPath(item, obj) {
 
-  _.each(obj, (value, key, collection) => {
+  obj.forEach((value, key, collection) => {
     if (typeof value === 'string') {
       if (value.indexOf("$.") > -1) {
         collection[key] = jp.query(item, value);
@@ -43,7 +43,7 @@ function mapJsonPath(item, obj) {
  */
 export function map({ input, output, type }) {
   return input.map(item => {
-    let newOutput = _.cloneDeep(output)
+    let newOutput = cloneDeep(output)
     mapJsonPath(item, newOutput);
     if(type === "increment") {
       return Object.assign(item, newOutput);
