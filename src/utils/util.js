@@ -10,6 +10,10 @@
 	return STR.replace(STR[0], STR[0].toLowerCase());
 };
 
+export function upperFirst(str) {
+  return str.substring(0, 1).toUpperCase() + str.substring(1);
+}
+
 export function convertCssToVueStyle(css) {
   if (!css) {
     return {

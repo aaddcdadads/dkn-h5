@@ -1,7 +1,7 @@
 import { defineAsyncComponent } from "vue";
 const modules = import.meta.glob("../components/**/**.vue");
 
-import _ from "lodash";
+import { toCamelCase, upperFirst } from './util';
 
 export default {
 	install(app ,options){
@@ -12,7 +12,7 @@ export default {
       let componentName = lastName == "index.vue" ? 
         arr[arr.length - 2] : lastName.split(".vue")[0]
         
-      app.component(_.upperFirst(_.camelCase(componentName)), defineAsyncComponent(module));
+      app.component(upperFirst(toCamelCase(componentName)), defineAsyncComponent(module));
     })
   }
 }
