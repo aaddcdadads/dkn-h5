@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import _, { cloneDeep } from "lodash";
+import { cloneDeep } from "lodash";
 export default {
   name: "HmQiunCharts",
   props: {
@@ -341,13 +341,14 @@ export default {
       if (this.getDataMap.categoryColumn) {
         // 直角坐标系的数据
         return {
-          categories: _.map(respDataList, this.getDataMap.categoryColumn),
-          series: _.map(this.chartData.series, (serie, index) => {
+          categories: respDataList.map(function(item){
+            return item[this.getDataMap.categoryColumn]
+          }),
+          series: this.chartData.series.map((serie, index) => {
             let newSerie = JSON.parse(JSON.stringify(serie));
-            newSerie.data = _.map(
-              respDataList,
-              this.getDataMap.seriesColumns[index]
-            );
+            newSerie.data = respDataList.map(function(item) {
+              return item[this.getDataMap.seriesColumns[index]];
+            });
             return newSerie;
           }),
         };
@@ -355,9 +356,9 @@ export default {
 
       // 返回非直角坐标系的数据
       return {
-        series: _.map(this.chartData.series, (serie, index) => {
+        series: this.chartData.series.map((serie, index) => {
           let newSerie = JSON.parse(JSON.stringify(serie));
-          newSerie.data = _.map(respDataList, (item) => {
+          newSerie.data = respDataList.map((item) => {
             let map = this.getDataMap.seriesColumns[index];
             return {
               name: item[map.name],

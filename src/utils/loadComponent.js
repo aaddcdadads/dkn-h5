@@ -6,7 +6,7 @@ import _ from "lodash";
 export default {
 	install(app ,options){
     // //根据modules加载所有组件
-    _.each(modules, (module, key) => {
+    modules.forEach((module, key) => {
       let arr = key.split("/");
       let lastName = arr[arr.length - 1];
       let componentName = lastName == "index.vue" ? 
