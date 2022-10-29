@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { cloneDeep } from "lodash";
+import { cloneDeep } from '/@/utils/util';
 export default {
   name: "HmQiunCharts",
   props: {

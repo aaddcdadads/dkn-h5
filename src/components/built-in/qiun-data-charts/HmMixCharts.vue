@@ -17,7 +17,7 @@
   </view>
 </template>
 <script>
-import cloneDeep from 'lodash/cloneDeep';
+import { cloneDeep } from '/@/utils/util';
 export default {
   name: "HmMixCharts",
   props: {

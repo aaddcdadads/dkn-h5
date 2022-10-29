@@ -33,7 +33,7 @@
 
 <script>
 import { h, defineComponent } from "vue";
-import cloneDeep from 'lodash/cloneDeep'
+import { cloneDeep } from '/@/utils/util';
 import {
   getAction,
   postAction,

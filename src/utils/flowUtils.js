@@ -1,5 +1,5 @@
 import jp from "jsonpath";
-import cloneDeep from 'lodash/cloneDeep';
+import { cloneDeep } from '/@/utils/util';
 
 /**
  * js-filter
