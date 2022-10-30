@@ -2,11 +2,12 @@
  * 转换成小写驼峰
  */
  export function toCamelCase (str) {
-	let STR = str.toLowerCase()
+	let STR = str
 		.trim()
 		.split(/[ -_]/g)
 		.map(word => {
-      if(!word) return ''; 
+      if(!word) return '';
+      word = word.toLowerCase();
       return word.replace(word[0], word[0].toString().toUpperCase());
     })
 		.join('');
