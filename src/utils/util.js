@@ -11,7 +11,7 @@
       return word[0].toString().toUpperCase() + word.substring(1);
     })
 		.join('');
-	return STR.replace(STR[0], STR[0].toLowerCase());
+	return STR;
 };
 
 export function upperFirst(str) {
