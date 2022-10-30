@@ -6,6 +6,7 @@ import { toCamelCase, upperFirst } from './util';
 export default {
 	install(app ,options){
     // //根据modules加载所有组件
+    console.log(`modules: `, modules);
     Object.keys(modules).forEach((key) => {
       let module = modules[key];
       let arr = key.split("/");
