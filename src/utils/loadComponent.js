@@ -5,7 +5,6 @@ import { toCamelCase, upperFirst } from './util';
 
 export default {
 	install(app ,options){
-    console.log(`modules: `, JSON.stringify(modules, null, 2));
     // //根据modules加载所有组件
     Object.keys(modules).forEach((key) => {
       let module = modules[key];
