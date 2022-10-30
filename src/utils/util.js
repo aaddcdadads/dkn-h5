@@ -2,16 +2,10 @@
  * 转换成小写驼峰
  */
  export function toCamelCase (str) {
-	let STR = str
-		.trim()
-		.split(/[ -_]/g)
-		.map(word => {
-      if(!word) return '';
-      word = word.toLowerCase();
-      return word[0].toString().toUpperCase() + word.substring(1);
-    })
-		.join('');
-	return STR;
+  return str.replace(/^([A-Z])|[\s-_]+(\w)/g, function(match, p1, p2, offset) {
+    if (p2) return p2.toUpperCase();
+    return p1.toLowerCase();        
+  });
 };
 
 export function upperFirst(str) {
