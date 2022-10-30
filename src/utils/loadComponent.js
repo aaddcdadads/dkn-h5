@@ -14,7 +14,7 @@ export default {
       let componentName = lastName == "index.vue" ? 
         arr[arr.length - 2] : lastName.split(".vue")[0]
       
-      console.log(`${upperFirst(toCamelCase(componentName))}: `, defineAsyncComponent(module));
+      console.log(`${upperFirst(toCamelCase(componentName))}, ${toCamelCase(componentName)}: `, defineAsyncComponent(module));
       app.component(upperFirst(toCamelCase(componentName)), defineAsyncComponent(module));
     })
   }
