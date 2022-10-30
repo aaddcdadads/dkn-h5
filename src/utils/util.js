@@ -8,8 +8,7 @@
 		.map(word => {
       if(!word) return '';
       word = word.toLowerCase();
-      word[0] = word[0].toString().toUpperCase()
-      return word;
+      return word[0].toString().toUpperCase() + word.substring(1);
     })
 		.join('');
 	return STR.replace(STR[0], STR[0].toLowerCase());
