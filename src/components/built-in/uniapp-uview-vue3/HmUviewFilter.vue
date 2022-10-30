@@ -360,10 +360,12 @@ export default {
   &__input {
     // border-color: #f63515 !important;
     // border-radius: 18px;
+    border: 2px solid;
     border-color: #4b4c5a !important;
     border-radius: 8px;
     /deep/ .u-input__input {
-      min-height: 30px !important;
+      // min-height: 30px !important;
+      min-height: 40px !important;
     }
   }
   &__text-div {
