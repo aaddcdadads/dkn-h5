@@ -1,8 +1,12 @@
 <template>
-  <u-row class="filter__single-popup-top-mask" v-if="singleFilterShow" @click="singleFilterShow = false">
+  <u-row
+    class="filter__single-popup-top-mask"
+    v-if="singleFilterShow"
+    @click="singleFilterShow = false"
+  >
   </u-row>
   <u-row class="search">
-    <u-col span="10" class="search__input-div">
+    <u-col span="12" class="search__input-div">
       <u-input
         class="search__input"
         placeholder="请输入内容"
@@ -10,36 +14,56 @@
         shape="circle"
         v-model="keyValue"
         @change="change"
+        @blur="search"
       ></u-input>
     </u-col>
-    <u-col span="2" class="search__text-div" >
-      <view @click="search">
-        搜索
-      </view>
-    </u-col>
+    <!-- <u-col span="2" class="search__text-div">
+      <view @click="search"> 搜索 </view>
+    </u-col> -->
   </u-row>
   <u-row class="sort">
-    <view class="sort__div" 
-      :style="{ width: sortDivWidth + '%' }" 
-      v-for="(sort, index) in cSortOption" 
+    <view
+      class="sort__div"
+      :style="{ width: sortDivWidth + '%' }"
+      v-for="(sort, index) in cSortOption"
       :key="index"
       @click="sortSelect(sort)"
     >
-      <view class="sort__text" :style="{ fontWeight: sort.isSelect ? '600' : 'normal' }">{{sort.name}}</view>
+      <view
+        class="sort__text"
+        :style="{ fontWeight: sort.isSelect ? '600' : 'normal' }"
+        >{{ sort.name }}</view
+      >
       <view class="sort__icon">
-        <u-row><u-icon v-if="!sort.isSelect || order == 'asc'" class="sort__icon-up" name="arrow-up-fill"></u-icon></u-row>
-        <u-row><u-icon v-if="!sort.isSelect || order == 'desc'" class="sort__icon-down" name="arrow-down-fill"></u-icon></u-row>
+        <u-row
+          ><u-icon
+            v-if="!sort.isSelect || order == 'asc'"
+            class="sort__icon-up"
+            name="arrow-up-fill"
+          ></u-icon
+        ></u-row>
+        <u-row
+          ><u-icon
+            v-if="!sort.isSelect || order == 'desc'"
+            class="sort__icon-down"
+            name="arrow-down-fill"
+          ></u-icon
+        ></u-row>
       </view>
       <view v-if="sort.isSelect" class="sort__select-div"></view>
     </view>
   </u-row>
   <u-row class="filter">
     <scroll-view class="filter__scroll-div" :scroll-x="true">
-      <view 
-        :class="['filter__text-div', {'filter__text-div_select': filter.isSelect}, {'filter__text-div_hasValue': filter.value && !filter.isSelect}]" 
-        :style="{display: filter.show ? '' : 'none'}"
-        v-for="(filter, index) in cFilterOption" 
-        :key="index" 
+      <view
+        :class="[
+          'filter__text-div',
+          { 'filter__text-div_select': filter.isSelect },
+          { 'filter__text-div_hasValue': filter.value && !filter.isSelect },
+        ]"
+        :style="{ display: filter.show ? '' : 'none' }"
+        v-for="(filter, index) in cFilterOption"
+        :key="index"
         @click="filterSelect(filter)"
       >
         {{ filter.name }}
@@ -47,164 +71,194 @@
     </scroll-view>
     <view class="filter__button" @click="filterShow = true">
       <view class="filter__button-text">筛选</view>
-      <view class="filter__button-icon-div"><u-icon class="filter__button-icon" name="list"></u-icon></view>
+      <view class="filter__button-icon-div"
+        ><u-icon class="filter__button-icon" name="list"></u-icon
+      ></view>
     </view>
-    <u-popup 
+    <u-popup
       class="filter__popup"
-      v-model="filterShow" 
-      mode="right" 
-      width="85%" 
+      v-model="filterShow"
+      mode="right"
+      width="85%"
     >
       <view class="filter__popup-form">
-        <view class="filter__popup-form-div" v-for="(filter, index) in cFilterOption" :key="index">
-          <view class="filter__popup-form-label">{{filter.name}}</view>
+        <view
+          class="filter__popup-form-div"
+          v-for="(filter, index) in cFilterOption"
+          :key="index"
+        >
+          <view class="filter__popup-form-label">{{ filter.name }}</view>
           <view class="filter__popup-form-value">
-            <u-input v-model="filter.value" v-if="filter.type == 'Input'" type="text" :border="true"></u-input>
+            <u-input
+              v-model="filter.value"
+              v-if="filter.type == 'Input'"
+              type="text"
+              :border="true"
+            ></u-input>
           </view>
         </view>
       </view>
       <!-- <view class="filter__popup-btn-group-fixed"> -->
-        <view class="filter__popup-btn-group">
-          <u-button 
-            size="medium" 
-            shape="circle" 
-            class="filter__popup-btn"
-            @click="filterReset"
-          >重置</u-button>
-          <u-button 
-            size="medium" 
-            shape="circle" 
-            type="error" 
-            class="filter__popup-btn"
-            @click="filterConfirm"
-          >确定</u-button>
-        </view>
+      <view class="filter__popup-btn-group">
+        <u-button
+          size="medium"
+          shape="circle"
+          class="filter__popup-btn"
+          @click="filterReset"
+          >重置</u-button
+        >
+        <u-button
+          size="medium"
+          shape="circle"
+          type="error"
+          class="filter__popup-btn"
+          @click="filterConfirm"
+          >确定</u-button
+        >
+      </view>
       <!-- </view> -->
-		</u-popup>
-    <u-popup 
+    </u-popup>
+    <u-popup
       class="filter__single-popup"
-      v-model="singleFilterShow" 
-      mode="top" 
-      :custom-style="{top: '100px'}" 
+      v-model="singleFilterShow"
+      mode="top"
+      :custom-style="{ top: '100px' }"
       duration="0"
-      :mask-custom-style="{height: maskHeight, top: '100px'}"
+      :mask-custom-style="{ height: maskHeight, top: '100px' }"
       @close="clearFilterSelect"
     >
       <u-row class="filter__single-popup-form-div">
-        <u-input v-model="currentCloneFilter.value" v-if="currentCloneFilter.type == 'Input'" type="text" :border="true"></u-input>
+        <u-input
+          v-model="currentCloneFilter.value"
+          v-if="currentCloneFilter.type == 'Input'"
+          type="text"
+          :border="true"
+        ></u-input>
       </u-row>
       <u-row class="filter__single-popup-btn-group">
-        <u-button 
-          size="medium" 
-          shape="circle" 
+        <u-button
+          size="medium"
+          shape="circle"
           class="filter__single-popup-btn"
           @click="singleFilterReset"
-        >重置</u-button>
-        <u-button 
-          size="medium" 
-          shape="circle" 
-          type="error" 
+          >重置</u-button
+        >
+        <u-button
+          size="medium"
+          shape="circle"
+          type="error"
           class="filter__single-popup-btn"
           @click="singleFilterConfirm"
-        >确定</u-button>
+          >确定</u-button
+        >
       </u-row>
-		</u-popup>
+    </u-popup>
   </u-row>
 </template>
 
 <script>
-import {
-  getFilterValue,
-} from "./filter/util"
+import { getFilterValue } from "./filter/util";
 
 export default {
   name: "HmUviewFilter",
   props: {
     sortOption: {
       type: Object,
-      default: function(){
-        return [{
-          name: 'test1',
-          code: 'test1'
-        },{
-          name: 'test2',
-          code: 'test2'
-        },{
-          name: 'test3',
-          code: 'test3'
-        }]
-      }
+      default: function () {
+        return [
+          {
+            name: "test1",
+            code: "test1",
+          },
+          {
+            name: "test2",
+            code: "test2",
+          },
+          {
+            name: "test3",
+            code: "test3",
+          },
+        ];
+      },
     },
     filterOption: {
       type: Object,
-      default: function(){
-        return [{
-          name: 'test1',
-          code: 'test1',
-          type: 'Input',
-          show: true,
-        },{
-          name: 'test2',
-          code: 'test2',
-          type: 'Input',
-          show: true
-        },{
-          name: 'test3',
-          code: 'test3',
-          type: 'Input',
-          show: true
-        },{
-          name: 'test4',
-          code: 'test4',
-          type: 'Input',
-          show: true
-        },{
-          name: 'test5',
-          code: 'test5',
-          type: 'Input',
-          show: true
-        },{
-          name: 'test6',
-          code: 'test6',
-          type: 'Input',
-          show: true
-        },{
-          name: 'test7',
-          code: 'test7',
-          type: 'Input',
-          show: true
-        },{
-          name: 'test8',
-          code: 'test8',
-          type: 'Input',
-          show: true
-        },{
-          name: 'test9',
-          code: 'test9',
-          type: 'Input',
-          show: true
-        }]
-      }
+      default: function () {
+        return [
+          {
+            name: "test1",
+            code: "test1",
+            type: "Input",
+            show: true,
+          },
+          {
+            name: "test2",
+            code: "test2",
+            type: "Input",
+            show: true,
+          },
+          {
+            name: "test3",
+            code: "test3",
+            type: "Input",
+            show: true,
+          },
+          {
+            name: "test4",
+            code: "test4",
+            type: "Input",
+            show: true,
+          },
+          {
+            name: "test5",
+            code: "test5",
+            type: "Input",
+            show: true,
+          },
+          {
+            name: "test6",
+            code: "test6",
+            type: "Input",
+            show: true,
+          },
+          {
+            name: "test7",
+            code: "test7",
+            type: "Input",
+            show: true,
+          },
+          {
+            name: "test8",
+            code: "test8",
+            type: "Input",
+            show: true,
+          },
+          {
+            name: "test9",
+            code: "test9",
+            type: "Input",
+            show: true,
+          },
+        ];
+      },
     },
     keyColumn: {
       type: String,
-      default: "key"
-    }
+      default: "key",
+    },
   },
-  watch: {
-    
-  },
+  watch: {},
   computed: {
-    sortDivWidth(){
+    sortDivWidth() {
       return this.cSortOption.length > 0 ? 100 / this.cSortOption.length : 0;
     },
-    maskHeight(){
+    maskHeight() {
       return `${window.innerHeight - 100}px`;
     },
   },
   mounted() {
-    this.cSortOption = this.sortOption
-    this.cFilterOption = this.filterOption
+    this.cSortOption = this.sortOption;
+    this.cFilterOption = this.filterOption;
   },
   data() {
     return {
@@ -214,92 +268,104 @@ export default {
       singleFilterShow: false,
       currentFilter: null,
       currentCloneFilter: null,
-      order: 'asc',
-      keyValue: ''
+      order: "asc",
+      keyValue: "",
     };
   },
   methods: {
-    sortSelect(item){
+    sortSelect(item) {
       let self = this;
-      if(item.isSelect){
-        self.order = self.order == 'asc' ? 'desc' : 'asc'
-        return
+      if (item.isSelect) {
+        self.order = self.order == "asc" ? "desc" : "asc";
+        return;
       }
-      self.order = 'asc'
-      self.cSortOption.forEach(sort => {
-        if(sort.code == item.code){
-          sort.isSelect = true
-        }else{
-          sort.isSelect = false
+      self.order = "asc";
+      self.cSortOption.forEach((sort) => {
+        if (sort.code == item.code) {
+          sort.isSelect = true;
+        } else {
+          sort.isSelect = false;
         }
-      })
+      });
     },
-    filterSelect(item){
+    filterSelect(item) {
       let self = this;
       self.singleFilterShow = true;
-      self.cFilterOption.forEach(filter => {
-        if(filter.code == item.code){
-          filter.isSelect = true
-          self.currentFilter = filter
-          self.currentCloneFilter = Object.assign({}, filter)
-        }else{
-          filter.isSelect = false
+      self.cFilterOption.forEach((filter) => {
+        if (filter.code == item.code) {
+          filter.isSelect = true;
+          self.currentFilter = filter;
+          self.currentCloneFilter = Object.assign({}, filter);
+        } else {
+          filter.isSelect = false;
         }
-      })
+      });
     },
-    clearFilterSelect(){
-      this.cFilterOption.forEach(filter => {
-        filter.isSelect = false
-      })
+    clearFilterSelect() {
+      this.cFilterOption.forEach((filter) => {
+        filter.isSelect = false;
+      });
     },
-    singleFilterReset(){
-      this.currentCloneFilter.value = undefined
+    singleFilterReset() {
+      this.currentCloneFilter.value = undefined;
     },
-    singleFilterConfirm(){
-      this.singleFilterShow = false
-      Object.assign(this.currentFilter, this.currentCloneFilter)
+    singleFilterConfirm() {
+      this.singleFilterShow = false;
+      Object.assign(this.currentFilter, this.currentCloneFilter);
     },
-    filterReset(){
-      this.cFilterOption.forEach(filter => {
-        filter.value = undefined
-      })
+    filterReset() {
+      this.cFilterOption.forEach((filter) => {
+        filter.value = undefined;
+      });
     },
-    filterConfirm(){
-      this.filterShow = false
+    filterConfirm() {
+      this.filterShow = false;
     },
-    search(){
+    search() {
       this.$emit("search", {
         filter: this.getFilterValues(),
-        sort: this.getSortValues()
-      })
+        sort: this.getSortValues(),
+      });
     },
-    getFilterValues(){
-      let obj = {}
-      this.cFilterOption.forEach(item => {
+    getFilterValues() {
+      let obj = {};
+      this.cFilterOption.forEach((item) => {
         if (item.value != undefined) {
-          getFilterValue(item, obj)
+          getFilterValue(item, obj);
         }
-      })
-      if(this.keyValue){
-        obj[this.keyColumn] = `*${this.keyValue}*`
+      });
+      if (this.keyValue) {
+        obj[this.keyColumn] = `*${this.keyValue}*`;
       }
-      return obj
+      return obj;
     },
-    getSortValues(){
-      let obj = {}
-      return obj
-    }
+    getSortValues() {
+      let obj = {};
+      return obj;
+    },
+    change(e) {
+      this.$emit("change", e);
+    },
   },
 };
 </script>
 
 <style lang="less">
 .search {
+  &__input-div {
+    flex: 0 0 91.4% !important;
+    padding: 0px !important;
+    margin: 0 4.3% !important;
+  }
   &__input {
-    border-color: #F63515 !important;
-    border-radius: 18px;
-    /deep/ .u-input__input{
-      min-height: 30px !important;
+    // border-color: #f63515 !important;
+    // border-radius: 18px;
+    border: 2px solid;
+    border-color: #4b4c5a !important;
+    border-radius: 8px;
+    /deep/ .u-input__input {
+      // min-height: 30px !important;
+      min-height: 40px !important;
     }
   }
   &__text-div {
@@ -347,7 +413,7 @@ export default {
     display: inline-block;
     margin: 10px 7px;
     padding: 2px 10px;
-    background-color: #F1F2F3;
+    background-color: #f1f2f3;
     border: 1px solid transparent;
     border-radius: 18px;
     &_select {
@@ -356,9 +422,9 @@ export default {
       border-radius: 18px 18px 0px 0px;
     }
     &_hasValue {
-      border: 1px solid #F63515;
-      color: #F63515;
-      background-color: #FDE9E9;
+      border: 1px solid #f63515;
+      color: #f63515;
+      background-color: #fde9e9;
     }
   }
   &__button {
@@ -368,13 +434,11 @@ export default {
     width: 60px;
     align-items: center;
     &-text {
-     
     }
     &-icon-div {
       margin-left: 3px;
     }
     &-icon {
-      
     }
   }
   &__popup {
@@ -385,7 +449,7 @@ export default {
       &-div {
         padding: 10px;
       }
-      &-label{
+      &-label {
         font-size: 16px;
         font-weight: 600;
       }
@@ -405,12 +469,11 @@ export default {
   }
   &__single-popup {
     /deep/ .uni-scroll-view-content {
-      background-color: #F1F2F3;
+      background-color: #f1f2f3;
       padding: 10px;
       width: unset;
     }
     &-form-div {
-      
     }
     &-btn {
       width: 30%;
@@ -424,7 +487,7 @@ export default {
     height: 100px;
     width: 100%;
     position: fixed;
-    top:0;
+    top: 0;
   }
 }
 </style>

@@ -87,6 +87,9 @@ export default {
           return;
         }
 
+        if (cssItem.split(":").length < 2) {
+          return;
+        }
         style[toCamelCase(cssItem.split(":")[0].trim())] = cssItem.split(":")[1].trim();
       });
       return style;

@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import _ from "lodash";
 import { getAction } from "/@/request/http";
 
 /**
@@ -121,12 +120,14 @@ export default {
      * 处理数据映射
      */
     handleDataMapping(data, dataMap) {
-      return _.map(data, (item) => {
+      let ret = [];
+      data.forEach(item => {
         let obj = {};
-        _.each(dataMap, (value, key) => {
+        Object.keys(dataMap).forEach(key => {
+          let value = dataMap[key];
           obj[key] = item[value] || "";
         });
-        return obj;
+        ret.push(obj);
       });
     },
     getCssUnit(value) {

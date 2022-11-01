@@ -18,7 +18,7 @@
           <uni-td v-if="actions.length > 0">
             <view class="uni-group action">
               <button v-for="(action, index) in actions" :key="index" class="uni-button" :size="action.size || 'mini'"
-                :type="action.type || 'primary'" @click="action.callback">{{ action.name }}</button>
+                :type="action.type || 'primary'" @click="action.callback(item)">{{ action.name }}</button>
             </view>
           </uni-td>
         </uni-tr>
@@ -33,7 +33,7 @@
 
 <script>
 import { h, defineComponent } from "vue";
-import cloneDeep from 'lodash/cloneDeep'
+import { cloneDeep } from '/@/utils/util';
 import {
   getAction,
   postAction,
