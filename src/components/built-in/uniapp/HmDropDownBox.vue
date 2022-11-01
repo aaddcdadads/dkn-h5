@@ -293,10 +293,17 @@ export default {
 .text_1 {
   //font-size: v-bind(cValueSize);
   font-weight: 500;
+  // height: 38rpx;
+  margin: 4rpx 12rpx 0;
+  // width:450rpx;
+  font: 26rpx/38rpx PingFangSC-regular;
   color: black;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;
   overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 .select-class {
   position: absolute;

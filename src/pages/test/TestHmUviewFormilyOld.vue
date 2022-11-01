@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HmUviewFormily ref="test" :schema="schema"></HmUviewFormily>
+    <HmUviewFormily ref="test"></HmUviewFormily>
     <u-button @click="validate">validate</u-button>
     <u-button @click="reset">reset</u-button>
     <u-button @click="getValues">getValues</u-button>
@@ -28,8 +28,11 @@ export default {
                 type: 'void',
                 'x-component': 'Form',
                 'x-component-props': {
+                  'style': {
+                    'display': 'flex',
+                    'flexWrap': 'wrap'
+                  },
                   'labelWidth': '10%',
-                  'labelPosition': 'top'
                 },
                 properties: {
                   span: {
@@ -38,6 +41,11 @@ export default {
                     'x-decorator-props': {
                       'label': '文字',
                       'name': 'span',
+                      'style': {
+                        width: '50%',
+                      },
+                      'labelCol': { span: 4 },
+                      'wrapperCol': { span: 14 },
                     },
                     'x-component': 'Span',
                     'x-component-props': {
@@ -54,7 +62,9 @@ export default {
                     'x-decorator-props': {
                       'label': '输入框',
                       'name': 'input',
-                      // 'required': true,
+                      'style': {
+                        width: '50%',
+                      },
                       'class': ['required']
                     },
                     'x-component': 'Input',
