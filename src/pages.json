@@ -920,6 +920,13 @@
       }
     },
     {
+      "path": "pages/test/TestHmUviewFormilyOld",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "pages/test/TestHmImportPage",
       "style": {
         "navigationBarTitleText": "",
