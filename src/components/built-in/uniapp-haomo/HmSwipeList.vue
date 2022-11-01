@@ -68,7 +68,7 @@
               <view
                 v-if="(img.iconname || img.imgsrc) && cLayout['rightIcon']"
                 class="icon"
-                :style="{marginLeft:img.space}"
+                :style="{marginRight:img.space}"
               >
                 <u-icon
                   v-if="img.iconname"
