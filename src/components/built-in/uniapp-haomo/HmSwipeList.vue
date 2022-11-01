@@ -29,6 +29,7 @@
               <view
                 v-if="(img.iconname || img.imgsrc) && cLayout['leftIconBtn']"
                 class="icon"
+                :style="{marginLeft:img.space}"
               >
                 <u-icon
                   v-if="img.iconname"
@@ -40,7 +41,7 @@
                   v-else
                   :src="img.imgsrc"
                   mode="aspectFill"
-                  :style="{ width: img.size + 'px', height: img.size + 'px' }"
+                  :style="{ width: img.width, height: img.height }"
                   @click="imgClick(item, index)"
                 />
               </view>
@@ -67,6 +68,7 @@
               <view
                 v-if="(img.iconname || img.imgsrc) && cLayout['rightIcon']"
                 class="icon"
+                :style="{marginLeft:img.space}"
               >
                 <u-icon
                   v-if="img.iconname"
@@ -78,7 +80,7 @@
                   v-else
                   :src="img.imgsrc"
                   mode="aspectFill"
-                  :style="{ width: img.size + 'px', height: img.size + 'px' }"
+                  :style="{ width: img.width, height: img.height }"
                   @click="imgClick(item, index)"
                 />
               </view>
@@ -104,7 +106,7 @@ export default {
      */
     leftAction: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     /**
      * 滑动配置
@@ -140,9 +142,9 @@ export default {
       default: function () {
         return {
           leftIconBtn: false,
-          leftImg: false,
-          rightImg: true,
-          rightIcon: false,
+          leftImg: true,
+          rightImg: false,
+          rightIcon: true,
         };
       },
     },
@@ -164,6 +166,7 @@ export default {
         return {
           width: "63.72px",
           height: "64px",
+          marginLeft:"36rpx",
           borderRadius: "8px",
           border:"#f1f2f3 2rpx solid"
         };
@@ -189,23 +192,21 @@ export default {
             title: "天安物业",
             content: "今日周年活动注意观察.",
             leftImgSrc: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
-            rightImgSrc:
-              "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
+            rightImgSrc:""
           },
           {
             title: "天安物业",
             content: "今日周年活动注意观察.",
             leftImgSrc:
               "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
-            rightImgSrc: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
+            rightImgSrc: ""
           },
           {
             title: "天安物业",
             content: "今日周年活动注意观察.今日周年活动注意观察.",
             leftImgSrc:
               "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
-            rightImgSrc:
-              "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
+            rightImgSrc:""
           },
         ];
       },
@@ -217,10 +218,13 @@ export default {
       type: Object,
       default: function () {
         return {
-          iconname: "search",
-          imgsrc:"",
+          iconname: "",
           color: "",
           size: "22",
+          imgsrc:"https://block-design.oss-cn-shenzhen.aliyuncs.com/uniapp-icon/juxingText.png",
+          width:"148rpx",
+          height:"68rpx",
+          space:"0rpx"
         };
       },
     },
@@ -394,7 +398,7 @@ export default {
 }
 .content-box {
   background: #fff;
-  padding: 24rpx 36rpx;
+  padding: 24rpx 0rpx;
 }
 .right-box {
   margin-left: auto;
