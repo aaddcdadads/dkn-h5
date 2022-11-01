@@ -373,10 +373,6 @@ export default {
 };
 </script>
 <style scoped>
-* {
-  margin: 0rpx;
-  padding: 0rpx;
-}
 .flex-col {
   display: flex;
   flex-direction: column;
