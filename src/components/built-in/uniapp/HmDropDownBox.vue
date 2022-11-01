@@ -289,10 +289,12 @@ export default {
 }
 .text_head {
   display: inline-block;
+  width: 90% !important;
+  white-space: normal;
 }
 .text_1 {
   margin: 4rpx 12rpx 0;
-  // width:450rpx;
+  width: 85%;
   // font: 26rpx/38rpx PingFangSC-regular;
   color: black;
   display: -webkit-box;
