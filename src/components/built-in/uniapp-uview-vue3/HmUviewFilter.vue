@@ -1,4 +1,5 @@
 <template>
+  <div>
   <u-row
     class="filter__single-popup-top-mask"
     v-if="singleFilterShow"
@@ -154,6 +155,7 @@
       </u-row>
     </u-popup>
   </u-row>
+  </div>
 </template>
 
 <script>
