@@ -55,7 +55,16 @@
             </view>
             <view class="center-box flex-col" :style="{ textAlign: cTextAlign }">
               <text class="content-title">{{ item.title }}</text>
-              <text class="content-text">{{ item.content }}</text>
+              <text class="content-text">
+                <u-tag
+                v-if='item.tagText'
+                :text="item.tagText"
+                color="#8b8b8b"
+                bgColor="#e6e6e6"
+                borderColor="transparent"
+                ></u-tag>
+                {{ item.content }}
+                </text>
             </view>
             <view class="right-box flex-row">
               <image
@@ -203,6 +212,7 @@ export default {
           },
           {
             title: "天安物业",
+            tagText:"新闻",
             content: "今日周年活动注意观察.今日周年活动注意观察.",
             leftImgSrc:
               "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
@@ -372,7 +382,7 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style scoped lang="less">
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -419,15 +429,18 @@ export default {
   justify-content: space-around;
 }
 .content-title {
-  font-size: 16px;
+  font-size: 32rpx;
   color: #0d0d0d;
-  line-height: 24px;
+  line-height: 48rpx;
   font-weight: 500;
 }
 .content-text {
-  font-size: 12px;
+  font-size: 24rpx;
   color: #404040;
   font-weight: 400;
+  /deep/ .u-tag{
+    padding: 6rpx 8rpx;
+  }
 }
 .content-title,
 .content-text {
