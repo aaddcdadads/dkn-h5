@@ -1,33 +1,47 @@
 <template>
   <div>
-    <Form ref="formily" :style="{paddingLeft: '16rpx'}" class="formily" :model="form" v-bind="schema.properties.form['x-component-props']">
-      <FormItem 
-        v-for="(value, key, index) in schema.properties.form.properties" 
-        :prop="key"
-        :key="index"  
-        :class="value['x-decorator-props'].class"
-        v-bind="value['x-decorator-props']"
-      >
-        <Span v-if="value['x-component'] == 'Span'" :value="form[key]" v-bind="value['x-component-props']"></Span>
-        <Pre v-if="value['x-component'] == 'Pre'" :value="form[key]" v-bind="value['x-component-props']"></Pre>
-        <Img v-if="value['x-component'] == 'Img'" :value="form[key]" v-bind="value['x-component-props']" />
-        <Input v-if="value['x-component'] == 'Input'" v-model="form[key]" v-bind="value['x-component-props']"></Input>
-        <Switch v-if="value['x-component'] == 'Switch'" v-model="form[key]" v-bind="value['x-component-props']"></Switch>
-      </FormItem>
-    </Form>
+    <FormProvider id="formily" class="formily" :form="form" :key="key">
+      <SchemaField id="formily" class="formily" :schema="schema" />
+    </FormProvider>
   </div>
 </template>
 
 <script>
 import { h, defineComponent } from "vue";
+
+
+import {
+  Form,
+  FormItem,
+  Button,
+  // Checkbox,
+  //CheckboxGroup,
+  // RangePicker,
+  // DatePicker,
+  Input,
+  // Textarea,
+  // InputNumber,
+  // Radio,
+  // RadioGroup,
+  // Cascader,
+  // Select,
+  // Slider,
+  // // HmSwitch,
+  Switch,
+  // TreeSelect,
+  // TimePicker,
+  // Upload,
+  // UploadImage,
+  // HmAntInput,
+  // HmAntSelect,
+  // HmAntUpload,
+  Span,
+  Pre,
+  Img
+} from "./formily/component"
+import { createForm } from '@formily/core'
+import { FormProvider, createSchemaField } from '@formily/vue'
 import cloneDeep from 'lodash/cloneDeep'
-import Form from '@/uni_modules/vk-uview-ui/components/u-form/u-form.vue'
-import FormItem from '@/uni_modules/vk-uview-ui/components/u-form-item/u-form-item.vue'
-import Button from '@/uni_modules/vk-uview-ui/components/u-button/u-button.vue'
-import Input from '@/uni_modules/vk-uview-ui/components/u-input/u-input.vue'
-import Switch from '@/uni_modules/vk-uview-ui/components/u-switch/u-switch.vue'
-import CheckboxGroup from '@/uni_modules/vk-uview-ui/components/u-checkbox-group/u-checkbox-group.vue'
-import Checkbox from '@/uni_modules/vk-uview-ui/components/u-checkbox/u-checkbox.vue'
 
 import {
   getFeiqiFilterValue, 
@@ -36,61 +50,42 @@ import {
   setFormValue,
 } from "./formily/util"
 
-export const Span = defineComponent({
-  name: 'Span',
-  render() {
-    const props = this.$attrs
-    return h(
-      'span',
-      {
-        ...props,
-      },
-      props.value
-    )
-  },
-})
-
-export const Pre = defineComponent({
-  name: 'Pre',
-  render() {
-    const props = this.$attrs
-    return h(
-      'pre',
-      {
-        ...props,
-      },
-      props.value
-    )
-  },
-})
-
-export const Img = defineComponent({
-  name: 'Img',
-  render() {
-    const props = this.$attrs
-    return h(
-      'img',
-      {
-        ...props,
-        src: props.value
-      }
-    )
-  },
-})
-
-export default {
-  components: { 
+const { SchemaField } = createSchemaField({
+  components: {
     Form,
     FormItem,
-    Button,
+    // Button,
+    // Checkbox,
+    // CheckboxGroup,
+    // RangePicker,
+    // DatePicker,
     Input,
+    // Textarea,
+    // InputNumber,
+    // Radio,
+    // RadioGroup,
+    // Cascader,
+    // Select,
+    // Slider,
+    // // HmSwitch,
     Switch,
-    CheckboxGroup,
-    Checkbox,
+    // TreeSelect,
+    // TimePicker,
+    // Upload,
+    // UploadImage,
+    // HmAntInput,
+    // HmAntSelect,
+    // HmAntUpload,
     Span,
-    Img,
-    Pre
+    Pre,
+    Img
   },
+})
+
+
+
+export default {
+  components: { FormProvider, SchemaField },
   props: {
     /**
       * schema对象
@@ -512,48 +507,22 @@ export default {
         }
       }
     },
-    /**
-     * rules
-     */
-    rules: {
-      type: Object,
-      default: function() {
-        return {
-          input: [
-            {
-              required: true,
-              message: '请输入姓名',
-              trigger: ['change', 'blur']
-            }
-          ]
-        }
-      }
-    }
   },
   data() {
     let self = this
     return {
       key: 0,
-      form: {},
+      form: createForm(),
     }
   },
   watch: {
     schema: {
       handler(val) {
         this.key++;
-        this.createForm();
+        this.form = createForm();
       },
       deep: true
     },
-  },
-	mounted() {
-		this.$refs.formily.setRules(this.rules);
-	},
-  created(){
-    this.createForm()
-  },
-  options: {
-    styleIsolation: 'shared'
   },
   methods: {
     /**
@@ -621,50 +590,43 @@ export default {
      * 设置values
      */
     setValues(values) {
-      Object.assign(this.form, values);
+      return this.form.setValues(values);
     },
     /**
      * 获取values
      */
     getValues() {
-      return this.form;
-    },
-    createForm() {
-      let form = {}
-      let obj = this.schema.properties.form.properties;
-      for (let key in obj) {
-        if(obj[key].default){
-          form[key] = obj[key].default
-        }
-      }
-      this.form = form
+      return this.form.values;
     },
     /**
      * 重置
      */
     reset() {
-      this.createForm();
+      this.form.reset();
     },
     /**
      * 校验
      */
     validate() {
       return new Promise((resolve, reject) => {
-        let values = this.form
-        this.$refs.formily.validate(valid => {
-          if (valid) {
-            resolve(values)
-          } else {
-            reject(values)
-          }
-        });
+        let fields = this.form.fields
+        let values = this.form.values
+        this.form.validate().then(() => {
+          resolve(values)
+        }).catch(e => {
+          this.$message.error(h('span',
+            { style: { 'whiteSpace': 'pre-wrap' } },
+            fields[e[0].address].decoratorProps.label + "：" + e[0].messages
+          ))
+          reject(e)
+        })
       })
     }
   }
 }
 </script>
 <style scoped>
-/deep/ .required .u-form-item--left::before {
+/deep/ .required .ant-form-item-label label::before {
   display: inline-block;
   margin-right: 4px;
   color: #ff4d4f !important;

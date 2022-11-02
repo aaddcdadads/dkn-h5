@@ -289,14 +289,21 @@ export default {
 }
 .text_head {
   display: inline-block;
+  width: 90% !important;
+  white-space: normal;
 }
 .text_1 {
-  //font-size: v-bind(cValueSize);
-  font-weight: 500;
+  margin: 4rpx 12rpx 0;
+  width: 85%;
+  // font: 26rpx/38rpx PingFangSC-regular;
   color: black;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  // word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 .select-class {
   position: absolute;
