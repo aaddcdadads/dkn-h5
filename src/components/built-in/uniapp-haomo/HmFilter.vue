@@ -36,6 +36,31 @@
           <u-icon class="filter__button-icon" name="list"></u-icon>
         </view>
       </view>
+      <u-popup>
+        <u-row class="filter__single-popup-form-div">
+        <u-input
+          v-model="currentCloneFilter.value"
+          v-if="currentCloneFilter.type == 'Input'"
+          type="text"
+          :border="true"
+        ></u-input>
+      </u-row>
+      <u-row class="filter__single-popup-btn-group">
+        <u-button
+          size="medium"
+          shape="circle"
+          type="error"
+          class="filter__single-popup-btn"
+          @click="singleFilterConfirm"
+          >确定</u-button>
+         <u-button
+          size="medium"
+          shape="circle"
+          class="filter__single-popup-btn"
+          @click="singleFilterReset"
+          >重置</u-button>
+      </u-row>
+      </u-popup>
     </u-row>
   </view>
 </template>
@@ -93,9 +118,19 @@ export default {
       console.log("blurSearch", e);
     },
     // 条件选择
-    filterSelect(e) {
-      console.log("filterSelect", e);
-    }
+    filterSelect(item) {
+      let self = this;
+      self.singleFilterShow = true;
+      self.cFilterOption.forEach((filter) => {
+        if (filter.code == item.code) {
+          filter.isSelect = true;
+          self.currentFilter = filter;
+          self.currentCloneFilter = Object.assign({}, filter);
+        } else {
+          filter.isSelect = false;
+        }
+      });
+    },
   }
 };
 </script>
