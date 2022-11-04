@@ -1,161 +1,163 @@
 <template>
-  <div>
-  <u-row
-    class="filter__single-popup-top-mask"
-    v-if="singleFilterShow"
-    @click="singleFilterShow = false"
-  >
-  </u-row>
-  <u-row class="search">
-    <u-col span="12" class="search__input-div">
-      <u-input
-        class="search__input"
-        placeholder="请输入内容"
-        border="surround"
-        shape="circle"
-        v-model="keyValue"
-        @change="change"
-        @blur="search"
-      ></u-input>
-    </u-col>
-    <!-- <u-col span="2" class="search__text-div">
+  <view>
+    <u-row
+      class="filter__single-popup-top-mask"
+      v-if="singleFilterShow"
+      @click="singleFilterShow = false"
+    ></u-row>
+    <u-row class="search">
+      <u-col span="12" class="search__input-div">
+        <u-input
+          class="search__input"
+          placeholder="请输入内容"
+          border="surround"
+          shape="circle"
+          v-model="keyValue"
+          @change="change"
+          @blur="search"
+        ></u-input>
+      </u-col>
+      <!-- <u-col span="2" class="search__text-div">
       <view @click="search"> 搜索 </view>
-    </u-col> -->
-  </u-row>
-  <u-row class="sort">
-    <view
-      class="sort__div"
-      :style="{ width: sortDivWidth + '%' }"
-      v-for="(sort, index) in cSortOption"
-      :key="index"
-      @click="sortSelect(sort)"
-    >
+      </u-col>-->
+    </u-row>
+    <u-row class="sort" v-if="false">
       <view
-        class="sort__text"
-        :style="{ fontWeight: sort.isSelect ? '600' : 'normal' }"
-        >{{ sort.name }}</view
+        class="sort__div"
+        :style="{ width: sortDivWidth + '%' }"
+        v-for="(sort, index) in cSortOption"
+        :key="index"
+        @click="sortSelect(sort)"
       >
-      <view class="sort__icon">
-        <u-row
-          ><u-icon
-            v-if="!sort.isSelect || order == 'asc'"
-            class="sort__icon-up"
-            name="arrow-up-fill"
-          ></u-icon
-        ></u-row>
-        <u-row
-          ><u-icon
-            v-if="!sort.isSelect || order == 'desc'"
-            class="sort__icon-down"
-            name="arrow-down-fill"
-          ></u-icon
-        ></u-row>
+        <view
+          class="sort__text"
+          :style="{ fontWeight: sort.isSelect ? '600' : 'normal' }"
+        >{{ sort.name }}</view>
+        <view class="sort__icon">
+          <u-row>
+            <u-icon
+              v-if="!sort.isSelect || order == 'asc'"
+              class="sort__icon-up"
+              name="arrow-up-fill"
+            ></u-icon>
+          </u-row>
+          <u-row>
+            <u-icon
+              v-if="!sort.isSelect || order == 'desc'"
+              class="sort__icon-down"
+              name="arrow-down-fill"
+            ></u-icon>
+          </u-row>
+        </view>
+        <view v-if="sort.isSelect" class="sort__select-div"></view>
       </view>
-      <view v-if="sort.isSelect" class="sort__select-div"></view>
-    </view>
-  </u-row>
-  <u-row class="filter">
-    <scroll-view class="filter__scroll-div" :scroll-x="true">
-      <view
-        :class="[
+    </u-row>
+    <u-row class="filter">
+      <scroll-view class="filter__scroll-div" :scroll-x="true">
+        <view
+          :class="[
           'filter__text-div',
           { 'filter__text-div_select': filter.isSelect },
           { 'filter__text-div_hasValue': filter.value && !filter.isSelect },
         ]"
-        :style="{ display: filter.show ? '' : 'none' }"
-        v-for="(filter, index) in cFilterOption"
-        :key="index"
-        @click="filterSelect(filter)"
-      >
-        {{ filter.name }}
-      </view>
-    </scroll-view>
-    <view class="filter__button" @click="filterShow = true">
-      <view class="filter__button-text">筛选</view>
-      <view class="filter__button-icon-div"
-        ><u-icon class="filter__button-icon" name="list"></u-icon
-      ></view>
-    </view>
-    <u-popup
-      class="filter__popup"
-      v-model="filterShow"
-      mode="right"
-      width="85%"
-    >
-      <view class="filter__popup-form">
-        <view
-          class="filter__popup-form-div"
+          :style="{ display: filter.show ? '' : '' }"
           v-for="(filter, index) in cFilterOption"
           :key="index"
+          @click="filterSelect(filter)"
         >
-          <view class="filter__popup-form-label">{{ filter.name }}</view>
-          <view class="filter__popup-form-value">
-            <u-input
-              v-model="filter.value"
-              v-if="filter.type == 'Input'"
-              type="text"
-              :border="true"
-            ></u-input>
-          </view>
+          <u-icon
+            class="filter__icon-text"
+            :label="filter.name"
+            labelPos="left"
+            size="22"
+            name="arrow-down"
+          ></u-icon>
+        </view>
+      </scroll-view>
+      <view class="filter__button" @click="filterShow = true">
+        <view class="filter__button-text">筛选</view>
+        <view class="filter__button-icon-div">
+          <u-icon class="filter__button-icon" name="list"></u-icon>
         </view>
       </view>
-      <!-- <view class="filter__popup-btn-group-fixed"> -->
-      <view class="filter__popup-btn-group">
-        <u-button
-          size="medium"
-          shape="circle"
-          class="filter__popup-btn"
-          @click="filterReset"
-          >重置</u-button
-        >
-        <u-button
-          size="medium"
-          shape="circle"
-          type="error"
-          class="filter__popup-btn"
-          @click="filterConfirm"
-          >确定</u-button
-        >
-      </view>
-      <!-- </view> -->
-    </u-popup>
-    <u-popup
-      class="filter__single-popup"
-      v-model="singleFilterShow"
-      mode="top"
-      :custom-style="{ top: '100px' }"
-      duration="0"
-      :mask-custom-style="{ height: maskHeight, top: '100px' }"
-      @close="clearFilterSelect"
-    >
-      <u-row class="filter__single-popup-form-div">
-        <u-input
-          v-model="currentCloneFilter.value"
-          v-if="currentCloneFilter.type == 'Input'"
-          type="text"
-          :border="true"
-        ></u-input>
-      </u-row>
-      <u-row class="filter__single-popup-btn-group">
-        <u-button
-          size="medium"
-          shape="circle"
-          class="filter__single-popup-btn"
-          @click="singleFilterReset"
-          >重置</u-button
-        >
-        <u-button
-          size="medium"
-          shape="circle"
-          type="error"
-          class="filter__single-popup-btn"
-          @click="singleFilterConfirm"
-          >确定</u-button
-        >
-      </u-row>
-    </u-popup>
-  </u-row>
-  </div>
+      <u-popup class="filter__popup" v-model="filterShow" mode="right" width="85%">
+        <view class="filter__popup-form">
+          <view
+            class="filter__popup-form-div"
+            v-for="(filter, index) in cFilterOption"
+            :key="index"
+          >
+            <view class="filter__popup-form-label">{{ filter.name }}</view>
+            <view class="filter__popup-form-value">
+              <u-input
+                v-model="filter.value"
+                v-if="filter.type == 'Input'"
+                type="text"
+                :border="true"
+              ></u-input>
+              <u-input
+                v-model="filter.value"
+                v-if="filter.type == 'Select'"
+                type="select"
+                :border="true"
+              ></u-input>
+            </view>
+          </view>
+        </view>
+        <!-- <view class="filter__popup-btn-group-fixed"> -->
+        <view class="filter__popup-btn-group">
+          <u-button size="medium" shape="circle" class="filter__popup-btn" @click="filterReset">重置</u-button>
+          <u-button
+            size="medium"
+            shape="circle"
+            type="error"
+            class="filter__popup-btn"
+            @click="filterConfirm"
+          >确定</u-button>
+        </view>
+        <!-- </view> -->
+      </u-popup>
+      <u-popup
+        class="filter__single-popup"
+        v-model="singleFilterShow"
+        mode="top"
+        :custom-style="{ top: '296rpx' }"
+        duration="0"
+        :mask-custom-style="{ height: maskHeight, top: '296rpx' }"
+        @close="clearFilterSelect"
+      >
+        <u-row class="filter__single-popup-form-div">
+          <u-input
+            v-model="currentCloneFilter.value"
+            v-if="currentCloneFilter.type == 'Input'"
+            type="text"
+            :border="true"
+          ></u-input>
+          <u-input
+            v-model="currentCloneFilter.value"
+            v-if="currentCloneFilter.type == 'Select'"
+            type="select"
+            :border="true"
+          ></u-input>
+        </u-row>
+        <u-row class="filter__single-popup-btn-group">
+          <u-button
+            size="medium"
+            shape="circle"
+            class="filter__single-popup-btn"
+            @click="singleFilterReset"
+          >重置</u-button>
+          <u-button
+            size="medium"
+            shape="circle"
+            type="error"
+            class="filter__single-popup-btn"
+            @click="singleFilterConfirm"
+          >确定</u-button>
+        </u-row>
+      </u-popup>
+    </u-row>
+  </view>
 </template>
 
 <script>
@@ -163,91 +165,95 @@ import { getFilterValue } from "./filter/util";
 
 export default {
   name: "HmUviewFilter",
+  options: { styleIsolation: "shared" }, //解决/deep/不生效
   props: {
+    /**
+     * 无效
+     */
     sortOption: {
       type: Object,
-      default: function () {
+      default: function() {
         return [
           {
-            name: "test1",
-            code: "test1",
+            name: "时间",
+            code: "时间"
           },
           {
-            name: "test2",
-            code: "test2",
+            name: "状态",
+            code: "状态"
           },
           {
             name: "test3",
-            code: "test3",
-          },
+            code: "test3"
+          }
         ];
-      },
+      }
     },
     filterOption: {
       type: Object,
-      default: function () {
+      default: function() {
         return [
           {
-            name: "test1",
+            name: "时间",
             code: "test1",
             type: "Input",
-            show: true,
+            show: true
           },
           {
-            name: "test2",
+            name: "状态",
             code: "test2",
-            type: "Input",
-            show: true,
+            type: "Select",
+            show: true
           },
           {
             name: "test3",
             code: "test3",
             type: "Input",
-            show: true,
+            show: true
           },
           {
             name: "test4",
             code: "test4",
             type: "Input",
-            show: true,
+            show: true
           },
           {
             name: "test5",
             code: "test5",
             type: "Input",
-            show: true,
+            show: true
           },
           {
             name: "test6",
             code: "test6",
             type: "Input",
-            show: true,
+            show: true
           },
           {
             name: "test7",
             code: "test7",
             type: "Input",
-            show: true,
+            show: true
           },
           {
             name: "test8",
             code: "test8",
             type: "Input",
-            show: true,
+            show: true
           },
           {
             name: "test9",
             code: "test9",
             type: "Input",
-            show: true,
-          },
+            show: true
+          }
         ];
-      },
+      }
     },
     keyColumn: {
       type: String,
-      default: "key",
-    },
+      default: "key"
+    }
   },
   watch: {},
   computed: {
@@ -256,7 +262,7 @@ export default {
     },
     maskHeight() {
       return `${window.innerHeight - 100}px`;
-    },
+    }
   },
   mounted() {
     this.cSortOption = this.sortOption;
@@ -271,7 +277,7 @@ export default {
       currentFilter: null,
       currentCloneFilter: null,
       order: "asc",
-      keyValue: "",
+      keyValue: ""
     };
   },
   methods: {
@@ -282,7 +288,7 @@ export default {
         return;
       }
       self.order = "asc";
-      self.cSortOption.forEach((sort) => {
+      self.cSortOption.forEach(sort => {
         if (sort.code == item.code) {
           sort.isSelect = true;
         } else {
@@ -293,7 +299,7 @@ export default {
     filterSelect(item) {
       let self = this;
       self.singleFilterShow = true;
-      self.cFilterOption.forEach((filter) => {
+      self.cFilterOption.forEach(filter => {
         if (filter.code == item.code) {
           filter.isSelect = true;
           self.currentFilter = filter;
@@ -304,7 +310,7 @@ export default {
       });
     },
     clearFilterSelect() {
-      this.cFilterOption.forEach((filter) => {
+      this.cFilterOption.forEach(filter => {
         filter.isSelect = false;
       });
     },
@@ -316,7 +322,7 @@ export default {
       Object.assign(this.currentFilter, this.currentCloneFilter);
     },
     filterReset() {
-      this.cFilterOption.forEach((filter) => {
+      this.cFilterOption.forEach(filter => {
         filter.value = undefined;
       });
     },
@@ -326,12 +332,12 @@ export default {
     search() {
       this.$emit("search", {
         filter: this.getFilterValues(),
-        sort: this.getSortValues(),
+        sort: this.getSortValues()
       });
     },
     getFilterValues() {
       let obj = {};
-      this.cFilterOption.forEach((item) => {
+      this.cFilterOption.forEach(item => {
         if (item.value != undefined) {
           getFilterValue(item, obj);
         }
@@ -347,8 +353,8 @@ export default {
     },
     change(e) {
       this.$emit("change", e);
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -406,22 +412,37 @@ export default {
 }
 
 .filter {
+  margin-top: 32rpx;
+  height: 88rpx;
   &__scroll-div {
-    display: inline-block;
     white-space: nowrap;
-    width: calc(100% - 60px);
+    width: calc(91.4% - 60px);
+    margin-left: 4.3%;
+    /deep/ .uni-scroll-view-content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
+  &__text-div:not(:first-child) {
+    margin-left: 24rpx;
   }
   &__text-div {
-    display: inline-block;
-    margin: 10px 7px;
-    padding: 2px 10px;
-    background-color: #f1f2f3;
-    border: 1px solid transparent;
-    border-radius: 18px;
+    background: #f0f0f0;
+    padding: 2rpx 24rpx;
+    border-radius: 50px;
+    /deep/ .u-icon__label {
+      white-space: nowrap;
+      font-size: 28rpx;
+      color: #404040;
+      letter-spacing: 0;
+      line-height: 48rpx;
+      font-weight: 400;
+    }
     &_select {
-      height: 33px;
-      margin-bottom: 0px;
-      border-radius: 18px 18px 0px 0px;
+      // height: 33px;
+      // margin-bottom: 0px;
+      // border-radius: 18px 18px 0px 0px;
     }
     &_hasValue {
       border: 1px solid #f63515;
@@ -470,6 +491,7 @@ export default {
     }
   }
   &__single-popup {
+    z-index: 10073 !important; //设置比筛选层级-1
     /deep/ .uni-scroll-view-content {
       background-color: #f1f2f3;
       padding: 10px;
