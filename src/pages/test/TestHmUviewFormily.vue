@@ -193,29 +193,29 @@ export default {
                   //     ]
                   //   }
                   // },
-                  // select: {
-                  //   type: 'string',
-                  //   required: true,
-                  //   'x-decorator': 'FormItem',
-                  //   'x-decorator-props': {
-                  //     'label': '下拉选择',
-                  //     'name': 'select',
-                  //     'label-col': { span: 2 },
-                  //     'wrapper-col': { span: 14 },
-                  //     'style': {
-                  //       width: '100%',
-                  //     }
-                  //   },
-                  //   'x-component': 'Select',
-                  //   'x-component-props': {
-                  //     'allowClear': true,
-                  //     'options': [
-                  //       { label: 'Apple', value: '1' },
-                  //       { label: 'Pear', value: '2' },
-                  //       { label: 'Orange', value: '3' },
-                  //     ]
-                  //   }
-                  // },
+                  select: {
+                    type: 'string',
+                    required: true,
+                    'x-decorator': 'FormItem',
+                    'x-decorator-props': {
+                      'label': '下拉选择',
+                      'name': 'select',
+                      'label-col': { span: 2 },
+                      'wrapper-col': { span: 14 },
+                      'style': {
+                        width: '100%',
+                      }
+                    },
+                    'x-component': 'Select',
+                    'x-component-props': {
+                      'allowClear': true,
+                      'options': [
+                        { label: 'Apple', value: '1' },
+                        { label: 'Pear', value: '2' },
+                        { label: 'Orange', value: '3' },
+                      ]
+                    }
+                  },
                   // slider: {
                   //   type: 'number',
                   //   required: true,
@@ -345,42 +345,42 @@ export default {
 
                   //   }
                   // },
-                  // upload: {
-                  //   type: 'object',
-                  //   'x-decorator': 'FormItem',
-                  //   'x-decorator-props': {
-                  //     'label': '上传',
-                  //     'name': 'upload',
-                  //     'label-col': { span: 2 },
-                  //     'wrapper-col': { span: 14 },
-                  //     'style': {
-                  //       width: '100%',
-                  //     }
-                  //   },
-                  //   'x-component': 'Upload',
-                  //   'x-component-props': {
-                  //     'action': 'http://aacsb-stage.bbblackboard.com/api/obe/uploadFile',
-                  //     '@change': function(info) {
-                  //       if (info.file.status !== 'uploading') {
-                  //         console.log(info.file, info.fileList);
-                  //       }
-                  //       if (info.file.status === 'done') {
-                  //         this.$message.success(`${info.file.name} file uploaded successfully`);
-                  //       } else if (info.file.status === 'error') {
-                  //         this.$message.error(`${info.file.name} file upload failed.`);
-                  //       }
-                  //     }
-                  //   },
-                  //   properties: {
-                  //     button: {
-                  //       type: 'void',
-                  //       'x-component': 'Button',
-                  //       'x-component-props': {
-                  //       },
-                  //       'x-content': "上传文件"
-                  //     }
-                  //   }
-                  // },
+                  upload: {
+                    type: 'object',
+                    'x-decorator': 'FormItem',
+                    'x-decorator-props': {
+                      'label': '上传',
+                      'name': 'upload',
+                      'label-col': { span: 2 },
+                      'wrapper-col': { span: 14 },
+                      'style': {
+                        width: '100%',
+                      }
+                    },
+                    'x-component': 'Upload',
+                    'x-component-props': {
+                      'action': 'http://aacsb-stage.bbblackboard.com/api/obe/uploadFile',
+                      // '@change': function(info) {
+                      //   if (info.file.status !== 'uploading') {
+                      //     console.log(info.file, info.fileList);
+                      //   }
+                      //   if (info.file.status === 'done') {
+                      //     this.$message.success(`${info.file.name} file uploaded successfully`);
+                      //   } else if (info.file.status === 'error') {
+                      //     this.$message.error(`${info.file.name} file upload failed.`);
+                      //   }
+                      // }
+                    },
+                    properties: {
+                      button: {
+                        type: 'void',
+                        'x-component': 'Button',
+                        'x-component-props': {
+                        },
+                        'x-content': "上传文件"
+                      }
+                    }
+                  },
                   // uploadImage: {
                   //   type: 'object',
                   //   'x-decorator': 'FormItem',
