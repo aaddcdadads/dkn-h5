@@ -328,6 +328,7 @@ export default {
     },
     filterConfirm() {
       this.filterShow = false;
+      this.search()
     },
     search() {
       this.$emit("search", {
