@@ -341,7 +341,7 @@ export default {
     bindClick(e, item, index) {
       this.$emit("bindClick", e, item, index);
     },
-    itemClick() {
+    itemClick(e) {
       this.$emit("itemClick", e, item, index);
     },
     imgClick(item, index) {
