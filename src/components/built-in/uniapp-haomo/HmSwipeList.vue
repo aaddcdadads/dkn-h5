@@ -24,7 +24,7 @@
           @prop item - 数组条目数据
         -->
         <slot :item="item">
-          <view class="content-box flex-row">
+          <view class="content-box flex-row"  @click="itemClick($event, item, index)">
             <view class="left-box flex-row">
               <view
                 v-if="(img.iconname || img.imgsrc) && cLayout['leftIconBtn']"
@@ -340,6 +340,9 @@ export default {
     },
     bindClick(e, item, index) {
       this.$emit("bindClick", e, item, index);
+    },
+    itemClick() {
+      this.$emit("itemClick", e, item, index);
     },
     imgClick(item, index) {
       this.$emit("imgClick", item, index);
