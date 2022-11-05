@@ -1,5 +1,5 @@
 <template>
-  <view class="hm-bg-card" v-if="!hidden" :style="{'background-image': `url('${backgroundImage}')`}">
+  <view class="hm-bg-card" v-if="!hidden" :style="{'background-image': `url('${backgroundImage}')`}" @click="bgClick">
     <slot></slot>
   </view>
 </template>
@@ -219,6 +219,9 @@ export default {
         return value;
       }
       return `${value}px`;
+    },
+    bgClick() {
+      this.$emit('bgClick')
     }
   },
 };
