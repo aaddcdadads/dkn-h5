@@ -116,11 +116,8 @@ export default {
   },
   computed: {
     value(){
-      let a = "请选择"
-      console.log('123', this.options, this.modelValue == undefined, !this.modelValue)
       if(!this.options || this.options.length == 0 || !this.modelValue){
-        console.log('222')
-        return a;
+        return "请选择";
       }
       let obj = this.options.find(item => {
         return item.value == this.modelValue.toString()

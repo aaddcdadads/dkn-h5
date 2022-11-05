@@ -11,13 +11,12 @@
         <Span v-if="value['x-component'] == 'Span'" :value="form[key]" v-bind="value['x-component-props']"></Span>
         <Pre v-if="value['x-component'] == 'Pre'" :value="form[key]" v-bind="value['x-component-props']"></Pre>
         <Img v-if="value['x-component'] == 'Img'" :value="form[key]" v-bind="value['x-component-props']" />
-        <Input v-if="value['x-component'] == 'Input'" v-model="form[key]" v-bind="value['x-component-props']"></Input>
-        <Input v-if="value['x-component'] == 'Select'" type="select" v-model="form[key]" v-bind="value['x-component-props']" @click="selectClick(value['x-component-props'])"></Input>
-        <Upload v-if="value['x-component'] == 'Upload'" v-model="form[key]" v-bind="value['x-component-props']"></Upload>
-        <Switch v-if="value['x-component'] == 'Switch'" v-model="form[key]" v-bind="value['x-component-props']"></Switch>
+        <u-input v-if="value['x-component'] == 'Input'" v-model="form[key]" v-bind="value['x-component-props']"></u-input>
+        <Select v-if="value['x-component'] == 'Select'" v-model="form[key]" v-bind="value['x-component-props']"></Select>
+        <u-upload v-if="value['x-component'] == 'Upload'" v-model="form[key]" v-bind="value['x-component-props']"></u-upload>
+        <u-switch v-if="value['x-component'] == 'Switch'" v-model="form[key]" v-bind="value['x-component-props']"></u-switch>
       </FormItem>
     </Form>
-    <u-action-sheet :list="list" v-model="show"></u-action-sheet>
   </div>
 </template>
 
@@ -26,13 +25,7 @@ import { h, defineComponent } from "vue";
 import cloneDeep from 'lodash/cloneDeep'
 import Form from '@/uni_modules/vk-uview-ui/components/u-form/u-form.vue'
 import FormItem from '@/uni_modules/vk-uview-ui/components/u-form-item/u-form-item.vue'
-import Button from '@/uni_modules/vk-uview-ui/components/u-button/u-button.vue'
-import Input from '@/uni_modules/vk-uview-ui/components/u-input/u-input.vue'
-import Switch from '@/uni_modules/vk-uview-ui/components/u-switch/u-switch.vue'
-import CheckboxGroup from '@/uni_modules/vk-uview-ui/components/u-checkbox-group/u-checkbox-group.vue'
-import Checkbox from '@/uni_modules/vk-uview-ui/components/u-checkbox/u-checkbox.vue'
-import Upload from '@/uni_modules/vk-uview-ui/components/u-upload/u-upload.vue'
-
+import Select from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilySelect.vue";
 import {
   getFeiqiFilterValue, 
   getFilterValue,
@@ -86,15 +79,10 @@ export default {
   components: { 
     Form,
     FormItem,
-    Button,
-    Input,
-    Switch,
-    CheckboxGroup,
-    Checkbox,
     Span,
     Img,
     Pre,
-    Upload
+    Select
   },
   props: {
     /**
@@ -540,8 +528,6 @@ export default {
     return {
       key: 0,
       form: {},
-      list: [],
-      show: false,
     }
   },
   watch: {
@@ -563,14 +549,6 @@ export default {
     styleIsolation: 'shared'
   },
   methods: {
-    selectClick(item){
-      this.list = item.options ? item.options.map(item => {
-        return {
-          text: item.label
-        }
-      }) : []
-      this.show = true
-    },
     /**
      * 获取飞企过滤器values
      */
