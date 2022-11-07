@@ -3,7 +3,7 @@
     <u-input type="select" :modelValue="value" @click="cShow = true"></u-input>
     <u-select
       v-model="cShow"
-      :list="options"
+      :list="cOptions"
       :mode="mode"
       :cancel-color="cancelColor"
       :confirm-color="confirmColor"
@@ -20,6 +20,9 @@
 </template>
 
 <script>
+import {
+  getAction,
+} from "/@/request/http";
 export default {
   components: {},
   name: "HmUviewFormilySelect",
@@ -140,9 +143,29 @@ export default {
     cShow(value) {
       if (value == false) this.onCancel();
     },
+    url(value) {
+      this.getData(value);
+    },
+    params: {
+      handler: function (value, oldValue) {
+        if (JSON.stringify(value) == JSON.stringify(oldValue)) {
+          return;
+        }
+        this.getData(null, value);
+      },
+      deep: true,
+    },
+    options: {
+      handler: function (value, oldValue) {
+        this.cOptions = this.mapData(value);
+      },
+      deep: true,
+    },
   },
   mounted() {
     this.cShow = this.show;
+    this.cOptions = this.options
+    this.getData();
   },
   methods: {
     onConfirm(e) {
@@ -153,6 +176,43 @@ export default {
     onCancel(e) {
       this.$emit("update:show", this.cShow);
       this.$emit("cancel", e);
+    },
+    //将查询接口的数据渲染到list中
+    getData(url, params) {
+      let self = this;
+      url = url || this.url;
+      params =
+        params || (this.params ? JSON.parse(JSON.stringify(this.params)) : {});
+      if (!url) return;
+      getAction(url, params).then((resp) => {
+        //查询数据库的数组
+        self.cOptions = [];
+        let data = [];
+        if (resp.data) {
+          data = resp.data.list;
+        }
+        if (resp.result) {
+          data = resp.result.records || resp.result;
+        }
+        if (resp.list) {
+          data = resp.list;
+        }
+        self.cOptions = self.mapData(data);
+      });
+    },
+    //处理数据
+    mapData(data) {
+      let self = this;
+      if (!this.dataMap || Object.keys(this.dataMap).length == 0) {
+        return data;
+      }
+      let keys = Object.keys(this.dataMap);
+      data.forEach((item) => {
+        keys.forEach((key) => {
+          item[key] = item[self.dataMap[key]];
+        });
+      });
+      return data;
     },
   },
 };

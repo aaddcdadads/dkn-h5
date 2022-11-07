@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Form ref="formily" :style="{paddingLeft: '16rpx'}" class="formily" :model="form" v-bind="schema.properties.form['x-component-props']">
+    <Form ref="formily" :style="{padding: '32rpx'}" class="formily" :model="form" v-bind="schema.properties.form['x-component-props']">
       <FormItem 
         v-for="(value, key, index) in schema.properties.form.properties" 
         :prop="key"
