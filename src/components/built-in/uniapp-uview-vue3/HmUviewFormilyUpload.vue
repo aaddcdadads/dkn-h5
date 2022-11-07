@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import jp from "jsonpath";
 export default {
   components: {},
   name: "HmUviewFormilyUpload",
@@ -203,6 +204,13 @@ export default {
     index: {
       type: String,
       default: "upload",
+    },
+    /**
+     * 接口url地址
+     */
+    urlPath: {
+      type: String,
+      default: "result.url"
     }
   },
   data() {
@@ -223,13 +231,20 @@ export default {
     });
   },
   methods: {
-    //移除图片时触发
-    onRemove(index, lists, name) {
+    updateModelValue(lists){
       let modelValue = "";
       modelValue = lists?.map(item => {
-        return item.response ? item.response.result.url : item.url
+        return item.response ? 
+          jp.query(
+            item.response, 
+            this.urlPath.indexOf('$') === 0 ? this.urlPath : `$.${this.urlPath}`
+          )[0] : item.url
       }).join(",")
       this.$emit("update:modelValue", modelValue);
+    },
+    //移除图片时触发
+    onRemove(index, lists, name) {
+      this.updateModelValue(lists)
       this.$emit("onRemove", index, lists, name);
     },
     //图片上传成功时触发
@@ -238,12 +253,8 @@ export default {
     },
     //图片上传后，无论成功或者失败都会触发
     onChange(res, index, lists, name) {
-      let modelValue = "";
       if(res.errMsg == 'uploadFile:ok'){
-        modelValue = lists?.map(item => {
-          return item.response ? item.response.result.url : item.url
-        }).join(",")
-        this.$emit("update:modelValue", modelValue);
+        this.updateModelValue(lists)
       }
       console.log('res', res, index, lists, name)
       this.$emit("onChange", res, index, lists, name);
