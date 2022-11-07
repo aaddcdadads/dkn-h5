@@ -40,7 +40,7 @@ export default {
   name: "HmUviewFormilyUpload",
   props: {
     modelValue: {
-      type: [String, Array],
+      type: String,
     },
     /**
      * 服务器地址
@@ -79,7 +79,7 @@ export default {
      */
     maxCount: {
       type: Number,
-      default: 1,
+      default: 99,
     },
     /**
      * 图片宽度
@@ -215,27 +215,20 @@ export default {
   mounted() {
     if(!this.modelValue) 
       return
-      
-    if(this.maxCount == 1){
-      this.cFileList = [{ url: this.modelValue }]
-    }else{
-      this.cFileList = this.modelValue.map(item => {
-        return {
-          url: item
-        }
-      });
-    }
+    
+    this.cFileList = this.modelValue.split(",").map(item => {
+      return {
+        url: item
+      }
+    });
   },
   methods: {
     //移除图片时触发
     onRemove(index, lists, name) {
-      let modelValue;
-      if(this.maxCount == 1){
-        modelValue = "";
-      }else{
-        modelValue = JSON.parse(JSON.stringify(this.modelValue || []))
-        modelValue.splice(index, 1)
-      }
+      let modelValue = "";
+      modelValue = lists?.map(item => {
+        return item.response ? item.response.result.url : item.url
+      }).join(",")
       this.$emit("update:modelValue", modelValue);
       this.$emit("onRemove", index, lists, name);
     },
@@ -245,15 +238,11 @@ export default {
     },
     //图片上传后，无论成功或者失败都会触发
     onChange(res, index, lists, name) {
-      let modelValue;
+      let modelValue = "";
       if(res.errMsg == 'uploadFile:ok'){
-        let data = JSON.parse(res.data)
-        if(this.maxCount == 1){
-          modelValue = data.result.url
-        }else{
-          modelValue = JSON.parse(JSON.stringify(this.modelValue || []))
-          modelValue.push(data.result.url || "")
-        }
+        modelValue = lists?.map(item => {
+          return item.response ? item.response.result.url : item.url
+        }).join(",")
         this.$emit("update:modelValue", modelValue);
       }
       console.log('res', res, index, lists, name)

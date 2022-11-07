@@ -94,13 +94,19 @@
                 v-if="filter.type == 'Input'"
                 type="text"
                 :border="true"
+                v-bind="filter.props"
               ></u-input>
-              <u-input
+              <Select
                 v-model="filter.value"
                 v-if="filter.type == 'Select'"
+                v-bind="filter.props"
+              ></Select>
+              <Picker
+                v-model="filter.value"
+                v-if="filter.type == 'DatePicker' || filter.type == 'TimePicker'"
                 type="select"
-                :border="true"
-              ></u-input>
+                v-bind="filter.props"
+              ></Picker>
             </view>
           </view>
         </view>
@@ -132,13 +138,19 @@
             v-if="currentCloneFilter.type == 'Input'"
             type="text"
             :border="true"
+            v-bind="currentCloneFilter.props"
           ></u-input>
-          <u-input
+          <Select
             v-model="currentCloneFilter.value"
             v-if="currentCloneFilter.type == 'Select'"
+            v-bind="currentCloneFilter.props"
+          ></Select>
+          <Picker
+            v-model="currentCloneFilter.value"
+            v-if="currentCloneFilter.type == 'DatePicker' || currentCloneFilter.type == 'TimePicker'"
             type="select"
-            :border="true"
-          ></u-input>
+            v-bind="currentCloneFilter.props"
+          ></Picker>
         </u-row>
         <u-row class="filter__single-popup-btn-group">
           <u-button
@@ -162,9 +174,15 @@
 
 <script>
 import { getFilterValue } from "./filter/util";
+import Select from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilySelect.vue";
+import Picker from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyPicker.vue";
 
 export default {
   name: "HmUviewFilter",
+  components: {
+    Select,
+    Picker
+  },
   options: { styleIsolation: "shared" }, //解决/deep/不生效
   props: {
     /**

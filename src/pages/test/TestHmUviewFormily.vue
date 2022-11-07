@@ -381,8 +381,8 @@ export default {
                   },
                   upload: {
                     // default: ['/files/1667796110048/72BED9E6-91B7-4117-9C4E-F2F03AB39BE0.png'],
-                    default: '/files/1667796110048/72BED9E6-91B7-4117-9C4E-F2F03AB39BE0.png',
-                    type: 'object',
+                    default: 'http://aacsb-stage.bbblackboard.com/files/1667796110048/72BED9E6-91B7-4117-9C4E-F2F03AB39BE0.png,http://aacsb-stage.bbblackboard.com/files/1667826283797/42476B84-AE1A-413D-AE79-544D4164096C.png',
+                    type: 'string',
                     'x-decorator': 'FormItem',
                     'x-decorator-props': {
                       'label': '上传',
@@ -396,7 +396,7 @@ export default {
                     'x-component': 'Upload',
                     'x-component-props': {
                       'action': 'http://aacsb-stage.bbblackboard.com/api/obe/uploadFile',
-                      // 'maxCount': 10,
+                      'maxCount': 11,
                     },
                     properties: {
                       button: {
