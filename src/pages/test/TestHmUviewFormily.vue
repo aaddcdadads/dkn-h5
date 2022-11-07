@@ -319,23 +319,32 @@ export default {
                   //     ]
                   //   }
                   // },
-                  // date: {
-                  //   type: 'date',
-                  //   'x-decorator': 'FormItem',
-                  //   'x-decorator-props': {
-                  //     'label': '日期选择',
-                  //     'name': 'date',
-                  //     'label-col': { span: 2 },
-                  //     'wrapper-col': { span: 14 },
-                  //     'style': {
-                  //       width: '100%',
-                  //     }
-                  //   },
-                  //   'x-component': 'DatePicker',
-                  //   'x-component-props': {
-
-                  //   }
-                  // },
+                  date: {
+                    default: '2022-01-01',
+                    type: 'date',
+                    'x-decorator': 'FormItem',
+                    'x-decorator-props': {
+                      'label': '日期选择',
+                      'name': 'date',
+                      'label-col': { span: 2 },
+                      'wrapper-col': { span: 14 },
+                      'style': {
+                        width: '100%',
+                      }
+                    },
+                    'x-component': 'DatePicker',
+                    'x-component-props': {
+                      "format": "YYYY-MM-DD",
+                      "params": {
+                        year: true,
+                        month: true,
+                        day: true,
+                        hour: false,
+                        minute: false,
+                        second: false
+                      }
+                    }
+                  },
                   // rangeDate: {
                   //   type: 'array',
                   //   'x-decorator': 'FormItem',
@@ -353,23 +362,23 @@ export default {
 
                   //   }
                   // },
-                  // time: {
-                  //   type: 'datetime',
-                  //   'x-decorator': 'FormItem',
-                  //   'x-decorator-props': {
-                  //     'label': '时间选择',
-                  //     'name': 'time',
-                  //     'label-col': { span: 2 },
-                  //     'wrapper-col': { span: 14 },
-                  //     'style': {
-                  //       width: '100%',
-                  //     }
-                  //   },
-                  //   'x-component': 'TimePicker',
-                  //   'x-component-props': {
-
-                  //   }
-                  // },
+                  time: {
+                    default: '2022-01-01 00:00:00',
+                    type: 'datetime',
+                    'x-decorator': 'FormItem',
+                    'x-decorator-props': {
+                      'label': '时间选择',
+                      'name': 'time',
+                      'label-col': { span: 2 },
+                      'wrapper-col': { span: 14 },
+                      'style': {
+                        width: '100%',
+                      }
+                    },
+                    'x-component': 'TimePicker',
+                    'x-component-props': {
+                    }
+                  },
                   upload: {
                     type: 'object',
                     'x-decorator': 'FormItem',

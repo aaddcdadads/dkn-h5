@@ -1,6 +1,6 @@
 <template>
   <view style="width: 100%;">
-    <u-input type="select" :modelValue="value" @click="cShow = true"></u-input>
+    <u-input type="select" placeholder="请选择" :modelValue="value" @click="cShow = true"></u-input>
     <u-select
       v-model="cShow"
       :list="cOptions"
@@ -120,7 +120,7 @@ export default {
   computed: {
     value(){
       if(!this.options || this.options.length == 0 || !this.modelValue){
-        return "请选择";
+        return this.modelValue;
       }
       let obj = this.options.find(item => {
         return item.value == this.modelValue.toString()

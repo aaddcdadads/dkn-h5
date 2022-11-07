@@ -15,6 +15,7 @@
         <Select v-if="value['x-component'] == 'Select'" v-model="form[key]" v-bind="value['x-component-props']"></Select>
         <u-upload v-if="value['x-component'] == 'Upload'" v-model="form[key]" v-bind="value['x-component-props']"></u-upload>
         <u-switch v-if="value['x-component'] == 'Switch'" v-model="form[key]" v-bind="value['x-component-props']"></u-switch>
+        <Picker v-if="value['x-component'] == 'DatePicker' || value['x-component'] == 'TimePicker'" v-model="form[key]" v-bind="value['x-component-props']"></Picker>
       </FormItem>
     </Form>
   </div>
@@ -26,6 +27,7 @@ import cloneDeep from 'lodash/cloneDeep'
 import Form from '@/uni_modules/vk-uview-ui/components/u-form/u-form.vue'
 import FormItem from '@/uni_modules/vk-uview-ui/components/u-form-item/u-form-item.vue'
 import Select from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilySelect.vue";
+import Picker from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyPicker.vue";
 import {
   getFeiqiFilterValue, 
   getFilterValue,
@@ -82,7 +84,8 @@ export default {
     Span,
     Img,
     Pre,
-    Select
+    Select,
+    Picker
   },
   props: {
     /**
