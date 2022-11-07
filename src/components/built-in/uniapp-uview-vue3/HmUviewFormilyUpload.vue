@@ -40,10 +40,7 @@ export default {
   name: "HmUviewFormilyUpload",
   props: {
     modelValue: {
-      type: Array,
-      default: function(){
-        return []
-      }
+      type: [String, Array],
     },
     /**
      * 服务器地址
@@ -216,6 +213,9 @@ export default {
   },
   watch: {},
   mounted() {
+    if(!this.modelValue) 
+      return
+      
     if(this.maxCount == 1){
       this.cFileList = [{ url: this.modelValue }]
     }else{
