@@ -380,6 +380,8 @@ export default {
                     }
                   },
                   upload: {
+                    // default: ['/files/1667796110048/72BED9E6-91B7-4117-9C4E-F2F03AB39BE0.png'],
+                    default: '/files/1667796110048/72BED9E6-91B7-4117-9C4E-F2F03AB39BE0.png',
                     type: 'object',
                     'x-decorator': 'FormItem',
                     'x-decorator-props': {
@@ -394,16 +396,7 @@ export default {
                     'x-component': 'Upload',
                     'x-component-props': {
                       'action': 'http://aacsb-stage.bbblackboard.com/api/obe/uploadFile',
-                      // '@change': function(info) {
-                      //   if (info.file.status !== 'uploading') {
-                      //     console.log(info.file, info.fileList);
-                      //   }
-                      //   if (info.file.status === 'done') {
-                      //     this.$message.success(`${info.file.name} file uploaded successfully`);
-                      //   } else if (info.file.status === 'error') {
-                      //     this.$message.error(`${info.file.name} file upload failed.`);
-                      //   }
-                      // }
+                      // 'maxCount': 10,
                     },
                     properties: {
                       button: {
