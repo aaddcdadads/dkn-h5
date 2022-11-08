@@ -147,10 +147,10 @@ export default {
   },
   computed: {
     value(){
-      if(!this.options || this.options.length == 0 || !this.modelValue){
+      if(!this.cOptions || this.cOptions.length == 0 || !this.modelValue){
         return this.modelValue;
       }
-      let obj = this.options.find(item => {
+      let obj = this.cOptions.find(item => {
         return item.value == this.modelValue.toString()
       })
       if(!obj){
