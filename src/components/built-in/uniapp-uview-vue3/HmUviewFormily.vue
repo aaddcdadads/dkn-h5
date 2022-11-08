@@ -11,7 +11,7 @@
         <Span v-if="value['x-component'] == 'Span'" :value="form[key]" v-bind="value['x-component-props']"></Span>
         <Pre v-if="value['x-component'] == 'Pre'" :value="form[key]" v-bind="value['x-component-props']"></Pre>
         <Img v-if="value['x-component'] == 'Img'" :value="form[key]" v-bind="value['x-component-props']" />
-        <u-input v-if="value['x-component'] == 'Input'" v-model="form[key]" v-bind="value['x-component-props']"></u-input>
+        <u-input v-if="value['x-component'] == 'Input'" :border="true" v-model="form[key]" v-bind="value['x-component-props']"></u-input>
         <Select v-if="value['x-component'] == 'Select'" v-model="form[key]" v-bind="value['x-component-props']"></Select>
         <Upload v-if="value['x-component'] == 'Upload'" v-model="form[key]" v-bind="value['x-component-props']"></Upload>
         <u-switch v-if="value['x-component'] == 'Switch'" v-model="form[key]" v-bind="value['x-component-props']"></u-switch>

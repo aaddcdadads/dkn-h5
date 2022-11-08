@@ -1,6 +1,6 @@
 <template>
   <view style="width: 100%;">
-    <u-input type="select" placeholder="请选择" :modelValue="value" @click="cShow = true"></u-input>
+    <u-input type="select" :border="border" placeholder="请选择" :modelValue="value" @click="cShow = true"></u-input>
     <u-select 
       v-if="autoSelect"
       v-model="cShow"
@@ -149,6 +149,13 @@ export default {
      * 自动选择
      */
     autoSelect: {
+      type: Boolean,
+      default: true,
+    },
+    /**
+     * 边框
+     */
+    border: {
       type: Boolean,
       default: true,
     }

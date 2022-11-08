@@ -209,7 +209,6 @@ export default {
                     'x-component': 'Select',
                     'x-component-props': {
                       'allowClear': true,
-                      'url': '/tasmc/tasmc/viewTrafficManagementVisitorApplication/list',
                       'params': {
                         pageSize: -1,
                       },

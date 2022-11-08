@@ -5,8 +5,11 @@
 </template>
 
 <script>
+import HmUviewFilter from "/@/components/built-in/uniapp-uview-vue3/HmUviewFilter.vue";
 export default {
-  components: {},
+  components: {
+    HmUviewFilter
+  },
   data(){
     let self = this;
     return {}
