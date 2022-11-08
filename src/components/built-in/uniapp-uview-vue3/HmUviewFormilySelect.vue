@@ -147,7 +147,7 @@ export default {
   },
   computed: {
     value(){
-      if(!this.cOptions || this.cOptions.length == 0 || !this.modelValue){
+      if(!this.cOptions || this.cOptions.length == 0 || (!this.modelValue && this.modelValue != 0)){
         return this.modelValue;
       }
       let obj = this.cOptions.find(item => {
@@ -214,7 +214,6 @@ export default {
       if (!url) return;
       getAction(url, params).then((resp) => {
         //查询数据库的数组
-        self.cOptions = [];
         let data = [];
         if (resp.data) {
           data = resp.data.list;
