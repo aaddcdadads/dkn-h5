@@ -119,10 +119,10 @@ export default {
       this.Icon = value;
     },
     selectStyle(value) {
-      this.cSelectStyle = value;
+      this.cSelectStyle = this.$u.deepClone(value);
     },
     selectItemStyle(value) {
-      this.cSelectItemStyle = value;
+      this.cSelectItemStyle = this.$u.deepClone(value);
     },
     list: {
       handler: function(value, oldValue) {
@@ -134,8 +134,8 @@ export default {
   mounted() {
     this.Icon = this.icon;
     this.cList = this.list;
-    this.cSelectStyle = this.selectStyle;
-    this.cSelectItemStyle = this.selectItemStyle;
+    this.cSelectStyle = this.$u.deepClone(this.selectStyle);
+    this.cSelectItemStyle = this.$u.deepClone(this.selectItemStyle);
     window.addEventListener("click", () => {
       this.dropShow = false;
     });
@@ -157,7 +157,7 @@ export default {
     },
     onClick(e) {
       this.dropShow = !this.dropShow;
-      console.log("e", this.dropShow);
+      this.$emit("onClick",e);
       event.stopPropagation();
     },
     onChange(item, index) {
