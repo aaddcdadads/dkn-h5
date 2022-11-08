@@ -66,11 +66,20 @@
           @click="filterSelect(filter)"
         >
           <u-icon
+            v-if="filter.code != currentCloneFilter.code || singleFilterShow != true"
             class="filter__icon-text"
             :label="filter.name"
             labelPos="left"
             size="22"
             name="arrow-down"
+          ></u-icon>
+          <u-icon
+            v-if="filter.code == currentCloneFilter.code && singleFilterShow == true"
+            class="filter__icon-text"
+            :label="filter.name"
+            labelPos="left"
+            size="22"
+            name="arrow-up"
           ></u-icon>
         </view>
       </scroll-view>
@@ -98,14 +107,20 @@
               ></u-input>
               <Select
                 v-model="filter.value"
+                v-model:show="filter.props.show"
                 v-if="filter.type == 'Select'"
                 v-bind="filter.props"
+                :autoSelect="false"
+                @optionsChange="e => filter.props.options = e"
+                @showChange="currentSelect = filter"
               ></Select>
               <Picker
                 v-model="filter.value"
+                v-model:show="filter.props.show"
                 v-if="filter.type == 'DatePicker' || filter.type == 'TimePicker'"
-                type="select"
+                :autoSelect="false"
                 v-bind="filter.props"
+                @showChange="currentPicker = filter"
               ></Picker>
             </view>
           </view>
@@ -142,14 +157,20 @@
           ></u-input>
           <Select
             v-model="currentCloneFilter.value"
+            v-model:show="currentCloneFilter.props.show"
             v-if="currentCloneFilter.type == 'Select'"
             v-bind="currentCloneFilter.props"
+            :autoSelect="false"
+            @optionsChange="e => currentCloneFilter.props.options = e"
+            @showChange="currentSelect = currentCloneFilter"
           ></Select>
           <Picker
             v-model="currentCloneFilter.value"
+            v-model:show="currentCloneFilter.props.show"
             v-if="currentCloneFilter.type == 'DatePicker' || currentCloneFilter.type == 'TimePicker'"
-            type="select"
+            :autoSelect="false"
             v-bind="currentCloneFilter.props"
+            @showChange="currentPicker = currentCloneFilter"
           ></Picker>
         </u-row>
         <u-row class="filter__single-popup-btn-group">
@@ -169,6 +190,19 @@
         </u-row>
       </u-popup>
     </u-row>
+    <u-select 
+      v-model="currentSelect.props.show" 
+      v-bind="currentSelect.props"
+      :list="currentSelect.props.options"
+      @confirm="selectOnConfirm"
+    >
+    </u-select>
+    <u-picker 
+      v-model="currentPicker.props.show" 
+      v-bind="currentPicker.props"
+      @confirm="pickerOnConfirm"
+    >
+    </u-picker>
   </view>
 </template>
 
@@ -176,7 +210,7 @@
 import { getFilterValue } from "./filter/util";
 import Select from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilySelect.vue";
 import Picker from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyPicker.vue";
-
+import moment from "moment";
 export default {
   name: "HmUviewFilter",
   components: {
@@ -213,56 +247,103 @@ export default {
         return [
           {
             name: "时间",
-            code: "test1",
-            type: "Input",
+            code: "testTime",
+            type: "TimePicker",
+            props: {},
+            show: true
+          },
+          {
+            name: "日期",
+            code: "testDate",
+            type: "DatePicker",
+            props: {
+              params: {
+                //时间参数
+                year: true,
+                month: true,
+                day: true,
+                hour: false,
+                minute: false,
+                second: false,
+                timestamp: true,
+              },
+              format: "YYYY-MM-DD"
+            },
             show: true
           },
           {
             name: "状态",
             code: "test2",
             type: "Select",
+            props: {
+              url: '/api/design/framework/list',
+              params: {
+                pageSize: -1,
+              },
+              options: [
+                {
+                  label: "是",
+                  value: 0,
+                },
+                {
+                  label: "否",
+                  value: 1,
+                },
+              ],
+              dataMap: {
+                label: 'name',
+                value: 'id',
+              }
+            },
             show: true
           },
           {
             name: "test3",
             code: "test3",
             type: "Input",
+            props: {},
             show: true
           },
           {
             name: "test4",
             code: "test4",
             type: "Input",
+            props: {},
             show: true
           },
           {
             name: "test5",
             code: "test5",
             type: "Input",
+            props: {},
             show: true
           },
           {
             name: "test6",
             code: "test6",
             type: "Input",
+            props: {},
             show: true
           },
           {
             name: "test7",
             code: "test7",
             type: "Input",
+            props: {},
             show: true
           },
           {
             name: "test8",
             code: "test8",
             type: "Input",
+            props: {},
             show: true
           },
           {
             name: "test9",
             code: "test9",
             type: "Input",
+            props: {},
             show: true
           }
         ];
@@ -284,7 +365,30 @@ export default {
   },
   mounted() {
     this.cSortOption = this.sortOption;
-    this.cFilterOption = this.filterOption;
+    // 设置默认值
+    this.cFilterOption = this.filterOption.map(item => {
+      if(item.type == "Select"){
+
+      }
+      if(item.type == "TimePicker" || item.type == "DatePicker"){
+        item.props.format = item.props.format || "YYYY-MM-DD HH:mm:ss"
+        item.props.params = item.props.params || {
+          //时间参数
+          year: true,
+          month: true,
+          day: true,
+          hour: true,
+          minute: true,
+          second: true,
+          timestamp: true,
+          //地区参数
+          province: true,
+          city: true,
+          area: true,
+        }
+      }
+      return item;
+    });
   },
   data() {
     return {
@@ -292,13 +396,23 @@ export default {
       cFilterOption: [],
       filterShow: false,
       singleFilterShow: false,
-      currentFilter: null,
-      currentCloneFilter: null,
+      currentPicker: {props: {}},
+      currentSelect: {props: {}},
+      currentFilter: {code: null},
+      currentCloneFilter: {props: {}},
       order: "asc",
-      keyValue: ""
+      keyValue: "",
+      selectShow: false
     };
   },
   methods: {
+    selectOnConfirm(e){
+      this.currentSelect.value = e[0].value.toString();
+    },
+    pickerOnConfirm(e){
+      console.log('test', this.currentPicker, e)
+      this.currentPicker.value = moment(e.timestamp * 1000).format(this.currentPicker.props.format);
+    },
     sortSelect(item) {
       let self = this;
       if (item.isSelect) {
@@ -316,16 +430,20 @@ export default {
     },
     filterSelect(item) {
       let self = this;
-      self.singleFilterShow = true;
-      self.cFilterOption.forEach(filter => {
-        if (filter.code == item.code) {
-          filter.isSelect = true;
-          self.currentFilter = filter;
-          self.currentCloneFilter = Object.assign({}, filter);
-        } else {
-          filter.isSelect = false;
-        }
-      });
+      if(self.singleFilterShow && item.code == self.currentFilter.code){
+        self.singleFilterShow = false;
+      }else{
+        self.singleFilterShow = true;
+        self.cFilterOption.forEach(filter => {
+          if (filter.code == item.code) {
+            filter.isSelect = true;
+            self.currentFilter = filter;
+            self.currentCloneFilter = Object.assign({}, filter);
+          } else {
+            filter.isSelect = false;
+          }
+        });
+      }
     },
     clearFilterSelect() {
       this.cFilterOption.forEach(filter => {

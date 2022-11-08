@@ -229,11 +229,7 @@ export default {
           url: item
         }
       });
-      console.log('this.cFileList', this.cFileList)
     }
-  },
-  mounted() {
-    
   },
   methods: {
     updateModelValue(lists){

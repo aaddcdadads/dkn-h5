@@ -1,7 +1,8 @@
 <template>
   <view style="width: 100%;">
     <u-input type="select" placeholder="请选择" :modelValue="value" @click="cShow = true"></u-input>
-    <u-select
+    <u-select 
+      v-if="autoSelect"
       v-model="cShow"
       :list="cOptions"
       :mode="mode"
@@ -144,6 +145,13 @@ export default {
         };
       },
     },
+    /**
+     * 自动选择
+     */
+    autoSelect: {
+      type: Boolean,
+      default: true,
+    }
   },
   computed: {
     value(){
@@ -169,7 +177,10 @@ export default {
       this.cShow = value;
     },
     cShow(value) {
-      if (value == false) this.onCancel();
+      if (value == false) 
+        this.onCancel();
+      this.$emit("update:show", this.cShow);
+      this.$emit("showChange", this.cShow);
     },
     url(value) {
       this.getData(value);
@@ -190,19 +201,17 @@ export default {
       deep: true,
     },
   },
-  mounted() {
+  created() {
     this.cShow = this.show;
     this.cOptions = this.options
     this.getData();
   },
   methods: {
     onConfirm(e) {
-      this.$emit("update:show", this.cShow);
       this.$emit("confirm", e);
       this.$emit("update:modelValue", e[0].value.toString());
     },
     onCancel(e) {
-      this.$emit("update:show", this.cShow);
       this.$emit("cancel", e);
     },
     //将查询接口的数据渲染到list中
@@ -225,6 +234,7 @@ export default {
           data = resp.list;
         }
         self.cOptions = self.mapData(data);
+        this.$emit("optionsChange", self.cOptions);
       });
     },
     //处理数据

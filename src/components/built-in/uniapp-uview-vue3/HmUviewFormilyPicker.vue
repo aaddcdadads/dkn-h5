@@ -3,6 +3,7 @@
     <u-input type="select" placeholder="请选择" :modelValue="modelValue" @click="cShow = true"></u-input>
     <u-picker
       v-model="cShow"
+      v-if="autoSelect"
       :mode="mode"
       :title="title"
       :confirm-text="confirmText"
@@ -141,6 +142,13 @@ export default {
     showTimeTag: {
       type: Boolean,
       default: true,
+    },
+    /**
+     * 自动选择
+     */
+    autoSelect: {
+      type: Boolean,
+      default: true,
     }
   },
   computed: {},
@@ -154,7 +162,10 @@ export default {
       this.cShow = value;
     },
     cShow(value) {
-      if (value == false) this.onCancel();
+      if (value == false) 
+        this.onCancel();
+      this.$emit("showChange", this.cShow);
+      this.$emit("update:show", this.cShow);
     },
   },
   mounted() {
@@ -162,12 +173,10 @@ export default {
   },
   methods: {
     onConfirm(e) {
-      this.$emit("update:show", this.cShow);
       this.$emit("confirm", e);
-      this.$emit("update:modelValue", moment(e.timestamp).format(this.format));
+      this.$emit("update:modelValue", moment(e.timestamp * 1000).format(this.format));
     },
     onCancel(e) {
-      this.$emit("update:show", this.cShow);
       this.$emit("cancel", e);
     },
   },

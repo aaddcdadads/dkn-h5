@@ -341,7 +341,8 @@ export default {
                         day: true,
                         hour: false,
                         minute: false,
-                        second: false
+                        second: false,
+                        timestamp: true,
                       }
                     }
                   },
