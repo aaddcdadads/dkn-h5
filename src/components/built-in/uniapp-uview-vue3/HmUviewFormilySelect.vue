@@ -116,6 +116,34 @@ export default {
       type: String,
       default: "取消",
     },
+    /**
+     * GET URL
+     */
+    url: {
+      type: String,
+      default: "",
+    },
+    /**
+     * GET Params
+     */
+    params: {
+      type: Object,
+      default: function () {
+        return {};
+      },
+    },
+    /**
+     * 远程数据映射
+     */
+    dataMap: {
+      type: Object,
+      default: function () {
+        return {
+          label: "label",
+          value: "value",
+        };
+      },
+    },
   },
   computed: {
     value(){
