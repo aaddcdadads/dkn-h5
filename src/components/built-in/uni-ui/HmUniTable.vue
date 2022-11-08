@@ -4,18 +4,18 @@
       <uni-table ref="table" :loading="loading" :border="bordered" stripe :type="rowSelectFlag ? 'selection' : ''"
         emptyText="暂无更多数据" @selection-change="selectionChange">
         <uni-tr>
-          <uni-th v-for="column in columns" :width="column.width || 100" :align="column.align || 'center'">{{
+          <uni-th v-for="column in columns" :width="column.width || 100" :height="cRowHeight" :align="column.align || 'center'">{{
               column.title
           }}</uni-th>
 
-          <uni-th v-if="actions.length > 0" :width="140">操作</uni-th>
+          <uni-th v-if="actions.length > 0" :width="140" :height="cRowHeight">操作</uni-th>
         </uni-tr>
         <uni-tr v-for="(item, index) in cData" :key="index">
-          <uni-td align="center" v-for="column in columns">
+          <uni-td align="center" v-for="column in columns" :height="cRowHeight">
             {{ column.customRender ? "" : (column.formatter ? column.formatter(item[column.dataIndex]) : item[column.dataIndex]) }}
             <render-dom v-if="column.customRender" :vNode="column.customRender(item[column.dataIndex], item, index).children"/>
           </uni-td>
-          <uni-td v-if="actions.length > 0">
+          <uni-td v-if="actions.length > 0" :height="cRowHeight">
             <view class="uni-group action">
               <button v-for="(action, index) in actions" :key="index" class="uni-button" :size="action.size || 'mini'"
                 :type="action.type || 'primary'" @click="action.callback(item)">{{ action.name }}</button>
@@ -242,6 +242,13 @@ export default {
     clearFiltersAndSortersFlag: {
       type: Boolean,
       default: false,
+    },
+    /**
+     * 行高
+     */
+    rowHeight: {
+      type: String,
+      default: '1em'
     }
   },
   data() {
@@ -254,9 +261,13 @@ export default {
         pageSize: 10,
         total: 0
       },
+      cRowHeight: '1em'
     }
   },
   watch: {
+    rowHeight(value) {
+      this.cRowHeight = this.$getCssUnit(value);
+    },
     paginationHidden(value) {
       this.cPaginationHidden = value;
     },
@@ -294,6 +305,7 @@ export default {
     },
   },
   mounted() {
+    this.cRowHeight = this.$getCssUnit(this.rowHeight);
     this.cData = cloneDeep(this.data);
     this.cColumns = cloneDeep(this.columns);
     this.processShowColumnNo(true, true);

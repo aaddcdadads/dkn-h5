@@ -1,7 +1,7 @@
 <template>
   <hm-uni-table></hm-uni-table>
-
-  <hm-uni-table :columns="columns" :url="url"></hm-uni-table>
+  <hm-uni-table :row-height="'6em'" :columns="columns" :data="data"></hm-uni-table>
+  <!-- <hm-uni-table :row-height="'3em'" :columns="columns" :url="url"></hm-uni-table> -->
 </template>
 
 <script>
@@ -29,7 +29,22 @@ export default {
           key: "email",
         },
       ],
-      data: []
+      data: [{
+        key: "1",
+        realname: "胡小根",
+        username: 'hxg',
+        email: "hxg@haomo-studio.com"
+      }, {
+        key: "2",
+        realname: "胡小根",
+        username: 'hxg',
+        email: "hxg@haomo-studio.com"
+      }, {
+        key: "3",
+        realname: "胡小根",
+        username: 'hxg',
+        email: "hxg@haomo-studio.com"
+      }]
     };
   },
   methods: {
