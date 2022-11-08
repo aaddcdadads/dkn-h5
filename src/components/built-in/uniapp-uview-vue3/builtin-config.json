@@ -176,6 +176,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "HmDropDownSelect",
+        "title": "新-下拉框",
+        "importPath": "built-in/uniapp-haomo/HmDropDownSelect",
+        "imgUrl": "built-in/uniapp-haomo/img/HmDropDownSelect.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmCellList",
         "title": "单元列表",
         "importPath": "built-in/uniapp/HmCellList",
