@@ -1,12 +1,12 @@
 <template>
 	<!-- #ifdef H5 -->
-	<td class="uni-table-td" :rowspan="rowspan" :colspan="colspan" :class="{'table--border':border}" :style="{width:width + 'px', height: height, 'text-align':align}">
+	<td v-if="rowspan > 0" class="uni-table-td" :rowspan="rowspan" :colspan="colspan" :class="{'table--border':border}" :style="{width:width + 'px', height: height, 'text-align':align}">
 		<slot></slot>
 	</td>
 	<!-- #endif -->
 	<!-- #ifndef H5 -->
 	<!-- :class="{'table--border':border}"  -->
-	<view class="uni-table-td" :class="{'table--border':border}" :style="{width:width + 'px', height: height ,'text-align':align}">
+	<view v-if="rowspan > 0" class="uni-table-td" :class="{'table--border':border}" :style="{width:width + 'px', height: height ,'text-align':align}">
 		<slot></slot>
 	</view>
 	<!-- #endif -->
