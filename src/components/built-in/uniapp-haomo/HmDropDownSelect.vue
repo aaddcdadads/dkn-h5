@@ -171,6 +171,7 @@ export default {
     
 <style lang="less" scope>
 .u-label {
+  position: relative;
   &__icon {
     display: flex;
     align-items: center;
