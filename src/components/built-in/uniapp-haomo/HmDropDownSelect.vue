@@ -142,9 +142,7 @@ export default {
   },
   data() {
     return {
-      show: true,
       Icon: {},
-      singleFilterShow: false,
       dropShow: false,
       cList: [],
       cSelectStyle: {},
