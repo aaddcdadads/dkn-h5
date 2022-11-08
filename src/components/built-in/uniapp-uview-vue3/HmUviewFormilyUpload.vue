@@ -219,26 +219,36 @@ export default {
       cFileList: [],
     };
   },
-  watch: {},
+  watch: {
+    modelValue(value){
+      if(!this.modelValue) 
+        return
+      
+      this.cFileList = this.modelValue.split(",").map(item => {
+        return {
+          url: item
+        }
+      });
+      console.log('this.cFileList', this.cFileList)
+    }
+  },
   mounted() {
-    if(!this.modelValue) 
-      return
     
-    this.cFileList = this.modelValue.split(",").map(item => {
-      return {
-        url: item
-      }
-    });
   },
   methods: {
     updateModelValue(lists){
       let modelValue = "";
       modelValue = lists?.map(item => {
-        return item.response ? 
-          jp.query(
+        if(item.response){
+          let url = jp.query(
             item.response, 
             this.urlPath.indexOf('$') === 0 ? this.urlPath : `$.${this.urlPath}`
-          )[0] : item.url
+          )[0]
+          item.url = url
+          return url;
+        }else{
+          return item.url;
+        }
       }).join(",")
       this.$emit("update:modelValue", modelValue);
     },
