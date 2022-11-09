@@ -367,6 +367,7 @@ export default {
     this.cSortOption = this.sortOption;
     // 设置默认值
     this.cFilterOption = this.filterOption.map(item => {
+      item.props = item.props || {}
       if(item.type == "Select"){
 
       }
