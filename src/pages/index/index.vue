@@ -1,95 +1,73 @@
 <template>
-  <u-button
-    @click="onClick"
-    :size="size"
-    :type="type"
-    :plain="plain"
-    :disabled="disabled"
-    :shape="shape"
-    :hair-line="hairLine"
-    >{{ text }}</u-button
-  >
+  <view>
+    <HmEcharts :height="chartHeight" :options="chartOptions" />
+  </view>
 </template>
-
 <script>
+import { cloneDeep } from "/@/utils/util";
+import HmEcharts from "@/components/built-in/echarts-for-wx/HmEcharts.vue";
 export default {
-  name: "HmUviewButton",
+  components: {
+    HmEcharts
+  },
   props: {
     /**
-     * 大小
-     * @type Enum
-     * @options ["default","medium","mini"]
+     * 图表高度
      */
-    size: {
+    height: {
       type: String,
-      default: "default",
+      default: "300px"
     },
-
     /**
-     * 样式
-     * @type Enum
-     * @options ["default","primary","success","info","warning","error"]
+     * Echarts表配置
      */
-    type: {
-      type: String,
-      default: "default",
+    option: {
+      type: Object,
+      default: function() {
+        return {
+          xAxis: {
+            type: "category",
+            data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+          },
+          yAxis: {
+            type: "value"
+          },
+          series: [
+            {
+              data: [120, 200, 150, -80, -70, 110, 130],
+              type: "bar"
+            }
+          ]
+        };
+      }
+    }
+  },
+  watch: {
+    height(value) {
+      this.chartHeight = value;
     },
-
-    /**
-     * 是否镂空
-     *
-     */
-    plain: {
-      type: Boolean,
-      default: false,
-    },
-
-    /**
-     * 是否禁用
-     */
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-
-    /**
-     * 形状
-     * @type Enum
-     * @default "square"
-     * @options ["square","circle"]
-     */
-    shape: {
-      type: String,
-      default: "square",
-    },
-
-    /**
-     * 文字
-     */
-    text: {
-      type: String,
-      default: "按钮",
-    },
-
-    /**
-     * 是否显示细边框
-     */
-    hairLine: {
-      type: Boolean,
-      default: true,
-    },
+    option(value) {
+      this.chartOptions = cloneDeep(value);
+    }
   },
   data() {
-    return {};
+    return {
+      chartHeight: "",
+      chartOptions: {}
+    };
+  },
+  mounted() {
+    this.chartHeight = this.height;
+    this.chartOptions = cloneDeep(this.option);
+  },
+  created() {
+    this.initData();
   },
   methods: {
-    onClick(e) {
-      //console.log("e", e);
-      this.$emit("click", e);
-    },
-  },
+    initData() {
+      this.$emit("initData");
+    }
+  }
 };
 </script>
-
-<style lang="less">
-</style>
+<style scoped lang="scss"></style>

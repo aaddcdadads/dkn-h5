@@ -57,7 +57,8 @@
     "vue": "^3.2.26",
     "vue-cookie-next": "^1.0.3",
     "vue-i18n": "^9.1.9",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "zhoukai_utils": "^1.1.0"
   },
   "devDependencies": {
     "@dcloudio/types": "^2.5.16",
