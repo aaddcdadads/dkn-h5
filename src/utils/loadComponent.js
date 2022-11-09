@@ -12,8 +12,7 @@ export default {
       let lastName = arr[arr.length - 1];
       let componentName = lastName == "index.vue" ? 
         arr[arr.length - 2] : lastName.split(".vue")[0]
-      
-      app.component(upperFirst(toCamelCase(componentName)), defineAsyncComponent(module));
+      app.component(upperFirst(componentName), defineAsyncComponent(module));
     })
   }
 }
