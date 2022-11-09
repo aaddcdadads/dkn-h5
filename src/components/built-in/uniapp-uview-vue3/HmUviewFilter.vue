@@ -60,7 +60,7 @@
           { 'filter__text-div_select': filter.isSelect },
           { 'filter__text-div_hasValue': filter.value && !filter.isSelect },
         ]"
-          :style="{ display: filter.show ? '' : '' }"
+          :style="{ display: filter.show ? '' : 'none' }"
           v-for="(filter, index) in cFilterOption"
           :key="index"
           @click="filterSelect(filter)"
@@ -295,7 +295,7 @@ export default {
                 value: 'id',
               }
             },
-            show: true
+            show: false
           },
           {
             name: "test3",
