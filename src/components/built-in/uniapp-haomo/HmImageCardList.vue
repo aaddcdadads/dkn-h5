@@ -7,8 +7,21 @@
       :style="{width:setBoxWidth(this.cShowMode,this.cAboutMargin),margin:'0rpx '+cAboutMargin+' 24rpx',background:listboxbgcolor}"
       @click="onClick(item,index)"
     >
-      <view class="imgbox flex-content" :style="setImgHeight(this.cShowMode,this.cImgStyle)">
-        <img :src="item.imghref" />
+      <view
+        class="imgbox flex-content"
+        :style="setImgHeight(this.cShowMode,this.cImgStyle)"
+        @touchstart="cDeleteIcon.show && getTouchStart(item,index)"
+        @touchend="cDeleteIcon.show && getTouchEnd(item,index)"
+      >
+        <img class="img" :src="item.imghref" />
+        <u-icon
+          v-if="cDeleteIcon.iconShow"
+          class="icon"
+          :name="cDeleteIcon.name"
+          :size="cDeleteIcon.size"
+          :style="cDeleteIcon.style"
+          @click="delClick(item,index)"
+        ></u-icon>
       </view>
       <view v-if="item.title" class="titlebox flex-content">
         <text
@@ -54,9 +67,28 @@ export default {
       type: Object,
       default: function() {
         return {
-          text:"无效字段text,当且仅当showMode为nowrapRow或doubleRank时,高度生效,仅nowrapRow时,宽度生效(单个整体宽度)",
-          width:"100%",
-          height:"336rpx"
+          text:
+            "无效字段text,当且仅当showMode为nowrapRow或doubleRank时,高度生效,仅nowrapRow时,宽度生效(单个整体宽度)",
+          width: "100%",
+          height: "336rpx"
+        };
+      }
+    },
+    /**
+     * 长按图标设置
+     */
+    deleteIcon: {
+      type: Object,
+      default: function() {
+        return {
+          show: true,
+          time: 300,
+          name: "minus-circle",
+          size: 30,
+          style: {
+            right: "12rpx",
+            top: "12rpx"
+          }
         };
       }
     },
@@ -154,6 +186,9 @@ export default {
     imgStyle(value) {
       this.cImgStyle = value;
     },
+    deleteIcon(value) {
+      this.cDeleteIcon = value;
+    },
     showMode(value) {
       this.cShowMode = value;
       this.cWidth = this.setBoxWidth(value, this.cAboutMargin);
@@ -182,6 +217,7 @@ export default {
   mounted() {
     this.cImgsList = this.imgsList;
     this.listboxbgcolor = this.listbgColor;
+    this.cDeleteIcon = this.deleteIcon;
     this.boldtextsize = this.getCssUnit(this.textsize);
     this.boldtextcolor = this.btextcolor;
     this.putextsize = this.getCssUnit(this.mtextsize);
@@ -202,10 +238,13 @@ export default {
       boldtextcolor: "", //标题字颜色
       putextsize: "", //描述字大小
       putextcolor: "", //描述字颜色
-      cImgsList: []
+      cImgsList: [],
+      cDeleteIcon: {},
+      timeOutEvent: 0
     };
   },
   methods: {
+    // 设置分类型 样式
     getClass(e) {
       let className = {
         nowrapRow: "flex-nowrap", //单行不换行滑动
@@ -236,7 +275,8 @@ export default {
     },
     //设置盒子宽度
     setImgHeight(mode, style) {
-      style.height = mode == "doubleRank" || mode == "nowrapRow" ? style.height  : "auto";
+      style.height =
+        mode == "doubleRank" || mode == "nowrapRow" ? style.height : "auto";
       return style;
     },
     getCssUnit(value) {
@@ -244,6 +284,19 @@ export default {
         return value;
       }
       return `${value}px`;
+    },
+    getTouchStart: function(item, index) {
+      var self = this;
+      this.timeOutEvent = setTimeout(function() {
+        self.cDeleteIcon.iconShow = true;
+      }, self.cDeleteIcon.time);
+    },
+    getTouchEnd(item, index) {
+      clearTimeout(this.timeOutEvent);
+    },
+    delClick(e, index) {
+      this.cDeleteIcon.iconShow = false;
+      this.$emit("delClick", e, index);
     },
     onClick: function(item, index) {
       this.$emit("onClick", item, index);
@@ -323,17 +376,23 @@ text {
 .flex-nowrap .listbox {
   max-width: 100%;
 }
-img {
+.imgbox {
+  position: relative;
+}
+.imgbox .img {
   width: 100%;
   height: 100%;
   vertical-align: middle;
+}
+.imgbox .icon {
+  position: absolute;
 }
 .titlebox {
   margin: 10rpx 16rpx;
 }
 
 .adrstext {
-  min-height:82rpx;
+  min-height: 82rpx;
   letter-spacing: 0;
   font-weight: 600;
   overflow: hidden;
@@ -342,7 +401,7 @@ img {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-.multi-column .adrstext{
+.multi-column .adrstext {
   min-height: 0px;
 }
 .textbox {
