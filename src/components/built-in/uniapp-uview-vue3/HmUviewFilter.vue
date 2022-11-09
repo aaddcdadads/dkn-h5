@@ -457,6 +457,7 @@ export default {
     singleFilterConfirm() {
       this.singleFilterShow = false;
       Object.assign(this.currentFilter, this.currentCloneFilter);
+      this.search()
     },
     filterReset() {
       this.cFilterOption.forEach(filter => {

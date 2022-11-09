@@ -7,22 +7,15 @@ export function getFilterValue(item, obj) {
     obj[code] = `*${value}*`;
     return;
   }
-  // 处理日期组件
-  if (isDate(type)) {
-    obj[code] = value?.format('YYYY-MM-DD HH:mm:ss');
-    return;
-  }
-  // 处理时间组件
-  if (isTime(type)) {
-    obj[code] = value?.format('HH:mm:ss');
-    return;
-  }
+
   // 处理范围日期组件
   if (isRangeDate(type)) {
     obj[`${code}_begin`] = value?.[0]?.format('YYYY-MM-DD HH:mm:ss');
     obj[`${code}_end`] = value?.[1]?.format('YYYY-MM-DD HH:mm:ss');
     return;
   }
+
+  obj[code] = value;
 }
 
 function isSelect(type) {
