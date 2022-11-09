@@ -562,13 +562,11 @@ export default {
       flex-wrap: nowrap;
     }
   }
-  &__text-div:not(:first-child) {
-    margin-left: 24rpx;
-  }
   &__text-div {
     background: #f0f0f0;
     padding: 2rpx 24rpx;
     border-radius: 50px;
+    margin-right: 24rpx;
     /deep/ .u-icon__label {
       white-space: nowrap;
       font-size: 28rpx;
