@@ -13,7 +13,7 @@
         @touchstart="cDeleteIcon.show && getTouchStart(item,index)"
         @touchend="cDeleteIcon.show && getTouchEnd(item,index)"
       >
-        <img class="img" :src="item.imghref" />
+        <img class="img" :src="item.imghref" @click="cImgStyle.clickable && popupOpen(item,item.imghref)" />
         <u-icon
           v-if="cDeleteIcon.iconShow"
           class="icon"
@@ -38,6 +38,9 @@
         >{{item.text}}</text>
       </view>
     </view>
+    <u-popup class="popup" v-model="popup.show" mode="center" duration="200" @close="popupClose">
+      <img class="popup__img" :src="popup.src" @click="popupClose" />
+    </u-popup>
   </view>
 </template>
 <script>
@@ -69,6 +72,7 @@ export default {
         return {
           text:
             "无效字段text,当且仅当showMode为nowrapRow或doubleRank时,高度生效,仅nowrapRow时,宽度生效(单个整体宽度)",
+          clickable: false,
           width: "100%",
           height: "336rpx"
         };
@@ -240,6 +244,10 @@ export default {
       putextcolor: "", //描述字颜色
       cImgsList: [],
       cDeleteIcon: {},
+      popup: {
+        show: false,
+        src: ""
+      },
       timeOutEvent: 0
     };
   },
@@ -285,6 +293,14 @@ export default {
       }
       return `${value}px`;
     },
+    popupOpen(e, imgSrc) {
+      this.popup.src = imgSrc;
+      this.popup.show = true;
+    },
+    popupClose() {
+      this.popup.src = null;
+      this.popup.show = false;
+    },
     getTouchStart: function(item, index) {
       var self = this;
       this.timeOutEvent = setTimeout(function() {
@@ -306,7 +322,7 @@ export default {
 };
 </script>
   
-<style>
+<style lang="less" scope>
 page {
   width: 100vw;
   height: 100vh;
@@ -415,6 +431,11 @@ text {
   -webkit-box-orient: vertical;
   letter-spacing: 0;
   font-weight: 400;
+}
+.popup {
+  &__img {
+    max-width: 100vw;
+  }
 }
 </style>
   
