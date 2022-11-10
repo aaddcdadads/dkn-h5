@@ -97,7 +97,7 @@ export function convertCssToVueStyle(css) {
       return;
     }
     let split = cssItem.split(':');
-    if(!split[0] || split[1]){
+    if(!split[0] || !split[1]){
       return;
     }
 
