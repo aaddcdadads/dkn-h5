@@ -96,8 +96,12 @@ export function convertCssToVueStyle(css) {
     if (!cssItem) {
       return;
     }
+    let split = cssItem.split(':');
+    if(!split[0] || split[1]){
+      return;
+    }
 
-    style[toCamelCase(cssItem.split(':')[0].trim())] = cssItem.split(':')[1].trim()
+    style[toCamelCase(split[0].trim())] = split[1].trim()
   })
   return style;
 }
