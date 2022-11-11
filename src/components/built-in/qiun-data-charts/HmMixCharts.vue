@@ -194,7 +194,7 @@ export default {
       },
     },
     /**
-     * 调用格式化
+     * 格式化提示框
      */
     tooltipFormat: {
       type: String,
