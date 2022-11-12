@@ -7,8 +7,7 @@
         class="text_1"
         :style="{ color: valueColor , fontSize : cValueSize }"
         >{{ this.cValue }}</text
-      ></view
-    >
+      ></view>
     <u-icon
       v-if="this.icon"
       class="icon"
@@ -281,20 +280,23 @@ export default {
 
 .u-label {
   //width: 100px;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: row;
   position: relative;
   text-overflow: ellipsis;
   white-space: nowrap;
   //margin-left: 30px;
+  padding-right:12rpx;
 }
 .text_head {
   display: inline-block;
-  width: 90% !important;
+  //width: 90% !important;与属性cTextWidth冲突
   white-space: normal;
 }
 .text_1 {
   margin: 4rpx 12rpx 0;
-  width: 85%;
+  //width: 85%; 取消85%
+  width:calc(100% - 24rpx);
   // font: 26rpx/38rpx PingFangSC-regular;
   color: black;
   display: -webkit-box;
