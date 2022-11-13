@@ -906,6 +906,13 @@
       }
     },
     {
+      "path": "pages/test/TestHmTuiTable",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "pages/test/TestHmUniEleTable",
       "style": {
         "navigationBarTitleText": "",

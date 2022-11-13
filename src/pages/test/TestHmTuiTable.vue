@@ -3,7 +3,7 @@
   <hm-tui-table></hm-tui-table>
 
   <!-- 测试所有属性 -->
-  <hm-tui-table></hm-tui-table>
+  <!-- <hm-tui-table></hm-tui-table> -->
 </template>
 
 <script>
