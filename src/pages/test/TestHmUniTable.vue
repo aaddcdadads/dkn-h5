@@ -1,6 +1,6 @@
 <template>
-  <hm-uni-table></hm-uni-table>
-  <hm-uni-table :row-height="'6em'" :columns="columns" :data="data"></hm-uni-table>
+  <!-- <hm-uni-table></hm-uni-table> -->
+  <hm-uni-table :row-height="'6em'" :combineRows="[0]" :columns="columns" :data="data"></hm-uni-table>
   <!-- <hm-uni-table :row-height="'3em'" :columns="columns" :url="url"></hm-uni-table> -->
 </template>
 

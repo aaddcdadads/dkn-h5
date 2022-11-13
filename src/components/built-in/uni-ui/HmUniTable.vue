@@ -10,8 +10,8 @@
 
           <uni-th v-if="actions.length > 0" :width="140" :height="cRowHeight">操作</uni-th>
         </uni-tr>
-        <uni-tr v-for="(item, index) in cData" :key="index">
-          <uni-td align="center" v-for="column in columns" :height="cRowHeight">
+        <uni-tr v-for="(item, rowIndex) in cData" :key="rowIndex">
+          <uni-td align="center" v-for="(column, colIndex) in columns" :rowspan="getRowspan(rowIndex, colIndex)" :height="calcCombinedRowHeight(rowIndex, colIndex)">
             {{ column.customRender ? "" : (column.formatter ? column.formatter(item[column.dataIndex]) : item[column.dataIndex]) }}
             <render-dom v-if="column.customRender" :vNode="column.customRender(item[column.dataIndex], item, index).children"/>
           </uni-td>
@@ -80,8 +80,6 @@ export default {
             key: "age",
             width: 80,
             customRender: function(item, row, index) {
-              console.log(`item, row, index: `, item, row, index);
-              console.log(h('a', {}, item + '岁'))
               return {
                 children: h('a', {}, item + '岁')
               }
@@ -249,6 +247,16 @@ export default {
     rowHeight: {
       type: String,
       default: '1em'
+    },
+    /**
+     * 合并列
+     * @desc 指定列索引，例如：[0, 3]，为对第1和第4列进行相同数据列合并
+     */
+    combineRows: {
+      type: Array,
+      default: function() {
+        return [];
+      }
     }
   },
   data() {
@@ -460,6 +468,68 @@ export default {
       //console.log("e", e);
       this.$emit("click", e);
     },
+    /**
+     * 根据合并列的配置，计算每个单元格的高度
+     * @param {*} rowIndex 
+     * @param {*} colIndex 
+     */
+    calcCombinedRowHeight(rowIndex, colIndex) {
+      console.log(`calcCombinedRowHeight: `, rowIndex, colIndex, this.combineRows);
+      // 列合并开始的第1行元素
+      let rowspan = this.getRowspan(rowIndex, colIndex);
+      console.log(`calcCombinedRowHeight: `, rowspan, rowIndex, colIndex, this.multiplyRowHeight(rowspan));
+      return this.multiplyRowHeight(rowspan);
+    },
+    getRowspan(rowIndex, colIndex) {
+      if (!this.combineRows || !this.combineRows.length) {
+        console.log(`getRowspan: `, rowIndex, colIndex, 1)
+        return 1;
+      }
+
+      if (this.combineRows.indexOf(colIndex) < 0) {
+        console.log(`getRowspan: `, rowIndex, colIndex, 1)
+        return 1;
+      }
+
+      let column = this.cColumns[colIndex];
+      let dataItem = this.cData[rowIndex][column.dataIndex];
+      let prevDataItem = rowIndex > 0 ? this.cData[rowIndex - 1][column.dataIndex] : null;
+      if (prevDataItem == dataItem) {
+        console.log(`getRowspan: `, rowIndex, colIndex, 0)
+        return 0;
+      }
+
+      // 列合并开始的第1行元素
+      let i;
+      for(i = rowIndex + 1; i < this.cData.length; i++) {
+        let nextDataItem = this.cData[i][column.dataIndex];
+        if (nextDataItem != dataItem) {
+          break;
+        }
+      }
+      console.log(`getRowspan: `, rowIndex, colIndex, i-rowIndex)
+      return i - rowIndex;
+    },
+    /**
+     * 将行高放到n倍
+     * @param {*} n 
+     */
+    multiplyRowHeight(n) {
+      if (!this.cRowHeight) {
+        return this.cRowHeight;
+      }
+      // 提取数字和单位
+      let numReg = /\d+/;
+      let unitReg = /[a-zA-Z]+/;
+      let numMatch = this.cRowHeight.match(numReg);
+      let unitMatch = this.cRowHeight.match(unitReg);
+
+      if (!numMatch || !unitMatch) {
+        return this.cRowHeight;
+      }
+
+      return parseInt(numMatch[0]) * n + unitMatch[0];
+    }
   },
 };
 </script>
