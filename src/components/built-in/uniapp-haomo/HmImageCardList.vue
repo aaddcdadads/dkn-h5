@@ -13,7 +13,13 @@
         @touchstart="cDeleteIcon.show && getTouchStart(item,index)"
         @touchend="cDeleteIcon.show && getTouchEnd(item,index)"
       >
-        <img class="img" :src="item.imghref" @click="cImgStyle.clickable && popupOpen(item,item.imghref)" />
+        <img
+          class="img"
+          :src="item.imghref"
+          v-if="!item.videoSrc"
+          @click="cImgStyle.clickable && popupOpen(item,item.imghref)"
+        />
+        <video class="video" v-else :src="item.videoSrc"></video>
         <u-icon
           v-if="cDeleteIcon.iconShow"
           class="icon"
@@ -128,6 +134,8 @@ export default {
             id: "4",
             imghref:
               "https://img0.baidu.com/it/u=1458576126,4143555283&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+            videoSrc:
+              "https://img.cdn.aliyun.dcloud.net.cn/guide/uniapp/%E7%AC%AC1%E8%AE%B2%EF%BC%88uni-app%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D%EF%BC%89-%20DCloud%E5%AE%98%E6%96%B9%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B@20200317.mp4",
             title: "客厅",
             text: "灯1"
           },
@@ -283,8 +291,7 @@ export default {
     },
     //设置盒子宽度
     setImgHeight(mode, style) {
-      style.height =
-        mode == "doubleRank" || mode == "nowrapRow" ? style.height : "auto";
+      style.height =(mode == "doubleRank" || mode == "nowrapRow") ? style.height : "auto";
       return style;
     },
     getCssUnit(value) {
@@ -402,6 +409,45 @@ text {
 }
 .imgbox .icon {
   position: absolute;
+}
+//重写视频样式
+.video {
+  width: 100%;
+  height: 100%;
+  //控制条的样式
+  /deep/ .uni-video-bar {
+    // display: block !important;
+    height: 44rpx;
+    background-color: rgba(0, 0, 0, 0.5);
+    // background: cyan;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    padding: 0 20rpx;
+    z-index: 0;
+    transform: translate3d(0, 0, 0);
+    //播放暂停，时间，进度条
+    // .uni-video-controls {
+    //   display: flex;
+    //   flex-grow: 1;
+    //   // margin: 0 17rpx;
+    //   margin: 0;
+    //   //播放暂停按钮
+    //   .uni-video-control-button {
+    //     width: 13rpx;
+    //     height: 15rpx;
+    //     padding: 14.5rpx 12.5rpx 14.5rpx 12.5rpx;
+    //     margin-left: -8.5rpx;
+    //     box-sizing: content-box;
+    //     cursor: pointer;
+    //   }
+    // }
+  }
 }
 .titlebox {
   margin: 10rpx 16rpx;
