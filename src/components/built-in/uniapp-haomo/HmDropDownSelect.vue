@@ -46,6 +46,9 @@ export default {
           textSize: "30",
           iconSize: "30",
           boxStyle: {
+            width: "auto",
+            text1: "无效字段,需要整行请把display删除",
+            display: "inline-flex",
             padding: "24rpx",
             backgroundColor: "#ccc"
           }
@@ -91,7 +94,7 @@ export default {
           top: "78rpx",
           left: "0rpx",
           width: "240rpx",
-          maxHeight: "280rpx",
+          maxHeight: "288rpx",
           border: "2rpx solid #dadada",
           borderRadius: "0rpx 0rpx 16rpx 16rpx",
           color: "#000",
@@ -157,7 +160,7 @@ export default {
     },
     onClick(e) {
       this.dropShow = !this.dropShow;
-      this.$emit("onClick",e);
+      this.$emit("onClick", e);
       event.stopPropagation();
     },
     onChange(item, index) {
@@ -183,6 +186,7 @@ export default {
     }
   }
   .select {
+    box-sizing: border-box;
     &__item {
       height: 72rpx;
       padding: 0 20rpx 0 20rpx;

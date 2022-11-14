@@ -32,6 +32,19 @@
       }
     },
     {
+      "path": "components/built-in/uniapp-haomo/HmDropDownSelect",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "pages/test/TestHmDropDownSelect",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "components/built-in/uniapp-haomo/HmSwipeList",
       "style": {
         "navigationBarTitleText": "uni-app"
