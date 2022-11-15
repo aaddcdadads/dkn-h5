@@ -1,22 +1,11 @@
 <template>
   <view class="u-label" @click.stop="onClick">
-    <view 
-      class="text_head" 
-      :style="{ width: cTextWidth}"
-      ><text
-        class="text_1"
-        :style="{ color: valueColor , fontSize : cValueSize }"
-        >{{ this.cValue }}</text
-      ></view>
-    <u-icon
-      v-if="this.icon"
-      class="icon"
-      :name="icon"
-      :color="valueColor"
-      :size="iconSize"
-    ></u-icon>
-    <view 
-      class="select-class"  
+    <view class="text_head" :style="{ width: cTextWidth}">
+      <text class="text_1" :style="{ color: valueColor , fontSize : cValueSize }">{{ this.cValue }}</text>
+    </view>
+    <u-icon v-if="this.icon" class="icon" :name="icon" :color="valueColor" :size="iconSize"></u-icon>
+    <view
+      class="select-class"
       :style="{ backgroundColor: cListColor,top :cSeat,left: cLeftSeat,width:cSeatWidth,maxHeight:cMaxHeight}"
       v-if="show">
       <view
@@ -24,9 +13,9 @@
         :style="{ backgroundColor: this.cValue == item.value ? cMainColor:'', color: this.cValue == item.value ? mainTextColor:'',fontSize : cListSize }"
         @click.stop="onChange(item, index)"
         v-for="(item, index) in cList"
-        :key="index"
-        ><text class="text_list">{{ item.value }}</text></view
-      >
+        :key="index">
+        <text class="text_list">{{ item.value }}</text>
+      </view>
     </view>
   </view>
 </template>
@@ -40,7 +29,7 @@ export default {
      */
     textWidth: {
       type: String,
-      default: "auto",
+      default: "auto"
     },
     /**
      * 选中颜色
@@ -48,29 +37,29 @@ export default {
      */
     mainColor: {
       type: String,
-      default: "#1CB9C2",
+      default: "#1CB9C2"
     },
     /**
      * 选择框文字颜色
      * @type Color
      */
-     mainTextColor: {
+    mainTextColor: {
       type: String,
-      default: "#ffffff",
+      default: "#ffffff"
     },
     /**
      * 默认值
      */
     value: {
       type: String,
-      default: "",
+      default: ""
     },
     /**
      * 默认值字体大小
      */
     valueSize: {
       type: String,
-      default: "20px",
+      default: "20px"
     },
     /**
      * 默认值字体颜色
@@ -78,56 +67,56 @@ export default {
      */
     valueColor: {
       type: String,
-      default: "black",
+      default: "black"
     },
     /**
      * 列表值字体大小
      */
     listSize: {
       type: String,
-      default: "16px",
+      default: "16px"
     },
     /**
      * 图标
      */
     icon: {
       type: String,
-      default: "arrow-down",
+      default: "arrow-down"
     },
     /**
      * 图标大小
      */
     iconSize: {
       type: String,
-      default: "30",
+      default: "30"
     },
     /**
      * 选择框宽度
      */
     seatWidth: {
       type: String,
-      default: "120px",
+      default: "120px"
     },
     /**
      * 最大高度
      */
-    maxHeight:{
+    maxHeight: {
       type: String,
-      default: "140px",
+      default: "140px"
     },
     /**
      * 选项上下位置
      */
     seat: {
       type: String,
-      default: "30px",
+      default: "34px"
     },
     /**
      * 选项左右位置
      */
     leftSeat: {
       type: String,
-      default: "0px",
+      default: "0rpx"
     },
     /**
      * 列表背景颜色
@@ -135,41 +124,41 @@ export default {
      */
     listColor: {
       type: String,
-      default: "#ffffff",
+      default: "#ffffff"
     },
     /**
      * 是否禁用
      */
     disable: {
       type: Boolean,
-      default: false,
+      default: false
     },
     /**
      * 数据
      */
     list: {
       type: Array,
-      default: function () {
+      default: function() {
         return [
           {
             id: "1",
-            value: "全部设备",
+            value: "全部设备"
           },
           {
             id: "2",
-            value: "客厅",
+            value: "客厅"
           },
           {
             id: "3",
-            value: "卧室",
+            value: "卧室"
           },
           {
             id: "4",
-            value: "厨房",
-          },
+            value: "厨房"
+          }
         ];
-      },
-    },
+      }
+    }
   },
 
   watch: {
@@ -205,7 +194,7 @@ export default {
     },
     mainColor(value) {
       this.cMainColor = value;
-    },
+    }
   },
 
   mounted() {
@@ -250,7 +239,7 @@ export default {
 
     handleClick() {
       this.show = false;
-    },
+    }
   },
 
   data() {
@@ -262,14 +251,14 @@ export default {
       cValueSize: "",
       cListSize: "",
       cSeat: "",
-      cListColor:"",
+      cListColor: "",
       cTextWidth: "",
       cSeatWidth: "",
       cMainColor: "",
-      cMaxHeight:"",
-      defaultColorIndex: -1,
+      cMaxHeight: "",
+      defaultColorIndex: -1
     };
-  },
+  }
 };
 </script>
 
@@ -277,7 +266,6 @@ export default {
 .icon {
   margin-left: 3px;
 }
-
 .u-label {
   //width: 100px;
   display: inline-flex;
@@ -286,7 +274,7 @@ export default {
   text-overflow: ellipsis;
   white-space: nowrap;
   //margin-left: 30px;
-  padding-right:12rpx;
+  padding: 8rpx 12rpx;
 }
 .text_head {
   display: inline-block;
@@ -294,9 +282,9 @@ export default {
   white-space: normal;
 }
 .text_1 {
-  margin: 4rpx 12rpx 0;
+  // margin: 4rpx 12rpx 0;
   //width: 85%; 取消85%
-  width:calc(100% - 24rpx);
+  // width:calc(100% - 24rpx);
   // font: 26rpx/38rpx PingFangSC-regular;
   color: black;
   display: -webkit-box;
