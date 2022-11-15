@@ -443,6 +443,14 @@
     "name": "图表",
     "componentList": [
       {
+        "name": "HmEcharts",
+        "title": "Echarts(小程序)",
+        "importPath": "built-in/echarts-for-wx/HmEcharts",
+        "imgUrl": "built-in/echarts-for-wx/img/HmEcharts.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmQiunCharts",
         "title": "秋云图表",
         "importPath": "built-in/qiun-data-charts/HmQiunCharts",
