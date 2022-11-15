@@ -9,7 +9,7 @@
 </template>
 
 <script>
-const echarts = require("../../../../wxcomponents/ec-canvas/echarts");
+const echarts = require("../../../wxcomponents/ec-canvas/echarts");
 export default {
   name: "HmEcharts",
   components: {
