@@ -1,13 +1,11 @@
 /**
  * 转换成小写驼峰
  */
- export function toCamelCase (str) {
-	let STR = str.toLowerCase()
-		.trim()
-		.split(/[ -_]/g)
-		.map(word => word.replace(word[0], word[0]?.toString().toUpperCase()))
-		.join('');
-	return STR.replace(STR[0], STR[0].toLowerCase());
+export function toCamelCase (str) {
+	var regExp=/[-_]\w/ig;
+  return str.replace(regExp,function(match){
+    return match.charAt(1).toUpperCase();
+  });
 };
 
 export function upperFirst(str) {
