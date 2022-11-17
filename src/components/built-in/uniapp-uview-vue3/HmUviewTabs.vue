@@ -175,8 +175,8 @@ export default {
       type: Object,
       default: function() {
         return {
-          borderRadius: "8rpx",
-          background: "rgba(215,0,15,.1)"
+          // borderRadius: "8rpx",
+          // background: "rgba(215,0,15,.1)"
         };
       }
     },
