@@ -1,288 +1,218 @@
 <template>
-  <view v-show="cShowBox">
-    <u-swipe-action
-      v-for="(item, index) in cList"
-      :index="index"
-      :key="index"
-      :show="show || item.show"
-      :disabled="disabled || item.disabled"
-      :options="cOptions"
-      :btn-width="btnWidth"
-      :bg-color="bgColor"
-      @content-click="contentClick(item, index)"
-      @click="onClick"
-      @open="open"
-      class="u-swipeAction"
-    >
-      <view class="flex-row page">
-        <view class="leftBox">
-          <img :src="item.imgSrc || imgSrc" :style="imgStyle" />
-        </view>
-        <view class="rightBox">
-          <text class="text">{{ item.title }}</text>
-          <view class="flex-col group">
-            <text
-              >{{ textOption[0]
-              }}<text class="text_black">{{ item.text1 }}</text></text
+<!-- 开发改造 初稿 -->
+  <view class="inbox" title="节点循环体">
+    <view class="inbox__list flex-row" v-for="(item,index) in cList" :key="index">
+      <view class="circle">
+        <view :class="setLine(item,index,cList,1,0)?'circle_line':'circle_hideline'"></view>
+        <view class="circle_box"></view>
+        <view :class="setLine(item,index,cList,1,1)?'circle_line':'circle_hideline'"></view>
+      </view>
+      <view class="inbox__list_namebox flex-col">
+        <view>{{item.name}}</view>
+      </view>
+      <view class="inbox__list_list flex-col" title="计划循环体">
+        <view
+          class="content__list flex-row"
+          v-for="(itemContent,indexContent) in item.content"
+          :key="indexContent">
+          <view class="circle">
+            <view class="circle_oline"></view>
+          </view>
+          <view class="content__list_state">进度:{{itemContent.state}}</view>
+          <view class="circle">
+            <view :class="setLine(itemContent,indexContent,item.content,2,0)?'circle_line':'circle_hideline'"></view>
+            <view class="circle_box"></view>
+            <view :class="setLine(itemContent,indexContent,item.content,2,1)?'circle_line':'circle_hideline'"></view>
+          </view>
+          <view class="content__list_box">
+            <view class="flex-col">{{itemContent.planTime}}</view>
+          </view>
+          <view class="inbox__list_list-list flex-col" title="计划实施循环组">
+            <view
+              class="flex-row actuaPlan"
+              v-for="(itemPlan,indexPlan) in itemContent.children"
+              :key="indexPlan"
             >
-            <text class="text_2"
-              >{{ textOption[1]
-              }}<text class="text_black">{{ item.text2 }}</text></text
-            >
+              <view class="circle">
+                <view class="circle_oline"></view>
+              </view>
+              <view class="actuaPlan__planbox flex-row">
+                <view class="actuaPlan__planbox_plan">
+                  <view>当月任务:{{itemPlan.plan}}</view>
+                </view>
+                <view class="circle">
+                  <view
+                    :class="setLine(itemPlan,indexPlan,itemContent.children,3,0)?'circle_line':'circle_hideline'"
+                  ></view>
+                  <view class="circle_box"></view>
+                  <view
+                    :class="setLine(itemPlan,indexPlan,itemContent.children,3,1)?'circle_line':'circle_hideline'"
+                  ></view>
+                </view>
+                <view class="actuaPlan__actuabox_actua">
+                  <view>任务完成情况:{{itemPlan.actua}}</view>
+                </view>
+              </view>
+            </view>
           </view>
         </view>
       </view>
-    </u-swipe-action>
+      <view v-if="index != cList.length-1" class="inbox__list_null flex-row">
+        <view class="circle">
+          <view class="circle_oline"></view>
+        </view>
+        <view class="inbox__list_null_box"></view>
+      </view>
+    </view>
   </view>
 </template>
-
 <script>
+import moment from "moment";
 export default {
-  name: "HmExplorationSwipeAction",
   props: {
     /**
-     * 宽度
-     */
-    width: {
-      type: String,
-      default: "100%",
-    },
-    /**
-     * 组件背景颜色
-     * @type Color
-     */
-    bgColor: {
-      type: String,
-      default: "#ffffff",
-    },
-    /**
-     * 按钮宽度
-     */
-    btnWidth: {
-      type: String,
-      default: "160",
-    },
-    /**
-     * 是否禁用按钮
-     */
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * 是否打开
-     */
-    show: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * 间距
-     */
-    spacing: {
-      type: String,
-      default: "0px",
-    },
-    /**
-     * 按钮配置
-     */
-    options: {
-      type: Array,
-      default: function () {
-        return [
-          {
-            style: {
-              color: "#333",
-            },
-            text: "编辑",
-          },
-          {
-            style: {
-              color: "#333",
-            },
-            text: "删除",
-          },
-        ];
-      },
-    },
-    /**
-     * 图片
-     */
-    imgSrc: {
-      type: String,
-      default:
-        "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg2.51tietu.net%2Fupload%2Fwww.51tietu.net%2F2016-051116%2F20160511161410sdgptjfdwql488.jpg&refer=http%3A%2F%2Fimg2.51tietu.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1662108849&t=7b10d0a9d3b6f5b1b75554ae03df8922",
-    },
-    /**
-     * 图片样式
-     */
-    imgStyle: {
-      type: Object,
-      default: function () {
-        return {
-          width: "80px",
-          height: "80px",
-        };
-      },
-    },
-    /**
-    * 副标题
-    */
-    textOption: {
-      type: Array,
-      default: function () {
-        return ["单位:", "时间:"];
-      },
-    },
-    /**
-     * 数据
+     * 数据项
      */
     list: {
       type: Array,
-      default: function () {
+      default: function() {
         return [
           {
             id: 1,
-            show: false,
-            disabled: false,
-            imgSrc: "",
-            title: "电气火灾预警监控系统查堪表",
-            text1: "深圳市中电数通智慧安全科技有限公司",
-            text2: "2022-3-7 10:00:12",
+            name: "报批报建(项目计划01)",
+            state: "1",
+            content: [
+              {
+                state: 1,
+                planTime: "text1.1",
+                actuaTime: "",
+                work: "内容内容",
+                children: [
+                  {
+                    id: "1.1.1",
+                    plan: "text1.1.1",
+                    state: "1",
+                    actua: "实施11"
+                  },
+                  {
+                    id: "1.1.2",
+                    plan: "text1.1.2",
+                    state: "0",
+                    actua: "实施12"
+                  }
+                ]
+              },
+              {
+                state: 1,
+                planTime: "text1.2",
+                actuaTime: "20200812",
+                work: "实施222222",
+                children: []
+              }
+            ]
           },
           {
-            id: 2,
-            title: "电气火灾预警监控系统查堪表",
-            text1: "深圳市中电数通智慧安全科技有限公司",
-            text2: "2022-3-7 10:00:12",
-          },
+            name: "报批报建(项目计划02)",
+            content: [
+              {
+                planTime: "text2.1",
+                children: []
+              },
+              {
+                planTime: "text2.2",
+                children: []
+              }
+            ]
+          }
         ];
-      },
-    },
-    /**
-     * 是否显示
-     */
-    showBox: {
-      type: Boolean,
-      default: true,
-    },
-  },
-  watch: {
-    width(value) {
-      this.cWidth = this.getCssUnit(value);
-    },
-    list(value) {
-      this.cList = value;
-    },
-    options(value) {
-      this.cOptions = value;
-    },
-    spacing(value) {
-      this.cSpacing = this.getCssUnit(value);
-    },
-    showBox(value) {
-      this.cShowBox = value;
-    },
-  },
-  mounted() {
-    this.cWidth = this.getCssUnit(this.width);
-    this.cList = this.list;
-    this.cShowBox = this.showBox;
-    this.cOptions = this.options;
-    this.cSpacing = this.getCssUnit(this.spacing);
-    for (let i = 0; i < this.list.length; i++) {
-      if (this.list[i].show == undefined) {
-        this.list[i].show = false;
       }
     }
+  },
+  watch: {
+    list: {
+      handler: function(value, oldValue) {
+        this.cList = value;
+      },
+      deep: true
+    }
+  },
+  mounted() {
+    this.cList = this.list;
   },
   data() {
     return {
-      cWidth: "",
-      cList: [],
-      cShowBox: true,
-      cOptions: [],
-      cSpacing: "",
+      cList: []
     };
   },
   methods: {
-    onClick(index, index1) {
-      //console.log({ index, index1 });
-      this.$emit("slideClick", { index, index1 });
-    },
-    contentClick(item, index) {
-      //console.log("contentClick", item, index);
-      this.$emit("onClick", { item, index });
-    },
-    // 如果打开一个的时候，不需要关闭其他，则无需实现本方法
-    open(index) {
-      // 先将正在被操作的swipeAction标记为打开状态，否则由于props的特性限制，
-      // 原本为'false'，再次设置为'false'会无效
-      this.cList[index].show = true;
-      this.cList.map((val, idx) => {
-        if (index != idx) this.cList[idx].show = false;
-      });
-    },
-    getCssUnit(value) {
-      if (isNaN(Number(value))) {
-        return value;
+    getDate(e, t) {
+      if (!e) {
+        return e;
       }
-      return `${value}px`;
+      if (t == "0") {
+        return moment(e * 1000).format("YYYY年M月D日");
+      } else {
+        return moment(e * 1000).format("YYYY-MM-DD");
+      }
     },
-  },
+    setLine(e, index, arr, depth, align,ind) {
+      let len = this.cList.length - 1;
+      if (depth == 1) {
+        if (index == 0 && align == 0) return false;
+        if (
+          index == len &&
+          align == 1 &&
+          (e.content == undefined || e.content.length <= 0)
+        )
+          return false;
+      }
+      if (depth == 2) {
+        if (
+          index == arr.length - 1 &&
+          align == 1 &&
+          ind == len &&
+          (e.children == undefined || e.children.length <= 0)
+        )
+          return false;
+      }
+      if (depth == 3) {
+        if (index == 0 && align == 0) return false;
+        if (index == arr.length - 1 && align == 1) return false;
+      }
+      return true;
+    },
+    // 控制竖线显示(item,index,数组，深度，上0下1,整体下标)
+    getLine(e, index, arr, depth, align, ind, ind2) {
+      let len = this.cList.length - 1;
+      if (depth == 1) {
+        if (index == 0 && align == 0) return false;
+        if (
+          index == len &&
+          align == 1 &&
+          (e.content == undefined || e.content.length <= 0)
+        )
+          return false;
+      }
+      if (depth == 2) {
+        if (
+          index == arr.length - 1 &&
+          align == 1 &&
+          ind == len &&
+          (e.children == undefined || e.children.length <= 0)
+        )
+          return false;
+      }
+      if (depth == 3) {
+        let len3 = this.cList[ind].content.length - 1;
+        if (index == arr.length - 1 && align == 1 && ind == len && ind2 == len3)
+          return false;
+      }
+      return true;
+    }
+  }
 };
 </script>
-
-<style lang="less">
-.u-swipeAction {
-  width: v-bind(cWidth);
-  margin-top: v-bind(cSpacing);
-  border: 1px solid #e2e2e2;
-}
-.u-swipeAction:first-child {
-  margin-top: 0px !important;
-}
-
-.page {
-  padding: 12px 12px;
-  background-color: #ffffff;
-  width: 100%;
-  overflow-y: auto;
-  height: 100%;
-  .text {
-    color: rgb(51, 51, 51);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    white-space: nowrap;
-  }
-  .group {
-    margin-top: 8px;
-    color: rgb(153, 153, 153);
-    font-size: 12px;
-    line-height: 17px;
-    white-space: nowrap;
-    .text_black {
-      color: rgb(51, 51, 51);
-    }
-    .text_2 {
-      margin-top: 4px;
-    }
-  }
-}
-.rightBox {
-  padding-left: 12px;
-}
-.list-item {
-  padding-bottom: 18px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 4px;
-  margin-top: 30px;
-}
-
-.list-item:last-of-type {
-  margin-top: 0px;
-}
+<style lang="less" scoped>
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -292,49 +222,97 @@ export default {
   display: flex;
   flex-direction: column;
 }
-
-.justify-start {
-  display: flex;
-  justify-content: flex-start;
+// 节点循环
+.inbox {
+  width: 100%;
+  padding-right: 46rpx;
+  &__list {
+    flex-wrap: wrap;
+    &_namebox {
+      width: calc(100% - 80rpx);
+      padding: 24rpx 0rpx;
+      font-size: 14px;
+      font-family: PingFang SC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #df1b29;
+      line-height: 40rpx;
+    }
+    &_list {
+      width: 100%;
+      &-list {
+        width: 100%;
+      }
+    }
+    &_null {
+      width: 100%;
+      &_box {
+        min-height: 200rpx;
+      }
+    }
+  }
 }
-
-.justify-center {
-  display: flex;
-  justify-content: center;
+// 计划
+.content__list {
+  flex-wrap: wrap;
+  &_state {
+    width: calc(100% - 80rpx);
+    margin-top: 44rpx;
+    text-align: right;
+  }
+  &_box {
+    width: calc(100% - 80rpx);
+    padding: 24rpx;
+    box-shadow: 8rpx 8rpx 20rpx 0rpx rgba(0, 0, 0, 0.05);
+    border-radius: 20rpx;
+    border: 2rpx solid #38b865;
+  }
 }
-
-.justify-end {
-  display: flex;
-  justify-content: flex-end;
+// 实施计划
+.actuaPlan {
+  width: 100%;
+  &__planbox,
+  &__actuabox {
+    width: 100%;
+    &_plan,
+    &_actua {
+      width: calc(50% - 38rpx);
+      padding: 15px 0px;
+    }
+    &_plan {
+      text-align: right;
+    }
+    &_actua {
+      text-align: left;
+    }
+  }
 }
-
-.justify-evenly {
+//连接线
+.circle {
   display: flex;
-  justify-content: space-evenly;
-}
-
-.justify-around {
-  display: flex;
-  justify-content: space-around;
-}
-
-.justify-between {
-  display: flex;
-  justify-content: space-between;
-}
-
-.items-start {
-  display: flex;
-  align-items: flex-start;
-}
-
-.items-center {
-  display: flex;
+  flex-direction: column;
   align-items: center;
-}
-
-.items-end {
-  display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  width: 76rpx;
+  flex-shrink: 0;
+  &_box {
+    width: 20rpx;
+    height: 20rpx;
+    background: cyan;
+  }
+  &_line,
+  &_hideline,
+  &_oline {
+    width: 2rpx;
+    height: calc(50% - 10rpx);
+    background: #EAEAEA;
+    display: flex;
+    flex-shrink: 0;
+  }
+  &_oline {
+    height: 100%;
+  }
+  &_hideline {
+    visibility: hidden;
+  }
 }
 </style>
