@@ -2,20 +2,60 @@
   <div>
     <Form ref="formily" :style="{padding: '32rpx'}" class="formily" :model="form" v-bind="schema.properties.form['x-component-props']">
       <FormItem 
-        v-for="(value, key, index) in schema.properties.form.properties" 
+        v-for="(value, key, index) in cSchema.properties.form.properties" 
         :prop="key"
         :key="index"  
         :class="value['x-decorator-props'].class"
         v-bind="value['x-decorator-props']"
       >
-        <Span v-if="value['x-component'] == 'Span'" :value="form[key]" v-bind="value['x-component-props']"></Span>
-        <Pre v-if="value['x-component'] == 'Pre'" :value="form[key]" v-bind="value['x-component-props']"></Pre>
-        <Img v-if="value['x-component'] == 'Img'" :value="form[key]" v-bind="value['x-component-props']" />
-        <u-input v-if="value['x-component'] == 'Input'" :border="true" v-model="form[key]" v-bind="value['x-component-props']"></u-input>
-        <Select v-if="value['x-component'] == 'Select'" v-model="form[key]" v-bind="value['x-component-props']"></Select>
-        <Upload v-if="value['x-component'] == 'Upload'" v-model="form[key]" v-bind="value['x-component-props']"></Upload>
-        <u-switch v-if="value['x-component'] == 'Switch'" v-model="form[key]" v-bind="value['x-component-props']"></u-switch>
-        <Picker v-if="value['x-component'] == 'DatePicker' || value['x-component'] == 'TimePicker'" v-model="form[key]" v-bind="value['x-component-props']"></Picker>
+        <Span 
+          v-if="value['x-component'] == 'Span'" 
+          :value="form[key]" 
+          v-bind="value['x-component-props']"
+          v-on="value['x-component-events']"
+        ></Span>
+        <Pre 
+          v-if="value['x-component'] == 'Pre'"
+          :value="form[key]" 
+          v-bind="value['x-component-props']"
+          v-on="value['x-component-events']"
+        ></Pre>
+        <Img 
+          v-if="value['x-component'] == 'Img'" 
+          :value="form[key]" 
+          v-bind="value['x-component-props']" 
+          v-on="value['x-component-events']"
+        />
+        <u-input 
+          v-if="value['x-component'] == 'Input'" 
+          :border="true" v-model="form[key]" 
+          v-bind="value['x-component-props']"
+          v-on="value['x-component-events']"
+        ></u-input>
+        <Select 
+          v-if="value['x-component'] == 'Select'" 
+          v-model="form[key]" 
+          v-bind="value['x-component-props']"
+          v-on="value['x-component-events']"
+        ></Select>
+        <Upload 
+          v-if="value['x-component'] == 'Upload'" 
+          v-model="form[key]" 
+          v-bind="value['x-component-props']"
+          v-on="value['x-component-events']"
+        ></Upload>
+        <u-switch 
+          v-if="value['x-component'] == 'Switch'" 
+          v-model="form[key]" 
+          v-bind="value['x-component-props']"
+          v-on="value['x-component-events']"
+        ></u-switch>
+        <Picker 
+          v-if="value['x-component'] == 'DatePicker' || value['x-component'] == 'TimePicker'" 
+          v-model="form[key]" 
+          v-bind="value['x-component-props']"
+          v-on="value['x-component-events']"
+        ></Picker>
       </FormItem>
     </Form>
   </div>
@@ -533,6 +573,7 @@ export default {
     return {
       key: 0,
       form: {},
+      cSchema: {}
     }
   },
   watch: {
@@ -540,6 +581,7 @@ export default {
       handler(val) {
         this.key++;
         this.createForm();
+        this.createSchema()
       },
       deep: true
     },
@@ -549,6 +591,7 @@ export default {
 	},
   created(){
     this.createForm()
+    this.createSchema()
   },
   options: {
     styleIsolation: 'shared'
@@ -631,11 +674,33 @@ export default {
       let form = {}
       let obj = this.schema.properties.form.properties;
       for (let key in obj) {
-        if(obj[key].default){
-          form[key] = obj[key].default
-        }
+        form[key] = this.form[key] || obj[key].default
       }
       this.form = form
+    },
+    createSchema() {
+      this.cSchema = cloneDeep(this.schema)
+      let obj = this.cSchema.properties.form.properties;
+      for (let key in obj) {
+        this.createEvents(obj[key])
+      }
+    },
+    createEvents(obj){
+      let props = obj['x-component-props'];
+      let newProps = {}
+      let newEvents = {}
+      if(obj['x-component-props']){
+        for (let key in props) {
+          if(key.indexOf('@') > -1){
+            let newKey = key.replace('@', '')
+            newEvents[newKey] = props[key]
+          }else{
+            newProps[key] = props[key]
+          }
+        }
+        obj['x-component-props'] = newProps;
+        obj['x-component-events'] = newEvents;
+      }
     },
     /**
      * 重置

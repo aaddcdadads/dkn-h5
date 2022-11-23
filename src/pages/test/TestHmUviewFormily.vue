@@ -209,6 +209,12 @@ export default {
                     'x-component': 'Select',
                     'x-component-props': {
                       'allowClear': true,
+                      '@confirm': function(e){
+                        console.log('e', e)
+                        self.schema.properties.form.properties.switch['x-component-props'].style = {
+                          display: 'none'
+                        }
+                      },
                       'params': {
                         pageSize: -1,
                       },
