@@ -73,8 +73,8 @@ export default {
       type: Object,
       default: function() {
         return {
-          text:
-            "无效字段text,当且仅当showMode为nowrapRow或doubleRank时,高度生效,仅nowrapRow时,宽度生效(单个整体宽度)",
+          text:"无效字段,当且仅当showMode为nowrapRow或doubleRank时,高度生效,仅nowrapRow时,宽度生效(单个整体宽度)",
+          text2:"无效字段,clickable:可点击;inside:预览缩略图(循环imgsList中所有imgHref)",
           clickable: false,
           inside:false,
           width: "100%",
