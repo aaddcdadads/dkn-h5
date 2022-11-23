@@ -12,49 +12,42 @@
           v-if="value['x-component'] == 'Span'" 
           :value="form[key]" 
           v-bind="value['x-component-props']"
-          v-on="value['x-component-events']"
         ></Span>
         <Pre 
           v-if="value['x-component'] == 'Pre'"
           :value="form[key]" 
           v-bind="value['x-component-props']"
-          v-on="value['x-component-events']"
         ></Pre>
         <Img 
           v-if="value['x-component'] == 'Img'" 
           :value="form[key]" 
           v-bind="value['x-component-props']" 
-          v-on="value['x-component-events']"
         />
         <u-input 
           v-if="value['x-component'] == 'Input'" 
           :border="true" v-model="form[key]" 
           v-bind="value['x-component-props']"
-          v-on="value['x-component-events']"
         ></u-input>
         <Select 
           v-if="value['x-component'] == 'Select'" 
           v-model="form[key]" 
           v-bind="value['x-component-props']"
-          v-on="value['x-component-events']"
+          @confirm="value['x-component-events'].confirm"
         ></Select>
         <Upload 
           v-if="value['x-component'] == 'Upload'" 
           v-model="form[key]" 
           v-bind="value['x-component-props']"
-          v-on="value['x-component-events']"
         ></Upload>
         <u-switch 
           v-if="value['x-component'] == 'Switch'" 
           v-model="form[key]" 
           v-bind="value['x-component-props']"
-          v-on="value['x-component-events']"
         ></u-switch>
         <Picker 
           v-if="value['x-component'] == 'DatePicker' || value['x-component'] == 'TimePicker'" 
           v-model="form[key]" 
           v-bind="value['x-component-props']"
-          v-on="value['x-component-events']"
         ></Picker>
       </FormItem>
     </Form>
