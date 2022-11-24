@@ -35,7 +35,7 @@
           @confirm="value['x-component-events'].confirm"
         ></Select>
         <Upload 
-          v-if="value['x-component'] == 'Upload'" 
+          v-if="value['x-component'] == 'Upload' || value['x-component'] == 'UploadImage'" 
           v-model="form[key]" 
           v-bind="value['x-component-props']"
         ></Upload>
@@ -564,7 +564,6 @@ export default {
   data() {
     let self = this
     return {
-      key: 0,
       form: {},
       cSchema: {}
     }
@@ -572,8 +571,6 @@ export default {
   watch: {
     schema: {
       handler(val) {
-        this.key++;
-        this.createForm();
         this.createSchema()
       },
       deep: true
@@ -670,6 +667,7 @@ export default {
         form[key] = this.form[key] || obj[key].default
       }
       this.form = form
+      console.log('this.form', this.form)
     },
     createSchema() {
       this.cSchema = cloneDeep(this.schema)

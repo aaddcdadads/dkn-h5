@@ -59,6 +59,7 @@ export default {
                     },
                     'x-component': 'Input',
                     'x-component-props': {
+                      'disabled': true,
                     },
                   },
                   // inputNumber: {
@@ -208,6 +209,7 @@ export default {
                     },
                     'x-component': 'Select',
                     'x-component-props': {
+                      'disabled': true,
                       'allowClear': true,
                       '@confirm': function(e){
                         console.log('e', e)
@@ -279,7 +281,7 @@ export default {
                     },
                     'x-component': 'Switch',
                     'x-component-props': {
-
+                      'disabled': true,
                     }
                   },
                   // tree: {
@@ -348,7 +350,8 @@ export default {
                         minute: false,
                         second: false,
                         timestamp: true,
-                      }
+                      },
+                      'disabled': true,
                     }
                   },
                   // rangeDate: {
@@ -386,6 +389,7 @@ export default {
                     }
                   },
                   upload: {
+                    default: 'http://xh.ispace.dev.haomo-tech.com/files/1668147473752/WechatIMG2996.jpeg',
                     type: 'string',
                     'x-decorator': 'FormItem',
                     'x-decorator-props': {
@@ -401,6 +405,7 @@ export default {
                     'x-component-props': {
                       'action': 'http://aacsb-stage.bbblackboard.com/api/obe/uploadFile',
                       'maxCount': 11,
+                      'disabled': true,
                     },
                     properties: {
                       button: {

@@ -8,10 +8,10 @@
       :max-count="maxCount"
       :width="width"
       :height="height"
+      :custom-btn="disabled"
       :show-progress="showProgress"
-      :disabled="disabled"
       :preview-full-image="previewFullImage"
-      :deletable="deletable"
+      :deletable="!disabled && deletable"
       :max-size="maxSize"
       :upload-text="uploadText"
       :auto-upload="autoUpload"
@@ -221,6 +221,14 @@ export default {
   },
   watch: {
     modelValue(value){
+      this.getFileList()
+    }
+  },
+  created(){
+    this.getFileList()
+  },
+  methods: {
+    getFileList(){
       if(!this.modelValue) 
         return
       
@@ -229,9 +237,7 @@ export default {
           url: item
         }
       });
-    }
-  },
-  methods: {
+    },
     updateModelValue(lists){
       let modelValue = "";
       modelValue = lists?.map(item => {
