@@ -209,10 +209,9 @@ export default {
                     },
                     'x-component': 'Select',
                     'x-component-props': {
-                      'disabled': true,
                       'allowClear': true,
-                      '@confirm': function(e){
-                        console.log('e', e)
+                      '@confirm': function(e, item){
+                        console.log('e', e, item)
                         self.schema.properties.form.properties.switch['x-component-props'].style = {
                           display: 'none'
                         }
@@ -220,32 +219,11 @@ export default {
                       'params': {
                         pageSize: -1,
                       },
-                      'options': [
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                      ]
+                      'url': '/api/design/framework/list',
+                      "dataMap": {
+                        "label": "name",
+                        "value": "id"
+                      }
                     }
                   },
                   // slider: {

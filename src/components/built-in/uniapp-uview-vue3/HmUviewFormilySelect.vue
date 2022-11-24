@@ -222,7 +222,7 @@ export default {
   },
   methods: {
     onConfirm(e) {
-      this.$emit("confirm", e);
+      this.$emit("confirm", e, this.cOptions.find(item => item.value == e[0].value));
       this.$emit("update:modelValue", e[0].value.toString());
     },
     onCancel(e) {
@@ -248,6 +248,7 @@ export default {
           data = resp.list;
         }
         self.cOptions = self.mapData(data);
+        console.log('self.cOptions', self.cOptions)
         this.$emit("optionsChange", self.cOptions);
       });
     },
