@@ -347,13 +347,6 @@ page {
     "Microsoft Yahei", sans-serif;
 }
 
-view,
-image,
-text {
-  box-sizing: border-box;
-  flex-shrink: 0;
-}
-
 .flex-row {
   display: flex;
   flex-direction: row;
