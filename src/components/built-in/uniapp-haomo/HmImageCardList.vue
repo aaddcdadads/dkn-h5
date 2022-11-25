@@ -287,8 +287,7 @@ export default {
     },
     //设置盒子宽度
     setImgHeight(mode, style) {
-      style.height =
-        mode == "doubleRank" || mode == "nowrapRow" ? style.height : "auto";
+      style.height = mode != "waterfallFlow" ? this.cImgStyle.height : "auto";
       return style;
     },
     getCssUnit(value) {
