@@ -148,7 +148,8 @@
           :custom-style="{ top: '192rpx' }"
           duration="0"
           :mask-custom-style="{ height: maskHeight, top: '192rpx' }"
-          @close="clearFilterSelect">
+          @close="clearFilterSelect"
+        >
           <u-row class="filter__single-popup-form-div">
             <u-input
               v-model="currentCloneFilter.value"
@@ -645,7 +646,7 @@ export default {
       display: flex;
       position: fixed;
       bottom: 12rpx;
-      left:0rpx;
+      left: 0rpx;
       justify-content: space-around;
       align-items: center;
     }
@@ -657,8 +658,13 @@ export default {
       padding: 20rpx;
       width: unset;
     }
+    // #ifdef MP-WEIXIN
+    /deep/ .u-drawer__scroll-view{
+      width:auto !important;
+      padding:10rpx 10rpx;
+    }
+    // #endif
     &-form-div {
-      padding:0rpx 20rpx;
     }
     &-btn {
       display: flex;
@@ -668,6 +674,9 @@ export default {
       // #endif
     }
     &-btn-group {
+      // #ifdef MP-WEIXIN
+      margin-top: 0rpx;
+      // #endif
       margin-top: 20rpx;
       display: flex;
       justify-content: space-around;
