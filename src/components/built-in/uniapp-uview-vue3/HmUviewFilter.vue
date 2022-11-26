@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="HmUviewFilter">
     <u-row
       class="filter__single-popup-top-mask"
       v-if="singleFilterShow"
@@ -52,15 +52,15 @@
         <view v-if="sort.isSelect" class="sort__select-div"></view>
       </view>
     </u-row>
-    <u-row class="filter">
-      <scroll-view class="filter__scroll-div" :scroll-x="true">
+    <view class="filter">
+      <scroll-view class="filter__scroll-div center" :scroll-x="true">
         <view
           :class="[
           'filter__text-div',
           { 'filter__text-div_select': filter.isSelect },
           { 'filter__text-div_hasValue': filter.value && !filter.isSelect },
         ]"
-          :style="{ display: filter.show ? '' : 'none' }"
+          :style="{ display: filter.show ? 'inline-flex' : 'none' }"
           v-for="(filter, index) in cFilterOption"
           :key="index"
           @click="filterSelect(filter)"
@@ -89,120 +89,121 @@
           <u-icon class="filter__button-icon" name="list"></u-icon>
         </view>
       </view>
-      <u-popup class="filter__popup" v-model="filterShow" mode="right" width="85%">
-        <view class="filter__popup-form">
-          <view
-            class="filter__popup-form-div"
-            v-for="(filter, index) in cFilterOption"
-            :key="index"
-          >
-            <view class="filter__popup-form-label">{{ filter.name }}</view>
-            <view class="filter__popup-form-value">
-              <u-input
-                v-model="filter.value"
-                v-if="filter.type == 'Input'"
-                type="text"
-                :border="true"
-                v-bind="filter.props"
-              ></u-input>
-              <Select
-                v-model="filter.value"
-                v-model:show="filter.props.show"
-                v-if="filter.type == 'Select'"
-                v-bind="filter.props"
-                :autoSelect="false"
-                @optionsChange="e => filter.props.options = e"
-                @showChange="currentSelect = filter"
-              ></Select>
-              <Picker
-                v-model="filter.value"
-                v-model:show="filter.props.show"
-                v-if="filter.type == 'DatePicker' || filter.type == 'TimePicker'"
-                :autoSelect="false"
-                v-bind="filter.props"
-                @showChange="currentPicker = filter"
-              ></Picker>
+      <view v-if="filterShow">
+        <u-popup class="filter__popup" v-model="filterShow" mode="right" width="85%">
+          <view class="filter__popup-form">
+            <view
+              class="filter__popup-form-div"
+              v-for="(filter, index) in cFilterOption"
+              :key="index"
+            >
+              <view class="filter__popup-form-label">{{ filter.name }}</view>
+              <view class="filter__popup-form-value">
+                <u-input
+                  v-model="filter.value"
+                  v-if="filter.type == 'Input'"
+                  type="text"
+                  :border="true"
+                  v-bind="filter.props"
+                ></u-input>
+                <Select
+                  v-model="filter.value"
+                  v-model:show="filter.props.show"
+                  v-if="filter.type == 'Select'"
+                  v-bind="filter.props"
+                  :autoSelect="false"
+                  @optionsChange="e => filter.props.options = e"
+                  @showChange="currentSelect = filter"
+                ></Select>
+                <Picker
+                  v-model="filter.value"
+                  v-model:show="filter.props.show"
+                  v-if="filter.type == 'DatePicker' || filter.type == 'TimePicker'"
+                  :autoSelect="false"
+                  v-bind="filter.props"
+                  @showChange="currentPicker = filter"
+                ></Picker>
+              </view>
             </view>
           </view>
-        </view>
-        <!-- <view class="filter__popup-btn-group-fixed"> -->
-        <view class="filter__popup-btn-group">
-          <u-button size="medium" shape="circle" class="filter__popup-btn" @click="filterReset">重置</u-button>
-          <u-button
-            size="medium"
-            shape="circle"
-            type="error"
-            class="filter__popup-btn"
-            @click="filterConfirm"
-          >确定</u-button>
-        </view>
-        <!-- </view> -->
-      </u-popup>
-      <u-popup
-        class="filter__single-popup"
-        v-model="singleFilterShow"
-        mode="top"
-        :custom-style="{ top: '296rpx' }"
-        duration="0"
-        :mask-custom-style="{ height: maskHeight, top: '296rpx' }"
-        @close="clearFilterSelect"
-      >
-        <u-row class="filter__single-popup-form-div">
-          <u-input
-            v-model="currentCloneFilter.value"
-            v-if="currentCloneFilter.type == 'Input'"
-            type="text"
-            :border="true"
-            v-bind="currentCloneFilter.props"
-          ></u-input>
-          <Select
-            v-model="currentCloneFilter.value"
-            v-model:show="currentCloneFilter.props.show"
-            v-if="currentCloneFilter.type == 'Select'"
-            v-bind="currentCloneFilter.props"
-            :autoSelect="false"
-            @optionsChange="e => currentCloneFilter.props.options = e"
-            @showChange="currentSelect = currentCloneFilter"
-          ></Select>
-          <Picker
-            v-model="currentCloneFilter.value"
-            v-model:show="currentCloneFilter.props.show"
-            v-if="currentCloneFilter.type == 'DatePicker' || currentCloneFilter.type == 'TimePicker'"
-            :autoSelect="false"
-            v-bind="currentCloneFilter.props"
-            @showChange="currentPicker = currentCloneFilter"
-          ></Picker>
-        </u-row>
-        <u-row class="filter__single-popup-btn-group">
-          <u-button
-            size="medium"
-            shape="circle"
-            class="filter__single-popup-btn"
-            @click="singleFilterReset"
-          >重置</u-button>
-          <u-button
-            size="medium"
-            shape="circle"
-            type="error"
-            class="filter__single-popup-btn"
-            @click="singleFilterConfirm"
-          >确定</u-button>
-        </u-row>
-      </u-popup>
-    </u-row>
-    <u-select 
-      v-model="currentSelect.props.show" 
+          <!-- <view class="filter__popup-btn-group-fixed"> -->
+          <view class="filter__popup-btn-group">
+            <u-button size="medium" shape="circle" class="filter__popup-btn" @click="filterReset">重置</u-button>
+            <u-button
+              size="medium"
+              shape="circle"
+              type="error"
+              class="filter__popup-btn"
+              @click="filterConfirm"
+            >确定</u-button>
+          </view>
+          <!-- </view> -->
+        </u-popup>
+      </view>
+      <view v-if="singleFilterShow">
+        <u-popup
+          class="filter__single-popup"
+          v-model="singleFilterShow"
+          mode="top"
+          :custom-style="{ top: '192rpx' }"
+          duration="0"
+          :mask-custom-style="{ height: maskHeight, top: '192rpx' }"
+          @close="clearFilterSelect">
+          <u-row class="filter__single-popup-form-div">
+            <u-input
+              v-model="currentCloneFilter.value"
+              v-if="currentCloneFilter.type == 'Input'"
+              type="text"
+              :border="true"
+              v-bind="currentCloneFilter.props"
+            ></u-input>
+            <Select
+              v-model="currentCloneFilter.value"
+              v-model:show="currentCloneFilter.props.show"
+              v-if="currentCloneFilter.type == 'Select'"
+              v-bind="currentCloneFilter.props"
+              :autoSelect="false"
+              @optionsChange="e => currentCloneFilter.props.options = e"
+              @showChange="currentSelect = currentCloneFilter"
+            ></Select>
+            <Picker
+              v-model="currentCloneFilter.value"
+              v-model:show="currentCloneFilter.props.show"
+              v-if="currentCloneFilter.type == 'DatePicker' || currentCloneFilter.type == 'TimePicker'"
+              :autoSelect="false"
+              v-bind="currentCloneFilter.props"
+              @showChange="currentPicker = currentCloneFilter"
+            ></Picker>
+          </u-row>
+          <view class="filter__single-popup-btn-group">
+            <u-button
+              size="medium"
+              shape="circle"
+              class="filter__single-popup-btn"
+              @click="singleFilterReset"
+            >重置</u-button>
+            <u-button
+              size="medium"
+              shape="circle"
+              type="error"
+              class="filter__single-popup-btn"
+              @click="singleFilterConfirm"
+            >确定</u-button>
+          </view>
+        </u-popup>
+      </view>
+    </view>
+    <u-select
+      v-model="currentSelect.props.show"
       v-bind="currentSelect.props"
       :list="currentSelect.props.options"
       @confirm="selectOnConfirm"
-    >
-    </u-select>
-    <u-picker 
-      v-model="currentPicker.props.show" 
+    ></u-select>
+    <u-picker
+      v-model="currentPicker.props.show"
       v-bind="currentPicker.props"
       @confirm="pickerOnConfirm"
-    >
-    </u-picker>
+    ></u-picker>
   </view>
 </template>
 
@@ -265,7 +266,7 @@ export default {
                 hour: false,
                 minute: false,
                 second: false,
-                timestamp: true,
+                timestamp: true
               },
               format: "YYYY-MM-DD"
             },
@@ -276,23 +277,23 @@ export default {
             code: "test2",
             type: "Select",
             props: {
-              url: '/api/design/framework/list',
+              // url: "/api/design/framework/list",
               params: {
-                pageSize: -1,
+                pageSize: -1
               },
               options: [
                 {
                   label: "是",
-                  value: 0,
+                  value: 0
                 },
                 {
                   label: "否",
-                  value: 1,
-                },
+                  value: 1
+                }
               ],
               dataMap: {
-                label: 'name',
-                value: 'id',
+                label: "name",
+                value: "id"
               }
             },
             show: false
@@ -360,19 +361,27 @@ export default {
       return this.cSortOption.length > 0 ? 100 / this.cSortOption.length : 0;
     },
     maskHeight() {
-      return `${window.innerHeight - 100}px`;
+      let height;
+      // #ifdef H5
+      height = window.innerHeight - 100;
+      // #endif
+      // #ifndef H5
+      //console.log("除H5", wx.getSystemInfoSync().windowHeight);
+      //console.log("H5,app,wx",uni.getWindowInfo().screenHeight);
+      height = uni.getWindowInfo().screenHeight - 100;
+      // #endif
+      return height + "px";
     }
   },
   mounted() {
     this.cSortOption = this.sortOption;
     // 设置默认值
     this.cFilterOption = this.filterOption.map(item => {
-      item.props = item.props || {}
-      if(item.type == "Select"){
-
+      item.props = item.props || {};
+      if (item.type == "Select") {
       }
-      if(item.type == "TimePicker" || item.type == "DatePicker"){
-        item.props.format = item.props.format || "YYYY-MM-DD HH:mm:ss"
+      if (item.type == "TimePicker" || item.type == "DatePicker") {
+        item.props.format = item.props.format || "YYYY-MM-DD HH:mm:ss";
         item.props.params = item.props.params || {
           //时间参数
           year: true,
@@ -385,8 +394,8 @@ export default {
           //地区参数
           province: true,
           city: true,
-          area: true,
-        }
+          area: true
+        };
       }
       return item;
     });
@@ -397,22 +406,24 @@ export default {
       cFilterOption: [],
       filterShow: false,
       singleFilterShow: false,
-      currentPicker: {props: {}},
-      currentSelect: {props: {}},
-      currentFilter: {code: null},
-      currentCloneFilter: {props: {}},
+      currentPicker: { props: {} },
+      currentSelect: { props: {} },
+      currentFilter: { code: null },
+      currentCloneFilter: { props: {} },
       order: "asc",
       keyValue: "",
       selectShow: false
     };
   },
   methods: {
-    selectOnConfirm(e){
+    selectOnConfirm(e) {
       this.currentSelect.value = e[0].value.toString();
     },
-    pickerOnConfirm(e){
-      console.log('test', this.currentPicker, e)
-      this.currentPicker.value = moment(e.timestamp * 1000).format(this.currentPicker.props.format);
+    pickerOnConfirm(e) {
+      console.log("test", this.currentPicker, e);
+      this.currentPicker.value = moment(e.timestamp * 1000).format(
+        this.currentPicker.props.format
+      );
     },
     sortSelect(item) {
       let self = this;
@@ -431,9 +442,9 @@ export default {
     },
     filterSelect(item) {
       let self = this;
-      if(self.singleFilterShow && item.code == self.currentFilter.code){
+      if (self.singleFilterShow && item.code == self.currentFilter.code) {
         self.singleFilterShow = false;
-      }else{
+      } else {
         self.singleFilterShow = true;
         self.cFilterOption.forEach(filter => {
           if (filter.code == item.code) {
@@ -457,7 +468,7 @@ export default {
     singleFilterConfirm() {
       this.singleFilterShow = false;
       Object.assign(this.currentFilter, this.currentCloneFilter);
-      this.search()
+      this.search();
     },
     filterReset() {
       this.cFilterOption.forEach(filter => {
@@ -466,7 +477,7 @@ export default {
     },
     filterConfirm() {
       this.filterShow = false;
-      this.search()
+      this.search();
     },
     search() {
       this.$emit("search", {
@@ -498,18 +509,18 @@ export default {
 </script>
 
 <style lang="less">
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .search {
-  &__input-div {
-    flex: 0 0 91.4% !important;
-    padding: 0px !important;
-    margin: 0 4.3% !important;
-  }
+  // &__input-div {
+  //   flex: 0 0 91.4% !important;
+  //   padding: 0px !important;
+  //   margin: 0 4.3% !important;
+  // }
   &__input {
-    // border-color: #f63515 !important;
-    // border-radius: 18px;
-    border: 2px solid;
-    border-color: #4b4c5a !important;
-    border-radius: 8px;
     /deep/ .u-input__input {
       // min-height: 30px !important;
       min-height: 40px !important;
@@ -519,7 +530,10 @@ export default {
     text-align: center;
   }
 }
-
+.HmUviewFilter /deep/ .u-input--border {
+  border-radius: 16rpx;
+  border: 4rpx solid #4b4c5a !important;
+}
 .sort {
   margin-top: 10px;
   display: flex;
@@ -549,14 +563,18 @@ export default {
     border-bottom-right-radius: 100%;
   }
 }
-
 .filter {
-  margin-top: 32rpx;
+  margin-top: 16rpx;
+  padding: 10rpx;
+  width: 100%;
   height: 88rpx;
+  display: flex;
   &__scroll-div {
     white-space: nowrap;
-    width: calc(91.4% - 60px);
-    margin-left: 4.3%;
+    width: calc(100% - 120rpx);
+    // #ifdef MP-WEIXIN
+    line-height: 68rpx;
+    // #endif
     /deep/ .uni-scroll-view-content {
       display: flex;
       flex-direction: row;
@@ -565,7 +583,7 @@ export default {
   }
   &__text-div {
     background: #f0f0f0;
-    padding: 2rpx 24rpx;
+    padding: 12rpx 24rpx;
     border-radius: 50px;
     margin-right: 24rpx;
     /deep/ .u-icon__label {
@@ -582,7 +600,7 @@ export default {
       // border-radius: 18px 18px 0px 0px;
     }
     &_hasValue {
-      border: 1px solid #f63515;
+      border: 2rpx solid #f63515;
       color: #f63515;
       background-color: #fde9e9;
     }
@@ -591,8 +609,9 @@ export default {
     display: flex;
     justify-content: center;
     font-weight: 600;
-    width: 60px;
+    width: 120rpx;
     align-items: center;
+    flex-shrink: 0;
     &-text {
     }
     &-icon-div {
@@ -619,28 +638,40 @@ export default {
     }
     &-btn {
       width: 30%;
+      display: flex;
     }
     &-btn-group {
       width: 100%;
       display: flex;
       position: fixed;
-      bottom: 0;
+      bottom: 12rpx;
+      left:0rpx;
+      justify-content: space-around;
+      align-items: center;
     }
   }
   &__single-popup {
     z-index: 10073 !important; //设置比筛选层级-1
     /deep/ .uni-scroll-view-content {
       background-color: #f1f2f3;
-      padding: 10px;
+      padding: 20rpx;
       width: unset;
     }
     &-form-div {
+      padding:0rpx 20rpx;
     }
     &-btn {
+      display: flex;
       width: 30%;
+      // #ifdef MP-WEIXIN
+      width: 50%;
+      // #endif
     }
     &-btn-group {
-      margin-top: 10px;
+      margin-top: 20rpx;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
     }
   }
   &__single-popup-top-mask {
