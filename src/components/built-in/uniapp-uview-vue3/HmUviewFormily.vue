@@ -25,7 +25,15 @@
         />
         <u-input 
           v-if="value['x-component'] == 'Input'" 
-          :border="true" v-model="form[key]" 
+          :border="true" 
+          v-model="form[key]" 
+          v-bind="value['x-component-props']"
+        ></u-input>
+        <u-input 
+          v-if="value['x-component'] == 'Textarea'" 
+          type="textarea"
+          :border="true" 
+          v-model="form[key]" 
           v-bind="value['x-component-props']"
         ></u-input>
         <Select 

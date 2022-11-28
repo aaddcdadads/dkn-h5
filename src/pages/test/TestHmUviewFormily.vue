@@ -102,25 +102,25 @@ export default {
                   //     ]
                   //   }
                   // },
-                  // textarea: {
-                  //   type: 'string',
-                  //   maxLength: 1,
-                  //   default: '文本框',
-                  //   'x-decorator': 'FormItem',
-                  //   'x-decorator-props': {
-                  //     'label': '文本框',
-                  //     'name': 'textarea',
-                  //     'label-col': { span: 2 },
-                  //     'wrapper-col': { span: 14 },
-                  //     'style': {
-                  //       width: '100%',
-                  //     }
-                  //   },
-                  //   'x-component': 'Textarea',
-                  //   'x-component-props': {
+                  textarea: {
+                    type: 'string',
+                    maxLength: 1,
+                    default: '文本框',
+                    'x-decorator': 'FormItem',
+                    'x-decorator-props': {
+                      'label': '文本框',
+                      'name': 'textarea',
+                      'label-col': { span: 2 },
+                      'wrapper-col': { span: 14 },
+                      'style': {
+                        width: '100%',
+                      }
+                    },
+                    'x-component': 'Textarea',
+                    'x-component-props': {
 
-                  //   },
-                  // },
+                    },
+                  },
                   // radio: {
                   //   type: 'array',
                   //   required: true,
