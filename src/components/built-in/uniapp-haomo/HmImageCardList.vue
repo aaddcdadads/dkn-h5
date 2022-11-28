@@ -73,10 +73,12 @@ export default {
       type: Object,
       default: function() {
         return {
-          text:"无效字段,当且仅当showMode为nowrapRow或doubleRank时,高度生效,仅nowrapRow时,宽度生效(单个整体宽度)",
-          text2:"无效字段,clickable:可点击;inside:预览缩略图(循环imgsList中所有imgHref)",
+          text:
+            "无效字段,当且仅当showMode为nowrapRow或doubleRank时,高度生效,仅nowrapRow时,宽度生效(单个整体宽度)",
+          text2:
+            "无效字段,clickable:可点击;inside:预览缩略图(循环imgsList中所有imgHref)",
           clickable: false,
-          inside:false,
+          inside: false,
           width: "100%",
           height: "336rpx"
         };
@@ -257,10 +259,10 @@ export default {
     // 设置分类型 样式
     getClass(e) {
       let className = {
-        nowrapRow: "flex-nowrap", //单行不换行滑动
-        singleColumn: "inbox flex-row", //单列滑动
-        doubleRank: "inbox flex-row", //双列滑动
-        waterfallFlow: "multi-column" //双列瀑布流
+        nowrapRow: "flex-nowrap HmImageCardList", //单行不换行滑动
+        singleColumn: "inbox flex-row HmImageCardList", //单列滑动
+        doubleRank: "inbox flex-row HmImageCardList", //双列滑动
+        waterfallFlow: "multi-column HmImageCardList" //双列瀑布流
       };
       return className[e];
     },
@@ -285,8 +287,7 @@ export default {
     },
     //设置盒子宽度
     setImgHeight(mode, style) {
-      style.height =
-        mode == "doubleRank" || mode == "nowrapRow" ? style.height : "auto";
+      style.height = mode != "waterfallFlow" ? this.cImgStyle.height : "auto";
       return style;
     },
     getCssUnit(value) {
@@ -295,26 +296,30 @@ export default {
       }
       return `${value}px`;
     },
-    popupOpen(e, imgSrc,arr) {
-      if(this.cImgStyle.inside){
-      let imgSrcArr = [];
-      arr.forEach(item => {
-        imgSrcArr.push(item.imghref);
-      });
-      // #ifdef MP-WEIXIN
-      wx.previewImage({
-        urls: imgSrcArr
-      });
-      // #endif
-      // #ifndef MP-WEIXIN
-      uni.previewImage({
-        urls: imgSrcArr
-      });
-      // #endif
+    popupOpen(e, imgSrc, arr) {
+      if (this.cImgStyle.inside) {
+        let imgSrcArr = [];
+        arr.forEach(item => {
+          imgSrcArr.push(item.imghref);
+        });
+        // #ifdef MP-WEIXIN
+        wx.previewImage({
+          urls: imgSrcArr
+        });
+        // #endif
+        // #ifndef MP-WEIXIN
+        uni.previewImage({
+          urls: imgSrcArr
+        });
+        // #endif
       }
-      console.log("微信文档:https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.previewImage.html");
-      console.log("uniapp文档:https://uniapp.dcloud.net.cn/api/media/image.html#unipreviewimageobject");
-      this.$emit("imgClick",e, imgSrc,arr);
+      console.log(
+        "微信文档:https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.previewImage.html"
+      );
+      console.log(
+        "uniapp文档:https://uniapp.dcloud.net.cn/api/media/image.html#unipreviewimageobject"
+      );
+      this.$emit("imgClick", e, imgSrc, arr);
     },
     getTouchStart: function(item, index) {
       var self = this;
@@ -346,14 +351,15 @@ page {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     "Microsoft Yahei", sans-serif;
 }
-
-view,
-image,
-text {
-  box-sizing: border-box;
-  flex-shrink: 0;
+// 取消影响其他全局
+.HmImageCardList {
+  view,
+  image,
+  text {
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
 }
-
 .flex-row {
   display: flex;
   flex-direction: row;
