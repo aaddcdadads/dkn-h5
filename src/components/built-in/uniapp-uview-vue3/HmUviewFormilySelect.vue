@@ -261,7 +261,7 @@ export default {
       let keys = Object.keys(this.dataMap);
       data.forEach((item) => {
         keys.forEach((key) => {
-          item[key] = item[self.dataMap[key]];
+          item[key] = key == "label" ? item[self.dataMap[key]].toString() : item[self.dataMap[key]];
         });
       });
       return data;
