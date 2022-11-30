@@ -581,6 +581,14 @@
         "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewEmpty.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmUviewBackTop",
+        "title": "返回顶部",
+        "importPath": "built-in/uniapp-uview-vue3/HmUviewBackTop",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewBackTop.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },
