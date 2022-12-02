@@ -8,7 +8,8 @@
 		:style="{
 			padding: `0 ${border ? 20 : 0}rpx`,
 			borderColor: borderColor,
-			textAlign: inputAlign
+			textAlign: inputAlign,
+			backgroundColor: disabled ? '#f5f7fa' : '',
 		}"
 		@tap.stop="inputClick"
 	>
@@ -276,6 +277,8 @@ export default {
 		},
 		getStyle() {
 			let style = {};
+			//设置disabled颜色
+			// style.color = '#C0C4CC'
 			// 如果没有自定义高度，就根据type为input还是textare来分配一个默认的高度
 			style.minHeight = this.height
 				? this.height + "rpx"
@@ -378,6 +381,8 @@ export default {
 			this.$emit("update:modelValue", "");
 		},
 		inputClick() {
+			if(this.disabled) 
+				return;
 			this.$emit("click");
 		}
 	}

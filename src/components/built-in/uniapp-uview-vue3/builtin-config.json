@@ -523,8 +523,8 @@
       {
         "name": "HmScanCode",
         "title": "扫码",
-        "importPath": "built-in/uniapp-uview-vue3/HmScanCode",
-        "imgUrl": "built-in/uniapp-uview-vue3/img/HmScanCode.png",
+        "importPath": "built-in/uniapp/HmScanCode",
+        "imgUrl": "built-in/uniapp/img/HmScanCode.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -579,6 +579,14 @@
         "title": "空状态",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewEmpty",
         "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewEmpty.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "HmUviewBackTop",
+        "title": "返回顶部",
+        "importPath": "built-in/uniapp-uview-vue3/HmUviewBackTop",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewBackTop.png",
         "type": 0,
         "isBuiltIn": true
       }

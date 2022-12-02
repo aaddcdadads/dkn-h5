@@ -1,6 +1,6 @@
 <template>
   <view style="width: 100%;">
-    <u-input type="select" :border="border" placeholder="请选择" :modelValue="value" @click="cShow = true"></u-input>
+    <u-input type="select" :disabled="disabled" :border="border" placeholder="请选择" :modelValue="value" @click="cShow = true"></u-input>
     <u-select 
       v-if="autoSelect"
       v-model="cShow"
@@ -158,7 +158,14 @@ export default {
     border: {
       type: Boolean,
       default: true,
-    }
+    },
+    /**
+     * 是否禁用
+     */
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     value(){
@@ -215,7 +222,7 @@ export default {
   },
   methods: {
     onConfirm(e) {
-      this.$emit("confirm", e);
+      this.$emit("confirm", e, this.cOptions.find(item => item.value == e[0].value));
       this.$emit("update:modelValue", e[0].value.toString());
     },
     onCancel(e) {
@@ -241,6 +248,7 @@ export default {
           data = resp.list;
         }
         self.cOptions = self.mapData(data);
+        console.log('self.cOptions', self.cOptions)
         this.$emit("optionsChange", self.cOptions);
       });
     },
@@ -253,7 +261,7 @@ export default {
       let keys = Object.keys(this.dataMap);
       data.forEach((item) => {
         keys.forEach((key) => {
-          item[key] = item[self.dataMap[key]];
+          item[key] = key == "label" ? item[self.dataMap[key]].toString() : item[self.dataMap[key]];
         });
       });
       return data;

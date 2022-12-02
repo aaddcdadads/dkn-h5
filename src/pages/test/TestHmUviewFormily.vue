@@ -59,6 +59,7 @@ export default {
                     },
                     'x-component': 'Input',
                     'x-component-props': {
+                      'disabled': true,
                     },
                   },
                   // inputNumber: {
@@ -101,25 +102,25 @@ export default {
                   //     ]
                   //   }
                   // },
-                  // textarea: {
-                  //   type: 'string',
-                  //   maxLength: 1,
-                  //   default: '文本框',
-                  //   'x-decorator': 'FormItem',
-                  //   'x-decorator-props': {
-                  //     'label': '文本框',
-                  //     'name': 'textarea',
-                  //     'label-col': { span: 2 },
-                  //     'wrapper-col': { span: 14 },
-                  //     'style': {
-                  //       width: '100%',
-                  //     }
-                  //   },
-                  //   'x-component': 'Textarea',
-                  //   'x-component-props': {
+                  textarea: {
+                    type: 'string',
+                    maxLength: 1,
+                    default: '文本框',
+                    'x-decorator': 'FormItem',
+                    'x-decorator-props': {
+                      'label': '文本框',
+                      'name': 'textarea',
+                      'label-col': { span: 2 },
+                      'wrapper-col': { span: 14 },
+                      'style': {
+                        width: '100%',
+                      }
+                    },
+                    'x-component': 'Textarea',
+                    'x-component-props': {
 
-                  //   },
-                  // },
+                    },
+                  },
                   // radio: {
                   //   type: 'array',
                   //   required: true,
@@ -209,35 +210,20 @@ export default {
                     'x-component': 'Select',
                     'x-component-props': {
                       'allowClear': true,
+                      '@confirm': function(e, item){
+                        console.log('e', e, item)
+                        self.schema.properties.form.properties.switch['x-component-props'].style = {
+                          display: 'none'
+                        }
+                      },
                       'params': {
                         pageSize: -1,
                       },
-                      'options': [
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                        { label: 'Apple', value: '1' },
-                        { label: 'Pear', value: '2' },
-                        { label: 'Orange', value: '3' },
-                      ]
+                      'url': '/api/design/framework/list',
+                      "dataMap": {
+                        "label": "name",
+                        "value": "id"
+                      }
                     }
                   },
                   // slider: {
@@ -273,7 +259,7 @@ export default {
                     },
                     'x-component': 'Switch',
                     'x-component-props': {
-
+                      'disabled': true,
                     }
                   },
                   // tree: {
@@ -342,7 +328,8 @@ export default {
                         minute: false,
                         second: false,
                         timestamp: true,
-                      }
+                      },
+                      'disabled': true,
                     }
                   },
                   // rangeDate: {
@@ -380,6 +367,7 @@ export default {
                     }
                   },
                   upload: {
+                    default: 'http://xh.ispace.dev.haomo-tech.com/files/1668147473752/WechatIMG2996.jpeg',
                     type: 'string',
                     'x-decorator': 'FormItem',
                     'x-decorator-props': {
@@ -395,6 +383,7 @@ export default {
                     'x-component-props': {
                       'action': 'http://aacsb-stage.bbblackboard.com/api/obe/uploadFile',
                       'maxCount': 11,
+                      'disabled': true,
                     },
                     properties: {
                       button: {
