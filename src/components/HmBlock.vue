@@ -102,7 +102,7 @@ export default {
   display: inline-block;
   min-height: 30px;
   min-width: 30px;
-  border: 1px dashed hsla(0, 0%, 66.7%, 0.7);
+  border: 1px dashed rgba(255, 0, 0, 0.8);
   background-color: inherit;
 
   /* background: rgb(249, 252, 255); */
