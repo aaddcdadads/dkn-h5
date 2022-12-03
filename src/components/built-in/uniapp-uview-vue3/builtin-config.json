@@ -29,7 +29,7 @@
         "name": "HmLoop",
         "title": "循环器",
         "importPath": "built-in/uniapp-haomo/HmLoop",
-        "imgUrl": "built-in/uniapp-haomo/HmLoop/img/HmLoop.png",
+        "imgUrl": "built-in/uniapp-haomo/img/HmLoop.png",
         "type": 0,
         "isBuiltIn": true
       },
