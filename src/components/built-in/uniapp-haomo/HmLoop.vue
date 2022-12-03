@@ -51,7 +51,7 @@ export default {
     /**
      * GET Params
      */
-     params: {
+    params: {
       type: Object,
       default: function () {
         return {}
@@ -111,10 +111,20 @@ export default {
         this.cValue = cloneDeep(value);
       },
       deep: true,
+    },
+    url: function(value) {
+      this.getData();
+    },
+    params: {
+      handler: function (value, oldValue) {
+        this.getData();
+      },
+      deep: true,
     }
   },
   mounted() {
     this.cValue = cloneDeep(this.value);
+    this.getData();
   },
   methods: {
     getData(url, params) {
@@ -137,7 +147,7 @@ export default {
         self.cValue = [];
         setTimeout(() => {
           self.cValue = self.getDataList(resp);
-          self.cData.forEach((item, index) => {
+          self.cValue.forEach((item, index) => {
             item.hmNo = index + 1;
           });
           self.total = self.getDataTotal(resp);
@@ -212,22 +222,7 @@ export default {
     },
     clickLoadMore(e) {
       this.$emit("clickLoadMore", e);
-    },
-    //处理数据
-    mapData(data) {
-      let self = this;
-      if (!this.dataMap || Object.keys(this.dataMap).length == 0) {
-        return data;
-      }
-      let keys = Object.keys(this.dataMap);
-      data.forEach((item) => {
-        keys.forEach((key) => {
-          item[key] = item[self.dataMap[key]];
-        });
-      });
-      //console.log("data", data);
-      return data;
-    },
+    }
   },
 };
 </script>
