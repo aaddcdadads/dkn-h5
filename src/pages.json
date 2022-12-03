@@ -14,6 +14,12 @@
       }
     },
     {
+      "path": "pages/test/TestHmSwipeList",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
       "path": "pages/test/TestHmImageCardList",
       "style": {
         "navigationBarTitleText": "uni-app"
