@@ -13,7 +13,6 @@
       </button>
     </template>
   </hm-loop>
-  
 </template>
 
 <script>
