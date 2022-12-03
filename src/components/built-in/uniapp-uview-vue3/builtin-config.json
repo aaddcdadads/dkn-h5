@@ -605,6 +605,14 @@
     "name": "其他",
     "componentList": [
       {
+        "name": "HmSimpleChatRoom",
+        "title": "即时通讯",
+        "importPath": "built-in/uniapp-haomo/HmSimpleChatRoom",
+        "imgUrl": "built-in/uniapp-haomo/img/HmSimpleChatRoom.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmUviewFab",
         "title": "悬浮按钮",
         "importPath": "built-in/uniapp/HmUviewFab",
