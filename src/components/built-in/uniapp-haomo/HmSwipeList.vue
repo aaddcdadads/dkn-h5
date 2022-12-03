@@ -427,6 +427,23 @@ export default {
       console.warn(`接口数据格式不兼容: `, resp);
       return [];
     },
+    /**
+     *  从接口返回结果里取到总数
+     */
+     getDataTotal(resp) {
+      if (this.getDataMap.total) {
+        let totalPath = this.getDataMap.total;
+        totalPath = totalPath.indexOf('$') === 0 ? totalPath : `$.${totalPath}`;
+        return jp.query(resp, totalPath)[0];
+      }
+      if (resp.result) {
+        return resp.result.total;
+      }
+      if (resp.data) {
+        return resp.total;
+      }
+      return 0;
+    },
     change(e, item, index) {
       this.$emit("change", e, item, index);
     },
