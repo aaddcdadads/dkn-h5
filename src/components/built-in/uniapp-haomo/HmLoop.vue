@@ -49,6 +49,15 @@ export default {
       type: String,
     },
     /**
+     * GET Params
+     */
+     params: {
+      type: Object,
+      default: function () {
+        return {}
+      }
+    },
+    /**
      * 请求结果映射
      * @desc list为列表数据路径；路径采用JSONPath格式（去掉前面的 $.）
      */
@@ -59,15 +68,6 @@ export default {
           list: '',
           total: ''
         }
-      }
-    },
-    /**
-     * GET Params
-     */
-    params: {
-      type: Object,
-      default: function () {
-        return {}
       }
     },
     /**
