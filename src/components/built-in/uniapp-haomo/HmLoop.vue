@@ -3,29 +3,20 @@
     :style="{ height: scrollHeight, width: '100%' }"
     :refresher-triggered="cRefresherTriggered"
     :refresher-enabled="cRefresherEnabled"
-    :scroll-y="true"
-    :scroll-x="false"
+    :scroll-y="scrollY"
+    :scroll-x="scrollX"
     :show-scrollbar="showScrollbar"
     @refresherrefresh="refresherrefresh"
     @scrolltolower="scrolltolower"
   >
-    <uni-swipe-action-item
-      class="list-right"
-      v-for="(item, index) in cList"
-      :key="index"
-      :left-options="cLeftAction ? options : null"
-      :right-options="!cLeftAction ? options : null"
-      :auto-close="autoClose"
-      @change="change($event, item, index)"
-      @click="bindClick($event, item, index)"
-    >
-      <!-- 
-        @prop item - 数组条目数据
-      -->
+    <!-- 
+      @prop item - 数组条目数据
+    -->
+    <view v-for="(item, index) in value" :key="index">
       <slot :item="item">
         <view>循环内容</view>
       </slot>
-    </uni-swipe-action-item>
+    </view>
     <uni-load-more
       v-if="refreshConfig.show"
       :status="status"
@@ -49,6 +40,13 @@ export default {
      * 横向滚动
      */
     scrollX: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * 横向滚动
+     */
+     scrollY: {
       type: Boolean,
       default: false
     },
