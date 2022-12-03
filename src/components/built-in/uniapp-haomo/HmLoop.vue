@@ -27,14 +27,48 @@
   </scroll-view>
 </template>
 <script>
+import { cloneDeep } from '/@/utils/util';
+import {
+  getAction
+} from "/@/request/http";
+
 export default {
   props: {
     /**
      * 循环数组
+     * @model
      */
     value: {
       type: Array,
       default: []
+    },
+    /**
+     * GET URL
+     */
+    url: {
+      type: String,
+    },
+    /**
+     * 请求结果映射
+     * @desc list为列表数据路径；路径采用JSONPath格式（去掉前面的 $.）
+     */
+    getDataMap: {
+      type: Object,
+      default: function () {
+        return {
+          list: '',
+          total: ''
+        }
+      }
+    },
+    /**
+     * GET Params
+     */
+    params: {
+      type: Object,
+      default: function () {
+        return {}
+      }
     },
     /**
      * 横向滚动
@@ -46,7 +80,7 @@ export default {
     /**
      * 横向滚动
      */
-     scrollY: {
+    scrollY: {
       type: Boolean,
       default: false
     },
@@ -65,45 +99,88 @@ export default {
       },
     },
   },
-  watch: {
-    list: {
-      handler: function (value, oldValue) {
-        this.cList = this.mapData(value);
-      },
-      deep: true,
-    },
-    layout(value) {
-      this.cLayout = value;
-    },
-    textAlign(value) {
-      this.cTextAlign = value;
-    },
-    leftAction(value) {
-      this.cLeftAction = value;
-    },
-    imgStyle(value) {
-      this.cImgStyle = value;
-    },
-  },
-  mounted() {
-    this.cList = this.mapData(this.list);
-    this.cLayout = this.layout;
-    this.cTextAlign = this.textAlign;
-    this.cLeftAction = this.leftAction;
-    this.cImgStyle = this.imgStyle;
-  },
   data() {
     return {
-      cList: [],
-      cLayout:{},
-      cTextAlign:"",
-      cImgStyle: {},
-      cLeftAction: true,
-      cRefresherTriggered: false,
-      cRefresherEnabled: true,
+      cValue: [],
+      total: 0
     };
   },
+  watch: {
+    value: {
+      handler: function (value, oldValue) {
+        this.cValue = cloneDeep(value);
+      },
+      deep: true,
+    }
+  },
+  mounted() {
+    this.cValue = cloneDeep(this.value);
+  },
   methods: {
+    getData(url, params) {
+      let self = this;
+      self._getData(url, params);
+    },
+    _getData(url, params) {
+      let self = this;
+      url = url || this.url;
+
+      if (!url) {
+        return;
+      }
+
+      params =
+        params || (this.params ? JSON.parse(JSON.stringify(this.params)) : {});
+
+      getAction(url, params).then((resp) => {
+        console.log(`get table data: `, resp);
+        self.cValue = [];
+        setTimeout(() => {
+          self.cValue = self.getDataList(resp);
+          self.cData.forEach((item, index) => {
+            item.hmNo = index + 1;
+          });
+          self.total = self.getDataTotal(resp);
+        }, 10);
+      });
+    },
+    /**
+     * 从接口返回结果里取到数组
+     */
+    getDataList(resp) {
+      if (this.getDataMap && this.getDataMap.list) {
+        let listPath = this.getDataMap.list;
+        listPath = listPath.indexOf('$') === 0 ? listPath : `$.${listPath}`;
+        return jp.query(resp, listPath)[0];
+      }
+
+      if (resp.result) {
+        return resp.result.records || resp.result;
+      }
+
+      if (resp.data) {
+        return resp.data;
+      }
+      console.warn(`接口数据格式不兼容: `, resp);
+      return [];
+    },
+    /**
+     *  从接口返回结果里取到总数
+     */
+    getDataTotal(resp) {
+      if (this.getDataMap.total) {
+        let totalPath = this.getDataMap.total;
+        totalPath = totalPath.indexOf('$') === 0 ? totalPath : `$.${totalPath}`;
+        return jp.query(resp, totalPath)[0];
+      }
+      if (resp.result) {
+        return resp.result.total;
+      }
+      if (resp.data) {
+        return resp.total;
+      }
+      return 0;
+    },
     change(e, item, index) {
       this.$emit("change", e, item, index);
     },
