@@ -12,7 +12,7 @@
     <!-- 
       @prop item - 数组条目数据
     -->
-    <view v-for="(item, index) in value" :key="index">
+    <view v-for="(item, index) in cValue" :key="index">
       <slot :item="item">
         <view>循环内容</view>
       </slot>
