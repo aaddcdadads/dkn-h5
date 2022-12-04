@@ -447,8 +447,8 @@
       {
         "name": "HmCalendarPro",
         "title": "日程表",
-        "importPath": "built-in/uniapp/HmCalendarPro",
-        "imgUrl": "built-in/uniapp/img/HmCalendarPro.png",
+        "importPath": "built-in/uniapp-haomo/HmCalendarPro",
+        "imgUrl": "built-in/uniapp-haomo/img/HmCalendarPro.png",
         "type": 0,
         "isBuiltIn": true
       },
