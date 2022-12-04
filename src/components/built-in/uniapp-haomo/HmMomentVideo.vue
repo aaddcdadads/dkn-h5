@@ -173,9 +173,6 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-page {
-  background: cyan;
-}
 .HmMomentVideo {
   width: 100%;
   background: #fff;

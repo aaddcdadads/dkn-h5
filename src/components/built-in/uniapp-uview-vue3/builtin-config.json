@@ -445,6 +445,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "HmCalendarPro",
+        "title": "日程表",
+        "importPath": "built-in/uniapp/HmCalendarPro",
+        "imgUrl": "built-in/uniapp/img/HmCalendarPro.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmMomentVideo",
         "title": "视频展示卡片",
         "importPath": "built-in/uniapp-haomo/HmMomentVideo",
