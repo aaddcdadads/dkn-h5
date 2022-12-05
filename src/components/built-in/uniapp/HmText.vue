@@ -85,6 +85,7 @@ export default {
     },
     onClick() {
       this.$emit("onClick");
+   
     },
   },
   watch: {

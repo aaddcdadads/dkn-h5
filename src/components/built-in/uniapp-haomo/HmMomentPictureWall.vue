@@ -3,16 +3,16 @@
     <!-- 个人信息 -->
     <view class="author-message">
       <view>
-        <img :src="data.avatorUrl" />
+        <img :src="avatorUrl" />
       </view>
       <view>
-        <view>{{ data.author }}</view>
-        <view>{{ data.releaseTime }}</view>
+        <view>{{ author }}</view>
+        <view>{{ releaseTime }}</view>
       </view>
     </view>
     <!-- 标签 -->
     <view class="tag-view">
-      <view v-for="tag in data.tagList">#{{ tag }}</view>
+      <view v-for="tag in tagList">#{{ tag }}</view>
     </view>
     <!-- 图片列表 -->
     <view class="img-list">
@@ -20,25 +20,7 @@
         <img :src="url" />
       </view>
     </view>
-    <view class="bottom-menu">
-      <view>
-        <view>是否展示班牌</view>
-        <view>
-          <u-checkbox
-            class="bottomContent_state_checkbox"
-            v-model="state"
-            shape="circle"
-            @change="checkBoxChange"
-          ></u-checkbox>
-          <u-icon
-            class="bottomContent_state_icon"
-            name="more-dot-fill"
-            size="40"
-            color="#9797A8"
-          ></u-icon>
-        </view>
-      </view>
-    </view>
+  
   </view>
 </template>
 
@@ -49,24 +31,51 @@ export default {
       type: Object,
       default: () => {
         return {
-          avatorUrl:
-            'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-06-27%2F5b3345789ca2c.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672673466&t=5e77370355822fe3e96abd658d730f44',
-          author: '范老师',
-          releaseTime: '2022-11-24 17:00:07',
-          tagList: ['早读日常'],
           imgUrlList: [
-            'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-06-27%2F5b3345789ca2c.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672673466&t=5e77370355822fe3e96abd658d730f44',
-            'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-06-27%2F5b3345789ca2c.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672673466&t=5e77370355822fe3e96abd658d730f44',
-            'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-06-27%2F5b3345789ca2c.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672673466&t=5e77370355822fe3e96abd658d730f44',
-            'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-06-27%2F5b3345789ca2c.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672673466&t=5e77370355822fe3e96abd658d730f44',
-            'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-06-27%2F5b3345789ca2c.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672673466&t=5e77370355822fe3e96abd658d730f44',
-            'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-06-27%2F5b3345789ca2c.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672673466&t=5e77370355822fe3e96abd658d730f44',
+            'https://img.zcool.cn/community/0131475bdbc1d0a80121ab5d0d4628.jpg@1280w_1l_2o_100sh.jpg',
+            'https://ts1.cn.mm.bing.net/th/id/R-C.e897507069836614b9d0742ed4ef2294?rik=mGs0XJwW4yP6LA&riu=http%3a%2f%2fseopic.699pic.com%2fphoto%2f50043%2f6133.jpg_wh1200.jpg&ehk=CyZOoaSeL6Z%2fPUJk4xp%2bH99z9lRexe58BYJSG1u8sSA%3d&risl=&pid=ImgRaw&r=0',
+            'https://img.zcool.cn/community/015ac65b6269afa801215c8f90cc6c.jpg@1280w_1l_2o_100sh.jpg',
+            'https://img.zcool.cn/community/0197265dc4e7e7a801209e1f625868.jpg@1280w_1l_2o_100sh.jpg',
+            'https://ts1.cn.mm.bing.net/th/id/R-C.b06c1313a1d7c5fe33d7521ae0b7ff4f?rik=9nXVPi1IRA3ENw&riu=http%3a%2f%2fpic.tdy.picdns.com%2f2693%2fshow%2f201704%2f20%2f134840hHxxT.jpg&ehk=hppTa1YXJ9E%2fzqMpVKOcCjPeewn71txSYXtgiF5cfWI%3d&risl=&pid=ImgRaw&r=0',
+            'https://ts1.cn.mm.bing.net/th/id/R-C.46dbf62a3c28835291ff7209ab57e066?rik=zgytFn0oxeejwA&riu=http%3a%2f%2fseopic.699pic.com%2fphoto%2f50096%2f2460.jpg_wh1200.jpg&ehk=Pdur9BJwfPFKhYzXnIHfBQ%2bqvlcPXwIsgDNjkOXPimE%3d&risl=&pid=ImgRaw&r=0',
           ],
           isShowClassBrand: true,
+         
         }
       },
     },
-  },
+      /**
+     * 头像地址
+     */
+     avatorUrl: {
+      type: String,
+      default: "https://img2.baidu.com/it/u=1003272215,1878948666&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800",
+    },
+     /**
+     * 发布者昵称
+     */
+     author: {
+      type: String,
+      default: "范老师",
+    },
+    /**
+     * 发布时间
+     */
+     releaseTime: {
+      type: String,
+      default: "2022-11-24 17:00:07",
+    },
+    /**
+     * 发布标签
+     */
+     tagList: {
+      type: Array,
+      default: function () {
+        return ['早读日常','早读日常'];
+      }
+     
+     }
+    }
 }
 </script>
 
@@ -76,14 +85,17 @@ export default {
     display: flex;
     border-bottom: 2rpx solid #f2f5f7;
     > view:first-child {
-      padding: 38rpx 24rpx 32rpx 48rpx;
+      margin: 38rpx 24rpx 32rpx 48rpx;
       display: flex;
       justify-content: center;
-      align-items: center;
+      width: 76rpx;
+      height: 76rpx;
       > img {
         border-radius: 50%;
-        width: 76rpx;
-        height: 76rpx;
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        object-fit: cover;
       }
     }
     > view:last-child {
@@ -125,46 +137,20 @@ export default {
     display: flex;
     padding-top: 20rpx;
     flex-wrap: wrap;
+
     > view {
       margin-bottom: 8rpx;
       margin-right: 8rpx;
+      width: 144rpx;
+      height: 144rpx;
       > img {
-        width: 144rpx;
-        height: 144rpx;
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        object-fit: cover;
       }
     }
   }
-  .bottom-menu {
-    padding-left: 144rpx;
-    margin-top: 44rpx;
-    margin-bottom: 44rpx;
-    display: flex;
-    justify-content: space-between;
-    > view:first-child {
-      display: flex;
-      align-items: center;
-      display: flex;
-      font-size: 28rpx;
-      > view:first-child {
-        font-family: PingFangSC-Regular;
-        font-size: rpx;
-        color: #464957;
-        letter-spacing: 0;
-        text-align: center;
-        font-weight: 400;
-      }
-      > view:last-child {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        > :first-child {
-          margin-left: 16rpx;
-        }
-        > :last-child {
-          margin-left: 280rpx;
-        }
-      }
-    }
-  }
+
 }
 </style>
