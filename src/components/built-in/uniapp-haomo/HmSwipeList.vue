@@ -108,8 +108,74 @@
   </uni-swipe-action>
 </template>
 <script>
+import { cloneDeep } from '/@/utils/util';
+import jp from "jsonpath";
+import {
+  getAction
+} from "/@/request/http";
+
+
 export default {
   props: {
+    /**
+     * 数据项
+     */
+    list: {
+      type: Array,
+      default: function () {
+        return [
+          {
+            title: "天安物业",
+            content: "今日周年活动注意观察.",
+            leftImgSrc: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
+            rightImgSrc:""
+          },
+          {
+            title: "天安物业",
+            content: "今日周年活动注意观察.",
+            leftImgSrc:
+              "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
+            rightImgSrc: ""
+          },
+          {
+            title: "天安物业",
+            tagText:"新闻",
+            content: "今日周年活动注意观察.今日周年活动注意观察.",
+            leftImgSrc:
+              "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
+            rightImgSrc:""
+          },
+        ];
+      },
+    },
+    /**
+     * GET URL
+     */
+    url: {
+      type: String,
+    },
+    /**
+     * GET Params
+     */
+    params: {
+      type: Object,
+      default: function () {
+        return {}
+      }
+    },
+    /**
+     * 请求结果映射
+     * @desc list为列表数据路径；路径采用JSONPath格式（去掉前面的 $.）
+     */
+    getDataMap: {
+      type: Object,
+      default: function () {
+        return {
+          list: '',
+          total: ''
+        }
+      }
+    },
     /**
      * 是否左边操作
      */
@@ -189,37 +255,6 @@ export default {
     mode: {
       type: String,
       default: "aspectFill",
-    },
-    /**
-     * 数据项
-     */
-    list: {
-      type: Array,
-      default: function () {
-        return [
-          {
-            title: "天安物业",
-            content: "今日周年活动注意观察.",
-            leftImgSrc: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
-            rightImgSrc:""
-          },
-          {
-            title: "天安物业",
-            content: "今日周年活动注意观察.",
-            leftImgSrc:
-              "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
-            rightImgSrc: ""
-          },
-          {
-            title: "天安物业",
-            tagText:"新闻",
-            content: "今日周年活动注意观察.今日周年活动注意观察.",
-            leftImgSrc:
-              "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
-            rightImgSrc:""
-          },
-        ];
-      },
     },
     /**
      * 图片图标配置
@@ -303,6 +338,15 @@ export default {
       },
       deep: true,
     },
+    url: function(value) {
+      this.getData();
+    },
+    params: {
+      handler: function (value, oldValue) {
+        this.getData();
+      },
+      deep: true,
+    },
     layout(value) {
       this.cLayout = value;
     },
@@ -322,10 +366,12 @@ export default {
     this.cTextAlign = this.textAlign;
     this.cLeftAction = this.leftAction;
     this.cImgStyle = this.imgStyle;
+    this.getData();
   },
   data() {
     return {
       cList: [],
+      total: 0,
       cLayout:{},
       cTextAlign:"",
       cImgStyle: {},
@@ -335,6 +381,70 @@ export default {
     };
   },
   methods: {
+    getData(url, params) {
+      let self = this;
+      self._getData(url, params);
+    },
+    _getData(url, params) {
+      let self = this;
+      url = url || this.url;
+
+      if (!url) {
+        return;
+      }
+
+      params =
+        params || (this.params ? JSON.parse(JSON.stringify(this.params)) : {});
+
+      getAction(url, params).then((resp) => {
+        console.log(`get table data: `, resp);
+        self.cList = [];
+        setTimeout(() => {
+          self.cList = self.getDataList(resp);
+          self.cList.forEach((item, index) => {
+            item.hmNo = index + 1;
+          });
+          self.total = self.getDataTotal(resp);
+        }, 10);
+      });
+    },
+    /**
+     * 从接口返回结果里取到数组
+     */
+    getDataList(resp) {
+      if (this.getDataMap && this.getDataMap.list) {
+        let listPath = this.getDataMap.list;
+        listPath = listPath.indexOf('$') === 0 ? listPath : `$.${listPath}`;
+        return jp.query(resp, listPath)[0];
+      }
+
+      if (resp.result) {
+        return resp.result.records || resp.result;
+      }
+
+      if (resp.data) {
+        return resp.data;
+      }
+      console.warn(`接口数据格式不兼容: `, resp);
+      return [];
+    },
+    /**
+     *  从接口返回结果里取到总数
+     */
+     getDataTotal(resp) {
+      if (this.getDataMap.total) {
+        let totalPath = this.getDataMap.total;
+        totalPath = totalPath.indexOf('$') === 0 ? totalPath : `$.${totalPath}`;
+        return jp.query(resp, totalPath)[0];
+      }
+      if (resp.result) {
+        return resp.result.total;
+      }
+      if (resp.data) {
+        return resp.total;
+      }
+      return 0;
+    },
     change(e, item, index) {
       this.$emit("change", e, item, index);
     },

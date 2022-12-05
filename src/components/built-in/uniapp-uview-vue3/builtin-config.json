@@ -26,6 +26,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "HmLoop",
+        "title": "循环器",
+        "importPath": "built-in/uniapp-haomo/HmLoop",
+        "imgUrl": "built-in/uniapp-haomo/img/HmLoop.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmCoverView",
         "title": "覆盖框",
         "importPath": "built-in/uniapp/HmCoverView",
@@ -435,6 +443,22 @@
         "imgUrl": "built-in/uniapp/img/HmCalendar.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmCalendarPro",
+        "title": "日程表",
+        "importPath": "built-in/uniapp-haomo/HmCalendarPro",
+        "imgUrl": "built-in/uniapp-haomo/img/HmCalendarPro.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "HmMomentVideo",
+        "title": "视频展示卡片",
+        "importPath": "built-in/uniapp-haomo/HmMomentVideo",
+        "imgUrl": "built-in/uniapp-haomo/img/HmMomentVideo.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },
@@ -596,6 +620,14 @@
     "id": 9,
     "name": "其他",
     "componentList": [
+      {
+        "name": "HmSimpleChatRoom",
+        "title": "即时通讯",
+        "importPath": "built-in/uniapp-haomo/HmSimpleChatRoom",
+        "imgUrl": "built-in/uniapp-haomo/img/HmSimpleChatRoom.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
       {
         "name": "HmUviewFab",
         "title": "悬浮按钮",
