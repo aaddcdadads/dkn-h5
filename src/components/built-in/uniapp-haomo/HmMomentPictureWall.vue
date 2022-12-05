@@ -1,44 +1,44 @@
 <template>
-  <div class="container">
+  <view class="container">
     <!-- 个人信息 -->
-    <div class="author-message">
-      <div>
+    <view class="author-message">
+      <view>
         <img :src="data.avatorUrl" />
-      </div>
-      <div>
-        <div>{{ data.author }}</div>
-        <div>{{ data.releaseTime }}</div>
-      </div>
-    </div>
+      </view>
+      <view>
+        <view>{{ data.author }}</view>
+        <view>{{ data.releaseTime }}</view>
+      </view>
+    </view>
     <!-- 标签 -->
-    <div class="tag-div">
-      <div v-for="tag in data.tagList">#{{ tag }}</div>
-    </div>
+    <view class="tag-view">
+      <view v-for="tag in data.tagList">#{{ tag }}</view>
+    </view>
     <!-- 图片列表 -->
-    <div class="img-list">
-      <div v-for="(url, index) in data.imgUrlList" :key="index">
+    <view class="img-list">
+      <view v-for="(url, index) in data.imgUrlList" :key="index">
         <img :src="url" />
-      </div>
-    </div>
-    <div class="bottom-menu">
-      <div>
-        <div>是否展示班牌</div>
-        <div>
-          <div v-if="data.isShowClassBrand">
+      </view>
+    </view>
+    <view class="bottom-menu">
+      <view>
+        <view>是否展示班牌</view>
+        <view>
+          <view v-if="data.isShowClassBrand">
             <img
               src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.51yuansu.com%2Fpic3%2Fcover%2F02%2F03%2F19%2F599d9f35b71a6_610.jpg&refer=http%3A%2F%2Fbpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672674444&t=d52c948e619bc859a6f72d98ef12547f"
             />
-          </div>
-          <div v-if="!data.isShowClassBrand">不显示</div>
-        </div>
-      </div>
-      <div>
+          </view>
+          <view v-if="!data.isShowClassBrand">不显示</view>
+        </view>
+      </view>
+      <view>
         <img
               src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.51yuansu.com%2Fpic3%2Fcover%2F02%2F03%2F19%2F599d9f35b71a6_610.jpg&refer=http%3A%2F%2Fbpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672674444&t=d52c948e619bc859a6f72d98ef12547f"
             />
-      </div>
-    </div>
-  </div>
+      </view>
+    </view>
+  </view>
 </template>
 
 <script>
@@ -74,119 +74,119 @@ export default {
 <style lang="scss" scoped>
 .container {
   .author-message {
+    
     display: flex;
-    border-bottom: 1rpx solid #e2e2e2;
-    > div:first-child {
-      padding: 19rpx 0rpx 19rpx 24rpx;
-      width: 60rpx;
+    border-bottom: 2rpx solid #F2F5F7;
+    > view:first-child {
+      padding: 38rpx 24rpx 32rpx 48rpx;
+
       display: flex;
       justify-content: center;
       align-items: center;
       > img {
  
         border-radius: 50%;
-        width: 38rpx;
-        height: 38rpx;
+        width: 76rpx;
+        height: 76rpx;
       }
     }
-    > div:last-child {
-      padding-top: 16rpx;
-      padding-bottom: 14rpx;
+    > view:last-child {
+      padding-top: 32rpx;
+      padding-bottom: 28rpx;
       flex: 1;
       display: flex;
       flex-direction: column;
-      > div:first-child {
+      > view:first-child {
         font-family: PingFangSC-Medium;
-        font-size: 16rpx;
+        font-size: 32rpx;
         color: #212121;
         font-weight: 500;
-        line-height: 22rpx;
+        line-height: 44rpx;
       }
-      > div:last-child {
-        margin-top: 4rpx;
+      > view:last-child {
+        margin-top: 8rpx;
         font-family: PingFangSC-Regular;
-        font-size: 12rpx;
+        font-size: 24rpx;
         color: #8b8b94;
 
         font-weight: 400;
       }
     }
   }
-  .tag-div {
+  .tag-view {
     
-    padding-top: 16rpx;
+    padding-top: 32rpx;
     display: flex;
-    padding-left: 74rpx;
-    > div {
+    padding-left: 148rpx;
+    > view {
+  
       font-family: PingFangSC-Medium;
-      font-size: 14rpx;
+      font-size: 28rpx;
       color: #464957;
       text-align: center;
       font-weight: 500;
     }
   }
   .img-list {
-    border:1px solid red;
-  
-    padding-left: 74rpx;
+    padding-left: 148rpx;
     display: flex;
-    padding-top: 10rpx;
+    padding-top: 20rpx;
     flex-wrap: wrap;
-    > div {
-      margin-bottom: 4rpx;
-      margin-right: 4rpx;
+    > view {
+      margin-bottom: 8rpx;
+      margin-right: 8rpx;
       > img {
-        width: 72rpx;
-        height: 72rpx;
+        width: 144rpx;
+        height: 144rpx;
       }
     }
   }
   .bottom-menu {
    
-    padding-left: 74rpx;
+    padding-left: 144rpx;
 
-    margin-top: 22rpx;
-    margin-bottom: 22rpx;
+    margin-top: 44rpx;
+    margin-bottom: 44rpx;
     display: flex;
 
     justify-content: space-between;
-    > div:first-child {
+    > view:first-child {
 
       display: flex;
       
-      font-size: 14rpx;
-      > div:first-child {
+      font-size: 28rpx;
+      > view:first-child {
         font-family: PingFangSC-Regular;
-        font-size: 14rpx;
+        font-size: rpx;
         color: #464957;
         letter-spacing: 0;
         text-align: center;
 
         font-weight: 400;
       }
-      > div:last-child {
+      > view:last-child {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        > div {
+        > view {
           display: flex;
-          padding-left: 8rpx;
+          padding-left: 16rpx;
           font-size: 0;
           > img {
-            width: 16rpx;
-            height: 16rpx;
+            width: 32rpx;
+            height: 32rpx;
           }
         }
       }
     }
-    >div:last-child{
+    >view:last-child{
       display: flex;
   margin-right:16rpx;
       >img{
         display: flex;
-        height:24rpx;
-        width: 24rpx;
+        height:48rpx;
+        width: 48rpx;
       }
     }
   }
