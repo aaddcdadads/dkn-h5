@@ -16,7 +16,7 @@
     </view>
     <!-- 图片列表 -->
     <view class="img-list">
-      <view v-for="(url, index) in data.imgUrlList" :key="index">
+      <view v-for="(url, index) in imgUrlList" :key="index">
         <img :src="url" />
       </view>
     </view>
@@ -27,23 +27,23 @@
 <script>
 export default {
   props: {
-    data: {
-      type: Object,
-      default: () => {
-        return {
-          imgUrlList: [
+      /**
+     * 图片列表
+     */
+     imgUrlList: {
+      type: Array,
+      default: function () {
+        return [
             'https://img.zcool.cn/community/0131475bdbc1d0a80121ab5d0d4628.jpg@1280w_1l_2o_100sh.jpg',
             'https://ts1.cn.mm.bing.net/th/id/R-C.e897507069836614b9d0742ed4ef2294?rik=mGs0XJwW4yP6LA&riu=http%3a%2f%2fseopic.699pic.com%2fphoto%2f50043%2f6133.jpg_wh1200.jpg&ehk=CyZOoaSeL6Z%2fPUJk4xp%2bH99z9lRexe58BYJSG1u8sSA%3d&risl=&pid=ImgRaw&r=0',
             'https://img.zcool.cn/community/015ac65b6269afa801215c8f90cc6c.jpg@1280w_1l_2o_100sh.jpg',
             'https://img.zcool.cn/community/0197265dc4e7e7a801209e1f625868.jpg@1280w_1l_2o_100sh.jpg',
             'https://ts1.cn.mm.bing.net/th/id/R-C.b06c1313a1d7c5fe33d7521ae0b7ff4f?rik=9nXVPi1IRA3ENw&riu=http%3a%2f%2fpic.tdy.picdns.com%2f2693%2fshow%2f201704%2f20%2f134840hHxxT.jpg&ehk=hppTa1YXJ9E%2fzqMpVKOcCjPeewn71txSYXtgiF5cfWI%3d&risl=&pid=ImgRaw&r=0',
             'https://ts1.cn.mm.bing.net/th/id/R-C.46dbf62a3c28835291ff7209ab57e066?rik=zgytFn0oxeejwA&riu=http%3a%2f%2fseopic.699pic.com%2fphoto%2f50096%2f2460.jpg_wh1200.jpg&ehk=Pdur9BJwfPFKhYzXnIHfBQ%2bqvlcPXwIsgDNjkOXPimE%3d&risl=&pid=ImgRaw&r=0',
-          ],
-          isShowClassBrand: true,
-         
-        }
-      },
-    },
+          ]
+      }
+     
+     },
       /**
      * 头像地址
      */
