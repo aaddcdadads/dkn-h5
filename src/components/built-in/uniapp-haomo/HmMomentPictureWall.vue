@@ -23,21 +23,21 @@
     <view class="bottom-menu">
       <view>
         <view>是否展示班牌</view>
-        <view>
-          <view v-if="data.isShowClassBrand">
-            <img
-              src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.51yuansu.com%2Fpic3%2Fcover%2F02%2F03%2F19%2F599d9f35b71a6_610.jpg&refer=http%3A%2F%2Fbpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672674444&t=d52c948e619bc859a6f72d98ef12547f"
-            />
-          </view>
-          <view v-if="!data.isShowClassBrand">不显示</view>
-        </view>
-      </view>
-      <view>
-        <img
-              src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.51yuansu.com%2Fpic3%2Fcover%2F02%2F03%2F19%2F599d9f35b71a6_610.jpg&refer=http%3A%2F%2Fbpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672674444&t=d52c948e619bc859a6f72d98ef12547f"
-            />
+        <view><u-checkbox 
+          class="bottomContent_state_checkbox"
+          v-model="state"
+          shape="circle"
+          @change="checkBoxChange"
+        ></u-checkbox>
+        <u-icon
+          class="bottomContent_state_icon"
+          name="more-dot-fill"
+          size="40"
+          color="#9797A8"
+        ></u-icon>
       </view>
     </view>
+  </view>
   </view>
 </template>
 
@@ -151,7 +151,10 @@ export default {
 
     justify-content: space-between;
     > view:first-child {
-
+   
+     
+      display: flex;
+      align-items: center;
       display: flex;
       
       font-size: 28rpx;
@@ -161,34 +164,24 @@ export default {
         color: #464957;
         letter-spacing: 0;
         text-align: center;
-
+       
         font-weight: 400;
       }
-      > view:last-child {
-        display: flex;
+     >view:last-child{
+      display: flex;
         justify-content: center;
         align-items: center;
+      >:first-child{
+      
+        margin-left: 16rpx;
+      }
+      >:last-child{
 
-        > view {
-          display: flex;
-          padding-left: 16rpx;
-          font-size: 0;
-          > img {
-            width: 32rpx;
-            height: 32rpx;
-          }
-        }
+       margin-left:280rpx;
       }
+     }
     }
-    >view:last-child{
-      display: flex;
-  margin-right:16rpx;
-      >img{
-        display: flex;
-        height:48rpx;
-        width: 48rpx;
-      }
-    }
+
   }
 }
 </style>
