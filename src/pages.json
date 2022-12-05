@@ -51,6 +51,12 @@
       }
     },
     {
+      "path": "components/built-in/uniapp-haomo/HmMomentPictureWall",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
       "path": "components/built-in/uniapp/HmMap",
       "style": {
         "navigationBarTitleText": "",
