@@ -23,27 +23,26 @@
     <view class="bottom-menu">
       <view>
         <view>是否展示班牌</view>
-        <view><u-checkbox 
-          class="bottomContent_state_checkbox"
-          v-model="state"
-          shape="circle"
-          @change="checkBoxChange"
-        ></u-checkbox>
-        <u-icon
-          class="bottomContent_state_icon"
-          name="more-dot-fill"
-          size="40"
-          color="#9797A8"
-        ></u-icon>
+        <view>
+          <u-checkbox
+            class="bottomContent_state_checkbox"
+            v-model="state"
+            shape="circle"
+            @change="checkBoxChange"
+          ></u-checkbox>
+          <u-icon
+            class="bottomContent_state_icon"
+            name="more-dot-fill"
+            size="40"
+            color="#9797A8"
+          ></u-icon>
+        </view>
       </view>
     </view>
-  </view>
   </view>
 </template>
 
 <script>
-
-
 export default {
   props: {
     data: {
@@ -74,17 +73,14 @@ export default {
 <style lang="scss" scoped>
 .container {
   .author-message {
-    
     display: flex;
-    border-bottom: 2rpx solid #F2F5F7;
+    border-bottom: 2rpx solid #f2f5f7;
     > view:first-child {
       padding: 38rpx 24rpx 32rpx 48rpx;
-
       display: flex;
       justify-content: center;
       align-items: center;
       > img {
- 
         border-radius: 50%;
         width: 76rpx;
         height: 76rpx;
@@ -108,18 +104,15 @@ export default {
         font-family: PingFangSC-Regular;
         font-size: 24rpx;
         color: #8b8b94;
-
         font-weight: 400;
       }
     }
   }
   .tag-view {
-    
     padding-top: 32rpx;
     display: flex;
     padding-left: 148rpx;
     > view {
-  
       font-family: PingFangSC-Medium;
       font-size: 28rpx;
       color: #464957;
@@ -142,21 +135,15 @@ export default {
     }
   }
   .bottom-menu {
-   
     padding-left: 144rpx;
-
     margin-top: 44rpx;
     margin-bottom: 44rpx;
     display: flex;
-
     justify-content: space-between;
     > view:first-child {
-   
-     
       display: flex;
       align-items: center;
       display: flex;
-      
       font-size: 28rpx;
       > view:first-child {
         font-family: PingFangSC-Regular;
@@ -164,24 +151,20 @@ export default {
         color: #464957;
         letter-spacing: 0;
         text-align: center;
-       
         font-weight: 400;
       }
-     >view:last-child{
-      display: flex;
+      > view:last-child {
+        display: flex;
         justify-content: center;
         align-items: center;
-      >:first-child{
-      
-        margin-left: 16rpx;
+        > :first-child {
+          margin-left: 16rpx;
+        }
+        > :last-child {
+          margin-left: 280rpx;
+        }
       }
-      >:last-child{
-
-       margin-left:280rpx;
-      }
-     }
     }
-
   }
 }
 </style>
