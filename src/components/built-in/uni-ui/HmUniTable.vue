@@ -60,7 +60,6 @@ export default {
   components: {
     RenderDom
   },
-  name: "HmButton",
   props: {
     /**
      * 列定义
