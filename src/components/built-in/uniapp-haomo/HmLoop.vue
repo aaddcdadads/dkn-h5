@@ -86,6 +86,15 @@ export default {
       default: false
     },
     /**
+     * 上滑状态
+     * @type Enum
+     * @options ["more","loading","noMore"]
+     */
+    status: {
+      type: String,
+      default: "more",
+    },
+    /**
      * 滑动配置
      */
     refreshConfig: {
