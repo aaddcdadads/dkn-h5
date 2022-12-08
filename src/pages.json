@@ -32,6 +32,12 @@
       }
     },
     {
+      "path": "components/built-in/uniapp-haomo/HmAddressList",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
       "path": "components/built-in/uniapp-haomo/HmImageCardList",
       "style": {
         "navigationBarTitleText": "uni-app"
