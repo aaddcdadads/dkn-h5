@@ -92,7 +92,7 @@ export default {
       type: Object,
       default: function () {
         return {
-          loaading: false,
+          loading: false,
           loadText: "正在获取消息",
         };
       },
@@ -143,10 +143,6 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-page {
-  background-color: #f3f3f3;
-  font-size: 28rpx;
-}
 .HmSimpleChatRoom {
   .flex-row {
     display: flex;
