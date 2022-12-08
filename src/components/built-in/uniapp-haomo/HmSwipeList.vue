@@ -54,7 +54,7 @@
               ></image>
             </view>
             <view class="center-box flex-col" :style="{ textAlign: cTextAlign }">
-              <text class="content-title">{{ item.title }}</text>
+              <text class="content-title">{{ item.title }}<text class="content-title_sub">{{item.subTitle}}</text></text>
               <text class="content-text">
                 <u-tag
                 v-if='item.tagText'
