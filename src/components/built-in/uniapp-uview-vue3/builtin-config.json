@@ -152,9 +152,9 @@
         "isBuiltIn": true
       },
       {
-        "name": "HmUviewCell",
-        "title": "单元格",
-        "importPath": "built-in/uniapp-uview-vue3/HmUviewCell",
+        "name": "HmUviewCellList",
+        "title": "单元格列表",
+        "importPath": "built-in/uniapp-uview-vue3/HmUviewCellList",
         "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewCell.png",
         "type": 0,
         "isBuiltIn": true

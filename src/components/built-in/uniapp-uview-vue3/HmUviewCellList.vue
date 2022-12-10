@@ -30,7 +30,7 @@
 <script>
 export default {
   components: {},
-  name: "HmUviewCell",
+  name: "HmUviewCellList",
   props: {
     /**
      * 数据
