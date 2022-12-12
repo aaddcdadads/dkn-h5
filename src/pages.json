@@ -307,7 +307,7 @@
       }
     },
     {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewCell",
+      "path": "components/built-in/uniapp-uview-vue3/HmUviewCellList",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
