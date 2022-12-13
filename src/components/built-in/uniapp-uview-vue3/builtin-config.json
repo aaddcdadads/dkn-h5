@@ -653,6 +653,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "HmIndexList",
+        "title": "索引列表(通讯录)",
+        "importPath": "built-in/uniapp-haomo/HmIndexList",
+        "imgUrl": "built-in/uniapp-haomo/img/HmIndexList.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmCheckList",
         "title": "多选列表",
         "importPath": "built-in/uniapp/HmCheckList",

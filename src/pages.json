@@ -32,7 +32,7 @@
       }
     },
     {
-      "path": "components/built-in/uniapp-haomo/HmAddressList",
+      "path": "components/built-in/uniapp-haomo/HmIndexList",
       "style": {
         "navigationBarTitleText": "uni-app"
       }
