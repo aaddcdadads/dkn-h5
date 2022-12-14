@@ -400,7 +400,7 @@ export default {
         console.log(`get table data: `, resp);
         self.cList = [];
         setTimeout(() => {
-          self.cList = self.getDataList(resp);
+          self.cList = self.mapData(self.getDataList(resp));
           self.cList.forEach((item, index) => {
             item.hmNo = index + 1;
           });
