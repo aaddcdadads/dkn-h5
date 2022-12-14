@@ -112,6 +112,14 @@
         "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewCollapse.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmUviewWebView",
+        "title": "webView组件",
+        "importPath": "built-in/uniapp-uview-vue3/HmUviewWebView",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewWebView.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },
