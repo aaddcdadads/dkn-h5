@@ -49,12 +49,38 @@
           shape="circle"
           @change="checkBoxChange"
         ></u-checkbox>
-        <u-icon
-          class="bottomContent_state_icon"
-          name="more-dot-fill"
-          size="40"
-          color="#9797A8"
-        ></u-icon>
+        <view class="bottomContent_state_iconView">
+          <u-icon
+            class="bottomContent_state_iconView_icon"
+            name="more-dot-fill"
+            size="40"
+            color="#9797A8"
+            @click="moreDotClick"
+          ></u-icon>
+          <view id="popupShowView" class="popupShowView">
+            <view
+              class="moment_video_content"
+              :class="{
+                'moment_video_show': popupShow,
+                'moment_video_zIndex':popupShow && contentStyle.position != 'relative',
+              }"
+              :style="contentStyle">
+              <slot>
+                <view v-for="btn in popupBtn" :key="btn" class="moment_video_content_btn"
+                @click="btnClick(btn)">{{btn}}</view>
+              </slot>
+            </view>
+            <view
+              @touchmove.stop.prevent="stop"
+              class="moment_video_mask"
+              :class="{ moment_video_show: popupShow }"
+              :style="{ backgroundColor: mask.bgColor }"
+              v-if="mask.show"
+              @tap="handleClose(popupShow)"
+            >
+            </view>
+          </view>
+        </view>
       </view>
     </view>
   </view>
@@ -64,7 +90,7 @@ export default {
   name: "HmMomentVideo",
   props: {
     /**
-     * 图像地址
+     * 头像地址
      */
     imgSrc: {
       type: String,
@@ -122,10 +148,10 @@ export default {
             "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F4d8c706470079945e0d116a4ac49c043d8c9278c.png&refer=http%3A%2F%2Fi0.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1664182243&t=ec14434f35aef08cda1a96b4d1c46cc8", //封面图片
           controls: true, //是否显示默认播放控件（播放/暂停按钮、播放进度、时间）
           danmuBtn: false, //是否显示弹幕按钮,只在初始化时有效，不能动态变更
-          enableDanmu: true, //是否展示弹幕，只在初始化时有效，不能动态变更
-          pageGesture: true, //在非全屏模式下，是否开启亮度与音量调节手势
+          enableDanmu: false, //是否展示弹幕，只在初始化时有效，不能动态变更
+          pageGesture: false, //在非全屏模式下，是否开启亮度与音量调节手势
           showFullscreenBtn: true, //是否显示全屏按钮
-          showPlayBtn: true, //是否显示视频底部控制栏的播放按钮
+          showPlayBtn: false, //是否显示视频底部控制栏的播放按钮
           showCenterPlayBtn: true, //是否显示视频中间的播放按钮
           enableProgressGesture: true, //是否开启控制进度的手势
           showMuteBtn: false, //是否显示静音按钮
@@ -133,6 +159,40 @@ export default {
         };
       },
     },
+    /**
+     * 弹出层样式
+     */
+    contentStyle: {
+      type: Object,
+      default: function () {
+        return {
+          width: "auto",
+          backgroundColor: "#f1f1f1",
+          borderRadius: "8rpx",
+          color: "#333333",
+          overflow:"hidden",
+          position: "fixed",
+          left: "auto",
+          right: "auto",
+          bottom: "auto",
+          top: "auto",
+          boxShadow: '0px 2px 15px 0px rgba(218,225,232,0.5)',
+          transform: 'translate(0,0)',
+        };
+      },
+    },
+    /**
+     * 遮罩样式
+     */
+    mask: {
+      type: Object,
+      default: function () {
+        return {
+          show: true,
+          bgColor: "transparent",
+        };
+      },
+    }
   },
   watch: {
     talk: {
@@ -148,11 +208,33 @@ export default {
   data() {
     return {
       talks: [],
+      popupBtn:["置顶","删除"],
+      popupShow: false,
     };
   },
   methods: {
+    handleClose(e) {
+      if (!e) {
+        return;
+      }
+      this.close();
+    },
+    close(){
+      this.popupShow = false;
+    },
+    stop() {
+      return false;
+    },
+    btnClick(e){
+      this.$emit("btnClick",e);
+      this.close();
+    },
     checkBoxChange(e) {
       this.$emit("checkBoxChange", e);
+    },
+    moreDotClick(e) {
+      this.popupShow = true;
+      this.$emit("moreDotClick", e);
     },
     play(e) {
       this.$emit("play", e);
@@ -248,6 +330,7 @@ export default {
       margin: 48rpx 0rpx 88rpx;
       display: flex;
       align-items: center;
+      position: relative;
       &_text {
         font-size: 14px;
         color: #464957;
@@ -256,9 +339,60 @@ export default {
       &_checkbox {
         margin: 0rpx 8rpx;
       }
-      &_icon {
+      &_iconView {
         margin-left: auto;
         margin-right: 0rpx;
+        position: relative;
+        &_icon {
+        }
+      }
+    }
+  }
+  // 弹出层
+  .popupShowView {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    .moment_video {
+      &_content {
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        &_btn{
+          background: #fff;
+          text-align: center;
+          padding:12rpx 20rpx;
+          margin-bottom:2rpx;
+        }
+        &_btn:last-child{
+          margin-bottom:0rpx;
+        }
+      }
+      &_triangle {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        z-index: 997;
+      }
+      &_mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 995;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+      }
+      &_show {
+        opacity: 1;
+        visibility: visible;
+      }
+      &_zIndex {
+        z-index: 996;
       }
     }
   }
