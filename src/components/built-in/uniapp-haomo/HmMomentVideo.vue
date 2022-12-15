@@ -1,7 +1,7 @@
 <template>
   <view class="HmMomentVideo">
     <view class="topTitle flex-row">
-      <view class="topTitle_img"><img :src="imgSrc"/></view>
+      <view class="topTitle_img"><img :src="imgSrc" /></view>
       <view class="topTitle_title flex-col">
         <text class="topTitle_title_name" decode>{{ name }}</text>
         <text class="topTitle_title_time" decode>{{ time }}</text></view
@@ -61,13 +61,20 @@
             <view
               class="moment_video_content"
               :class="{
-                'moment_video_show': popupShow,
-                'moment_video_zIndex':popupShow && contentStyle.position != 'relative',
+                moment_video_show: popupShow,
+                moment_video_zIndex:
+                  popupShow && contentStyle.position != 'relative',
               }"
-              :style="contentStyle">
+              :style="contentStyle"
+            >
               <slot>
-                <view v-for="btn in popupBtn" :key="btn" class="moment_video_content_btn"
-                @click="btnClick(btn)">{{btn}}</view>
+                <view
+                  v-for="btn in popupBtn"
+                  :key="btn"
+                  class="moment_video_content_btn"
+                  @click="btnClick(btn)"
+                  >{{ btn }}</view
+                >
               </slot>
             </view>
             <view
@@ -170,14 +177,14 @@ export default {
           backgroundColor: "#f1f1f1",
           borderRadius: "8rpx",
           color: "#333333",
-          overflow:"hidden",
+          overflow: "hidden",
           position: "fixed",
           left: "auto",
           right: "auto",
           bottom: "auto",
           top: "auto",
-          boxShadow: '0px 2px 15px 0px rgba(218,225,232,0.5)',
-          transform: 'translate(0,0)',
+          boxShadow: "0px 2px 15px 0px rgba(218,225,232,0.5)",
+          transform: "translate(0,0)",
         };
       },
     },
@@ -192,7 +199,7 @@ export default {
           bgColor: "transparent",
         };
       },
-    }
+    },
   },
   watch: {
     talk: {
@@ -208,7 +215,7 @@ export default {
   data() {
     return {
       talks: [],
-      popupBtn:["置顶","删除"],
+      popupBtn: ["置顶", "删除"],
       popupShow: false,
     };
   },
@@ -219,22 +226,48 @@ export default {
       }
       this.close();
     },
-    close(){
+    close() {
       this.popupShow = false;
     },
     stop() {
       return false;
     },
-    btnClick(e){
-      this.$emit("btnClick",e);
+    btnClick(e) {
+      this.$emit("btnClick", e);
       this.close();
     },
     checkBoxChange(e) {
       this.$emit("checkBoxChange", e);
     },
     moreDotClick(e) {
+      this.popupPosition();
       this.popupShow = true;
       this.$emit("moreDotClick", e);
+    },
+    popupPosition() {
+      // 完善移动端
+      // h5
+      let icon = document.getElementsByClassName("bottomContent_state_iconView_icon");
+      let popup = document.getElementsByClassName("moment_video_content");
+      let icon_obj = {
+        w: icon[0].offsetWidth,
+        h: icon[0].offsetHeight,
+        t: icon[0].offsetTop,
+        l: icon[0].offsetLeft,
+      }
+      let popup_obj = {
+        w: popup[0].offsetWidth,
+        h: popup[0].offsetHeight,
+        t: popup[0].offsetTop,
+        l: popup[0].offsetLeft,
+      };
+      let X=0,Y;
+      if (popup_obj.h + popup_obj.t >= window.innerHeight) {
+        Y = (popup_obj.h + (icon_obj.h * 1.2)) * -1 + "px";
+      } else {
+        Y = icon_obj.h * 0.2 + "px";
+      }
+      this.contentStyle.transform = "translate("+ X +"," + Y + ")";
     },
     play(e) {
       this.$emit("play", e);
@@ -359,14 +392,14 @@ export default {
         transition: all 0.3s ease-in-out;
         opacity: 0;
         visibility: hidden;
-        &_btn{
+        &_btn {
           background: #fff;
           text-align: center;
-          padding:12rpx 20rpx;
-          margin-bottom:2rpx;
+          padding: 12rpx 20rpx;
+          margin-bottom: 2rpx;
         }
-        &_btn:last-child{
-          margin-bottom:0rpx;
+        &_btn:last-child {
+          margin-bottom: 0rpx;
         }
       }
       &_triangle {
