@@ -9,7 +9,7 @@
       <u-col span="12" class="search__input-div">
         <u-input
           class="search__input"
-          placeholder="请输入内容"
+          :placeholder="placeholder"
           border="surround"
           shape="circle"
           v-model="keyValue"
@@ -222,7 +222,7 @@ export default {
   options: { styleIsolation: "shared" }, //解决/deep/不生效
   props: {
     /**
-     * 无效
+     * 排序配置
      */
     sortOption: {
       type: Object,
@@ -243,6 +243,9 @@ export default {
         ];
       }
     },
+    /**
+     * 过滤配置
+     */
     filterOption: {
       type: Object,
       default: function() {
@@ -351,9 +354,19 @@ export default {
         ];
       }
     },
+    /**
+     * 主过滤字段
+     */
     keyColumn: {
       type: String,
       default: "key"
+    },
+    /**
+     * 提示文字
+     */
+    placeholder: {
+      type: String,
+      default: "请输入内容"
     }
   },
   watch: {},
