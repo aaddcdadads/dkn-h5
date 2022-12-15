@@ -17,20 +17,23 @@
       @close="close"
     />
     <view class="calendar flex-col">
+      <slot name="titleSlot"></slot>
       <view
         class="calendar__item flex-col"
         v-for="(item, index) in cList"
         :key="index"
         @click="itemClick(item, index)"
       >
-        <view class="calendar__item_schedule flex-row">
-          <text decode>{{ item.title }}</text>
-          <text decode>{{ item.subTitle }}</text>
-        </view>
-        <view class="calendar__item_scheduleInfo flex-row">
-          <text decode>{{ item.time }}</text>
-          <text decode>{{ item.thing }}</text>
-        </view>
+        <slot name="contentSlot" :item="item">
+          <view class="calendar__item_schedule flex-row">
+            <text decode>{{ item.title }}</text>
+            <text decode>{{ item.subTitle }}</text>
+          </view>
+          <view class="calendar__item_scheduleInfo flex-row">
+            <text decode>{{ item.time }}</text>
+            <text decode>{{ item.thing }}</text>
+          </view>
+        </slot>
       </view>
     </view>
   </view>
