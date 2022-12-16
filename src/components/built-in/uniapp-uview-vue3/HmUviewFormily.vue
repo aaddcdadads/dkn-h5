@@ -8,19 +8,17 @@
         :class="value['x-decorator-props'].class"
         v-bind="value['x-decorator-props']"
       >
-        <Span 
+        <text 
           v-if="value['x-component'] == 'Span'" 
-          :value="form[key]" 
           v-bind="value['x-component-props']"
-        ></Span>
-        <Pre 
+        >{{form[key]}}</text>
+        <pre 
           v-if="value['x-component'] == 'Pre'"
-          :value="form[key]" 
           v-bind="value['x-component-props']"
-        ></Pre>
-        <Img 
+        >{{form[key]}}</pre>
+        <image 
           v-if="value['x-component'] == 'Img'" 
-          :value="form[key]" 
+          :src="form[key]" 
           v-bind="value['x-component-props']" 
         />
         <u-input 
