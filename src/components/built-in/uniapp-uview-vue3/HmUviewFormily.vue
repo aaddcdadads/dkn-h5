@@ -8,19 +8,16 @@
         :class="value['x-decorator-props'].class"
         v-bind="value['x-decorator-props']"
       >
-        <text 
+        <HmUviewText
           v-if="value['x-component'] == 'Span'" 
+          :text="form[key]"
           v-bind="value['x-component-props']"
-        >{{form[key]}}</text>
-        <pre 
-          v-if="value['x-component'] == 'Pre'"
-          v-bind="value['x-component-props']"
-        >{{form[key]}}</pre>
-        <image 
+        ></HmUviewText>
+        <HmUviewImage 
           v-if="value['x-component'] == 'Img'" 
           :src="form[key]" 
           v-bind="value['x-component-props']" 
-        />
+        ></HmUviewImage>
         <u-input 
           v-if="value['x-component'] == 'Input'" 
           :border="true" 
@@ -68,54 +65,14 @@ import FormItem from '@/uni_modules/vk-uview-ui/components/u-form-item/u-form-it
 import Select from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilySelect.vue";
 import Picker from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyPicker.vue";
 import Upload from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyUpload.vue";
+import HmUviewText from "@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import HmUviewImage from "@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import {
   getFeiqiFilterValue, 
   getFilterValue,
   getFormValue,
   setFormValue,
 } from "./formily/util"
-
-export const Span = defineComponent({
-  name: 'Span',
-  render() {
-    const props = this.$attrs
-    return h(
-      'span',
-      {
-        ...props,
-      },
-      props.value
-    )
-  },
-})
-
-export const Pre = defineComponent({
-  name: 'Pre',
-  render() {
-    const props = this.$attrs
-    return h(
-      'pre',
-      {
-        ...props,
-      },
-      props.value
-    )
-  },
-})
-
-export const Img = defineComponent({
-  name: 'Img',
-  render() {
-    const props = this.$attrs
-    return h(
-      'img',
-      {
-        ...props,
-        src: props.value
-      }
-    )
-  },
-})
 
 export default {
   components: { 
@@ -126,7 +83,9 @@ export default {
     Pre,
     Select,
     Picker,
-    Upload
+    Upload,
+    HmUviewText,
+    HmUviewImage
   },
   props: {
     /**
