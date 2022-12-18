@@ -78,9 +78,6 @@ export default {
   components: { 
     Form,
     FormItem,
-    Span,
-    Img,
-    Pre,
     Select,
     Picker,
     Upload,
