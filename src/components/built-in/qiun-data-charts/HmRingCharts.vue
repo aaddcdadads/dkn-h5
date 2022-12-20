@@ -6,8 +6,9 @@
   </view>
 </template>
 <script>
+import _ from 'lodash';
 import { getAction } from "/@/request/http";
-import { cloneDeep } from '/@/utils/util';
+import { cloneDeep,_ } from '/@/utils/util';
 export default {
   name: "HmRingCharts",
   props: {
