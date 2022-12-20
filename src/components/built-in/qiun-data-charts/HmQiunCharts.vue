@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import { getAction } from "/@/request/http";
 import { cloneDeep } from '/@/utils/util';
 export default {
   name: "HmQiunCharts",
