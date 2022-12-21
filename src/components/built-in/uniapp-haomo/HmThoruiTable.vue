@@ -125,9 +125,9 @@
 </template>
 
 <script>
-import tuiTable from "@/components/built-in/uniapp-haomo/thorui-uni/tui-table/tui-table.vue";
-import tuiTr from "@/components/built-in/uniapp-haomo/thorui-uni/tui-tr/tui-tr.vue";
-import tuiTd from "@/components/built-in/uniapp-haomo/thorui-uni/tui-td/tui-td.vue";
+import tuiTable from "@/components/built-in/thorui-uni/tui-table/tui-table.vue";
+import tuiTr from "@/components/built-in/thorui-uni/tui-tr/tui-tr.vue";
+import tuiTd from "@/components/built-in/thorui-uni/tui-td/tui-td.vue";
 export default {
   components: {
     tuiTable,
