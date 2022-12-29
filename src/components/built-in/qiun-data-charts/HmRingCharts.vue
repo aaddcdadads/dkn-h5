@@ -8,7 +8,7 @@
 <script>
 import _ from 'lodash';
 import { getAction } from "/@/request/http";
-import { cloneDeep,_ } from '/@/utils/util';
+import { cloneDeep } from '/@/utils/util';
 export default {
   name: "HmRingCharts",
   props: {
