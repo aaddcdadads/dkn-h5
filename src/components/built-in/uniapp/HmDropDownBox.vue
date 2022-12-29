@@ -202,7 +202,7 @@ export default {
     this.cSeatWidth = this.getCssUnit(this.seatWidth);
     this.cMaxHeight = this.getCssUnit(this.maxHeight);
     this.cList = this.list;
-    this.cValue = this.value ? this.value : this.cList[0].value;
+    this.cValue = this.value ? this.value : this.cList[0]?this.cList[0].value:"";
     this.cValueSize = this.getCssUnit(this.valueSize);
     this.cListSize = this.getCssUnit(this.listSize);
     this.cSeat = this.getCssUnit(this.seat);
