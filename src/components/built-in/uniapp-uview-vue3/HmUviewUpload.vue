@@ -268,6 +268,7 @@ export default {
     //图片上传失败时触发
     onError(res, index, lists, name) {
       console.log("onError", res, index, lists, name);
+      this.cFileList = lists;
       this.$emit("onError", res, index, lists, name);
     },
     //所有图片上传完毕触发
