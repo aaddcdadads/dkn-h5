@@ -248,7 +248,7 @@ export default {
 		//空提示点击事件
 		"emptyClickFn": {
 			type: Function,
-			default() {
+			default: function () {
 				return () => { };
 			}
 		}

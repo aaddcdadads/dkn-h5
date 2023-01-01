@@ -52,7 +52,7 @@ export default {
      */
     formData: {
       type: Object,
-      default() {
+      default: function () {
         return {};
       },
     },
@@ -61,7 +61,7 @@ export default {
      */
     header: {
       type: Object,
-      default() {
+      default: function () {
         return {};
       },
     },

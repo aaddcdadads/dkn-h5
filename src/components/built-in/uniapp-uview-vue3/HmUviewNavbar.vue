@@ -109,7 +109,7 @@ export default {
      */
     backTextStyle: {
       type: Object,
-      default() {
+      default: function () {
         return { color: "#606266", fontSize: "16px" };
       },
     },
@@ -118,7 +118,7 @@ export default {
      */
     background: {
       type: Object,
-      default() {
+      default: function () {
         return {
           backgroundImage:
             "linear-gradient(45deg, rgb(28, 187, 180), rgb(141, 198, 63))",
