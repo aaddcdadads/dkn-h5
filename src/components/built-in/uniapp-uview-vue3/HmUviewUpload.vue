@@ -250,16 +250,19 @@ export default {
     //移除图片时触发
     onRemove(index, lists, name) {
       //console.log("onRemove", index, lists, name);
+      this.cFileList = lists;
       this.$emit("onRemove", index, lists, name);
     },
     //图片上传成功时触发
     onSuccess(data, index, lists, name) {
       console.log("onSuccess", data, index, lists, name);
+      this.cFileList = lists;
       this.$emit("onSuccess", data, index, lists, name);
     },
     //图片上传后，无论成功或者失败都会触发
     onChange(res, index, lists, name) {
       // console.log("onChange", res, index, lists, name);
+      this.cFileList = lists;
       this.$emit("onChange", res, index, lists, name);
     },
     //图片上传失败时触发
@@ -270,6 +273,7 @@ export default {
     //所有图片上传完毕触发
     onUploaded(lists, name) {
       //console.log("onUploaded", lists, name);
+      this.cFileList = lists;
       this.$emit("onUploaded", lists, name);
     },
     //每次选择图片后触发
