@@ -20,7 +20,7 @@
       :del-icon="delIcon"
       :del-bg-color="delBgColor"
       :delColor="delColor"
-      :header="header"
+      :header="cHeader"
       :form-data="formData"
       :index="index"
       @on-remove="onRemove"
@@ -216,6 +216,7 @@ export default {
     return {
       cAction: null,
       cFileList: [],
+      cHeader: {}
     };
   },
   watch: {
@@ -230,10 +231,17 @@ export default {
         this.upload();
       }
     },
+    header: {
+      handler: function (val, oldVal) {
+        this.cHeader = JSON.parse(JSON.stringify(val));
+      },
+      deep: true
+    },
   },
   mounted() {
     this.cAction = this.action;
     this.cFileList = this.fileList;
+    this.cHeader = JSON.parse(JSON.stringify(this.header));
   },
   methods: {
     upload() {
