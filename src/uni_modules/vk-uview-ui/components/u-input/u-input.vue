@@ -277,8 +277,6 @@ export default {
 		},
 		getStyle() {
 			let style = {};
-			//设置disabled颜色
-			// style.color = '#C0C4CC'
 			// 如果没有自定义高度，就根据type为input还是textare来分配一个默认的高度
 			style.minHeight = this.height
 				? this.height + "rpx"
