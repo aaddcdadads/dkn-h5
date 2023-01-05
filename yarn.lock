@@ -1469,11 +1469,6 @@ csstype@^2.6.8:
   resolved "https://registry.npmmirror.com/csstype/download/csstype-2.6.19.tgz?cache=0&sync_timestamp=1637224514674&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcsstype%2Fdownload%2Fcsstype-2.6.19.tgz"
   integrity sha512-ZVxXaNy28/k3kJg0Fou5MiYpp88j7H9hLZp8PDC3jV0WFjfH5E9xHb56L0W59cPbKbcHXeP4qyT8PrHp8t6LcQ==
 
-dayjs@^1.11.1:
-  version "1.11.6"
-  resolved "https://registry.npmmirror.com/dayjs/-/dayjs-1.11.6.tgz#2e79a226314ec3ec904e3ee1dd5a4f5e5b1c7afb"
-  integrity sha512-zZbY5giJAinCG+7AGaw0wIhNZ6J8AhWuSXKvuc1KAyMiRsvGQWqh4L+MomvhdAYjN+lqvVCMq1I41e3YHvXkyQ==
-
 dayjs@^1.11.5:
   version "1.11.5"
   resolved "https://registry.npmmirror.com/dayjs/-/dayjs-1.11.5.tgz#00e8cc627f231f9499c19b38af49f56dc0ac5e93"
@@ -2287,11 +2282,6 @@ localstorage-polyfill@^1.0.1:
   version "1.0.1"
   resolved "https://registry.nlark.com/localstorage-polyfill/download/localstorage-polyfill-1.0.1.tgz"
   integrity sha1-SzCD1LxR0jtBWFN+ZoFhN0E/0xo=
-
-lodash-es@^4.17.21:
-  version "4.17.21"
-  resolved "https://registry.npmmirror.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
-  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash.camelcase@^4.3.0:
   version "4.3.0"
@@ -3204,11 +3194,3 @@ yaml@^1.10.2:
   version "1.10.2"
   resolved "https://registry.npmmirror.com/yaml/-/yaml-1.10.2.tgz"
   integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
-
-zhoukai_utils@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmmirror.com/zhoukai_utils/-/zhoukai_utils-1.1.0.tgz#d0c989dd3243ec2025fed5e1478a818b020f4581"
-  integrity sha512-/yDBrvFun5XIip7DcOufFq9z0C1S0k5konS4vrGF9XtK/UJ1omIOrsr3yAcqD5gbi9k8LIH50k6dZef+CLt8kw==
-  dependencies:
-    dayjs "^1.11.1"
-    lodash-es "^4.17.21"
