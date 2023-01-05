@@ -73,7 +73,7 @@ function transformUrlProxy(config) {
 }
 
 function setJeecgAuth(config) {
-    let token = uni.getStorageSync('pro__Access-Token');
+    let token = uni.getStorageSync('pro__Access-Token') || uni.getStorageSync('token');
     console.log(`pro__Access-Token: `, token);
     token = token ? JSON.parse(token).value : null;
     config.header[JEECG_TOKEN] = token ? token : '';
