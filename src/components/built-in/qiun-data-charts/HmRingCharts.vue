@@ -225,11 +225,11 @@ export default {
       this.cReshow = false;
       getAction(url, params).then((resp) => {
         self.cChartData = this.getDataSource(resp)
-        self.$refs.chart.setOption(this.cOption, {
-          notMerge: true,
-          lazyUpdate: true,
-          silent: false,
-        });
+        // self.$refs.chart.setOption(this.cOption, {
+        //   notMerge: true,
+        //   lazyUpdate: true,
+        //   silent: false,
+        // });
         self.cReshow = true;
       });
     },
