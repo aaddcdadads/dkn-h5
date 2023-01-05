@@ -218,18 +218,19 @@ export default {
   },
   methods: {
     getData(url, params) {
+      let self = this;
       url = url || this.url;
       params = params || this.params;
       if (!url) return;
       this.cReshow = false;
       getAction(url, params).then((resp) => {
-        this.cChartData = this.getDataSource(resp)
-        this.$refs.chart.setOption(this.cOption, {
+        self.cChartData = this.getDataSource(resp)
+        self.$refs.chart.setOption(this.cOption, {
           notMerge: true,
           lazyUpdate: true,
           silent: false,
         });
-        this.cReshow = true;
+        self.cReshow = true;
       });
     },
     /**
