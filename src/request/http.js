@@ -79,6 +79,7 @@ function setJeecgAuth(config) {
     try {
       token = token ? JSON.parse(token).value : null;
     } catch (e) {
+      // 最新的jeecg，貌似没有存.value的形式
       token = token;
     }
     
