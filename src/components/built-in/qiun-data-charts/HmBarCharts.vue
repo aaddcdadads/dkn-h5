@@ -1,6 +1,7 @@
 <template>
   <view :style="[chartsBoxStyle]" class="charts-box">
     <qiun-data-charts
+      ref="chart"
       :reshow="cReshow" 
       :canvasId="canvasId"
       :canvas2d="canvas2d"
