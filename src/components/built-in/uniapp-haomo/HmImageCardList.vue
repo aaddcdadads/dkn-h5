@@ -416,9 +416,16 @@ page {
 .imgbox {
   position: relative;
 }
+// .imgbox .img {
+//   width: 100%;
+//   height: 100%;
+//   vertical-align: middle;
+// }
 .imgbox .img {
   width: 100%;
   height: 100%;
+  flex: 1;
+  object-fit: cover;
   vertical-align: middle;
 }
 .imgbox .icon {
