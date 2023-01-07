@@ -73,9 +73,16 @@ function transformUrlProxy(config) {
 }
 
 function setJeecgAuth(config) {
-    let token = uni.getStorageSync('pro__Access-Token');
+    let token = uni.getStorageSync('pro__Access-Token') || uni.getStorageSync('token');
     console.log(`pro__Access-Token: `, token);
-    token = token ? JSON.parse(token).value : null;
+
+    try {
+      token = token ? JSON.parse(token).value : null;
+    } catch (e) {
+      // 最新的jeecg，貌似没有存.value的形式
+      token = token;
+    }
+    
     config.header[JEECG_TOKEN] = token ? token : '';
     return config;
 }

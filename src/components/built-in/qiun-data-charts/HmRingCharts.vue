@@ -1,8 +1,18 @@
 <template>
   <view :style="[chartsBoxStyle]" class="charts-box">
-    <qiun-data-charts :reshow="cReshow" :canvasId="canvasId" :canvas2d="canvas2d" type="ring" :chartData="cChartData"
-      :opts="cChartDeploy" :tooltipCustom="tooltipCustom" :tooltipFormat="tooltipFormat" @complete="onComplete"
-      @getIndex="getIndex" @click="onClick" />
+    <qiun-data-charts 
+      ref="chart"
+      :reshow="cReshow" 
+      :canvasId="canvasId" 
+      :canvas2d="canvas2d" 
+      type="ring" 
+      :chartData="cChartData"
+      :opts="cChartDeploy" 
+      :tooltipCustom="tooltipCustom" 
+      :tooltipFormat="tooltipFormat" 
+      @complete="onComplete"
+      @getIndex="getIndex" 
+      @click="onClick" />
   </view>
 </template>
 <script>
@@ -208,18 +218,14 @@ export default {
   },
   methods: {
     getData(url, params) {
+      let self = this;
       url = url || this.url;
       params = params || this.params;
       if (!url) return;
       this.cReshow = false;
       getAction(url, params).then((resp) => {
-        this.cChartData = this.getDataSource(resp)
-        this.$refs.chart.setOption(this.cOption, {
-          notMerge: true,
-          lazyUpdate: true,
-          silent: false,
-        });
-        this.cReshow = true;
+        self.cChartData = this.getDataSource(resp)
+        self.cReshow = true;
       });
     },
     /**

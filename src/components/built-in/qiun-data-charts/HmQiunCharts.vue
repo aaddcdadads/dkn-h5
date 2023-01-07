@@ -1,6 +1,7 @@
 <template>
   <view :style="[chartsBoxStyle]" class="charts-box">
     <qiun-data-charts
+      ref="chart"
       :reshow="cReshow"
       :canvasId="canvasId"
       :canvas2d="canvas2d"
@@ -317,11 +318,6 @@ export default {
       this.cReshow = false;
       getAction(url, params).then((resp) => {
         this.cChartData = this.getDataSource(resp);
-        this.$refs.chart.setOption(this.cOption, {
-          notMerge: true,
-          lazyUpdate: true,
-          silent: false,
-        });
         this.cReshow = true;
       });
     },

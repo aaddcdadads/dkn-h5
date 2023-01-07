@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import { cloneDeep } from '/@/utils/util';
 import {
   getAction,
 } from "/@/request/http";
@@ -98,7 +99,7 @@ export default {
   watch: {
     data: {
       handler: function (value, oldValue) {
-        this.cData = JSONfn.parse(JSONfn.stringify(value));
+        this.cData = cloneDeep(value);
       },
       deep: true
     },
