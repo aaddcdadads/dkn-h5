@@ -1,6 +1,6 @@
 <template>
   <u-parse
-    :html="html"
+    :html="cData.html"
     :autopause="autopause"
     :autoscroll="autoscroll"
     :autoset-title="autosetTitle"
@@ -16,15 +16,21 @@
 </template>
 
 <script>
+import { cloneDeep } from '/@/utils/util';
+
 export default {
   name: "HmUviewParse",
   props: {
     /**
-     * html内容
+     * 数据
      */
-    html: {
-      type: String,
-      default: '<h1 style="text-align: center;">新闻</h1><h2 style="text-align: center;">作者：胡小根</h2><p> &nbsp; &nbsp;这是正文。</p><p> &nbsp; &nbsp;这是结尾。</p>',
+    data: {
+      type: Object,
+      default: function() {
+        return {
+          html: '<h1 style="text-align: center;">新闻</h1><h2 style="text-align: center;">作者：胡小根</h2><p> &nbsp; &nbsp;这是正文。</p><p> &nbsp; &nbsp;这是结尾。</p>',
+        }
+      } 
     },
     /**
      * 暂停其他播放
@@ -107,7 +113,22 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      cData: {
+        html: ''
+      }
+    };
+  },
+  watch: {
+    data: {
+      handler: function(val, oldVal) {
+        this.cData = cloneDeep(val);
+      },
+      deep: true
+    }
+  },
+  mounted() {
+    this.cData = cloneDeep(this.data);
   },
   methods: {
   },
