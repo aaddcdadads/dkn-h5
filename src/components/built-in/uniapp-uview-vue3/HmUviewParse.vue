@@ -24,7 +24,7 @@ export default {
     /**
      * 数据
      */
-    data: {
+    content: {
       type: Object,
       default: function() {
         return {
@@ -114,21 +114,21 @@ export default {
   },
   data() {
     return {
-      cData: {
+      cContent: {
         html: ''
       }
     };
   },
   watch: {
-    data: {
+    content: {
       handler: function(val, oldVal) {
-        this.cData = cloneDeep(val);
+        this.cContent = cloneDeep(val);
       },
       deep: true
     }
   },
   mounted() {
-    this.cData = cloneDeep(this.data);
+    this.cContent = cloneDeep(this.content);
   },
   methods: {
   },
