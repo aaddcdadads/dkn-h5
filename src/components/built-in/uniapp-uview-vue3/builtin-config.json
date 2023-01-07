@@ -629,6 +629,14 @@
     "name": "其他",
     "componentList": [
       {
+        "name": "HmUviewParse",
+        "title": "富文本渲染",
+        "importPath": "built-in/uniapp-uview-vue3/HmUviewParse",
+        "imgUrl": "built-in/uniapp-uview-vue3/img/HmUviewParse.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmSimpleChatRoom",
         "title": "即时通讯",
         "importPath": "built-in/uniapp-haomo/HmSimpleChatRoom",
