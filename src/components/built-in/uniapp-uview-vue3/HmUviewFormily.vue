@@ -689,4 +689,7 @@ export default {
   line-height: 1;
   content: '*';
 }
+/deep/ .hm-bg-text {
+	font-size: unset;
+}
 </style>
