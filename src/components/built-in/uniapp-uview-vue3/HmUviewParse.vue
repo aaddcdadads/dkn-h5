@@ -1,6 +1,6 @@
 <template>
   <u-parse
-    :html="cContent.html"
+    :html="cValue.html"
     :autopause="autopause"
     :autoscroll="autoscroll"
     :autoset-title="autosetTitle"
@@ -24,7 +24,7 @@ export default {
     /**
      * 数据
      */
-    content: {
+    value: {
       type: Object,
       default: function() {
         return {
@@ -114,21 +114,21 @@ export default {
   },
   data() {
     return {
-      cContent: {
+      cValue: {
         html: ''
       }
     };
   },
   watch: {
-    content: {
+    value: {
       handler: function(val, oldVal) {
-        this.cContent = cloneDeep(val);
+        this.cValue = cloneDeep(val);
       },
       deep: true
     }
   },
   mounted() {
-    this.cContent = cloneDeep(this.content);
+    this.cValue = cloneDeep(this.value);
   },
   methods: {
   },
