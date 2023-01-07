@@ -1,6 +1,6 @@
 <template>
   <u-parse
-    :html="cData.html"
+    :html="cContent.html"
     :autopause="autopause"
     :autoscroll="autoscroll"
     :autoset-title="autosetTitle"
