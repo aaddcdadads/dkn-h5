@@ -475,7 +475,7 @@ page {
 }
 
 .adrstext {
-//   min-height: 82rpx;
+  min-height: 82rpx;
   letter-spacing: 0;
   font-weight: 600;
   overflow: hidden;
