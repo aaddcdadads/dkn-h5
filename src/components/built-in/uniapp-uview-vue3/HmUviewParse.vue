@@ -1,5 +1,6 @@
 <template>
   <u-parse
+    v-if="show"
     :html="cData.html"
     :autopause="autopause"
     :autoscroll="autoscroll"
@@ -114,6 +115,7 @@ export default {
   },
   data() {
     return {
+      show: true,
       cData: {
         html: ''
       }
@@ -122,13 +124,17 @@ export default {
   watch: {
     data: {
       handler: function(val, oldVal) {
+        this.show = false;
         this.cData = cloneDeep(val);
+        this.show = true;
       },
       deep: true
     }
   },
   mounted() {
+    this.show = false;
     this.cData = cloneDeep(this.data);
+    this.show = true;
   },
   methods: {
   },
