@@ -19,7 +19,7 @@
         <!-- <button @click="saveCanvasAsImg" class="saveBtn">保存</button> -->
         <!-- <button @click="previewCanvasImg" class="previewBtn">预览</button>
         <button @click="uploadCanvasImg" class="uploadBtn">上传</button> -->
-        <button @click="uploadCanvasImg" class="subBtn">提交</button>
+        <button @click="subCanvasImg" class="subBtn">提交</button>
       </view>
       <view class="handCenter">
         <canvas
@@ -55,15 +55,15 @@ export default {
     height: {
       type: String,
       default: "88vh",
-    },
+    }
 
-    /**
-     * 上传地址
-     */
-    action: {
-      type: String,
-      default: "http://192.168.2.21:7001/upload",
-    },
+    // /**
+    //  * 上传地址
+    //  */
+    // action: {
+    //   type: String,
+    //   default: "http://192.168.2.21:7001/upload",
+    // },
   },
   data() {
     return {
@@ -579,42 +579,50 @@ export default {
 						} );
 				*/
     },
-    //上传
-    uploadCanvasImg() {
-      //console.log(this.cAction, "canvas生成图片地址");
+    //提交
+    subCanvasImg() {
+      // console.log("canvas生成图片地址",this.cAction);
       const self = this;
       uni.canvasToTempFilePath({
         canvasId: "handWriting",
         fileType: "png",
         quality: 1, //图片质量
         success(res) {
+          console.log("canvas生成图片地址",res);
+          self.$emit("subImgSuccess",res)
           //上传
-          uni.uploadFile({
-            url: self.cAction,
-            filePath: res.tempFilePath,
-            name: "file_autograph",
-            header: {
-              "Content-Type": "multipart/form-data",
-              //"X-Access-Token": uni.getStorageSync("token"),
-            },
-            success: (uploadFileRes) => {
-              console.log("上传成功", uploadFileRes.data);
-              uni.showToast({
-                icon: "none",
-                title: "上传成功",
-                duration: 1000,
-              });
-            },
-            fail: (err) => {
-              console.log("上传失败", err);
-              uni.showToast({
-                icon: "none",
-                title: "上传失败",
-                duration: 1000,
-              });
-            },
-          });
+          // uni.uploadFile({
+          //   url: self.cAction,
+          //   filePath: res.tempFilePath,
+          //   name: "file_autograph",
+          //   header: {
+          //     "Content-Type": "multipart/form-data",
+          //     //"X-Access-Token": uni.getStorageSync("token"),
+          //   },
+          //   success: (uploadFileRes) => {
+          //     console.log("上传成功", uploadFileRes.data);
+          //     uni.showToast({
+          //       icon: "none",
+          //       title: "上传成功",
+          //       duration: 1000,
+          //     });
+          //   },
+          //   fail: (err) => {
+          //     console.log("上传失败", err);
+          //     uni.showToast({
+          //       icon: "none",
+          //       title: "上传失败",
+          //       duration: 1000,
+          //     });
+          //   },
+          // });
         },
+        fail(res){
+          self.$emit("subImgFail",res)
+        },
+        complete(res){
+          self.$emit("subImgComplete",res)
+        }
       });
     },
     //设置canvas背景色  不设置  导出的canvas的背景为透明
