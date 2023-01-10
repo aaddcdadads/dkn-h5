@@ -105,7 +105,7 @@
           mode="right"
           width="85%"
         >
-          <scroll-view class="filter__popup-form" :scroll-x="true">
+          <scroll-view class="filter__popup-form" :scroll-y="true">
             <view
               class="filter__popup-form-div"
               v-for="(filter, index) in cFilterOption"
