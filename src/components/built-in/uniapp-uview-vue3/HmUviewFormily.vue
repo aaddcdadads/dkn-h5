@@ -555,6 +555,12 @@ export default {
       },
       deep: true
     },
+    rules: {
+      handler(val) {
+        this.$refs.formily.setRules(val);
+      },
+      deep: true
+    },
   },
 	mounted() {
 		this.$refs.formily.setRules(this.rules);

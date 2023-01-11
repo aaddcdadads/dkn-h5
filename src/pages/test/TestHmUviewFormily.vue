@@ -59,7 +59,6 @@ export default {
                 },
                 'x-component': 'Input',
                 'x-component-props': {
-                  'disabled': true,
                 },
               },
               inputNumber: {
