@@ -6,22 +6,29 @@
         :prop="key"
         :key="index"  
         :class="value['x-decorator-props'].class"
+        :style="value['x-decorator-props'].style"
         v-bind="value['x-decorator-props']"
       >
         <HmUviewText
           v-if="value['x-component'] == 'Span'" 
           :text="form[key]"
+          :class="value['x-component-props'].class"
+          :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"
         ></HmUviewText>
         <HmUviewImage 
           v-if="value['x-component'] == 'Img'" 
           :src="form[key]" 
+          :class="value['x-component-props'].class"
+          :style="value['x-component-props'].style"
           v-bind="value['x-component-props']" 
         ></HmUviewImage>
         <u-input 
           v-if="value['x-component'] == 'Input'" 
           :border="true" 
           v-model="form[key]" 
+          :class="value['x-component-props'].class"
+          :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"
         ></u-input>
         <u-input 
@@ -29,27 +36,46 @@
           type="textarea"
           :border="true" 
           v-model="form[key]" 
+          :class="value['x-component-props'].class"
+          :style="value['x-component-props'].style"
+          v-bind="value['x-component-props']"
+        ></u-input>
+        <u-input 
+          v-if="value['x-component'] == 'InputNumber'" 
+          type="number"
+          :border="true" 
+          v-model="form[key]" 
+          :class="value['x-component-props'].class"
+          :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"
         ></u-input>
         <Select 
           v-if="value['x-component'] == 'Select'" 
           v-model="form[key]" 
+          :class="value['x-component-props'].class"
+          :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"
           @confirm="value['x-component-events'].confirm"
         ></Select>
         <Upload 
           v-if="value['x-component'] == 'Upload' || value['x-component'] == 'UploadImage'" 
           v-model="form[key]" 
+          :class="value['x-component-props'].class"
+          :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"
         ></Upload>
         <u-switch 
           v-if="value['x-component'] == 'Switch'" 
           v-model="form[key]" 
+          :class="value['x-component-props'].class"
+          :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"
         ></u-switch>
         <Picker 
           v-if="value['x-component'] == 'DatePicker' || value['x-component'] == 'TimePicker'" 
           v-model="form[key]" 
+          :class="value['x-component-props'].class"
+          :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"
         ></Picker>
       </FormItem>
@@ -98,11 +124,8 @@ export default {
               type: 'void',
               'x-component': 'Form',
               'x-component-props': {
-                'style': {
-                  'display': 'flex',
-                  'flexWrap': 'wrap'
-                },
                 'labelWidth': '10%',
+                'labelPosition': 'top'
               },
               properties: {
                 span: {
@@ -111,11 +134,6 @@ export default {
                   'x-decorator-props': {
                     'label': '文字',
                     'name': 'span',
-                    'style': {
-                      width: '50%',
-                    },
-                    'labelCol': { span: 4 },
-                    'wrapperCol': { span: 14 },
                   },
                   'x-component': 'Span',
                   'x-component-props': {
@@ -132,40 +150,32 @@ export default {
                   'x-decorator-props': {
                     'label': '输入框',
                     'name': 'input',
-                    'style': {
-                      width: '50%',
-                    },
+                    // 'required': true,
                     'class': ['required']
                   },
                   'x-component': 'Input',
                   'x-component-props': {
-                    '@change': function(e) {
-                      console.log('change', e);
-                    },
-                    '@input': function(e) {
-                      console.log('input', e);
-                      self.$refs.xxx.setFormValues({input: e})
-                    }
+                    'disabled': true,
                   },
                 },
-                // inputNumber: {
-                //   type: 'number',
-                //   minimum: 50,
-                //   exclusiveMinimum: 40,
-                //   default: 20,
-                //   'x-decorator': 'FormItem',
-                //   'x-decorator-props': {
-                //     'label': '数字输入框',
-                //     'name': 'inputNumber',
-                //     'style': {
-                //       width: '50%',
-                //     }
-                //   },
-                //   'x-component': 'InputNumber',
-                //   'x-component-props': {
+                inputNumber: {
+                  type: 'number',
+                  minimum: 50,
+                  exclusiveMinimum: 40,
+                  default: 20,
+                  'x-decorator': 'FormItem',
+                  'x-decorator-props': {
+                    'label': '数字输入框',
+                    'name': 'inputNumber',
+                    'style': {
+                      width: '50%',
+                    }
+                  },
+                  'x-component': 'InputNumber',
+                  'x-component-props': {
 
-                //   }
-                // },
+                  }
+                },
                 checkbox: {
                   type: 'array',
                   default: ['Apple', 'Pear'],
@@ -188,47 +198,47 @@ export default {
                     ]
                   }
                 },
-                // textarea: {
-                //   type: 'string',
-                //   maxLength: 1,
-                //   default: '文本框',
-                //   'x-decorator': 'FormItem',
-                //   'x-decorator-props': {
-                //     'label': '文本框',
-                //     'name': 'textarea',
-                //     'label-col': { span: 2 },
-                //     'wrapper-col': { span: 14 },
-                //     'style': {
-                //       width: '100%',
-                //     }
-                //   },
-                //   'x-component': 'Textarea',
-                //   'x-component-props': {
+                textarea: {
+                  type: 'string',
+                  maxLength: 1,
+                  default: '文本框',
+                  'x-decorator': 'FormItem',
+                  'x-decorator-props': {
+                    'label': '文本框',
+                    'name': 'textarea',
+                    'label-col': { span: 2 },
+                    'wrapper-col': { span: 14 },
+                    'style': {
+                      width: '100%',
+                    }
+                  },
+                  'x-component': 'Textarea',
+                  'x-component-props': {
 
-                //   },
-                // },
-                // radio: {
-                //   type: 'array',
-                //   required: true,
-                //   'x-decorator': 'FormItem',
-                //   'x-decorator-props': {
-                //     'label': '单选框',
-                //     'name': 'radio',
-                //     'label-col': { span: 2 },
-                //     'wrapper-col': { span: 14 },
-                //     'style': {
-                //       width: '100%',
-                //     }
-                //   },
-                //   'x-component': 'RadioGroup',
-                //   'x-component-props': {
-                //     'options': [
-                //       { label: 'Apple', value: 'Apple' },
-                //       { label: 'Pear', value: 'Pear' },
-                //       { label: 'Orange', value: 'Orange' },
-                //     ]
-                //   }
-                // },
+                  },
+                },
+                radio: {
+                  type: 'array',
+                  required: true,
+                  'x-decorator': 'FormItem',
+                  'x-decorator-props': {
+                    'label': '单选框',
+                    'name': 'radio',
+                    'label-col': { span: 2 },
+                    'wrapper-col': { span: 14 },
+                    'style': {
+                      width: '100%',
+                    }
+                  },
+                  'x-component': 'RadioGroup',
+                  'x-component-props': {
+                    'options': [
+                      { label: 'Apple', value: 'Apple' },
+                      { label: 'Pear', value: 'Pear' },
+                      { label: 'Orange', value: 'Orange' },
+                    ]
+                  }
+                },
                 // cascader: {
                 //   type: 'array',
                 //   required: true,
@@ -280,29 +290,42 @@ export default {
                 //     ]
                 //   }
                 // },
-                // select: {
-                //   type: 'string',
-                //   required: true,
-                //   'x-decorator': 'FormItem',
-                //   'x-decorator-props': {
-                //     'label': '下拉选择',
-                //     'name': 'select',
-                //     'label-col': { span: 2 },
-                //     'wrapper-col': { span: 14 },
-                //     'style': {
-                //       width: '100%',
-                //     }
-                //   },
-                //   'x-component': 'Select',
-                //   'x-component-props': {
-                //     'allowClear': true,
-                //     'options': [
-                //       { label: 'Apple', value: '1' },
-                //       { label: 'Pear', value: '2' },
-                //       { label: 'Orange', value: '3' },
-                //     ]
-                //   }
-                // },
+                select: {
+                  type: 'string',
+                  required: true,
+                  'x-decorator': 'FormItem',
+                  'x-decorator-props': {
+                    'label': '下拉选择',
+                    'name': 'select',
+                    'label-col': { span: 2 },
+                    'wrapper-col': { span: 14 },
+                    'style': {
+                      width: '100%',
+                    }
+                  },
+                  'x-component': 'Select',
+                  'x-component-props': {
+                    'allowClear': true,
+                    '@confirm': function(e, item){
+                      console.log('e', e, item)
+                      self.schema.properties.form.properties.switch['x-component-props'].style = {
+                        display: 'none'
+                      }
+                    },
+                    'params': {
+                      pageSize: -1,
+                    },
+                    // 'url': '/api/design/framework/list',
+                    // "dataMap": {
+                    //   "label": "name",
+                    //   "value": "id"
+                    // },
+                    "options": [{
+                      label: "aa",
+                      value: "aa"
+                    }]
+                  }
+                },
                 // slider: {
                 //   type: 'number',
                 //   required: true,
@@ -323,6 +346,7 @@ export default {
                 // },
                 switch: {
                   type: 'boolean',
+                  default: true,
                   'x-decorator': 'FormItem',
                   'x-decorator-props': {
                     'label': '开关',
@@ -335,7 +359,7 @@ export default {
                   },
                   'x-component': 'Switch',
                   'x-component-props': {
-
+                    'disabled': true,
                   }
                 },
                 // tree: {
@@ -380,93 +404,87 @@ export default {
                 //     ]
                 //   }
                 // },
-                // date: {
-                //   type: 'date',
-                //   'x-decorator': 'FormItem',
-                //   'x-decorator-props': {
-                //     'label': '日期选择',
-                //     'name': 'date',
-                //     'label-col': { span: 2 },
-                //     'wrapper-col': { span: 14 },
-                //     'style': {
-                //       width: '100%',
-                //     }
-                //   },
-                //   'x-component': 'DatePicker',
-                //   'x-component-props': {
+                date: {
+                  default: '2022-01-01',
+                  type: 'date',
+                  'x-decorator': 'FormItem',
+                  'x-decorator-props': {
+                    'label': '日期选择',
+                    'name': 'date',
+                    'label-col': { span: 2 },
+                    'wrapper-col': { span: 14 },
+                    'style': {
+                      width: '100%',
+                    }
+                  },
+                  'x-component': 'DatePicker',
+                  'x-component-props': {
+                    "format": "YYYY-MM-DD",
+                    "params": {
+                      year: true,
+                      month: true,
+                      day: true,
+                      hour: false,
+                      minute: false,
+                      second: false,
+                      timestamp: true,
+                    },
+                    'disabled': true,
+                  }
+                },
+                rangeDate: {
+                  type: 'array',
+                  'x-decorator': 'FormItem',
+                  'x-decorator-props': {
+                    'label': '日期范围选择',
+                    'name': 'rangeDate',
+                    'label-col': { span: 2 },
+                    'wrapper-col': { span: 14 },
+                    'style': {
+                      width: '100%',
+                    }
+                  },
+                  'x-component': 'RangePicker',
+                  'x-component-props': {
 
-                //   }
-                // },
-                // rangeDate: {
-                //   type: 'array',
-                //   'x-decorator': 'FormItem',
-                //   'x-decorator-props': {
-                //     'label': '日期范围选择',
-                //     'name': 'rangeDate',
-                //     'label-col': { span: 2 },
-                //     'wrapper-col': { span: 14 },
-                //     'style': {
-                //       width: '100%',
-                //     }
-                //   },
-                //   'x-component': 'RangePicker',
-                //   'x-component-props': {
-
-                //   }
-                // },
-                // time: {
-                //   type: 'datetime',
-                //   'x-decorator': 'FormItem',
-                //   'x-decorator-props': {
-                //     'label': '时间选择',
-                //     'name': 'time',
-                //     'label-col': { span: 2 },
-                //     'wrapper-col': { span: 14 },
-                //     'style': {
-                //       width: '100%',
-                //     }
-                //   },
-                //   'x-component': 'TimePicker',
-                //   'x-component-props': {
-
-                //   }
-                // },
-                // upload: {
-                //   type: 'object',
-                //   'x-decorator': 'FormItem',
-                //   'x-decorator-props': {
-                //     'label': '上传',
-                //     'name': 'upload',
-                //     'label-col': { span: 2 },
-                //     'wrapper-col': { span: 14 },
-                //     'style': {
-                //       width: '100%',
-                //     }
-                //   },
-                //   'x-component': 'Upload',
-                //   'x-component-props': {
-                //     'action': 'http://aacsb-stage.bbblackboard.com/api/obe/uploadFile',
-                //     '@change': function(info) {
-                //       if (info.file.status !== 'uploading') {
-                //         console.log(info.file, info.fileList);
-                //       }
-                //       if (info.file.status === 'done') {
-                //         this.$message.success(`${info.file.name} file uploaded successfully`);
-                //       } else if (info.file.status === 'error') {
-                //         this.$message.error(`${info.file.name} file upload failed.`);
-                //       }
-                //     }
-                //   },
-                //   properties: {
-                //     button: {
-                //       type: 'void',
-                //       'x-component': 'Button',
-                //       'x-component-props': {
-                //       },
-                //       'x-content': "上传文件"
-                //     }
-                //   }
-                // },
+                  }
+                },
+                time: {
+                  default: '2022-01-01 00:00:00',
+                  type: 'datetime',
+                  'x-decorator': 'FormItem',
+                  'x-decorator-props': {
+                    'label': '时间选择',
+                    'name': 'time',
+                    'label-col': { span: 2 },
+                    'wrapper-col': { span: 14 },
+                    'style': {
+                      width: '100%',
+                    }
+                  },
+                  'x-component': 'TimePicker',
+                  'x-component-props': {
+                  }
+                },
+                upload: {
+                  default: 'http://xh.ispace.dev.haomo-tech.com/files/1668147473752/WechatIMG2996.jpeg',
+                  type: 'string',
+                  'x-decorator': 'FormItem',
+                  'x-decorator-props': {
+                    'label': '上传',
+                    'name': 'upload',
+                    'label-col': { span: 2 },
+                    'wrapper-col': { span: 14 },
+                    'style': {
+                      width: '100%',
+                    }
+                  },
+                  'x-component': 'Upload',
+                  'x-component-props': {
+                    'action': 'http://aacsb-stage.bbblackboard.com/api/obe/uploadFile',
+                    'maxCount': 11,
+                  },
+                },
                 // uploadImage: {
                 //   type: 'object',
                 //   'x-decorator': 'FormItem',
