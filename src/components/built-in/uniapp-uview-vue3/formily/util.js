@@ -39,6 +39,10 @@ export function getFeiqiFilterValue(type, values, key) {
 }
 
 export function getFormValue(type, values, key) {
+  if (isCheckbox(type) && values[key]) {
+    values[key] = values[key].join(",");
+    return;
+  }
   // 处理日期组件
   // if (isDate(type) && values[key]) {
   //   values[key] = moment(values[key]).format('YYYY-MM-DD HH:mm:ss');
@@ -52,6 +56,9 @@ export function getFormValue(type, values, key) {
 }
 
 export function setFormValue(type, values, key) {
+  if (isCheckbox(type)) {
+    return values[key].split(",")
+  }
   // 处理日期\时间组件
   // if (isDate(type) || isTime(type)) {
   //   return moment(values[key]);
@@ -67,6 +74,10 @@ export function setFormValue(type, values, key) {
 
 function isSelect(type) {
   return type.indexOf("Select") > -1;
+}
+
+function isCheckbox(type) {
+  return type.indexOf("Checkbox") > -1;
 }
 
 function isInput(type) {

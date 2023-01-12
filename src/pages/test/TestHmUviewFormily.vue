@@ -121,7 +121,8 @@ export default {
                 },
               },
               radio: {
-                type: 'array',
+                type: 'string',
+                default: 'Pear',
                 required: true,
                 'x-decorator': 'FormItem',
                 'x-decorator-props': {

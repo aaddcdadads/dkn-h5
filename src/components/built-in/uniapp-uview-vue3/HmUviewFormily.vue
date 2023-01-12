@@ -78,6 +78,20 @@
           :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"
         ></Picker>
+        <Radio 
+          v-if="value['x-component'] == 'Radio' || value['x-component'] == 'RadioGroup'" 
+          v-model="form[key]" 
+          :class="value['x-component-props'].class"
+          :style="value['x-component-props'].style"
+          v-bind="value['x-component-props']"
+        ></Radio>
+        <Checkbox 
+          v-if="value['x-component'] == 'Checkbox' || value['x-component'] == 'CheckboxGroup'" 
+          v-model="form[key]" 
+          :class="value['x-component-props'].class"
+          :style="value['x-component-props'].style"
+          v-bind="value['x-component-props']"
+        ></Checkbox>
       </FormItem>
     </Form>
   </div>
@@ -91,6 +105,8 @@ import FormItem from '@/uni_modules/vk-uview-ui/components/u-form-item/u-form-it
 import Select from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilySelect.vue";
 import Picker from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyPicker.vue";
 import Upload from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyUpload.vue";
+import Radio from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyRadio.vue";
+import Checkbox from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyCheckbox.vue";
 import HmUviewText from "@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewImage from "@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import {
@@ -108,7 +124,9 @@ export default {
     Picker,
     Upload,
     HmUviewText,
-    HmUviewImage
+    HmUviewImage,
+    Radio,
+    Checkbox
   },
   props: {
     /**

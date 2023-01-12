@@ -4,16 +4,16 @@
     <u-radio-group v-model:value="cValue" :wrap="wrap" @change="radioGroupChange">
       <p v-if="textLocation" style="margin-left: 1px; margin-right: 5px">{{ item.name }}</p>
       <u-radio
-        v-for="(item, index) in cList"
+        v-for="(item) in cOptions"
         @change="radioChange"
-        :key="index"
-        :name="item.name"
+        :key="item.value"
+        :name="item.value"
         :disabled=" disabled || item.disabled"
         :shape="shape"
         :icon-size="iconSize"
         :active-color="activeColor"
       >
-        <p v-if="!textLocation" style>{{ item.name }}</p>
+        <p v-if="!textLocation" style>{{ item.label }}</p>
       </u-radio>
     </u-radio-group>
   </view>
@@ -36,9 +36,8 @@ export default {
      * 值
      * @model
      */
-    value: {
+    modelValue: {
       type: String,
-      default: "",
     },
     /**
      * 标题
@@ -76,23 +75,23 @@ export default {
       },
     },
     /**
-     * 数据内容
+     * 配置项
      */
-    list: {
+    options: {
       type: Array,
       default: function() {
         return [
           {
-            name: "apple",
-            disabled: false,
+            label: "1",
+            value: "1",
           },
           {
-            name: "banner",
-            disabled: false,
+            label: "2",
+            value: "2",
           },
           {
-            name: "orange",
-            disabled: false,
+            label: "3",
+            value: "3",
           },
         ];
       },
@@ -140,7 +139,11 @@ export default {
       default: false
     },
   },
-  computed: {},
+  computed: {
+    value(){
+      return this.modelValue;
+    }
+  },
   data() {
     return {
       cList: [],
@@ -149,7 +152,7 @@ export default {
   },
   mounted() {
     this.cValue = this.value;
-    this.cList = this.mapData(this.list);
+    this.cOptions = this.mapData(this.options);
     this.getData();
   },
   watch: {
@@ -168,9 +171,9 @@ export default {
       },
       deep: true,
     },
-    list: {
+    options: {
       handler: function(value, oldValue) {
-        this.cList = this.mapData(value);
+        this.cOptions = this.mapData(value);
       },
       deep: true,
     },
@@ -178,14 +181,11 @@ export default {
   methods: {
     // 选中某个单选框时，由radio时触发
     radioChange(e) {
-      //console.log("1", e);
       this.$emit("radioChange", e);
     },
     // 选中任一radio时，由radio-group触发
     radioGroupChange(e) {
-      //console.log("2", e);
-      //console.log("3", this.cValue);
-      this.$emit("update:value", e);
+      this.$emit("update:modelValue", e);
       this.$emit("radioGroupChange", e);
     },
     //将查询接口的数据渲染到list中
@@ -199,7 +199,7 @@ export default {
       getAction(url, params).then((resp) => {
         console.log("res", resp);
         //查询数据库的数组
-        self.cList = [];
+        self.cOptions = [];
         let data = [];
         if (resp.data) {
           data = resp.data.list;
@@ -208,7 +208,7 @@ export default {
           data = resp.result.records || resp.result;
         }
 
-        self.cList = self.mapData(data);
+        self.cOptions = self.mapData(data);
       });
       //console.log("请求使用的url和参数", url, params);
     },
