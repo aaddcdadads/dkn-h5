@@ -32,7 +32,8 @@
         <view
           class="sort__text"
           :style="{ fontWeight: sort.isSelect ? '600' : 'normal' }"
-        >{{ sort.name }}</view>
+          >{{ sort.name }}</view
+        >
         <view class="sort__icon">
           <u-row>
             <u-icon
@@ -56,17 +57,19 @@
       <scroll-view class="filter__scroll-div center" :scroll-x="true">
         <view
           :class="[
-          'filter__text-div',
-          { 'filter__text-div_select': filter.isSelect },
-          { 'filter__text-div_hasValue': filter.value && !filter.isSelect },
-        ]"
+            'filter__text-div',
+            { 'filter__text-div_select': filter.isSelect },
+            { 'filter__text-div_hasValue': filter.value && !filter.isSelect },
+          ]"
           :style="{ display: filter.show ? 'inline-flex' : 'none' }"
           v-for="(filter, index) in cFilterOption"
           :key="index"
           @click="filterSelect(filter)"
         >
           <u-icon
-            v-if="filter.code != currentCloneFilter.code || singleFilterShow != true"
+            v-if="
+              filter.code != currentCloneFilter.code || singleFilterShow != true
+            "
             class="filter__icon-text"
             :label="filter.name"
             labelPos="left"
@@ -74,7 +77,9 @@
             name="arrow-down"
           ></u-icon>
           <u-icon
-            v-if="filter.code == currentCloneFilter.code && singleFilterShow == true"
+            v-if="
+              filter.code == currentCloneFilter.code && singleFilterShow == true
+            "
             class="filter__icon-text"
             :label="filter.name"
             labelPos="left"
@@ -83,15 +88,24 @@
           ></u-icon>
         </view>
       </scroll-view>
-      <view class="filter__button" @click="filterShow = true">
+      <view
+        class="filter__button"
+        v-if="setJudge(filterOption)"
+        @click="filterShow = true"
+      >
         <view class="filter__button-text">筛选</view>
         <view class="filter__button-icon-div">
           <u-icon class="filter__button-icon" name="list"></u-icon>
         </view>
       </view>
       <view v-if="filterShow">
-        <u-popup class="filter__popup" v-model="filterShow" mode="right" width="85%">
-          <view class="filter__popup-form">
+        <u-popup
+          class="filter__popup"
+          v-model="filterShow"
+          mode="right"
+          width="85%"
+        >
+          <scroll-view class="filter__popup-form" :scroll-y="true">
             <view
               class="filter__popup-form-div"
               v-for="(filter, index) in cFilterOption"
@@ -112,30 +126,39 @@
                   v-if="filter.type == 'Select'"
                   v-bind="filter.props"
                   :autoSelect="false"
-                  @optionsChange="e => filter.props.options = e"
+                  @optionsChange="(e) => (filter.props.options = e)"
                   @showChange="currentSelect = filter"
                 ></Select>
                 <Picker
                   v-model="filter.value"
                   v-model:show="filter.props.show"
-                  v-if="filter.type == 'DatePicker' || filter.type == 'TimePicker'"
+                  v-if="
+                    filter.type == 'DatePicker' || filter.type == 'TimePicker'
+                  "
                   :autoSelect="false"
                   v-bind="filter.props"
                   @showChange="currentPicker = filter"
                 ></Picker>
               </view>
             </view>
-          </view>
+          </scroll-view>
           <!-- <view class="filter__popup-btn-group-fixed"> -->
           <view class="filter__popup-btn-group">
-            <u-button size="medium" shape="circle" class="filter__popup-btn" @click="filterReset">重置</u-button>
+            <u-button
+              size="medium"
+              shape="circle"
+              class="filter__popup-btn"
+              @click="filterReset"
+              >重置</u-button
+            >
             <u-button
               size="medium"
               shape="circle"
               type="error"
               class="filter__popup-btn"
               @click="filterConfirm"
-            >确定</u-button>
+              >确定</u-button
+            >
           </view>
           <!-- </view> -->
         </u-popup>
@@ -164,13 +187,16 @@
               v-if="currentCloneFilter.type == 'Select'"
               v-bind="currentCloneFilter.props"
               :autoSelect="false"
-              @optionsChange="e => currentCloneFilter.props.options = e"
+              @optionsChange="(e) => (currentCloneFilter.props.options = e)"
               @showChange="currentSelect = currentCloneFilter"
             ></Select>
             <Picker
               v-model="currentCloneFilter.value"
               v-model:show="currentCloneFilter.props.show"
-              v-if="currentCloneFilter.type == 'DatePicker' || currentCloneFilter.type == 'TimePicker'"
+              v-if="
+                currentCloneFilter.type == 'DatePicker' ||
+                currentCloneFilter.type == 'TimePicker'
+              "
               :autoSelect="false"
               v-bind="currentCloneFilter.props"
               @showChange="currentPicker = currentCloneFilter"
@@ -182,14 +208,16 @@
               shape="circle"
               class="filter__single-popup-btn"
               @click="singleFilterReset"
-            >重置</u-button>
+              >重置</u-button
+            >
             <u-button
               size="medium"
               shape="circle"
               type="error"
               class="filter__single-popup-btn"
               @click="singleFilterConfirm"
-            >确定</u-button>
+              >确定</u-button
+            >
           </view>
         </u-popup>
       </view>
@@ -217,7 +245,7 @@ export default {
   name: "HmUviewFilter",
   components: {
     Select,
-    Picker
+    Picker,
   },
   options: { styleIsolation: "shared" }, //解决/deep/不生效
   props: {
@@ -226,36 +254,36 @@ export default {
      */
     sortOption: {
       type: Object,
-      default: function() {
+      default: function () {
         return [
           {
             name: "时间",
-            code: "时间"
+            code: "时间",
           },
           {
             name: "状态",
-            code: "状态"
+            code: "状态",
           },
           {
             name: "test3",
-            code: "test3"
-          }
+            code: "test3",
+          },
         ];
-      }
+      },
     },
     /**
      * 过滤配置
      */
     filterOption: {
       type: Object,
-      default: function() {
+      default: function () {
         return [
           {
             name: "时间",
             code: "testTime",
             type: "TimePicker",
             props: {},
-            show: true
+            show: true,
           },
           {
             name: "日期",
@@ -270,11 +298,11 @@ export default {
                 hour: false,
                 minute: false,
                 second: false,
-                timestamp: true
+                timestamp: true,
               },
-              format: "YYYY-MM-DD"
+              format: "YYYY-MM-DD",
             },
-            show: true
+            show: true,
           },
           {
             name: "状态",
@@ -283,91 +311,91 @@ export default {
             props: {
               // url: "/api/design/framework/list",
               params: {
-                pageSize: -1
+                pageSize: -1,
               },
               options: [
                 {
                   label: "是",
-                  value: 0
+                  value: 0,
                 },
                 {
                   label: "否",
-                  value: 1
-                }
+                  value: 1,
+                },
               ],
               dataMap: {
                 label: "name",
-                value: "id"
-              }
+                value: "id",
+              },
             },
-            show: false
+            show: false,
           },
           {
             name: "test3",
             code: "test3",
             type: "Input",
             props: {},
-            show: true
+            show: true,
           },
           {
             name: "test4",
             code: "test4",
             type: "Input",
             props: {},
-            show: true
+            show: true,
           },
           {
             name: "test5",
             code: "test5",
             type: "Input",
             props: {},
-            show: true
+            show: true,
           },
           {
             name: "test6",
             code: "test6",
             type: "Input",
             props: {},
-            show: true
+            show: true,
           },
           {
             name: "test7",
             code: "test7",
             type: "Input",
             props: {},
-            show: true
+            show: true,
           },
           {
             name: "test8",
             code: "test8",
             type: "Input",
             props: {},
-            show: true
+            show: true,
           },
           {
             name: "test9",
             code: "test9",
             type: "Input",
             props: {},
-            show: true
-          }
+            show: true,
+          },
         ];
-      }
+      },
     },
     /**
      * 主过滤字段
      */
     keyColumn: {
       type: String,
-      default: "key"
+      default: "key",
     },
     /**
      * 提示文字
      */
     placeholder: {
       type: String,
-      default: "请输入内容"
-    }
+      default: "请输入内容",
+    },
   },
   watch: {},
   computed: {
@@ -385,12 +413,12 @@ export default {
       height = uni.getWindowInfo().screenHeight - 100;
       // #endif
       return height + "px";
-    }
+    },
   },
   mounted() {
     this.cSortOption = this.sortOption;
     // 设置默认值
-    this.cFilterOption = this.filterOption.map(item => {
+    this.cFilterOption = this.filterOption.map((item) => {
       item.props = item.props || {};
       if (item.type == "Select") {
       }
@@ -408,7 +436,7 @@ export default {
           //地区参数
           province: true,
           city: true,
-          area: true
+          area: true,
         };
       }
       return item;
@@ -426,10 +454,21 @@ export default {
       currentCloneFilter: { props: {} },
       order: "asc",
       keyValue: "",
-      selectShow: false
+      selectShow: false,
     };
   },
   methods: {
+    //控制筛选文字及弹窗
+    setJudge(e) {
+      let arr = [];
+      e.forEach(item => {
+        if (item.show != false) {
+          arr.push(item);
+        }
+      });
+      return arr.length <= 3 ? false : true;
+      // return true;
+    },
     selectOnConfirm(e) {
       this.currentSelect.value = e[0].value.toString();
     },
@@ -446,7 +485,7 @@ export default {
         return;
       }
       self.order = "asc";
-      self.cSortOption.forEach(sort => {
+      self.cSortOption.forEach((sort) => {
         if (sort.code == item.code) {
           sort.isSelect = true;
         } else {
@@ -460,7 +499,7 @@ export default {
         self.singleFilterShow = false;
       } else {
         self.singleFilterShow = true;
-        self.cFilterOption.forEach(filter => {
+        self.cFilterOption.forEach((filter) => {
           if (filter.code == item.code) {
             filter.isSelect = true;
             self.currentFilter = filter;
@@ -472,7 +511,7 @@ export default {
       }
     },
     clearFilterSelect() {
-      this.cFilterOption.forEach(filter => {
+      this.cFilterOption.forEach((filter) => {
         filter.isSelect = false;
       });
     },
@@ -485,7 +524,7 @@ export default {
       this.search();
     },
     filterReset() {
-      this.cFilterOption.forEach(filter => {
+      this.cFilterOption.forEach((filter) => {
         filter.value = undefined;
       });
     },
@@ -496,12 +535,12 @@ export default {
     search() {
       this.$emit("search", {
         filter: this.getFilterValues(),
-        sort: this.getSortValues()
+        sort: this.getSortValues(),
       });
     },
     getFilterValues() {
       let obj = {};
-      this.cFilterOption.forEach(item => {
+      this.cFilterOption.forEach((item) => {
         if (item.value != undefined) {
           getFilterValue(item, obj);
         }
@@ -517,8 +556,8 @@ export default {
     },
     change(e) {
       this.$emit("change", e);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -672,9 +711,9 @@ export default {
       width: unset;
     }
     // #ifdef MP-WEIXIN
-    /deep/ .u-drawer__scroll-view{
-      width:auto !important;
-      padding:10rpx 10rpx;
+    /deep/ .u-drawer__scroll-view {
+      width: auto !important;
+      padding: 10rpx 10rpx;
     }
     // #endif
     &-form-div {
