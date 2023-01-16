@@ -28,7 +28,10 @@
 </template>
 
 <script>
+import { pathToBase64, base64ToPath } from 'image-tools'
 export default {
+  name: "HmDiscern",
+
   props: {
     /**
      * 宽度
@@ -43,27 +46,26 @@ export default {
     height: {
       type: String,
       default: "150px",
-    },
-    /**
-     * 上传地址
-     */
-    action: {
-      type: String,
-      default: "",
-    },
-    /**
-     * 是否上传
-     */
-    isUpload: {
-      type: Boolean,
-      default: false,
-    },
+    }
+    // /**
+    //  * 上传地址
+    //  */
+    // action: {
+    //   type: String,
+    //   default: "",
+    // },
+    // /**
+    //  * 是否上传
+    //  */
+    // isUpload: {
+    //   type: Boolean,
+    //   default: false,
+    // },
   },
   data() {
     return {
       imgUrl1: null,
       imgUrl2: null,
-      cAction: "",
       cWidth: "",
       cHeight: "",
     };
@@ -75,9 +77,7 @@ export default {
     height(value) {
       this.cHeight = this.getCssUnit(value);
     },
-    action(value) {
-      this.cAction = value;
-    },
+    
     isUpload(value) {
       if (value && this.imgUrl1 != null && this.imgUrl2 != null) {
         this.uploadFile(this.imgUrl1, this.imgUrl2);
@@ -92,7 +92,7 @@ export default {
   },
 
   mounted() {
-    this.cAction = this.action;
+    // this.cAction = this.action;
     this.cWidth = this.getCssUnit(this.wdith);
     this.cHeight = this.getCssUnit(this.height);
   },
@@ -103,24 +103,31 @@ export default {
         count: 1,
         success: (chooseImageRes) => {
           const tempFilePaths = chooseImageRes.tempFilePaths;
+          // console.log("chooseImageRes",chooseImageRes);
+          // pathToBase64(tempFilePaths).then(base64 => {
+          //   console.log("base64",base64)
+          // })
           if (value == 1) {
             this.imgUrl1 = tempFilePaths[0];
           } else {
             this.imgUrl2 = tempFilePaths[0];
           }
+          this.$emit("uploadImgSuccess",this.imgUrl1,this.imgUrl2);
+          console.log("图片地址",this.imgUrl1,this.imgUrl2);
         },
         fail: (err) => {
           console.log("图片获取失败", err);
-          uni.showToast({
-            icon: "none",
-            title: "图片获取失败",
-            duration: 2000,
-          });
+          this.$emit("uploadImgFail",err);
+          // uni.showToast({
+          //   icon: "none",
+          //   title: "图片获取失败",
+          //   duration: 2000,
+          // });
         },
       });
     },
 
-    uploadFile(timgUrl1, imgUrl2) {
+    uploadFile(imgUrl1, imgUrl2) {
       uni.uploadFile({
         url: this.cAction,
         files: [
