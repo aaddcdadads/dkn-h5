@@ -11,7 +11,7 @@
       >
         <HmUviewText
           v-if="value['x-component'] == 'Span'" 
-          :text="form[key]"
+          :text="form[key] || ''"
           :class="value['x-component-props'].class"
           :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"

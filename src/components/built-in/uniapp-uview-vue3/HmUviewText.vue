@@ -18,7 +18,7 @@ export default {
      */
     text: {
       type: String,
-      default: ""
+      default: "文字"
     },
     /**
      * 文字大小
