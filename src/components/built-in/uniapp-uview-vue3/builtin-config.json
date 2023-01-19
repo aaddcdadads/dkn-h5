@@ -302,6 +302,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "HmUniappRate",
+        "title": "Uniapp评分",
+        "importPath": "built-in/uniapp-haomo/HmUniappRate",
+        "imgUrl": "built-in/uniapp-haomo/img/HmUniappRate.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmUviewSearch",
         "title": "搜索框",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewSearch",
