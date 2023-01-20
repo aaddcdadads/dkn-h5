@@ -55,13 +55,6 @@ export default {
       default: 24,
     },
     /**
-     * 最小评分
-     */
-    min: {
-      type: Number,
-      default: 1,
-    },
-    /**
      * 最大评分
      */
     max: {
@@ -189,7 +182,9 @@ export default {
       cValue: 0,
       cLabel: "",
       cLabelStyle: "",
-      cDisplayText: {},
+      cDisplayText: {
+        format:"return value"
+      },
     };
   },
   methods: {
@@ -210,5 +205,20 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  &-label,&-text{
+    width:auto;
+    display: flex;
+    flex-shrink: 0;
+  }
+  &-rate{
+    // 无效样式[宽度为0px，则不显示]
+    /deep/ .uni-rate__icon-on[width='0px']{
+      display: none;
+    }
+    // 修改图标
+    /deep/ .uniui-star-filled:before{
+      content: "\e68f";
+    }
+  }
 }
 </style>
