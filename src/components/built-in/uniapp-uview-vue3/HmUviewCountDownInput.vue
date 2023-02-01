@@ -1,5 +1,5 @@
 <template>
-  <view class="countDown">
+  <view class="countDown" :style="{ height: height }">
     <u-field
       class="inputBox"
       :label="label"
@@ -17,7 +17,7 @@
       @keyboardheightchange="onKeyboard"
       ><slot></slot
     ></u-field>
-    <button type="text" class="btnBox" @click="btnState != 2 && getClick()">
+    <button type="text" class="btnBox" :style="{color:fontColor,fontSize:fontSize}" @click="btnState != 2 && getClick()">
       <text decode="decode" v-if="btnState == 1">获取验证码</text>
       <u-count-down
         v-if="btnState == 2"
@@ -110,6 +110,13 @@ export default {
       default: "#000000",
     },
     /**
+     * 高度
+     */
+    height: {
+      type: String,
+      default: "32px",
+    },
+    /**
      * 自动倒计时
      */
     autoStart: {
@@ -185,7 +192,6 @@ export default {
 </script>
 <style scoped>
 .countDown {
-  height: 32px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -207,7 +213,5 @@ export default {
 }
 .btnBox {
   justify-content: center;
-  color: v-bind(fontColor);
-  font-size: v-bind(fontSize);
 }
 </style>
