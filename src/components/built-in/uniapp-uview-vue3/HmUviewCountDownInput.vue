@@ -209,7 +209,6 @@ export default {
 .btnBox {
   width: 24%;
   min-width: 120px;
-  line-height: 22px;
 }
 .btnBox {
   justify-content: center;
