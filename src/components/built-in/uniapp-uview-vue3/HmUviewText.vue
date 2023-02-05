@@ -4,10 +4,10 @@
     :style="[
       textStyle,
       {
-        padding: cpadding,
-        textAlign: ctextalign,
-        fontSize: cfontsize,
-        color: ccolor,
+        padding: cPadding,
+        textAlign: cTextalign,
+        fontSize: cFontSize,
+        color: cColor,
         backgroundColor: cBgColor,
       },
     ]"
@@ -54,7 +54,7 @@ export default {
      */
     bgColor: {
       type: String,
-      default: "rgba(255,255,255,1)",
+      default: "",
     },
     /**
      * 对齐
