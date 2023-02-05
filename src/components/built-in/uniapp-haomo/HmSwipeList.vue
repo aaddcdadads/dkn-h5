@@ -24,12 +24,15 @@
           @prop item - 数组条目数据
         -->
         <slot :item="item">
-          <view class="content-box flex-row"  @click="itemClick($event, item, index)">
+          <view
+            class="content-box flex-row"
+            @click="itemClick($event, item, index)"
+          >
             <view class="left-box flex-row">
               <view
                 v-if="(img.iconname || img.imgsrc) && cLayout['leftIconBtn']"
                 class="icon"
-                :style="{marginLeft:img.space}"
+                :style="{ marginLeft: img.space }"
               >
                 <u-icon
                   v-if="img.iconname"
@@ -53,18 +56,26 @@
                 :src="item.leftImgSrc"
               ></image>
             </view>
-            <view class="center-box flex-col" :style="{ textAlign: cTextAlign }">
-              <text class="content-title">{{ item.title }}<text class="content-title_sub">{{item.subTitle}}</text></text>
+            <view
+              class="center-box flex-col"
+              :style="{ textAlign: cTextAlign }"
+            >
+              <text class="content-title"
+                >{{ item.title
+                }}<text class="content-title_sub">{{
+                  item.subTitle
+                }}</text></text
+              >
               <text class="content-text">
                 <u-tag
-                v-if='item.tagText'
-                :text="item.tagText"
-                color="#8b8b8b"
-                bgColor="#e6e6e6"
-                borderColor="transparent"
+                  v-if="item.tagText"
+                  :text="item.tagText"
+                  color="#8b8b8b"
+                  bgColor="#e6e6e6"
+                  borderColor="transparent"
                 ></u-tag>
                 {{ item.content }}
-                </text>
+              </text>
             </view>
             <view class="right-box flex-row">
               <image
@@ -77,7 +88,7 @@
               <view
                 v-if="(img.iconname || img.imgsrc) && cLayout['rightIcon']"
                 class="icon"
-                :style="{marginRight:img.space}"
+                :style="{ marginRight: img.space }"
               >
                 <u-icon
                   v-if="img.iconname"
@@ -108,12 +119,9 @@
   </uni-swipe-action>
 </template>
 <script>
-import { cloneDeep } from '/@/utils/util';
+import { cloneDeep } from "/@/utils/util";
 import jp from "jsonpath";
-import {
-  getAction
-} from "/@/request/http";
-
+import { getAction } from "/@/request/http";
 
 export default {
   props: {
@@ -127,23 +135,24 @@ export default {
           {
             title: "天安物业",
             content: "今日周年活动注意观察.",
-            leftImgSrc: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
-            rightImgSrc:""
+            leftImgSrc:
+              "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
+            rightImgSrc: "",
           },
           {
             title: "天安物业",
             content: "今日周年活动注意观察.",
             leftImgSrc:
               "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
-            rightImgSrc: ""
+            rightImgSrc: "",
           },
           {
             title: "天安物业",
-            tagText:"新闻",
+            tagText: "新闻",
             content: "今日周年活动注意观察.今日周年活动注意观察.",
             leftImgSrc:
               "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.cnpp.cn%2Fupload%2Fimages%2F20200326%2F09311362830_207x90.gif&refer=http%3A%2F%2Fimage.cnpp.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669633573&t=7c2f47e4acbaf38c640fdc86c6ab5403",
-            rightImgSrc:""
+            rightImgSrc: "",
           },
         ];
       },
@@ -160,8 +169,8 @@ export default {
     params: {
       type: Object,
       default: function () {
-        return {}
-      }
+        return {};
+      },
     },
     /**
      * 请求结果映射
@@ -171,10 +180,17 @@ export default {
       type: Object,
       default: function () {
         return {
-          list: '',
-          total: ''
-        }
-      }
+          list: "",
+          total: "",
+        };
+      },
+    },
+    /**
+     * 开启下拉刷新
+     */
+    refresherEnabled: {
+      type: Boolean,
+      default: true,
     },
     /**
      * 是否左边操作
@@ -241,9 +257,9 @@ export default {
         return {
           width: "63.72px",
           height: "64px",
-          marginLeft:"36rpx",
+          marginLeft: "36rpx",
           borderRadius: "8px",
-          border:"#f1f2f3 2rpx solid"
+          border: "#f1f2f3 2rpx solid",
         };
       },
     },
@@ -266,10 +282,11 @@ export default {
           iconname: "",
           color: "",
           size: "22",
-          imgsrc:"https://block-design.oss-cn-shenzhen.aliyuncs.com/uniapp-icon/juxingText.png",
-          width:"148rpx",
-          height:"68rpx",
-          space:"0rpx"
+          imgsrc:
+            "https://block-design.oss-cn-shenzhen.aliyuncs.com/uniapp-icon/juxingText.png",
+          width: "148rpx",
+          height: "68rpx",
+          space: "0rpx",
         };
       },
     },
@@ -332,13 +349,16 @@ export default {
     },
   },
   watch: {
+    refresherEnabled(value) {
+      this.cRefresherEnabled = value;
+    },
     list: {
       handler: function (value, oldValue) {
         this.cList = this.mapData(value);
       },
       deep: true,
     },
-    url: function(value) {
+    url: function (value) {
       this.getData();
     },
     params: {
@@ -361,6 +381,7 @@ export default {
     },
   },
   mounted() {
+    this.cRefresherEnabled = this.refresherEnabled;
     this.cList = this.mapData(this.list);
     this.cLayout = this.layout;
     this.cTextAlign = this.textAlign;
@@ -372,8 +393,8 @@ export default {
     return {
       cList: [],
       total: 0,
-      cLayout:{},
-      cTextAlign:"",
+      cLayout: {},
+      cTextAlign: "",
       cImgStyle: {},
       cLeftAction: true,
       cRefresherTriggered: false,
@@ -414,7 +435,7 @@ export default {
     getDataList(resp) {
       if (this.getDataMap && this.getDataMap.list) {
         let listPath = this.getDataMap.list;
-        listPath = listPath.indexOf('$') === 0 ? listPath : `$.${listPath}`;
+        listPath = listPath.indexOf("$") === 0 ? listPath : `$.${listPath}`;
         return jp.query(resp, listPath)[0];
       }
 
@@ -431,10 +452,10 @@ export default {
     /**
      *  从接口返回结果里取到总数
      */
-     getDataTotal(resp) {
+    getDataTotal(resp) {
       if (this.getDataMap.total) {
         let totalPath = this.getDataMap.total;
-        totalPath = totalPath.indexOf('$') === 0 ? totalPath : `$.${totalPath}`;
+        totalPath = totalPath.indexOf("$") === 0 ? totalPath : `$.${totalPath}`;
         return jp.query(resp, totalPath)[0];
       }
       if (resp.result) {
@@ -551,7 +572,7 @@ export default {
   font-size: 24rpx;
   color: #404040;
   font-weight: 400;
-  /deep/ .u-tag{
+  /deep/ .u-tag {
     padding: 6rpx 8rpx;
   }
 }
