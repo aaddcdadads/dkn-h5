@@ -530,6 +530,7 @@ export default {
 }
 .list-right:not(:last-child) {
   width: 100%;
+  display:block;
   margin-bottom: 24rpx;
 }
 /* 控制滑动按钮宽度,高度由图片高度+内边距控制 */
