@@ -1,31 +1,5 @@
 <template>
-  <view
-    class="hm-bg-card"
-    v-if="!hidden"
-    :style="{
-      'background-image': `url('${backgroundImage}')`,
-      width: cWidth,
-      height: cHeight,
-      padding: cPadding,
-      textAlign: cTextAlign,
-      backgroundColor: cBackgroundColor,
-      borderRadius: cBorderRadius,
-      boxShadow:
-        cBoxShadowHShadow +
-        ' ' +
-        cBoxShadowVShadow +
-        ' ' +
-        cBoxShadowBlur +
-        ' ' +
-        cBoxShadowSpread +
-        ' ' +
-        cBoxShadowColor,
-      borderStyle: cBorderStyle,
-      borderWidth: cBorderWidth,
-      borderColor: cBorderColor,
-    }"
-    @click="bgClick"
-  >
+  <view class="hm-bg-card" v-if="!hidden" :style="{'background-image': `url('${backgroundImage}')`}" @click="bgClick">
     <slot></slot>
   </view>
 </template>
@@ -36,45 +10,46 @@
  */
 export default {
   name: "HmUviewBgCard",
-  components: {},
+  components: {
+  },
   props: {
     /**
      * 宽度
      */
     width: {
       type: String,
-      default: "200",
+      default: '200'
     },
     /**
      * 高度
      */
     height: {
       type: String,
-      default: "200",
+      default: '200'
     },
     /**
      * 圆角
      */
     borderRadius: {
       type: String,
-      default: "8",
+      default: '8'
     },
     /**
      * 边框类型
-     * @type Enum
+     * @type Enum 
      * @default none
      * @options ["none", "solid", "dotted", "dashed", "double", "groove", "ridge", "inset", "outset", "hidden"]
      */
     borderStyle: {
       type: String,
-      default: "none",
+      default: 'none'
     },
     /**
      * 边框宽度
      */
     borderWidth: {
       type: String,
-      default: "0",
+      default: '0'
     },
     /**
      * 边框颜色
@@ -82,7 +57,7 @@ export default {
      */
     borderColor: {
       type: String,
-      default: "#fff",
+      default: '#fff'
     },
     /**
      * 对齐
@@ -91,42 +66,42 @@ export default {
      */
     textAlign: {
       type: String,
-      default: "left",
+      default: 'left'
     },
     /**
      * 内边距
      */
     padding: {
       type: String,
-      default: "5",
+      default: '5'
     },
     /**
      * 水平阴影
      */
     boxShadowHShadow: {
       type: String,
-      default: "0",
+      default: '0'
     },
     /**
      * 垂直阴影
      */
     boxShadowVShadow: {
       type: String,
-      default: "2",
+      default: '2'
     },
     /**
      * 模糊距离
      */
     boxShadowBlur: {
       type: String,
-      default: "12",
+      default: '12'
     },
     /**
      * 阴影大小
      */
     boxShadowSpread: {
       type: String,
-      default: "0",
+      default: '0'
     },
     /**
      * 阴影颜色
@@ -134,7 +109,7 @@ export default {
      */
     boxShadowColor: {
       type: String,
-      default: "rgba(0,0,0,0.04)",
+      default: 'rgba(0,0,0,0.04)'
     },
     /**
      * 背景色
@@ -142,39 +117,39 @@ export default {
      */
     backgroundColor: {
       type: String,
-      default: "#fff",
+      default: '#fff'
     },
     /**
      * 背景图片
      */
     backgroundImage: {
-      type: String,
+      type: String
     },
     /**
      * 是否隐藏
      */
     hidden: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   data() {
     return {
-      cWidth: "200px",
-      cHeight: "200px",
-      cPadding: "5px",
-      cTextAlign: "left",
-      cBackgroundColor: "white",
-      cBorderRadius: "8px",
-      cBoxShadowHShadow: "0px",
-      cBoxShadowVShadow: "2px",
-      cBoxShadowBlur: "12px",
-      cBoxShadowSpread: "0px",
-      cBoxShadowColor: "rgba(0,0,0,0.04)",
-      cBorderWidth: "0px",
-      cBorderColor: "white",
-      cBorderStyle: "none",
-    };
+      cWidth: '200px',
+      cHeight: '200px',
+      cPadding: '5px',
+      cTextAlign: 'left',
+      cBackgroundColor: 'white',
+      cBorderRadius: '8px',
+      cBoxShadowHShadow: '0px',
+      cBoxShadowVShadow: '2px',
+      cBoxShadowBlur: '12px',
+      cBoxShadowSpread: '0px',
+      cBoxShadowColor: 'rgba(0,0,0,0.04)',
+      cBorderWidth: '0px',
+      cBorderColor: 'white',
+      cBorderStyle: 'none'
+    }
   },
   watch: {
     width(value) {
@@ -218,9 +193,10 @@ export default {
     },
     boxShadowColor(value) {
       this.cBoxShadowColor = value;
-    },
+    }
   },
-  computed: {},
+  computed: {
+  },
   mounted() {
     this.cWidth = this.getCssUnit(this.width);
     this.cHeight = this.getCssUnit(this.height);
@@ -245,8 +221,8 @@ export default {
       return `${value}px`;
     },
     bgClick() {
-      this.$emit("bgClick");
-    },
+      this.$emit('bgClick')
+    }
   },
 };
 </script>
@@ -254,7 +230,7 @@ export default {
 <style scoped>
 .hm-bg-card {
   /* display: inline-flex; */
-  /* width: v-bind(cWidth);
+  width: v-bind(cWidth);
   height: v-bind(cHeight);
   padding: v-bind(cPadding);
   text-align: v-bind(cTextAlign);
@@ -264,7 +240,7 @@ export default {
     v-bind(cBoxShadowBlur) v-bind(cBoxShadowSpread) v-bind(cBoxShadowColor);
   border-style: v-bind(cBorderStyle);
   border-width: v-bind(cBorderWidth);
-  border-color: v-bind(cBorderColor); */
+  border-color: v-bind(cBorderColor);
 }
 
 .hm-bg-card /deep/ .sortable-list {
