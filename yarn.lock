@@ -2617,6 +2617,11 @@ pify@^4.0.1:
   resolved "https://registry.npm.taobao.org/pify/download/pify-4.0.1.tgz"
   integrity sha1-SyzSXFDVmHNcUCkiJP2MbfQeMjE=
 
+pinyin-pro@^3.13.0:
+  version "3.13.0"
+  resolved "https://registry.npmmirror.com/pinyin-pro/-/pinyin-pro-3.13.0.tgz#f8866c800d7cf4be954e79dcf2f68141dffe1611"
+  integrity sha512-mwXkm0fbNdyBqWMCkpmPDT3by8nAIROpQBtJPd2zCQtYn/ED2KWe42X7gZ96R7jZz8zPzaWk5yq93BnOOucNNw==
+
 postcss-import@^14.0.2:
   version "14.0.2"
   resolved "https://registry.nlark.com/postcss-import/download/postcss-import-14.0.2.tgz"
