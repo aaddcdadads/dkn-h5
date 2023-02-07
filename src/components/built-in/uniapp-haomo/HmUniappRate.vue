@@ -181,7 +181,7 @@ export default {
     return {
       cValue: 0,
       cLabel: "",
-      cLabelStyle: "",
+      cLabelStyle: {},
       cDisplayText: {
         format:"return value"
       },
