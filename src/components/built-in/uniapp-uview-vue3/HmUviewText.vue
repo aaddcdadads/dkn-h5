@@ -5,7 +5,7 @@
       textStyle,
       {
         padding: cPadding,
-        textAlign: cTextalign,
+        textAlign: cTextAlign,
         fontSize: cFontSize,
         color: cColor,
         backgroundColor: cBgColor,
