@@ -10,7 +10,7 @@
       <view
         class="content_list"
         v-for="(item, index) in cList"
-        :key="item.id"
+        :key="index"
         :id="'msg-' + item.sendTime"
       >
         <view
@@ -32,18 +32,22 @@
           <input
             type="text"
             class="send_box_content"
-            v-model="content"
+            v-model="this.cContent"
             placeholder="请输入聊天内容"
             placeholder-style="color:#DDD;"
             :cursor-spacing="6"
           />
         </view>
-        <button class="send_box_send" @tap="send(content)">发送</button>
+        <button class="send_box_send" @tap="send(this.cContent)">发送</button>
       </view>
     </view>
   </view>
 </template>
 <script>
+import {
+  getAction,
+  postAction,
+} from "/@/request/http";
 export default {
   name: "HmSimpleChatRoom",
   props: {
@@ -86,6 +90,60 @@ export default {
       },
     },
     /**
+     * 请求方法
+     * @type Enum
+     * @options ["get", "post"]
+     */
+     httpMethod: {
+      type: String,
+      default: "get"
+    },
+    /**
+     * GET URL
+     */
+    url: {
+      type: String,
+      default: "/api/web/viewLeaveMessage/list",
+    },
+    /**
+     *  发送消息URL
+     */
+    sendUrl: {
+      type: String,
+      default: "/api/web/leaveMessage/add",
+    },
+    /**
+     * GET Params
+     */
+    params: {
+      type: Object,
+      default: function() {
+        return {
+          studentId: "3000000000788480788",
+          parentId: "1671178905753",
+          pageNo:1,
+          pageSize:-1,
+          order: "asc",
+          column: "createTime"
+        };
+      },
+    },
+    /**
+     * 远程数据映射
+     */
+    getDataMap: {
+      type: Object,
+      default: function() {
+        return {
+          id: "id",
+          sendTime: "createTime",
+          content: "content",
+          type: "sendRole",
+          pic: "pic"
+        };
+      },
+    },
+    /**
      * 获取数据提示
      */
     tips: {
@@ -99,19 +157,36 @@ export default {
     },
   },
   watch: {
+    url(value) {
+      this.getData(value);
+    },
+    params: {
+      handler: function(value, oldValue) {
+        if (JSON.stringify(value) == JSON.stringify(oldValue)) {
+          return;
+        }
+        this.getData(null, value);
+      },
+      deep: true,
+    },
     list: {
       handler: function (value, oldValue) {
-        this.cList = value;
+        this.cList = this.mapData(value);
       },
       deep: true,
     },
     tips(value) {
       this.cTips = value;
     },
+    content(value) {
+      this.cContent = value;
+    }
   },
   mounted() {
-    this.cList = this.list;
+    this.cList = this.mapData(this.list);
     this.cTips = this.tips;
+    this.cContent = this.content;
+    this.getData();
     this.$nextTick(() => {
       this.getHistoryMsg(this.cTips);
     });
@@ -120,13 +195,17 @@ export default {
     return {
       cTips: {},
       cList: [],
+      cContent:"",
     };
   },
   methods: {
     // 获取历史消息
     getHistoryMsg(e) {
+      // console.log("获取历史消息");
+
       this.$emit("getHistoryMsg", e);
     },
+
     // 发送信息
     send(e) {
       if (!e) {
@@ -136,8 +215,85 @@ export default {
         });
         return;
       }
+      if(!this.params.studentId || !this.params.parentId){
+        uni.showToast({
+          title: "请配置老师和学生id",
+          icon: "none",
+        });
+        return
+      }
+      let sendObj = {
+        studentId: this.params.studentId,
+        parentId: this.params.parentId,
+        sendRole: "1",
+        delFlag: "0",
+        content: e,
+        readStatus: "0"
+      }      
+      //调用发送接口
+      this.setData(sendObj);
+      this.cContent = "" ;
       this.$emit("send", e);
+      this.$emit("update:content",this.cContent);
       console.log("send", e);
+    },
+    //将查询接口的数据渲染到list中
+    getData(url, params) {
+      let self = this;
+      url = url || this.url;
+      params =
+        params || (this.params ? JSON.parse(JSON.stringify(this.params)) : {});
+      if (!url) return;
+      let request = getAction;
+      if (this.httpMethod && this.httpMethod.toLowerCase() == 'post') {
+        request = postAction;
+      }
+      request(url, params).then((resp) => {
+        // console.log("res", resp);
+        //查询数据库的数组
+        self.cList = [];
+        let data = [];
+        if (resp.data) {
+          data = resp.data.list || resp.data;
+        }
+        if (resp.result) {
+          data = resp.result.records || resp.result;
+        }
+        if (resp.result) {
+          data = resp.result.records || resp.result;
+        }
+        self.cList = self.mapData(data);
+        // console.log("cList", self.cList);
+      });
+    },
+    //处理数据
+    mapData(data) {
+      let self = this;
+      if (!this.getDataMap || Object.keys(this.getDataMap).length == 0) {
+        return data;
+      }
+      let keys = Object.keys(this.getDataMap);
+      data.forEach((item) => {
+        keys.forEach((key) => {
+          item[key] = item[self.getDataMap[key]];
+        });
+      });
+      return data;
+    },
+    //发送数据
+    setData(params) {
+      postAction(this.sendUrl, params).then((res) => {
+        //查询数据库的数组
+        if(res.success){
+          //成功后刷新
+          this.getData();
+        }else{
+          uni.showToast({
+            title: "发送失败",
+            icon: "error",
+          });
+        }
+      });
     },
   },
 };

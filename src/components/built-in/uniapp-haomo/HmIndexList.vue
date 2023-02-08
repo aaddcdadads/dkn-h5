@@ -171,7 +171,7 @@ export default {
       if (this.httpMethod && this.httpMethod.toLowerCase() == 'post') {
         request = postAction;
       }
-      request(url, params,{headers:{Authorization:"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsInVzZXJUeXBlIjoyLCJ1c2VyX25hbWUiOm51bGwsImp0aSI6Im1ONXNGdzVzcEQ3ZkJDQUgwbVdkRXV3TlpxZyIsImNsaWVudF9pZCI6Im1pbmktcHJvZ3JhbSIsInNjb3BlIjpbImFsbCJdfQ.fjJWKwm1MnG_E_nMOVopMf8LLUhD4ShQhaHocgCjvrTSucKxvtVBwuxmf1XaPcZ_bgd1coeG6WOdPxJDrLqpNjXTzr8pfUulVHvixpUlwSpgGF1esIuxiGS7pGwMGnVDOdlSEIqe-3ogORqy1IAp-e7aqGF_CFI9FQ4YeSTGjX5cU1xRez4yBJCf13rFkbNHE3GFqnxDWtvRqJN7-UqKEnNA5LFnq-sol3Ry_gYM125pKP5WPdOWfF3XY6L-dde7HuJGyK_Rj7E2L2GPHd7Cvhcldhn1Ahp_MJXzAv3iB26J3poMfbW5UlAHbRnPzl3-mKdD2dWsLliNIGDo43rJGw"}}).then((resp) => {
+      request(url, params).then((resp) => {
         // console.log("res", resp);
         //查询数据库的数组
         self.cList = [];
