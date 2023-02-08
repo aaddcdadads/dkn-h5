@@ -25,6 +25,7 @@
       @input="onInput"
       @blur="onBlur"
       @focus="onFocus"
+      @click="onClick"
       ><slot></slot
     ></u-field>
   </view>
@@ -263,6 +264,10 @@ export default {
       this.$emit("update:value", e);
       this.$emit("after-input", e);
       //console.log("input: ", this.value, this.cValue);
+    },
+    onClick(e) {
+    this.$emit("onClick", e);
+    console.log("onClick", e);
     },
   },
 };
