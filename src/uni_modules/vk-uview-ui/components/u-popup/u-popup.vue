@@ -3,31 +3,30 @@
 		zIndex: uZindex - 1
 	}]" class="u-drawer" hover-stop-propagation>
 		<u-mask :duration="duration" :custom-style="maskCustomStyle" :maskClickAble="maskCloseAble" :z-index="uZindex - 2"
-			:show="showDrawer && mask" @click="maskClick">
-			<view class="u-drawer-content" @tap="modeCenterClose(mode)" :class="[
-				safeAreaInsetBottom ? 'safe-area-inset-bottom' : '',
-				'u-drawer-' + mode,
-				showDrawer ? 'u-drawer-content-visible' : '',
-				zoom && mode == 'center' ? 'u-animation-zoom' : ''
-			]" @touchmove.stop.prevent @tap.stop.prevent :style="[style]">
+			:show="showDrawer && mask" @click="maskClick"> </u-mask>
+		<view class="u-drawer-content" @tap="modeCenterClose(mode)" :class="[
+			safeAreaInsetBottom ? 'safe-area-inset-bottom' : '',
+			'u-drawer-' + mode,
+			showDrawer ? 'u-drawer-content-visible' : '',
+			zoom && mode == 'center' ? 'u-animation-zoom' : ''
+		]" @touchmove.stop.prevent @tap.stop.prevent :style="[style]">
 
-				<view class="u-mode-center-box" @tap.stop.prevent @touchmove.stop.prevent v-if="mode == 'center'"
-					:style="[centerStyle]">
-					<u-icon @click="close" v-if="closeable" class="u-close" :class="['u-close--' + closeIconPos]"
-						:name="closeIcon" :color="closeIconColor" :size="closeIconSize"></u-icon>
-					<scroll-view class="u-drawer__scroll-view" scroll-y="true">
-						<slot></slot>
-					</scroll-view>
-				</view>
-				<scroll-view class="u-drawer__scroll-view" scroll-y="true" v-else>
+			<view class="u-mode-center-box" @tap.stop.prevent @touchmove.stop.prevent v-if="mode == 'center'"
+				:style="[centerStyle]">
+				<u-icon @click="close" v-if="closeable" class="u-close" :class="['u-close--' + closeIconPos]" :name="closeIcon"
+					:color="closeIconColor" :size="closeIconSize"></u-icon>
+				<scroll-view class="u-drawer__scroll-view" scroll-y="true">
 					<slot></slot>
 				</scroll-view>
-				<view @tap="close" class="u-close" :class="['u-close--' + closeIconPos]">
-					<u-icon v-if="mode != 'center' && closeable" :name="closeIcon" :color="closeIconColor"
-						:size="closeIconSize"></u-icon>
-				</view>
 			</view>
-		</u-mask>
+			<scroll-view class="u-drawer__scroll-view" scroll-y="true" v-else>
+				<slot></slot>
+			</scroll-view>
+			<view @tap="close" class="u-close" :class="['u-close--' + closeIconPos]">
+				<u-icon v-if="mode != 'center' && closeable" :name="closeIcon" :color="closeIconColor"
+					:size="closeIconSize"></u-icon>
+			</view>
+		</view>
 	</view>
 </template>
 
