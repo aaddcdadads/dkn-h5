@@ -2,14 +2,15 @@
 	<view v-if="visibleSync" :style="[customStyle, {
 		zIndex: uZindex - 1
 	}]" class="u-drawer" hover-stop-propagation>
-		<u-mask :duration="duration" :custom-style="maskCustomStyle" :maskClickAble="maskCloseAble" :z-index="uZindex - 2"
-			:show="showDrawer && mask" @click="maskClick"></u-mask>
+
 		<view class="u-drawer-content" @tap="modeCenterClose(mode)" :class="[
 			safeAreaInsetBottom ? 'safe-area-inset-bottom' : '',
 			'u-drawer-' + mode,
 			showDrawer ? 'u-drawer-content-visible' : '',
 			zoom && mode == 'center' ? 'u-animation-zoom' : ''
 		]" @touchmove.stop.prevent @tap.stop.prevent :style="[style]">
+			<u-mask :duration="duration" :custom-style="maskCustomStyle" :maskClickAble="maskCloseAble" :z-index="uZindex - 2"
+				:show="showDrawer && mask" @click="maskClick"></u-mask>
 			<view class="u-mode-center-box" @tap.stop.prevent @touchmove.stop.prevent v-if="mode == 'center'"
 				:style="[centerStyle]">
 				<u-icon @click="close" v-if="closeable" class="u-close" :class="['u-close--' + closeIconPos]" :name="closeIcon"
