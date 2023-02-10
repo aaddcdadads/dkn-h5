@@ -4,6 +4,7 @@
 
 <script>
 import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需进行加载
+
 export default {
   name: "HmScanCode",
   props: {
@@ -40,8 +41,8 @@ export default {
   methods: {
     open() {
       console.log("打开相机");
-      // #ifdef MP-WEIXIN
       let self = this;
+      // #ifdef MP-WEIXIN
       uni.scanCode({
         onlyFromCamera: this.onlyFromCamera,
         success: function (res) {
@@ -53,7 +54,7 @@ export default {
         },
       });
       // #endif
-      // #ifdef APP-PLUS || H5 
+      // #ifdef APP-PLUS 
       plus.navigator.setFullscreen(true); //全屏
       let currentWebview = this.$parent.$scope.$getAppWebview();
       this.createBarcode(currentWebview);
@@ -61,19 +62,21 @@ export default {
       this.createFlashBarView(currentWebview);
       // #endif
 
-      // dd.biz.util.scan({
-      //   type: "all",
-      //   onSuccess : function(res) {
-      //     // 调用成功时回调
-      //     console.log(res)
-      //     self.onSuccess(res);
-      //   },
-      //   onFail : function(err) {
-      //     // 调用失败时回调
-      //     console.log(err)
-      //     self.onFail(err);
-      //   }
-      // });
+      // #ifdef H5
+      dd.biz.util.scan({
+        type: "all",
+        onSuccess : function(res) {
+          // 调用成功时回调
+          console.log(res)
+          self.onSuccess(res);
+        },
+        onFail :  function(err) {
+          // 调用失败时回调
+          console.log(err)
+          self.onFail(err);
+        }
+      });
+      // #endif
     },
     // #ifdef APP-PLUS || H5
     /**
