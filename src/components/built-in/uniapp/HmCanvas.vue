@@ -14,7 +14,6 @@ export default {
 			default: () => [],
 		},
 		/**
-     * canvas基础信息
      */ 
 		canvasInfo: {
 			type: Object,
