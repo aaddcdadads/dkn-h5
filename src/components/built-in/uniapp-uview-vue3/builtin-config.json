@@ -640,7 +640,7 @@
         "name": "HmCanvas",
         "title": "画布",
         "importPath": "built-in/uniapp-haomo/HmCanvas",
-        "imgUrl": "built-in/uniapp-haomo/HmCanvas.png",
+        "imgUrl": "built-in/uniapp-haomo/img/HmCanvas.png",
         "type": 0,
         "isBuiltIn": true
       },
