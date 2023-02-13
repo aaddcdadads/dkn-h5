@@ -39,6 +39,10 @@
   </view>
 </template>
 <script>
+import {
+  getAction,
+  postAction,
+} from "/@/request/http";
 export default {
   name: "HmCalendarPro",
   props: {
@@ -60,10 +64,53 @@ export default {
       },
     },
     /**
+     * 请求方法
+     * @type Enum
+     * @options ["get", "post"]
+     */
+     httpMethod: {
+      type: String,
+      default: "get"
+    },
+    /**
+     * GET URL
+     */
+     url: {
+      type: String,
+      default: "/api/web/viewTeacherClassScheduleNode/list",
+    },
+    /**
+     * GET Params
+     */
+    params: {
+      type: Object,
+      default: function() {
+        return {
+          teacherId:"01066144494024021027"
+        };
+      },
+    },
+    /**
+     * 远程数据映射
+     */
+    getDataMap: {
+      type: Object,
+      default: function() {
+        return {
+          id: "id",
+          title: "title",
+          subTitle: "subTitle",
+          time: "time",
+          thing: "thing"   
+        };
+      },
+    },
+    /**
      * 默认当前时间
      */
     date: {
       type: String,
+      default:""
     },
     /**
      * 日期范围选择
@@ -124,20 +171,40 @@ export default {
     },
   },
   watch: {
+    url(value) {
+      this.getData(value);
+    },
+    params: {
+      handler: function(value, oldValue) {
+        if (JSON.stringify(value) == JSON.stringify(oldValue)) {
+          return;
+        }
+        this.getData(null, value);
+      },
+      deep: true,
+    },
     list: {
-      handler: function (value, oldValue) {
-        this.cList = value;
+      handler: function(value, oldValue) {
+        this.cList = this.mapData(value);
       },
       deep: true,
     },
   },
+  data() {
+    return {
+      cList: [],
+      resultData : []
+    };
+  },
   mounted() {
-    this.cList = this.list;
+    console.log("默认时间",this.date);
+    this.cList = this.mapData(this.list);
+    this.getData();  
   },
   methods: {
     open() {
       this.$emit("open", e);
-      // console.log("open", e);
+      console.log("open", e);
     },
     close() {
       this.$emit("close", e);
@@ -145,7 +212,8 @@ export default {
     },
     change(e) {
       this.$emit("change", e);
-      // console.log("change", e);
+      this.cList = this.getWeekData(e.lunar.nWeek,this.resultData)
+      console.log("change", e);
     },
     monthSwitch(e) {
       this.$emit("monthSwitch", e);
@@ -158,12 +226,100 @@ export default {
     itemClick(e, index) {
       this.$emit("itemClick", e, index);
     },
+    //将查询接口的数据渲染到list中
+    getData(url, params) {
+      let self = this;
+      url = url || this.url;
+      params =
+        params || (this.params ? JSON.parse(JSON.stringify(this.params)) : {});
+      if (!url) return;
+      let request = getAction;
+      if (this.httpMethod && this.httpMethod.toLowerCase() == 'post') {
+        request = postAction;
+      }
+      request(url, params).then((resp) => {
+        // console.log("res", resp);
+        //查询数据库的数组
+        self.cList = [];
+        let data = [];
+        if (resp.data) {
+          data = resp.data.list || resp.data;
+        }
+        if (resp.result) {
+          data = resp.result.records || resp.result;
+        }
+        if (resp.result) {
+          data = resp.result.records || resp.result;
+        }
+        self.resultData = self.mapData(data);
+        //根据星期处理数据
+        self.cList = self.getWeekData(self.getWeek(self.date),self.resultData)
+        console.log("cList", self.cList);
+      });
+    },
+    //处理数据
+    mapData(data) {
+      let self = this;
+      if (!this.getDataMap || Object.keys(this.getDataMap).length == 0) {
+        return data;
+      }
+      let keys = Object.keys(this.getDataMap);
+      data.forEach((item) => {
+        keys.forEach((key) => {
+          item[key] = item[self.getDataMap[key]];
+        });
+      });
+      return data;
+    },
+    //计算默认时间是星期几
+    getWeek(dateString){
+      let date;
+      if (!dateString) {
+          date = new Date();
+      } else {
+          date = new Date(dateString);
+      }
+      return date.getDay();
+    },
+    //根据星期转换数据
+    // {
+    //   id: 1,
+    //   title: "第1节课",
+    //   subTitle: "语文",
+    //   time: "7:00-8:00",
+    //   thing: "一年级(1)班",
+    // },
+    getWeekData(week,data){
+      if(!week || !data || data.length == 0){
+        return []
+      }
+      let weekStrs = ["sunDay","monDay","tuesDay","wednesDay","thursDay","friDay","saturDay"]
+      let weekStr = weekStrs[week]
+      let weekData = [];
+      // console.log("weekStr",weekStr);
+      data.forEach(item=>{
+        if(!item[weekStr]){
+          return
+        }
+        let obj = {}
+        if(item.nodeTime){
+          obj.title = item.nodeTime.slice(0,item.nodeTime.indexOf("\n")>0 ? item.nodeTime.indexOf("\n") : 0).trim()
+        }
+        if(item.nodeTime){
+          obj.time = item.nodeTime.slice(item.nodeTime.indexOf("\n")>0 ? item.nodeTime.indexOf("\n")+1 : item.nodeTime.length).trim()
+        }
+        if(item[weekStr]){
+          obj.thing = item[weekStr].slice(0,item[weekStr].indexOf("|")>0 ? item[weekStr].indexOf("|") : 0).trim()
+        }
+        if(item[weekStr]){
+          obj.subTitle = item[weekStr].slice(item[weekStr].indexOf("|")>0 ? item[weekStr].indexOf("|")+1 : item[weekStr].length).trim()
+        }
+        weekData.push(obj)
+      })
+      return weekData;
+    }
   },
-  data() {
-    return {
-      cList: [],
-    };
-  },
+  
 };
 </script>
 <style lang="less" scoped>

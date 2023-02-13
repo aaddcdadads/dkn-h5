@@ -2,30 +2,19 @@
 	<view v-if="visibleSync" :style="[customStyle, {
 		zIndex: uZindex - 1
 	}]" class="u-drawer" hover-stop-propagation>
-		<u-mask :duration="duration" :custom-style="maskCustomStyle" :maskClickAble="maskCloseAble" :z-index="uZindex - 2" :show="showDrawer && mask" @click="maskClick"></u-mask>
-		<view
-			class="u-drawer-content"
-			@tap="modeCenterClose(mode)"
-			:class="[
-				safeAreaInsetBottom ? 'safe-area-inset-bottom' : '',
-				'u-drawer-' + mode,
-				showDrawer ? 'u-drawer-content-visible' : '',
-				zoom && mode == 'center' ? 'u-animation-zoom' : ''
-			]"
-			@touchmove.stop.prevent
-			@tap.stop.prevent
-			:style="[style]"
-		>
-			<view class="u-mode-center-box" @tap.stop.prevent @touchmove.stop.prevent v-if="mode == 'center'" :style="[centerStyle]">
-				<u-icon
-					@click="close"
-					v-if="closeable"
-					class="u-close"
-					:class="['u-close--' + closeIconPos]"
-					:name="closeIcon"
-					:color="closeIconColor"
-					:size="closeIconSize"
-				></u-icon>
+		<u-mask :duration="duration" :custom-style="maskCustomStyle" :maskClickAble="maskCloseAble" :z-index="uZindex - 2"
+			:show="showDrawer && mask" @click="maskClick"> </u-mask>
+		<view class="u-drawer-content" @tap="modeCenterClose(mode)" :class="[
+			safeAreaInsetBottom ? 'safe-area-inset-bottom' : '',
+			'u-drawer-' + mode,
+			showDrawer ? 'u-drawer-content-visible' : '',
+			zoom && mode == 'center' ? 'u-animation-zoom' : ''
+		]" @touchmove.stop.prevent @tap.stop.prevent :style="[style]">
+
+			<view class="u-mode-center-box" @tap.stop.prevent @touchmove.stop.prevent v-if="mode == 'center'"
+				:style="[centerStyle]">
+				<u-icon @click="close" v-if="closeable" class="u-close" :class="['u-close--' + closeIconPos]" :name="closeIcon"
+					:color="closeIconColor" :size="closeIconSize"></u-icon>
 				<scroll-view class="u-drawer__scroll-view" scroll-y="true">
 					<slot></slot>
 				</scroll-view>
@@ -34,12 +23,8 @@
 				<slot></slot>
 			</scroll-view>
 			<view @tap="close" class="u-close" :class="['u-close--' + closeIconPos]">
-				<u-icon
-					v-if="mode != 'center' && closeable"
-					:name="closeIcon"
-					:color="closeIconColor"
-					:size="closeIconSize"
-				></u-icon>
+				<u-icon v-if="mode != 'center' && closeable" :name="closeIcon" :color="closeIconColor"
+					:size="closeIconSize"></u-icon>
 			</view>
 		</view>
 	</view>
@@ -71,16 +56,16 @@
  */
 export default {
 	name: 'u-popup',
-  emits: ["update:modelValue", "input", "open", "close"],
+	emits: ["update:modelValue", "input", "open", "close"],
 	props: {
-    value: {
-    	type: Boolean,
-    	default: false
-    },
-    modelValue: {
-    	type: Boolean,
-    	default: false
-    },
+		value: {
+			type: Boolean,
+			default: false
+		},
+		modelValue: {
+			type: Boolean,
+			default: false
+		},
 		/**
 		 * 显示状态
 		 */
@@ -192,9 +177,9 @@ export default {
 			type: Object,
 			default() {
 				return {
-          width: '100%',
-          height: '100%'
-        }
+					width: '100%',
+					height: '100%'
+				}
 			}
 		},
 		// 遮罩打开或收起的动画过渡时间，单位ms
@@ -212,11 +197,11 @@ export default {
 		};
 	},
 	computed: {
-		valueCom(){
+		valueCom() {
 			// #ifndef VUE3
 			return this.value;
 			// #endif
-			
+
 			// #ifdef VUE3
 			return this.modelValue;
 			// #endif
@@ -259,7 +244,7 @@ export default {
 				// 不加可能圆角无效
 				style.overflow = 'hidden';
 			}
-			if(this.duration) style.transition = `all ${this.duration / 1000}s linear`;
+			if (this.duration) style.transition = `all ${this.duration / 1000}s linear`;
 			return style;
 		},
 		// 中部弹窗的特有样式
@@ -286,7 +271,7 @@ export default {
 		valueCom(val) {
 			if (val) {
 				this.open();
-			} else if(!this.closeFromInner) {
+			} else if (!this.closeFromInner) {
 				this.close();
 			}
 			this.closeFromInner = false;
@@ -296,10 +281,10 @@ export default {
 		// 组件渲染完成时，检查value是否为true，如果是，弹出popup
 		this.valueCom && this.open();
 	},
-  methods: {
+	methods: {
 		// 判断传入的值，是否带有单位，如果没有，就默认用rpx单位
 		getUnitValue(val) {
-			if(/(%|px|rpx|auto)$/.test(val)) return val;
+			if (/(%|px|rpx|auto)$/.test(val)) return val;
 			else return val + 'rpx'
 		},
 		// 遮罩被点击
@@ -311,7 +296,7 @@ export default {
 			// 造成@close事件触发两次
 			this.closeFromInner = true;
 			this.change('showDrawer', 'visibleSync', false);
-      this.$emit("close", false);
+			this.$emit("close", false);
 		},
 		// 中部弹出时，需要.u-drawer-content将居中内容，此元素会铺满屏幕，点击需要关闭弹窗
 		// 让其只在mode=center时起作用
@@ -328,10 +313,10 @@ export default {
 			// 如果this.popup为false，意味着为picker，actionsheet等组件调用了popup组件
 			if (this.popup == true) {
 				this.$emit('input', status);
-        this.$emit("update:modelValue", status);
+				this.$emit("update:modelValue", status);
 			}
 			this[param1] = status;
-			if(status) {
+			if (status) {
 				// #ifdef H5 || MP
 				this.timer = setTimeout(() => {
 					this[param2] = status;
