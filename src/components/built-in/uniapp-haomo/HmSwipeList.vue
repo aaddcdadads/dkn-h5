@@ -426,8 +426,15 @@ export default {
             item.hmNo = index + 1;
           });
           self.total = self.getDataTotal(resp);
+          self.afterGetData(self.cList)
         }, 10);
       });
+    },
+    /**
+     * 接口请求后事件
+     */
+    afterGetData(data){
+      this.$emit("afterGetData", data)
     },
     /**
      * 从接口返回结果里取到数组
