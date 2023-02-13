@@ -34,6 +34,7 @@
       <view class="img-content">
         <hm-canvas
           ref="imgGenRef"
+          :show="show"
           :elementList="elementList"
           :canvasInfo="canvasInfo"
         ></hm-canvas>
@@ -55,114 +56,119 @@ export default {
     return {
       showGenImg: false,
       elementList: [],
-
+      show: false,
       imageList: [
         // logo4
         {
           type: "image",
-          url: "/static/z.png", //顶部小图
+          url: "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/top-img.png", //顶部小图
           width: "100%",
-          height: 76,
+          height: 51,
           x: 0,
           y: 0,
         },
-        // logo 1
         {
           type: "image",
-          url: "/static/q.png",
-          width: 150,
-          height: 26,
-          x: 42,
-          y: 13,
+          url: "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/weinituijian.png", //好友为你推荐
+          width: 128,
+          height: 20,
+          x: 26,
+          y: 9,
+        },
+        {
+          type: "image",
+          shape: "circle",
+          url: "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/Wechat.png",
+          width: 29,
+          height: 29,
+          x: 14,
+          y: 5,
+        },
+        {
+          type: "image",
+          url: "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/2.png",
+          width: "100%",
+          height: 380,
+          x: 0,
+          y: 56,
+        },
+        {
+          type: "image",
+          url: "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/bottom-img.png", //底部大图
+          width: "100%",
+          height: 156,
+          x: 0,
+          y: 288,
         },
         // logo 2
         {
           type: "image",
-          url: "/static/b.png",
-          width: 32,
-          height: 32,
-          x: 118,
-          y: 445,
+          url: "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/logo-bao.png", //报
+          width: 24,
+          height: 24,
+          x: 90,
+          y: 348,
         },
-        // 头像
         {
           type: "image",
-          shape: "circle",
-          url: "/static/i.jpg",
-          width: 39,
-          height: 39,
-          x: 18,
-          y: 5,
-        },
-        // 主图
-        {
-          type: "image",
-          url: "/static/f.jpg",
-          width: "100%",
-          height: 350,
-          x: 0,
-          y: 88,
-        },
-        // logo3
-        {
-          type: "image",
-          url: "/static/v.png", //底部大图
-          width: "100%",
-          height: 367,
-          x: 0,
-          y: 365,
+          url: "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/headset.png", //耳机
+          width: 18,
+          height: 18,
+          x: 100,
+          y: 410,
         },
         // 二维码
         {
           type: "image",
-          url: "/static/o.jpg",
-          width: 40,
-          height: 40,
-          x: 308,
-          y: 496,
+          url: "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/6.png",
+          width: 24,
+          height: 24,
+          x: 244,
+          y: 392,
         },
       ],
       textList: [
         {
           type: "text",
           content: "本期简介：梅西一传一射，阿根廷挺进世界杯",
-          fontSize: 18,
+          fontSize: 12,
           color: "#ffffff",
-          x: "center",
-          y: 74,
+          x: 16,
+          y: 54,
         },
         {
           type: "text",
           content: "老友在线报",
-          fontSize: 24,
+          fontSize: 17,
           color: "#e77b77",
-          x: 153,
-          y: 470,
+          x: 120,
+          y: 366,
         },
         {
           type: "text",
           content: "2022年12月16日【第260期】",
-          fontSize: 16,
-          color: "#333333",
-          x: "center",
-          y: 500,
+          fontSize: 14,
+          color: "#424250",
+          fontWeight: "bold",
+          x: 52,
+          y: 390,
         },
         {
           type: "text",
           content: "2.32万播放",
-          fontSize: 18,
+          fontSize: 14,
           textAlign: "center",
-          color: "#636262",
-          x: "center",
-          y: 525,
+          color: "#747485",
+          x: 123,
+          y: 424,
         },
         {
           type: "text",
           content: "长按一起听",
-          fontSize: 12,
-          color: "#636262",
-          x: 295,
-          y: 553,
+          fontSize: 10,
+          color: "#1e1e33",
+          x: 232,
+          y: 432,
         },
       ],
       rectList: [
@@ -170,9 +176,9 @@ export default {
           type: "rect",
           bgColor: "#e77b77",
           width: "100%",
-          height: 40,
+          height: 22,
           x: 0,
-          y: 48,
+          y: 39,
         },
       ],
       canvasInfo: {
@@ -203,6 +209,7 @@ export default {
         .concat(this.rectList)
         .concat(this.textList);
       this.showGenImg = true;
+      this.show = true;
     },
     savePoster() {
       this.$refs.imgGenRef.saveImage();
