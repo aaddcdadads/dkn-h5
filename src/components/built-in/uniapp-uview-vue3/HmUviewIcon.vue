@@ -1,4 +1,5 @@
 <template>
+  <!-- #ifndef MP-WEIXIN -->
   <u-icon
     class="icon"
     :name="name"
@@ -8,7 +9,22 @@
     :label-size="labelSize"
     :label-color="labelColor"
   ></u-icon>
+	<!-- #endif -->
+  <!-- #ifdef MP-WEIXIN -->
+  <u-icon
+    class="icon"
+    :name="name"
+    :color="color"
+    :size="size"
+    :label="label"
+    :label-size="labelSize"
+    :label-color="labelColor"
+    @click="onClick"
+  ></u-icon>
+	<!-- #endif -->
 </template>
+
+
 
 <script>
 // import uIcon from "uview-ui/components/u-icon/u-icon";

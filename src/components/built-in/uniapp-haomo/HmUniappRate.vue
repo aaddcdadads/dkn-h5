@@ -17,9 +17,7 @@
       :touchable="touchable"
       @change="rateChange"
     />
-    <text v-if="cDisplayText.show" class="HmUniappRate-text" :style="cDisplayText.style" decode>{{
-      getDisplayText(cValue)
-    }}</text>
+    <text v-if="cDisplayText.show" class="HmUniappRate-text" :style="cDisplayText.style" decode>{{cValue}}分</text>
   </view>
 </template>
 <script>
@@ -145,7 +143,6 @@ export default {
       default: function () {
         return {
           show: true,
-          format: "return value + '分'",
           style: {
             fontFamily: "PingFangSC-Regular",
             fontSize: "14px",
@@ -181,21 +178,15 @@ export default {
     return {
       cValue: 0,
       cLabel: "",
-      cLabelStyle: "",
+      cLabelStyle: {},
       cDisplayText: {
-        format:"return value"
       },
     };
   },
   methods: {
     rateChange(e) {
       this.$emit("rateChange", e);
-    },
-    getDisplayText(e) {
-      let str = this.cDisplayText.format ? this.cDisplayText.format : 'return value';
-      let fun = new Function('value',str);
-      return fun(e);
-    },
+    }
   },
 };
 </script>

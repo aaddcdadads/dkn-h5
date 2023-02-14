@@ -56,6 +56,18 @@
       }
     },
     {
+      "path": "components/built-in/uniapp-haomo/HmCalendarPro",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmSimpleChatRoom",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
       "path": "pages/test/TestHmDropDownSelect",
       "style": {
         "navigationBarTitleText": "",

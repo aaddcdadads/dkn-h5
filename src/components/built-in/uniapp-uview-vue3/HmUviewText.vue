@@ -1,5 +1,17 @@
 <template>
-  <view class="hm-bg-text">
+  <view
+    class="hm-bg-text"
+    :style="[
+      textStyle,
+      {
+        padding: cPadding,
+        textAlign: cTextAlign,
+        fontSize: cFontSize,
+        color: cColor,
+        backgroundColor: cBgColor,
+      },
+    ]"
+  >
     <text class="font1" @click="onClick" v-if="showHtml" v-html="text"> </text>
     <text class="font1" @click="onClick" v-if="!showHtml">{{ text }}</text>
   </view>
@@ -18,7 +30,7 @@ export default {
      */
     text: {
       type: String,
-      default: "文字"
+      default: "文字",
     },
     /**
      * 文字大小
@@ -35,6 +47,14 @@ export default {
     color: {
       type: String,
       default: "rgba(0,0,0,1)",
+    },
+    /**
+     * 文字背景颜色
+     * @type Color
+     */
+    bgColor: {
+      type: String,
+      default: "",
     },
     /**
      * 对齐
@@ -55,9 +75,19 @@ export default {
     /**
      * html模式
      */
-     showHtml: {
+    showHtml: {
       type: Boolean,
       default: false,
+    },
+    /**
+     * 文字样式
+     */
+    textStyle: {
+      type: Object,
+      default: function () {
+        return {
+        };
+      },
     },
   },
   data() {
@@ -66,6 +96,7 @@ export default {
       cTextAlign: "left",
       cFontSize: "18px",
       cColor: "rgba(0,0,0,1)",
+      cBgColor: "rgba(255,255,255,1)",
     };
   },
   watch: {
@@ -81,6 +112,9 @@ export default {
     color(value) {
       this.cColor = value;
     },
+    bgColor(value) {
+      this.cBgColor = value;
+    },
   },
   computed: {},
   mounted() {
@@ -88,6 +122,7 @@ export default {
     this.cFontSize = this.getCssUnit(this.fontSize);
     this.cTextAlign = this.textAlign;
     this.cColor = this.color;
+    this.cBgColor = this.bgColor;
   },
   methods: {
     getCssUnit(value) {
@@ -106,10 +141,6 @@ export default {
 <style lang="less">
 .hm-bg-text {
   display: inline-flex;
-  padding: v-bind(cPadding);
-  text-align: v-bind(cTextAlign);
-  font-size: v-bind(cFontSize);
-  color: v-bind(cColor);
 }
 .font1 {
 }

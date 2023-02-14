@@ -637,6 +637,14 @@
     "name": "其他",
     "componentList": [
       {
+        "name": "HmCanvas",
+        "title": "画布",
+        "importPath": "built-in/uniapp/HmCanvas",
+        "imgUrl": "built-in/uniapp/img/HmCanvas.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmUviewParse",
         "title": "富文本渲染",
         "importPath": "built-in/uniapp-uview-vue3/HmUviewParse",
