@@ -486,6 +486,12 @@
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
       }
+    },{
+      "path": "components/built-in/uniapp-uview-vue3/layout/HmBgCard",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
     },
     {
       "path": "pages/test/TestHmUviewBgCard",
