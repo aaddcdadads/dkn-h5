@@ -109,10 +109,11 @@ export default {
           //   console.log("base64",base64)
           // })
           if (value == 1) {
-            self.imgUrl1 = tempFilePaths[0];
+            self.imgUrl1 = self.fileToBase64Async(chooseImageRes.tempFiles[0])
           } else {
-            self.imgUrl2 = tempFilePaths[0];
+            self.imgUrl2 = self.fileToBase64Async(chooseImageRes.tempFiles[0])
           }
+          
           self.onUploadImgSuccess(self.imgUrl1,self.imgUrl2)
         },
         fail: (err) => {
@@ -174,7 +175,6 @@ export default {
     //选择照片返回成功回调
     onUploadImgSuccess(imgUrl1,imgUrl2){
       console.log("图片地址",imgUrl1,imgUrl2);
-
       this.$emit("uploadImgSuccess",imgUrl1,imgUrl2);
     },
     //选择照片返回失败
@@ -182,6 +182,16 @@ export default {
       console.log("图片获取失败", err);
 
       this.$emit("uploadImgFail",err);
+    },
+
+    fileToBase64Async(file) {
+      return new Promise((resolve, reject) => {
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (e) => {
+          resolve(e.target.result);
+        };
+      });
     }
 
   },
