@@ -653,7 +653,7 @@
       }
     },
     {
-      "path": "components/built-in/uniapp/HmDiscern",
+      "path": "components/built-in/uniapp/HmIDCard",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false

@@ -28,9 +28,9 @@
 </template>
 
 <script>
-import { pathToBase64, base64ToPath } from 'image-tools'
+// import { pathToBase64, base64ToPath } from 'image-tools'
 export default {
-  name: "HmDiscern",
+  name: "HmIDCard",
 
   props: {
     /**

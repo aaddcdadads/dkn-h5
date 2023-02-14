@@ -374,18 +374,18 @@
         "isBuiltIn": true
       },
       {
-        "name": "HmDiscern",
+        "name": "HmIDCard",
         "title": "身份证上传",
-        "importPath": "built-in/uniapp-uview-vue3/HmDiscern",
-        "imgUrl": "built-in/uniapp-uview-vue3/img/HmDiscern.png",
+        "importPath": "built-in/uniapp/HmIDCard",
+        "imgUrl": "built-in/uniapp/img/HmIDCard.png",
         "type": 0,
         "isBuiltIn": true
       },
       {
         "name": "HmAutograph",
         "title": "签名组件",
-        "importPath": "built-in/uniapp-uview-vue3/HmAutograph",
-        "imgUrl": "built-in/uniapp-uview-vue3/img/HmAutograph.png",
+        "importPath": "built-in/uniapp/HmAutograph",
+        "imgUrl": "built-in/uniapp/img/HmAutograph.png",
         "type": 0,
         "isBuiltIn": true
       },
