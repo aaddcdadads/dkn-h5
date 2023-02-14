@@ -99,6 +99,7 @@ export default {
   methods: {
     //头像上传
     uploadImg(value) {
+      let self = this;
       uni.chooseImage({
         count: 1,
         success: (chooseImageRes) => {
@@ -108,16 +109,15 @@ export default {
           //   console.log("base64",base64)
           // })
           if (value == 1) {
-            this.imgUrl1 = tempFilePaths[0];
+            self.imgUrl1 = tempFilePaths[0];
           } else {
-            this.imgUrl2 = tempFilePaths[0];
+            self.imgUrl2 = tempFilePaths[0];
           }
-          this.$emit("uploadImgSuccess",this.imgUrl1,this.imgUrl2);
-          console.log("图片地址",this.imgUrl1,this.imgUrl2);
+          self.onUploadImgSuccess(self.imgUrl1,self.imgUrl2)
         },
         fail: (err) => {
           console.log("图片获取失败", err);
-          this.$emit("uploadImgFail",err);
+          self.onUploadImgFail(err)
           // uni.showToast({
           //   icon: "none",
           //   title: "图片获取失败",
@@ -171,6 +171,19 @@ export default {
       }
       return `${value}px`;
     },
+    //选择照片返回成功回调
+    onUploadImgSuccess(imgUrl1,imgUrl2){
+      console.log("图片地址",imgUrl1,imgUrl2);
+
+      this.$emit("uploadImgSuccess",imgUrl1,imgUrl2);
+    },
+    //选择照片返回失败
+    onUploadImgFail(err){
+      console.log("图片获取失败", err);
+
+      this.$emit("uploadImgFail",err);
+    }
+
   },
 };
 </script>
