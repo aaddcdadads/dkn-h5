@@ -9,6 +9,9 @@
         :initial-time="item.initialTime"
         :danmu-list="item.danmuList"
         :poster="item.imgSrc"
+        :autoplay="videoOption.autoplay"
+        :loop="videoOption.loop"
+        :muted="videoOption.muted"
         :controls="videoOption.controls"
         :danmu-btn="videoOption.danmuBtn"
         :enable-danmu="videoOption.enableDanmu"
@@ -61,6 +64,9 @@ export default {
       type: Object,
       default: function () {
         return {
+          autoplay:false,
+          loop:false,
+          muted:false,
           controls: true, //是否显示默认播放控件（播放/暂停按钮、播放进度、时间）
           danmuBtn: false, //是否显示弹幕按钮,只在初始化时有效，不能动态变更
           enableDanmu: true, //是否展示弹幕，只在初始化时有效，不能动态变更
