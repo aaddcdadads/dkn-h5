@@ -66,6 +66,8 @@ export default {
     return {
       imgUrl1: null,
       imgUrl2: null,
+      idBase64Data1:null,
+      idBase64Data2:null,
       cWidth: "",
       cHeight: "",
     };
@@ -99,25 +101,23 @@ export default {
   methods: {
     //头像上传
     uploadImg(value) {
+      let self = this;
       uni.chooseImage({
         count: 1,
         success: (chooseImageRes) => {
           const tempFilePaths = chooseImageRes.tempFilePaths;
-          // console.log("chooseImageRes",chooseImageRes);
-          // pathToBase64(tempFilePaths).then(base64 => {
-          //   console.log("base64",base64)
-          // })
           if (value == 1) {
-            this.imgUrl1 = tempFilePaths[0];
+            self.imgUrl1 = tempFilePaths[0] 
+            self.idBase64Data1 = self.fileToBase64Async(chooseImageRes.tempFiles[0])
           } else {
-            this.imgUrl2 = tempFilePaths[0];
+            self.imgUrl2 = tempFilePaths[0] 
+            self.idBase64Data2 = self.fileToBase64Async(chooseImageRes.tempFiles[0])
           }
-          this.$emit("uploadImgSuccess",this.imgUrl1,this.imgUrl2);
-          console.log("图片地址",this.imgUrl1,this.imgUrl2);
+          self.onUploadImgSuccess(self.idBase64Data1,self.idBase64Data2)
         },
         fail: (err) => {
           console.log("图片获取失败", err);
-          this.$emit("uploadImgFail",err);
+          self.onUploadImgFail(err)
           // uni.showToast({
           //   icon: "none",
           //   title: "图片获取失败",
@@ -171,6 +171,28 @@ export default {
       }
       return `${value}px`;
     },
+    //选择照片返回成功回调
+    onUploadImgSuccess(idBase64Data1,idBase64Data2){
+      console.log("图片地址",idBase64Data1,idBase64Data2);
+      this.$emit("uploadImgSuccess",idBase64Data1,idBase64Data2);
+    },
+    //选择照片返回失败
+    onUploadImgFail(err){
+      console.log("图片获取失败", err);
+
+      this.$emit("uploadImgFail",err);
+    },
+
+    fileToBase64Async(file) {
+      return new Promise((resolve, reject) => {
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (e) => {
+          resolve(e.target.result);
+        };
+      });
+    }
+
   },
 };
 </script>
