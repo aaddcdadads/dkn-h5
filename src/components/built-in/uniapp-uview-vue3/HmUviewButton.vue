@@ -20,6 +20,12 @@
     :shape="shape"
     :hair-line="hairLine"
     :custom-style="customStyle"
+    :open-type="openType"
+    @getphonenumber="getphonenumber"
+		@getuserinfo="getuserinfo"
+    @error="error"
+		@opensetting="opensetting"
+		@launchapp="launchapp"
     @click="onClick"
     >{{ text }}</u-button
   >
@@ -101,15 +107,37 @@ export default {
         return {};
       },
     },
+    /**
+     * 开放能力
+     */
+		openType: {
+			type: String,
+			default: ''
+		},
   },
   data() {
     return {};
   },
   methods: {
     onClick(e) {
-      //console.log("e", e);
       this.$emit("click", e);
     },
+    // 下面为对接uniapp官方按钮开放能力事件回调的对接
+		getphonenumber(res) {
+			this.$emit('getphonenumber', res);
+		},
+		getuserinfo(res) {
+			this.$emit('getuserinfo', res);
+		},
+		error(res) {
+			this.$emit('error', res);
+		},
+		opensetting(res) {
+			this.$emit('opensetting', res);
+		},
+		launchapp(res) {
+			this.$emit('launchapp', res);
+		}
   },
 };
 </script>
