@@ -20,6 +20,7 @@
     <button type="text" class="btnBox" :style="{color:fontColor,fontSize:fontSize}" @click="btnState != 2 && getClick()">
       <text decode="decode" v-if="btnState == 1">获取验证码</text>
       <u-count-down
+        ref="uCountDown"
         v-if="btnState == 2"
         class="countBox"
         :timestamp="timestamp"
@@ -179,6 +180,7 @@ export default {
     //组件内部事件
     getClick: function () {
       console.log("获取验证码/重新获取", this.btnState);
+      this.$emit("onBtnClick", this.btnState);
       this.btnState = 2;
     },
     timeChange: function (timestamp) {
