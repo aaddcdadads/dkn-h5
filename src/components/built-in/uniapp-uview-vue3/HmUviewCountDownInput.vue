@@ -6,8 +6,8 @@
       :label-width="labelWidth"
       :label-align="labelAlign"
       :placeholder="placeholder"
-      type="text"
-      v-model="cValue"
+      :type="type"
+      :value="cValue"
       :maxlength="maxlength"
       :required="required"
       @input="onInput"
@@ -131,6 +131,21 @@ export default {
       type: String,
       default: "ss",
     },
+    /**
+     * 按钮状态
+     * @model
+     */
+    btnState: {
+      type: Number,
+      default: 1,
+    },
+    /**
+     * 类型
+     */
+    type: {
+      type: String,
+      default: "text",
+    }
   },
   watch: {
     value(val) {
@@ -153,12 +168,12 @@ export default {
       cValue: "",
       fontSize: "",
       fontColor: "",
-      btnState: 1,
     };
   },
   methods: {
     onInput: function (event) {
       this.$emit("onInput", event);
+      this.$emit("update:value", event);
       console.log("当键盘输入时，触发事件", event);
     },
     onFocus: function (event) {
@@ -181,12 +196,11 @@ export default {
     getClick: function () {
       console.log("获取验证码/重新获取", this.btnState);
       this.$emit("onBtnClick", this.btnState);
-      this.btnState = 2;
     },
     timeChange: function (timestamp) {
       let ss = timestamp.seconds;
       if (ss == "01") {
-        this.btnState = 3;
+        this.$emit("update:btnState", 3);
       }
     },
   },
