@@ -7,7 +7,7 @@
       :label-align="labelAlign"
       :placeholder="placeholder"
       :type="type"
-      :value="cValue"
+      v-model="cValue"
       :maxlength="maxlength"
       :required="required"
       @input="onInput"
