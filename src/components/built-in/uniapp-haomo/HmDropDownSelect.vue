@@ -13,12 +13,17 @@
       :size="Icon.iconSize"
       @click="onClick"
     ></u-icon>
-    <scroll-view scroll-y="true" v-if="dropShow" class="select" :style="cSelectStyle">
+    <scroll-view
+      scroll-y="true"
+      v-if="dropShow"
+      class="select"
+      :style="cSelectStyle"
+    >
       <view
         class="select__item"
         v-for="(item, index) in cList"
         :key="index"
-        :style="getActColor(Icon.text,item.value)"
+        :style="getActColor(Icon.text, item.value)"
         @click="onChange(item, index)"
       >
         <text class="select__item_text">{{ item.value }}</text>
@@ -36,7 +41,7 @@ export default {
      */
     icon: {
       type: Object,
-      default: function() {
+      default: function () {
         return {
           text: "全部设备",
           textAlign: "left",
@@ -50,45 +55,45 @@ export default {
             text1: "无效字段,需要整行请把display删除",
             display: "inline-flex",
             padding: "24rpx",
-            backgroundColor: "#ccc"
-          }
+            backgroundColor: "#ccc",
+          },
         };
-      }
+      },
     },
     /**
      * 数据
      */
     list: {
       type: Array,
-      default: function() {
+      default: function () {
         return [
           {
-            value: "全部设备"
+            value: "全部设备",
           },
           {
-            value: "客厅"
+            value: "客厅",
           },
           {
-            value: "全部设备1"
+            value: "全部设备1",
           },
           {
-            value: "客厅1"
+            value: "客厅1",
           },
           {
-            value: "全部设备2"
+            value: "全部设备2",
           },
           {
-            value: "客厅2"
-          }
+            value: "客厅2",
+          },
         ];
-      }
+      },
     },
     /**
      * 下拉样式
      */
     selectStyle: {
       type: Object,
-      default: function() {
+      default: function () {
         return {
           position: "absolute",
           top: "78rpx",
@@ -100,22 +105,22 @@ export default {
           color: "#000",
           background: "#fff",
           zIndex: "999",
-          boxShadow: "0rpx 0rpx 24rpx 0rpx #dadada"
+          boxShadow: "0rpx 0rpx 24rpx 0rpx #dadada",
         };
-      }
+      },
     },
     /**
      * 选中时样式
      */
     selectItemStyle: {
       type: Object,
-      default: function() {
+      default: function () {
         return {
           color: "#ff6700",
-          background: "#f1f2f3"
+          background: "#f1f2f3",
         };
-      }
-    }
+      },
+    },
   },
   watch: {
     icon(value) {
@@ -128,11 +133,11 @@ export default {
       this.cSelectItemStyle = this.$u.deepClone(value);
     },
     list: {
-      handler: function(value, oldValue) {
-        this.cList = this.mapData(value);
+      handler: function (value, oldValue) {
+        this.cList = value;
       },
-      deep: true
-    }
+      deep: true,
+    },
   },
   mounted() {
     this.Icon = this.icon;
@@ -149,7 +154,7 @@ export default {
       dropShow: false,
       cList: [],
       cSelectStyle: {},
-      cSelectItemStyle: {}
+      cSelectItemStyle: {},
     };
   },
   methods: {
@@ -167,8 +172,8 @@ export default {
       this.dropShow = false;
       this.Icon.text = item.value;
       this.$emit("change", item, index);
-    }
-  }
+    },
+  },
 };
 </script>
     
