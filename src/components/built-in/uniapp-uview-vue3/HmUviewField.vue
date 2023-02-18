@@ -48,8 +48,6 @@ export default {
     },
     /**
      * 输入框类型
-     * @type Enum
-     * @options ["text", "textarea"]
      */
     type: {
       type: String,

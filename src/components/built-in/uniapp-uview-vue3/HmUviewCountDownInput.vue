@@ -6,7 +6,7 @@
       :label-width="labelWidth"
       :label-align="labelAlign"
       :placeholder="placeholder"
-      type="text"
+      :type="type"
       v-model="cValue"
       :maxlength="maxlength"
       :required="required"
@@ -20,6 +20,7 @@
     <button type="text" class="btnBox" :style="{color:fontColor,fontSize:fontSize}" @click="btnState != 2 && getClick()">
       <text decode="decode" v-if="btnState == 1">获取验证码</text>
       <u-count-down
+        ref="uCountDown"
         v-if="btnState == 2"
         class="countBox"
         :timestamp="timestamp"
@@ -130,6 +131,21 @@ export default {
       type: String,
       default: "ss",
     },
+    /**
+     * 按钮状态
+     * @model
+     */
+    btnState: {
+      type: Number,
+      default: 1,
+    },
+    /**
+     * 类型
+     */
+    type: {
+      type: String,
+      default: "text",
+    }
   },
   watch: {
     value(val) {
@@ -152,12 +168,12 @@ export default {
       cValue: "",
       fontSize: "",
       fontColor: "",
-      btnState: 1,
     };
   },
   methods: {
     onInput: function (event) {
       this.$emit("onInput", event);
+      this.$emit("update:value", event);
       console.log("当键盘输入时，触发事件", event);
     },
     onFocus: function (event) {
@@ -179,12 +195,12 @@ export default {
     //组件内部事件
     getClick: function () {
       console.log("获取验证码/重新获取", this.btnState);
-      this.btnState = 2;
+      this.$emit("onBtnClick", this.btnState);
     },
     timeChange: function (timestamp) {
       let ss = timestamp.seconds;
       if (ss == "01") {
-        this.btnState = 3;
+        this.$emit("update:btnState", 3);
       }
     },
   },
