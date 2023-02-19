@@ -51,6 +51,12 @@ export default {
     // #endif
 
     // 注册mqttTool
+    // mqttTool参数为：
+    //    url,
+    //    clientId: '',
+    //    username: '',
+    //    password: '',
+    //    clean: false,
     if (options && options.mqttTool) {
       mqttTool.connect(options.mqttTool);
       app.config.globalProperties.$mqttTool = mqttTool;
