@@ -57,9 +57,16 @@ export default {
     //    username: '',
     //    password: '',
     //    clean: false,
+    //    topic: [{topic: '/', qos: 0}]
     if (options && options.mqttTool) {
-      mqttTool.connect(options.mqttTool);
       app.config.globalProperties.$mqttTool = mqttTool;
+      mqttTool.connect(options.mqttTool);
+      mqttTool.client.on('connect', function (res) {
+        console.log('连接成功', res);
+        options.mqttTool.topics.forEach(topicParams => {
+          mqttTool.subscribe(topicParams);
+        })
+      });
     }
   }
 }
