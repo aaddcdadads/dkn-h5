@@ -6,7 +6,7 @@ import {
   filter,
   reduce,
   array2tree
-} from './utils/flowUtils';
+} from './flowUtils';
 
 import {
   getAction,
@@ -14,10 +14,10 @@ import {
   postAction,
   deleteAction,
   putAction,
-} from "./request/http";
+} from "../request/http";
 
 // #ifdef H5
-import loadComponent from './utils/loadComponent';
+import loadComponent from './loadComponent';
 // #endif
 
 import mqttTool from "./libs/mqttTool";
