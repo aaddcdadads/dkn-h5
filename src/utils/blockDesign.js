@@ -20,6 +20,8 @@ import {
 import loadComponent from './utils/loadComponent';
 // #endif
 
+import mqttTool from "./libs/mqttTool";
+
 /**
  * 注册设计云相关的组件
  */
@@ -47,5 +49,11 @@ export default {
     // #ifdef H5
     app.use(loadComponent);
     // #endif
+
+    // 注册mqttTool
+    if (options && options.mqttTool) {
+      mqttTool.connect(options.mqttTool);
+      app.config.globalProperties.$mqttTool = mqttTool;
+    }
   }
 }
