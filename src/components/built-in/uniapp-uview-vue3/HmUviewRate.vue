@@ -1,23 +1,12 @@
 <template>
   <view>
-    <u-rate
-      v-model="value"
-      :count="count"
-      :disabled="disabled"
-      :size="size"
-      :inactive-color="inactiveColor"
-      :active-color="activeColor"
-      :gutter="gutter"
-      :active-icon="activeIcon"
-      :inactive-icon="inactiveIcon"
-      @change.stop="onChange"
-    />
+    <u-rate v-model="cValue" :count="count" :disabled="disabled" :size="size" :inactive-color="inactiveColor"
+      :active-color="activeColor" :gutter="gutter" :active-icon="activeIcon" :inactive-icon="inactiveIcon"
+      @change.stop="onChange" />
   </view>
 </template>
 
 <script>
-// import uRate from "uview-ui/components/u-rate/u-rate";
-
 export default {
   components: {},
   name: "HmUviewRate",
@@ -86,8 +75,18 @@ export default {
       default: "star",
     },
   },
+  watch: {
+    value(val) {
+      this.cValue = val;
+    }
+  },
+  mounted() {
+    this.cValue = this.value
+  },
   data() {
-    return {};
+    return {
+      cValue: ""
+    };
   },
   methods: {
     onChange(value) {

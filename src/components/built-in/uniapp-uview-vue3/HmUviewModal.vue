@@ -175,6 +175,10 @@ export default {
 };
 </script>
 <style lang="less">
+/deep/ .u-model{
+  display: flex;
+  flex-direction: column;
+}
 /deep/ .u-model__content {
   height: v-bind(cHeight);
 }

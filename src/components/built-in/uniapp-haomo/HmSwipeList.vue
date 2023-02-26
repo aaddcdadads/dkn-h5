@@ -534,6 +534,7 @@ export default {
 }
 .outbox {
   width: 100%;
+  height:100%;
 }
 .list-right:not(:last-child) {
   width: 100%;
