@@ -588,8 +588,8 @@ export default {
         fileType: "png",
         quality: 1, //图片质量
         success(res) {
-          console.log("canvas生成图片地址",res);
-          self.$emit("subImgSuccess",res)
+          self.onSubImgSuccess(res);
+          // self.$emit("subImgSuccess",res)
           //上传
           // uni.uploadFile({
           //   url: self.cAction,
@@ -618,10 +618,12 @@ export default {
           // });
         },
         fail(res){
-          self.$emit("subImgFail",res)
+          self.onSubImgFail(res)
+          // self.$emit("subImgFail",res)
         },
         complete(res){
-          self.$emit("subImgComplete",res)
+          self.onSubImgComplete(res)
+          // self.$emit("subImgComplete",res)
         }
       });
     },
@@ -644,6 +646,16 @@ export default {
       }
       return `${value}px`;
     },
+    onSubImgSuccess(res){
+      console.log("canvas生成图片地址",res);
+      this.$emit("subImgSuccess",res)
+    },
+    onSubImgFail(res){
+      this.$emit("subImgFail",res)
+    },
+    onSubImgComplete(res){
+      this.$emit("subImgComplete",res)
+    }
   },
   watch: {
     width(value) {
