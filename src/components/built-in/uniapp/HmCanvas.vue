@@ -48,8 +48,9 @@ export default {
   },
   async mounted() {
     this.cShow = this.show;
-    console.log("test-hm", this.canvasInfo);
-    this.draw();
+    if(this.cShow){
+      this.draw();
+    }
   },
 
   methods: {
@@ -161,15 +162,13 @@ export default {
           .select("#myCanvas") // 在 WXML 中填入的 id
           .fields({ node: true, size: true })
           .exec((res) => {
-            setTimeout(() => {
-              // Canvas 对象
-              resolve({
-                canvas: res[0].node,
-                width: res[0].width,
-                height: res[0].height,
-                res: res,
-              });
-            }, 200);
+            // Canvas 对象
+            resolve({
+              canvas: res[0].node,
+              width: res[0].width,
+              height: res[0].height,
+              res: res,
+            });
           });
       });
     },
