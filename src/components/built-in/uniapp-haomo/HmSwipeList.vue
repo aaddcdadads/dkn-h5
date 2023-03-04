@@ -1,120 +1,52 @@
 <template>
   <uni-swipe-action class="outbox">
-    <scroll-view
-      :style="{ height: scrollHeight, width: '100%' }"
-      :refresher-triggered="cRefresherTriggered"
-      :refresher-enabled="cRefresherEnabled"
-      :scroll-y="true"
-      :scroll-x="false"
-      :show-scrollbar="showScrollbar"
-      @refresherrefresh="refresherrefresh"
-      @scrolltolower="scrolltolower"
-    >
-      <uni-swipe-action-item
-        class="list-right"
-        v-for="(item, index) in cList"
-        :key="index"
-        :left-options="cLeftAction ? options : null"
-        :right-options="!cLeftAction ? options : null"
-        :auto-close="autoClose"
-        @change="change($event, item, index)"
-        @click="bindClick($event, item, index)"
-      >
+    <scroll-view :style="{ height: scrollHeight, width: '100%' }" :refresher-triggered="cRefresherTriggered"
+      :refresher-enabled="cRefresherEnabled" :scroll-y="true" :scroll-x="false" :show-scrollbar="showScrollbar"
+      @refresherrefresh="refresherrefresh" @scrolltolower="scrolltolower">
+      <uni-swipe-action-item class="list-right" v-for="(item, index) in cList" :key="index"
+        :left-options="cLeftAction ? options : null" :right-options="!cLeftAction ? options : null"
+        :auto-close="autoClose" @change="change($event, item, index)" @click="bindClick($event, item, index)">
         <!-- 
           @prop item - 数组条目数据
         -->
         <slot :item="item">
-          <view
-            class="content-box flex-row"
-            @click="itemClick($event, item, index)"
-          >
+          <view class="content-box flex-row" @click="itemClick($event, item, index)">
             <view class="left-box flex-row">
-              <view
-                v-if="(img.iconname || img.imgsrc) && cLayout['leftIconBtn']"
-                class="icon"
-                :style="{ marginLeft: img.space }"
-              >
-                <u-icon
-                  v-if="img.iconname"
-                  :name="img.iconname"
-                  :size="img.size"
-                  @click="imgClick(item, index)"
-                />
-                <image
-                  v-else
-                  :src="img.imgsrc"
-                  mode="aspectFill"
-                  :style="{ width: img.width, height: img.height }"
-                  @click="imgClick(item, index)"
-                />
+              <view v-if="(img.iconname || img.imgsrc) && cLayout['leftIconBtn']" class="icon"
+                :style="{ marginLeft: img.space }">
+                <u-icon v-if="img.iconname" :name="img.iconname" :size="img.size" @click="imgClick(item, index)" />
+                <image v-else :src="img.imgsrc" mode="aspectFill" :style="{ width: img.width, height: img.height }"
+                  @click="imgClick(item, index)" />
               </view>
-              <image
-                v-if="item.leftImgSrc && cLayout['leftImg']"
-                class="image"
-                :style="cImgStyle"
-                :mode="mode"
-                :src="item.leftImgSrc"
-              ></image>
+              <image v-if="item.leftImgSrc && cLayout['leftImg']" class="image" :style="cImgStyle" :mode="mode"
+                :src="item.leftImgSrc"></image>
             </view>
-            <view
-              class="center-box flex-col"
-              :style="{ textAlign: cTextAlign }"
-            >
-              <text class="content-title"
-                >{{ item.title
-                }}<text class="content-title_sub">{{
-                  item.subTitle
-                }}</text></text
-              >
+            <view class="center-box flex-col" :style="{ textAlign: cTextAlign }">
+              <text class="content-title">{{ item.title
+              }}<text class="content-title_sub">{{
+  item.subTitle
+}}</text></text>
               <text class="content-text">
-                <u-tag
-                  v-if="item.tagText"
-                  :text="item.tagText"
-                  color="#8b8b8b"
-                  bgColor="#e6e6e6"
-                  borderColor="transparent"
-                ></u-tag>
+                <u-tag v-if="item.tagText" :text="item.tagText" color="#8b8b8b" bgColor="#e6e6e6"
+                  borderColor="transparent"></u-tag>
                 {{ item.content }}
               </text>
             </view>
             <view class="right-box flex-row">
-              <image
-                v-if="item.rightImgSrc && cLayout['rightImg']"
-                class="image"
-                :style="cImgStyle"
-                :mode="mode"
-                :src="item.rightImgSrc"
-              ></image>
-              <view
-                v-if="(img.iconname || img.imgsrc) && cLayout['rightIcon']"
-                class="icon"
-                :style="{ marginRight: img.space }"
-              >
-                <u-icon
-                  v-if="img.iconname"
-                  :name="img.iconname"
-                  :size="img.size"
-                  @click="imgClick(item, index)"
-                />
-                <image
-                  v-else
-                  :src="img.imgsrc"
-                  mode="aspectFill"
-                  :style="{ width: img.width, height: img.height }"
-                  @click="imgClick(item, index)"
-                />
+              <image v-if="item.rightImgSrc && cLayout['rightImg']" class="image" :style="cImgStyle" :mode="mode"
+                :src="item.rightImgSrc"></image>
+              <view v-if="(img.iconname || img.imgsrc) && cLayout['rightIcon']" class="icon"
+                :style="{ marginRight: img.space }">
+                <u-icon v-if="img.iconname" :name="img.iconname" :size="img.size" @click="imgClick(item, index)" />
+                <image v-else :src="img.imgsrc" mode="aspectFill" :style="{ width: img.width, height: img.height }"
+                  @click="imgClick(item, index)" />
               </view>
             </view>
           </view>
         </slot>
       </uni-swipe-action-item>
-      <uni-load-more
-        v-if="contentText.show"
-        :status="status"
-        :showText="contentText.show"
-        :contentText="contentText"
-        @clickLoadMore="clickLoadMore"
-      ></uni-load-more>
+      <uni-load-more v-if="cContentText.show" :status="cStatus" :showText="cContentText.show" :contentText="cContentText"
+        @clickLoadMore="clickLoadMore"></uni-load-more>
     </scroll-view>
   </uni-swipe-action>
 </template>
@@ -379,6 +311,12 @@ export default {
     imgStyle(value) {
       this.cImgStyle = value;
     },
+    status(value) {
+      this.cStatus = value;
+    },
+    contentText(value) {
+      this.cContentText = value;
+    }
   },
   mounted() {
     this.cRefresherEnabled = this.refresherEnabled;
@@ -387,6 +325,8 @@ export default {
     this.cTextAlign = this.textAlign;
     this.cLeftAction = this.leftAction;
     this.cImgStyle = this.imgStyle;
+    this.cStatus = this.status;
+    this.cContentText = this.contentText;
     this.getData();
   },
   data() {
@@ -399,6 +339,8 @@ export default {
       cLeftAction: true,
       cRefresherTriggered: false,
       cRefresherEnabled: true,
+      cStatus: "",
+      cContentText: {}
     };
   },
   methods: {
@@ -433,7 +375,7 @@ export default {
     /**
      * 接口请求后事件
      */
-    afterGetData(data){
+    afterGetData(data) {
       this.$emit("afterGetData", data)
     },
     /**
@@ -487,6 +429,17 @@ export default {
     },
     scrolltolower() {
       console.log("到底了");
+      let self = this;
+      if (self.cList.length === self.total) {
+        self.cStatus = "nomore";
+        self.cContentText.show = true;
+        setTimeout((e) => {
+          self.cContentText.show = false;
+        }, 3000);
+      } else {
+        self.cStatus = "more";
+        self.cContentText.show = true;
+      }
       this.$emit("scrolltolower");
     },
     refresherrefresh(e) {
@@ -528,63 +481,77 @@ export default {
   display: flex;
   flex-direction: column;
 }
+
 .flex-row {
   display: flex;
   flex-direction: row;
 }
+
 .outbox {
   width: 100%;
-  height:100%;
+  height: 100%;
 }
+
 .list-right:not(:last-child) {
   width: 100%;
-  display:block;
+  display: block;
   margin-bottom: 24rpx;
 }
+
 /* 控制滑动按钮宽度,高度由图片高度+内边距控制 */
 .list-right /deep/ .uni-swipe_button {
   padding: 0rpx 67rpx !important;
 }
+
 .content-box {
   background: #fff;
   padding: 24rpx 0rpx;
 }
+
 .right-box {
   margin-left: auto;
   margin-right: 0rpx;
 }
+
 .icon {
   display: flex;
   align-items: center;
 }
+
 .left-box .icon,
 .left-box .image {
   margin-right: 24rpx;
 }
+
 .right-box .icon,
 .right-box .image {
   margin-left: 24rpx;
 }
+
 .center-box {
   width: 100%;
   height: 128rpx;
   display: flex;
   justify-content: space-around;
 }
+
 .content-title {
   font-size: 32rpx;
   color: #0d0d0d;
   line-height: 48rpx;
   font-weight: 500;
 }
+
 .content-text {
   font-size: 24rpx;
   color: #404040;
   font-weight: 400;
+
   /deep/ .u-tag {
     padding: 6rpx 8rpx;
   }
 }
+
 .content-title,
 .content-text {
   letter-spacing: 0;
