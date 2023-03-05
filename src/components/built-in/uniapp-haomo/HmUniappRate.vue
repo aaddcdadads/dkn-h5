@@ -186,6 +186,7 @@ export default {
   methods: {
     rateChange(e) {
       this.$emit("rateChange", e);
+      this.$emit("update:value", e.value)
     }
   },
 };
