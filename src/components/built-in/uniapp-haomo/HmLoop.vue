@@ -9,7 +9,11 @@
     @refresherrefresh="refresherrefresh"
     @scrolltolower="scrolltolower"
   >
-    <view v-for="(item, index) in cValue" :key="index">
+    <view v-for="(item, index) in cValue" :key="index" @click="itemClick({
+      e: $event,
+      item: item,
+      index: index
+    })">
       <!-- 
         @prop item - 数组条目数据
       -->
