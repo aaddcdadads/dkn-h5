@@ -3,7 +3,9 @@
 </template>
 
 <script>
+// #ifdef H5
 import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需进行加载
+// #endif
 
 export default {
   name: "HmScanCode",
