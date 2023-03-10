@@ -63,6 +63,8 @@
           :class="value['x-component-props'].class"
           :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"
+          @onRemove="value['x-component-events'].onRemove"
+          @onChange="value['x-component-events'].onChange"
         ></Upload>
         <u-switch 
           v-if="value['x-component'] == 'Switch'" 
