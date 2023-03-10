@@ -1,4 +1,5 @@
 <template>
+  <!-- #ifndef MP-WEIXIN -->
   <u-image
     :src="src"
     :shape="shape"
@@ -10,6 +11,21 @@
     @load="load"
     @error="error"
   />
+	<!-- #endif -->
+  <!-- #ifdef MP-WEIXIN -->
+  <u-image
+    :src="src"
+    :shape="shape"
+    :width="width"
+    :height="height"
+    :border-redius="borderRedius"
+    :loading-icon="loadingIcon"
+    :error-icon="errorIcon"
+    @load="load"
+    @error="error"
+    @click="onClick"
+  />
+	<!-- #endif -->
 </template>
 
 <script>
