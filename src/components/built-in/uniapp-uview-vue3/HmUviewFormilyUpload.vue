@@ -241,16 +241,16 @@ export default {
     updateModelValue(lists){
       let modelValue = "";
       modelValue = lists?.map(item => {
-        if(item.response){
-          let url = jp.query(
-            item.response, 
-            this.urlPath.indexOf('$') === 0 ? this.urlPath : `$.${this.urlPath}`
-          )[0]
-          item.url = url
-          return url;
-        }else{
+        // if(item.response){
+          // let url = jp.query(
+          //   item.response, 
+          //   this.urlPath.indexOf('$') === 0 ? this.urlPath : `$.${this.urlPath}`
+          // )[0]
+          // item.url = url
+          // return url;
+        // }else{
           return item.url;
-        }
+        // }
       }).join(",")
       this.$emit("update:modelValue", modelValue);
     },
