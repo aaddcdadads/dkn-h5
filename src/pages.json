@@ -498,7 +498,8 @@
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
       }
-    },{
+    },
+    {
       "path": "components/built-in/uniapp-uview-vue3/layout/HmBgCard",
       "style": {
         "navigationBarTitleText": "",
@@ -521,6 +522,13 @@
     },
     {
       "path": "pages/test/TestHmUviewGrid",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-uview-vue3/HmUviewFormily",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
