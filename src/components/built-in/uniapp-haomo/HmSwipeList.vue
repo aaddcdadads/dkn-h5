@@ -361,15 +361,12 @@ export default {
 
       getAction(url, params).then((resp) => {
         console.log(`get table data: `, resp);
-        self.cList = [];
-        setTimeout(() => {
           self.cList = self.mapData(self.getDataList(resp));
           self.cList.forEach((item, index) => {
             item.hmNo = index + 1;
           });
           self.total = self.getDataTotal(resp);
           self.afterGetData(self.cList)
-        }, 10);
       });
     },
     /**
