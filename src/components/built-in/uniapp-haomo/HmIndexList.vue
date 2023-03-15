@@ -213,7 +213,7 @@ export default {
       //转换后的数组
       let transList = []
       data.forEach(item => {
-        if (!item) {
+        if (!item || !item.name) {
           return
         }
         //获取中文首字母大写
