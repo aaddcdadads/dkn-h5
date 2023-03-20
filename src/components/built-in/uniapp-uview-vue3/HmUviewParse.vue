@@ -1,6 +1,6 @@
 <template>
-  <u-read-more ref="uReadMore" :toggle="true" :show-height="showHeight" :close-text="closeText" :show-text="showText"
-    :allow-click="allowClick" @open="open" @close="close" @onClick="onClick">
+  <u-read-more ref="uReadMore" :toggle="true" :show-height="cNeedHidden ? showHeight : 'auto'" :close-text="closeText"
+    :show-text="showText" :allow-click="allowClick" @open="open" @close="close" @onClick="onClick">
     <u-parse v-if="show" :html="cData.html" :autopause="autopause" :autoscroll="autoscroll" :autoset-title="autosetTitle"
       :domain="domain" :lazy-load="lazyLoad" :loading-img="loadingImg" :selectable="selectable"
       :show-with-animation="showWithAnimation" :tag-style="tagStyle" :use-anchor="useAnchor" :use-cache="useCache"
@@ -105,18 +105,25 @@ export default {
       default: false,
     },
     /**
-     * 交互是否生效
+     * 是否需要隐藏
+     */
+    needHidden: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 是否允许展开
      */
     allowClick: {
       type: Boolean,
-      default: true,
+      default: true
     },
     /**
      * 展开高度
      */
     showHeight: {
-      type: String,
-      default: "只能为数字(rpx),否则改源组件"
+      type: Number,
+      default: ""
     },
     /**
      * 关闭文字
@@ -136,12 +143,16 @@ export default {
   data() {
     return {
       show: true,
+      cNeedHidden: false,
       cData: {
         html: ''
       }
     };
   },
   watch: {
+    needHidden(value) {
+      this.cNeedHidden = value;
+    },
     data: {
       handler: function (val, oldVal) {
         this.show = false;
@@ -153,6 +164,7 @@ export default {
   },
   mounted() {
     this.show = false;
+    this.cNeedHidden = this.needHidden;
     this.cData = cloneDeep(this.data);
     this.show = true;
   },
