@@ -270,6 +270,7 @@ export default {
     //图片上传后，无论成功或者失败都会触发
     onChange(res, index, lists, name) {
       // console.log("onChange", res, index, lists, name);
+      this.$refs.uUpload.clear();
       this.cFileList = lists;
       this.$emit("onChange", res, index, lists, name);
     },
