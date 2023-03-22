@@ -255,6 +255,10 @@ export default {
     upload() {
       this.$refs.uUpload.upload();
     },
+    //清除内部上传列表
+    clear() {
+      this.$refs.uUpload.clear();
+    },
     //移除图片时触发
     onRemove(index, lists, name) {
       //console.log("onRemove", index, lists, name);
@@ -270,7 +274,6 @@ export default {
     //图片上传后，无论成功或者失败都会触发
     onChange(res, index, lists, name) {
       // console.log("onChange", res, index, lists, name);
-      this.$refs.uUpload.clear();
       this.cFileList = lists;
       this.$emit("onChange", res, index, lists, name);
     },
