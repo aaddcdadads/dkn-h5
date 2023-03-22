@@ -12,6 +12,7 @@
       :disabled="disabled"
       :preview-full-image="previewFullImage"
       :deletable="deletable"
+      :multiple="multiple"
       :max-size="maxSize"
       :upload-text="uploadText"
       :auto-upload="autoUpload"
@@ -170,6 +171,13 @@ export default {
      * 提示
      */
     showTips: {
+      type: Boolean,
+      default: true,
+    },
+    /**
+     * 是否多选
+     */
+     multiple: {
       type: Boolean,
       default: true,
     },
