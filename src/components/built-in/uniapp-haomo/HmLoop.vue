@@ -158,14 +158,11 @@ export default {
 
       getAction(url, params).then((resp) => {
         console.log(`get table data: `, resp);
-        self.cValue = [];
-        setTimeout(() => {
-          self.cValue = self.getDataList(resp);
-          self.cValue.forEach((item, index) => {
-            item.hmNo = index + 1;
-          });
-          self.total = self.getDataTotal(resp);
-        }, 10);
+        self.cValue = self.getDataList(resp);
+        self.cValue.forEach((item, index) => {
+          item.hmNo = index + 1;
+        });
+        self.total = self.getDataTotal(resp);
       });
     },
     /**
