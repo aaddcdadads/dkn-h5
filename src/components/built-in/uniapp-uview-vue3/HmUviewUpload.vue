@@ -12,6 +12,7 @@
       :disabled="disabled"
       :preview-full-image="previewFullImage"
       :deletable="deletable"
+      :multiple="multiple"
       :max-size="maxSize"
       :upload-text="uploadText"
       :auto-upload="autoUpload"
@@ -174,6 +175,13 @@ export default {
       default: true,
     },
     /**
+     * 是否多选
+     */
+     multiple: {
+      type: Boolean,
+      default: true,
+    },
+    /**
      * 显示图片预览
      */
     showUploadList: {
@@ -246,6 +254,10 @@ export default {
   methods: {
     upload() {
       this.$refs.uUpload.upload();
+    },
+    //清除内部上传列表
+    clear() {
+      this.$refs.uUpload.clear();
     },
     //移除图片时触发
     onRemove(index, lists, name) {
