@@ -5,9 +5,6 @@
       <h3 class="title">{{ title }}</h3>
       <view class="slot_view">
         <slot name="slotTitleIcon">
-          <view class="hm-slot" data-slot-name="slot-title-icon">
-            <view class="sortable-list"></view>
-          </view>
         </slot>
       </view>
     </view>
