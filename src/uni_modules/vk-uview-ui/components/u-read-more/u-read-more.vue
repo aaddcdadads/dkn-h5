@@ -128,6 +128,7 @@ export default {
 	methods: {
 		init() {
 			this.$uGetRect('.' + this.elId).then(res => {
+				this.isLongContent = false;
 				// 判断高度，如果真实内容高度大于占位高度，则显示收起与展开的控制按钮
 				if (res.height > uni.upx2px(this.showHeight)) {
 					this.isLongContent = true;
