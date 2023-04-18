@@ -8,7 +8,7 @@
       :style="{ backgroundColor: cListColor,top :cSeat,left: cLeftSeat,width:cSeatWidth,maxHeight:cMaxHeight}"
       v-if="show">
       <view class="list-item"
-        :style="{ backgroundColor: this.Id== item.id ? cMainColor:'', color: this.Id == item.Id ? mainTextColor:'',fontSize : cListSize }"
+        :style="{ backgroundColor: this.Id== item.id ? cMainColor:'', color: this.Id == item.id ? mainTextColor:'',fontSize : cListSize }"
         @click.stop="onChange(item, index)" v-for="(item, index) in cList" :key="index">
         <text class="text_list">{{ item.value }}</text>
       </view>
