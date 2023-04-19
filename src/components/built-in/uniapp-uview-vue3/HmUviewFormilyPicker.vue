@@ -1,25 +1,19 @@
 <template>
   <view style="width: 100%;">
-    <u-input type="select" :disabled="disabled" :border="border" placeholder="请选择" :modelValue="modelValue" @click="cShow = true"></u-input>
-    <u-picker
-      v-model="cShow"
-      v-if="autoSelect"
-      :mode="mode"
-      :title="title"
-      :confirm-text="confirmText"
-      :confirm-color="confirmColor"
-      :cancel-text="cancelText"
-      :cancel-color="cancelColor"
-      :params="params"
-      :default-time="modelValue"
-      :default-region="modelValue"
-      :mask-close-able="maskCloseAble"
-      :start-year="startYear"
-      :end-year="endYear"
-      :show-time-tag="showTimeTag"
-      @confirm="onConfirm"
-      @cancel="onCancel"
-    ></u-picker>
+    <!-- #ifndef APP-PLUS -->
+    <u-input type="select" :disabled="disabled" :border="border" placeholder="请选择" :modelValue="modelValue"
+      @click="cShow = true">
+    </u-input>
+    <u-picker v-model="cShow" v-if="autoSelect" :mode="mode" :title="title" :confirm-text="confirmText"
+      :confirm-color="confirmColor" :cancel-text="cancelText" :cancel-color="cancelColor" :params="params"
+      :default-time="modelValue" :default-region="modelValue" :mask-close-able="maskCloseAble" :start-year="startYear"
+      :end-year="endYear" :show-time-tag="showTimeTag" @confirm="onConfirm" @cancel="onCancel"></u-picker>
+    <!-- #endif -->
+    <!-- #ifdef APP-PLUS -->
+    <uni-datetime-picker :type="mode" :modelValue="modelValue" :border="border" :disabled="disabled" :start="startTime"
+      :end="endTime" @change="onConfirm">
+    </uni-datetime-picker>
+    <!-- #endif -->
   </view>
 </template>
 
@@ -51,7 +45,7 @@ export default {
      * 类型
      * @type Enum
      * @default time
-     * @options ["time", "region"]
+     * @options ["time","region","datetime","date"]
      */
     mode: {
       type: String,
@@ -127,7 +121,7 @@ export default {
      */
     startYear: {
       type: Number,
-      default: 1950,
+      default: 2000,
     },
     /**
      * 结束年份
@@ -165,10 +159,11 @@ export default {
       default: false,
     },
   },
-  computed: {},
   data() {
     return {
       cShow: false,
+      startTime: "2001-01-01 00:00:00",
+      endTime: "2050-01-01 00:00:00",
     };
   },
   watch: {
@@ -176,19 +171,34 @@ export default {
       this.cShow = value;
     },
     cShow(value) {
-      if (value == false) 
+      if (value == false)
         this.onCancel();
       this.$emit("showChange", this.cShow);
       this.$emit("update:show", this.cShow);
     },
   },
+  watch: {
+    startYear(value) {
+      this.startTime = value + "-01-01 00:00:00"
+    },
+    endYear(value) {
+      this.endTime = value + "-12-31 23:59:59"
+    }
+  },
   mounted() {
     this.cShow = this.show;
+    this.startTime = this.startYear + "-01-01 00:00:00";
+    this.endTime = this.endYear + "-12-31 23:59:59";
   },
   methods: {
     onConfirm(e) {
       this.$emit("confirm", e);
+      // #ifndef APP-PLUS
       this.$emit("update:modelValue", moment(e.timestamp * 1000).format(this.format));
+      // #endif
+      // #ifdef APP-PLUS
+      this.$emit("update:modelValue", e);
+      // #endif
     },
     onCancel(e) {
       this.$emit("cancel", e);
@@ -197,5 +207,4 @@ export default {
 };
 </script>
 
-<style lang="less">
-</style>
+<style lang="less"></style>
