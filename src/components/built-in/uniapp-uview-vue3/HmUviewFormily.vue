@@ -114,12 +114,7 @@ import cloneDeep from 'lodash/cloneDeep'
 import Form from '@/uni_modules/vk-uview-ui/components/u-form/u-form.vue'
 import FormItem from '@/uni_modules/vk-uview-ui/components/u-form-item/u-form-item.vue'
 import Select from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilySelect.vue";
-// #ifdef APP-PLUS
-import Picker from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyPickerApp.vue";
-// #endif
-// #ifndef APP-PLUS
 import Picker from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyPicker.vue";
-// #endif
 import Upload from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyUpload.vue";
 import Radio from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyRadio.vue";
 import Checkbox from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyCheckbox.vue";

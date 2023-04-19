@@ -17,9 +17,9 @@
         </view>
         <view class="body-warp">
           <scroll-view class="body" scroll-y="true">
-            <slot v-if="!cList.length" name="tips">
-              <view class="empty-tips">暂无数据~</view>
-            </slot>
+            <view v-if="!cList.length" name="tips">
+              <text class="empty-tips">暂无数据~</text>
+            </view>
             <view class="select-item" v-for="(item, index) in cList" :key="index" @tap.stop="onSelected(item, index)"
               :class="[item.disabled ? 'disabled' : '', item.checked ? 'selected' : '']">
               <text v-show="item.checked" class="selected-icon">✔</text>
