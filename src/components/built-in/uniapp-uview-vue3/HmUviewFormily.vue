@@ -115,7 +115,7 @@ import Form from '@/uni_modules/vk-uview-ui/components/u-form/u-form.vue'
 import FormItem from '@/uni_modules/vk-uview-ui/components/u-form-item/u-form-item.vue'
 import Select from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilySelect.vue";
 // #ifdef APP-PLUS
-import Picker from "@/pages/index/index.vue";
+import Picker from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyPickerApp.vue";
 // #endif
 // #ifndef APP-PLUS
 import Picker from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyPicker.vue";
