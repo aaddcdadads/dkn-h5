@@ -243,7 +243,7 @@ export default {
   data() {
     return {
       cShowMode: "doubleRank",
-      cImgStyle: "",
+      cImgStyle: {},
       cAboutMargin: "12rpx",
       listboxbgcolor: "", //卡片背景颜色
       boldtextsize: "", //标题字大小

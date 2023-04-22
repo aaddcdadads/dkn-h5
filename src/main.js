@@ -14,7 +14,11 @@ import blockDesign from "./utils/blockDesign";
 export function createApp() {
     const app = createSSRApp(App);
 
-    app.use(blockDesign);
+    app.use(blockDesign, {
+        mqttTool: {
+            url: 'wss://wx.satprowide.com/mqtt'
+        }
+    });
 
     // app.use(message);
     app.use(uView);
