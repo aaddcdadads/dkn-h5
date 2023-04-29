@@ -25,6 +25,9 @@ export default {
   name: "HmUviewText",
   components: {},
   props: {
+    item: {
+      type: [String, Object],
+    },
     /**
      * 文字
      */
@@ -132,7 +135,7 @@ export default {
       return `${value}px`;
     },
     onClick() {
-      this.$emit("onClick");
+      this.$emit("onClick", this.item);
     },
   },
 };

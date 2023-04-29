@@ -18,9 +18,9 @@ export default {
   components: {
     HmUviewFormily
   },
-  data(){
+  data() {
     let self = this;
-    return{
+    return {
       schema: {
         type: 'object',
         properties: {
@@ -32,6 +32,21 @@ export default {
               'labelPosition': 'top'
             },
             properties: {
+              arraySelect: {
+                type: 'array',
+                default: [],
+                'x-decorator': 'FormItem',
+                'x-decorator-props': {},
+                'x-component': 'ArraySelect',
+                'x-component-props': {
+                  '@onCancel': function (a, b) {
+                    console.log("onCancel", a, b);
+                  },
+                  '@onConfirm': function (a, b) {
+                    console.log("onConfirm", a, b);
+                  }
+                }
+              },
               span: {
                 'default': 'aaaa',
                 'x-decorator': 'FormItem',
@@ -210,7 +225,7 @@ export default {
                 'x-component': 'Select',
                 'x-component-props': {
                   'allowClear': true,
-                  '@confirm': function(e, item){
+                  '@confirm': function (e, item) {
                     console.log('e', e, item)
                     self.schema.properties.form.properties.switch['x-component-props'].style = {
                       display: 'none'
@@ -427,33 +442,33 @@ export default {
       }
     }
   },
-  created(){
+  created() {
     this.testValue = 'testValue';
 
     // setTimeout(() => {
     //   this.schema.properties.form.properties.input.default = '234'
     // }, 1000)
   },
-  methods:{
-    reset(){
+  methods: {
+    reset() {
       this.$refs.test.reset()
     },
-    validate(){
+    validate() {
       this.$refs.test.validate().then(res => {
         console.log('通过', res)
       }).catch(e => {
         console.log('未通过', e)
       })
     },
-    getValues(){
+    getValues() {
       let values = this.$refs.test.getValues()
       console.log('values', values)
     },
-    getFormValues(){
+    getFormValues() {
       let values = this.$refs.test.getFormValues()
       console.log('values', values)
     },
-    setValues(){
+    setValues() {
       let values = {
         select: '2',
         uploadImage: {
@@ -468,18 +483,18 @@ export default {
       }
       this.$refs.test.setValues(values)
     },
-    setFormValues(){
+    setFormValues() {
       let values = {
         input: '2',
         upload: 'http://aacsb-stage.bbblackboard.com/files/1667796110048/72BED9E6-91B7-4117-9C4E-F2F03AB39BE0.png,http://aacsb-stage.bbblackboard.com/files/1667826283797/42476B84-AE1A-413D-AE79-544D4164096C.png',
       }
       this.$refs.test.setFormValues(values)
     },
-    changeSelectOption(){
+    changeSelectOption() {
       this.schema.properties.form.properties.select['x-component-props'].options = [{
         label: 'test1',
         value: '1'
-      },{
+      }, {
         label: 'test2',
         value: '2'
       }]
@@ -488,6 +503,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

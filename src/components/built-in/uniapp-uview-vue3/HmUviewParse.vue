@@ -1,24 +1,16 @@
 <template>
-  <u-parse
-    v-if="show"
-    :html="cData.html"
-    :autopause="autopause"
-    :autoscroll="autoscroll"
-    :autoset-title="autosetTitle"
-    :domain="domain"
-    :lazy-load="lazyLoad"
-    :loading-img="loadingImg"
-    :selectable="selectable"
-    :show-with-animation="showWithAnimation"
-    :tag-style="tagStyle"
-    :use-anchor="useAnchor"
-    :use-cache="useCache">
+  <u-read-more ref="uReadMore" :toggle="true" :show-height="cNeedHidden ? showHeight : 'auto'" :close-text="closeText"
+    :show-text="showText" :allow-click="allowClick" @open="open" @close="close" @onClick="onClick">
+    <u-parse v-if="show" :html="cData.html" :autopause="autopause" :autoscroll="autoscroll" :autoset-title="autosetTitle"
+      :domain="domain" :lazy-load="lazyLoad" :loading-img="loadingImg" :selectable="selectable"
+      :show-with-animation="showWithAnimation" :tag-style="tagStyle" :use-anchor="useAnchor" :use-cache="useCache"
+      @load="parseLoaded">
     </u-parse>
+  </u-read-more>
 </template>
 
 <script>
 import { cloneDeep } from '/@/utils/util';
-
 export default {
   name: "HmUviewParse",
   props: {
@@ -27,11 +19,11 @@ export default {
      */
     data: {
       type: Object,
-      default: function() {
+      default: function () {
         return {
           html: '<h1 style="text-align: center;">新闻</h1><h2 style="text-align: center;">作者：胡小根</h2><p> &nbsp; &nbsp;这是正文。</p><p> &nbsp; &nbsp;这是结尾。</p>',
         }
-      } 
+      }
     },
     /**
      * 暂停其他播放
@@ -94,7 +86,7 @@ export default {
      */
     tagStyle: {
       type: Object,
-      default: function() {
+      default: function () {
         return {};
       },
     },
@@ -112,18 +104,57 @@ export default {
       type: Boolean,
       default: false,
     },
+    /**
+     * 是否需要隐藏
+     */
+    needHidden: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 是否允许展开
+     */
+    allowClick: {
+      type: Boolean,
+      default: true
+    },
+    /**
+     * 展开高度
+     */
+    showHeight: {
+      type: Number,
+      default: ""
+    },
+    /**
+     * 关闭文字
+     */
+    closeText: {
+      type: String,
+      default: "展开"
+    },
+    /**
+     * 展开文字
+     */
+    showText: {
+      type: String,
+      default: "收起"
+    },
   },
   data() {
     return {
       show: true,
+      cNeedHidden: false,
       cData: {
         html: ''
       }
     };
   },
   watch: {
+    needHidden(value) {
+      this.cNeedHidden = value;
+    },
     data: {
-      handler: function(val, oldVal) {
+      handler: function (val, oldVal) {
         this.show = false;
         this.cData = cloneDeep(val);
         this.show = true;
@@ -133,13 +164,25 @@ export default {
   },
   mounted() {
     this.show = false;
+    this.cNeedHidden = this.needHidden;
     this.cData = cloneDeep(this.data);
     this.show = true;
   },
   methods: {
+    parseLoaded() {
+      this.$refs.uReadMore.init();
+    },
+    open(e) {
+      this.$emit("open", e);
+    },
+    close(e) {
+      this.$emit("close", e);
+    },
+    onClick(e) {
+      this.$emit("onClick", e);
+    }
   },
 };
 </script>
 
-<style lang="less">
-</style>
+<style lang="less"></style>

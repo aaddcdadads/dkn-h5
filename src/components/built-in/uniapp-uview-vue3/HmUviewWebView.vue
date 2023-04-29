@@ -40,10 +40,13 @@ export default {
       this.cSrc = value
     }
   },
-  mounted() {
+  created(){
     this.cSrc = this.src
     this.cWidth = this.getCssUnit(this.width);
     this.cHeight = this.getCssUnit(this.height);
+  },
+  mounted() {
+    
   },
   data() {
     return {

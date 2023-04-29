@@ -1,5 +1,5 @@
 <template>
-  <view class="demo" v-if="cShow">
+  <view class="demo">
     <canvas
       type="2d"
       :style="{
@@ -13,13 +13,6 @@
 <script>
 export default {
   props: {
-    /**
-     * show
-     */
-    show: {
-      type: Boolean,
-      default: false,
-    },
     /**
      * 绘制元素列表
      */
@@ -46,12 +39,9 @@ export default {
       this.draw();
     },
   },
-  async mounted() {
-    this.cShow = this.show;
-    console.log("test-hm", this.canvasInfo);
+  mounted() {
     this.draw();
   },
-
   methods: {
     // 画图
     async draw() {
@@ -161,15 +151,13 @@ export default {
           .select("#myCanvas") // 在 WXML 中填入的 id
           .fields({ node: true, size: true })
           .exec((res) => {
-            setTimeout(() => {
-              // Canvas 对象
-              resolve({
-                canvas: res[0].node,
-                width: res[0].width,
-                height: res[0].height,
-                res: res,
-              });
-            }, 200);
+            // Canvas 对象
+            resolve({
+              canvas: res[0].node,
+              width: res[0].width,
+              height: res[0].height,
+              res: res,
+            });
           });
       });
     },

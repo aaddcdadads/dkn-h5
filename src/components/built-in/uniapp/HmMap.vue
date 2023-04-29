@@ -3,20 +3,20 @@
     <view class="search-view" v-if="searchView">
       <view class="search-top">
         <view class="search-top__div">
-          <u-search class="search-top__search" v-model="keyword" :showAction="false" shape="square"
-            bgColor="transparent" @change="search" />
+          <u-search class="search-top__search" v-model="keyword" :showAction="false" shape="square" bgColor="transparent"
+            @change="search" />
         </view>
         <view class="search-top__text" @click="cancel">取消</view>
       </view>
       <view class="search-list">
         <view v-for="item in addressList" :key="item.id" class="search-list__item" @click="selectAddress(item)">
-          {{item.address}}
+          {{ item.address }}
         </view>
       </view>
     </view>
     <view class="hm-map" v-if="!searchView">
       <map class="map" id="map" ref="map" :key="key" :latitude="cLatitude" :longitude="cLongitude" :scale="scale"
-        :markers="cMarkers" :polyline="polyline" :circles="circles" :polygons="polygons" :includePoints="includePoints"
+        :markers="cMarkers" :polyline="cPolyline" :circles="circles" :polygons="polygons" :includePoints="includePoints"
         :controls="controls" :enable3D="enable3D" :showCompass="showCompass" :enableZoom="enableZoom"
         :layer-style="layerStyle" :enableScroll="enableScroll" :enableRotate="enableRotate"
         :enableOverlooking="enableOverlooking" :enableSatellite="enableSatellite" :enableTraffic="enableTraffic"
@@ -25,7 +25,7 @@
         @controltap="onControltap" @regionchange="onRegionchange" @tap="onTap" @updated="onUpdated"
         @anchorpointtap="onAnchorpointtap" @poitap="onPoitap">
         <cover-view v-if="showSearch" class="serch-div" @click="showSearchView">
-          {{address}}
+          {{ address }}
         </cover-view>
       </map>
     </view>
@@ -243,11 +243,31 @@ export default {
       default: true,
     },
   },
+  watch: {
+    polyline: {
+      handler: function (value, oldValue) {
+        this.cPolyline = JSON.parse(JSON.stringify(value))
+        console.log('polyline: ', value, oldValue, this.cPolyline)
+      },
+      deep: true,
+    },
+    markers: {
+      handler: function (value, oldValue) {
+        this.cMarkers = (JSON.parse(JSON.stringify(value))).concat([this.centerMarker])
+        console.log('markers: ', value, oldValue, this.cMarkers)
+      },
+      deep: true,
+    }
+  },
   data() {
     return {
+      _mapContext: null, // 地图对象
       key: 0,
       cLatitude: 39.90925,
       cLongitude: 116.397628,
+      cPolyline: [], // 线集合
+      cMarkers: [], // 点集合
+
       address: '',
       cWidth: "100%",
       cHeight: "500px",
@@ -265,16 +285,30 @@ export default {
       },
     };
   },
-  computed: {
-    cMarkers: function () {
-      return this.markers.concat([this.centerMarker])
-    }
-  },
   created() {
     this.cWidth = this.$getCssUnit(this.width);
     this.cHeight = this.$getCssUnit(this.height);
     this.cLatitude = this.latitude
     this.cLongitude = this.longitude
+    this.cPolyline = JSON.parse(JSON.stringify(this.polyline))
+    this.cMarkers = (JSON.parse(JSON.stringify(this.markers))).concat([this.centerMarker])
+  },
+  onReady() {
+    this._mapContext = uni.createMapContext("map", this);
+
+    // 仅调用初始化，才会触发 on.("markerClusterCreate", (e) => {})
+    this._mapContext.initMarkerCluster({
+      enableDefaultStyle: false,
+      zoomOnClick: true,
+      gridSize: 60,
+      complete(res) {
+        console.log('initMarkerCluster', res)
+      }
+    });
+
+    this._mapContext.on("markerClusterCreate", (e) => {
+      console.log("markerClusterCreate", e);
+    });
   },
   methods: {
     /**
@@ -471,7 +505,7 @@ export default {
 <style lang="less" scoped>
 .hm-map {
   width: v-bind(cWidth);
-  height: v-bind(cHeight);
+  height: 70vh;
 }
 
 .map {

@@ -63,6 +63,8 @@
           :class="value['x-component-props'].class"
           :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"
+          @onRemove="value['x-component-events'].onRemove"
+          @onChange="value['x-component-events'].onChange"
         ></Upload>
         <u-switch 
           v-if="value['x-component'] == 'Switch'" 
@@ -92,6 +94,15 @@
           :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"
         ></Checkbox>
+        <ArraySelect 
+          v-if="value['x-component'] == 'ArraySelect'" 
+          v-model="form[key]" 
+          :class="value['x-component-props'].class"
+          :style="value['x-component-props'].style"
+          v-bind="value['x-component-props']"
+          @onCancel="value['x-component-events'].onCancel"
+          @onConfirm="value['x-component-events'].onConfirm"
+        ></ArraySelect>
       </FormItem>
     </Form>
   </div>
@@ -109,6 +120,7 @@ import Radio from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyRadio.v
 import Checkbox from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyCheckbox.vue";
 import HmUviewText from "@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewImage from "@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
+import ArraySelect from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyArraySelect.vue";
 import {
   getFeiqiFilterValue, 
   getFilterValue,
@@ -126,7 +138,8 @@ export default {
     HmUviewText,
     HmUviewImage,
     Radio,
-    Checkbox
+    Checkbox,
+    ArraySelect
   },
   props: {
     /**
@@ -502,6 +515,17 @@ export default {
                     'action': 'http://aacsb-stage.bbblackboard.com/api/obe/uploadFile',
                     'maxCount': 11,
                   },
+                },
+                arraySelect:{
+                  type: 'array',
+                  default:[],
+                  'x-decorator': 'FormItem',
+                  'x-decorator-props': {},
+                  'x-component': 'ArraySelect',
+                  'x-component-props': {
+                    '@onConfirm': function(select,list){},
+                    '@onCancel':function(select,boolean){}
+                  }
                 },
                 // uploadImage: {
                 //   type: 'object',

@@ -254,7 +254,7 @@ export default {
 }
 .videoBox {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .flex-col .videoBox:not(:last-child) {

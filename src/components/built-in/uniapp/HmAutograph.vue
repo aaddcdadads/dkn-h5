@@ -99,10 +99,10 @@ export default {
       linePrack: [], //划线轨迹 , 生成线条的实际点
     };
   },
-  onLoad() {
+  mounted() {
     let canvasName = this.canvasName;
     let ctx = uni.createCanvasContext(canvasName);
-
+    console.log("ctx",ctx)
     this.ctx = ctx;
     var query = uni.createSelectorQuery();
     query.select(".handCenter").boundingClientRect((rect) => {
@@ -112,6 +112,10 @@ export default {
       /* 将canvas背景设置为 白底，不设置  导出的canvas的背景为透明 */
       this.setCanvasBg("#fff");
     });
+
+    this.cAction = this.action;
+    this.cWidth = this.getCssUnit(this.wdith);
+    this.cHeight = this.getCssUnit(this.height);
   },
   methods: {
     // 笔迹开始
@@ -588,8 +592,8 @@ export default {
         fileType: "png",
         quality: 1, //图片质量
         success(res) {
-          console.log("canvas生成图片地址",res);
-          self.$emit("subImgSuccess",res)
+          self.onSubImgSuccess(res);
+          // self.$emit("subImgSuccess",res)
           //上传
           // uni.uploadFile({
           //   url: self.cAction,
@@ -618,10 +622,12 @@ export default {
           // });
         },
         fail(res){
-          self.$emit("subImgFail",res)
+          self.onSubImgFail(res)
+          // self.$emit("subImgFail",res)
         },
         complete(res){
-          self.$emit("subImgComplete",res)
+          self.onSubImgComplete(res)
+          // self.$emit("subImgComplete",res)
         }
       });
     },
@@ -644,6 +650,16 @@ export default {
       }
       return `${value}px`;
     },
+    onSubImgSuccess(res){
+      // console.log("canvas生成图片地址",res);
+      this.$emit("subImgSuccess",res)
+    },
+    onSubImgFail(res){
+      this.$emit("subImgFail",res)
+    },
+    onSubImgComplete(res){
+      this.$emit("subImgComplete",res)
+    }
   },
   watch: {
     width(value) {
@@ -655,11 +671,6 @@ export default {
     action(value) {
       this.cAction = value;
     },
-  },
-  mounted() {
-    this.cAction = this.action;
-    this.cWidth = this.getCssUnit(this.wdith);
-    this.cHeight = this.getCssUnit(this.height);
   },
 };
 </script>

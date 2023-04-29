@@ -9,7 +9,11 @@
     @refresherrefresh="refresherrefresh"
     @scrolltolower="scrolltolower"
   >
-    <view v-for="(item, index) in cValue" :key="index">
+    <view v-for="(item, index) in cValue" :key="index" @click="itemClick({
+      e: $event,
+      item: item,
+      index: index
+    })">
       <!-- 
         @prop item - 数组条目数据
       -->
@@ -154,14 +158,11 @@ export default {
 
       getAction(url, params).then((resp) => {
         console.log(`get table data: `, resp);
-        self.cValue = [];
-        setTimeout(() => {
-          self.cValue = self.getDataList(resp);
-          self.cValue.forEach((item, index) => {
-            item.hmNo = index + 1;
-          });
-          self.total = self.getDataTotal(resp);
-        }, 10);
+        self.cValue = self.getDataList(resp);
+        self.cValue.forEach((item, index) => {
+          item.hmNo = index + 1;
+        });
+        self.total = self.getDataTotal(resp);
       });
     },
     /**
