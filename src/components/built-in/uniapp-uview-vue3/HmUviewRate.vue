@@ -1,7 +1,7 @@
 <template>
   <view>
     <u-rate
-      v-model="value"
+      v-model="cValue"
       :count="count"
       :disabled="disabled"
       :size="size"
@@ -87,7 +87,17 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      cValue: null
+    };
+  },
+  watch: {
+    value(val) {
+      this.cValue = val;
+    },
+  },
+  mounted() {
+    this.cValue = this.value;
   },
   methods: {
     onChange(value) {

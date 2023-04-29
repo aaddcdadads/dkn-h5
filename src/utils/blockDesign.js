@@ -57,7 +57,7 @@ export default {
     //    username: '',
     //    password: '',
     //    clean: false,
-    //    topic: [{topic: '/', qos: 0}]
+    //    topics: [{topic: '/', qos: 0}]
     if (options && options.mqttTool) {
       app.config.globalProperties.$mqttTool = mqttTool;
       mqttTool.connect(options.mqttTool);

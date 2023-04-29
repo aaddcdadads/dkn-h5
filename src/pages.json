@@ -737,6 +737,13 @@
       }
     },
     {
+      "path": "pages/test/TestHmVideo",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "components/built-in/uniapp/HmText",
       "style": {
         "navigationBarTitleTgitext": "",
