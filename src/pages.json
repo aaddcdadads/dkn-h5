@@ -13,12 +13,14 @@
         "navigationBarTitleText": "uni-app"
       }
     },
+    // #ifdef H5 | MP-WEIXIN
     {
       "path": "pages/test/TestHmUviewParse",
       "style": {
         "navigationBarTitleText": "TestHmUviewParse"
       }
     },
+    // #endif
     {
       "path": "pages/test/TestHmSwipeList",
       "style": {
@@ -1003,6 +1005,7 @@
         "enablePullDownRefresh": false
       }
     },
+    // #ifdef H5
     {
       "path": "pages/test/TestHmImportPage",
       "style": {
@@ -1010,6 +1013,7 @@
         "enablePullDownRefresh": false
       }
     },
+    //#endif
     {
       "path": "pages/test/TestHmUviewFilter",
       "style": {
@@ -1056,6 +1060,11 @@
       {
         "name": "TestHmMap",
         "path": "pages/test/TestHmMap",
+        "query": ""
+      },
+      {
+        "name": "TestHmVideo",
+        "path": "pages/test/TestHmVideo",
         "query": ""
       },
       {

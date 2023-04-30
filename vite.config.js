@@ -104,6 +104,11 @@ export default defineConfig({
     },
   },
 
+  // 解决 global 为undefined的问题
+  // define: {
+  //   global:{}
+  // },
+
   // 打包为库
   build: {
     sourcemap: true,

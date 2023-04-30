@@ -91,6 +91,7 @@
 		sup: 1
 	}
 	
+  console.log(`global: `, global);
 	global.Parser = {};
 	import trees from './trees'
 	import cfg from '../libs/config.js'
