@@ -187,6 +187,9 @@ export default {
     rateChange(e) {
       this.$emit("rateChange", e);
       this.$emit("update:value", e.value)
+    },
+    getRateValue(){
+      return this.cValue;
     }
   },
 };
