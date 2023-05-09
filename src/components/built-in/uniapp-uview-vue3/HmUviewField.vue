@@ -26,6 +26,7 @@
       @blur="onBlur"
       @focus="onFocus"
       @click="onClick"
+      @right-icon-click="onRightIconClick"
       ><slot></slot
     ></u-field>
   </view>
@@ -267,6 +268,9 @@ export default {
     this.$emit("onClick", e);
     console.log("onClick", e);
     },
+    onRightIconClick(){
+      this.$emit("rightIconClick");
+    }
   },
 };
 </script>
