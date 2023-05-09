@@ -520,7 +520,6 @@ export default {
     pageTurning(){
       if (this.cPagination.pageNo < Math.ceil(this.total / this.cPagination.pageSize)) {
         this.cPagination.pageNo ?  this.cPagination.pageNo += 1 :"";
-        this.params.pageNo ? this.params.pageNo +=1 : "";
         this.getData()
       }
     },
