@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Form ref="formily" :style="{padding: '32rpx'}" class="formily" :model="form" v-bind="schema.properties.form['x-component-props']">
+    <Form ref="formily" :customStyle="Object.assign({padding: '32rpx'}, schema.properties.form['x-component-props'].style)" customClass="formily" :class="schema.properties.form['x-component-props'].class" :model="form" v-bind="schema.properties.form['x-component-props']">
       <FormItem 
         v-for="(value, key, index) in cSchema.properties.form.properties" 
         :prop="key"
         :key="index"  
-        :class="value['x-decorator-props'].class"
-        :style="value['x-decorator-props'].style"
+        :customClass="value['x-decorator-props'].class"
+        :customStyle="value['x-decorator-props'].style"
         v-bind="value['x-decorator-props']"
       >
         <HmUviewText

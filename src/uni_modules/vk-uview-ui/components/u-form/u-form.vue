@@ -1,5 +1,5 @@
 <template>
-	<view class="u-form"><slot /></view>
+	<view class="u-form" :style="customStyle" :class="customClass"><slot /></view>
 </template>
 
 <script>
@@ -23,6 +23,18 @@ export default {
 	props: {
 		// 当前form的需要验证字段的集合
 		model: {
+			type: Object,
+			default() {
+				return {};
+			}
+		},
+        customStyle: {
+			type: Object,
+			default() {
+				return {};
+			}
+		},
+		customClass: {
 			type: Object,
 			default() {
 				return {};
