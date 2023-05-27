@@ -2,6 +2,7 @@
   <view :class="{uploadContainer: this.showUpload}">
     <u-upload
       ref="uUpload"
+      :accept="accept"
       :action="cAction"
       :file-list="cFileList"
       :name="name"
@@ -65,6 +66,15 @@ export default {
       default: function () {
         return {};
       },
+    },
+    /**
+     * 上传文件类型
+     * @type Enum
+     * @options ["all", "media", "image", "file", "video"]
+     */
+     accept:{
+      type: String,
+      default: "image",
     },
     /**
      * 上传文件名
