@@ -2,6 +2,7 @@
   <view :class="{uploadContainer: this.showUpload}">
     <u-upload
       ref="uUpload"
+      :accept="accept"
       :action="action"
       :file-list="cFileList"
       :name="name"
@@ -42,6 +43,15 @@ export default {
   props: {
     modelValue: {
       type: String,
+    },
+    /**
+     * 上传文件类型
+     * @type Enum
+     * @options ["all", "media", "image", "file", "video"]
+     */
+    accept:{
+      type: String,
+      default: "image",
     },
     /**
      * 服务器地址
