@@ -1,7 +1,7 @@
 <template>
   <u-read-more ref="uReadMore" :toggle="true" :show-height="cNeedHidden ? showHeight : 'auto'" :close-text="closeText"
     :show-text="showText" :allow-click="allowClick" @open="open" @close="close" @onClick="onClick">
-    <u-parse v-if="show" :html="cData.html" :autopause="autopause" :autoscroll="autoscroll" :autoset-title="autosetTitle"
+    <u-parse v-if="show" :id="[elId]" :html="cData.html" :autopause="autopause" :autoscroll="autoscroll" :autoset-title="autosetTitle"
       :domain="domain" :lazy-load="lazyLoad" :loading-img="loadingImg" :selectable="selectable"
       :show-with-animation="showWithAnimation" :tag-style="tagStyle" :use-anchor="useAnchor" :use-cache="useCache"
       @load="parseLoaded">
@@ -146,7 +146,8 @@ export default {
       cNeedHidden: false,
       cData: {
         html: ''
-      }
+      },
+      elId: this.$u.guid(),
     };
   },
   watch: {
@@ -170,7 +171,14 @@ export default {
   },
   methods: {
     parseLoaded() {
-      this.$refs.uReadMore.init();
+      let self = this;
+      uni.createSelectorQuery().select('#' + this.elId).boundingClientRect((res) => {
+        if(res.height > uni.upx2px(self.showHeight)){
+          self.$refs.uReadMore.init(res.height);
+        }else{
+          self.$refs.uReadMore.init()
+        }
+      }).exec();
     },
     open(e) {
       this.$emit("open", e);

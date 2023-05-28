@@ -1,5 +1,9 @@
 <template>
-	<view class="u-form-item" :class="{'u-border-bottom': elBorderBottom, 'u-form-item__border-bottom--error': validateState === 'error' && showError('border-bottom')}">
+	<view 
+        class="u-form-item" 
+        :class="Object.assign({'u-border-bottom': elBorderBottom, 'u-form-item__border-bottom--error': validateState === 'error' && showError('border-bottom')}, customClass)"
+        :style="customStyle"
+    >
 		<view class="u-form-item__body" :style="{
 			flexDirection: elLabelPosition == 'left' ? 'row' : 'column'
 		}">
@@ -82,6 +86,18 @@
 				type: String,
 				default: ''
 			},
+            customStyle: {
+                type: Object,
+                default() {
+                    return {};
+                }
+            },
+            customClass: {
+                type: Object,
+                default() {
+                    return {};
+                }
+            },
 			// 绑定的值
 			prop: {
 				type: String,

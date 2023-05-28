@@ -62,7 +62,7 @@ export default {
      */
     list: {
       type: Array,
-      default: function () {
+      default: function() {
         return [
           {
             title: "天安物业",
@@ -90,9 +90,23 @@ export default {
       },
     },
     /**
+     * 数据映射
+     */
+    dataMap: {
+      type: Object,
+      default: function() {
+        return {
+          imgSrc: "imgSrc",
+          title: "memberNm",
+          content: "memberMobile",
+        };
+      },
+    },
+    /**
      * GET URL
      */
     url: {
+      default: "",
       type: String,
     },
     /**
@@ -100,8 +114,9 @@ export default {
      */
     params: {
       type: Object,
-      default: function () {
-        return {};
+      default: function() {
+        return {
+        };
       },
     },
     /**
@@ -110,12 +125,43 @@ export default {
      */
     getDataMap: {
       type: Object,
-      default: function () {
+      default: function() {
         return {
           list: "",
           total: "",
         };
       },
+    },
+    /**
+     * 翻页参数
+     */
+    pagination: {
+      type: Object,
+      default: function() {
+        return {
+          pageNo: 1,
+          pageSize: 10,
+        };
+      },
+    },
+    /**
+     * 分页参数映射
+     */
+    paginationMap: {
+      type: Object,
+      default: function() {
+        return {
+          pageNo: 'pageNo',
+          pageSize: 'pageSize'
+        }
+      }
+    },
+    /**
+     * 是否翻页
+     */
+    isPaging: {
+      type: Boolean,
+      default: false,
     },
     /**
      * 开启下拉刷新
@@ -136,7 +182,7 @@ export default {
      */
     options: {
       type: Object,
-      default: function () {
+      default: function() {
         return [
           {
             text: "编辑",
@@ -162,7 +208,7 @@ export default {
      */
     layout: {
       type: Object,
-      default: function () {
+      default: function() {
         return {
           leftIconBtn: false,
           leftImg: true,
@@ -185,7 +231,7 @@ export default {
      */
     imgStyle: {
       type: Object,
-      default: function () {
+      default: function() {
         return {
           width: "63.72px",
           height: "64px",
@@ -209,7 +255,7 @@ export default {
      */
     img: {
       type: Object,
-      default: function () {
+      default: function() {
         return {
           iconname: "",
           color: "",
@@ -219,19 +265,6 @@ export default {
           width: "148rpx",
           height: "68rpx",
           space: "0rpx",
-        };
-      },
-    },
-    /**
-     * 数据映射
-     */
-    dataMap: {
-      type: Object,
-      default: function () {
-        return {
-          imgSrc: "imgSrc",
-          name: "name",
-          text: "text",
         };
       },
     },
@@ -270,7 +303,7 @@ export default {
      */
     contentText: {
       type: Object,
-      default: function () {
+      default: function() {
         return {
           show: false,
           contentdown: "显示更多",
@@ -285,17 +318,34 @@ export default {
       this.cRefresherEnabled = value;
     },
     list: {
-      handler: function (value, oldValue) {
+      handler: function(value, oldValue) {
         this.cList = this.mapData(value);
       },
       deep: true,
     },
-    url: function (value) {
+    url: function(value) {
       this.getData();
     },
     params: {
-      handler: function (value, oldValue) {
+      handler: function(value, oldValue) {
         this.getData();
+      },
+      deep: true,
+    },
+    pagination: {
+      handler(value) {
+        if (Object.keys(value).length === 0) {
+          this.cPagination = false;
+        } else {
+            this.cPagination = Object.assign(this.cPagination, this.pagination);
+          
+        }
+        console.log(
+          `table watch pagination: `,
+          this.cPagination,
+          this.pagination
+        );
+        // this.getData();
       },
       deep: true,
     },
@@ -327,6 +377,12 @@ export default {
     this.cImgStyle = this.imgStyle;
     this.cStatus = this.status;
     this.cContentText = this.contentText;
+    if (Object.keys(this.pagination).length === 0) {
+      this.cPagination = false;
+    } else {
+      this.cPagination = Object.assign(this.cPagination, this.pagination);
+    }
+    console.log(`table mounted: `, this.cPagination, this.pagination);
     this.getData();
   },
   data() {
@@ -340,7 +396,11 @@ export default {
       cRefresherTriggered: false,
       cRefresherEnabled: true,
       cStatus: "",
-      cContentText: {}
+      cContentText: {},
+      cPagination: {
+        pageNo: 1,
+        pageSize: 10,
+      },
     };
   },
   methods: {
@@ -359,14 +419,27 @@ export default {
       params =
         params || (this.params ? JSON.parse(JSON.stringify(this.params)) : {});
 
+      // 翻页
+      if (typeof this.cPagination !== "boolean" && this.isPaging) {
+        params = Object.assign(params, {
+          [this.paginationMap.pageNo]: this.cPagination.pageNo,
+          [this.paginationMap.pageSize]: this.cPagination.pageSize,
+        });
+      }
       getAction(url, params).then((resp) => {
         console.log(`get table data: `, resp);
-          self.cList = self.mapData(self.getDataList(resp));
-          self.cList.forEach((item, index) => {
-            item.hmNo = index + 1;
-          });
-          self.total = self.getDataTotal(resp);
-          self.afterGetData(self.cList)
+        if(this.isPaging){
+          self.mapData(self.getDataList(resp)).forEach(item => {
+            self.cList.push(item)
+          })
+        }else{
+          self.cList = self.mapData(self.getDataList(resp))
+        }
+        self.cList.forEach((item, index) => {
+          item.hmNo = index + 1;
+        });
+        self.total = self.getDataTotal(resp);
+        self.afterGetData(self.cList)
       });
     },
     /**
@@ -437,7 +510,18 @@ export default {
         self.cStatus = "more";
         self.cContentText.show = true;
       }
+      //console.log("total",self.total);
+      //到底翻页
+      if(this.isPaging){
+        this.pageTurning();
+      }
       this.$emit("scrolltolower");
+    },
+    pageTurning(){
+      if (this.cPagination.pageNo < Math.ceil(this.total / this.cPagination.pageSize)) {
+        this.cPagination.pageNo ?  this.cPagination.pageNo += 1 :"";
+        this.getData()
+      }
     },
     refresherrefresh(e) {
       console.log("下拉触发", e);
@@ -467,7 +551,7 @@ export default {
           item[key] = item[self.dataMap[key]];
         });
       });
-      //console.log("data", data);
+      // console.log("data", data);
       return data;
     },
   },

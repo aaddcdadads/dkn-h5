@@ -32,6 +32,7 @@
   </view>
 </template>
 <script>
+import { getAction } from "/@/request/http";
 export default {
   props: {
     /**
@@ -81,7 +82,36 @@ export default {
     flexWrap: {
       type: Boolean,
       default: true
-    }
+    },
+    /**
+     * GET URL
+     */
+    url: {
+      type: String,
+      default: "",
+    },
+    /**
+     * GET Params
+     */
+    params: {
+      type: Object,
+      default: function () {
+        return {
+        };
+      },
+    },
+    /**
+     * 远程数据映射
+     */
+    getDataMap: {
+      type: Object,
+      default: function () {
+        return {
+          label: "label",
+          value: "value",
+        };
+      },
+    },
   },
   data() {
     return {
@@ -95,6 +125,18 @@ export default {
     }
   },
   watch: {
+    url(value) {
+      this.getData(value);
+    },
+    params: {
+      handler: function (value, oldValue) {
+        if (JSON.stringify(value) == JSON.stringify(oldValue)) {
+          return;
+        }
+        this.getData(null, value);
+      },
+      deep: true,
+    },
     modelValue: {
       handler: function (value, oldValue) {
         this.cArraySelect = value;
@@ -104,22 +146,24 @@ export default {
     },
     list: {
       handler: function (value, oldValue) {
-        this.cList = value;
+        this.cList = this.mapData(value);
         this.getArray(this.cArraySelect, this.cList);
+
       },
       deep: true,
     },
   },
   mounted() {
     this.cArraySelect = this.modelValue;
-    this.cList = this.list;
+    this.cList = this.mapData(this.list);
     this.getArray(this.cArraySelect, this.cList);
+    this.getData();
   },
   methods: {
     // [a,b]
     // [{key:a},{key:b}]
     getArray(select, list) {
-      if (select.constructor === Array && select.length>0) {
+      if (select.constructor === Array && select.length > 0) {
         let flag = select[0].constructor === Object;//判断是否为对象数组
         for (var i = 0; i < list.length; i++) {
           for (var j = 0; j < select.length; j++) {
@@ -135,6 +179,8 @@ export default {
           }
         }
         this.stringSelect = this.getString(list);
+      } else {
+        return
       }
     },
     getString(arr) {
@@ -166,6 +212,42 @@ export default {
       if (this.cList[index].disabled) return;
       item.checked = !item.checked;
       this.$emit("onSelected", item, index);
+    },
+    //将查询接口的数据渲染到list中
+    getData(url, params) {
+      let self = this;
+      url = url || this.url;
+      params = params || (this.params ? JSON.parse(JSON.stringify(this.params)) : {});
+      if (!url) return;
+      getAction(url, params).then((resp) => {
+        //查询数据库的数组
+        let data = [];
+        if (resp.data) {
+          data = resp.data.list;
+        }
+        if (resp.result) {
+          data = resp.result.records || resp.result;
+        }
+        if (resp.list) {
+          data = resp.list;
+        }
+        self.cList = self.mapData(data);
+        this.$emit("optionsChange", self.cList);
+      });
+    },
+    //处理数据
+    mapData(data) {
+      let self = this;
+      if (!this.getDataMap || Object.keys(this.getDataMap).length == 0) {
+        return data;
+      }
+      let keys = Object.keys(this.getDataMap);
+      data.forEach((item) => {
+        keys.forEach((key) => {
+          item[key] = item[self.getDataMap[key]];
+        });
+      });
+      return data;
     },
   }
 }
