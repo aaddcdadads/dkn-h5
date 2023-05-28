@@ -1,53 +1,32 @@
 <template>
   <view class="HmSimpleChatRoom">
-    <view
-      class="tips"
-      :class="{ show: cTips.loading }"
-      @tap="getHistoryMsg(cTips)"
-      >{{ cTips.loadText }}</view
-    >
-    <view class="content" id="list-box">
-      <view
-        class="content_list"
-        v-for="(item, index) in cList"
-        :key="index"
-        :id="'msg-' + item.sendTime"
-      >
-        <view
-          class="content_list_item flex-row"
-          :class="item.type == 1 ? 'push' : 'pull'"
-        >
-          <image
-            :src="item.pic"
-            mode="aspectFill"
-            class="content_list_item__pic"
-          ></image>
-          <view class="content_list_item__content">{{ item.content }}</view>
+    <scroll-view :style="{ height: `${windowHeight - inputHeight}rpx` }" id="scrollview" scroll-y="true"
+      :scroll-top="scrollTop" class="scroll-view">
+      <view class="tips" :class="{ show: cTips.loading }" @tap="getHistoryMsg(cTips)">{{ cTips.loadText }}</view>
+      <view class="content" id="list-box">
+        <view class="content_list" v-for="(item, index) in cList" :key="index" :id="'msg-' + item.sendTime">
+          <view class="content_list_item flex-row" :class="item.type == 2 ? 'push' : 'pull'">
+            <image
+              src="http://shiebi01.oss-cn-shenzhen.aliyuncs.com/upload/20230403/%E5%A4%B4%E5%83%8F-%E7%94%B7%E8%80%81%E5%B8%88_1680508073900.png?Expires=4802572073&OSSAccessKeyId=LTAI5tNvM6MahpXq4UcFt2LB&Signature=ofMIe9thB1BY9fCXVUiCaJkrvkU%3D"
+              mode="aspectFill" class="content_list_item__pic"></image>
+            <view class="content_list_item__content">{{ item.content }}</view>
+          </view>
         </view>
       </view>
-    </view>
-    <view class="sendBox">
-      <view class="send flex-row">
+    </scroll-view>
+    <view class="sendBox" :style="{ height: `${inputHeight}rpx` }">
+      <view id="send" class="send flex-row" :style="{ bottom: `${keyboardHeight}rpx` }">
         <view class="send_box flex-grow">
-          <input
-            type="text"
-            class="send_box_content"
-            v-model="this.cContent"
-            placeholder="请输入聊天内容"
-            placeholder-style="color:#DDD;"
-            :cursor-spacing="6"
-          />
+          <textarea v-model="cContent" maxlength="300" confirm-type="send" @confirm="handleSend" :show-confirm-bar="false"
+            :adjust-position="false" @linechange="sendHeight" @focus="focus" @blur="blur" auto-height></textarea>
         </view>
-        <button class="send_box_send" @tap="send(this.cContent)">发送</button>
+        <button class="send_box_send" @tap="send(cContent)">发送</button>
       </view>
     </view>
   </view>
 </template>
 <script>
-import {
-  getAction,
-  postAction,
-} from "/@/request/http";
+import { getAction, postAction } from "/@/request/http";
 export default {
   name: "HmSimpleChatRoom",
   props: {
@@ -144,6 +123,23 @@ export default {
       },
     },
     /**
+     * 是否轮询
+     */
+    isPolling: {
+      type: Boolean,
+      default: false,
+    },
+
+    /**
+     * 轮询间隔
+     * @module
+     */
+    PollingInterval: {
+      type: Number,
+      default: 1000,
+    },
+
+    /**
      * 获取数据提示
      */
     tips: {
@@ -187,16 +183,52 @@ export default {
     this.cTips = this.tips;
     this.cContent = this.content;
     this.getData();
+    this.polling();
     this.$nextTick(() => {
       this.getHistoryMsg(this.cTips);
     });
+    this.scrollToBottom();
   },
   data() {
     return {
       cTips: {},
       cList: [],
-      cContent:"",
+      cContent: "",
+      timer: null,
+      //键盘高度
+      keyboardHeight: 0,
+      //底部消息发送高度
+      bottomHeight: 0,
+      //滚动距离
+      scrollTop: 0,
     };
+  },
+  updated() {
+    //页面更新时调用聊天消息定位到最底部
+    this.scrollToBottom();
+  },
+  onLoad() {
+    uni.onKeyboardHeightChange(res => {
+      this.keyboardHeight = this.rpxTopx(res.height - 30)
+      if (this.keyboardHeight < 0) this.keyboardHeight = 0;
+    })
+  },
+  onUnload() {
+    uni.offKeyboardHeightChange()
+  },
+  computed: {
+    windowHeight() {
+      return this.rpxTopx(uni.getSystemInfoSync().windowHeight)
+    },
+    // 键盘弹起来的高度+发送框高度
+    inputHeight() {
+        let query = uni.createSelectorQuery().in(this);
+        query.select('#send').boundingClientRect()
+        query.exec(res => {
+          this.bottomHeight = this.rpxTopx(res[0].height)
+        });
+        return this.bottomHeight + this.keyboardHeight;
+    }
   },
   methods: {
     // 获取历史消息
@@ -204,6 +236,15 @@ export default {
       // console.log("获取历史消息");
 
       this.$emit("getHistoryMsg", e);
+    },
+    //轮询刷新数据
+    polling() {
+      if (this.isPolling) {
+        let self = this;
+        this.timer = setInterval(function () {
+          self.getData();
+        }, self.PollingInterval);
+      }
     },
 
     // 发送信息
@@ -287,6 +328,7 @@ export default {
         if(res.success){
           //成功后刷新
           this.getData();
+          this.scrollToBottom();
         }else{
           uni.showToast({
             title: "发送失败",
@@ -295,10 +337,54 @@ export default {
         }
       });
     },
+    focus() { this.scrollToBottom(); },
+    blur() { this.scrollToBottom(); },
+    // px转换成rpx
+    rpxTopx(px) {
+      let deviceWidth = wx.getSystemInfoSync().windowWidth
+      let rpx = (750 / deviceWidth) * Number(px)
+      return Math.floor(rpx)
+    },
+    // 监视聊天发送栏高度
+    sendHeight() {
+      setTimeout(() => {
+        let query = uni.createSelectorQuery().in(this);
+        query.select('#send').boundingClientRect()
+        query.exec(res => {
+          this.bottomHeight = this.rpxTopx(res[0].height)
+        })
+      }, 10)
+    },
+    // 滚动至聊天底部
+    scrollToBottom(e) {
+      setTimeout(() => {
+        let query = uni.createSelectorQuery().in(this);
+        query.select('#scrollview').boundingClientRect();
+        query.select('#list-box').boundingClientRect();
+        query.exec((res) => {
+          if (res[1].height > res[0].height) {
+            this.scrollTop = this.rpxTopx(res[1].height - res[0].height)
+          }
+        })
+      }, 15)
+    },
+  },
+  beforeDestroy() {
+    clearInterval(this.timer);
   },
 };
 </script>
 <style lang="less" scoped>
+view,
+button,
+text,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .HmSimpleChatRoom {
   .flex-row {
     display: flex;
@@ -309,121 +395,116 @@ export default {
     flex-direction: column;
   }
   .flex-grow {
-    width: 0;
     flex-grow: 1;
   }
-  /* 加载数据提示 */
-  .tips {
-    position: fixed;
-    left: 0;
-    top: var(--window-top);
-    width: 100%;
-    z-index: 9;
-    color: #fff;
-    font-size: 24rpx;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.15);
-    height: 72rpx;
-    line-height: 72rpx;
-    transform: translateY(-80rpx);
-    transition: transform 0.3s ease-in-out 0s;
-    &.show {
-      transform: translateY(0);
+  width: 100%;
+  height: 100%;
+  .scroll-view {
+    ::-webkit-scrollbar {
+      display: none;
+      width: 0 !important;
+      height: 0 !important;
+      -webkit-appearance: none;
+      background: transparent;
+      color: transparent;
     }
-  }
-  .content {
-    &_list {
-      padding-bottom: 20rpx;
-      &_item {
-        padding: 20rpx 20rpx 0 20rpx;
-        align-items: flex-start;
-        align-content: flex-start;
-        color: #333;
-        &__pic {
-          width: 92rpx;
-          height: 92rpx;
-          border-radius: 50%;
-          border: #fff solid 1px;
-        }
-        &__content {
-          padding: 20rpx;
-          border-radius: 4px;
-          max-width: 500rpx;
-          word-break: break-all;
-          line-height: 52rpx;
-          position: relative;
-        }
-      }
+    background-color: #F6F6F6;
+    // 待优化，先隐藏
+    .tip{
+      display: none;
     }
-  }
-  .sendBox {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    bottom: 0;
-    height: auto;
-    z-index: 2;
-    border-top: #e5e5e5 solid 1px;
-    box-sizing: content-box;
-    background-color: #f3f3f3;
-    .send {
-      height: 100rpx;
-      padding: 0 20rpx;
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      align-items: center;
-      align-content: center;
-      &_box {
-        &_content {
-          background-color: #fff;
-          height: 64rpx;
-          padding: 0 20rpx;
-          border-radius: 32rpx;
-          font-size: 28rpx;
-        }
-        &_send {
-          background-color: #42b983;
-          color: #fff;
-          height: 64rpx;
-          margin-left: 20rpx;
-          border-radius: 32rpx;
-          padding: 0;
-          width: 120rpx;
-          line-height: 62rpx;
-          &:active {
-            background-color: #5fc496;
+    .content {
+      width:100%;
+      padding-top: 23rpx;
+
+      &_list {
+        &_item {
+          padding: 20rpx 20rpx 0 20rpx;
+          align-items: flex-start;
+          align-content: flex-start;
+          color: #333;
+
+          &__pic {
+            width: 92rpx;
+            height: 92rpx;
+            border-radius: 50%;
+            border: #fff solid 1px;
+          }
+
+          &__content {
+            padding: 20rpx;
+            border-radius: 4px;
+            max-width: 500rpx;
+            word-break: break-all;
+            line-height: 52rpx;
+            position: relative;
           }
         }
       }
     }
   }
-  /* 收到的消息 */
-  .pull {
-    .content_list_item__content {
-      margin-left: 32rpx;
-      background-color: #fff;
-      &::after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 0;
-        border-top: 16rpx solid transparent;
-        border-bottom: 16rpx solid transparent;
-        border-right: 20rpx solid #fff;
-        position: absolute;
-        top: 30rpx;
-        left: -18rpx;
+
+  /* 底部聊天发送栏 */
+  .sendBox {
+    width: 100%;
+    background: #F4F5F7;
+    transition: all 0.1s ease;
+
+    .send {
+      display: flex;
+      align-items: flex-end;
+      padding: 16rpx 30rpx;
+      width: 100%;
+      min-height: 177rpx;
+      position: fixed;
+      bottom: 0;
+      background: #EDEDED;
+      transition: all 0.1s ease;
+
+      &_box {
+        padding-bottom: 70rpx;
+
+        textarea {
+          width: 537rpx;
+          min-height: 75rpx;
+          max-height: 500rpx;
+          background: #FFFFFF;
+          border-radius: 8rpx;
+          font-size: 32rpx;
+          font-family: PingFang SC;
+          color: #333333;
+          line-height: 43rpx;
+          padding: 5rpx 8rpx;
+        }
+      }
+
+      &_box_send {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 70rpx;
+        margin-left: 25rpx;
+        width: 128rpx;
+        height: 75rpx;
+        background: #42b983;
+        border-radius: 8rpx;
+        font-size: 28rpx;
+        font-family: PingFang SC;
+        font-weight: 500;
+        color: #FFFFFF;
+        line-height: 28rpx;
       }
     }
   }
-  /* 发出的消息 */
+
+  //自己发的消息
   .push {
-    /* 主轴为水平方向，起点在右端。使不修改DOM结构，也能改变元素排列顺序 */
     flex-direction: row-reverse;
+
     .content_list_item__content {
       margin-right: 32rpx;
       background-color: #a0e959;
+
       &::after {
         content: "";
         display: block;
@@ -435,6 +516,29 @@ export default {
         position: absolute;
         top: 30rpx;
         right: -18rpx;
+      }
+    }
+  }
+
+  //其他人发的消息
+  .pull {
+    flex-direction: row;
+
+    .content_list_item__content {
+      margin-left: 32rpx;
+      background-color: #fff;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 16rpx solid transparent;
+        border-bottom: 16rpx solid transparent;
+        border-right: 20rpx solid #fff;
+        position: absolute;
+        top: 30rpx;
+        left: -18rpx;
       }
     }
   }
