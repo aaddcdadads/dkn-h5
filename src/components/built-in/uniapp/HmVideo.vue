@@ -4,6 +4,7 @@
       <view>
         <video
           class="alVideo"
+          :id="videoId"
           :src="src"
           :autoplay="autoplay"
           :loop="loop"
@@ -316,6 +317,10 @@ export default {
   },
   data() {
     return {
+      videoId: `video-${new Date().getTime()}-${parseInt(
+        Math.random() * 1000000
+      )}`,
+      videoObj: null,
       cWidth: "",
       cHeight: ""
     };
@@ -339,10 +344,30 @@ export default {
       }
       return `${value}px`;
     },
-    onplay() {
-      this.$emit("play");
-      // console.log(11111);
+
+    /**
+     * 暂停播放
+     */
+    pause() {
+      if (!this.videoObj) return;
+      this.videoObj.pause();
     },
+
+    /**
+     * 停止播放
+     */
+    stop() {
+      if (!this.videoObj) return;
+      this.videoObj.stop();
+    },
+
+    onplay(e) {
+      let self = this;
+      this.$emit("play");
+      console.log('onplay: ', e);
+      this.videoObj = uni.createVideoContext(this.videoId);
+    },
+    
     onpause() {
       this.$emit("pause");
       // console.log(22222);
