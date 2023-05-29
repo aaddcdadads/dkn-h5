@@ -15,10 +15,16 @@ export default {
 		event: 'change'
 	},
 	props: {
+        /**
+         * 预览文件地址
+         */
 		fileUrl: {
 			type: String,
 			default: 'https://block-design.oss-cn-shenzhen.aliyuncs.com/preview-files/block-design-intro.pdf'
 		},
+        /**
+         * 是否显示
+         */
 		value: {
 			type: Boolean
 		}

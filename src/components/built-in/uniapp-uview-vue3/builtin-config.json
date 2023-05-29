@@ -727,8 +727,8 @@
       {
         "name": "HmMumuPeview",
         "title": "文件预览",
-        "importPath": "built-in/uniapp-uview-vue3/HmMumuPeview",
-        "imgUrl": "built-in/uniapp-uview-vue3/img/HmMumuPeview.png",
+        "importPath": "built-in/uniapp-haomo/HmMumuPeview",
+        "imgUrl": "built-in/uniapp-haomo/img/HmMumuPeview.png",
         "type": 0,
         "isBuiltIn": true
       }

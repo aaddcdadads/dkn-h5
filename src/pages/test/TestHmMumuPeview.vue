@@ -3,7 +3,7 @@
     <button @click='showPreview = true'>打开网络文件</button>
   </template>
   <script>
-  import HmMumuPeview from "@/components/built-in/uniapp-uview-vue3/HmMumuPeview.vue";
+  import HmMumuPeview from "@/components/built-in/uniapp-haomo/HmMumuPeview.vue";
   export default {
     components: {
       HmMumuPeview,
