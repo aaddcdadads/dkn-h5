@@ -5,8 +5,8 @@
         v-for="(value, key, index) in cSchema.properties.form.properties" 
         :prop="key"
         :key="index"  
-        :customClass="value['x-decorator-props'].class"
-        :customStyle="value['x-decorator-props'].style"
+        :class="value['x-decorator-props'].class"
+        :style="value['x-decorator-props'].style"
         v-bind="value['x-decorator-props']"
       >
         <HmUviewText
