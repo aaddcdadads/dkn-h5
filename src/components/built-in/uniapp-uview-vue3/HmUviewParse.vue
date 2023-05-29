@@ -178,6 +178,7 @@ export default {
         query.select(parse).boundingClientRect()
         query.exec(res => {
           if (res[0].height > uni.upx2px(self.showHeight)) {
+            // 自定义的,默认init()是无参数的,传参强制改变状态
             self.$refs.uReadMore.init(res[0].height);
           } else {
             self.$refs.uReadMore.init()
