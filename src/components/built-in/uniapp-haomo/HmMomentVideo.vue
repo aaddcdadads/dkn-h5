@@ -4,87 +4,43 @@
       <view class="topTitle_img"><img :src="imgSrc" /></view>
       <view class="topTitle_title flex-col">
         <text class="topTitle_title_name" decode>{{ name }}</text>
-        <text class="topTitle_title_time" decode>{{ time }}</text></view
-      >
+        <text class="topTitle_title_time" decode>{{ time }}</text>
+      </view>
     </view>
     <view class="bottomContent flex-col">
       <view class="bottomContent_talk" title="话题">
-        <text
-          decode
-          class="bottomContent_talk_text"
-          v-for="talk in talks"
-          :key="talk"
-          >#{{ talk }}</text
-        ></view
-      >
+        <text decode class="bottomContent_talk_text" v-for="talk in talks" :key="talk">#{{ talk }}</text>
+      </view>
       <view class="bottomContent_video" title="视频">
-        <video
-          id="myVideo"
-          :src="videoSrc"
-          :initial-time="videoOption.initialTime"
-          :danmu-list="videoOption.danmuList"
-          :poster="videoOption.imgSrc"
-          :controls="videoOption.controls"
-          :danmu-btn="videoOption.danmuBtn"
-          :enable-danmu="videoOption.enableDanmu"
-          :page-gesture="videoOption.pageGesture"
-          :show-fullscreen-btn="videoOption.showFullscreenBtn"
-          :show-play-btn="videoOption.showPlayBtn"
-          :show-center-play-btn="videoOption.showCenterPlayBtn"
-          :enable-progress-gesture="videoOption.enableProgressGesture"
-          :show-mute-btn="videoOption.showMuteBtn"
-          :object-fit="videoOption.objectFit"
-          @error="errorCallback"
-          @play="play"
-          @pause="pause"
-          @ended="end"
-          @fullscreenchange="fullscreenChange"
-        ></video>
+        <video :id="`myVideo${index}`" :src="videoSrc" :initial-time="videoOption.initialTime"
+          :danmu-list="videoOption.danmuList" :poster="videoOption.imgSrc" :controls="videoOption.controls"
+          :danmu-btn="videoOption.danmuBtn" :enable-danmu="videoOption.enableDanmu"
+          :page-gesture="videoOption.pageGesture" :show-fullscreen-btn="videoOption.showFullscreenBtn"
+          :show-play-btn="videoOption.showPlayBtn" :show-center-play-btn="videoOption.showCenterPlayBtn"
+          :enable-progress-gesture="videoOption.enableProgressGesture" :show-mute-btn="videoOption.showMuteBtn"
+          :object-fit="videoOption.objectFit" @error="errorCallback" @play="play($event, index)" @pause="pause"
+          @ended="end" @fullscreenchange="fullscreenChange"></video>
       </view>
       <view class="bottomContent_state flex-row" title="选中状态">
         <text decode class="bottomContent_state_text">是否展示班牌</text>
-        <u-checkbox
-          class="bottomContent_state_checkbox"
-          v-model="state"
-          shape="circle"
-          @change="checkBoxChange"
-        ></u-checkbox>
+        <u-checkbox class="bottomContent_state_checkbox" v-model="state" shape="circle"
+          @change="checkBoxChange"></u-checkbox>
         <view class="bottomContent_state_iconView">
-          <u-icon
-            class="bottomContent_state_iconView_icon"
-            name="more-dot-fill"
-            size="40"
-            color="#9797A8"
-            @click="moreDotClick"
-          ></u-icon>
+          <u-icon class="bottomContent_state_iconView_icon" name="more-dot-fill" size="40" color="#9797A8"
+            @click="moreDotClick"></u-icon>
           <view id="popupShowView" class="popupShowView">
-            <view
-              class="moment_video_content"
-              :class="{
-                moment_video_show: popupShow,
-                moment_video_zIndex:
-                  popupShow && contentStyle.position != 'relative',
-              }"
-              :style="contentStyle"
-            >
+            <view class="moment_video_content" :class="{
+              moment_video_show: popupShow,
+              moment_video_zIndex:
+                popupShow && contentStyle.position != 'relative',
+            }" :style="contentStyle">
               <slot>
-                <view
-                  v-for="btn in popupBtn"
-                  :key="btn"
-                  class="moment_video_content_btn"
-                  @click="btnClick(btn)"
-                  >{{ btn }}</view
-                >
+                <view v-for="btn in popupBtn" :key="btn" class="moment_video_content_btn" @click="btnClick(btn)">{{ btn }}
+                </view>
               </slot>
             </view>
-            <view
-              @touchmove.stop.prevent="stop"
-              class="moment_video_mask"
-              :class="{ moment_video_show: popupShow }"
-              :style="{ backgroundColor: mask.bgColor }"
-              v-if="mask.show"
-              @tap="handleClose(popupShow)"
-            >
+            <view @touchmove.stop.prevent="stop" class="moment_video_mask" :class="{ moment_video_show: popupShow }"
+              :style="{ backgroundColor: mask.bgColor }" v-if="mask.show" @tap="handleClose(popupShow)">
             </view>
           </view>
         </view>
@@ -217,6 +173,7 @@ export default {
       talks: [],
       popupBtn: ["置顶", "删除"],
       popupShow: false,
+      oldPlayIndex: null,
     };
   },
   methods: {
@@ -261,16 +218,21 @@ export default {
         t: popup[0].offsetTop,
         l: popup[0].offsetLeft,
       };
-      let X=0,Y;
+      let X = 0, Y;
       if (popup_obj.h + popup_obj.t >= window.innerHeight) {
         Y = (popup_obj.h + (icon_obj.h * 1.2)) * -1 + "px";
       } else {
         Y = icon_obj.h * 0.2 + "px";
       }
-      this.contentStyle.transform = "translate("+ X +"," + Y + ")";
+      this.contentStyle.transform = "translate(" + X + "," + Y + ")";
     },
-    play(e) {
-      this.$emit("play", e);
+    play(e, index) {
+      if (this.oldPlayIndex !== "") {
+        let videoContext = uni.createVideoContext(`myVideo${this.oldPlayIndex}`, this);
+        videoContext.pause();
+      }
+      this.oldPlayIndex = index;
+      this.$emit("play", e, index);
     },
     pause(e) {
       this.$emit("pause", e);
@@ -291,16 +253,19 @@ export default {
 .HmMomentVideo {
   width: 100%;
   background: #fff;
+
   text,
   view {
     font-family: PingFangSC-Medium;
     text-align: left;
     letter-spacing: 0;
   }
+
   .flex-col {
     display: flex;
     flex-direction: column;
   }
+
   .flex-row {
     display: flex;
     flex-direction: row;
@@ -310,15 +275,18 @@ export default {
     width: 100%;
     padding: 32rpx 28rpx 28rpx 22rpx;
     border-bottom: 2rpx solid #f2f5f7;
+
     &_img {
       display: flex;
       align-items: center;
       margin: 0rpx 22rpx;
-      > img {
+
+      >img {
         width: 76rpx;
         height: 76rpx;
       }
     }
+
     &_title {
       &_name {
         line-height: 44rpx;
@@ -326,6 +294,7 @@ export default {
         color: #212121;
         font-weight: 500;
       }
+
       &_time {
         margin-top: 8rpx;
         font-size: 24rpx;
@@ -334,16 +303,19 @@ export default {
       }
     }
   }
+
   .bottomContent {
     width: calc(100% - 172rpx);
     margin-left: 144rpx;
     margin-right: 28rpx;
     overflow: hidden;
+
     &_talk {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
       margin: 32rpx 0rpx 20rpx;
+
       &_text {
         font-size: 28rpx;
         color: #464957;
@@ -352,56 +324,66 @@ export default {
         margin-right: 12rpx;
       }
     }
+
     &_video {
       #myVideo {
         width: 256rpx;
         height: 256rpx;
       }
     }
+
     &_state {
       width: 100%;
       margin: 48rpx 0rpx 88rpx;
       display: flex;
       align-items: center;
       position: relative;
+
       &_text {
         font-size: 14px;
         color: #464957;
         font-weight: 400;
       }
+
       &_checkbox {
         margin: 0rpx 8rpx;
       }
+
       &_iconView {
         margin-left: auto;
         margin-right: 0rpx;
         position: relative;
-        &_icon {
-        }
+
+        &_icon {}
       }
     }
   }
+
   // 弹出层
   .popupShowView {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+
     .moment_video {
       &_content {
         z-index: 1;
         transition: all 0.3s ease-in-out;
         opacity: 0;
         visibility: hidden;
+
         &_btn {
           background: #fff;
           text-align: center;
           padding: 12rpx 20rpx;
           margin-bottom: 2rpx;
         }
+
         &_btn:last-child {
           margin-bottom: 0rpx;
         }
       }
+
       &_triangle {
         position: absolute;
         width: 0;
@@ -409,6 +391,7 @@ export default {
         border-style: solid;
         z-index: 997;
       }
+
       &_mask {
         position: fixed;
         top: 0;
@@ -420,10 +403,12 @@ export default {
         opacity: 0;
         visibility: hidden;
       }
+
       &_show {
         opacity: 1;
         visibility: visible;
       }
+
       &_zIndex {
         z-index: 996;
       }
