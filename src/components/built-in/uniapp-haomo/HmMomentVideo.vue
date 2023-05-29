@@ -228,7 +228,7 @@ export default {
     },
     play(e, index) {
       if (this.oldPlayIndex !== "") {
-        let videoContext = uni.createVideoContext(`myVideo${this.playIdx}`, this);
+        let videoContext = uni.createVideoContext(`myVideo${this.oldPlayIndex}`, this);
         videoContext.pause();
       }
       this.oldPlayIndex = index;
