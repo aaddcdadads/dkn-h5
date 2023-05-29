@@ -227,7 +227,7 @@ export default {
       this.contentStyle.transform = "translate(" + X + "," + Y + ")";
     },
     play(e, index) {
-      if (this.oldPlayIndex !== "") {
+      if (this.oldPlayIndex !== "" && index != this.oldPlayIndex) {
         let videoContext = uni.createVideoContext(`myVideo${this.oldPlayIndex}`, this);
         videoContext.pause();
       }
