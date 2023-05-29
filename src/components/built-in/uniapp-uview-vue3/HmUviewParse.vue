@@ -172,13 +172,18 @@ export default {
   methods: {
     parseLoaded() {
       let self = this;
-      uni.createSelectorQuery().select('#' + this.elId).boundingClientRect((res) => {
-        if(res.height > uni.upx2px(self.showHeight)){
-          self.$refs.uReadMore.init(res.height);
-        }else{
-          self.$refs.uReadMore.init()
-        }
-      }).exec();
+      setTimeout(() => {
+        let parse = '#' + self.elId;
+        let query = uni.createSelectorQuery().in(this);
+        query.select(parse).boundingClientRect()
+        query.exec(res => {
+          if (res[0].height > uni.upx2px(self.showHeight)) {
+            self.$refs.uReadMore.init(res[0].height);
+          } else {
+            self.$refs.uReadMore.init()
+          }
+        });
+      }, 30);
     },
     open(e) {
       this.$emit("open", e);
