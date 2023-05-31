@@ -6,19 +6,30 @@
         <view class="upload-box" :style="uploadBoxStyle">
           <image class="preview-file" mode="aspectFill" :src="img" :data-src="img" @click="previewImage($event, img)">
           </image>
-          <u-icon class="remove-icon" name="close" @click="delectImage(imgIndex)"></u-icon>
+          <u-icon class="remove-icon" size="40" color="#ff5420" name="close-circle-fill"
+            @click="delectImage(imgIndex)"></u-icon>
         </view>
       </view>
       <!--视频-->
       <view class="uploadBox_contain_videoList upload-contain" v-for="(avi, aviIndex) in cVideoList" :key="aviIndex">
         <view class="upload-box" :style="uploadBoxStyle">
-          <video class="preview-file" :src="avi"></video>
-          <u-icon class="remove-icon" name="close" @click="delectVideo(aviIndex)"></u-icon>
+          <video class="preview-file" :id="`myVideo${aviIndex}`" 
+          :data-src="`myVideo${aviIndex}`" 
+          :src="avi" loop muted
+            controls
+            :show-progress="false" 
+            play-btn-position="center"
+            :show-fullscreen-btn="true"
+            @error="errorCallback" @play="play($event, aviIndex)" @pause="pause"
+            @ended="end" @fullscreenchange="fullscreenChange"></video>
+          <u-icon class="remove-icon" size="40" color="#ff5420" name="close-circle-fill"
+            @click="delectVideo(aviIndex)"></u-icon>
         </view>
       </view>
       <!-- 上传plus -->
-      <view class="upload-contain" v-if="VideoOfImagesShow" @click="chooseVideoImage">
-        <view class="uploadBox_contain_uploadBtn flex-col center-center upload-box" :style="uploadBoxStyle">
+      <view class="upload-contain" v-if="VideoOfImagesShow">
+        <view class="uploadBox_contain_uploadBtn flex-col center-center upload-box" :style="uploadBoxStyle"
+          @click="chooseVideoImage">
           <u-icon class="uploadBox_contain_uploadIcon flex-row center-center" size="32" name="plus"></u-icon>
           <view class="uploadBox_contain_uploadBtn_text">选择{{ typeObject[type] }}</view>
         </view>
@@ -49,7 +60,7 @@ export default {
      */
     accept: {
       type: String,
-      default: "image"
+      default: "all"
     },
     /**
      * 服务器地址
@@ -129,6 +140,8 @@ export default {
       cameraIndex: 0, //上传视频时的数量
       //上传图片和视频
       uploadFiles: [],
+
+      oldPlayIndex: null
     }
   },
   mounted() {
@@ -332,7 +345,32 @@ export default {
           }
         }
       });
-    }
+    },
+
+    // 视频相关事件
+    errorCallback() {
+      this.$emit("errorCallback", e);
+    },
+    play(e, index) {
+      let video = uni.createVideoContext(`myVideo${index}`, this);
+      video.requestFullScreen();
+      this.oldPlayIndex = index;
+      this.$emit("play", e, index);
+    },
+    pause(e) {
+      this.$emit("pause", e);
+    },
+    end(e) {
+      this.$emit("end", e);
+    },
+    fullscreenChange(e) {
+      let video = uni.createVideoContext(e.target.id, this);
+      if (e.detail.fullScreen) {
+      } else {
+        video.pause();
+      }
+      this.$emit("fullscreenChange", e);
+    },
   }
 }
 </script>
@@ -377,12 +415,18 @@ export default {
       color: #000000d9;
       font-size: 28rpx;
       position: relative;
-      border: 1px solid #e0e0e0;
+      border: 2rpx solid #e0e0e0;
       overflow: hidden;
 
       .preview-file {
         width: 100%;
         height: 100%;
+      }
+
+      .remove-icon {
+        position: absolute;
+        top: 12rpx;
+        right: 12rpx;
       }
     }
 
