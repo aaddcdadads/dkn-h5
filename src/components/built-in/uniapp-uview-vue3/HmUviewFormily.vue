@@ -66,13 +66,13 @@
           @onRemove="value['x-component-events'].onRemove"
           @onChange="value['x-component-events'].onChange"
         ></Upload>
-        <uni-upload 
+        <hm-uni-upload 
           v-if="value['x-component'] == 'UniUpload' || value['x-component'] == 'UploadVideoImage'" 
           v-model="form[key]" 
           :class="value['x-component-props'].class"
           :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"
-        ></uni-upload >
+        ></hm-uni-upload >
         <u-switch 
           v-if="value['x-component'] == 'Switch'" 
           v-model="form[key]" 
@@ -123,7 +123,7 @@ import FormItem from '@/uni_modules/vk-uview-ui/components/u-form-item/u-form-it
 import Select from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilySelect.vue";
 import Picker from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyPicker.vue";
 import Upload from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyUpload.vue";
-import UniUpload from "@/components/built-in/uniapp-haomo/HmUniUpload.vue";
+import HmUniUpload from "@/components/built-in/uniapp-haomo/HmUniUpload.vue";
 import Radio from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyRadio.vue";
 import Checkbox from "@/components/built-in/uniapp-uview-vue3/HmUviewFormilyCheckbox.vue";
 import HmUviewText from "@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
@@ -143,7 +143,7 @@ export default {
     Select,
     Picker,
     Upload,
-    UniUpload,
+    HmUniUpload,
     HmUviewText,
     HmUviewImage,
     Radio,
