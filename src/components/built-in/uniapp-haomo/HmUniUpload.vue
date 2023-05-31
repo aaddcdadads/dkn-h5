@@ -27,12 +27,20 @@
   </view>
 </template>
 <script>
-import jp from "jsonpath";
 var sourceType = [['camera'], ['album'], ['camera', 'album']];
 export default {
   props: {
     modelValue: {
       type: String,
+    },
+    /**
+     * 文件列表
+     */
+    fileList: {
+      type: Array,
+      default: function () {
+        return []
+      }
     },
     /**
      * 上传文件类型
@@ -41,7 +49,7 @@ export default {
      */
     accept: {
       type: String,
-      default: "all"
+      default: "image"
     },
     /**
      * 服务器地址
@@ -59,14 +67,18 @@ export default {
         return {};
       }
     },
-    // 额外携带的参数
+    /**
+     * 额外携带的参数
+     */
     formData: {
       type: Object,
       default() {
         return {};
       }
     },
-    // 上传的文件字段名
+    /**
+     * 上传的文件字段名
+     */
     name: {
       type: String,
       default: 'file'
@@ -91,9 +103,6 @@ export default {
         }
       }
     }
-  },
-  mounted() {
-    this.type = this.accept;
   },
   onUnload() {
     this.imageList = [];
@@ -122,7 +131,17 @@ export default {
       uploadFiles: [],
     }
   },
+  mounted() {
+    this.type = this.accept;
+    this.setArray(this.fileList);
+  },
   watch: {
+    fileList: {
+      handler: function (value, oldValue) {
+        this.setArray(value);
+      },
+      deep: true,
+    },
     modelValue(value) {
       this.getFileList()
     },
@@ -134,32 +153,20 @@ export default {
     getFileList() {
       if (!this.modelValue)
         return
-      let arr = this.modelValue.split(",").map(item => {
-        return {
-          url: item
-        }
-      });
+      let arr = this.modelValue.split(",");
+      this.setArray(arr);
+    },
+    updateModelValue(lists) {
+      let modelValue = "";
+      modelValue = lists.join(",")
+      this.$emit("update:modelValue", modelValue);
+    },
+    setArray(arr) {
       if (this.accept == 'image') {
         this.cImageList = arr;
       } else if (this.accept == 'video') {
         this.cVideoList = arr;
       }
-    },
-    updateModelValue(lists) {
-      let modelValue = "";
-      modelValue = lists?.map(item => {
-        if (item.response) {
-          let url = jp.query(
-            item.response,
-            this.urlPath.indexOf('$') === 0 ? this.urlPath : `$.${this.urlPath}`
-          )[0]
-          item.url = url
-          return url;
-        } else {
-          return item.url;
-        }
-      }).join(",")
-      this.$emit("update:modelValue", modelValue);
     },
     // 选择图片/视频
     chooseVideoImage(e) {
@@ -171,14 +178,8 @@ export default {
           icon: 'none'
         })
         return;
-      } else if (self.cImageList.length == 0 && self.cVideoList.length == 0) {
-        self.type = 'all';
-      } else if (self.cImageList.length > 0) {
-        self.type = 0;
-      } else if (self.cVideoList.length > 0) {
-        self.type = 1;
       }
-      if ('all' == self.accept && self.type == 'all') {
+      if ('all' == self.accept) {
         uni.showActionSheet({
           title: '选择上传类型',
           itemList: ['图片', '视频'],
@@ -207,7 +208,7 @@ export default {
         success: res => {
           let imgFile = res.tempFilePaths;
           imgFile.forEach(item => {
-            this.upload(item, this.type);
+            this.upload(item, 0);
           })
         }
       })
@@ -223,7 +224,7 @@ export default {
           uni.showLoading({
             title: '上传中...'
           });
-          this.upload(res.tempFilePath, this.type)
+          this.upload(res.tempFilePath, 1)
         },
         fail: (error) => {
           uni.hideLoading();
@@ -262,8 +263,10 @@ export default {
             // 0-图片 1-视频
             if (type == 0) {
               self.cImageList = self.cImageList.concat(res.result);
+              self.updateModelValue(self.cImageList)
             } else if (type == 1) {
               self.cVideoList = self.cVideoList.concat(res.result);
+              self.updateModelValue(self.cVideoList)
             }
             // 数据大于最大上传数量隐藏上传按钮
             if (self.cVideoList.length >= parseInt(self.maxCount) || self.cImageList.length >= parseInt(self.maxCount)) {
@@ -391,6 +394,7 @@ export default {
         }
       }
     }
+
     &_uploadBtn {
       &_text {
         color: inherit;
