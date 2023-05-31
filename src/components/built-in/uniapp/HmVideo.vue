@@ -326,6 +326,7 @@ export default {
     };
   },
   mounted() {
+    let self = this;
     this.cWidth = this.width;
     this.cHeight = this.height;
   },
@@ -343,6 +344,14 @@ export default {
         return value;
       }
       return `${value}px`;
+    },
+
+    /**
+     * 开始播放
+     */
+    play() {
+      if (!this.videoObj) return;
+      this.videoObj.play();
     },
 
     /**
@@ -366,6 +375,7 @@ export default {
       this.$emit("play");
       console.log('onplay: ', e);
       this.videoObj = uni.createVideoContext(this.videoId);
+      console.log('onplay: ', this.videoObj);
     },
     
     onpause() {
