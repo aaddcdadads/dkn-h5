@@ -8,7 +8,7 @@
 
 <script>
 import { h, defineAsyncComponent, toRefs } from 'vue';
-const modules = import.meta.glob('/src/pages/**/page.vue') || {};
+const modules = import.meta.glob('/src/pages/**/page.vue');
 
 /**
  * 背景卡片
