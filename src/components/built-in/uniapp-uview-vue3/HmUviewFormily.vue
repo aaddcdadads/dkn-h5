@@ -66,13 +66,13 @@
           @onRemove="value['x-component-events'].onRemove"
           @onChange="value['x-component-events'].onChange"
         ></Upload>
-        <hm-uni-upload 
-          v-if="value['x-component'] == 'UniUpload' || value['x-component'] == 'UploadVideoImage'" 
+        <HmUniUpload 
+          v-if="value['x-component'] == 'UniUpload'" 
           v-model="form[key]" 
           :class="value['x-component-props'].class"
           :style="value['x-component-props'].style"
           v-bind="value['x-component-props']"
-        ></hm-uni-upload >
+        ></HmUniUpload>
         <u-switch 
           v-if="value['x-component'] == 'Switch'" 
           v-model="form[key]" 
