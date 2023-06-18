@@ -24,7 +24,7 @@ import {
 import moment from 'moment';
 export default {
   components: {},
-  name: "HmUviewFormilySelect",
+  name: "HmUviewFormilyPicker",
   props: {
     modelValue: {
       type: String,

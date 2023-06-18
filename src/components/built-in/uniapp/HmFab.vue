@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-    name: "HmUviewFab",
+    name: "HmFab",
     props: {
         /**
          * 样式配置

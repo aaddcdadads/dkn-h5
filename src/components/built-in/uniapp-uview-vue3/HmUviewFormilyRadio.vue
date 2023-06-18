@@ -30,7 +30,7 @@ import {
 } from "/@/request/http";
 export default {
   components: {},
-  name: "HmUviewRadio",
+  name: "HmUviewFormilyRadio",
   props: {
     /**
      * 值
