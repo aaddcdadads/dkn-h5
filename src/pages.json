@@ -40,6 +40,12 @@
       }
     },
     {
+      "path": "components/built-in/uniapp-uview-vue3/HmUviewButton",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
       "path": "components/built-in/uniapp-haomo/HmIndexList",
       "style": {
         "navigationBarTitleText": "uni-app"
