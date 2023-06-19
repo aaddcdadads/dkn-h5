@@ -24,3 +24,4 @@ yarn-error.log*
 *.sw*
 
 __snapshots__
+docs/vitepress/.vitepress/cache
