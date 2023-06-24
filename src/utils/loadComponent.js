@@ -1,5 +1,5 @@
 import { defineAsyncComponent } from "vue";
-const modules = import.meta.glob("../components/**/**.vue");
+export const modules = import.meta.glob("../components/**/**.vue");
 
 import { toCamelCase, upperFirst } from './util';
 
