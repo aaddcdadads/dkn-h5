@@ -215,7 +215,7 @@ export default {
     //选择图片
     chooseImages() {
       uni.chooseImage({
-        count: 9, //默认是9张
+        count: this.maxCount || 9, //默认是9张
         sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
         sourceType: ['album', 'camera'], //从相册选择
         success: res => {
@@ -320,8 +320,9 @@ export default {
         success: res => {
           if (res.confirm) {
             this.cImageList.splice(index, 1);
+            this.updateModelValue(this.cImageList)
           }
-          if (this.cImageList.length == 4) {
+          if (this.cImageList.length >= this.maxCount) {
             this.VideoOfImagesShow = false;
           } else {
             this.VideoOfImagesShow = true;
@@ -337,8 +338,9 @@ export default {
         success: res => {
           if (res.confirm) {
             this.cVideoList.splice(index, 1);
+            this.updateModelValue(this.cVideoList)
           }
-          if (this.cVideoList.length == 4) {
+          if (this.cVideoList.length >= this.maxCount) {
             this.VideoOfImagesShow = false;
           } else {
             this.VideoOfImagesShow = true;
@@ -411,6 +413,7 @@ export default {
     .upload-box {
       width: 100%;
       height: 100%;
+      text-align: center;
       background: #fafafa;
       color: #000000d9;
       font-size: 28rpx;
