@@ -25,3 +25,6 @@ yarn-error.log*
 
 __snapshots__
 docs/vitepress/.vitepress/cache
+
+docker/id_rsa*
+docker/zshrc
