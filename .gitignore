@@ -28,3 +28,5 @@ docs/vitepress/.vitepress/cache
 
 docker/id_rsa*
 docker/zshrc
+
+*.tar.gz
