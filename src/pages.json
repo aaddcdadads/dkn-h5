@@ -1208,6 +1208,12 @@
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
       }
+    },{
+      "path": "pages/1599675588405104642/page",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
     }
   ],
   "globalStyle": {
