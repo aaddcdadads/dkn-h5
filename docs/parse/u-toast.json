@@ -1,0 +1,56 @@
+{
+  "displayName": "u-toast",
+  "description": "toast 消息提示",
+  "tags": {
+    "description": [
+      {
+        "description": "此组件表现形式类似uni的uni.showToastAPI，但也有不同的地方。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/toast.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "z-index",
+        "description": "toast展示时的z-index值"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} show 显示toast，如需一进入页面就显示toast，请在onReady生命周期调用",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-toast ref=\"uToast\" />"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "zIndex",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-toast/u-toast.vue"
+  ]
+}

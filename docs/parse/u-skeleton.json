@@ -1,0 +1,122 @@
+{
+  "displayName": "u-skeleton",
+  "description": "skeleton 骨架屏",
+  "tags": {
+    "description": [
+      {
+        "description": "骨架屏一般用于页面在请求远程数据尚未完成时，页面用灰色块预显示本来的页面结构，给用户更好的体验。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/skeleton.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "el-color",
+        "description": "骨架块状元素的背景颜色（默认#e5e5e5）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "bg-color",
+        "description": "骨架组件背景颜色（默认#ffffff）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "animation",
+        "description": "骨架块是否显示动画效果（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "border-radius",
+        "description": "u-skeleton-fillet类名元素，对应的骨架块的圆角大小，单位rpx（默认10）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "loading",
+        "description": "是否显示骨架组件，请求完成后，将此值设置为false（默认true）"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-skeleton :loading=\"true\" :animation=\"true\"></u-skeleton>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "elColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#e5e5e5'"
+      }
+    },
+    {
+      "name": "bgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#ffffff'"
+      }
+    },
+    {
+      "name": "animation",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "borderRadius",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"10\""
+      }
+    },
+    {
+      "name": "loading",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-skeleton/u-skeleton.vue"
+  ]
+}

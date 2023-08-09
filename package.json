@@ -29,7 +29,9 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
-    "pub": "npm run build && npm publish"
+    "pub": "npm run build && npm publish",
+    "parse": "node scripts/parse.mjs",
+    "parse-all": "bash scripts/parse.sh"
   },
   "main": "src/components/index.js",
   "dependencies": {
@@ -70,12 +72,13 @@
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3040420220402002",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3040420220402002",
     "@playwright/test": "^1.36.2",
-    "glob": "^10.3.3",
     "autoprefixer": "^10.4.2",
+    "glob": "^10.3.3",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "sass": "^1.47.0",
     "typescript": "^4.1.5",
-    "vite": "2.7.10"
+    "vite": "2.7.10",
+    "vue-docgen-api": "^4.74.0"
   }
 }

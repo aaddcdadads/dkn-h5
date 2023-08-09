@@ -1,0 +1,228 @@
+{
+  "displayName": "u-divider",
+  "description": "divider 分割线",
+  "tags": {
+    "description": [
+      {
+        "description": "区隔内容的分割线，一般用于页面底部\"没有更多\"的提示。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/divider.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "half-width",
+        "description": "文字左或右边线条宽度，数值或百分比，数值时单位为rpx"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "border-color",
+        "description": "线条颜色，优先级高于type（默认#dcdfe6）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "color",
+        "description": "文字颜色（默认#909399）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "fontSize",
+        "description": "字体大小，单位rpx（默认26）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "bg-color",
+        "description": "整个divider的背景颜色（默认呢#ffffff）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "height",
+        "description": "整个divider的高度，单位rpx（默认40）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "type",
+        "description": "将线条设置主题色（默认primary）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "useSlot",
+        "description": "是否使用slot传入内容，如果不传入，中间不会有空隙（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "margin-top",
+        "description": "与前一个组件的距离，单位rpx（默认0）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "margin-bottom",
+        "description": "与后一个组件的距离，单位rpx（0）"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} click divider组件被点击时触发",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-divider color=\"#fa3534\">长河落日圆</u-divider>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "halfWidth",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "150"
+      }
+    },
+    {
+      "name": "borderColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#dcdfe6'"
+      }
+    },
+    {
+      "name": "type",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'primary'"
+      }
+    },
+    {
+      "name": "color",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#909399'"
+      }
+    },
+    {
+      "name": "fontSize",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "26"
+      }
+    },
+    {
+      "name": "bgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#ffffff'"
+      }
+    },
+    {
+      "name": "height",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'auto'"
+      }
+    },
+    {
+      "name": "marginTop",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "marginBottom",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "useSlot",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "click"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-divider/u-divider.vue"
+  ]
+}

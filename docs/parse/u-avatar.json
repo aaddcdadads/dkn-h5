@@ -1,0 +1,279 @@
+{
+  "displayName": "u-avatar",
+  "description": "avatar 头像",
+  "tags": {
+    "description": [
+      {
+        "description": "本组件一般用于展示头像的地方，如个人中心，或者评论列表页的用户头像展示等场所。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/avatar.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "bg-color",
+        "description": "背景颜色，一般显示文字时用（默认#ffffff）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "src",
+        "description": "头像路径，如加载失败，将会显示默认头像"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "size",
+        "description": "头像尺寸，可以为指定字符串(large, default, mini)，或者数值，单位rpx（默认default）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "mode",
+        "description": "显示类型，见上方说明（默认circle）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "sex-icon",
+        "description": "性别图标，man-男，woman-女（默认man）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "level-icon",
+        "description": "等级图标（默认level）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "sex-bg-color",
+        "description": "性别图标背景颜色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "level-bg-color",
+        "description": "等级图标背景颜色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "show-sex",
+        "description": "是否显示性别图标（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "show-level",
+        "description": "是否显示等级图标（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "img-mode",
+        "description": "头像图片的裁剪类型，与uni的image组件的mode参数一致，如效果达不到需求，可尝试传widthFix值（默认aspectFill）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "index",
+        "description": "用户传递的标识符值，如果是列表循环，可穿v-for的index值"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} click 头像被点击",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-avatar :src=\"src\"></u-avatar>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "bgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'transparent'"
+      }
+    },
+    {
+      "name": "src",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "size",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'default'"
+      }
+    },
+    {
+      "name": "mode",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'circle'"
+      }
+    },
+    {
+      "name": "text",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "imgMode",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'aspectFill'"
+      }
+    },
+    {
+      "name": "index",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "sexIcon",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'man'"
+      }
+    },
+    {
+      "name": "levelIcon",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'level'"
+      }
+    },
+    {
+      "name": "levelBgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "sexBgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "showSex",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "showLevel",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "click",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-avatar/u-avatar.vue"
+  ]
+}

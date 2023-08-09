@@ -1,0 +1,323 @@
+{
+  "description": "select 列选择器",
+  "tags": {
+    "description": [
+      {
+        "description": "此选择器用于单列，多列，多列联动的选择场景。(从1.3.0版本起，不建议使用Picker组件的单列和多列模式，Select组件是专门为列选择而构造的组件，更简单易用。)",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "http://uviewui.com/components/select.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "mode",
+        "description": "模式选择，\"single-column\"-单列模式，\"mutil-column\"-多列模式，\"mutil-column-auto\"-多列联动模式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Array"
+        },
+        "name": "list",
+        "description": "列数据，数组形式，见官网说明"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "v-model",
+        "description": "布尔值变量，用于控制选择器的弹出与收起"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "safe-area-inset-bottom",
+        "description": "是否开启底部安全区适配(默认false)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "cancel-color",
+        "description": "取消按钮的颜色（默认#606266）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "confirm-color",
+        "description": "确认按钮的颜色(默认#2979ff)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "confirm-text",
+        "description": "确认按钮的文字"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "cancel-text",
+        "description": "取消按钮的文字"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "default-value",
+        "description": "提供的默认选中的下标，见官网说明"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "mask-close-able",
+        "description": "是否允许通过点击遮罩关闭Picker(默认true)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "z-index",
+        "description": "弹出时的z-index值(默认10075)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "value-name",
+        "description": "自定义list数据的value属性名 1.3.6"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "label-name",
+        "description": "自定义list数据的label属性名 1.3.6"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "child-name",
+        "description": "自定义list数据的children属性名，只对多列联动模式有效 1.3.7"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} confirm 点击确定按钮，返回当前选择的值",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-select v-model=\"show\" :list=\"list\"></u-select>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "displayName": "u-select",
+  "props": [
+    {
+      "name": "list",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "[]"
+      }
+    },
+    {
+      "name": "border",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "value",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "cancelColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#606266'"
+      }
+    },
+    {
+      "name": "confirmColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#2979ff'"
+      }
+    },
+    {
+      "name": "zIndex",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "safeAreaInsetBottom",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "maskCloseAble",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "defaultValue",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "[0]"
+      }
+    },
+    {
+      "name": "mode",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'single-column'"
+      }
+    },
+    {
+      "name": "valueName",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'value'"
+      }
+    },
+    {
+      "name": "labelName",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'label'"
+      }
+    },
+    {
+      "name": "childName",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'children'"
+      }
+    },
+    {
+      "name": "title",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "cancelText",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'取消'"
+      }
+    },
+    {
+      "name": "confirmText",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'确认'"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "input",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "click"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-select/u-select.vue"
+  ]
+}

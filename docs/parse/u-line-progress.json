@@ -1,0 +1,199 @@
+{
+  "displayName": "u-line-progress",
+  "description": "lineProgress 线型进度条",
+  "tags": {
+    "description": [
+      {
+        "description": "展示操作或任务的当前进度，比如上传文件，是一个线形的进度条。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/lineProgress.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "percent",
+        "description": "进度条百分比值，为数值类型，0-100"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "round",
+        "description": "进度条两端是否为半圆（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "type",
+        "description": "如设置，active-color值将会失效"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "active-color",
+        "description": "进度条激活部分的颜色（默认#19be6b）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "inactive-color",
+        "description": "进度条的底色（默认#ececec）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "show-percent",
+        "description": "是否在进度条内部显示当前的百分比值数值（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "height",
+        "description": "进度条的高度，单位rpx（默认28）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "striped",
+        "description": "是否显示进度条激活部分的条纹（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "striped-active",
+        "description": "条纹是否具有动态效果（默认false）"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-line-progress :percent=\"70\" :show-percent=\"true\"></u-line-progress>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "round",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "type",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "activeColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#19be6b'"
+      }
+    },
+    {
+      "name": "inactiveColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#ececec'"
+      }
+    },
+    {
+      "name": "percent",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "showPercent",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "height",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "28"
+      }
+    },
+    {
+      "name": "striped",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "stripedActive",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-line-progress/u-line-progress.vue"
+  ]
+}

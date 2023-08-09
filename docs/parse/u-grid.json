@@ -1,0 +1,117 @@
+{
+  "displayName": "u-grid",
+  "description": "grid 宫格布局",
+  "tags": {
+    "description": [
+      {
+        "description": "宫格组件一般用于同时展示多个同类项目的场景，可以给宫格的项目设置徽标组件(badge)，或者图标等，也可以扩展为左右滑动的轮播形式。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/grid.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "col",
+        "description": "宫格的列数（默认3）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "border",
+        "description": "是否显示宫格的边框（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "hover-class",
+        "description": "点击宫格的时候，是否显示按下的灰色背景（默认false）"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} click 点击宫格触发",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-grid :col=\"3\" @click=\"click\"></u-grid>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "col",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "3"
+      }
+    },
+    {
+      "name": "border",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "align",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'left'"
+      }
+    },
+    {
+      "name": "hoverClass",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'u-hover-class'"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "click",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-grid/u-grid.vue"
+  ]
+}

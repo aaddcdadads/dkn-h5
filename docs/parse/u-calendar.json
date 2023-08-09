@@ -1,0 +1,507 @@
+{
+  "displayName": "u-calendar",
+  "description": "calendar 日历",
+  "tags": {
+    "description": [
+      {
+        "description": "此组件用于单个选择日期，范围选择日期等，日历被包裹在底部弹起的容器中。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "http://uviewui.com/components/calendar.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "mode",
+        "description": "选择日期的模式，date-为单个日期，range-为选择日期范围"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "v-model",
+        "description": "布尔值变量，用于控制日历的弹出与收起"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "safe-area-inset-bottom",
+        "description": "是否开启底部安全区适配(默认false)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "change-year",
+        "description": "是否显示顶部的切换年份方向的按钮(默认true)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "change-month",
+        "description": "是否显示顶部的切换月份方向的按钮(默认true)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "max-year",
+        "description": "可切换的最大年份(默认2050)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "min-year",
+        "description": "可切换的最小年份(默认1950)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "min-date",
+        "description": "最小可选日期(默认1950-01-01)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "max-date",
+        "description": "最大可选日期(默认当前日期)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "description": "弹窗顶部左右两边的圆角值，单位rpx(默认20)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "mask-close-able",
+        "description": "是否允许通过点击遮罩关闭日历(默认true)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "month-arrow-color",
+        "description": "月份切换按钮箭头颜色(默认#606266)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "year-arrow-color",
+        "description": "年份切换按钮箭头颜色(默认#909399)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "color",
+        "description": "日期字体的默认颜色(默认#303133)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "active-bg-color",
+        "description": "起始/结束日期按钮的背景色(默认#2979ff)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "z-index",
+        "description": "弹出时的z-index值(默认10075)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "active-color",
+        "description": "起始/结束日期按钮的字体颜色(默认#ffffff)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "range-bg-color",
+        "description": "起始/结束日期之间的区域的背景颜色(默认rgba(41,121,255,0.13))"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "range-color",
+        "description": "选择范围内字体颜色(默认#2979ff)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "start-text",
+        "description": "起始日期底部的提示文字(默认 '开始')"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "end-text",
+        "description": "结束日期底部的提示文字(默认 '结束')"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "btn-type",
+        "description": "底部确定按钮的主题(默认 'primary')"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "toolTip",
+        "description": "顶部提示文字，如设置名为tooltip的slot，此参数将失效(默认 '选择日期')"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "closeable",
+        "description": "是否显示右上角的关闭图标(默认true)"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-calendar v-model=\"show\" :mode=\"mode\"></u-calendar>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "safeAreaInsetBottom",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "maskCloseAble",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "value",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "zIndex",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "changeYear",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "changeMonth",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "mode",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'date'"
+      }
+    },
+    {
+      "name": "maxYear",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "2050"
+      }
+    },
+    {
+      "name": "minYear",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "1950"
+      }
+    },
+    {
+      "name": "minDate",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'1950-01-01'"
+      }
+    },
+    {
+      "name": "maxDate",
+      "description": "最大可选日期\n默认最大值为今天，之后的日期不可选\n2030-12-31",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "borderRadius",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "20"
+      }
+    },
+    {
+      "name": "monthArrowColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#606266'"
+      }
+    },
+    {
+      "name": "yearArrowColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#909399'"
+      }
+    },
+    {
+      "name": "color",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#303133'"
+      }
+    },
+    {
+      "name": "activeBgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#2979ff'"
+      }
+    },
+    {
+      "name": "activeColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#ffffff'"
+      }
+    },
+    {
+      "name": "rangeBgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'rgba(41,121,255,0.13)'"
+      }
+    },
+    {
+      "name": "rangeColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#2979ff'"
+      }
+    },
+    {
+      "name": "startText",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'开始'"
+      }
+    },
+    {
+      "name": "endText",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'结束'"
+      }
+    },
+    {
+      "name": "btnType",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'primary'"
+      }
+    },
+    {
+      "name": "isActiveCurrent",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "isChange",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "closeable",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "toolTip",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'选择日期'"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "input",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "tooltip"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-calendar/u-calendar.vue"
+  ]
+}

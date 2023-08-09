@@ -1,0 +1,243 @@
+{
+  "displayName": "u-loadmore",
+  "description": "loadmore 加载更多",
+  "tags": {
+    "description": [
+      {
+        "description": "此组件一般用于标识页面底部加载数据时的状态。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/loadMore.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "status",
+        "description": "组件状态（默认loadmore）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "bg-color",
+        "description": "组件背景颜色，在页面是非白色时会用到（默认#ffffff）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "icon",
+        "description": "加载中时是否显示图标（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "icon-type",
+        "description": "加载中时的图标类型（默认circle）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "icon-color",
+        "description": "icon-type为circle时有效，加载中的动画图标的颜色（默认#b7b7b7）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "is-dot",
+        "description": "status为nomore时，内容显示为一个\"●\"（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "color",
+        "description": "字体颜色（默认#606266）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "margin-top",
+        "description": "到上一个相邻元素的距离"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "margin-bottom",
+        "description": "到下一个相邻元素的距离"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "load-text",
+        "description": "自定义显示的文字，见上方说明示例"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} loadmore status为loadmore时，点击组件会发出此事件",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-loadmore :status=\"status\" icon-type=\"iconType\" load-text=\"loadText\" />"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "bgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'transparent'"
+      }
+    },
+    {
+      "name": "icon",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "fontSize",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'28'"
+      }
+    },
+    {
+      "name": "color",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#606266'"
+      }
+    },
+    {
+      "name": "status",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'loadmore'"
+      }
+    },
+    {
+      "name": "iconType",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'circle'"
+      }
+    },
+    {
+      "name": "loadText",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{\n    loadmore: '加载更多',\n    loading: '正在加载...',\n    nomore: '没有更多了'\n}"
+      }
+    },
+    {
+      "name": "isDot",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "iconColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#b7b7b7'"
+      }
+    },
+    {
+      "name": "marginTop",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "marginBottom",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "height",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'auto'"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "loadmore"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-loadmore/u-loadmore.vue"
+  ]
+}

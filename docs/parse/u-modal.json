@@ -1,0 +1,444 @@
+{
+  "displayName": "u-modal",
+  "description": "modal 模态框",
+  "tags": {
+    "description": [
+      {
+        "description": "弹出模态框，常用于消息提示、消息确认、在当前页面内完成特定的交互操作",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/modal.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "value",
+        "description": "是否显示模态框"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String | Number"
+        },
+        "name": "z-index",
+        "description": "层级"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "title",
+        "description": "模态框标题（默认\"提示\"）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String | Number"
+        },
+        "name": "width",
+        "description": "模态框宽度（默认600）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "content",
+        "description": "模态框内容（默认\"内容\"）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "show-title",
+        "description": "是否显示标题（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "async-close",
+        "description": "是否异步关闭，只对确定按钮有效（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "show-confirm-button",
+        "description": "是否显示确认按钮（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Stringr | Number"
+        },
+        "name": "negative-top",
+        "description": "modal往上偏移的值"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "show-cancel-button",
+        "description": "是否显示取消按钮（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "mask-close-able",
+        "description": "是否允许点击遮罩关闭modal（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "confirm-text",
+        "description": "确认按钮的文字内容（默认\"确认\"）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "cancel-text",
+        "description": "取消按钮的文字内容（默认\"取消\"）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "cancel-color",
+        "description": "取消按钮的颜色（默认\"#606266\"）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "confirm-color",
+        "description": "确认按钮的文字内容（默认\"#2979ff\"）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String | Number"
+        },
+        "name": "border-radius",
+        "description": "模态框圆角值，单位rpx（默认16）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "title-style",
+        "description": "自定义标题样式，对象形式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "content-style",
+        "description": "自定义内容样式，对象形式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "cancel-style",
+        "description": "自定义取消按钮样式，对象形式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "confirm-style",
+        "description": "自定义确认按钮样式，对象形式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "zoom",
+        "description": "是否开启缩放模式（默认true）"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} confirm 确认按钮被点击",
+        "title": "event"
+      },
+      {
+        "description": "{Function} cancel 取消按钮被点击",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-modal :src=\"title\" :content=\"content\"></u-modal>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "value",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "zIndex",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "title",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'提示'"
+      }
+    },
+    {
+      "name": "width",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "600"
+      }
+    },
+    {
+      "name": "content",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'内容'"
+      }
+    },
+    {
+      "name": "showTitle",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "showConfirmButton",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "showCancelButton",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "confirmText",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'确认'"
+      }
+    },
+    {
+      "name": "cancelText",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'取消'"
+      }
+    },
+    {
+      "name": "confirmColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#2979ff'"
+      }
+    },
+    {
+      "name": "cancelColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#606266'"
+      }
+    },
+    {
+      "name": "borderRadius",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "16"
+      }
+    },
+    {
+      "name": "titleStyle",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    },
+    {
+      "name": "contentStyle",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    },
+    {
+      "name": "cancelStyle",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    },
+    {
+      "name": "confirmStyle",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    },
+    {
+      "name": "zoom",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "asyncClose",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "maskCloseAble",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "negativeTop",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "input",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "confirm"
+    },
+    {
+      "name": "cancel"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    },
+    {
+      "name": "confirm-button"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-modal/u-modal.vue"
+  ]
+}
