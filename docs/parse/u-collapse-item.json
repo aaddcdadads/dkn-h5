@@ -1,0 +1,185 @@
+{
+  "displayName": "u-collapse-item",
+  "description": "collapseItem 手风琴Item",
+  "tags": {
+    "description": [
+      {
+        "description": "通过折叠面板收纳内容区域（搭配u-collapse使用）",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/collapse.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "title",
+        "description": "面板标题"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "index",
+        "description": "主要用于事件的回调，标识那个Item被点击"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "disabled",
+        "description": "面板是否可以打开或收起（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "open",
+        "description": "设置某个面板的初始状态是否打开（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "name",
+        "description": "唯一标识符，如不设置，默认用当前collapse-item的索引值"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "align",
+        "description": "标题的对齐方式（默认left）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "active-style",
+        "description": "不显示箭头时，可以添加当前选择的collapse-item活动样式，对象形式"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} change 某个item被打开或者收起时触发",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-collapse-item :title=\"item.head\" v-for=\"(item, index) in itemList\" :key=\"index\">{{item.body}}</u-collapse-item>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "title",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "align",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'left'"
+      }
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "open",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "name",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "activeStyle",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    },
+    {
+      "name": "index",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "title"
+    },
+    {
+      "name": "title-all"
+    },
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-collapse-item/u-collapse-item.vue"
+  ]
+}

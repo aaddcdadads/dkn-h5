@@ -1,0 +1,181 @@
+{
+  "displayName": "u-circle-progress",
+  "description": "circleProgress 环形进度条",
+  "tags": {
+    "description": [
+      {
+        "description": "展示操作或任务的当前进度，比如上传文件，是一个圆形的进度条。注意：此组件的percent值只能动态增加，不能动态减少。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/circleProgress.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "percent",
+        "description": "圆环进度百分比值，为数值类型，0-100"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "inactive-color",
+        "description": "圆环的底色，默认为灰色(该值无法动态变更)（默认#ececec）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "active-color",
+        "description": "圆环激活部分的颜色(该值无法动态变更)（默认#19be6b）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "width",
+        "description": "整个圆环组件的宽度，高度默认等于宽度值，单位rpx（默认200）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "border-width",
+        "description": "圆环的边框宽度，单位rpx（默认14）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "duration",
+        "description": "整个圆环执行一圈的时间，单位ms（默认呢1500）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "type",
+        "description": "如设置，active-color值将会失效"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "bg-color",
+        "description": "整个组件背景颜色，默认为白色"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-circle-progress active-color=\"#2979ff\" :percent=\"80\"></u-circle-progress>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "percent",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "inactiveColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#ececec'"
+      }
+    },
+    {
+      "name": "activeColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#19be6b'"
+      }
+    },
+    {
+      "name": "borderWidth",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "14"
+      }
+    },
+    {
+      "name": "width",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "200"
+      }
+    },
+    {
+      "name": "duration",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "1500"
+      }
+    },
+    {
+      "name": "type",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "bgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#ffffff'"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-circle-progress/u-circle-progress.vue"
+  ]
+}

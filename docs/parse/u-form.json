@@ -1,0 +1,171 @@
+{
+  "displayName": "u-form",
+  "description": "form 表单",
+  "tags": {
+    "description": [
+      {
+        "description": "此组件一般用于表单场景，可以配置Input输入框，Select弹出框，进行表单验证等。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "http://uviewui.com/components/form.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "model",
+        "description": "表单数据对象"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "border-bottom",
+        "description": "是否显示表单域的下划线边框"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "label-position",
+        "description": "表单域提示文字的位置，left-左侧，top-上方"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "label-width",
+        "description": "提示文字的宽度，单位rpx（默认90）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "label-style",
+        "description": "lable的样式，对象形式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "label-align",
+        "description": "lable的对齐方式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "rules",
+        "description": "通过ref设置，见官网说明"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Array"
+        },
+        "name": "error-type",
+        "description": "错误的提示方式，数组形式，见上方说明(默认['message'])"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-form :model=\"form\" ref=\"uForm\"></u-form>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "model",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    },
+    {
+      "name": "errorType",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "['message', 'toast']"
+      }
+    },
+    {
+      "name": "borderBottom",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "labelPosition",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'left'"
+      }
+    },
+    {
+      "name": "labelWidth",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "90"
+      }
+    },
+    {
+      "name": "labelAlign",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'left'"
+      }
+    },
+    {
+      "name": "labelStyle",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-form/u-form.vue"
+  ]
+}

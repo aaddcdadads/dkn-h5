@@ -1,0 +1,111 @@
+{
+  "displayName": "u-waterfall",
+  "description": "waterfall 瀑布流",
+  "tags": {
+    "description": [
+      {
+        "description": "这是一个瀑布流形式的组件，内容分为左右两列，结合uView的懒加载组件效果更佳。相较于某些只是奇偶数左右分别，或者没有利用vue作用域插槽的做法，uView的瀑布流实现了真正的 组件化，搭配LazyLoad 懒加载和loadMore 加载更多组件，让您开箱即用，眼前一亮。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/waterfall.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Array"
+        },
+        "name": "flow-list",
+        "description": "用于渲染的数据"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "add-time",
+        "description": "单条数据添加到队列的时间间隔，单位ms，见上方注意事项说明（默认200）"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-waterfall :flowList=\"flowList\"></u-waterfall>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "value",
+      "type": {
+        "name": "array"
+      },
+      "required": true,
+      "defaultValue": {
+        "func": false,
+        "value": "[]"
+      }
+    },
+    {
+      "name": "addTime",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "200"
+      }
+    },
+    {
+      "name": "idKey",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'id'"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "input",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "left",
+      "scoped": true,
+      "bindings": [
+        {
+          "name": "leftList",
+          "title": "binding"
+        }
+      ]
+    },
+    {
+      "name": "right",
+      "scoped": true,
+      "bindings": [
+        {
+          "name": "rightList",
+          "title": "binding"
+        }
+      ]
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-waterfall/u-waterfall.vue"
+  ]
+}

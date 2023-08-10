@@ -1,0 +1,348 @@
+{
+  "displayName": "u-count-down",
+  "description": "countDown 倒计时",
+  "tags": {
+    "description": [
+      {
+        "description": "该组件一般使用于某个活动的截止时间上，通过数字的变化，给用户明确的时间感受，提示用户进行某一个行为操作。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/countDown.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "timestamp",
+        "description": "倒计时，单位为秒"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "autoplay",
+        "description": "是否自动开始倒计时，如果为false，需手动调用开始方法。见官网说明（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "separator",
+        "description": "分隔符，colon为英文冒号，zh为中文（默认colon）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "separator-size",
+        "description": "分隔符的字体大小，单位rpx（默认30）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "separator-color",
+        "description": "分隔符的颜色（默认#303133）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "font-size",
+        "description": "倒计时字体大小，单位rpx（默认30）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "show-border",
+        "description": "是否显示倒计时数字的边框（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "hide-zero-day",
+        "description": "当\"天\"的部分为0时，隐藏该字段 （默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "border-color",
+        "description": "数字边框的颜色（默认#303133）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "bg-color",
+        "description": "倒计时数字的背景颜色（默认#ffffff）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "color",
+        "description": "倒计时数字的颜色（默认#303133）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "height",
+        "description": "数字高度值(宽度等同此值)，设置边框时看情况是否需要设置此值，单位rpx（默认auto）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "show-days",
+        "description": "是否显示倒计时的\"天\"部分（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "show-hours",
+        "description": "是否显示倒计时的\"时\"部分（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "show-minutes",
+        "description": "是否显示倒计时的\"分\"部分（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "show-seconds",
+        "description": "是否显示倒计时的\"秒\"部分（默认true）"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} end 倒计时结束",
+        "title": "event"
+      },
+      {
+        "description": "{Function} change 每秒触发一次，回调为当前剩余的倒计秒数",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-count-down ref=\"uCountDown\" :timestamp=\"86400\" :autoplay=\"false\"></u-count-down>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "timestamp",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "autoplay",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "separator",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'colon'"
+      }
+    },
+    {
+      "name": "separatorSize",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "30"
+      }
+    },
+    {
+      "name": "separatorColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"#303133\""
+      }
+    },
+    {
+      "name": "color",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#303133'"
+      }
+    },
+    {
+      "name": "fontSize",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "30"
+      }
+    },
+    {
+      "name": "bgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#fff'"
+      }
+    },
+    {
+      "name": "height",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'auto'"
+      }
+    },
+    {
+      "name": "showBorder",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "borderColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#303133'"
+      }
+    },
+    {
+      "name": "showSeconds",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "showMinutes",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "showHours",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "showDays",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "hideZeroDay",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "end",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-count-down/u-count-down.vue"
+  ]
+}

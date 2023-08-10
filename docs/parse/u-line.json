@@ -1,0 +1,140 @@
+{
+  "displayName": "u-line",
+  "description": "line 线条",
+  "tags": {
+    "description": [
+      {
+        "description": "此组件一般用于显示一根线条，用于分隔内容块，有横向和竖向两种模式，且能设置0.5px线条，使用也很简单",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/line.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "color",
+        "description": "线条的颜色(默认#e4e7ed)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "length",
+        "description": "长度，竖向时表现为高度，横向时表现为长度，可以为百分比，带rpx单位的值等"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "direction",
+        "description": "线条的方向，row-横向，col-竖向(默认row)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "border-style",
+        "description": "线条的类型，solid-实线，dashed-方形虚线，dotted-圆点虚线(默认solid)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "hair-line",
+        "description": "是否显示细线条(默认true)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "margin",
+        "description": "线条与上下左右元素的间距，字符串形式，如\"30rpx\""
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-line color=\"red\"></u-line>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "color",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#e4e7ed'"
+      }
+    },
+    {
+      "name": "length",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'100%'"
+      }
+    },
+    {
+      "name": "direction",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'row'"
+      }
+    },
+    {
+      "name": "hairLine",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "margin",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'0'"
+      }
+    },
+    {
+      "name": "borderStyle",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'solid'"
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-line/u-line.vue"
+  ]
+}

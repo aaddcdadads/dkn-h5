@@ -1,0 +1,348 @@
+{
+  "displayName": "u-swiper",
+  "description": "swiper 轮播图",
+  "tags": {
+    "description": [
+      {
+        "description": "该组件一般用于导航轮播，广告展示等场景,可开箱即用",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/swiper.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Array"
+        },
+        "name": "list",
+        "description": "轮播图数据，见官网\"基本使用\"说明"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "title",
+        "description": "是否显示标题文字，需要配合list参数，见官网说明（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "mode",
+        "description": "指示器模式，见官网说明（默认round）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "height",
+        "description": "轮播图组件高度，单位rpx（默认250）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "indicator-pos",
+        "description": "指示器的位置（默认bottomCenter）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "effect3d",
+        "description": "是否开启3D效果（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "autoplay",
+        "description": "是否自动播放（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "interval",
+        "description": "自动轮播时间间隔，单位ms（默认2500）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "circular",
+        "description": "是否衔接播放，见官网说明（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "bg-color",
+        "description": "背景颜色（默认#f3f4f6）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "border-radius",
+        "description": "轮播图圆角值，单位rpx（默认8）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "title-style",
+        "description": "自定义标题样式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "effect3d-previous-margin",
+        "description": "mode = true模式的情况下，激活项与前后项之间的距离，单位rpx（默认50）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "img-mode",
+        "description": "图片的裁剪模式，详见image组件裁剪模式（默认aspectFill）"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} click 点击轮播图时触发",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-swiper :list=\"list\" mode=\"dot\" indicator-pos=\"bottomRight\"></u-swiper>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "list",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "[]"
+      }
+    },
+    {
+      "name": "title",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "indicator",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    },
+    {
+      "name": "borderRadius",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "8"
+      }
+    },
+    {
+      "name": "interval",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "3000"
+      }
+    },
+    {
+      "name": "mode",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'round'"
+      }
+    },
+    {
+      "name": "height",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "250"
+      }
+    },
+    {
+      "name": "indicatorPos",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'bottomCenter'"
+      }
+    },
+    {
+      "name": "effect3d",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "effect3dPreviousMargin",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "50"
+      }
+    },
+    {
+      "name": "autoplay",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "duration",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "500"
+      }
+    },
+    {
+      "name": "circular",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "imgMode",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'aspectFill'"
+      }
+    },
+    {
+      "name": "name",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'image'"
+      }
+    },
+    {
+      "name": "bgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#f3f4f6'"
+      }
+    },
+    {
+      "name": "current",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "titleStyle",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "click",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-swiper/u-swiper.vue"
+  ]
+}

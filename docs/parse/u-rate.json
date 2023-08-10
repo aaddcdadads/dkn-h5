@@ -1,0 +1,294 @@
+{
+  "displayName": "u-rate",
+  "description": "rate 评分",
+  "tags": {
+    "description": [
+      {
+        "description": "该组件一般用于满意度调查，星型评分的场景",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/rate.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "count",
+        "description": "最多可选的星星数量（默认5）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "current",
+        "description": "默认选中的星星数量（默认0）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "disabled",
+        "description": "是否禁止用户操作（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "size",
+        "description": "星星的大小，单位rpx（默认32）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "inactive-color",
+        "description": "未选中星星的颜色（默认#b2b2b2）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "active-color",
+        "description": "选中的星星颜色（默认#FA3534）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "active-icon",
+        "description": "选中时的图标名，只能为uView的内置图标（默认star-fill）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "inactive-icon",
+        "description": "未选中时的图标名，只能为uView的内置图标（默认star）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "gutter",
+        "description": "星星之间的距离（默认10）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "min-count",
+        "description": "最少选中星星的个数（默认0）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "allow-half",
+        "description": "是否允许半星选择（默认false）"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} change 选中的星星发生变化时触发",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-rate :count=\"count\" :current=\"2\"></u-rate>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "value",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "-1"
+      }
+    },
+    {
+      "name": "count",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "5"
+      }
+    },
+    {
+      "name": "current",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "size",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "32"
+      }
+    },
+    {
+      "name": "inactiveColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#b2b2b2'"
+      }
+    },
+    {
+      "name": "activeColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#FA3534'"
+      }
+    },
+    {
+      "name": "gutter",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "10"
+      }
+    },
+    {
+      "name": "minCount",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "allowHalf",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "activeIcon",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'star-fill'"
+      }
+    },
+    {
+      "name": "inactiveIcon",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'star'"
+      }
+    },
+    {
+      "name": "customPrefix",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'uicon'"
+      }
+    },
+    {
+      "name": "colors",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "[]"
+      }
+    },
+    {
+      "name": "icons",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "[]"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "input",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-rate/u-rate.vue"
+  ]
+}

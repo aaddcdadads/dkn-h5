@@ -1,0 +1,104 @@
+{
+  "displayName": "u-loading",
+  "description": "loading 加载动画",
+  "tags": {
+    "description": [
+      {
+        "description": "警此组件为一个小动画，目前用在uView的loadmore加载更多和switch开关等组件的正在加载状态场景。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/loading.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "mode",
+        "description": "模式选择，见官网说明（默认circle）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "color",
+        "description": "动画活动区域的颜色，只对 mode = flower 模式有效（默认#c7c7c7）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "size",
+        "description": "加载图标的大小，单位rpx（默认34）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "show",
+        "description": "是否显示动画（默认true）"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-loading mode=\"circle\"></u-loading>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "mode",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'circle'"
+      }
+    },
+    {
+      "name": "color",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#c7c7c7'"
+      }
+    },
+    {
+      "name": "size",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'34'"
+      }
+    },
+    {
+      "name": "show",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-loading/u-loading.vue"
+  ]
+}

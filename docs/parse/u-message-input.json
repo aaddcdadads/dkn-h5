@@ -1,0 +1,276 @@
+{
+  "displayName": "u-message-input",
+  "description": "messageInput 验证码输入框",
+  "tags": {
+    "description": [
+      {
+        "description": "该组件一般用于验证用户短信验证码的场景，也可以结合uView的键盘组件使用",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://www.uviewui.com/components/messageInput.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "maxlength",
+        "description": "输入字符个数（默认4）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "dot-fill",
+        "description": "是否用圆点填充（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "mode",
+        "description": "模式选择，见上方\"基本使用\"说明（默认box）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "value",
+        "description": "预置值"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "breathe",
+        "description": "是否开启呼吸效果，见上方说明（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "focus",
+        "description": "是否自动获取焦点（默认false）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "bold",
+        "description": "字体和输入横线是否加粗（默认true）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "font-size",
+        "description": "字体大小，单位rpx（默认60）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "active-color",
+        "description": "当前激活输入框的样式（默认#2979ff）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "inactive-color",
+        "description": "非激活输入框的样式，文字颜色同此值（默认#606266）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String | Number"
+        },
+        "name": "width",
+        "description": "输入框宽度，单位rpx，高等于宽（默认80）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "disabled-keyboard",
+        "description": "禁止点击输入框唤起系统键盘（默认false）"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} change 输入内容发生改变时触发，具体见官网说明",
+        "title": "event"
+      },
+      {
+        "description": "{Function} finish 输入字符个数达maxlength值时触发，见官网说明",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-message-input mode=\"bottomLine\"></u-message-input>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "maxlength",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "4"
+      }
+    },
+    {
+      "name": "dotFill",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "mode",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"box\""
+      }
+    },
+    {
+      "name": "value",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "breathe",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "focus",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "bold",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "fontSize",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "60"
+      }
+    },
+    {
+      "name": "activeColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#2979ff'"
+      }
+    },
+    {
+      "name": "inactiveColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#606266'"
+      }
+    },
+    {
+      "name": "width",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'80'"
+      }
+    },
+    {
+      "name": "disabledKeyboard",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "finish",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-message-input/u-message-input.vue"
+  ]
+}

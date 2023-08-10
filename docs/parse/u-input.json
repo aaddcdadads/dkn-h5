@@ -1,0 +1,454 @@
+{
+  "displayName": "u-input",
+  "description": "input 输入框",
+  "tags": {
+    "description": [
+      {
+        "description": "此组件为一个输入框，默认没有边框和样式，是专门为配合表单组件u-form而设计的，利用它可以快速实现表单验证，输入内容，下拉选择等功能。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "http://uviewui.com/components/input.html",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "type",
+        "description": "模式选择，见官网说明"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "clearable",
+        "description": "是否显示右侧的清除图标(默认true)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "mixed"
+        },
+        "name": "v-model",
+        "description": "用于双向绑定输入框的值"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "input-align",
+        "description": "输入框文字的对齐方式(默认left)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "placeholder",
+        "description": "placeholder显示值(默认 '请输入内容')"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "disabled",
+        "description": "是否禁用输入框(默认false)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "maxlength",
+        "description": "输入框的最大可输入长度(默认140)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "selection-start",
+        "description": "光标起始位置，自动聚焦时有效，需与selection-end搭配使用（默认-1）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "maxlength",
+        "description": "光标结束位置，自动聚焦时有效，需与selection-start搭配使用（默认-1）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "cursor-spacing",
+        "description": "指定光标与键盘的距离，单位px(默认0)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "placeholderStyle",
+        "description": "placeholder的样式，字符串形式，如\"color: red;\"(默认 \"color: #c0c4cc;\")"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "confirm-type",
+        "description": "设置键盘右下角按钮的文字，仅在type为text时生效(默认done)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "custom-style",
+        "description": "自定义输入框的样式，对象形式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "focus",
+        "description": "是否自动获得焦点(默认false)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "fixed",
+        "description": "如果type为textarea，且在一个\"position:fixed\"的区域，需要指明为true(默认false)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "password-icon",
+        "description": "type为password时，是否显示右侧的密码查看图标(默认true)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "border",
+        "description": "是否显示边框(默认false)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "border-color",
+        "description": "输入框的边框颜色(默认#dcdfe6)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "auto-height",
+        "description": "是否自动增高输入区域，type为textarea时有效(默认true)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String Number"
+        },
+        "name": "height",
+        "description": "高度，单位rpx(text类型时为70，textarea时为100)"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<u-input v-model=\"value\" :type=\"type\" :border=\"border\" />"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "value",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "type",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'text'"
+      }
+    },
+    {
+      "name": "inputAlign",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'left'"
+      }
+    },
+    {
+      "name": "placeholder",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'请输入内容'"
+      }
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "maxlength",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "140"
+      }
+    },
+    {
+      "name": "placeholderStyle",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'color: #c0c4cc;'"
+      }
+    },
+    {
+      "name": "confirmType",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'done'"
+      }
+    },
+    {
+      "name": "customStyle",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    },
+    {
+      "name": "fixed",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "focus",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "passwordIcon",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "border",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "borderColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#dcdfe6'"
+      }
+    },
+    {
+      "name": "autoHeight",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "selectOpen",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "height",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "clearable",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "cursorSpacing",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "selectionStart",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "-1"
+      }
+    },
+    {
+      "name": "selectionEnd",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "-1"
+      }
+    },
+    {
+      "name": "trim",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "showConfirmbar",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "input",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "blur",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "focus"
+    },
+    {
+      "name": "confirm",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "click"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components/u-input/u-input.vue"
+  ]
+}
