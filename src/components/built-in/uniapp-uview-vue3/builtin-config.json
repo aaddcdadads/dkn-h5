@@ -835,6 +835,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "u-count-down",
+        "title": "倒计时",
+        "importPath": "built-in/uniapp-uview-ui/u-count-down.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-count-down.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "u-count-to",
         "title": "数字滚动",
         "importPath": "built-in/uniapp-uview-ui/u-count-to.json",
@@ -847,14 +855,6 @@
         "title": "分割线",
         "importPath": "built-in/uniapp-uview-ui/u-divider.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-divider.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "u-dropdown",
-        "title": "下拉菜单",
-        "importPath": "built-in/uniapp-uview-ui/u-dropdown.json",
-        "imgUrl": "built-in/uniapp-uview-ui/img/u-dropdown.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1223,22 +1223,6 @@
         "title": "导航标签",
         "importPath": "built-in/uniapp-uview-ui/u-tag.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-tag.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "u-time-line-item",
-        "title": "时间轴项",
-        "importPath": "built-in/uniapp-uview-ui/u-time-line.json",
-        "imgUrl": "",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "u-time-line",
-        "title": "时间轴",
-        "importPath": "built-in/uniapp-uview-ui/u-time-line.json",
-        "imgUrl": "built-in/uniapp-uview-ui/img/u-time-line.png",
         "type": 0,
         "isBuiltIn": true
       },
