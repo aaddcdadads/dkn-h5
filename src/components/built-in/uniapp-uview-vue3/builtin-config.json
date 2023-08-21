@@ -736,7 +736,7 @@
   },
   {
     "id":10,
-    "name":"uView-ui组件",
+    "name":"uView-ui1.x原生组件",
     "componentList":[
       {
         "name": "u-action-sheet",
