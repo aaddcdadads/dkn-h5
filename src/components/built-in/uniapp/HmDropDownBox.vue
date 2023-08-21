@@ -166,8 +166,8 @@
       maxHeight(value) {
         this.cMaxHeight = this.getCssUnit(value);
       },
-      value(value) {
-        this.cValue.value = value;
+      value(val) {
+        this.cValue = val;
       },
       valueSize(value) {
         this.cValueSize = this.getCssUnit(value);
@@ -181,9 +181,11 @@
       leftSeat(value) {
         this.cLeftSeat = this.getCssUnit(value);
       },
-      list(value) {
-        console.log("下拉选项", value);
-        this.cList = value;
+      list:{
+        handler:function(value,oldValue){
+          this.cList = value;
+        },
+        deep:true,
       },
       listColor(value) {
         this.cListColor = value;
