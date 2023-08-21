@@ -736,7 +736,7 @@
   },
   {
     "id":10,
-    "name":"uView-ui1.x原生组件",
+    "name":"uView1.x原生组件",
     "componentList":[
       {
         "name": "u-action-sheet",
@@ -827,14 +827,6 @@
         "isBuiltIn": true
       },
       {
-        "name": "u-column-notice",
-        "title": "u-column-notice",
-        "importPath": "built-in/uniapp-uview-ui/u-column-notice.json",
-        "imgUrl": "",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
         "name": "u-count-down",
         "title": "倒计时",
         "importPath": "built-in/uniapp-uview-ui/u-count-down.json",
@@ -907,22 +899,6 @@
         "isBuiltIn": true
       },
       {
-        "name": "u-index-anchor",
-        "title": "u-index-anchor",
-        "importPath": "built-in/uniapp-uview-ui/u-index-anchor.json",
-        "imgUrl": "",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "u-index-list",
-        "title": "索引列表",
-        "importPath": "built-in/uniapp-uview-ui/u-index-list.json",
-        "imgUrl": "built-in/uniapp-uview-ui/img/u-index-list.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
         "name": "u-input",
         "title": "输入框",
         "importPath": "built-in/uniapp-uview-ui/u-input.json",
@@ -972,9 +948,9 @@
       },
       {
         "name": "u-loading-page",
-        "title": "u-loading-page",
+        "title": "超链接",
         "importPath": "built-in/uniapp-uview-ui/u-loading-page.json",
-        "imgUrl": "",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-loading-page.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1095,14 +1071,6 @@
         "title": "展开阅读更多",
         "importPath": "built-in/uniapp-uview-ui/u-read-more.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-read-more.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "u-row-notice",
-        "title": "u-row-notice",
-        "importPath": "built-in/uniapp-uview-ui/u-row-notice.json",
-        "imgUrl": "",
         "type": 0,
         "isBuiltIn": true
       },
