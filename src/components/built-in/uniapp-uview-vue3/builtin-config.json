@@ -827,6 +827,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "u-column-notice",
+        "title": "竖向滚动通知",
+        "importPath": "built-in/uniapp-uview-ui/u-column-notice.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-column-notice.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "u-count-down",
         "title": "倒计时",
         "importPath": "built-in/uniapp-uview-ui/u-count-down.json",
@@ -948,7 +956,7 @@
       },
       {
         "name": "u-loading-page",
-        "title": "超链接",
+        "title": "加载页",
         "importPath": "built-in/uniapp-uview-ui/u-loading-page.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-loading-page.png",
         "type": 0,
@@ -1071,6 +1079,14 @@
         "title": "展开阅读更多",
         "importPath": "built-in/uniapp-uview-ui/u-read-more.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-read-more.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-row-notice",
+        "title": "横向滚动通知",
+        "importPath": "built-in/uniapp-uview-ui/u-row-notice.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-notice-bar.png",
         "type": 0,
         "isBuiltIn": true
       },
