@@ -1,0 +1,214 @@
+{
+  "displayName": "uni-data-select",
+  "description": "DataChecklist 数据选择器",
+  "tags": {
+    "description": [
+      {
+        "description": "通过数据渲染的下拉框组件",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://uniapp.dcloud.io/component/uniui/uni-data-select",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "value",
+        "description": "默认值"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Array"
+        },
+        "name": "localdata",
+        "description": "本地数据 ，格式 [{text:'',value:''}]"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "clear",
+        "description": "是否可以清空已选项"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "emptyText",
+        "description": "没有数据时显示的文字 ，本地数据无效"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "label",
+        "description": "左侧标题"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "placeholder",
+        "description": "输入框的提示文字"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "disabled",
+        "description": "是否禁用"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} change  选中发生变化触发",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "localdata",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "[]"
+      }
+    },
+    {
+      "name": "value",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "modelValue",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "label",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "placeholder",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'请选择'"
+      }
+    },
+    {
+      "name": "emptyTips",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'无选项'"
+      }
+    },
+    {
+      "name": "clear",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "defItem",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "format",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "input",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "update:modelValue",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-data-select/uni-data-select.vue"
+  ]
+}

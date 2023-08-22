@@ -1,0 +1,103 @@
+{
+  "displayName": "uniGroup",
+  "description": "Group 分组",
+  "tags": {
+    "description": [
+      {
+        "description": "表单字段分组",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=3281",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "title",
+        "description": "主标题"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "name": "top",
+        "description": "分组间隔"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "name": "mode",
+        "description": "模式"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "title",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "top",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "10"
+      }
+    },
+    {
+      "name": "mode",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'default'"
+      }
+    },
+    {
+      "name": "stat",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "click"
+    }
+  ],
+  "slots": [
+    {
+      "name": "title"
+    },
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-group/uni-group.vue"
+  ]
+}

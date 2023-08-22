@@ -1,0 +1,186 @@
+{
+  "displayName": "UniLoadMore",
+  "description": "LoadMore 加载更多",
+  "tags": {
+    "description": [
+      {
+        "description": "用于列表中，做滚动加载使用，展示 loading 的各种状态",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=29",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "status",
+        "description": "= [more|loading|noMore] loading 的状态"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "name": "iconSize",
+        "description": "指定图标大小"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "iconSize",
+        "description": "= [true|false] 是否显示 loading 图标"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "iconType",
+        "description": "= [snow|circle|auto] 指定图标样式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "color",
+        "description": "图标和文字颜色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "contentText",
+        "description": "各状态文字说明，值为：{contentdown: \"上拉显示更多\",contentrefresh: \"正在加载...\",contentnomore: \"没有更多数据了\"}"
+      }
+    ],
+    "value": [
+      {
+        "description": "more loading前",
+        "title": "value"
+      },
+      {
+        "description": "loading loading中",
+        "title": "value"
+      },
+      {
+        "description": "noMore 没有更多了",
+        "title": "value"
+      },
+      {
+        "description": "snow ios雪花加载样式",
+        "title": "value"
+      },
+      {
+        "description": "circle 安卓唤醒加载样式",
+        "title": "value"
+      },
+      {
+        "description": "auto 根据平台自动选择加载样式",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} clickLoadMore 点击加载更多时触发",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "status",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'more'"
+      }
+    },
+    {
+      "name": "showIcon",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "iconType",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'auto'"
+      }
+    },
+    {
+      "name": "iconSize",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "24"
+      }
+    },
+    {
+      "name": "color",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#777777'"
+      }
+    },
+    {
+      "name": "contentText",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{\n    contentdown: '',\n    contentrefresh: '',\n    contentnomore: ''\n}"
+      }
+    },
+    {
+      "name": "showText",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "clickLoadMore",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-load-more/uni-load-more.vue"
+  ]
+}

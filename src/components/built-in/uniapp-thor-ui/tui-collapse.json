@@ -1,0 +1,119 @@
+{
+  "displayName": "tuiCollapse",
+  "exportName": "default",
+  "description": "",
+  "tags": {},
+  "props": [
+    {
+      "name": "bgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'transparent'"
+      }
+    },
+    {
+      "name": "hdBgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#fff'"
+      }
+    },
+    {
+      "name": "bdBgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'transparent'"
+      }
+    },
+    {
+      "name": "height",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'auto'"
+      }
+    },
+    {
+      "name": "index",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "current",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "-1"
+      }
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "arrow",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "arrowColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"#333\""
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "click",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "title"
+    },
+    {
+      "name": "content"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-thorui/node_modules/thorui-uni/lib/thorui/tui-collapse/tui-collapse.vue"
+  ]
+}

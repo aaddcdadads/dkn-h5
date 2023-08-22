@@ -1,0 +1,29 @@
+{
+  "displayName": "tuiTimeaxisItem",
+  "exportName": "default",
+  "description": "",
+  "tags": {},
+  "props": [
+    {
+      "name": "backgroundColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"#fafafa\""
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "content"
+    },
+    {
+      "name": "node"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-thorui/node_modules/thorui-uni/lib/thorui/tui-timeaxis-item/tui-timeaxis-item.vue"
+  ]
+}

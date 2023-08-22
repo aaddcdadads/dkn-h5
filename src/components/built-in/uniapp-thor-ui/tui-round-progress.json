@@ -1,0 +1,14 @@
+{
+  "exportName": "default",
+  "displayName": "tui-round-progress",
+  "description": "",
+  "tags": {},
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-thorui/node_modules/thorui-uni/lib/thorui/tui-round-progress/tui-round-progress.vue"
+  ]
+}

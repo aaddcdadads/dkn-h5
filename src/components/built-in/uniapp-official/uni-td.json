@@ -1,0 +1,78 @@
+{
+  "displayName": "uniTd",
+  "description": "Td 单元格",
+  "tags": {
+    "description": [
+      {
+        "description": "表格中的标准单元格组件",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=3270",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "description": "align = [left|center|right]\t单元格对齐方式"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "width",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "align",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'left'"
+      }
+    },
+    {
+      "name": "rowspan",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "1"
+      }
+    },
+    {
+      "name": "colspan",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-td/uni-td.vue"
+  ]
+}

@@ -1,0 +1,465 @@
+{
+  "displayName": "uniFilePicker",
+  "description": "FilePicker 文件选择上传",
+  "tags": {
+    "description": [
+      {
+        "description": "文件选择上传组件，可以选择图片、视频等任意文件并上传到当前绑定的服务空间",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=4079",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "union",
+          "elements": [
+            {
+              "name": "Object"
+            },
+            {
+              "name": "Array"
+            }
+          ]
+        },
+        "description": "value\t组件数据，通常用来回显 ,类型由return-type属性决定"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "description": "disabled = [true|false]\t组件禁用"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "description": "readonly = [true|false]\t组件只读，不可选择，不显示进度，不显示删除按钮"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "return-type = [array|object]\t限制 value 格式，当为 object 时 ，组件只能单选，且会覆盖"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "description": "disable-preview = [true|false]\t禁用图片预览，仅 mode:grid 时生效"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "description": "del-icon = [true|false]\t是否显示删除按钮"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "description": "auto-upload = [true|false]\t是否自动上传，值为true则只触发@select,可自行上传"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "union",
+          "elements": [
+            {
+              "name": "Number"
+            },
+            {
+              "name": "String"
+            }
+          ]
+        },
+        "description": "limit\t最大选择个数 ，h5 会自动忽略多选的部分"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "title\t组件标题，右侧显示上传计数"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "mode = [list|grid]\t选择文件后的文件列表样式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "file-mediatype = [image|video|all]\t选择文件类型"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Array"
+        },
+        "description": "file-extname\t选择文件后缀，根据 file-mediatype 属性而不同"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "description": "list-style\tmode:list 时的样式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "description": "image-styles\t选择文件后缀，根据 file-mediatype 属性而不同"
+      }
+    ],
+    "value": [
+      {
+        "description": "true \t禁用",
+        "title": "value"
+      },
+      {
+        "description": "false \t取消禁用",
+        "title": "value"
+      },
+      {
+        "description": "true \t只读",
+        "title": "value"
+      },
+      {
+        "description": "false \t取消只读",
+        "title": "value"
+      },
+      {
+        "description": "array\t规定 value 属性的类型为数组",
+        "title": "value"
+      },
+      {
+        "description": "object\t规定 value 属性的类型为对象",
+        "title": "value"
+      },
+      {
+        "description": "true \t禁用图片预览",
+        "title": "value"
+      },
+      {
+        "description": "false \t取消禁用图片预览",
+        "title": "value"
+      },
+      {
+        "description": "true \t显示删除按钮",
+        "title": "value"
+      },
+      {
+        "description": "false \t不显示删除按钮",
+        "title": "value"
+      },
+      {
+        "description": "true \t自动上传",
+        "title": "value"
+      },
+      {
+        "description": "false \t取消自动上传",
+        "title": "value"
+      },
+      {
+        "description": "list \t列表显示",
+        "title": "value"
+      },
+      {
+        "description": "grid \t宫格显示",
+        "title": "value"
+      },
+      {
+        "description": "image\t只选择图片",
+        "title": "value"
+      },
+      {
+        "description": "video\t只选择视频",
+        "title": "value"
+      },
+      {
+        "description": "all\t\t选择所有文件",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} select \t选择文件后触发",
+        "title": "event"
+      },
+      {
+        "description": "{Function} progress 文件上传时触发",
+        "title": "event"
+      },
+      {
+        "description": "{Function} success \t上传成功触发",
+        "title": "event"
+      },
+      {
+        "description": "{Function} fail \t\t上传失败触发",
+        "title": "event"
+      },
+      {
+        "description": "{Function} delete \t文件从列表移除时触发",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "modelValue",
+      "type": {
+        "name": "array|object"
+      },
+      "defaultValue": {
+        "func": true,
+        "value": "function() {\n    return []\n}"
+      }
+    },
+    {
+      "name": "value",
+      "type": {
+        "name": "array|object"
+      },
+      "defaultValue": {
+        "func": true,
+        "value": "function() {\n    return []\n}"
+      }
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "disablePreview",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "delIcon",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "autoUpload",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "limit",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "9"
+      }
+    },
+    {
+      "name": "mode",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'grid'"
+      }
+    },
+    {
+      "name": "fileMediatype",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'image'"
+      }
+    },
+    {
+      "name": "fileExtname",
+      "type": {
+        "name": "array|string"
+      },
+      "defaultValue": {
+        "func": true,
+        "value": "function() {\n    return []\n}"
+      }
+    },
+    {
+      "name": "title",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "listStyles",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{\n    // 是否显示边框\n    border: true,\n    // 是否显示分隔线\n    dividline: true,\n    // 线条样式\n    borderStyle: {}\n}"
+      }
+    },
+    {
+      "name": "imageStyles",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{\n    width: 'auto',\n    height: 'auto'\n}"
+      }
+    },
+    {
+      "name": "readonly",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "returnType",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'array'"
+      }
+    },
+    {
+      "name": "sizeType",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "['original', 'compressed']"
+      }
+    },
+    {
+      "name": "sourceType",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "['album', 'camera']"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "select",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "success",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "fail",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "progress",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "delete",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "update:modelValue",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "input",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-file-picker/uni-file-picker.vue"
+  ]
+}

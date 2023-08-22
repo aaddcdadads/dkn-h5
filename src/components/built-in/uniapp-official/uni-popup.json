@@ -1,0 +1,214 @@
+{
+  "displayName": "uniPopup",
+  "description": "PopUp 弹出层",
+  "tags": {
+    "description": [
+      {
+        "description": "弹出层组件，为了解决遮罩弹层的问题",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=329",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "type",
+        "description": "= [top|center|bottom|left|right|message|dialog|share] 弹出方式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "animation",
+        "description": "= [true|false] 是否开启动画"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "maskClick",
+        "description": "= [true|false] 蒙版点击是否关闭弹窗(废弃)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "isMaskClick",
+        "description": "= [true|false] 蒙版点击是否关闭弹窗"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "backgroundColor",
+        "description": "主窗口背景色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "maskBackgroundColor",
+        "description": "蒙版颜色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "safeArea",
+        "description": "是否适配底部安全区"
+      }
+    ],
+    "value": [
+      {
+        "description": "top 顶部弹出",
+        "title": "value"
+      },
+      {
+        "description": "center 中间弹出",
+        "title": "value"
+      },
+      {
+        "description": "bottom 底部弹出",
+        "title": "value"
+      },
+      {
+        "description": "left\t\t左侧弹出",
+        "title": "value"
+      },
+      {
+        "description": "right  右侧弹出",
+        "title": "value"
+      },
+      {
+        "description": "message 消息提示",
+        "title": "value"
+      },
+      {
+        "description": "dialog 对话框",
+        "title": "value"
+      },
+      {
+        "description": "share 底部分享示例",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} change 打开关闭弹窗触发，e={show: false}",
+        "title": "event"
+      },
+      {
+        "description": "{Function} maskClick 点击遮罩触发",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "animation",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "type",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'center'"
+      }
+    },
+    {
+      "name": "isMaskClick",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "null"
+      }
+    },
+    {
+      "name": "maskClick",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "null"
+      }
+    },
+    {
+      "name": "backgroundColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'none'"
+      }
+    },
+    {
+      "name": "safeArea",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "maskBackgroundColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'rgba(0, 0, 0, 0.4)'"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "maskClick"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.vue"
+  ]
+}

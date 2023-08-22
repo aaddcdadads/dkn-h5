@@ -1,0 +1,192 @@
+{
+  "displayName": "uniTh",
+  "description": "Th 表头",
+  "tags": {
+    "description": [
+      {
+        "description": "表格内的表头单元格组件",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=3270",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Number | String"
+        },
+        "description": "width \t单元格宽度（支持纯数字、携带单位px或rpx）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "description": "sortable \t\t\t\t\t是否启用排序"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "description": "align = [left|center|right]\t单元格对齐方式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Array"
+        },
+        "description": "filterData 筛选数据"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "filterType\t[search|select] 筛选类型"
+      }
+    ],
+    "value": [
+      {
+        "description": "left   \t单元格文字左侧对齐",
+        "title": "value"
+      },
+      {
+        "description": "center\t单元格文字居中",
+        "title": "value"
+      },
+      {
+        "description": "right\t\t单元格文字右侧对齐",
+        "title": "value"
+      },
+      {
+        "description": "search\t关键字搜素",
+        "title": "value"
+      },
+      {
+        "description": "select\t条件选择",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} sort-change 排序触发事件",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "width",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "align",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'left'"
+      }
+    },
+    {
+      "name": "rowspan",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "1"
+      }
+    },
+    {
+      "name": "colspan",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "1"
+      }
+    },
+    {
+      "name": "sortable",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "filterType",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"\""
+      }
+    },
+    {
+      "name": "filterData",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "[]"
+      }
+    },
+    {
+      "name": "filterDefaultValue",
+      "type": {
+        "name": "array|string"
+      },
+      "defaultValue": {
+        "func": true,
+        "value": "function() {\n    return \"\"\n}"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "sort-change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "filter-change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-th/uni-th.vue"
+  ]
+}

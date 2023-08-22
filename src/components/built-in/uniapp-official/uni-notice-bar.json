@@ -1,0 +1,259 @@
+{
+  "displayName": "UniNoticeBar",
+  "description": "NoticeBar 自定义导航栏",
+  "tags": {
+    "description": [
+      {
+        "description": "通告栏组件",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=30",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "name": "speed",
+        "description": "文字滚动的速度，默认100px/秒"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "text",
+        "description": "显示文字"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "backgroundColor",
+        "description": "背景颜色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "color",
+        "description": "文字颜色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "moreColor",
+        "description": "查看更多文字的颜色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "moreText",
+        "description": "设置“查看更多”的文本"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "single",
+        "description": "= [true|false] 是否单行"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "scrollable",
+        "description": "= [true|false] 是否滚动，为true时，NoticeBar为单行"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "showIcon",
+        "description": "= [true|false] 是否显示左侧喇叭图标"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "showClose",
+        "description": "= [true|false] 是否显示左侧关闭按钮"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "showGetMore",
+        "description": "= [true|false] 是否显示右侧查看更多图标，为true时，NoticeBar为单行"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} click 点击 NoticeBar 触发事件",
+        "title": "event"
+      },
+      {
+        "description": "{Function} close 关闭 NoticeBar 触发事件",
+        "title": "event"
+      },
+      {
+        "description": "{Function} getmore 点击”查看更多“时触发事件",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "text",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "moreText",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "backgroundColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#FFF9EA'"
+      }
+    },
+    {
+      "name": "speed",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "100"
+      }
+    },
+    {
+      "name": "color",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#FF9A43'"
+      }
+    },
+    {
+      "name": "fontSize",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "14"
+      }
+    },
+    {
+      "name": "moreColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#FF9A43'"
+      }
+    },
+    {
+      "name": "single",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "scrollable",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "showIcon",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "showGetMore",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "showClose",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "click"
+    },
+    {
+      "name": "getmore"
+    },
+    {
+      "name": "close"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-notice-bar/uni-notice-bar.vue"
+  ]
+}

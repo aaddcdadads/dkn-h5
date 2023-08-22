@@ -1,0 +1,460 @@
+{
+  "displayName": "UniListItem",
+  "description": "ListItem 列表子组件",
+  "tags": {
+    "description": [
+      {
+        "description": "列表子组件",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=24",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "title \t\t\t\t\t\t\t标题"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "note \t\t\t\t\t\t\t描述"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "thumb \t\t\t\t\t\t\t左侧缩略图，若thumb有值，则不会显示扩展图标"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "thumbSize = [lg|base|sm]\t\t略缩图大小"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "badgeText\t\t\t\t\t\t数字角标内容"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "badgeType \t\t\t\t\t\t数字角标类型，参考[uni-icons](https://ext.dcloud.net.cn/plugin?id=21)"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "badgeStyle",
+        "description": "数字角标样式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "rightText \t\t\t\t\t\t右侧文字内容"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "description": "disabled = [true|false]\t\t\t是否禁用"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "description": "clickable = [true|false] \t\t是否开启点击反馈"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "link = [navigateTo|redirectTo|reLaunch|switchTab] 是否展示右侧箭头并开启点击反馈"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String | PageURIString"
+        },
+        "description": "to  \t\t\t跳转目标页面"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "description": "showBadge = [true|false] \t\t是否显示数字角标"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "description": "showSwitch = [true|false] \t\t是否显示Switch"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "description": "switchChecked = [true|false] \tSwitch是否被选中"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "description": "showExtraIcon = [true|false] \t左侧是否显示扩展图标"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "description": "extraIcon \t\t\t\t\t\t扩展图标参数，格式为 {color: '#4cd964',size: '22',type: 'spinner'}"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "description": "direction = [row|column]\t\t排版方向"
+      }
+    ],
+    "value": [
+      {
+        "description": "lg\t\t\t大图",
+        "title": "value"
+      },
+      {
+        "description": "base\t\t一般",
+        "title": "value"
+      },
+      {
+        "description": "sm\t\t\t小图",
+        "title": "value"
+      },
+      {
+        "description": "navigateTo \t同 uni.navigateTo()",
+        "title": "value"
+      },
+      {
+        "description": "redirectTo \t同 uni.redirectTo()",
+        "title": "value"
+      },
+      {
+        "description": "reLaunch   \t同 uni.reLaunch()",
+        "title": "value"
+      },
+      {
+        "description": "switchTab  \t同 uni.switchTab()",
+        "title": "value"
+      },
+      {
+        "description": "row \t\t\t水平排列",
+        "title": "value"
+      },
+      {
+        "description": "column \t\t垂直排列",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} \tclick \t\t\t\t\t\t\t点击 uniListItem 触发事件",
+        "title": "event"
+      },
+      {
+        "description": "{Function} \tswitchChange \t\t\t\t\t点击切换 Switch 时触发",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "direction",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'row'"
+      }
+    },
+    {
+      "name": "title",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "note",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "ellipsis",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "clickable",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "showArrow",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "link",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "to",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "showBadge",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "showSwitch",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "switchChecked",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "badgeText",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "badgeType",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'success'"
+      }
+    },
+    {
+      "name": "badgeStyle",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    },
+    {
+      "name": "rightText",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "thumb",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "thumbSize",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'base'"
+      }
+    },
+    {
+      "name": "showExtraIcon",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "extraIcon",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{\n    type: '',\n    color: '#000000',\n    size: 20,\n    customPrefix: ''\n}"
+      }
+    },
+    {
+      "name": "border",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "customStyle",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{\n    padding: '',\n    backgroundColor: '#FFFFFF'\n}"
+      }
+    },
+    {
+      "name": "keepScrollPosition",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "click",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "switchChange",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "header"
+    },
+    {
+      "name": "body"
+    },
+    {
+      "name": "footer"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-list-item/uni-list-item.vue"
+  ]
+}

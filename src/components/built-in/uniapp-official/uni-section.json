@@ -1,0 +1,195 @@
+{
+  "displayName": "UniSection",
+  "description": "Section 标题栏",
+  "tags": {
+    "description": [
+      {
+        "description": "标题栏",
+        "title": "description"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "type",
+        "description": "= [line|circle|square] 标题装饰类型"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "title",
+        "description": "主标题"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "titleFontSize",
+        "description": "主标题字体大小"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "titleColor",
+        "description": "主标题字体颜色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "subTitle",
+        "description": "副标题"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "subTitleFontSize",
+        "description": "副标题字体大小"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "subTitleColor",
+        "description": "副标题字体颜色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "padding",
+        "description": "默认插槽 padding"
+      }
+    ],
+    "value": [
+      {
+        "description": "line 竖线",
+        "title": "value"
+      },
+      {
+        "description": "circle 圆形",
+        "title": "value"
+      },
+      {
+        "description": "square 正方形",
+        "title": "value"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "type",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "title",
+      "type": {
+        "name": "string"
+      },
+      "required": true,
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "titleFontSize",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'14px'"
+      }
+    },
+    {
+      "name": "titleColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#333'"
+      }
+    },
+    {
+      "name": "subTitle",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "subTitleFontSize",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'12px'"
+      }
+    },
+    {
+      "name": "subTitleColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#999'"
+      }
+    },
+    {
+      "name": "padding",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "click"
+    }
+  ],
+  "slots": [
+    {
+      "name": "decoration"
+    },
+    {
+      "name": "right"
+    },
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-section/uni-section.vue"
+  ]
+}

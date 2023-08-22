@@ -1,0 +1,86 @@
+{
+  "displayName": "uniCol",
+  "exportName": "default",
+  "description": "",
+  "tags": {},
+  "props": [
+    {
+      "name": "span",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "24"
+      }
+    },
+    {
+      "name": "offset",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "-1"
+      }
+    },
+    {
+      "name": "pull",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "-1"
+      }
+    },
+    {
+      "name": "push",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "-1"
+      }
+    },
+    {
+      "name": "xs",
+      "type": {
+        "name": "number|object"
+      }
+    },
+    {
+      "name": "sm",
+      "type": {
+        "name": "number|object"
+      }
+    },
+    {
+      "name": "md",
+      "type": {
+        "name": "number|object"
+      }
+    },
+    {
+      "name": "lg",
+      "type": {
+        "name": "number|object"
+      }
+    },
+    {
+      "name": "xl",
+      "type": {
+        "name": "number|object"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-col/uni-col.vue"
+  ]
+}

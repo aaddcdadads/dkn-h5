@@ -1,0 +1,94 @@
+{
+  "displayName": "UniIndexedList",
+  "description": "IndexedList 索引列表",
+  "tags": {
+    "description": [
+      {
+        "description": "用于展示索引列表",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=375",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "showSelect",
+        "description": "= [true|false] 展示模式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "options",
+        "description": "索引列表需要的数据对象"
+      }
+    ],
+    "value": [
+      {
+        "description": "true 展示模式",
+        "title": "value"
+      },
+      {
+        "description": "false 选择模式",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} click 点击列表事件 ，返回当前选择项的事件对象",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<uni-indexed-list options=\"\" showSelect=\"false\" @click=\"\"></uni-indexed-list>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "options",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "[]"
+      }
+    },
+    {
+      "name": "showSelect",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "click",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-indexed-list/uni-indexed-list.vue"
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "displayName": "UniTag",
+  "description": "Tag 标签",
+  "tags": {
+    "description": [
+      {
+        "description": "用于展示1个或多个文字标签，可点击切换选中、不选中的状态",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=35",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "text",
+        "description": "标签内容"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "size",
+        "description": "= [default|small|mini] 大小尺寸"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "type",
+        "description": "= [default|primary|success｜warning｜error]  颜色类型"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "disabled",
+        "description": "= [true|false] 是否为禁用状态"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "inverted",
+        "description": "= [true|false] 是否无需背景颜色（空心标签）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "circle",
+        "description": "= [true|false] 是否为圆角"
+      }
+    ],
+    "value": [
+      {
+        "description": "default 正常",
+        "title": "value"
+      },
+      {
+        "description": "small 小尺寸",
+        "title": "value"
+      },
+      {
+        "description": "mini 迷你尺寸",
+        "title": "value"
+      },
+      {
+        "description": "default 灰色",
+        "title": "value"
+      },
+      {
+        "description": "primary 蓝色",
+        "title": "value"
+      },
+      {
+        "description": "success 绿色",
+        "title": "value"
+      },
+      {
+        "description": "warning 黄色",
+        "title": "value"
+      },
+      {
+        "description": "error 红色",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} click 点击 Tag 触发事件",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "type",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"default\""
+      }
+    },
+    {
+      "name": "size",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"normal\""
+      }
+    },
+    {
+      "name": "text",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"\""
+      }
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "inverted",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "circle",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "mark",
+      "type": {
+        "name": "boolean|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "customStyle",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "click"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-tag/uni-tag.vue"
+  ]
+}

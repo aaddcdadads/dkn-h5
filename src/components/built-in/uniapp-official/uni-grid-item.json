@@ -1,0 +1,49 @@
+{
+  "displayName": "UniGridItem",
+  "description": "GridItem 宫格",
+  "tags": {
+    "description": [
+      {
+        "description": "宫格组件",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=27",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "name": "index",
+        "description": "子组件的唯一标识 ，点击gird会返回当前的标识"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "index",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-grid-item/uni-grid-item.vue"
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "displayName": "uniTransition",
+  "description": "Transition 过渡动画",
+  "tags": {
+    "description": [
+      {
+        "description": "简单过渡动画组件",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=985",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "show",
+        "description": "= [false|true] 控制组件显示或隐藏"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "union",
+          "elements": [
+            {
+              "name": "Array"
+            },
+            {
+              "name": "String"
+            }
+          ]
+        },
+        "name": "modeClass",
+        "description": "= [fade|slide-top|slide-right|slide-bottom|slide-left|zoom-in|zoom-out] 过渡动画类型"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "name": "duration",
+        "description": "过渡动画持续时间"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "styles",
+        "description": "组件样式，同 css 样式，注意带’-‘连接符的属性需要使用小驼峰写法如：`backgroundColor:red`"
+      }
+    ],
+    "value": [
+      {
+        "description": "fade 渐隐渐出过渡",
+        "title": "value"
+      },
+      {
+        "description": "slide-top 由上至下过渡",
+        "title": "value"
+      },
+      {
+        "description": "slide-right 由右至左过渡",
+        "title": "value"
+      },
+      {
+        "description": "slide-bottom 由下至上过渡",
+        "title": "value"
+      },
+      {
+        "description": "slide-left 由左至右过渡",
+        "title": "value"
+      },
+      {
+        "description": "zoom-in 由小到大过渡",
+        "title": "value"
+      },
+      {
+        "description": "zoom-out 由大到小过渡",
+        "title": "value"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "show",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "modeClass",
+      "type": {
+        "name": "array|string"
+      },
+      "defaultValue": {
+        "func": true,
+        "value": "function() {\n    return 'fade'\n}"
+      }
+    },
+    {
+      "name": "duration",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "300"
+      }
+    },
+    {
+      "name": "styles",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    },
+    {
+      "name": "customClass",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "onceRender",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "click",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.vue"
+  ]
+}

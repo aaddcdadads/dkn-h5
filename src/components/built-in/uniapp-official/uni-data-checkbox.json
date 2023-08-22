@@ -1,0 +1,347 @@
+{
+  "displayName": "uniDataChecklist",
+  "description": "DataChecklist 数据选择器",
+  "tags": {
+    "description": [
+      {
+        "description": "通过数据渲染 checkbox 和 radio",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=xxx",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "mode",
+        "description": "= [default| list | button | tag] 显示模式"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "multiple",
+        "description": "= [true|false] 是否多选"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "union",
+          "elements": [
+            {
+              "name": "Array"
+            },
+            {
+              "name": "String"
+            },
+            {
+              "name": "Number"
+            }
+          ]
+        },
+        "name": "value",
+        "description": "默认值"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Array"
+        },
+        "name": "localdata",
+        "description": "本地数据 ，格式 [{text:'',value:''}]"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "union",
+          "elements": [
+            {
+              "name": "Number"
+            },
+            {
+              "name": "String"
+            }
+          ]
+        },
+        "name": "min",
+        "description": "最小选择个数 ，multiple为true时生效"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "union",
+          "elements": [
+            {
+              "name": "Number"
+            },
+            {
+              "name": "String"
+            }
+          ]
+        },
+        "name": "max",
+        "description": "最大选择个数 ，multiple为true时生效"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "wrap",
+        "description": "是否换行显示"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "icon",
+        "description": "= [left|right]  list 列表模式下icon显示位置"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "selectedColor",
+        "description": "选中颜色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "emptyText",
+        "description": "没有数据时显示的文字 ，本地数据无效"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "selectedTextColor",
+        "description": "选中文本颜色，如不填写则自动显示"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "map",
+        "description": "字段映射， 默认 map={text:'text',value:'value'}"
+      }
+    ],
+    "value": [
+      {
+        "description": "default  \t默认横排模式",
+        "title": "value"
+      },
+      {
+        "description": "list\t\t列表模式",
+        "title": "value"
+      },
+      {
+        "description": "button\t按钮模式",
+        "title": "value"
+      },
+      {
+        "description": "tag \t\t标签模式",
+        "title": "value"
+      },
+      {
+        "description": "left 左侧显示",
+        "title": "value"
+      },
+      {
+        "description": "right 右侧显示",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} change  选中发生变化触发",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "mode",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'default'"
+      }
+    },
+    {
+      "name": "multiple",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "value",
+      "type": {
+        "name": "array|string|number"
+      },
+      "defaultValue": {
+        "func": true,
+        "value": "function() {\n    return ''\n}"
+      }
+    },
+    {
+      "name": "modelValue",
+      "type": {
+        "name": "array|string|number"
+      },
+      "defaultValue": {
+        "func": true,
+        "value": "function() {\n    return '';\n}"
+      }
+    },
+    {
+      "name": "localdata",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "[]"
+      }
+    },
+    {
+      "name": "min",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "max",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "wrap",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "icon",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'left'"
+      }
+    },
+    {
+      "name": "selectedColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "selectedTextColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "emptyText",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'暂无数据'"
+      }
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "map",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{\n    text:'text',\n    value:'value'\n}"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "input",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "update:modelValue",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-data-checkbox/uni-data-checkbox.vue"
+  ]
+}
