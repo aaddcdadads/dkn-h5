@@ -733,5 +733,523 @@
         "isBuiltIn": true
       }
     ]
+  },
+  {
+    "id":10,
+    "name":"uView-ui原生组件",
+    "componentList":[
+      {
+        "name": "u-action-sheet",
+        "title": "操作菜单",
+        "importPath": "built-in/uniapp-uview-ui/u-action-sheet.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-action-sheet.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-alert-tips",
+        "title": "警告提示",
+        "importPath": "built-in/uniapp-uview-ui/u-alert-tips.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-alert-tips.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-avatar-cropper",
+        "title": "头像剪裁",
+        "importPath": "built-in/uniapp-uview-ui/u-avatar-cropper.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-avatar-cropper.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-avatar",
+        "title": "头像",
+        "importPath": "built-in/uniapp-uview-ui/u-avatar.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-avatar.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-back-top",
+        "title": "返回顶部",
+        "importPath": "built-in/uniapp-uview-ui/u-back-top.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-back-top.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-badge",
+        "title": "徽标数",
+        "importPath": "built-in/uniapp-uview-ui/u-badge.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-badge.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-button",
+        "title": "按钮",
+        "importPath": "built-in/uniapp-uview-ui/u-button.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-button.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-calender",
+        "title": "日历",
+        "importPath": "built-in/uniapp-uview-ui/u-calender.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-calender.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-car-keyboard",
+        "title": "汽车键盘",
+        "importPath": "built-in/uniapp-uview-ui/u-car-keyboard.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-car-keyboard.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-card",
+        "title": "卡片",
+        "importPath": "built-in/uniapp-uview-ui/u-card.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-card.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-circle-progress",
+        "title": "圆形进度条",
+        "importPath": "built-in/uniapp-uview-ui/u-circle-progress.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-circle-progress.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-column-notice",
+        "title": "竖向滚动通知",
+        "importPath": "built-in/uniapp-uview-ui/u-column-notice.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-column-notice.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-count-down",
+        "title": "倒计时",
+        "importPath": "built-in/uniapp-uview-ui/u-count-down.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-count-down.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-count-to",
+        "title": "数字滚动",
+        "importPath": "built-in/uniapp-uview-ui/u-count-to.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-count-to.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-divider",
+        "title": "分割线",
+        "importPath": "built-in/uniapp-uview-ui/u-divider.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-divider.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-empty",
+        "title": "内容为空",
+        "importPath": "built-in/uniapp-uview-ui/u-empty.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-empty.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-field",
+        "title": "输入框",
+        "importPath": "built-in/uniapp-uview-ui/u-field.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-field.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-full-screen",
+        "title": "压窗屏",
+        "importPath": "built-in/uniapp-uview-ui/u-full-screen.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-full-screen.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-gap",
+        "title": "间隔槽",
+        "importPath": "built-in/uniapp-uview-ui/u-gap.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-gap.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-icon",
+        "title": "图标",
+        "importPath": "built-in/uniapp-uview-ui/u-icon.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-icon.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-image",
+        "title": "图片",
+        "importPath": "built-in/uniapp-uview-ui/u-image.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-image.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-input",
+        "title": "输入框",
+        "importPath": "built-in/uniapp-uview-ui/u-input.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-input.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-keyboard",
+        "title": "键盘",
+        "importPath": "built-in/uniapp-uview-ui/u-keyboard.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-keyboard.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-lazy-load",
+        "title": "懒加载",
+        "importPath": "built-in/uniapp-uview-ui/u-lazy-load.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-lazy-load.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-line-progress",
+        "title": "线型进度条",
+        "importPath": "built-in/uniapp-uview-ui/u-line-progress.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-line-progress.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-line",
+        "title": "线条",
+        "importPath": "built-in/uniapp-uview-ui/u-line.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-line.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-link",
+        "title": "超链接",
+        "importPath": "built-in/uniapp-uview-ui/u-link.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-link.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-loading-page",
+        "title": "加载页",
+        "importPath": "built-in/uniapp-uview-ui/u-loading-page.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-loading-page.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-loading",
+        "title": "加载动画",
+        "importPath": "built-in/uniapp-uview-ui/u-loading.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-loading.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-loadmore",
+        "title": "加载更多",
+        "importPath": "built-in/uniapp-uview-ui/u-loadmore.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-loadmore.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-mask",
+        "title": "遮罩层",
+        "importPath": "built-in/uniapp-uview-ui/u-mask.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-mask.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-message-input",
+        "title": "验证码输入",
+        "importPath": "built-in/uniapp-uview-ui/u-message-input.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-message-input.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-model",
+        "title": "模态框",
+        "importPath": "built-in/uniapp-uview-ui/u-model.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-model.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-navbar",
+        "title": "导航栏",
+        "importPath": "built-in/uniapp-uview-ui/u-navbar.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-navbar.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-no-network",
+        "title": "无网络提示",
+        "importPath": "built-in/uniapp-uview-ui/u-no-network.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-no-network.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-notice-bar",
+        "title": "滚动通知",
+        "importPath": "built-in/uniapp-uview-ui/u-notice-bar.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-notice-bar.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-number-box",
+        "title": "步进器",
+        "importPath": "built-in/uniapp-uview-ui/u-number-box.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-number-box.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-number-keyboard",
+        "title": "数字键盘",
+        "importPath": "built-in/uniapp-uview-ui/u-number-keyboard.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-number-keyboard.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-parse",
+        "title": "富文本解析器",
+        "importPath": "built-in/uniapp-uview-ui/u-parse.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-parse.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-picker",
+        "title": "选择器",
+        "importPath": "built-in/uniapp-uview-ui/u-picker.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-picker.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-popup",
+        "title": "弹出框",
+        "importPath": "built-in/uniapp-uview-ui/u-popup.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-popup.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-rate",
+        "title": "评分",
+        "importPath": "built-in/uniapp-uview-ui/u-rate.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-rate.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-read-more",
+        "title": "展开阅读更多",
+        "importPath": "built-in/uniapp-uview-ui/u-read-more.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-read-more.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-row-notice",
+        "title": "横向滚动通知",
+        "importPath": "built-in/uniapp-uview-ui/u-row-notice.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-notice-bar.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-search",
+        "title": "搜素框",
+        "importPath": "built-in/uniapp-uview-ui/u-search.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-search.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-section",
+        "title": "查看更多",
+        "importPath": "built-in/uniapp-uview-ui/u-section.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-section.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-select",
+        "title": "列选择器",
+        "importPath": "built-in/uniapp-uview-ui/u-select.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-select.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-skeleton",
+        "title": "骨架屏",
+        "importPath": "built-in/uniapp-uview-ui/u-skeleton.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-skeleton.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-slider",
+        "title": "滑动选择器",
+        "importPath": "built-in/uniapp-uview-ui/u-slider.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-slider.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-steps",
+        "title": "步骤条",
+        "importPath": "built-in/uniapp-uview-ui/u-steps.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-steps.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-sticky",
+        "title": "吸顶",
+        "importPath": "built-in/uniapp-uview-ui/u-sticky.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-sticky.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-subsection",
+        "title": "分段器",
+        "importPath": "built-in/uniapp-uview-ui/u-subsection.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-subsection.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-swipe-action",
+        "title": "滑动单元格",
+        "importPath": "built-in/uniapp-uview-ui/u-swipe-action.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-swipe-action.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-swiper",
+        "title": "轮播图",
+        "importPath": "built-in/uniapp-uview-ui/u-swiper.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-swiper.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-switch",
+        "title": "开关",
+        "importPath": "built-in/uniapp-uview-ui/u-switch.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-switch.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-tabbar",
+        "title": "底部导航栏",
+        "importPath": "built-in/uniapp-uview-ui/u-tabbar.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-tabbar.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-tabs-swiper",
+        "title": "全屏选项卡",
+        "importPath": "built-in/uniapp-uview-ui/u-tabs-swiper.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-tabs-swiper.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-tabs",
+        "title": "tabs标签",
+        "importPath": "built-in/uniapp-uview-ui/u-tabs.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-tabs.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-tag",
+        "title": "导航标签",
+        "importPath": "built-in/uniapp-uview-ui/u-tag.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-tag.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-toast",
+        "title": "消息提示",
+        "importPath": "built-in/uniapp-uview-ui/u-toast.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-toast.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-top-tips",
+        "title": "顶部提示",
+        "importPath": "built-in/uniapp-uview-ui/u-top-tips.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-top-tips.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-upload",
+        "title": "上传",
+        "importPath": "built-in/uniapp-uview-ui/u-upload.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-upload.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-verification-code",
+        "title": "验证码倒计时",
+        "importPath": "built-in/uniapp-uview-ui/u-verification-code.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-verification-code.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-waterfall",
+        "title": "瀑布流",
+        "importPath": "built-in/uniapp-uview-ui/u-waterfall.json",
+        "imgUrl": "built-in/uniapp-uview-ui/img/u-waterfall.png",
+        "type": 0,
+        "isBuiltIn": true
+      }
+    ]
   }
 ]
