@@ -1,0 +1,343 @@
+{
+  "displayName": "UniDataPicker",
+  "description": "DataPicker 级联选择",
+  "tags": {
+    "description": [
+      {
+        "description": "支持单列、和多列级联选择。列数没有限制，如果屏幕显示不全，顶部tab区域会左右滚动。",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=3796",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "popup-title",
+        "description": "弹出窗口标题"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Array"
+        },
+        "name": "localdata",
+        "description": "本地数据，参考"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "border",
+        "description": "= [true|false] 是否有边框"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "readonly",
+        "description": "= [true|false] 是否仅读"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "preload",
+        "description": "= [true|false] 是否预加载数据"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "step-searh",
+        "description": "= [true|false] 是否分布查询"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "union",
+          "elements": [
+            {
+              "name": "String"
+            },
+            {
+              "name": "DBFieldString"
+            }
+          ]
+        },
+        "name": "self-field",
+        "description": "分布查询当前字段名称"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "union",
+          "elements": [
+            {
+              "name": "String"
+            },
+            {
+              "name": "DBFieldString"
+            }
+          ]
+        },
+        "name": "parent-field",
+        "description": "分布查询父字段名称"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "union",
+          "elements": [
+            {
+              "name": "String"
+            },
+            {
+              "name": "DBCollectionString"
+            }
+          ]
+        },
+        "name": "collection",
+        "description": "表名"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "union",
+          "elements": [
+            {
+              "name": "String"
+            },
+            {
+              "name": "DBFieldString"
+            }
+          ]
+        },
+        "name": "field",
+        "description": "查询字段，多个字段用 `,` 分割"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "orderby",
+        "description": "排序字段及正序倒叙设置"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "union",
+          "elements": [
+            {
+              "name": "String"
+            },
+            {
+              "name": "JQLString"
+            }
+          ]
+        },
+        "name": "where",
+        "description": "查询条件"
+      }
+    ],
+    "value": [
+      {
+        "description": "true 开启预加载数据，点击弹出窗口后显示已加载数据",
+        "title": "value"
+      },
+      {
+        "description": "false 关闭预加载数据，点击弹出窗口后开始加载数据",
+        "title": "value"
+      },
+      {
+        "description": "true 启用分布查询，仅查询当前选中节点",
+        "title": "value"
+      },
+      {
+        "description": "false 关闭分布查询，一次查询出所有数据",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} popupshow 弹出的选择窗口打开时触发此事件",
+        "title": "event"
+      },
+      {
+        "description": "{Function} popuphide 弹出的选择窗口关闭时触发此事件",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "options",
+      "type": {
+        "name": "object|array"
+      },
+      "defaultValue": {
+        "func": true,
+        "value": "function() {\n  return {}\n}"
+      }
+    },
+    {
+      "name": "popupTitle",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'请选择'"
+      }
+    },
+    {
+      "name": "placeholder",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'请选择'"
+      }
+    },
+    {
+      "name": "heightMobile",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "readonly",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "clearIcon",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "border",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "split",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'/'"
+      }
+    },
+    {
+      "name": "ellipsis",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "popupopened"
+    },
+    {
+      "name": "popupclosed"
+    },
+    {
+      "name": "nodeclick",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "input",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "update:modelValue",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "inputclick"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default",
+      "scoped": true,
+      "bindings": [
+        {
+          "name": "options",
+          "title": "binding"
+        },
+        {
+          "name": "data",
+          "title": "binding"
+        },
+        {
+          "name": "error",
+          "title": "binding"
+        }
+      ]
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-data-picker/uni-data-picker.vue"
+  ]
+}

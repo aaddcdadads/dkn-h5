@@ -1,0 +1,155 @@
+{
+  "displayName": "UniSwiperDot",
+  "description": "SwiperDod 轮播图指示点",
+  "tags": {
+    "description": [
+      {
+        "description": "自定义轮播图指示点",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=284",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "name": "current",
+        "description": "当前指示点索引，必须是通过 `swiper` 的 `change` 事件获取到的 `e.detail.current`"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "mode",
+        "description": "= [default|round|nav|indexes] 指示点的类型"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "field",
+        "description": "mode 为 nav 时，显示的内容字段（mode = nav 时必填）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "info",
+        "description": "轮播图的数据，通过数组长度决定指示点个数"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Object"
+        },
+        "name": "dotsStyles",
+        "description": "指示点样式"
+      }
+    ],
+    "value": [
+      {
+        "description": "defualt 默认指示点",
+        "title": "value"
+      },
+      {
+        "description": "round 圆形指示点",
+        "title": "value"
+      },
+      {
+        "description": "nav 条形指示点",
+        "title": "value"
+      },
+      {
+        "description": "indexes 索引指示点",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} clickItem 组件触发点击事件时触发，e={currentIndex}",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "info",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "[]"
+      }
+    },
+    {
+      "name": "current",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "dotsStyles",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    },
+    {
+      "name": "mode",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'default'"
+      }
+    },
+    {
+      "name": "field",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "clickItem",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-swiper-dot/uni-swiper-dot.vue"
+  ]
+}

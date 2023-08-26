@@ -1,0 +1,322 @@
+{
+  "displayName": "UniSearchBar",
+  "description": "SearchBar 搜索栏",
+  "tags": {
+    "description": [
+      {
+        "description": "搜索栏组件，通常用于搜索商品、文章等",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=866",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "name": "radius",
+        "description": "搜索栏圆角"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "name": "maxlength",
+        "description": "输入最大长度"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "placeholder",
+        "description": "搜索栏Placeholder"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "clearButton",
+        "description": "= [always|auto|none] 是否显示清除按钮"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "cancelButton",
+        "description": "= [always|auto|none] 是否显示取消按钮"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "cancelText",
+        "description": "取消按钮的文字"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "bgColor",
+        "description": "输入框背景颜色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "focus",
+        "description": "是否自动聚焦"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "readonly",
+        "description": "组件只读，不能有任何操作，只做展示"
+      }
+    ],
+    "value": [
+      {
+        "description": "always 一直显示",
+        "title": "value"
+      },
+      {
+        "description": "auto 输入框不为空时显示",
+        "title": "value"
+      },
+      {
+        "description": "none 一直不显示",
+        "title": "value"
+      },
+      {
+        "description": "always 一直显示",
+        "title": "value"
+      },
+      {
+        "description": "auto 输入框不为空时显示",
+        "title": "value"
+      },
+      {
+        "description": "none 一直不显示",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} confirm uniSearchBar 的输入框 confirm 事件，返回参数为uniSearchBar的value，e={value:Number}",
+        "title": "event"
+      },
+      {
+        "description": "{Function} input uniSearchBar 的 value 改变时触发事件，返回参数为uniSearchBar的value，e=value",
+        "title": "event"
+      },
+      {
+        "description": "{Function} cancel 点击取消按钮时触发事件，返回参数为uniSearchBar的value，e={value:Number}",
+        "title": "event"
+      },
+      {
+        "description": "{Function} clear 点击清除按钮时触发事件，返回参数为uniSearchBar的value，e={value:Number}",
+        "title": "event"
+      },
+      {
+        "description": "{Function} blur input失去焦点时触发事件，返回参数为uniSearchBar的value，e={value:Number}",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "placeholder",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"\""
+      }
+    },
+    {
+      "name": "radius",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "5"
+      }
+    },
+    {
+      "name": "clearButton",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"auto\""
+      }
+    },
+    {
+      "name": "cancelButton",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"auto\""
+      }
+    },
+    {
+      "name": "cancelText",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"\""
+      }
+    },
+    {
+      "name": "bgColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"#F8F8F8\""
+      }
+    },
+    {
+      "name": "maxlength",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "100"
+      }
+    },
+    {
+      "name": "value",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"\""
+      }
+    },
+    {
+      "name": "modelValue",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "\"\""
+      }
+    },
+    {
+      "name": "focus",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "readonly",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "input",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "update:modelValue",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "clear",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "cancel",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "confirm",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "blur",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    },
+    {
+      "name": "focus",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "searchIcon"
+    },
+    {
+      "name": "clearIcon"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-search-bar/uni-search-bar.vue"
+  ]
+}

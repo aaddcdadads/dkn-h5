@@ -1,0 +1,133 @@
+{
+  "displayName": "UniDrawer",
+  "description": "Drawer 抽屉",
+  "tags": {
+    "description": [
+      {
+        "description": "抽屉侧滑菜单",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=26",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "mask",
+        "description": "= [true | false] 是否显示遮罩"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "maskClick",
+        "description": "= [true | false] 点击遮罩是否关闭"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "mode",
+        "description": "= [left | right] Drawer 滑出位置"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "name": "width",
+        "description": "抽屉的宽度 ，仅 vue 页面生效"
+      }
+    ],
+    "value": [
+      {
+        "description": "left 从左侧滑出",
+        "title": "value"
+      },
+      {
+        "description": "right 从右侧侧滑出",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} close 组件关闭时触发事件",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "mode",
+      "description": "显示模式（左、右），只在初始化生效",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "mask",
+      "description": "蒙层显示状态",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "maskClick",
+      "description": "遮罩是否可点击关闭",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "true"
+      }
+    },
+    {
+      "name": "width",
+      "description": "抽屉宽度",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "220"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "change",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-drawer/uni-drawer.vue"
+  ]
+}

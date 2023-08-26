@@ -1,0 +1,240 @@
+{
+  "displayName": "UniBadge",
+  "description": "Badge 数字角标",
+  "tags": {
+    "description": [
+      {
+        "description": "数字角标一般和其它控件（列表、9宫格等）配合使用，用于进行数量提示，默认为实心灰色背景",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=21",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "text",
+        "description": "角标内容"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "size",
+        "description": "= [normal|small] 角标内容"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "type",
+        "description": "= [info|primary|success|warning|error] 颜色类型"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "inverted",
+        "description": "= [true|false] 是否无需背景颜色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "name": "maxNum",
+        "description": "展示封顶的数字值，超过 99 显示 99+"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "absolute",
+        "description": "= [rightTop|rightBottom|leftBottom|leftTop] 开启绝对定位, 角标将定位到其包裹的标签的四角上"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Array[number]"
+        },
+        "name": "offset",
+        "description": "距定位角中心点的偏移量，只有存在 absolute 属性时有效，例如：[-10, -10] 表示向外偏移 10px，[10, 10] 表示向 absolute 指定的内偏移 10px"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "isDot",
+        "description": "= [true|false] 是否显示为一个小点"
+      }
+    ],
+    "value": [
+      {
+        "description": "info 灰色",
+        "title": "value"
+      },
+      {
+        "description": "primary 蓝色",
+        "title": "value"
+      },
+      {
+        "description": "success 绿色",
+        "title": "value"
+      },
+      {
+        "description": "warning 黄色",
+        "title": "value"
+      },
+      {
+        "description": "error 红色",
+        "title": "value"
+      },
+      {
+        "description": "rightTop 右上",
+        "title": "value"
+      },
+      {
+        "description": "rightBottom 右下",
+        "title": "value"
+      },
+      {
+        "description": "leftTop 左上",
+        "title": "value"
+      },
+      {
+        "description": "leftBottom 左下",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} click 点击 Badge 触发事件",
+        "title": "event"
+      }
+    ],
+    "examples": [
+      {
+        "title": "example",
+        "content": "<uni-badge text=\"1\"></uni-badge>"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "type",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'error'"
+      }
+    },
+    {
+      "name": "inverted",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "isDot",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "maxNum",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "99"
+      }
+    },
+    {
+      "name": "absolute",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "offset",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "[0, 0]"
+      }
+    },
+    {
+      "name": "text",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "size",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'small'"
+      }
+    },
+    {
+      "name": "customStyle",
+      "type": {
+        "name": "object"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "{}"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "click"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-badge/uni-badge.vue"
+  ]
+}

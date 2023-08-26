@@ -1,0 +1,129 @@
+{
+  "displayName": "uniDateformat",
+  "description": "Dateformat 日期格式化",
+  "tags": {
+    "description": [
+      {
+        "description": "日期格式化组件",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=3279",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "union",
+          "elements": [
+            {
+              "name": "Object"
+            },
+            {
+              "name": "String"
+            },
+            {
+              "name": "Number"
+            }
+          ]
+        },
+        "name": "date",
+        "description": "日期对象/日期字符串/时间戳"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "locale",
+        "description": "格式化使用的语言"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Array"
+        },
+        "name": "threshold",
+        "description": "应用不同类型格式化的阈值"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "format",
+        "description": "输出日期字符串时的格式"
+      }
+    ],
+    "value": [
+      {
+        "description": "zh 中文",
+        "title": "value"
+      },
+      {
+        "description": "en 英文",
+        "title": "value"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "date",
+      "type": {
+        "name": "object|string|number"
+      },
+      "defaultValue": {
+        "func": true,
+        "value": "function() {\n    return '-'\n}"
+      }
+    },
+    {
+      "name": "locale",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'zh'"
+      }
+    },
+    {
+      "name": "threshold",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "[0, 0]"
+      }
+    },
+    {
+      "name": "format",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'yyyy/MM/dd hh:mm:ss'"
+      }
+    },
+    {
+      "name": "refreshRate",
+      "type": {
+        "name": "number|string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-dateformat/uni-dateformat.vue"
+  ]
+}

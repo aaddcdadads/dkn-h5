@@ -1,0 +1,124 @@
+{
+  "displayName": "UniSegmentedControl",
+  "description": "SegmentedControl 分段器",
+  "tags": {
+    "description": [
+      {
+        "description": "用作不同视图的显示",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=54",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Number"
+        },
+        "name": "current",
+        "description": "当前选中的tab索引值，从0计数"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "styleType",
+        "description": "= [button|text] 分段器样式类型"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "activeColor",
+        "description": "选中的标签背景色与边框颜色"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Array"
+        },
+        "name": "values",
+        "description": "选项数组"
+      }
+    ],
+    "value": [
+      {
+        "description": "button 按钮类型",
+        "title": "value"
+      },
+      {
+        "description": "text 文字类型",
+        "title": "value"
+      }
+    ],
+    "event": [
+      {
+        "description": "{Function} clickItem 组件触发点击事件时触发，e={currentIndex}",
+        "title": "event"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "current",
+      "type": {
+        "name": "number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "0"
+      }
+    },
+    {
+      "name": "values",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "[]"
+      }
+    },
+    {
+      "name": "activeColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#2979FF'"
+      }
+    },
+    {
+      "name": "styleType",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'button'"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "clickItem",
+      "type": {
+        "names": [
+          "undefined"
+        ]
+      }
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control.vue"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "description": "BreadcrumbItem 面包屑导航子组件",
+  "tags": {
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "String/Object"
+        },
+        "name": "to",
+        "description": "路由跳转页面路径/对象"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "replace",
+        "description": "在使用 to 进行路由跳转时，启用 replace 将不会向 history 添加新记录(仅 h5 支持）"
+      }
+    ]
+  },
+  "exportName": "default",
+  "displayName": "uni-breadcrumb-item",
+  "props": [
+    {
+      "name": "to",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "replace",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-breadcrumb-item/uni-breadcrumb-item.vue"
+  ]
+}

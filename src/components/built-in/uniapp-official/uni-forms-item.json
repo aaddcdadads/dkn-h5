@@ -1,0 +1,226 @@
+{
+  "displayName": "uniFormsItem",
+  "description": "uni-fomrs-item 表单子组件",
+  "tags": {
+    "description": [
+      {
+        "description": "uni-fomrs-item 表单子组件，提供了基础布局已经校验能力",
+        "title": "description"
+      }
+    ],
+    "tutorial": [
+      {
+        "description": "https://ext.dcloud.net.cn/plugin?id=2773",
+        "title": "tutorial"
+      }
+    ],
+    "property": [
+      {
+        "title": "property",
+        "type": {
+          "name": "Boolean"
+        },
+        "name": "required",
+        "description": "是否必填，左边显示红色\"*\"号"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String "
+        },
+        "description": "label \t\t\t\t输入框左边的文字提示"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "Number "
+        },
+        "description": "labelWidth \t\t\tlabel的宽度，单位px（默认65）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String "
+        },
+        "description": "labelAlign = [left|center|right] label的文字对齐方式（默认left）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String "
+        },
+        "description": "errorMessage \t\t显示的错误提示内容，如果为空字符串或者false，则不显示错误信息"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String "
+        },
+        "description": "name \t\t\t\t表单域的属性名，在使用校验规则时必填"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String "
+        },
+        "description": "leftIcon \t\t\t【1.4.0废弃】label左边的图标，限 uni-ui 的图标名称"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String "
+        },
+        "description": "iconColor \t\t【1.4.0废弃】左边通过icon配置的图标的颜色（默认#606266）"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String"
+        },
+        "name": "validateTrigger",
+        "description": "= [bind|submit|blur]\t【1.4.0废弃】校验触发器方式 默认 submit"
+      },
+      {
+        "title": "property",
+        "type": {
+          "name": "String "
+        },
+        "description": "labelPosition = [top|left] 【1.4.0废弃】label的文字的位置（默认left）"
+      }
+    ],
+    "value": [
+      {
+        "description": "left\t\tlabel 左侧显示",
+        "title": "value"
+      },
+      {
+        "description": "center\tlabel 居中",
+        "title": "value"
+      },
+      {
+        "description": "right\tlabel 右侧对齐",
+        "title": "value"
+      },
+      {
+        "description": "bind \t发生变化时触发",
+        "title": "value"
+      },
+      {
+        "description": "submit 提交时触发",
+        "title": "value"
+      },
+      {
+        "description": "blur \t失去焦点触发",
+        "title": "value"
+      },
+      {
+        "description": "top\t顶部显示 label",
+        "title": "value"
+      },
+      {
+        "description": "left\t左侧显示 label",
+        "title": "value"
+      }
+    ]
+  },
+  "exportName": "default",
+  "props": [
+    {
+      "name": "rules",
+      "type": {
+        "name": "array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "null"
+      }
+    },
+    {
+      "name": "name",
+      "type": {
+        "name": "string|array"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "required",
+      "type": {
+        "name": "boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "false"
+      }
+    },
+    {
+      "name": "label",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "labelWidth",
+      "type": {
+        "name": "string|number"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "labelAlign",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "errorMessage",
+      "type": {
+        "name": "string|boolean"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "''"
+      }
+    },
+    {
+      "name": "leftIcon",
+      "type": {
+        "name": "string"
+      }
+    },
+    {
+      "name": "iconColor",
+      "type": {
+        "name": "string"
+      },
+      "defaultValue": {
+        "func": false,
+        "value": "'#606266'"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "label"
+    },
+    {
+      "name": "default"
+    }
+  ],
+  "sourceFiles": [
+    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-forms-item/uni-forms-item.vue"
+  ]
+}
