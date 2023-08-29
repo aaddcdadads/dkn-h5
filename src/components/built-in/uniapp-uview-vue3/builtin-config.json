@@ -741,7 +741,7 @@
       {
         "name": "u-action-sheet",
         "title": "操作菜单",
-        "importPath": "built-in/uniapp-uview-ui/u-action-sheet.json",
+        "docPath": "built-in/uniapp-uview-ui/u-action-sheet.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-action-sheet.png",
         "type": 0,
         "isBuiltIn": true
@@ -749,7 +749,7 @@
       {
         "name": "u-alert-tips",
         "title": "警告提示",
-        "importPath": "built-in/uniapp-uview-ui/u-alert-tips.json",
+        "docPath": "built-in/uniapp-uview-ui/u-alert-tips.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-alert-tips.png",
         "type": 0,
         "isBuiltIn": true
@@ -757,7 +757,7 @@
       {
         "name": "u-avatar-cropper",
         "title": "头像剪裁",
-        "importPath": "built-in/uniapp-uview-ui/u-avatar-cropper.json",
+        "docPath": "built-in/uniapp-uview-ui/u-avatar-cropper.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-avatar-cropper.png",
         "type": 0,
         "isBuiltIn": true
@@ -765,7 +765,7 @@
       {
         "name": "u-avatar",
         "title": "头像",
-        "importPath": "built-in/uniapp-uview-ui/u-avatar.json",
+        "docPath": "built-in/uniapp-uview-ui/u-avatar.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-avatar.png",
         "type": 0,
         "isBuiltIn": true
@@ -773,7 +773,7 @@
       {
         "name": "u-back-top",
         "title": "返回顶部",
-        "importPath": "built-in/uniapp-uview-ui/u-back-top.json",
+        "docPath": "built-in/uniapp-uview-ui/u-back-top.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-back-top.png",
         "type": 0,
         "isBuiltIn": true
@@ -781,7 +781,7 @@
       {
         "name": "u-badge",
         "title": "徽标数",
-        "importPath": "built-in/uniapp-uview-ui/u-badge.json",
+        "docPath": "built-in/uniapp-uview-ui/u-badge.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-badge.png",
         "type": 0,
         "isBuiltIn": true
@@ -789,7 +789,7 @@
       {
         "name": "u-button",
         "title": "按钮",
-        "importPath": "built-in/uniapp-uview-ui/u-button.json",
+        "docPath": "built-in/uniapp-uview-ui/u-button.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-button.png",
         "type": 0,
         "isBuiltIn": true
@@ -797,7 +797,7 @@
       {
         "name": "u-calender",
         "title": "日历",
-        "importPath": "built-in/uniapp-uview-ui/u-calender.json",
+        "docPath": "built-in/uniapp-uview-ui/u-calender.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-calender.png",
         "type": 0,
         "isBuiltIn": true
@@ -805,7 +805,7 @@
       {
         "name": "u-car-keyboard",
         "title": "汽车键盘",
-        "importPath": "built-in/uniapp-uview-ui/u-car-keyboard.json",
+        "docPath": "built-in/uniapp-uview-ui/u-car-keyboard.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-car-keyboard.png",
         "type": 0,
         "isBuiltIn": true
@@ -813,7 +813,8 @@
       {
         "name": "u-card",
         "title": "卡片",
-        "importPath": "built-in/uniapp-uview-ui/u-card.json",
+        "importPath": "@/uni_modules/vk-uview-ui/components/u-card/u-card.vue",
+        "docPath": "built-in/uniapp-uview-ui/u-card.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-card.png",
         "type": 0,
         "isBuiltIn": true
@@ -821,7 +822,7 @@
       {
         "name": "u-circle-progress",
         "title": "圆形进度条",
-        "importPath": "built-in/uniapp-uview-ui/u-circle-progress.json",
+        "docPath": "built-in/uniapp-uview-ui/u-circle-progress.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-circle-progress.png",
         "type": 0,
         "isBuiltIn": true
@@ -829,7 +830,7 @@
       {
         "name": "u-column-notice",
         "title": "竖向滚动通知",
-        "importPath": "built-in/uniapp-uview-ui/u-column-notice.json",
+        "docPath": "built-in/uniapp-uview-ui/u-column-notice.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-column-notice.png",
         "type": 0,
         "isBuiltIn": true
@@ -837,7 +838,7 @@
       {
         "name": "u-count-down",
         "title": "倒计时",
-        "importPath": "built-in/uniapp-uview-ui/u-count-down.json",
+        "docPath": "built-in/uniapp-uview-ui/u-count-down.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-count-down.png",
         "type": 0,
         "isBuiltIn": true
@@ -845,7 +846,7 @@
       {
         "name": "u-count-to",
         "title": "数字滚动",
-        "importPath": "built-in/uniapp-uview-ui/u-count-to.json",
+        "docPath": "built-in/uniapp-uview-ui/u-count-to.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-count-to.png",
         "type": 0,
         "isBuiltIn": true
@@ -853,7 +854,7 @@
       {
         "name": "u-divider",
         "title": "分割线",
-        "importPath": "built-in/uniapp-uview-ui/u-divider.json",
+        "docPath": "built-in/uniapp-uview-ui/u-divider.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-divider.png",
         "type": 0,
         "isBuiltIn": true
@@ -861,7 +862,7 @@
       {
         "name": "u-empty",
         "title": "内容为空",
-        "importPath": "built-in/uniapp-uview-ui/u-empty.json",
+        "docPath": "built-in/uniapp-uview-ui/u-empty.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-empty.png",
         "type": 0,
         "isBuiltIn": true
@@ -869,7 +870,7 @@
       {
         "name": "u-field",
         "title": "输入框",
-        "importPath": "built-in/uniapp-uview-ui/u-field.json",
+        "docPath": "built-in/uniapp-uview-ui/u-field.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-field.png",
         "type": 0,
         "isBuiltIn": true
@@ -877,7 +878,7 @@
       {
         "name": "u-full-screen",
         "title": "压窗屏",
-        "importPath": "built-in/uniapp-uview-ui/u-full-screen.json",
+        "docPath": "built-in/uniapp-uview-ui/u-full-screen.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-full-screen.png",
         "type": 0,
         "isBuiltIn": true
@@ -885,7 +886,7 @@
       {
         "name": "u-gap",
         "title": "间隔槽",
-        "importPath": "built-in/uniapp-uview-ui/u-gap.json",
+        "docPath": "built-in/uniapp-uview-ui/u-gap.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-gap.png",
         "type": 0,
         "isBuiltIn": true
@@ -893,7 +894,7 @@
       {
         "name": "u-icon",
         "title": "图标",
-        "importPath": "built-in/uniapp-uview-ui/u-icon.json",
+        "docPath": "built-in/uniapp-uview-ui/u-icon.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-icon.png",
         "type": 0,
         "isBuiltIn": true
@@ -901,7 +902,7 @@
       {
         "name": "u-image",
         "title": "图片",
-        "importPath": "built-in/uniapp-uview-ui/u-image.json",
+        "docPath": "built-in/uniapp-uview-ui/u-image.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-image.png",
         "type": 0,
         "isBuiltIn": true
@@ -909,7 +910,7 @@
       {
         "name": "u-input",
         "title": "输入框",
-        "importPath": "built-in/uniapp-uview-ui/u-input.json",
+        "docPath": "built-in/uniapp-uview-ui/u-input.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-input.png",
         "type": 0,
         "isBuiltIn": true
@@ -917,7 +918,7 @@
       {
         "name": "u-keyboard",
         "title": "键盘",
-        "importPath": "built-in/uniapp-uview-ui/u-keyboard.json",
+        "docPath": "built-in/uniapp-uview-ui/u-keyboard.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-keyboard.png",
         "type": 0,
         "isBuiltIn": true
@@ -925,7 +926,7 @@
       {
         "name": "u-lazy-load",
         "title": "懒加载",
-        "importPath": "built-in/uniapp-uview-ui/u-lazy-load.json",
+        "docPath": "built-in/uniapp-uview-ui/u-lazy-load.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-lazy-load.png",
         "type": 0,
         "isBuiltIn": true
@@ -933,7 +934,7 @@
       {
         "name": "u-line-progress",
         "title": "线型进度条",
-        "importPath": "built-in/uniapp-uview-ui/u-line-progress.json",
+        "docPath": "built-in/uniapp-uview-ui/u-line-progress.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-line-progress.png",
         "type": 0,
         "isBuiltIn": true
@@ -941,7 +942,7 @@
       {
         "name": "u-line",
         "title": "线条",
-        "importPath": "built-in/uniapp-uview-ui/u-line.json",
+        "docPath": "built-in/uniapp-uview-ui/u-line.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-line.png",
         "type": 0,
         "isBuiltIn": true
@@ -949,7 +950,7 @@
       {
         "name": "u-link",
         "title": "超链接",
-        "importPath": "built-in/uniapp-uview-ui/u-link.json",
+        "docPath": "built-in/uniapp-uview-ui/u-link.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-link.png",
         "type": 0,
         "isBuiltIn": true
@@ -957,7 +958,7 @@
       {
         "name": "u-loading-page",
         "title": "加载页",
-        "importPath": "built-in/uniapp-uview-ui/u-loading-page.json",
+        "docPath": "built-in/uniapp-uview-ui/u-loading-page.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-loading-page.png",
         "type": 0,
         "isBuiltIn": true
@@ -965,7 +966,7 @@
       {
         "name": "u-loading",
         "title": "加载动画",
-        "importPath": "built-in/uniapp-uview-ui/u-loading.json",
+        "docPath": "built-in/uniapp-uview-ui/u-loading.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-loading.png",
         "type": 0,
         "isBuiltIn": true
@@ -973,7 +974,7 @@
       {
         "name": "u-loadmore",
         "title": "加载更多",
-        "importPath": "built-in/uniapp-uview-ui/u-loadmore.json",
+        "docPath": "built-in/uniapp-uview-ui/u-loadmore.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-loadmore.png",
         "type": 0,
         "isBuiltIn": true
@@ -981,7 +982,7 @@
       {
         "name": "u-mask",
         "title": "遮罩层",
-        "importPath": "built-in/uniapp-uview-ui/u-mask.json",
+        "docPath": "built-in/uniapp-uview-ui/u-mask.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-mask.png",
         "type": 0,
         "isBuiltIn": true
@@ -989,7 +990,7 @@
       {
         "name": "u-message-input",
         "title": "验证码输入",
-        "importPath": "built-in/uniapp-uview-ui/u-message-input.json",
+        "docPath": "built-in/uniapp-uview-ui/u-message-input.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-message-input.png",
         "type": 0,
         "isBuiltIn": true
@@ -997,7 +998,7 @@
       {
         "name": "u-model",
         "title": "模态框",
-        "importPath": "built-in/uniapp-uview-ui/u-model.json",
+        "docPath": "built-in/uniapp-uview-ui/u-model.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-model.png",
         "type": 0,
         "isBuiltIn": true
@@ -1005,7 +1006,7 @@
       {
         "name": "u-navbar",
         "title": "导航栏",
-        "importPath": "built-in/uniapp-uview-ui/u-navbar.json",
+        "docPath": "built-in/uniapp-uview-ui/u-navbar.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-navbar.png",
         "type": 0,
         "isBuiltIn": true
@@ -1013,7 +1014,7 @@
       {
         "name": "u-no-network",
         "title": "无网络提示",
-        "importPath": "built-in/uniapp-uview-ui/u-no-network.json",
+        "docPath": "built-in/uniapp-uview-ui/u-no-network.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-no-network.png",
         "type": 0,
         "isBuiltIn": true
@@ -1021,7 +1022,7 @@
       {
         "name": "u-notice-bar",
         "title": "滚动通知",
-        "importPath": "built-in/uniapp-uview-ui/u-notice-bar.json",
+        "docPath": "built-in/uniapp-uview-ui/u-notice-bar.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-notice-bar.png",
         "type": 0,
         "isBuiltIn": true
@@ -1029,7 +1030,7 @@
       {
         "name": "u-number-box",
         "title": "步进器",
-        "importPath": "built-in/uniapp-uview-ui/u-number-box.json",
+        "docPath": "built-in/uniapp-uview-ui/u-number-box.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-number-box.png",
         "type": 0,
         "isBuiltIn": true
@@ -1037,7 +1038,7 @@
       {
         "name": "u-number-keyboard",
         "title": "数字键盘",
-        "importPath": "built-in/uniapp-uview-ui/u-number-keyboard.json",
+        "docPath": "built-in/uniapp-uview-ui/u-number-keyboard.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-number-keyboard.png",
         "type": 0,
         "isBuiltIn": true
@@ -1045,7 +1046,7 @@
       {
         "name": "u-parse",
         "title": "富文本解析器",
-        "importPath": "built-in/uniapp-uview-ui/u-parse.json",
+        "docPath": "built-in/uniapp-uview-ui/u-parse.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-parse.png",
         "type": 0,
         "isBuiltIn": true
@@ -1053,7 +1054,7 @@
       {
         "name": "u-picker",
         "title": "选择器",
-        "importPath": "built-in/uniapp-uview-ui/u-picker.json",
+        "docPath": "built-in/uniapp-uview-ui/u-picker.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-picker.png",
         "type": 0,
         "isBuiltIn": true
@@ -1061,7 +1062,7 @@
       {
         "name": "u-popup",
         "title": "弹出框",
-        "importPath": "built-in/uniapp-uview-ui/u-popup.json",
+        "docPath": "built-in/uniapp-uview-ui/u-popup.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-popup.png",
         "type": 0,
         "isBuiltIn": true
@@ -1069,7 +1070,7 @@
       {
         "name": "u-rate",
         "title": "评分",
-        "importPath": "built-in/uniapp-uview-ui/u-rate.json",
+        "docPath": "built-in/uniapp-uview-ui/u-rate.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-rate.png",
         "type": 0,
         "isBuiltIn": true
@@ -1077,7 +1078,7 @@
       {
         "name": "u-read-more",
         "title": "展开阅读更多",
-        "importPath": "built-in/uniapp-uview-ui/u-read-more.json",
+        "docPath": "built-in/uniapp-uview-ui/u-read-more.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-read-more.png",
         "type": 0,
         "isBuiltIn": true
@@ -1085,7 +1086,7 @@
       {
         "name": "u-row-notice",
         "title": "横向滚动通知",
-        "importPath": "built-in/uniapp-uview-ui/u-row-notice.json",
+        "docPath": "built-in/uniapp-uview-ui/u-row-notice.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-notice-bar.png",
         "type": 0,
         "isBuiltIn": true
@@ -1093,7 +1094,7 @@
       {
         "name": "u-search",
         "title": "搜素框",
-        "importPath": "built-in/uniapp-uview-ui/u-search.json",
+        "docPath": "built-in/uniapp-uview-ui/u-search.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-search.png",
         "type": 0,
         "isBuiltIn": true
@@ -1101,7 +1102,7 @@
       {
         "name": "u-section",
         "title": "查看更多",
-        "importPath": "built-in/uniapp-uview-ui/u-section.json",
+        "docPath": "built-in/uniapp-uview-ui/u-section.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-section.png",
         "type": 0,
         "isBuiltIn": true
@@ -1109,7 +1110,7 @@
       {
         "name": "u-select",
         "title": "列选择器",
-        "importPath": "built-in/uniapp-uview-ui/u-select.json",
+        "docPath": "built-in/uniapp-uview-ui/u-select.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-select.png",
         "type": 0,
         "isBuiltIn": true
@@ -1117,7 +1118,7 @@
       {
         "name": "u-skeleton",
         "title": "骨架屏",
-        "importPath": "built-in/uniapp-uview-ui/u-skeleton.json",
+        "docPath": "built-in/uniapp-uview-ui/u-skeleton.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-skeleton.png",
         "type": 0,
         "isBuiltIn": true
@@ -1125,7 +1126,7 @@
       {
         "name": "u-slider",
         "title": "滑动选择器",
-        "importPath": "built-in/uniapp-uview-ui/u-slider.json",
+        "docPath": "built-in/uniapp-uview-ui/u-slider.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-slider.png",
         "type": 0,
         "isBuiltIn": true
@@ -1133,7 +1134,7 @@
       {
         "name": "u-steps",
         "title": "步骤条",
-        "importPath": "built-in/uniapp-uview-ui/u-steps.json",
+        "docPath": "built-in/uniapp-uview-ui/u-steps.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-steps.png",
         "type": 0,
         "isBuiltIn": true
@@ -1141,7 +1142,7 @@
       {
         "name": "u-sticky",
         "title": "吸顶",
-        "importPath": "built-in/uniapp-uview-ui/u-sticky.json",
+        "docPath": "built-in/uniapp-uview-ui/u-sticky.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-sticky.png",
         "type": 0,
         "isBuiltIn": true
@@ -1149,7 +1150,7 @@
       {
         "name": "u-subsection",
         "title": "分段器",
-        "importPath": "built-in/uniapp-uview-ui/u-subsection.json",
+        "docPath": "built-in/uniapp-uview-ui/u-subsection.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-subsection.png",
         "type": 0,
         "isBuiltIn": true
@@ -1157,7 +1158,7 @@
       {
         "name": "u-swipe-action",
         "title": "滑动单元格",
-        "importPath": "built-in/uniapp-uview-ui/u-swipe-action.json",
+        "docPath": "built-in/uniapp-uview-ui/u-swipe-action.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-swipe-action.png",
         "type": 0,
         "isBuiltIn": true
@@ -1165,7 +1166,7 @@
       {
         "name": "u-swiper",
         "title": "轮播图",
-        "importPath": "built-in/uniapp-uview-ui/u-swiper.json",
+        "docPath": "built-in/uniapp-uview-ui/u-swiper.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-swiper.png",
         "type": 0,
         "isBuiltIn": true
@@ -1173,7 +1174,7 @@
       {
         "name": "u-switch",
         "title": "开关",
-        "importPath": "built-in/uniapp-uview-ui/u-switch.json",
+        "docPath": "built-in/uniapp-uview-ui/u-switch.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-switch.png",
         "type": 0,
         "isBuiltIn": true
@@ -1181,7 +1182,7 @@
       {
         "name": "u-tabbar",
         "title": "底部导航栏",
-        "importPath": "built-in/uniapp-uview-ui/u-tabbar.json",
+        "docPath": "built-in/uniapp-uview-ui/u-tabbar.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-tabbar.png",
         "type": 0,
         "isBuiltIn": true
@@ -1189,7 +1190,7 @@
       {
         "name": "u-tabs-swiper",
         "title": "全屏选项卡",
-        "importPath": "built-in/uniapp-uview-ui/u-tabs-swiper.json",
+        "docPath": "built-in/uniapp-uview-ui/u-tabs-swiper.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-tabs-swiper.png",
         "type": 0,
         "isBuiltIn": true
@@ -1197,7 +1198,7 @@
       {
         "name": "u-tabs",
         "title": "tabs标签",
-        "importPath": "built-in/uniapp-uview-ui/u-tabs.json",
+        "docPath": "built-in/uniapp-uview-ui/u-tabs.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-tabs.png",
         "type": 0,
         "isBuiltIn": true
@@ -1205,7 +1206,7 @@
       {
         "name": "u-tag",
         "title": "导航标签",
-        "importPath": "built-in/uniapp-uview-ui/u-tag.json",
+        "docPath": "built-in/uniapp-uview-ui/u-tag.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-tag.png",
         "type": 0,
         "isBuiltIn": true
@@ -1213,7 +1214,7 @@
       {
         "name": "u-toast",
         "title": "消息提示",
-        "importPath": "built-in/uniapp-uview-ui/u-toast.json",
+        "docPath": "built-in/uniapp-uview-ui/u-toast.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-toast.png",
         "type": 0,
         "isBuiltIn": true
@@ -1221,15 +1222,15 @@
       {
         "name": "u-top-tips",
         "title": "顶部提示",
-        "importPath": "built-in/uniapp-uview-ui/u-top-tips.json",
+        "docPath": "built-in/uniapp-uview-ui/u-top-tips.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-top-tips.png",
         "type": 0,
         "isBuiltIn": true
       },
       {
         "name": "u-upload",
-        "title": "上传",
-        "importPath": "built-in/uniapp-uview-ui/u-upload.json",
+        "title": "上传",    
+        "docPath": "built-in/uniapp-uview-ui/u-upload.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-upload.png",
         "type": 0,
         "isBuiltIn": true
@@ -1237,7 +1238,7 @@
       {
         "name": "u-verification-code",
         "title": "验证码倒计时",
-        "importPath": "built-in/uniapp-uview-ui/u-verification-code.json",
+        "docPath": "built-in/uniapp-uview-ui/u-verification-code.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-verification-code.png",
         "type": 0,
         "isBuiltIn": true
@@ -1245,7 +1246,7 @@
       {
         "name": "u-waterfall",
         "title": "瀑布流",
-        "importPath": "built-in/uniapp-uview-ui/u-waterfall.json",
+        "docPath": "built-in/uniapp-uview-ui/u-waterfall.json",
         "imgUrl": "built-in/uniapp-uview-ui/img/u-waterfall.png",
         "type": 0,
         "isBuiltIn": true
@@ -1259,7 +1260,7 @@
         {
             "name":"uni-badge",
             "title":"数字角标",
-            "importPath":"built-in/uniapp-official/uni-badge.json",
+            "docPath":"built-in/uniapp-official/uni-badge.json",
             "imgUrl":"built-in/uniapp-official/img/uni-badge.png",
             "type":0,
             "isBuiltIn":true
@@ -1267,7 +1268,7 @@
         {
             "name":"uni-calendar",
             "title":"日历",
-            "importPath":"built-in/uniapp-official/uni-calendar.json",
+            "docPath":"built-in/uniapp-official/uni-calendar.json",
             "imgUrl":"built-in/uniapp-official/img/uni-calender.png",
             "type":0,
             "isBuiltIn":true
@@ -1275,7 +1276,7 @@
         {
             "name":"uni-card",
             "title":"卡片",
-            "importPath":"built-in/uniapp-official/uni-card.json",
+            "docPath":"built-in/uniapp-official/uni-card.json",
             "imgUrl":"built-in/uniapp-official/img/uni-card.png",
             "type":0,
             "isBuiltIn":true
@@ -1283,7 +1284,7 @@
         {
             "name":"uni-combox",
             "title":"组合输入框",
-            "importPath":"built-in/uniapp-official/uni-combox.json",
+            "docPath":"built-in/uniapp-official/uni-combox.json",
             "imgUrl":"built-in/uniapp-official/img/uni-combox.png",
             "type":0,
             "isBuiltIn":true
@@ -1291,7 +1292,7 @@
         {
             "name":"uni-countdown",
             "title":"倒计时",
-            "importPath":"built-in/uniapp-official/uni-countdown.json",
+            "docPath":"built-in/uniapp-official/uni-countdown.json",
             "imgUrl":"built-in/uniapp-official/img/uni-countdown.png",
             "type":0,
             "isBuiltIn":true
@@ -1299,7 +1300,7 @@
         {
             "name":"uni-data-checkbox",
             "title":"数据选择器",
-            "importPath":"built-in/uniapp-official/uni-data-checkbox.json",
+            "docPath":"built-in/uniapp-official/uni-data-checkbox.json",
             "imgUrl":"built-in/uniapp-official/img/uni-data-checkbox.png",
             "type":0,
             "isBuiltIn":true
@@ -1307,7 +1308,7 @@
         {
             "name":"uni-data-picker",
             "title":"级联选择器",
-            "importPath":"built-in/uniapp-official/uni-data-picker.json",
+            "docPath":"built-in/uniapp-official/uni-data-picker.json",
             "imgUrl":"built-in/uniapp-official/img/uni-data-picker.png",
             "type":0,
             "isBuiltIn":true
@@ -1315,7 +1316,7 @@
         {
             "name":"uni-data-select",
             "title":"下拉框",
-            "importPath":"built-in/uniapp-official/uni-data-select.json",
+            "docPath":"built-in/uniapp-official/uni-data-select.json",
             "imgUrl":"built-in/uniapp-official/img/uni-data-select.png",
             "type":0,
             "isBuiltIn":true
@@ -1323,7 +1324,7 @@
         {
             "name":"uni-dateformat",
             "title":"日期格式化",
-            "importPath":"built-in/uniapp-official/uni-dateformat.json",
+            "docPath":"built-in/uniapp-official/uni-dateformat.json",
             "imgUrl":"built-in/uniapp-official/img/uni-dateformat.png",
             "type":0,
             "isBuiltIn":true
@@ -1331,7 +1332,7 @@
         {
             "name":"uni-datetime-picker",
             "title":"日期选择器",
-            "importPath":"built-in/uniapp-official/uni-datetime-picker.json",
+            "docPath":"built-in/uniapp-official/uni-datetime-picker.json",
             "imgUrl":"built-in/uniapp-official/img/uni-datetime-picker.png",
             "type":0,
             "isBuiltIn":true
@@ -1339,7 +1340,7 @@
         {
             "name":"uni-drawer",
             "title":"抽屉",
-            "importPath":"built-in/uniapp-official/uni-drawer.json",
+            "docPath":"built-in/uniapp-official/uni-drawer.json",
             "imgUrl":"built-in/uniapp-official/img/uni-drawer.png",
             "type":0,
             "isBuiltIn":true
@@ -1347,7 +1348,7 @@
         {
             "name":"uni-easyinput",
             "title":"增强输入框",
-            "importPath":"built-in/uniapp-official/uni-easyinput.json",
+            "docPath":"built-in/uniapp-official/uni-easyinput.json",
             "imgUrl":"built-in/uniapp-official/img/uni-easyinput.png",
             "type":0,
             "isBuiltIn":true
@@ -1355,7 +1356,7 @@
         {
             "name":"uni-fab",
             "title":"悬浮按钮",
-            "importPath":"built-in/uniapp-official/uni-fab.json",
+            "docPath":"built-in/uniapp-official/uni-fab.json",
             "imgUrl":"built-in/uniapp-official/img/uni-fab.png",
             "type":0,
             "isBuiltIn":true
@@ -1363,7 +1364,7 @@
         {
             "name":"uni-fav",
             "title":"收藏按钮",
-            "importPath":"built-in/uniapp-official/uni-fav.json",
+            "docPath":"built-in/uniapp-official/uni-fav.json",
             "imgUrl":"built-in/uniapp-official/img/uni-fav.png",
             "type":0,
             "isBuiltIn":true
@@ -1371,7 +1372,7 @@
         {
             "name":"uni-file-picker",
             "title":"文件选择上传",
-            "importPath":"built-in/uniapp-official/uni-file-picker.json",
+            "docPath":"built-in/uniapp-official/uni-file-picker.json",
             "imgUrl":"built-in/uniapp-official/img/uni-file-picker.png",
             "type":0,
             "isBuiltIn":true
@@ -1379,7 +1380,7 @@
         {
             "name":"uni-goods-nav",
             "title":"商品导航",
-            "importPath":"built-in/uniapp-official/uni-goods-nav.json",
+            "docPath":"built-in/uniapp-official/uni-goods-nav.json",
             "imgUrl":"built-in/uniapp-official/img/uni-goods-nav.png",
             "type":0,
             "isBuiltIn":true
@@ -1387,7 +1388,7 @@
         {
             "name":"uni-group",
             "title":"分组",
-            "importPath":"built-in/uniapp-official/uni-group.json",
+            "docPath":"built-in/uniapp-official/uni-group.json",
             "imgUrl":"built-in/uniapp-official/img/uni-group.png",
             "type":0,
             "isBuiltIn":true
@@ -1395,7 +1396,7 @@
         {
             "name":"uni-icons",
             "title":"图标",
-            "importPath":"built-in/uniapp-official/uni-icons.json",
+            "docPath":"built-in/uniapp-official/uni-icons.json",
             "imgUrl":"built-in/uniapp-official/img/uni-icons.png",
             "type":0,
             "isBuiltIn":true
@@ -1403,7 +1404,7 @@
         {
             "name":"uni-indexed-list",
             "title":"索引列表",
-            "importPath":"built-in/uniapp-official/uni-indexed-list.json",
+            "docPath":"built-in/uniapp-official/uni-indexed-list.json",
             "imgUrl":"built-in/uniapp-official/img/uni-indexed-list.png",
             "type":0,
             "isBuiltIn":true
@@ -1411,7 +1412,7 @@
         {
             "name":"uni-link",
             "title":"超链接",
-            "importPath":"built-in/uniapp-official/uni-link.json",
+            "docPath":"built-in/uniapp-official/uni-link.json",
             "imgUrl":"built-in/uniapp-official/img/uni-link.png",
             "type":0,
             "isBuiltIn":true
@@ -1419,7 +1420,7 @@
         {
             "name":"uni-load-more",
             "title":"加载更多",
-            "importPath":"built-in/uniapp-official/uni-load-more.json",
+            "docPath":"built-in/uniapp-official/uni-load-more.json",
             "imgUrl":"built-in/uniapp-official/img/uni-load-more.png",
             "type":0,
             "isBuiltIn":true
@@ -1427,7 +1428,7 @@
         {
             "name":"uni-nav-bar",
             "title":"自定义导航栏",
-            "importPath":"built-in/uniapp-official/uni-nav-bar.json",
+            "docPath":"built-in/uniapp-official/uni-nav-bar.json",
             "imgUrl":"built-in/uniapp-official/img/uni-nav-bar.png",
             "type":0,
             "isBuiltIn":true
@@ -1435,7 +1436,7 @@
         {
             "name":"uni-notice-bar",
             "title":"通告栏",
-            "importPath":"built-in/uniapp-official/uni-notice-bar.json",
+            "docPath":"built-in/uniapp-official/uni-notice-bar.json",
             "imgUrl":"built-in/uniapp-official/img/uni-notice-bar.png",
             "type":0,
             "isBuiltIn":true
@@ -1443,7 +1444,7 @@
         {
             "name":"uni-number-box",
             "title":"数字输入框",
-            "importPath":"built-in/uniapp-official/uni-number-box.json",
+            "docPath":"built-in/uniapp-official/uni-number-box.json",
             "imgUrl":"built-in/uniapp-official/img/uni-number-box.png",
             "type":0,
             "isBuiltIn":true
@@ -1451,7 +1452,7 @@
         {
             "name":"uni-pagination",
             "title":"分页器",
-            "importPath":"built-in/uniapp-official/uni-pagination.json",
+            "docPath":"built-in/uniapp-official/uni-pagination.json",
             "imgUrl":"built-in/uniapp-official/img/uni-pagination.png",
             "type":0,
             "isBuiltIn":true
@@ -1459,7 +1460,7 @@
         {
             "name":"uni-popup",
             "title":"弹出层",
-            "importPath":"built-in/uniapp-official/uni-popup.json",
+            "docPath":"built-in/uniapp-official/uni-popup.json",
             "imgUrl":"built-in/uniapp-official/img/uni-popup.png",
             "type":0,
             "isBuiltIn":true
@@ -1467,7 +1468,7 @@
         {
             "name":"uni-rate",
             "title":"评分",
-            "importPath":"built-in/uniapp-official/uni-rate.json",
+            "docPath":"built-in/uniapp-official/uni-rate.json",
             "imgUrl":"built-in/uniapp-official/img/uni-rate.png",
             "type":0,
             "isBuiltIn":true
@@ -1475,7 +1476,7 @@
         {
             "name":"uni-search-bar",
             "title":"搜索栏",
-            "importPath":"built-in/uniapp-official/uni-search-bar.json",
+            "docPath":"built-in/uniapp-official/uni-search-bar.json",
             "imgUrl":"built-in/uniapp-official/img/uni-search-bar.png",
             "type":0,
             "isBuiltIn":true
@@ -1483,7 +1484,7 @@
         {
             "name":"uni-section",
             "title":"标题栏",
-            "importPath":"built-in/uniapp-official/uni-section.json",
+            "docPath":"built-in/uniapp-official/uni-section.json",
             "imgUrl":"built-in/uniapp-official/img/uni-section.png",
             "type":0,
             "isBuiltIn":true
@@ -1491,7 +1492,7 @@
         {
             "name":"uni-segmented-control",
             "title":"分段器",
-            "importPath":"built-in/uniapp-official/uni-segmented-control.json",
+            "docPath":"built-in/uniapp-official/uni-segmented-control.json",
             "imgUrl":"built-in/uniapp-official/img/uni-segmented-control.png",
             "type":0,
             "isBuiltIn":true
@@ -1499,7 +1500,7 @@
         {
             "name":"uni-steps",
             "title":"步骤条",
-            "importPath":"built-in/uniapp-official/uni-steps.json",
+            "docPath":"built-in/uniapp-official/uni-steps.json",
             "imgUrl":"built-in/uniapp-official/img/uni-steps.png",
             "type":0,
             "isBuiltIn":true
@@ -1507,7 +1508,7 @@
         {
             "name":"uni-tag",
             "title":"标签",
-            "importPath":"built-in/uniapp-official/uni-tag.json",
+            "docPath":"built-in/uniapp-official/uni-tag.json",
             "imgUrl":"built-in/uniapp-official/img/uni-tag.png",
             "type":0,
             "isBuiltIn":true
@@ -1515,7 +1516,7 @@
         {
             "name":"uni-title",
             "title":"章节标题",
-            "importPath":"built-in/uniapp-official/uni-title.json",
+            "docPath":"built-in/uniapp-official/uni-title.json",
             "imgUrl":"built-in/uniapp-official/img/uni-title.png",
             "type":0,
             "isBuiltIn":true
@@ -1523,7 +1524,7 @@
         {
             "name":"uni-tooltip",
             "title":"文字提示",
-            "importPath":"built-in/uniapp-official/uni-tooltip.json",
+            "docPath":"built-in/uniapp-official/uni-tooltip.json",
             "imgUrl":"built-in/uniapp-official/img/uni-tooltip.png",
             "type":0,
             "isBuiltIn":true
@@ -1531,7 +1532,7 @@
         {
             "name":"uni-transition",
             "title":"过渡动画",
-            "importPath":"built-in/uniapp-official/uni-transition.json",
+            "docPath":"built-in/uniapp-official/uni-transition.json",
             "imgUrl":"built-in/uniapp-official/img/uni-transition.png",
             "type":0,
             "isBuiltIn":true
