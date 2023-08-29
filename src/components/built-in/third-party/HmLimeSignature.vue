@@ -162,7 +162,7 @@ export default {
 <style lang="less" scoped>
 .lsignature {
   width: 100%;
-  height: 300px;
+  height: 100%;
   border: #dcdcdc 1px solid;
   position: relative;
 }
