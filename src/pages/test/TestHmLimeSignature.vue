@@ -1,6 +1,6 @@
 <template>
   <view>
-    <hm-lsignature class="HmLsignature"
+    <hm-lsignature class="HmLimeSignature"
     :penSize="6"
     :minLineWidth="2"
     penColor="red"
@@ -8,18 +8,18 @@
     :beforeDelay="300"
     :maxHistoryLength="0"
     ></hm-lsignature>
-    <hm-lsignature class="HmLsignature"></hm-lsignature>
+    <hm-lsignature class="HmLimeSignature"></hm-lsignature>
   </view>
 </template>
 <script>
-import HmLsignature from "/@/components/built-in/uniapp-haomo/HmLsignature.vue"
+import HmLsignature from "/@/components/built-in/third-party/HmLimeSignature.vue"
 export default {
-  name:"TestHmLsignature",
+  name:"TestHmLimeSignature",
   components: { HmLsignature },
 }
 </script>
 <style scoped>
-.HmLsignature {
+.HmLimeSignature {
   width: 100%;
   height: 300px;
 }
