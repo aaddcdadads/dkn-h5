@@ -196,8 +196,8 @@ export default {
       this.$emit("change", e);
     },
     onSearch(e) {
-        console.log("onSearch",e);
-      this.$emit("search", e);
+      console.log("onSearch",e);
+      this.$emit("onSearch", e);
     },
     onCustom(e) {
         console.log("onCustom",e);
