@@ -1,0 +1,147 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般用于完成一个任务要分几个步骤，标识目前处于第几步的场景。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/steps.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} mode 设置模式（默认dot）"
+    },
+    {
+      "name": "property",
+      "description": "{Array} list 数轴条数据，数组。具体见上方示例"
+    },
+    {
+      "name": "property",
+      "description": "{String} type type主题（默认primary）"
+    },
+    {
+      "name": "property",
+      "description": "{String} direction row-横向，column-竖向（默认row）"
+    },
+    {
+      "name": "property",
+      "description": "{Number String} current 设置当前处于第几步"
+    },
+    {
+      "name": "property",
+      "description": "{String} active-color 已完成步骤的激活颜色，如设置，type值会失效"
+    },
+    {
+      "name": "property",
+      "description": "{String} un-active-color 未激活的颜色，用于表示未完成步骤的颜色（默认#606266）"
+    },
+    {
+      "name": "example",
+      "description": "<u-steps :list=\"numList\" active-color=\"#fa3534\"></u-steps>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "步骤条的类型，dot|number",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "default": "\"dot\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "步骤条的数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "list",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\treturn [];\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "主题类型, primary|success|info|warning|error",
+      "keywords": [],
+      "visibility": "public",
+      "name": "type",
+      "type": "String",
+      "default": "\"primary\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "当前哪一步是激活的",
+      "keywords": [],
+      "visibility": "public",
+      "name": "current",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "激活步骤的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active-color",
+      "type": "String",
+      "default": "\"#2979ff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "未激活的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "un-active-color",
+      "type": "String",
+      "default": "\"#909399\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自定义图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "type": "String",
+      "default": "\"checkmark\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "step的排列方向，row-横向，column-竖向",
+      "keywords": [],
+      "visibility": "public",
+      "name": "direction",
+      "type": "String",
+      "default": "\"row\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "name": "u-steps",
+  "description": "steps 步骤条"
+}

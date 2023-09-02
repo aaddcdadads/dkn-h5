@@ -1,0 +1,335 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "通过折叠面板收纳内容区域,搭配<u-index-anchor>使用"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/indexList.html#indexanchor-props"
+    },
+    {
+      "name": "property",
+      "description": "{Number String} scroll-top 当前滚动高度，自定义组件无法获得滚动条事件，所以依赖接入方传入"
+    },
+    {
+      "name": "property",
+      "description": "{Array} index-list 索引字符列表，数组（默认A-Z）"
+    },
+    {
+      "name": "property",
+      "description": "{Number String} z-index 锚点吸顶时的层级（默认965）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} sticky 是否开启锚点自动吸顶（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Number String} offset-top 锚点自动吸顶时与顶部的距离（默认0）"
+    },
+    {
+      "name": "property",
+      "description": "{String} highlight-color 锚点和右边索引字符高亮颜色（默认#2979ff）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} select 选中右边索引字符时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-index-list :scrollTop=\"scrollTop\"></u-index-list>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sticky",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "z-index",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scroll-top",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "offset-top",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "index-list",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn indexList()\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active-color",
+      "type": "String",
+      "default": "\"#2979ff\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "activeAnchorIndex",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showSidebar",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "kind": "data",
+      "description": "children: [],",
+      "keywords": [],
+      "visibility": "public",
+      "name": "touchmove",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "touchmoveIndex",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "弹出toast的z-index值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "alertZIndex",
+      "dependencies": [
+        "$u"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "select",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateData",
+      "params": [],
+      "syntax": [
+        "updateData(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setRect",
+      "params": [],
+      "syntax": [
+        "setRect(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setAnchorsRect",
+      "params": [],
+      "syntax": [
+        "setAnchorsRect(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setListRect",
+      "params": [],
+      "syntax": [
+        "setListRect(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setSiderbarRect",
+      "params": [],
+      "syntax": [
+        "setSiderbarRect(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getActiveAnchorIndex",
+      "params": [],
+      "syntax": [
+        "getActiveAnchorIndex(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onScroll",
+      "params": [],
+      "syntax": [
+        "onScroll(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onTouchMove",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onTouchMove(event: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onTouchStop",
+      "params": [],
+      "syntax": [
+        "onTouchStop(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scrollToAnchor",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "scrollToAnchor(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-index-list",
+  "description": "indexList 索引列表"
+}

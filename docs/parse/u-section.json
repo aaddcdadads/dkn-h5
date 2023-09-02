@@ -1,0 +1,218 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般用于分类信息有很多，但是限于篇幅只能列出一部分，让用户通过\"查看更多\"获得更多信息的场景，实际效果见演示。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/section.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} title 左边主标题"
+    },
+    {
+      "name": "property",
+      "description": "{String} sub-title 右边副标题（默认更多）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} right 是否显示右边的内容（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} showLine 是否显示左边的竖条（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} arrow 是否显示右边箭头（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} font-size 主标题的字体大小（默认28）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} bold 主标题是否加粗（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String} color 主标题颜色（默认#303133）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 组件右侧的内容被点击时触发，用于跳转\"更多\""
+    },
+    {
+      "name": "example",
+      "description": "<u-section title=\"今日热门\" :right=\"false\"></u-section>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "标题信息",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "右边副标题内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sub-title",
+      "type": "String",
+      "default": "\"更多\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示右边的内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "font-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "28",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "主标题是否加粗",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bold",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "主标题的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "default": "\"#303133\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "右边副标题的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sub-color",
+      "type": "String",
+      "default": "\"#909399\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示左边的竖条",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-line",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "左边竖线的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "line-color",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示右边箭头",
+      "keywords": [],
+      "visibility": "public",
+      "name": "arrow",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "左边竖条的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lineStyle",
+      "dependencies": [
+        "fontSize",
+        "$u"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightClick",
+      "params": [],
+      "syntax": [
+        "rightClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-section",
+  "description": "section 查看更多"
+}

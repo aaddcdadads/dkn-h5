@@ -1,0 +1,289 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "此组件一般用于标识页面底部加载数据时的状态。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/loadMore.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} status 组件状态（默认loadmore）"
+    },
+    {
+      "name": "property",
+      "description": "{String} bg-color 组件背景颜色，在页面是非白色时会用到（默认#ffffff）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} icon 加载中时是否显示图标（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String} icon-type 加载中时的图标类型（默认circle）"
+    },
+    {
+      "name": "property",
+      "description": "{String} icon-color icon-type为circle时有效，加载中的动画图标的颜色（默认#b7b7b7）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} is-dot status为nomore时，内容显示为一个\"●\"（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String} color 字体颜色（默认#606266）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} margin-top 到上一个相邻元素的距离"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} margin-bottom 到下一个相邻元素的距离"
+    },
+    {
+      "name": "property",
+      "description": "{Object} load-text 自定义显示的文字，见上方说明示例"
+    },
+    {
+      "name": "event",
+      "description": "{Function} loadmore status为loadmore时，点击组件会发出此事件"
+    },
+    {
+      "name": "example",
+      "description": "<u-loadmore :status=\"status\" icon-type=\"iconType\" load-text=\"loadText\" />"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "组件背景色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"transparent\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示加载中的图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "字体大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "font-size",
+      "type": "String",
+      "default": "\"28\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "字体颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "default": "\"#606266\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "组件状态，loadmore-加载前的状态，loading-加载中的状态，nomore-没有更多的状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "status",
+      "type": "String",
+      "default": "\"loadmore\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "加载中状态的图标，flower-花朵状图标，circle-圆圈状图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon-type",
+      "type": "String",
+      "default": "\"circle\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示的文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "load-text",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\tloadmore: '加载更多',\r\n\t\t\t\t\t\tloading: '正在加载...',\r\n\t\t\t\t\t\tnomore: '没有更多了'\r\n\t\t\t\t\t}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "在“没有更多”状态下，是否显示粗点",
+      "keywords": [],
+      "visibility": "public",
+      "name": "is-dot",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "加载中显示圆圈动画时，动画的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon-color",
+      "type": "String",
+      "default": "\"#b7b7b7\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "上边距",
+      "keywords": [],
+      "visibility": "public",
+      "name": "margin-top",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "下边距",
+      "keywords": [],
+      "visibility": "public",
+      "name": "margin-bottom",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "高度，单位rpx",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"auto\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "description": "粗点",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dotText",
+      "type": "string",
+      "initialValue": "\"●\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "加载的文字显示的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadTextStyle",
+      "dependencies": [
+        "color",
+        "fontSize",
+        "bgColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "加载中圆圈动画的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cricleStyle",
+      "dependencies": [
+        "circleColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "动画由base64图片生成，暂不支持修改",
+      "keywords": [],
+      "visibility": "public",
+      "name": "flowerStyle",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "description": "显示的提示文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showText",
+      "dependencies": [
+        "status",
+        "loadText",
+        "isDot",
+        "dotText"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadmore",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadMore",
+      "params": [],
+      "syntax": [
+        "loadMore(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-loadmore",
+  "description": "loadmore 加载更多"
+}
