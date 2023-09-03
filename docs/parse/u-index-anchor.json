@@ -1,0 +1,118 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "通过折叠面板收纳内容区域,搭配<u-index-anchor>使用"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/indexList.html#indexanchor-props"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} use-slot 是否使用自定义内容的插槽（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} index 索引字符，如果定义了use-slot，此参数自动失效"
+    },
+    {
+      "name": "property",
+      "description": "{Object} custStyle 自定义样式，对象形式，如\"{color: 'red'}\""
+    },
+    {
+      "name": "event",
+      "description": "{Function} default 锚点位置显示内容，默认为索引字符"
+    },
+    {
+      "name": "example",
+      "description": "<u-index-anchor :index=\"item\" />"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "use-slot",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "index",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "custom-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "wrapperStyle",
+      "type": "object",
+      "initialValue": "{}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "anchorStyle",
+      "type": "object",
+      "initialValue": "{}"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "customAnchorStyle",
+      "dependencies": [
+        "anchorStyle",
+        "customStyle"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [],
+  "name": "u-index-anchor",
+  "description": "indexAnchor 索引列表锚点"
+}

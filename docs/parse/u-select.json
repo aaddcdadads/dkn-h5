@@ -1,0 +1,531 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "此选择器用于单列，多列，多列联动的选择场景。(从1.3.0版本起，不建议使用Picker组件的单列和多列模式，Select组件是专门为列选择而构造的组件，更简单易用。)"
+    },
+    {
+      "name": "tutorial",
+      "description": "http://uviewui.com/components/select.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} mode 模式选择，\"single-column\"-单列模式，\"mutil-column\"-多列模式，\"mutil-column-auto\"-多列联动模式"
+    },
+    {
+      "name": "property",
+      "description": "{Array} list 列数据，数组形式，见官网说明"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} v-model 布尔值变量，用于控制选择器的弹出与收起"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} safe-area-inset-bottom 是否开启底部安全区适配(默认false)"
+    },
+    {
+      "name": "property",
+      "description": "{String} cancel-color 取消按钮的颜色（默认#606266）"
+    },
+    {
+      "name": "property",
+      "description": "{String} confirm-color 确认按钮的颜色(默认#2979ff)"
+    },
+    {
+      "name": "property",
+      "description": "{String} confirm-text 确认按钮的文字"
+    },
+    {
+      "name": "property",
+      "description": "{String} cancel-text 取消按钮的文字"
+    },
+    {
+      "name": "property",
+      "description": "{String} default-value 提供的默认选中的下标，见官网说明"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} mask-close-able 是否允许通过点击遮罩关闭Picker(默认true)"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} z-index 弹出时的z-index值(默认10075)"
+    },
+    {
+      "name": "property",
+      "description": "{String} value-name 自定义list数据的value属性名 1.3.6"
+    },
+    {
+      "name": "property",
+      "description": "{String} label-name 自定义list数据的label属性名 1.3.6"
+    },
+    {
+      "name": "property",
+      "description": "{String} child-name 自定义list数据的children属性名，只对多列联动模式有效 1.3.7"
+    },
+    {
+      "name": "event",
+      "description": "{Function} confirm 点击确定按钮，返回当前选择的值"
+    },
+    {
+      "name": "example",
+      "description": "<u-select v-model=\"show\" :list=\"list\"></u-select>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "列数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "list",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\treturn [];\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "通过双向绑定控制组件的弹出与收起",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description": "\"取消\"按钮的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel-color",
+      "type": "String",
+      "default": "\"#606266\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "\"确定\"按钮的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-color",
+      "type": "String",
+      "default": "\"#2979ff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "弹出的z-index值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "z-index",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "safe-area-inset-bottom",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否允许通过点击遮罩关闭Picker",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask-close-able",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "提供的默认选中的下标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default-value",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\treturn [0];\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "模式选择，single-column-单列，mutil-column-多列，mutil-column-auto-多列联动",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "default": "\"single-column\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自定义value属性名",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value-name",
+      "type": "String",
+      "default": "\"value\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自定义label属性名",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label-name",
+      "type": "String",
+      "default": "\"label\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自定义多列联动模式的children属性名",
+      "keywords": [],
+      "visibility": "public",
+      "name": "child-name",
+      "type": "String",
+      "default": "\"children\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "顶部标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "取消按钮的文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel-text",
+      "type": "String",
+      "default": "\"取消\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "确认按钮的文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-text",
+      "type": "String",
+      "default": "\"确认\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "description": "用于列改变时，保存当前的索引，下一次变化时比较得出是哪一列发生了变化",
+      "keywords": [],
+      "visibility": "public",
+      "name": "defaultSelector",
+      "type": "array",
+      "initialValue": "[0]"
+    },
+    {
+      "kind": "data",
+      "description": "picker-view的数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "columnData",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "description": "每次队列发生变化时，保存选择的结果",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selectValue",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "description": "上一次列变化时的index",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lastSelectIndex",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "description": "列数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "columnNum",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "description": "列是否还在滑动中，微信小程序如果在滑动中就点确定，结果可能不准确",
+      "keywords": [],
+      "visibility": "public",
+      "name": "moving",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uZIndex",
+      "dependencies": [
+        "zIndex",
+        "$u"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "false",
+          "type": "boolean",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "***unhandled***",
+      "arguments": [
+        {
+          "name": "selectValue",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "标识滑动开始，只有微信小程序才有这样的事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pickstart",
+      "params": [],
+      "syntax": [
+        "pickstart(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "标识滑动结束",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pickend",
+      "params": [],
+      "syntax": [
+        "pickend(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取默认选中列下标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setDefaultSelector",
+      "params": [],
+      "syntax": [
+        "setDefaultSelector(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "计算列数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setColumnNum",
+      "params": [],
+      "syntax": [
+        "setColumnNum(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取需要展示在picker中的列数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setColumnData",
+      "params": [],
+      "syntax": [
+        "setColumnData(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取默认选中的值，如果没有设置defaultValue，就默认选中每列的第一个",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setSelectValue",
+      "params": [],
+      "syntax": [
+        "setSelectValue(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "列选项",
+      "keywords": [],
+      "visibility": "public",
+      "name": "columnChange",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "columnChange(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击确定或者取消",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getResult",
+      "params": [
+        {
+          "name": "event",
+          "type": "any",
+          "defaultValue": "null",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getResult(event: any = null): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selectHandler",
+      "params": [],
+      "syntax": [
+        "selectHandler(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "description": "select 列选择器",
+  "name": "u-select"
+}

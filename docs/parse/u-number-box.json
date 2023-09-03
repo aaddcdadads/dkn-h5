@@ -1,0 +1,569 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般用于商城购物选择物品数量的场景。注意：该输入框只能输入大于或等于0的整数，不支持小数输入"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/numberBox.html"
+    },
+    {
+      "name": "property",
+      "description": "{Number} value 输入框初始值（默认1）"
+    },
+    {
+      "name": "property",
+      "description": "{String} bg-color 输入框和按钮的背景颜色（默认#F2F3F5）"
+    },
+    {
+      "name": "property",
+      "description": "{Number} min 用户可输入的最小值（默认0）"
+    },
+    {
+      "name": "property",
+      "description": "{Number} max 用户可输入的最大值（默认99999）"
+    },
+    {
+      "name": "property",
+      "description": "{Number} step 步长，每次加或减的值（默认1）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} disabled 是否禁用操作，禁用后无法加减或手动修改输入框的值（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} disabled-input 是否禁止输入框手动输入值（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} positive-integer 是否只能输入正整数（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} size 输入框文字和按钮字体大小，单位rpx（默认26）"
+    },
+    {
+      "name": "property",
+      "description": "{String} color 输入框文字和加减按钮图标的颜色（默认#323233）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} input-width 输入框宽度，单位rpx（默认80）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} input-height 输入框和按钮的高度，单位rpx（默认50）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} index 事件回调时用以区分当前发生变化的是哪个输入框"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} long-press 是否开启长按连续递增或递减(默认true)"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} press-time 开启长按触发后，每触发一次需要多久，单位ms(默认250)"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} cursor-spacing 指定光标于键盘的距离，避免键盘遮挡输入框，单位rpx（默认200）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change 输入框内容发生变化时触发，对象形式"
+    },
+    {
+      "name": "event",
+      "description": "{Function} blur 输入框失去焦点时触发，对象形式"
+    },
+    {
+      "name": "event",
+      "description": "{Function} minus 点击减少按钮时触发(按钮可点击情况下)，对象形式"
+    },
+    {
+      "name": "event",
+      "description": "{Function} plus 点击增加按钮时触发(按钮可点击情况下)，对象形式"
+    },
+    {
+      "name": "example",
+      "description": "<u-number-box :min=\"1\" :max=\"100\"></u-number-box>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "预显示的数字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "Number",
+      "default": "1",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description": "背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"#F2F3F5\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "最小值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "min",
+      "type": "Number",
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "最大值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "max",
+      "type": "Number",
+      "default": "99999",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "步进值，每次加或减的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "step",
+      "type": "Number",
+      "default": "1",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否禁用加减操作",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "input的字体大小，单位rpx",
+      "keywords": [],
+      "visibility": "public",
+      "name": "size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "26",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "加减图标的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "default": "\"#323233\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "input宽度，单位rpx",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input-width",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "80",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "input高度，单位rpx",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input-height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "50",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "index索引，用于列表中使用，让用户知道是哪个numberbox发生了变化，一般使用for循环出来的index值即可",
+      "keywords": [],
+      "visibility": "public",
+      "name": "index",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "设置disabled为false，disabledInput为true即可",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled-input",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "输入框于键盘之间的距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cursor-spacing",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "100",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否开启长按连续递增或递减",
+      "keywords": [],
+      "visibility": "public",
+      "name": "long-press",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "开启长按触发后，每触发一次需要多久",
+      "keywords": [],
+      "visibility": "public",
+      "name": "press-time",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "250",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否只能输入大于或等于0的整数(正整数)",
+      "keywords": [],
+      "visibility": "public",
+      "name": "positive-integer",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputVal",
+      "type": "number",
+      "initialValue": "1"
+    },
+    {
+      "kind": "data",
+      "description": "输入框中的值，不能直接使用props中的value，因为应该改变props的状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timer",
+      "type": "any",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "description": "用作长按的定时器",
+      "keywords": [],
+      "visibility": "public",
+      "name": "changeFromInner",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "值发生变化，是来自内部还是外部",
+      "keywords": [],
+      "visibility": "public",
+      "name": "innerChangeTimer",
+      "type": "any",
+      "initialValue": "null"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getCursorSpacing",
+      "dependencies": [
+        "cursorSpacing"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "Number(value)",
+          "type": "Number",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "***unhandled***",
+      "arguments": [
+        {
+          "name": "{ // 转为Number类型 value: Number(value), index: this.index }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "点击退格键",
+      "keywords": [],
+      "visibility": "public",
+      "name": "btnTouchStart",
+      "params": [
+        {
+          "name": "callback",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "btnTouchStart(callback: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearTimer",
+      "params": [],
+      "syntax": [
+        "clearTimer(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "minus",
+      "params": [],
+      "syntax": [
+        "minus(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "plus",
+      "params": [],
+      "syntax": [
+        "plus(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "为了保证小数相加减出现精度溢出的问题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "calcPlus",
+      "params": [
+        {
+          "name": "num1",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "num2",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "calcPlus(num1: unknow, num2: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "为了保证小数相加减出现精度溢出的问题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "calcMinus",
+      "params": [
+        {
+          "name": "num1",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "num2",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "calcMinus(num1: unknow, num2: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "computeVal",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "computeVal(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "处理用户手动输入的情况",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onBlur",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onBlur(event: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "输入框获得焦点事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onFocus",
+      "params": [],
+      "syntax": [
+        "onFocus(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleChange",
+      "params": [
+        {
+          "name": "value",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleChange(value: unknow, type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-number-box",
+  "description": "numberBox 步进器"
+}

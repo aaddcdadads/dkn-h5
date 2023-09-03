@@ -1,0 +1,349 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "本组件一般用于展示头像的地方，如个人中心，或者评论列表页的用户头像展示等场所。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/avatar.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} bg-color 背景颜色，一般显示文字时用（默认#ffffff）"
+    },
+    {
+      "name": "property",
+      "description": "{String} src 头像路径，如加载失败，将会显示默认头像"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} size 头像尺寸，可以为指定字符串(large, default, mini)，或者数值，单位rpx（默认default）"
+    },
+    {
+      "name": "property",
+      "description": "{String} mode 显示类型，见上方说明（默认circle）"
+    },
+    {
+      "name": "property",
+      "description": "{String} sex-icon 性别图标，man-男，woman-女（默认man）"
+    },
+    {
+      "name": "property",
+      "description": "{String} level-icon 等级图标（默认level）"
+    },
+    {
+      "name": "property",
+      "description": "{String} sex-bg-color 性别图标背景颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String} level-bg-color 等级图标背景颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String} show-sex 是否显示性别图标（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String} show-level 是否显示等级图标（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String} img-mode 头像图片的裁剪类型，与uni的image组件的mode参数一致，如效果达不到需求，可尝试传widthFix值（默认aspectFill）"
+    },
+    {
+      "name": "property",
+      "description": "{String} index 用户传递的标识符值，如果是列表循环，可穿v-for的index值"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 头像被点击"
+    },
+    {
+      "name": "example",
+      "description": "<u-avatar :src=\"src\"></u-avatar>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"transparent\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "头像路径",
+      "keywords": [],
+      "visibility": "public",
+      "name": "src",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "宽度等于高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "size",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"default\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "头像模型，square-带圆角方形，circle-圆形",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "default": "\"circle\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "文字内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "text",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图片的裁剪模型",
+      "keywords": [],
+      "visibility": "public",
+      "name": "img-mode",
+      "type": "String",
+      "default": "\"aspectFill\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标识符",
+      "keywords": [],
+      "visibility": "public",
+      "name": "index",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "右上角性别角标，man-男，woman-女",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sex-icon",
+      "type": "String",
+      "default": "\"man\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "右下角的等级图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "level-icon",
+      "type": "String",
+      "default": "\"level\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "右下角等级图标背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "level-bg-color",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "右上角性别图标的背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sex-bg-color",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示性别图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-sex",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示等级图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-level",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "头像的地址，因为如果加载错误，需要赋值为默认图片，props值无法修改，所以需要一个中间值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "avatar",
+      "type": "ConditionalExpression",
+      "initialValue": "this.src ? this.src : base64Avatar"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "wrapStyle",
+      "dependencies": [
+        "size",
+        "bgColor",
+        "mode",
+        "text"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "imgStyle",
+      "dependencies": [
+        "mode"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "取字符串的第一个字符",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uText",
+      "dependencies": [
+        "text"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "性别图标的自定义样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uSexStyle",
+      "dependencies": [
+        "sexBgColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "等级图标的自定义样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uLevelStyle",
+      "dependencies": [
+        "levelBgColor"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "图片加载错误时，显示默认头像",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadError",
+      "params": [],
+      "syntax": [
+        "loadError(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "params": [],
+      "syntax": [
+        "click(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-avatar",
+  "description": "avatar 头像"
+}

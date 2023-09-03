@@ -1,0 +1,408 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "此为uViw自定义的键盘面板，内含了数字键盘，车牌号键，身份证号键盘3中模式，都有可以打乱按键顺序的选项。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/keyboard.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} mode 键盘类型，见官网基本使用的说明（默认number）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} dot-enabled 是否显示\".\"按键，只在mode=number时有效（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} tooltip 是否显示键盘顶部工具条（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String} tips 工具条中间的提示文字，见上方基本使用的说明，如不需要，请传\"\"空字符"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} cancel-btn 是否显示工具条左边的\"取消\"按钮（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} confirm-btn 是否显示工具条右边的\"完成\"按钮（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} mask 是否显示遮罩（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String} confirm-text 确认按钮的文字"
+    },
+    {
+      "name": "property",
+      "description": "{String} cancel-text 取消按钮的文字"
+    },
+    {
+      "name": "property",
+      "description": "{Number String} z-index 弹出键盘的z-index值（默认1075）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} random 是否打乱键盘按键的顺序（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} safe-area-inset-bottom 是否开启底部安全区适配（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} mask-close-able 是否允许点击遮罩收起键盘（默认true）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change 按键被点击(不包含退格键被点击)"
+    },
+    {
+      "name": "event",
+      "description": "{Function} cancel 键盘顶部工具条左边的\"取消\"按钮被点击"
+    },
+    {
+      "name": "event",
+      "description": "{Function} confirm 键盘顶部工具条右边的\"完成\"按钮被点击"
+    },
+    {
+      "name": "event",
+      "description": "{Function} backspace 键盘退格键被点击"
+    },
+    {
+      "name": "example",
+      "description": "<u-keyboard mode=\"number\" v-model=\"show\"></u-keyboard>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "键盘的类型，number-数字键盘，card-身份证键盘，car-车牌号键盘",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "default": "\"number\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示键盘的\".\"符号",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dot-enabled",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示顶部工具条",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tooltip",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示工具条中间的提示",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-tips",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "工具条中间的提示文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tips",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示工具条左边的\"取消\"按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel-btn",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示工具条右边的\"完成\"按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-btn",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否打乱键盘按键的顺序",
+      "keywords": [],
+      "visibility": "public",
+      "name": "random",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否开启底部安全区适配，开启的话，会在iPhoneX机型底部添加一定的内边距",
+      "keywords": [],
+      "visibility": "public",
+      "name": "safe-area-inset-bottom",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否允许通过点击遮罩关闭键盘",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask-close-able",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "通过双向绑定控制键盘的弹出与收起",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示遮罩，某些时候数字键盘时，用户希望看到自己的数值，所以可能不想要遮罩",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "z-index值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "z-index",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "取消按钮的文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel-text",
+      "type": "String",
+      "default": "\"取消\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "确认按钮的文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-text",
+      "type": "String",
+      "default": "\"确认\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uZIndex",
+      "dependencies": [
+        "zIndex",
+        "$u"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "通过发送input这个特殊的事件名，可以修改父组件传给props的value的变量，也即双向绑定",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "false",
+          "type": "boolean",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "backspace",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "change(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "键盘关闭",
+      "keywords": [],
+      "visibility": "public",
+      "name": "popupClose",
+      "params": [],
+      "syntax": [
+        "popupClose(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "输入完成",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onConfirm",
+      "params": [],
+      "syntax": [
+        "onConfirm(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "取消输入",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onCancel",
+      "params": [],
+      "syntax": [
+        "onCancel(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "退格键",
+      "keywords": [],
+      "visibility": "public",
+      "name": "backspace",
+      "params": [],
+      "syntax": [
+        "backspace(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-keyboard",
+  "description": "keyboard 键盘"
+}

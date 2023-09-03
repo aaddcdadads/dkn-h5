@@ -1,0 +1,211 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "此组件一般用于表单场景，可以配置Input输入框，Select弹出框，进行表单验证等。"
+    },
+    {
+      "name": "tutorial",
+      "description": "http://uviewui.com/components/form.html"
+    },
+    {
+      "name": "property",
+      "description": "{Object} model 表单数据对象"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} border-bottom 是否显示表单域的下划线边框"
+    },
+    {
+      "name": "property",
+      "description": "{String} label-position 表单域提示文字的位置，left-左侧，top-上方"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} label-width 提示文字的宽度，单位rpx（默认90）"
+    },
+    {
+      "name": "property",
+      "description": "{Object} label-style lable的样式，对象形式"
+    },
+    {
+      "name": "property",
+      "description": "{String} label-align lable的对齐方式"
+    },
+    {
+      "name": "property",
+      "description": "{Object} rules 通过ref设置，见官网说明"
+    },
+    {
+      "name": "property",
+      "description": "{Array} error-type 错误的提示方式，数组形式，见上方说明(默认['message'])"
+    },
+    {
+      "name": "example",
+      "description": "<u-form :model=\"form\" ref=\"uForm\"></u-form>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "当前form的需要验证字段的集合",
+      "keywords": [],
+      "visibility": "public",
+      "name": "model",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {};\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "border-bottom-下边框呈现红色，none-无提示",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error-type",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\treturn ['message', 'toast']\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示表单域的下划线边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-bottom",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "label的位置，left-左边，top-上边",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label-position",
+      "type": "String",
+      "default": "\"left\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "label的宽度，单位rpx",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label-width",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "90",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "lable字体的对齐方式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label-align",
+      "type": "String",
+      "default": "\"left\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "lable的样式，对象形式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {}\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rules",
+      "type": "object",
+      "initialValue": "{}"
+    }
+  ],
+  "computed": [],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setRules",
+      "params": [
+        {
+          "name": "rules",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setRules(rules: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "清空所有u-form-item组件的内容，本质上是调用了u-form-item组件中的resetField()方法",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resetFields",
+      "params": [],
+      "syntax": [
+        "resetFields(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "校验全部数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "validate",
+      "params": [
+        {
+          "name": "callback",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "validate(callback: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    }
+  ],
+  "name": "u-form",
+  "description": "form 表单"
+}

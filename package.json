@@ -29,7 +29,9 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
-    "pub": "npm run build && npm publish"
+    "pub": "npm run build && npm publish",
+    "parse": "node scripts/parse.mjs",
+    "parse-all": "bash scripts/parse.sh"
   },
   "main": "src/components/index.js",
   "dependencies": {
