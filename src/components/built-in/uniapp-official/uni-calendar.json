@@ -1,237 +1,547 @@
 {
-  "description": "Calendar 日历",
-  "tags": {
-    "description": [
-      {
-        "description": "日历组件可以查看日期，选择任意范围内的日期，打点操作。常用场景如：酒店日期预订、火车机票选择购买日期、上下班打卡等",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=56",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "date",
-        "description": "自定义当前时间，默认为今天"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "lunar",
-        "description": "显示农历"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "startDate",
-        "description": "日期选择范围-开始日期"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "endDate",
-        "description": "日期选择范围-结束日期"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "range",
-        "description": "范围选择"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "insert",
-        "description": "= [true|false] 插入模式,默认为false"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "clearDate",
-        "description": "= [true|false] 弹窗模式是否清空上次选择内容"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Array"
-        },
-        "name": "selected",
-        "description": "打点，期待格式[{date: '2019-06-27', info: '签到', data: { custom: '自定义信息', name: '自定义消息头',xxx:xxx... }}]"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "showMonth",
-        "description": "是否选择月份为背景"
-      }
-    ],
-    "value": [
-      {
-        "description": "true 弹窗模式",
-        "title": "value"
-      },
-      {
-        "description": "false 插入模式",
-        "title": "value"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} change 日期改变，`insert :ture` 时生效",
-        "title": "event"
-      },
-      {
-        "description": "{Function} confirm 确认选择`insert :false` 时生效",
-        "title": "event"
-      },
-      {
-        "description": "{Function} monthSwitch 切换月份时触发",
-        "title": "event"
-      }
-    ],
-    "examples": [
-      {
-        "title": "example",
-        "content": "<uni-calendar :insert=\"true\":lunar=\"true\" :start-date=\"'2019-3-2'\":end-date=\"'2019-5-20'\"@change=\"change\" />"
-      }
-    ]
-  },
-  "exportName": "default",
-  "displayName": "uni-calendar",
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "日历组件可以查看日期，选择任意范围内的日期，打点操作。常用场景如：酒店日期预订、火车机票选择购买日期、上下班打卡等"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=56"
+    },
+    {
+      "name": "property",
+      "description": "{String} date 自定义当前时间，默认为今天"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} lunar 显示农历"
+    },
+    {
+      "name": "property",
+      "description": "{String} startDate 日期选择范围-开始日期"
+    },
+    {
+      "name": "property",
+      "description": "{String} endDate 日期选择范围-结束日期"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} range 范围选择"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} insert = [true|false] 插入模式,默认为false"
+    },
+    {
+      "name": "value",
+      "description": "true 弹窗模式"
+    },
+    {
+      "name": "value",
+      "description": "false 插入模式"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} clearDate = [true|false] 弹窗模式是否清空上次选择内容"
+    },
+    {
+      "name": "property",
+      "description": "{Array} selected 打点，期待格式[{date: '2019-06-27', info: '签到', data: { custom: '自定义信息', name: '自定义消息头',xxx:xxx... }}]"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} showMonth 是否选择月份为背景"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change 日期改变，`insert :ture` 时生效"
+    },
+    {
+      "name": "event",
+      "description": "{Function} confirm 确认选择`insert :false` 时生效"
+    },
+    {
+      "name": "event",
+      "description": "{Function} monthSwitch 切换月份时触发"
+    },
+    {
+      "name": "example",
+      "description": "<uni-calendar :insert=\"true\":lunar=\"true\" :start-date=\"'2019-3-2'\":end-date=\"'2019-5-20'\"@change=\"change\" />"
+    }
+  ],
+  "slots": [],
   "props": [
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "date",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "selected",
-      "type": {
-        "name": "array"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "[]"
-      }
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn []\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "lunar",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "startDate",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "start-date",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "endDate",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "end-date",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "range",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "insert",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "showMonth",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-month",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "clearDate",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear-date",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "weeks",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "calendar",
+      "type": "object",
+      "initialValue": "{}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nowDate",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "aniMaskShow",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "for i18n",
+      "keywords": [],
+      "visibility": "public",
+      "name": "okText",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancelText",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "todayText",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "monText",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "TUEText",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "WEDText",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "THUText",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "FRIText",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "SATText",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "SUNText",
+      "dependencies": []
     }
   ],
   "events": [
     {
-      "name": "close"
-    },
-    {
-      "name": "confirm"
-    },
-    {
-      "name": "change"
-    },
-    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
       "name": "monthSwitch",
-      "type": {
-        "names": [
-          "undefined"
-        ]
+      "arguments": [
+        {
+          "name": "{ year, month }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "***unhandled***",
+      "arguments": [
+        {
+          "name": "{ range: this.cale.multipleStatus, year, month, date, fulldate: fullDate, lunar, extraInfo: extraInfo || {} }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "取消穿透",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clean",
+      "params": [],
+      "syntax": [
+        "clean(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bindDateChange",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "bindDateChange(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "初始化日期显示",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [
+        {
+          "name": "date",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "init(date: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "打开日历弹窗",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "params": [],
+      "syntax": [
+        "open(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "关闭日历弹窗",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "确认按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "params": [],
+      "syntax": [
+        "confirm(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "变化触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "params": [],
+      "syntax": [
+        "change(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "选择月份触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "monthSwitch",
+      "params": [],
+      "syntax": [
+        "monthSwitch(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "派发事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setEmit",
+      "params": [
+        {
+          "name": "name",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setEmit(name: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "选择天触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "choiceDate",
+      "params": [
+        {
+          "name": "weeks",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "choiceDate(weeks: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "回到今天",
+      "keywords": [],
+      "visibility": "public",
+      "name": "backToday",
+      "params": [],
+      "syntax": [
+        "backToday(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "上个月",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pre",
+      "params": [],
+      "syntax": [
+        "pre(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "下个月",
+      "keywords": [],
+      "visibility": "public",
+      "name": "next",
+      "params": [],
+      "syntax": [
+        "next(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "设置日期",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setDate",
+      "params": [
+        {
+          "name": "date",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setDate(date: Object): void"
+      ],
+      "returns": {
+        "type": "void"
       }
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-calendar/uni-calendar.vue"
-  ]
+  "description": "Calendar 日历",
+  "name": "uni-calendar"
 }

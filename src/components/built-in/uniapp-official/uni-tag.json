@@ -1,199 +1,226 @@
 {
-  "displayName": "UniTag",
-  "description": "Tag 标签",
-  "tags": {
-    "description": [
-      {
-        "description": "用于展示1个或多个文字标签，可点击切换选中、不选中的状态",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=35",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "text",
-        "description": "标签内容"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "size",
-        "description": "= [default|small|mini] 大小尺寸"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "type",
-        "description": "= [default|primary|success｜warning｜error]  颜色类型"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "disabled",
-        "description": "= [true|false] 是否为禁用状态"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "inverted",
-        "description": "= [true|false] 是否无需背景颜色（空心标签）"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "circle",
-        "description": "= [true|false] 是否为圆角"
-      }
-    ],
-    "value": [
-      {
-        "description": "default 正常",
-        "title": "value"
-      },
-      {
-        "description": "small 小尺寸",
-        "title": "value"
-      },
-      {
-        "description": "mini 迷你尺寸",
-        "title": "value"
-      },
-      {
-        "description": "default 灰色",
-        "title": "value"
-      },
-      {
-        "description": "primary 蓝色",
-        "title": "value"
-      },
-      {
-        "description": "success 绿色",
-        "title": "value"
-      },
-      {
-        "description": "warning 黄色",
-        "title": "value"
-      },
-      {
-        "description": "error 红色",
-        "title": "value"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} click 点击 Tag 触发事件",
-        "title": "event"
-      }
-    ]
-  },
-  "exportName": "default",
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "用于展示1个或多个文字标签，可点击切换选中、不选中的状态"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=35"
+    },
+    {
+      "name": "property",
+      "description": "{String} text 标签内容"
+    },
+    {
+      "name": "property",
+      "description": "{String} size = [default|small|mini] 大小尺寸"
+    },
+    {
+      "name": "value",
+      "description": "default 正常"
+    },
+    {
+      "name": "value",
+      "description": "small 小尺寸"
+    },
+    {
+      "name": "value",
+      "description": "mini 迷你尺寸"
+    },
+    {
+      "name": "property",
+      "description": "{String} type = [default|primary|success｜warning｜error]  颜色类型"
+    },
+    {
+      "name": "value",
+      "description": "default 灰色"
+    },
+    {
+      "name": "value",
+      "description": "primary 蓝色"
+    },
+    {
+      "name": "value",
+      "description": "success 绿色"
+    },
+    {
+      "name": "value",
+      "description": "warning 黄色"
+    },
+    {
+      "name": "value",
+      "description": "error 红色"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} disabled = [true|false] 是否为禁用状态"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} inverted = [true|false] 是否无需背景颜色（空心标签）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} circle = [true|false] 是否为圆角"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 点击 Tag 触发事件"
+    }
+  ],
+  "slots": [],
   "props": [
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "type",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "\"default\""
-      }
+      "type": "String",
+      "default": "\"default\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "size",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "\"normal\""
-      }
+      "type": "String",
+      "default": "\"normal\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "description": "标签内容",
+      "keywords": [],
+      "visibility": "public",
       "name": "text",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "\"\""
-      }
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "disabled",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "inverted",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "circle",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "mark",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "customStyle",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "custom-style",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "classes",
+      "dependencies": []
     }
   ],
   "events": [
     {
-      "name": "click"
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-tag/uni-tag.vue"
-  ]
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isTrue",
+      "params": [
+        {
+          "name": "value",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "isTrue(value: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClick",
+      "params": [],
+      "syntax": [
+        "onClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniTag",
+  "description": "Tag 标签"
 }

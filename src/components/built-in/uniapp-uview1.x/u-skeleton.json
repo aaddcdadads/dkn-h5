@@ -1,0 +1,225 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "骨架屏一般用于页面在请求远程数据尚未完成时，页面用灰色块预显示本来的页面结构，给用户更好的体验。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/skeleton.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} el-color 骨架块状元素的背景颜色（默认#e5e5e5）"
+    },
+    {
+      "name": "property",
+      "description": "{String} bg-color 骨架组件背景颜色（默认#ffffff）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} animation 骨架块是否显示动画效果（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} border-radius u-skeleton-fillet类名元素，对应的骨架块的圆角大小，单位rpx（默认10）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} loading 是否显示骨架组件，请求完成后，将此值设置为false（默认true）"
+    },
+    {
+      "name": "example",
+      "description": "<u-skeleton :loading=\"true\" :animation=\"true\"></u-skeleton>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "需要渲染的元素背景颜色，十六进制或者rgb等都可以",
+      "keywords": [],
+      "visibility": "public",
+      "name": "el-color",
+      "type": "String",
+      "default": "\"#e5e5e5\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "整个骨架屏页面的背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"#ffffff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示加载动画",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animation",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "圆角值，只对类名为u-skeleton-fillet的元素生效，为数值，不带单位",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-radius",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"10\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示骨架，true-显示，false-隐藏",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loading",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "windowWinth",
+      "type": "number",
+      "initialValue": "750"
+    },
+    {
+      "kind": "data",
+      "description": "骨架屏宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "windowHeight",
+      "type": "number",
+      "initialValue": "1500"
+    },
+    {
+      "kind": "data",
+      "description": "骨架屏高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "filletNodes",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "description": "圆角元素",
+      "keywords": [],
+      "visibility": "public",
+      "name": "circleNodes",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "description": "圆形元素",
+      "keywords": [],
+      "visibility": "public",
+      "name": "RectNodes",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "description": "矩形元素",
+      "keywords": [],
+      "visibility": "public",
+      "name": "top",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "查询各节点的信息",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selecterQueryInfo",
+      "params": [],
+      "syntax": [
+        "selecterQueryInfo(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "矩形元素列表",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getRectEls",
+      "params": [],
+      "syntax": [
+        "getRectEls(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "圆角元素列表",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getFilletEls",
+      "params": [],
+      "syntax": [
+        "getFilletEls(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "圆形元素列表",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getCircleEls",
+      "params": [],
+      "syntax": [
+        "getCircleEls(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-skeleton",
+  "description": "skeleton 骨架屏"
+}

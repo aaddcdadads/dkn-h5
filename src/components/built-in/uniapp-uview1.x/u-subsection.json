@@ -1,0 +1,417 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该分段器一般用于用户从几个选项中选择某一个的场景"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/subsection.html"
+    },
+    {
+      "name": "property",
+      "description": "{Array} list 选项的数组，形式见上方\"基本使用\""
+    },
+    {
+      "name": "property",
+      "description": "{String Number} current 初始化时默认选中的选项索引值（默认0）"
+    },
+    {
+      "name": "property",
+      "description": "{String} active-color 激活时的颜色，mode为subsection时固定为白色（默认#303133）"
+    },
+    {
+      "name": "property",
+      "description": "{String} inactive-color 未激活时字体的颜色，mode为subsection时无效（默认#606266）"
+    },
+    {
+      "name": "property",
+      "description": "{String} mode 模式选择，见官网\"模式选择\"说明（默认button）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} font-size 字体大小，单位rpx（默认28）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} height 组件高度，单位rpx（默认70）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} animation 是否开启动画效果，见上方说明（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} bold 激活选项的字体是否加粗（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String} bg-color 组件背景颜色，mode为button时有效（默认#eeeeef）"
+    },
+    {
+      "name": "property",
+      "description": "{String} button-color 按钮背景颜色，mode为button时有效（默认#ffffff）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change 分段器选项发生改变时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-subsection active-color=\"#ff9900\"></u-subsection>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "tab的数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "list",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn [];\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "当前活动的tab的index",
+      "keywords": [],
+      "visibility": "public",
+      "name": "current",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "激活的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active-color",
+      "type": "String",
+      "default": "\"#303133\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "未激活的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactive-color",
+      "type": "String",
+      "default": "\"#606266\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "模式选择，mode=button为按钮形式，mode=subsection时为分段模式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "default": "\"button\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "字体大小，单位rpx",
+      "keywords": [],
+      "visibility": "public",
+      "name": "font-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "28",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否开启动画效果",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animation",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "组件的高度，单位rpx",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "70",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "激活tab的字体是否加粗",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bold",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "mode=button时，组件背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"#eeeeef\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "mode = button时，滑块背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "button-color",
+      "type": "String",
+      "default": "\"#ffffff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "在切换分段器的时候，是否让设备震一下",
+      "keywords": [],
+      "visibility": "public",
+      "name": "vibrate-short",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "listInfo",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemBgStyle",
+      "type": "object",
+      "initialValue": "{\"width\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"},\"left\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"},\"backgroundColor\":{\"type\":\"string\",\"value\":\"#ffffff\",\"raw\":\"\\\"#ffffff\\\"\"},\"height\":{\"type\":\"string\",\"value\":\"100%\",\"raw\":\"\\\"100%\\\"\"},\"transition\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"}}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "currentIndex",
+      "type": "object",
+      "initialValue": "this.current"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "buttonPadding",
+      "type": "number",
+      "initialValue": "3"
+    },
+    {
+      "kind": "data",
+      "description": "mode = button 时，组件的内边距",
+      "keywords": [],
+      "visibility": "public",
+      "name": "borderRadius",
+      "type": "number",
+      "initialValue": "5"
+    },
+    {
+      "kind": "data",
+      "description": "圆角值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "firstTimeVibrateShort",
+      "type": "boolean",
+      "initialValue": "true"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "设置mode=subsection时，滑块特有的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "noBorderRight",
+      "dependencies": [
+        "mode",
+        "list"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "文字的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textStyle",
+      "dependencies": [
+        "mode",
+        "currentIndex",
+        "activeColor",
+        "inactiveColor",
+        "bold",
+        "fontSize"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "每个分段器item的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemStyle",
+      "dependencies": [
+        "mode",
+        "activeColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "mode=button时，外层view的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "subsectionStyle",
+      "dependencies": [
+        "height",
+        "mode",
+        "bgColor",
+        "buttonPadding",
+        "borderRadius"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "滑块的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemBarStyle",
+      "dependencies": [
+        "activeColor",
+        "mode",
+        "buttonColor",
+        "borderRadius",
+        "buttonPadding",
+        "height",
+        "itemBgStyle"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "Number(index)",
+          "type": "Number",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "改变滑块的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "changeSectionStatus",
+      "params": [
+        {
+          "name": "nVal",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "changeSectionStatus(nVal: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "click(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取各个tab的节点信息",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getTabsInfo",
+      "params": [],
+      "syntax": [
+        "getTabsInfo(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemBgLeft",
+      "params": [],
+      "syntax": [
+        "itemBgLeft(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-subsection",
+  "description": "subsection 分段器"
+}

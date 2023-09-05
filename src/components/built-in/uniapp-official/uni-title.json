@@ -1,150 +1,153 @@
 {
-  "displayName": "UniTitle",
-  "description": "Title 标题",
-  "tags": {
-    "description": [
-      {
-        "description": "标题，通常用于记录页面标题，使用当前组件，uni-app 如果开启统计，将会自动统计页面标题",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=1066",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "type",
-        "description": "= [h1|h2|h3|h4|h5] 标题类型"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "title",
-        "description": "标题内容"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "align",
-        "description": "= [left|center|right] 对齐方式"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "color",
-        "description": "字体颜色"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "stat",
-        "description": "= [true|false] 是否开启统计功能呢，如不填写type值，默认为开启，填写 type 属性，默认为关闭"
-      }
-    ],
-    "value": [
-      {
-        "description": "h1 一级标题",
-        "title": "value"
-      },
-      {
-        "description": "h2 二级标题",
-        "title": "value"
-      },
-      {
-        "description": "h3 三级标题",
-        "title": "value"
-      },
-      {
-        "description": "h4 四级标题",
-        "title": "value"
-      },
-      {
-        "description": "h5 五级标题",
-        "title": "value"
-      },
-      {
-        "description": "left 做对齐",
-        "title": "value"
-      },
-      {
-        "description": "center 居中对齐",
-        "title": "value"
-      },
-      {
-        "description": "right 右对齐",
-        "title": "value"
-      }
-    ]
-  },
-  "exportName": "default",
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "标题，通常用于记录页面标题，使用当前组件，uni-app 如果开启统计，将会自动统计页面标题"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=1066"
+    },
+    {
+      "name": "property",
+      "description": "{String} type = [h1|h2|h3|h4|h5] 标题类型"
+    },
+    {
+      "name": "value",
+      "description": "h1 一级标题"
+    },
+    {
+      "name": "value",
+      "description": "h2 二级标题"
+    },
+    {
+      "name": "value",
+      "description": "h3 三级标题"
+    },
+    {
+      "name": "value",
+      "description": "h4 四级标题"
+    },
+    {
+      "name": "value",
+      "description": "h5 五级标题"
+    },
+    {
+      "name": "property",
+      "description": "{String} title 标题内容"
+    },
+    {
+      "name": "property",
+      "description": "{String} align = [left|center|right] 对齐方式"
+    },
+    {
+      "name": "value",
+      "description": "left 做对齐"
+    },
+    {
+      "name": "value",
+      "description": "center 居中对齐"
+    },
+    {
+      "name": "value",
+      "description": "right 右对齐"
+    },
+    {
+      "name": "property",
+      "description": "{String} color 字体颜色"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} stat = [true|false] 是否开启统计功能呢，如不填写type值，默认为开启，填写 type 属性，默认为关闭"
+    }
+  ],
+  "slots": [],
   "props": [
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "type",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "title",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "align",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'left'"
-      }
+      "type": "String",
+      "default": "\"left\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "color",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'#333333'"
-      }
+      "type": "String",
+      "default": "\"#333333\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "stat",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textAlign",
+      "dependencies": [
+        "align"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isOpenStat",
+      "params": [],
+      "syntax": [
+        "isOpenStat(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
       }
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-title/uni-title.vue"
-  ]
+  "name": "UniTitle",
+  "description": "Title 标题"
 }

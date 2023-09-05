@@ -1,133 +1,183 @@
 {
-  "displayName": "UniDrawer",
-  "description": "Drawer 抽屉",
-  "tags": {
-    "description": [
-      {
-        "description": "抽屉侧滑菜单",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=26",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "mask",
-        "description": "= [true | false] 是否显示遮罩"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "maskClick",
-        "description": "= [true | false] 点击遮罩是否关闭"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "mode",
-        "description": "= [left | right] Drawer 滑出位置"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "name": "width",
-        "description": "抽屉的宽度 ，仅 vue 页面生效"
-      }
-    ],
-    "value": [
-      {
-        "description": "left 从左侧滑出",
-        "title": "value"
-      },
-      {
-        "description": "right 从右侧侧滑出",
-        "title": "value"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} close 组件关闭时触发事件",
-        "title": "event"
-      }
-    ]
-  },
-  "exportName": "default",
-  "props": [
-    {
-      "name": "mode",
-      "description": "显示模式（左、右），只在初始化生效",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
-    },
-    {
-      "name": "mask",
-      "description": "蒙层显示状态",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
-    },
-    {
-      "name": "maskClick",
-      "description": "遮罩是否可点击关闭",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
-    },
-    {
-      "name": "width",
-      "description": "抽屉宽度",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "220"
-      }
-    }
-  ],
-  "events": [
-    {
-      "name": "change",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
-    }
-  ],
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
   "slots": [
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-drawer/uni-drawer.vue"
-  ]
+  "props": [
+    {
+      "kind": "prop",
+      "description": "显示模式（左、右），只在初始化生效",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "蒙层显示状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "遮罩是否可点击关闭",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask-click",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "抽屉宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": "Number",
+      "default": "220",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "visibleSync",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showDrawer",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightMode",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "watchTimer",
+      "type": "any",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "drawerWidth",
+      "type": "number",
+      "initialValue": "220"
+    }
+  ],
+  "computed": [],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear",
+      "params": [],
+      "syntax": [
+        "clear(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "close(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "params": [],
+      "syntax": [
+        "open(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_change",
+      "params": [
+        {
+          "name": "param1",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "param2",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "status",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_change(param1: unknow, param2: unknow, status: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniDrawer",
+  "description": "#endif"
 }

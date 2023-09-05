@@ -1,55 +1,94 @@
 {
-  "description": "BreadcrumbItem 面包屑导航子组件",
-  "tags": {
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "String/Object"
-        },
-        "name": "to",
-        "description": "路由跳转页面路径/对象"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "replace",
-        "description": "在使用 to 进行路由跳转时，启用 replace 将不会向 history 添加新记录(仅 h5 支持）"
-      }
-    ]
-  },
-  "exportName": "default",
-  "displayName": "uni-breadcrumb-item",
-  "props": [
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
     {
-      "name": "to",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "property",
+      "description": "{String/Object} to 路由跳转页面路径/对象"
     },
     {
-      "name": "replace",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "name": "property",
+      "description": "{Boolean} replace 在使用 to 进行路由跳转时，启用 replace 将不会向 history 添加新记录(仅 h5 支持）"
     }
   ],
   "slots": [
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-breadcrumb-item/uni-breadcrumb-item.vue"
-  ]
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "to",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "replace",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "currentPage",
+      "type": "string",
+      "initialValue": "\"\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "separator",
+      "dependencies": [
+        "uniBreadcrumb"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "separatorClass",
+      "dependencies": [
+        "uniBreadcrumb"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "navTo",
+      "params": [],
+      "syntax": [
+        "navTo(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "description": "BreadcrumbItem 面包屑导航子组件",
+  "name": "uni-breadcrumb-item"
 }

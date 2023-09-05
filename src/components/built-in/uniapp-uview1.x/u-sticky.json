@@ -1,0 +1,285 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件与CSS中position: sticky属性实现的效果一致，当组件达到预设的到顶部距离时， 就会固定在指定位置，组件位置大于预设的顶部距离时，会重新按照正常的布局排列。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/sticky.html"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} offset-top 吸顶时与顶部的距离，单位rpx（默认0）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} index 自定义标识，用于区分是哪一个组件"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} enable 是否开启吸顶功能（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String} bg-color 组件背景颜色（默认#ffffff）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} z-index 吸顶时的z-index值（默认970）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} h5-nav-height 导航栏高度，自定义导航栏时(无导航栏时需设置为0)，需要传入此值，单位px（默认44）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} fixed 组件吸顶时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} unfixed 组件取消吸顶时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-sticky offset-top=\"200\"><view>塞下秋来风景异，衡阳雁去无留意</view></u-sticky>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "吸顶容器到顶部某个距离的时候，进行吸顶，在H5平台，NavigationBar为44px",
+      "keywords": [],
+      "visibility": "public",
+      "name": "offset-top",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "列表中的索引值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "index",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否开启吸顶功能",
+      "keywords": [],
+      "visibility": "public",
+      "name": "enable",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "h5顶部导航栏的高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "h5-nav-height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "44",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "吸顶区域的背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"#ffffff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "z-index值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "z-index",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fixed",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": "string",
+      "initialValue": "\"auto\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "stickyTop",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "elClass",
+      "type": "CallExpression",
+      "initialValue": "this.$u.guid()"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": "string",
+      "initialValue": "\"auto\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uZIndex",
+      "dependencies": [
+        "zIndex",
+        "$u"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fixed",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "initObserver",
+      "params": [],
+      "syntax": [
+        "initObserver(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "observeContent",
+      "params": [],
+      "syntax": [
+        "observeContent(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setFixed",
+      "params": [
+        {
+          "name": "top",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setFixed(top: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disconnectObserver",
+      "params": [
+        {
+          "name": "observerName",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "disconnectObserver(observerName: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-sticky",
+  "description": "sticky 吸顶"
+}

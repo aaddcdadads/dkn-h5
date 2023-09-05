@@ -1,0 +1,306 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "显示与否",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "通过v-model绑定current值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description": "整个tabbar的背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"#ffffff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "tabbar的高度，默认50px，单位任意，如果为数值，则为rpx单位",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"50px\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "非凸起图标的大小，单位任意，数值默认rpx",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon-size",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "40",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "凸起的图标的大小，单位任意，数值默认rpx",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mid-button-size",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "90",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "激活时的演示，包括字体图标，提示文字等的演示",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active-color",
+      "type": "String",
+      "default": "\"#303133\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "未激活时的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactive-color",
+      "type": "String",
+      "default": "\"#606266\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示中部的凸起按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mid-button",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "配置参数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "list",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn []\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "切换前的回调",
+      "keywords": [],
+      "visibility": "public",
+      "name": "before-switch",
+      "type": "Function",
+      "default": "null",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示顶部的横线",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-top",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否隐藏原生tabbar",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hide-tab-bar",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "description": "由于安卓太菜了，通过css居中凸起按钮的外层元素有误差，故通过js计算将其居中",
+      "keywords": [],
+      "visibility": "public",
+      "name": "midButtonLeft",
+      "type": "string",
+      "initialValue": "\"50%\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pageUrl",
+      "type": "string",
+      "initialValue": "\"\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "elIconPath",
+      "dependencies": [
+        "list",
+        "pageUrl",
+        "value"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "elColor",
+      "dependencies": [
+        "list",
+        "pageUrl",
+        "activeColor",
+        "inactiveColor",
+        "value"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "description": "发出事件和修改v-model绑定的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "async clickHandler(index: unknow): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "切换tab",
+      "keywords": [],
+      "visibility": "public",
+      "name": "switchTab",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "switchTab(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "计算角标的right值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getOffsetRight",
+      "params": [
+        {
+          "name": "count",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "isDot",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getOffsetRight(count: unknow, isDot: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取凸起按钮外层元素的left值，让其水平居中",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getMidButtonLeft",
+      "params": [],
+      "syntax": [
+        "getMidButtonLeft(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-tabbar"
+}

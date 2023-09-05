@@ -1,192 +1,286 @@
 {
-  "displayName": "uniTh",
-  "description": "Th 表头",
-  "tags": {
-    "description": [
-      {
-        "description": "表格内的表头单元格组件",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=3270",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "Number | String"
-        },
-        "description": "width \t单元格宽度（支持纯数字、携带单位px或rpx）"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "description": "sortable \t\t\t\t\t是否启用排序"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "description": "align = [left|center|right]\t单元格对齐方式"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Array"
-        },
-        "description": "filterData 筛选数据"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "description": "filterType\t[search|select] 筛选类型"
-      }
-    ],
-    "value": [
-      {
-        "description": "left   \t单元格文字左侧对齐",
-        "title": "value"
-      },
-      {
-        "description": "center\t单元格文字居中",
-        "title": "value"
-      },
-      {
-        "description": "right\t\t单元格文字右侧对齐",
-        "title": "value"
-      },
-      {
-        "description": "search\t关键字搜素",
-        "title": "value"
-      },
-      {
-        "description": "select\t条件选择",
-        "title": "value"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} sort-change 排序触发事件",
-        "title": "event"
-      }
-    ]
-  },
-  "exportName": "default",
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
   "props": [
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "width",
-      "type": {
-        "name": "string|number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "align",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'left'"
-      }
+      "type": "String",
+      "default": "\"left\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "rowspan",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "1"
-      }
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "1",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "colspan",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "1"
-      }
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "1",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "sortable",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "filterType",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "\"\""
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "filter-type",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "filterData",
-      "type": {
-        "name": "array"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "[]"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "filter-data",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\treturn []\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "filterDefaultValue",
-      "type": {
-        "name": "array|string"
-      },
-      "defaultValue": {
-        "func": true,
-        "value": "function() {\n    return \"\"\n}"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "filter-default-value",
+      "type": [
+        "Array",
+        "String"
+      ],
+      "default": "function() {\r\n\t\t\t\treturn \"\"\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "ascending",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "descending",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "根据props中的width属性 自动匹配当前th的宽度(px)",
+      "keywords": [],
+      "visibility": "public",
+      "name": "customWidth",
+      "dependencies": [
+        "width"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentAlign",
+      "dependencies": [
+        "align"
+      ]
     }
   ],
   "events": [
     {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
       "name": "sort-change",
-      "type": {
-        "names": [
-          "undefined"
-        ]
+      "arguments": [
+        {
+          "name": "{ order: 'ascending' }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "filter-change",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sort",
+      "params": [],
+      "syntax": [
+        "sort(): void"
+      ],
+      "returns": {
+        "type": "void"
       }
     },
     {
-      "name": "filter-change",
-      "type": {
-        "names": [
-          "undefined"
-        ]
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "ascendingFn",
+      "params": [],
+      "syntax": [
+        "ascendingFn(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "descendingFn",
+      "params": [],
+      "syntax": [
+        "descendingFn(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearOther",
+      "params": [],
+      "syntax": [
+        "clearOther(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "ondropdown",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "ondropdown(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取父元素实例",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getTable",
+      "params": [
+        {
+          "name": "name",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getTable(name: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
       }
     }
   ],
-  "slots": [
-    {
-      "name": "default"
-    }
-  ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-th/uni-th.vue"
-  ]
+  "name": "uniTh",
+  "description": "#endif"
 }

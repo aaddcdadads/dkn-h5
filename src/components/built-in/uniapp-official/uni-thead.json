@@ -1,14 +1,129 @@
 {
-  "displayName": "uniThead",
-  "exportName": "default",
-  "description": "",
-  "tags": {},
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
   "slots": [
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-thead/uni-thead.vue"
-  ]
+  "props": [],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selection",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rowspan",
+      "type": "number",
+      "initialValue": "1"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "indeterminate",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "checked",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [
+        {
+          "name": "self",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "init(self: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "checkboxSelected",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "checkboxSelected(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取父元素实例",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getTable",
+      "params": [
+        {
+          "name": "name",
+          "type": "string",
+          "defaultValue": "\"uniTable\"",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getTable(name: string = \"uniTable\"): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    }
+  ],
+  "name": "uniThead"
 }

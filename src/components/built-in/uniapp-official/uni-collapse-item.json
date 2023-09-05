@@ -1,190 +1,303 @@
 {
-  "displayName": "uniCollapseItem",
-  "description": "CollapseItem 折叠面板子组件",
-  "tags": {
-    "description": [
-      {
-        "description": "折叠面板子组件",
-        "title": "description"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "title",
-        "description": "标题文字"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "thumb",
-        "description": "标题左侧缩略图"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "name",
-        "description": "唯一标志符"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "open",
-        "description": "= [true|false] 是否展开组件"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "titleBorder",
-        "description": "= [true|false] 是否显示标题分隔线"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "border",
-        "description": "= [true|false] 是否显示分隔线"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "disabled",
-        "description": "= [true|false] 是否展开面板"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "showAnimation",
-        "description": "= [true|false] 开启动画"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "showArrow",
-        "description": "= [true|false] 是否显示右侧箭头"
-      }
-    ]
-  },
-  "exportName": "default",
-  "props": [
-    {
-      "name": "title",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
-    },
-    {
-      "name": "name",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
-    },
-    {
-      "name": "disabled",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
-    },
-    {
-      "name": "showAnimation",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
-    },
-    {
-      "name": "open",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
-    },
-    {
-      "name": "thumb",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
-    },
-    {
-      "name": "titleBorder",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'auto'"
-      }
-    },
-    {
-      "name": "border",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
-    },
-    {
-      "name": "showArrow",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
-    }
-  ],
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
   "slots": [
     {
-      "name": "title"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "props": []
     },
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-collapse-item/uni-collapse-item.vue"
-  ]
+  "props": [
+    {
+      "kind": "prop",
+      "description": "列表标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "name",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否禁用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示动画,app 端默认不开启动画，卡顿严重",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-animation",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示动画",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-animation",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否展开",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "缩略图",
+      "keywords": [],
+      "visibility": "public",
+      "name": "thumb",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题分隔线显示类型",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title-border",
+      "type": "String",
+      "default": "\"auto\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-arrow",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isOpen",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isheight",
+      "type": "any",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "elId",
+      "type": "string",
+      "initialValue": "`Uni_${Math.ceil(Math.random() * 10e5).toString(36)}`"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nameSync",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "init(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uninstall",
+      "params": [],
+      "syntax": [
+        "uninstall(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClick",
+      "params": [
+        {
+          "name": "isOpen",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onClick(isOpen: unknow, type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getCollapseHeight",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "index",
+          "type": "number",
+          "defaultValue": "0",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getCollapseHeight(type: unknow, index: number = 0): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getNvueHwight",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getNvueHwight(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取父元素实例",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getCollapse",
+      "params": [
+        {
+          "name": "name",
+          "type": "string",
+          "defaultValue": "\"uniCollapse\"",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getCollapse(name: string = \"uniCollapse\"): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    }
+  ],
+  "name": "uniCollapseItem",
+  "description": "#endif"
 }

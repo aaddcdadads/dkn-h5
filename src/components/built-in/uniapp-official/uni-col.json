@@ -1,86 +1,243 @@
 {
-  "displayName": "uniCol",
-  "exportName": "default",
-  "description": "",
-  "tags": {},
-  "props": [
-    {
-      "name": "span",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "24"
-      }
-    },
-    {
-      "name": "offset",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "-1"
-      }
-    },
-    {
-      "name": "pull",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "-1"
-      }
-    },
-    {
-      "name": "push",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "-1"
-      }
-    },
-    {
-      "name": "xs",
-      "type": {
-        "name": "number|object"
-      }
-    },
-    {
-      "name": "sm",
-      "type": {
-        "name": "number|object"
-      }
-    },
-    {
-      "name": "md",
-      "type": {
-        "name": "number|object"
-      }
-    },
-    {
-      "name": "lg",
-      "type": {
-        "name": "number|object"
-      }
-    },
-    {
-      "name": "xl",
-      "type": {
-        "name": "number|object"
-      }
-    }
-  ],
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
   "slots": [
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-col/uni-col.vue"
-  ]
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "span",
+      "type": "Number",
+      "default": "24",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "offset",
+      "type": "Number",
+      "default": "-1",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pull",
+      "type": "Number",
+      "default": "-1",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "push",
+      "type": "Number",
+      "default": "-1",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "xs",
+      "type": [
+        "Number",
+        "Object"
+      ],
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sm",
+      "type": [
+        "Number",
+        "Object"
+      ],
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "md",
+      "type": [
+        "Number",
+        "Object"
+      ],
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lg",
+      "type": [
+        "Number",
+        "Object"
+      ],
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "xl",
+      "type": [
+        "Number",
+        "Object"
+      ],
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "gutter",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sizeClass",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "parentWidth",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nvueWidth",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "marginLeft",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sizeList",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "description": "#ifndef APP-NVUE",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pointClassList",
+      "dependencies": []
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateGutter",
+      "params": [
+        {
+          "name": "parentGutter",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "updateGutter(parentGutter: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "#ifdef APP-NVUE",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateNvueWidth",
+      "params": [
+        {
+          "name": "width",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "updateNvueWidth(width: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "uniCol",
+  "description": "-1 默认值，因为在微信小程序端只给Number会有默认值0"
 }

@@ -1,41 +1,114 @@
 {
-  "displayName": "UniPopupShare",
-  "exportName": "default",
-  "description": "",
-  "tags": {},
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
   "props": [
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "title",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "beforeClose",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "before-close",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bottomData",
+      "type": "array",
+      "initialValue": "[{ text: '微信', icon: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/c2b17470-50be-11eb-b680-7980c8a877b8.png', name: 'wx' }, { text: '支付宝', icon: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/d684ae40-50be-11eb-8ff1-d5dcf8779628.png', name: 'wx' }, { text: 'QQ', icon: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/e7a79520-50be-11eb-b997-9918a5dda011.png', name: 'qq' }, { text: '新浪', icon: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/0dacdbe0-50bf-11eb-8ff1-d5dcf8779628.png', name: 'sina' }, // { // text: '百度', // icon: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/1ec6e920-50bf-11eb-8a36-ebb87efcf8c0.png', // name: 'copy' // }, // { // text: '其他', // icon: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/2e0fdfe0-50bf-11eb-b997-9918a5dda011.png', // name: 'more' // } ]"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancelText",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "shareTitleText",
+      "dependencies": [
+        "title"
+      ]
     }
   ],
   "events": [
     {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
       "name": "select",
-      "type": {
-        "names": [
-          "undefined"
-        ]
+      "arguments": [
+        {
+          "name": "{ item, index }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "选择内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "select",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "select(item: unknow, index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "关闭窗口",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
       }
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-popup-share/uni-popup-share.vue"
-  ]
+  "name": "UniPopupShare"
 }

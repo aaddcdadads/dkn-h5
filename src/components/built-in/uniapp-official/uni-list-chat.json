@@ -1,259 +1,368 @@
 {
-  "displayName": "UniListChat",
-  "description": "ListChat 聊天列表",
-  "tags": {
-    "description": [
-      {
-        "description": "聊天列表,用于创建聊天类列表",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=24",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "description": "title \t\t\t\t\t\t\t标题"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "description": "note \t\t\t\t\t\t\t描述"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "description": "clickable = [true|false] \t\t是否开启点击反馈，默认为false"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "description": "badgeText\t\t\t\t\t\t数字角标内容"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "description": "badgePositon = [left|right]\t\t角标位置，默认为 right"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "description": "link = [false｜navigateTo|redirectTo|reLaunch|switchTab] 是否展示右侧箭头并开启点击反馈，默认为false"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String | PageURIString"
-        },
-        "description": "to  \t\t\t跳转目标页面"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "description": "time\t\t\t\t\t\t\t右侧时间显示"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "description": "avatarCircle = [true|false]\t\t是否显示圆形头像，默认为false"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "description": "avatar\t\t\t\t\t\t\t头像地址，avatarCircle 不填时生效"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Array"
-        },
-        "description": "avatarList \t\t\t\t\t\t头像组，格式为 [{url:''}]"
-      }
-    ],
-    "value": [
-      {
-        "description": "false\t \t不开启",
-        "title": "value"
-      },
-      {
-        "description": "navigateTo \t同 uni.navigateTo()",
-        "title": "value"
-      },
-      {
-        "description": "redirectTo \t同 uni.redirectTo()",
-        "title": "value"
-      },
-      {
-        "description": "reLaunch   \t同 uni.reLaunch()",
-        "title": "value"
-      },
-      {
-        "description": "switchTab  \t同 uni.switchTab()",
-        "title": "value"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} \tclick \t\t\t\t\t\t\t点击 uniListChat 触发事件",
-        "title": "event"
-      }
-    ]
-  },
-  "exportName": "default",
-  "props": [
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
     {
-      "name": "title",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "description",
+      "description": "聊天列表,用于创建聊天类列表"
     },
     {
-      "name": "note",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=24"
     },
     {
-      "name": "clickable",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "name": "property",
+      "description": "{String} \ttitle \t\t\t\t\t\t\t标题"
     },
     {
-      "name": "link",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "name": "property",
+      "description": "{String} \tnote \t\t\t\t\t\t\t描述"
     },
     {
-      "name": "to",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "property",
+      "description": "{Boolean} \tclickable = [true|false] \t\t是否开启点击反馈，默认为false"
     },
     {
-      "name": "badgeText",
-      "type": {
-        "name": "string|number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "property",
+      "description": "{String} \tbadgeText\t\t\t\t\t\t数字角标内容"
     },
     {
-      "name": "badgePositon",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'right'"
-      }
+      "name": "property",
+      "description": "{String}  \tbadgePositon = [left|right]\t\t角标位置，默认为 right"
     },
     {
-      "name": "time",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "property",
+      "description": "{String} \tlink = [false｜navigateTo|redirectTo|reLaunch|switchTab] 是否展示右侧箭头并开启点击反馈，默认为false"
     },
     {
-      "name": "avatarCircle",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "name": "value",
+      "description": "false\t \t不开启"
     },
     {
-      "name": "avatar",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "value",
+      "description": "navigateTo \t同 uni.navigateTo()"
     },
     {
-      "name": "avatarList",
-      "type": {
-        "name": "array"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "[]"
-      }
-    }
-  ],
-  "events": [
+      "name": "value",
+      "description": "redirectTo \t同 uni.redirectTo()"
+    },
     {
-      "name": "click",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
+      "name": "value",
+      "description": "reLaunch   \t同 uni.reLaunch()"
+    },
+    {
+      "name": "value",
+      "description": "switchTab  \t同 uni.switchTab()"
+    },
+    {
+      "name": "property",
+      "description": "{String | PageURIString} \tto  \t\t\t跳转目标页面"
+    },
+    {
+      "name": "property",
+      "description": "{String} \ttime\t\t\t\t\t\t\t右侧时间显示"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} \tavatarCircle = [true|false]\t\t是否显示圆形头像，默认为false"
+    },
+    {
+      "name": "property",
+      "description": "{String} \tavatar\t\t\t\t\t\t\t头像地址，avatarCircle 不填时生效"
+    },
+    {
+      "name": "property",
+      "description": "{Array} \tavatarList \t\t\t\t\t\t头像组，格式为 [{url:''}]"
+    },
+    {
+      "name": "event",
+      "description": "{Function} \tclick \t\t\t\t\t\t\t点击 uniListChat 触发事件"
     }
   ],
   "slots": [
     {
-      "name": "header"
+      "kind": "slot",
+      "description": "#endif",
+      "keywords": [],
+      "visibility": "public",
+      "name": "header",
+      "props": []
     },
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-list-chat/uni-list-chat.vue"
-  ]
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "note",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickable",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "link",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "to",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "badge-text",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "badge-positon",
+      "type": "String",
+      "default": "\"right\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "time",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "avatar-circle",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "avatar",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "avatar-list",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn [];\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isFirstChild",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "kind": "data",
+      "description": "avatarList: 3,",
+      "keywords": [],
+      "visibility": "public",
+      "name": "imageWidth",
+      "type": "number",
+      "initialValue": "50"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "avatarUrl",
+      "type": "string",
+      "initialValue": "\"\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isDraft",
+      "dependencies": [
+        "note"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isSingle",
+      "dependencies": [
+        "badgeText"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "computedAvatar",
+      "dependencies": [
+        "avatarList",
+        "imageWidth"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": [
+        {
+          "name": "{ data: {} }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "获取父元素实例",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getForm",
+      "params": [
+        {
+          "name": "name",
+          "type": "string",
+          "defaultValue": "\"uniList\"",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getForm(name: string = \"uniList\"): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClick",
+      "params": [],
+      "syntax": [
+        "onClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "openPage",
+      "params": [],
+      "syntax": [
+        "openPage(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pageApi",
+      "params": [
+        {
+          "name": "api",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "pageApi(api: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniListChat",
+  "description": "ListChat 聊天列表"
 }

@@ -1,103 +1,147 @@
 {
-  "displayName": "uniGroup",
-  "description": "Group 分组",
-  "tags": {
-    "description": [
-      {
-        "description": "表单字段分组",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=3281",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "title",
-        "description": "主标题"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "name": "top",
-        "description": "分组间隔"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "name": "mode",
-        "description": "模式"
-      }
-    ]
-  },
-  "exportName": "default",
-  "props": [
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
     {
-      "name": "title",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "description",
+      "description": "表单字段分组"
     },
     {
-      "name": "top",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "10"
-      }
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=3281"
     },
     {
-      "name": "mode",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'default'"
-      }
+      "name": "property",
+      "description": "{String} title 主标题"
     },
     {
-      "name": "stat",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
-    }
-  ],
-  "events": [
+      "name": "property",
+      "description": "{Number} top 分组间隔"
+    },
     {
-      "name": "click"
+      "name": "property",
+      "description": "{Number} mode 模式"
     }
   ],
   "slots": [
     {
-      "name": "title"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "props": []
     },
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-group/uni-group.vue"
-  ]
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "top",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "10",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "default": "\"default\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "stat",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "margin",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "获取父元素实例",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getForm",
+      "params": [],
+      "syntax": [
+        "getForm(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClick",
+      "params": [],
+      "syntax": [
+        "onClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "uniGroup",
+  "description": "Group 分组"
 }

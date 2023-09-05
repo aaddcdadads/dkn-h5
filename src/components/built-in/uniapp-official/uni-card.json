@@ -1,275 +1,267 @@
 {
-  "displayName": "UniCard",
-  "description": "Card 卡片",
-  "tags": {
-    "description": [
-      {
-        "description": "卡片视图组件",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=22",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "title",
-        "description": "标题文字"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "subTitle",
-        "description": "副标题"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "name": "padding",
-        "description": "内容内边距"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "name": "margin",
-        "description": "卡片外边距"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "name": "spacing",
-        "description": "卡片内边距"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "extra",
-        "description": "标题额外信息"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "cover",
-        "description": "封面图（本地路径需要引入）"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "thumbnail",
-        "description": "标题左侧缩略图"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "is-full",
-        "description": "= [true | false] 卡片内容是否通栏，为 true 时将去除padding值"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "is-shadow",
-        "description": "= [true | false] 卡片内容是否开启阴影"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "shadow",
-        "description": "卡片阴影"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "border",
-        "description": "卡片边框"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} click 点击 Card 触发事件",
-        "title": "event"
-      }
-    ]
-  },
-  "exportName": "default",
-  "props": [
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
     {
-      "name": "title",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "description",
+      "description": "卡片视图组件"
     },
     {
-      "name": "subTitle",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=22"
     },
     {
-      "name": "padding",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'10px'"
-      }
+      "name": "property",
+      "description": "{String} title 标题文字"
     },
     {
-      "name": "margin",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'15px'"
-      }
+      "name": "property",
+      "description": "{String} subTitle 副标题"
     },
     {
-      "name": "spacing",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'0 10px'"
-      }
+      "name": "property",
+      "description": "{Number} padding 内容内边距"
     },
     {
-      "name": "extra",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "property",
+      "description": "{Number} margin 卡片外边距"
     },
     {
-      "name": "cover",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "property",
+      "description": "{Number} spacing 卡片内边距"
     },
     {
-      "name": "thumbnail",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "property",
+      "description": "{String} extra 标题额外信息"
     },
     {
-      "name": "isFull",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "name": "property",
+      "description": "{String} cover 封面图（本地路径需要引入）"
     },
     {
-      "name": "isShadow",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
+      "name": "property",
+      "description": "{String} thumbnail 标题左侧缩略图"
     },
     {
-      "name": "shadow",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'0px 0px 3px 1px rgba(0, 0, 0, 0.08)'"
-      }
+      "name": "property",
+      "description": "{Boolean} is-full = [true | false] 卡片内容是否通栏，为 true 时将去除padding值"
     },
     {
-      "name": "border",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
-    }
-  ],
-  "events": [
+      "name": "property",
+      "description": "{Boolean} is-shadow = [true | false] 卡片内容是否开启阴影"
+    },
     {
-      "name": "click",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
+      "name": "property",
+      "description": "{String} shadow 卡片阴影"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} border 卡片边框"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 点击 Card 触发事件"
     }
   ],
   "slots": [
     {
-      "name": "cover"
+      "kind": "slot",
+      "description": "封面",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cover",
+      "props": []
     },
     {
-      "name": "title"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "props": []
     },
     {
-      "name": "extra"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "extra",
+      "props": []
     },
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     },
     {
-      "name": "actions"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "actions",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-card/uni-card.vue"
-  ]
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sub-title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "padding",
+      "type": "String",
+      "default": "\"10px\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "margin",
+      "type": "String",
+      "default": "\"15px\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "spacing",
+      "type": "String",
+      "default": "\"0 10px\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "extra",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cover",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "thumbnail",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "is-full",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "is-shadow",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "shadow",
+      "type": "String",
+      "default": "\"0px 0px 3px 1px rgba(0, 0, 0, 0.08)\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": [
+        {
+          "name": "type",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClick",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onClick(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniCard",
+  "description": "Card 卡片"
 }

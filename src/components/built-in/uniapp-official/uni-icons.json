@@ -1,109 +1,109 @@
 {
-  "displayName": "UniIcons",
-  "description": "Icons 图标",
-  "tags": {
-    "description": [
-      {
-        "description": "用于展示 icons 图标",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=28",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "name": "size",
-        "description": "图标大小"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "type",
-        "description": "图标图案，参考示例"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "color",
-        "description": "图标颜色"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "customPrefix",
-        "description": "自定义图标"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} click 点击 Icon 触发事件",
-        "title": "event"
-      }
-    ]
-  },
-  "exportName": "default",
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
   "props": [
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "type",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "color",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'#333333'"
-      }
+      "type": "String",
+      "default": "\"#333333\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "size",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "16"
-      }
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "16",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "customPrefix",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "custom-prefix",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icons",
+      "type": "object",
+      "initialValue": "icons.glyphs"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "unicode",
+      "dependencies": [
+        "icons",
+        "type"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconSize",
+      "dependencies": [
+        "size"
+      ]
     }
   ],
   "events": [
     {
-      "name": "click"
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-icons/uni-icons.vue"
-  ]
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_onClick",
+      "params": [],
+      "syntax": [
+        "_onClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniIcons",
+  "description": "#endif"
 }

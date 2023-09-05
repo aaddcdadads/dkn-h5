@@ -1,124 +1,135 @@
 {
-  "displayName": "UniSegmentedControl",
-  "description": "SegmentedControl 分段器",
-  "tags": {
-    "description": [
-      {
-        "description": "用作不同视图的显示",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=54",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "name": "current",
-        "description": "当前选中的tab索引值，从0计数"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "styleType",
-        "description": "= [button|text] 分段器样式类型"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "activeColor",
-        "description": "选中的标签背景色与边框颜色"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Array"
-        },
-        "name": "values",
-        "description": "选项数组"
-      }
-    ],
-    "value": [
-      {
-        "description": "button 按钮类型",
-        "title": "value"
-      },
-      {
-        "description": "text 文字类型",
-        "title": "value"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} clickItem 组件触发点击事件时触发，e={currentIndex}",
-        "title": "event"
-      }
-    ]
-  },
-  "exportName": "default",
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "用作不同视图的显示"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=54"
+    },
+    {
+      "name": "property",
+      "description": "{Number} current 当前选中的tab索引值，从0计数"
+    },
+    {
+      "name": "property",
+      "description": "{String} styleType = [button|text] 分段器样式类型"
+    },
+    {
+      "name": "value",
+      "description": "button 按钮类型"
+    },
+    {
+      "name": "value",
+      "description": "text 文字类型"
+    },
+    {
+      "name": "property",
+      "description": "{String} activeColor 选中的标签背景色与边框颜色"
+    },
+    {
+      "name": "property",
+      "description": "{Array} values 选项数组"
+    },
+    {
+      "name": "event",
+      "description": "{Function} clickItem 组件触发点击事件时触发，e={currentIndex}"
+    }
+  ],
+  "slots": [],
   "props": [
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "current",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "0"
-      }
+      "type": "Number",
+      "default": "0",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "values",
-      "type": {
-        "name": "array"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "[]"
-      }
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn []\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "activeColor",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'#2979FF'"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active-color",
+      "type": "String",
+      "default": "\"#2979FF\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "styleType",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'button'"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "style-type",
+      "type": "String",
+      "default": "\"button\"",
+      "required": false,
+      "describeModel": false
     }
   ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "currentIndex",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [],
   "events": [
     {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
       "name": "clickItem",
-      "type": {
-        "names": [
-          "undefined"
-        ]
+      "arguments": [
+        {
+          "name": "{ currentIndex: index }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_onClick",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_onClick(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
       }
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control.vue"
-  ]
+  "name": "UniSegmentedControl",
+  "description": "SegmentedControl 分段器"
 }

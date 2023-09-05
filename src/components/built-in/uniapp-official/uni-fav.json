@@ -1,106 +1,151 @@
 {
-  "displayName": "UniFav",
-  "exportName": "default",
-  "description": "",
-  "tags": {},
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
   "props": [
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "star",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "true",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "bgColor",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "\"#eeeeee\""
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"#eeeeee\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "fgColor",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "\"#666666\""
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fg-color",
+      "type": "String",
+      "default": "\"#666666\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "bgColorChecked",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "\"#007aff\""
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color-checked",
+      "type": "String",
+      "default": "\"#007aff\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "fgColorChecked",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "\"#FFFFFF\""
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fg-color-checked",
+      "type": "String",
+      "default": "\"#FFFFFF\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "circle",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "checked",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "contentText",
-      "type": {
-        "name": "object"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "{\n    contentDefault: \"\",\n    contentFav: \"\"\n}"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "content-text",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\tcontentDefault: \"\",\r\n\t\t\t\t\t\tcontentFav: \"\"\r\n\t\t\t\t\t};\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "stat",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentDefault",
+      "dependencies": [
+        "contentText"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentFav",
+      "dependencies": [
+        "contentText"
+      ]
     }
   ],
   "events": [
     {
-      "name": "click"
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-fav/uni-fav.vue"
-  ]
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClick",
+      "params": [],
+      "syntax": [
+        "onClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniFav"
 }
