@@ -1,214 +1,539 @@
 {
-  "displayName": "uni-data-select",
-  "description": "DataChecklist 数据选择器",
-  "tags": {
-    "description": [
-      {
-        "description": "通过数据渲染的下拉框组件",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://uniapp.dcloud.io/component/uniui/uni-data-select",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "value",
-        "description": "默认值"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Array"
-        },
-        "name": "localdata",
-        "description": "本地数据 ，格式 [{text:'',value:''}]"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "clear",
-        "description": "是否可以清空已选项"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "emptyText",
-        "description": "没有数据时显示的文字 ，本地数据无效"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "label",
-        "description": "左侧标题"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "placeholder",
-        "description": "输入框的提示文字"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "disabled",
-        "description": "是否禁用"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} change  选中发生变化触发",
-        "title": "event"
-      }
-    ]
-  },
-  "exportName": "default",
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "通过数据渲染的下拉框组件"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://uniapp.dcloud.io/component/uniui/uni-data-select"
+    },
+    {
+      "name": "property",
+      "description": "{String} value 默认值"
+    },
+    {
+      "name": "property",
+      "description": "{Array} localdata 本地数据 ，格式 [{text:'',value:''}]"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} clear 是否可以清空已选项"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} emptyText 没有数据时显示的文字 ，本地数据无效"
+    },
+    {
+      "name": "property",
+      "description": "{String} label 左侧标题"
+    },
+    {
+      "name": "property",
+      "description": "{String} placeholder 输入框的提示文字"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} disabled 是否禁用"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change  选中发生变化触发"
+    }
+  ],
+  "slots": [],
   "props": [
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "localdata",
-      "type": {
-        "name": "array"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "[]"
-      }
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn []\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "value",
-      "type": {
-        "name": "string|number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": true
     },
     {
-      "name": "modelValue",
-      "type": {
-        "name": "string|number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "model-value",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "label",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "placeholder",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'请选择'"
-      }
+      "type": "String",
+      "default": "\"请选择\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "emptyTips",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'无选项'"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "empty-tips",
+      "type": "String",
+      "default": "\"无选项\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "clear",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "defItem",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "0"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "def-item",
+      "type": "Number",
+      "default": "0",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "disabled",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "description": "格式化输出 用法 field=\"_id as value, version as text, uni_platform as label\" format=\"{label} - {text}\"",
+      "keywords": [],
+      "visibility": "public",
       "name": "format",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showSelector",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "current",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mixinDatacomResData",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "apps",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "channels",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cacheKey",
+      "type": "string",
+      "initialValue": "\"uni-data-select-lastSelectedValue\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "typePlaceholder",
+      "dependencies": [
+        "placeholder",
+        "collection"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "valueCom",
+      "dependencies": [
+        "modelValue",
+        "value"
+      ]
     }
   ],
   "events": [
     {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
       "name": "input",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
     },
     {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
       "name": "update:modelValue",
-      "type": {
-        "names": [
-          "undefined"
-        ]
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "debounce",
+      "params": [
+        {
+          "name": "fn",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "time",
+          "type": "number",
+          "defaultValue": "100",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "debounce(fn: unknow, time: number = 100): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
       }
     },
     {
+      "kind": "method",
+      "description": "执行数据库查询",
+      "keywords": [],
+      "visibility": "public",
+      "name": "query",
+      "params": [],
+      "syntax": [
+        "query(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "监听查询条件变更事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onMixinDatacomPropsChange",
+      "params": [],
+      "syntax": [
+        "onMixinDatacomPropsChange(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "initDefVal",
+      "params": [],
+      "syntax": [
+        "initDefVal(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isDisabled",
+      "params": [
+        {
+          "name": "value",
+          "type": "[String, Number]",
+          "description": "判断用户给的 value 是否同时为禁用状态\n判断用户给的 value 是否同时为禁用状态",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "isDisabled(value: [String, Number]): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearVal",
+      "params": [],
+      "syntax": [
+        "clearVal(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
       "name": "change",
-      "type": {
-        "names": [
-          "undefined"
-        ]
+      "params": [
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "change(item: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "emit",
+      "params": [
+        {
+          "name": "val",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "emit(val: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toggleSelector",
+      "params": [],
+      "syntax": [
+        "toggleSelector(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "formatItemName",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "formatItemName(item: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取当前加载的数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getLoadData",
+      "params": [],
+      "syntax": [
+        "getLoadData(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取当前缓存key",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getCurrentCacheKey",
+      "params": [],
+      "syntax": [
+        "getCurrentCacheKey(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取缓存",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getCache",
+      "params": [
+        {
+          "name": "name",
+          "type": "CallExpression",
+          "defaultValue": "this.getCurrentCacheKey()",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getCache(name: CallExpression = this.getCurrentCacheKey()): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "设置缓存",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setCache",
+      "params": [
+        {
+          "name": "value",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "name",
+          "type": "CallExpression",
+          "defaultValue": "this.getCurrentCacheKey()",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setCache(value: unknow, name: CallExpression = this.getCurrentCacheKey()): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "删除缓存",
+      "keywords": [],
+      "visibility": "public",
+      "name": "removeCache",
+      "params": [
+        {
+          "name": "name",
+          "type": "CallExpression",
+          "defaultValue": "this.getCurrentCacheKey()",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "removeCache(name: CallExpression = this.getCurrentCacheKey()): void"
+      ],
+      "returns": {
+        "type": "void"
       }
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-data-select/uni-data-select.vue"
-  ]
+  "name": "uni-data-select",
+  "description": "DataChecklist 数据选择器"
 }

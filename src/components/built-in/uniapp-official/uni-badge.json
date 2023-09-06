@@ -1,240 +1,268 @@
 {
-  "displayName": "UniBadge",
-  "description": "Badge 数字角标",
-  "tags": {
-    "description": [
-      {
-        "description": "数字角标一般和其它控件（列表、9宫格等）配合使用，用于进行数量提示，默认为实心灰色背景",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=21",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "text",
-        "description": "角标内容"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "size",
-        "description": "= [normal|small] 角标内容"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "type",
-        "description": "= [info|primary|success|warning|error] 颜色类型"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "inverted",
-        "description": "= [true|false] 是否无需背景颜色"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "name": "maxNum",
-        "description": "展示封顶的数字值，超过 99 显示 99+"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "absolute",
-        "description": "= [rightTop|rightBottom|leftBottom|leftTop] 开启绝对定位, 角标将定位到其包裹的标签的四角上"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Array[number]"
-        },
-        "name": "offset",
-        "description": "距定位角中心点的偏移量，只有存在 absolute 属性时有效，例如：[-10, -10] 表示向外偏移 10px，[10, 10] 表示向 absolute 指定的内偏移 10px"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "isDot",
-        "description": "= [true|false] 是否显示为一个小点"
-      }
-    ],
-    "value": [
-      {
-        "description": "info 灰色",
-        "title": "value"
-      },
-      {
-        "description": "primary 蓝色",
-        "title": "value"
-      },
-      {
-        "description": "success 绿色",
-        "title": "value"
-      },
-      {
-        "description": "warning 黄色",
-        "title": "value"
-      },
-      {
-        "description": "error 红色",
-        "title": "value"
-      },
-      {
-        "description": "rightTop 右上",
-        "title": "value"
-      },
-      {
-        "description": "rightBottom 右下",
-        "title": "value"
-      },
-      {
-        "description": "leftTop 左上",
-        "title": "value"
-      },
-      {
-        "description": "leftBottom 左下",
-        "title": "value"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} click 点击 Badge 触发事件",
-        "title": "event"
-      }
-    ],
-    "examples": [
-      {
-        "title": "example",
-        "content": "<uni-badge text=\"1\"></uni-badge>"
-      }
-    ]
-  },
-  "exportName": "default",
-  "props": [
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
     {
-      "name": "type",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'error'"
-      }
+      "name": "description",
+      "description": "数字角标一般和其它控件（列表、9宫格等）配合使用，用于进行数量提示，默认为实心灰色背景"
     },
     {
-      "name": "inverted",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=21"
     },
     {
-      "name": "isDot",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "name": "property",
+      "description": "{String} text 角标内容"
     },
     {
-      "name": "maxNum",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "99"
-      }
+      "name": "property",
+      "description": "{String} size = [normal|small] 角标内容"
     },
     {
-      "name": "absolute",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "property",
+      "description": "{String} type = [info|primary|success|warning|error] 颜色类型"
     },
     {
-      "name": "offset",
-      "type": {
-        "name": "array"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "[0, 0]"
-      }
+      "name": "value",
+      "description": "info 灰色"
     },
     {
-      "name": "text",
-      "type": {
-        "name": "string|number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "value",
+      "description": "primary 蓝色"
     },
     {
-      "name": "size",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'small'"
-      }
+      "name": "value",
+      "description": "success 绿色"
     },
     {
-      "name": "customStyle",
-      "type": {
-        "name": "object"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "{}"
-      }
-    }
-  ],
-  "events": [
+      "name": "value",
+      "description": "warning 黄色"
+    },
     {
-      "name": "click"
+      "name": "value",
+      "description": "error 红色"
+    },
+    {
+      "name": "property",
+      "description": "{String} inverted = [true|false] 是否无需背景颜色"
+    },
+    {
+      "name": "property",
+      "description": "{Number} maxNum 展示封顶的数字值，超过 99 显示 99+"
+    },
+    {
+      "name": "property",
+      "description": "{String} absolute = [rightTop|rightBottom|leftBottom|leftTop] 开启绝对定位, 角标将定位到其包裹的标签的四角上"
+    },
+    {
+      "name": "value",
+      "description": "rightTop 右上"
+    },
+    {
+      "name": "value",
+      "description": "rightBottom 右下"
+    },
+    {
+      "name": "value",
+      "description": "leftTop 左上"
+    },
+    {
+      "name": "value",
+      "description": "leftBottom 左下"
+    },
+    {
+      "name": "property",
+      "description": "{Array[number]} offset\t距定位角中心点的偏移量，只有存在 absolute 属性时有效，例如：[-10, -10] 表示向外偏移 10px，[10, 10] 表示向 absolute 指定的内偏移 10px"
+    },
+    {
+      "name": "property",
+      "description": "{String} isDot = [true|false] 是否显示为一个小点"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 点击 Badge 触发事件"
+    },
+    {
+      "name": "example",
+      "description": "<uni-badge text=\"1\"></uni-badge>"
     }
   ],
   "slots": [
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-badge/uni-badge.vue"
-  ]
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "type",
+      "type": "String",
+      "default": "\"error\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inverted",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "is-dot",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "max-num",
+      "type": "Number",
+      "default": "99",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "absolute",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "offset",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn [0, 0]\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "text",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "size",
+      "type": "String",
+      "default": "\"small\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "custom-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "dependencies": [
+        "text"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "classNames",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "positionStyle",
+      "dependencies": [
+        "absolute",
+        "width",
+        "isDot",
+        "offset"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dotStyle",
+      "dependencies": [
+        "isDot"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "displayValue",
+      "dependencies": []
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClick",
+      "params": [],
+      "syntax": [
+        "onClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniBadge",
+  "description": "Badge 数字角标"
 }

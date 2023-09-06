@@ -1,70 +1,67 @@
 {
-  "displayName": "uni-tooltip",
-  "description": "Tooltip 提示文字",
-  "tags": {
-    "description": [
-      {
-        "description": "常用于展示鼠标 hover 时的提示信息。",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://uniapp.dcloud.io/component/uniui/uni-tooltip",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "content",
-        "description": "弹出层显示的内容"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "placement",
-        "description": "出现位置, 目前只支持 left"
-      }
-    ]
-  },
-  "exportName": "default",
-  "props": [
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
     {
-      "name": "content",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "description",
+      "description": "常用于展示鼠标 hover 时的提示信息。"
     },
     {
-      "name": "placement",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'bottom'"
-      }
+      "name": "tutorial",
+      "description": "https://uniapp.dcloud.io/component/uniui/uni-tooltip"
+    },
+    {
+      "name": "property",
+      "description": "{String} content   弹出层显示的内容"
+    },
+    {
+      "name": "property",
+      "description": "{String}  placement出现位置, 目前只支持 left"
     }
   ],
   "slots": [
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     },
     {
-      "name": "content"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "content",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-tooltip/uni-tooltip.vue"
-  ]
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "content",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placement",
+      "type": "String",
+      "default": "\"bottom\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "name": "uni-tooltip",
+  "description": "Tooltip 提示文字"
 }

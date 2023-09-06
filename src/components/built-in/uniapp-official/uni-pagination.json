@@ -1,153 +1,391 @@
 {
-  "displayName": "UniPagination",
-  "exportName": "default",
-  "description": "",
-  "tags": {},
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
   "props": [
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "value",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "1"
-      }
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "1",
+      "required": false,
+      "describeModel": true
     },
     {
-      "name": "modelValue",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "1"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "model-value",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "1",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "prevText",
-      "type": {
-        "name": "string"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "prev-text",
+      "type": "String",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "nextText",
-      "type": {
-        "name": "string"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "next-text",
+      "type": "String",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "piecePerPageText",
-      "type": {
-        "name": "string"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "piece-per-page-text",
+      "type": "String",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "current",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "1"
-      }
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "1",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "total",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "0"
-      }
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "pageSize",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "10"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "page-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "10",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "showIcon",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-icon",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "showPageSize",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-page-size",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "pagerCount",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "7"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pager-count",
+      "type": "Number",
+      "default": "7",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "pageSizeRange",
-      "type": {
-        "name": "array"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "[20, 50, 100, 500]"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "page-size-range",
+      "type": "Array",
+      "default": "() => [20, 50, 100, 500]",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pageSizeIndex",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "currentIndex",
+      "type": "number",
+      "initialValue": "1"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "paperData",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pickerShow",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "piecePerPage",
+      "dependencies": [
+        "piecePerPageText"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "prevPageText",
+      "dependencies": [
+        "prevText"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nextPageText",
+      "dependencies": [
+        "nextText"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maxPage",
+      "dependencies": [
+        "total",
+        "pageSize"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "paper",
+      "dependencies": [
+        "currentIndex",
+        "pagerCount",
+        "total",
+        "pageSize"
+      ]
     }
   ],
   "events": [
     {
-      "name": "update:modelValue",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
-    },
-    {
-      "name": "input",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
-    },
-    {
-      "name": "change",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
-    },
-    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
       "name": "pageSizeChange",
-      "type": {
-        "names": [
-          "undefined"
-        ]
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "currentIndex",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "update:modelValue",
+      "arguments": [
+        {
+          "name": "currentIndex",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "{ type: e, current: this.currentIndex }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pickerChange",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "pickerChange(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pickerClick",
+      "params": [],
+      "syntax": [
+        "pickerClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "选择标签",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selectPage",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "selectPage(e: unknow, index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickLeft",
+      "params": [],
+      "syntax": [
+        "clickLeft(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickRight",
+      "params": [],
+      "syntax": [
+        "clickRight(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "change(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
       }
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-pagination/uni-pagination.vue"
-  ]
+  "name": "UniPagination"
 }

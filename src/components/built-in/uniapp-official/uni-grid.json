@@ -1,137 +1,160 @@
 {
-  "displayName": "UniGrid",
-  "description": "Grid 宫格",
-  "tags": {
-    "description": [
-      {
-        "description": "宫格组件",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=27",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "name": "column",
-        "description": "每列显示个数"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "borderColor",
-        "description": "边框颜色"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "showBorder",
-        "description": "是否显示边框"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "square",
-        "description": "是否方形显示"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "Boolean",
-        "description": "点击背景是否高亮"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} change 点击 grid 触发，e={detail:{index:0}}，index 为当前点击 gird 下标",
-        "title": "event"
-      }
-    ]
-  },
-  "exportName": "default",
-  "props": [
-    {
-      "name": "column",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "3"
-      }
-    },
-    {
-      "name": "showBorder",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
-    },
-    {
-      "name": "borderColor",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'#D2D2D2'"
-      }
-    },
-    {
-      "name": "square",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
-    },
-    {
-      "name": "highlight",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
-    }
-  ],
-  "events": [
-    {
-      "name": "change",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
-    }
-  ],
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
   "slots": [
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-grid/uni-grid.vue"
-  ]
+  "props": [
+    {
+      "kind": "prop",
+      "description": "每列显示个数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "column",
+      "type": "Number",
+      "default": "3",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-border",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "边框颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-color",
+      "type": "String",
+      "default": "\"#D2D2D2\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否正方形显示,默认为 true",
+      "keywords": [],
+      "visibility": "public",
+      "name": "square",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "highlight",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "elId",
+      "type": "string",
+      "initialValue": "`Uni_${Math.ceil(Math.random() * 10e5).toString(36)}`"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "change(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_getSize",
+      "params": [
+        {
+          "name": "fn",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_getSize(fn: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniGrid",
+  "description": "#endif"
 }

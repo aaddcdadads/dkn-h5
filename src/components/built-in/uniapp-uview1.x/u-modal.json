@@ -1,0 +1,503 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "弹出模态框，常用于消息提示、消息确认、在当前页面内完成特定的交互操作"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/modal.html"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} value 是否显示模态框"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} z-index 层级"
+    },
+    {
+      "name": "property",
+      "description": "{String} title 模态框标题（默认\"提示\"）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} width 模态框宽度（默认600）"
+    },
+    {
+      "name": "property",
+      "description": "{String} content 模态框内容（默认\"内容\"）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show-title 是否显示标题（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} async-close 是否异步关闭，只对确定按钮有效（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show-confirm-button 是否显示确认按钮（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Stringr | Number} negative-top modal往上偏移的值"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show-cancel-button 是否显示取消按钮（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} mask-close-able 是否允许点击遮罩关闭modal（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String} confirm-text 确认按钮的文字内容（默认\"确认\"）"
+    },
+    {
+      "name": "property",
+      "description": "{String} cancel-text 取消按钮的文字内容（默认\"取消\"）"
+    },
+    {
+      "name": "property",
+      "description": "{String} cancel-color 取消按钮的颜色（默认\"#606266\"）"
+    },
+    {
+      "name": "property",
+      "description": "{String} confirm-color 确认按钮的文字内容（默认\"#2979ff\"）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} border-radius 模态框圆角值，单位rpx（默认16）"
+    },
+    {
+      "name": "property",
+      "description": "{Object} title-style 自定义标题样式，对象形式"
+    },
+    {
+      "name": "property",
+      "description": "{Object} content-style 自定义内容样式，对象形式"
+    },
+    {
+      "name": "property",
+      "description": "{Object} cancel-style 自定义取消按钮样式，对象形式"
+    },
+    {
+      "name": "property",
+      "description": "{Object} confirm-style 自定义确认按钮样式，对象形式"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} zoom 是否开启缩放模式（默认true）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} confirm 确认按钮被点击"
+    },
+    {
+      "name": "event",
+      "description": "{Function} cancel 取消按钮被点击"
+    },
+    {
+      "name": "example",
+      "description": "<u-modal :src=\"title\" :content=\"content\"></u-modal>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-button",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "是否显示Modal",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description": "层级z-index",
+      "keywords": [],
+      "visibility": "public",
+      "name": "z-index",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": [
+        "String"
+      ],
+      "default": "\"提示\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "弹窗宽度，可以是数值(rpx)，百分比，auto等",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "600",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "弹窗内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "content",
+      "type": "String",
+      "default": "\"内容\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-title",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示确认按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-confirm-button",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示取消按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-cancel-button",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "确认文案",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-text",
+      "type": "String",
+      "default": "\"确认\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "取消文案",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel-text",
+      "type": "String",
+      "default": "\"取消\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "确认按钮颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-color",
+      "type": "String",
+      "default": "\"#2979ff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "取消文字颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel-color",
+      "type": "String",
+      "default": "\"#606266\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "圆角值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-radius",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "16",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "内容的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "content-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "取消按钮的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "确定按钮的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否开启缩放效果",
+      "keywords": [],
+      "visibility": "public",
+      "name": "zoom",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否异步关闭，只对确定按钮有效",
+      "keywords": [],
+      "visibility": "public",
+      "name": "async-close",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否允许点击遮罩关闭modal",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask-close-able",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "给一个负的margin-top，往上偏移，避免和键盘重合的情况",
+      "keywords": [],
+      "visibility": "public",
+      "name": "negative-top",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loading",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancelBtnStyle",
+      "dependencies": [
+        "cancelColor",
+        "cancelStyle"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirmBtnStyle",
+      "dependencies": [
+        "confirmColor",
+        "confirmStyle"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uZIndex",
+      "dependencies": [
+        "zIndex",
+        "$u"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "false",
+          "type": "boolean",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "params": [],
+      "syntax": [
+        "confirm(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel",
+      "params": [],
+      "syntax": [
+        "cancel(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击遮罩关闭modal，设置v-model的值为false，否则无法第二次弹起modal",
+      "keywords": [],
+      "visibility": "public",
+      "name": "popupClose",
+      "params": [],
+      "syntax": [
+        "popupClose(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "清除加载中的状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearLoading",
+      "params": [],
+      "syntax": [
+        "clearLoading(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-modal",
+  "description": "modal 模态框"
+}

@@ -1,120 +1,230 @@
 {
-  "displayName": "uniCollapse",
-  "description": "Collapse 折叠面板",
-  "tags": {
-    "description": [
-      {
-        "description": "展示可以折叠 / 展开的内容区域",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=23",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "union",
-          "elements": [
-            {
-              "name": "String"
-            },
-            {
-              "name": "Array"
-            }
-          ]
-        },
-        "name": "value",
-        "description": "当前激活面板改变时触发(如果是手风琴模式，参数类型为string，否则为array)"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "accordion",
-        "description": "= [true|false] 是否开启手风琴效果是否开启手风琴效果"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} change 切换面板时触发，如果是手风琴模式，返回类型为string，否则为array",
-        "title": "event"
-      }
-    ]
-  },
-  "exportName": "default",
-  "props": [
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
     {
-      "name": "value",
-      "type": {
-        "name": "string|array"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "description",
+      "description": "展示可以折叠 / 展开的内容区域"
     },
     {
-      "name": "modelValue",
-      "type": {
-        "name": "string|array"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=23"
     },
     {
-      "name": "accordion",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
-    }
-  ],
-  "events": [
-    {
-      "name": "change",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
+      "name": "property",
+      "description": "{String|Array} value 当前激活面板改变时触发(如果是手风琴模式，参数类型为string，否则为array)"
     },
     {
-      "name": "activeItem"
+      "name": "property",
+      "description": "{Boolean} accordion = [true|false] 是否开启手风琴效果是否开启手风琴效果"
     },
     {
-      "name": "input",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
-    },
-    {
-      "name": "update:modelValue",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
+      "name": "event",
+      "description": "{Function} change 切换面板时触发，如果是手风琴模式，返回类型为string，否则为array"
     }
   ],
   "slots": [
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-collapse/uni-collapse.vue"
-  ]
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": [
+        "String",
+        "Array"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "model-value",
+      "type": [
+        "String",
+        "Array"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "accordion",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "TODO 兼容 vue2 和 vue3",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dataValue",
+      "dependencies": [
+        "value",
+        "modelValue"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "activeItem",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "update:modelValue",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setOpen",
+      "params": [
+        {
+          "name": "val",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setOpen(val: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setAccordion",
+      "params": [
+        {
+          "name": "self",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setAccordion(self: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resize",
+      "params": [],
+      "syntax": [
+        "resize(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onChange",
+      "params": [
+        {
+          "name": "isOpen",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "self",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onChange(isOpen: unknow, self: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "emit",
+      "params": [
+        {
+          "name": "val",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "emit(val: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "uniCollapse",
+  "description": "Collapse 折叠面板"
 }

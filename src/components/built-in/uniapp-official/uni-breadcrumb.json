@@ -1,67 +1,60 @@
 {
-  "description": "Breadcrumb 面包屑导航父组件",
-  "tags": {
-    "description": [
-      {
-        "description": "显示当前页面的路径，快速返回之前的任意页面",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=xxx",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "separator",
-        "description": "分隔符，默认为斜杠'/'"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "separatorClass",
-        "description": "图标分隔符 class"
-      }
-    ]
-  },
-  "exportName": "default",
-  "displayName": "uni-breadcrumb",
-  "props": [
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
     {
-      "name": "separator",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'/'"
-      }
+      "name": "description",
+      "description": "显示当前页面的路径，快速返回之前的任意页面"
     },
     {
-      "name": "separatorClass",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=xxx"
+    },
+    {
+      "name": "property",
+      "description": "{String} separator 分隔符，默认为斜杠'/'"
+    },
+    {
+      "name": "property",
+      "description": "{String} separatorClass 图标分隔符 class"
     }
   ],
   "slots": [
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-breadcrumb/uni-breadcrumb.vue"
-  ]
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "separator",
+      "type": "String",
+      "default": "\"/\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "separator-class",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "description": "Breadcrumb 面包屑导航父组件",
+  "name": "uni-breadcrumb"
 }

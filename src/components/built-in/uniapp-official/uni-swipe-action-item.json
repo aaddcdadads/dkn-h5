@@ -1,0 +1,223 @@
+{
+  "inheritAttrs": true,
+  "errors": [
+    "tag <view> has no matching end tag."
+  ],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "通过滑动触发选项的容器"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=181"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show = [left|right｜none] \t开启关闭组件，auto-close = false 时生效"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} disabled = [true|false] \t\t是否禁止滑动"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} autoClose = [true|false] \t滑动打开当前组件，是否关闭其他组件"
+    },
+    {
+      "name": "property",
+      "description": "{Number}  threshold \t\t\t\t\t滑动缺省值"
+    },
+    {
+      "name": "property",
+      "description": "{Array} leftOptions \t\t\t\t\t左侧选项内容及样式"
+    },
+    {
+      "name": "property",
+      "description": "{Array} rgihtOptions \t\t\t\t\t右侧选项内容及样式"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click \t\t\t\t\t\t\t点击选项按钮时触发事件，e = {content,index} ，content（点击内容）、index（下标)"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change \t\t\t\t\t\t组件打开或关闭时触发，left\\right\\none"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "控制开关",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "String",
+      "default": "\"none\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "禁用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否自动关闭",
+      "keywords": [],
+      "visibility": "public",
+      "name": "auto-close",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "滑动缺省距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "threshold",
+      "type": "Number",
+      "default": "20",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "左侧按钮内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left-options",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn []\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "右侧按钮内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right-options",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn []\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uninstall",
+      "params": [],
+      "syntax": [
+        "uninstall(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取父元素实例",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getSwipeAction",
+      "params": [
+        {
+          "name": "name",
+          "type": "string",
+          "defaultValue": "\"uniSwipeAction\"",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getSwipeAction(name: string = \"uniSwipeAction\"): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    }
+  ],
+  "description": "SwipeActionItem 滑动操作子组件",
+  "name": "uni-swipe-action-item"
+}

@@ -1,226 +1,543 @@
 {
-  "displayName": "uniFormsItem",
-  "description": "uni-fomrs-item 表单子组件",
-  "tags": {
-    "description": [
-      {
-        "description": "uni-fomrs-item 表单子组件，提供了基础布局已经校验能力",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=2773",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "required",
-        "description": "是否必填，左边显示红色\"*\"号"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String "
-        },
-        "description": "label \t\t\t\t输入框左边的文字提示"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Number "
-        },
-        "description": "labelWidth \t\t\tlabel的宽度，单位px（默认65）"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String "
-        },
-        "description": "labelAlign = [left|center|right] label的文字对齐方式（默认left）"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String "
-        },
-        "description": "errorMessage \t\t显示的错误提示内容，如果为空字符串或者false，则不显示错误信息"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String "
-        },
-        "description": "name \t\t\t\t表单域的属性名，在使用校验规则时必填"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String "
-        },
-        "description": "leftIcon \t\t\t【1.4.0废弃】label左边的图标，限 uni-ui 的图标名称"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String "
-        },
-        "description": "iconColor \t\t【1.4.0废弃】左边通过icon配置的图标的颜色（默认#606266）"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "validateTrigger",
-        "description": "= [bind|submit|blur]\t【1.4.0废弃】校验触发器方式 默认 submit"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String "
-        },
-        "description": "labelPosition = [top|left] 【1.4.0废弃】label的文字的位置（默认left）"
-      }
-    ],
-    "value": [
-      {
-        "description": "left\t\tlabel 左侧显示",
-        "title": "value"
-      },
-      {
-        "description": "center\tlabel 居中",
-        "title": "value"
-      },
-      {
-        "description": "right\tlabel 右侧对齐",
-        "title": "value"
-      },
-      {
-        "description": "bind \t发生变化时触发",
-        "title": "value"
-      },
-      {
-        "description": "submit 提交时触发",
-        "title": "value"
-      },
-      {
-        "description": "blur \t失去焦点触发",
-        "title": "value"
-      },
-      {
-        "description": "top\t顶部显示 label",
-        "title": "value"
-      },
-      {
-        "description": "left\t左侧显示 label",
-        "title": "value"
-      }
-    ]
-  },
-  "exportName": "default",
-  "props": [
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [
+    "Invalid JSDoc syntax: '{boolean} 是否立即校验'"
+  ],
+  "keywords": [
     {
-      "name": "rules",
-      "type": {
-        "name": "array"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "null"
-      }
+      "name": "description",
+      "description": "uni-fomrs-item 表单子组件，提供了基础布局已经校验能力"
     },
     {
-      "name": "name",
-      "type": {
-        "name": "string|array"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=2773"
     },
     {
-      "name": "required",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "name": "property",
+      "description": "{Boolean} required 是否必填，左边显示红色\"*\"号"
     },
     {
-      "name": "label",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "property",
+      "description": "{String } \tlabel \t\t\t\t输入框左边的文字提示"
     },
     {
-      "name": "labelWidth",
-      "type": {
-        "name": "string|number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "property",
+      "description": "{Number } \tlabelWidth \t\t\tlabel的宽度，单位px（默认65）"
     },
     {
-      "name": "labelAlign",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "property",
+      "description": "{String } \tlabelAlign = [left|center|right] label的文字对齐方式（默认left）"
     },
     {
-      "name": "errorMessage",
-      "type": {
-        "name": "string|boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "name": "value",
+      "description": "left\t\tlabel 左侧显示"
     },
     {
-      "name": "leftIcon",
-      "type": {
-        "name": "string"
-      }
+      "name": "value",
+      "description": "center\tlabel 居中"
     },
     {
-      "name": "iconColor",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'#606266'"
-      }
+      "name": "value",
+      "description": "right\tlabel 右侧对齐"
+    },
+    {
+      "name": "property",
+      "description": "{String } \terrorMessage \t\t显示的错误提示内容，如果为空字符串或者false，则不显示错误信息"
+    },
+    {
+      "name": "property",
+      "description": "{String } \tname \t\t\t\t表单域的属性名，在使用校验规则时必填"
+    },
+    {
+      "name": "property",
+      "description": "{String } \tleftIcon \t\t\t【1.4.0废弃】label左边的图标，限 uni-ui 的图标名称"
+    },
+    {
+      "name": "property",
+      "description": "{String } \ticonColor \t\t【1.4.0废弃】左边通过icon配置的图标的颜色（默认#606266）"
+    },
+    {
+      "name": "property",
+      "description": "{String} validateTrigger = [bind|submit|blur]\t【1.4.0废弃】校验触发器方式 默认 submit"
+    },
+    {
+      "name": "value",
+      "description": "bind \t发生变化时触发"
+    },
+    {
+      "name": "value",
+      "description": "submit 提交时触发"
+    },
+    {
+      "name": "value",
+      "description": "blur \t失去焦点触发"
+    },
+    {
+      "name": "property",
+      "description": "{String } \tlabelPosition = [top|left] 【1.4.0废弃】label的文字的位置（默认left）"
+    },
+    {
+      "name": "value",
+      "description": "top\t顶部显示 label"
+    },
+    {
+      "name": "value",
+      "description": "left\t左侧显示 label"
     }
   ],
   "slots": [
     {
-      "name": "label"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label",
+      "props": []
     },
     {
-      "name": "default"
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-forms-item/uni-forms-item.vue"
-  ]
+  "props": [
+    {
+      "kind": "prop",
+      "description": "表单校验规则",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rules",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn null;\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "表单域的属性名，在使用校验规则时必填",
+      "keywords": [],
+      "visibility": "public",
+      "name": "name",
+      "type": [
+        "String",
+        "Array"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "required",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "label的宽度 ，默认 80",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label-width",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "label 居中方式，默认 left 取值 left/center/right",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label-align",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "强制显示错误信息",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error-message",
+      "type": [
+        "String",
+        "Boolean"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "1.4.0 以下属性已经废弃，请使用  #label 插槽代替",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left-icon",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon-color",
+      "type": "String",
+      "default": "\"#606266\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "errMsg",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "userRules",
+      "type": "any",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "localLabelAlign",
+      "type": "string",
+      "initialValue": "\"left\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "localLabelWidth",
+      "type": "string",
+      "initialValue": "\"65px\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "localLabelPos",
+      "type": "string",
+      "initialValue": "\"left\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isFirstBorder",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "处理错误信息",
+      "keywords": [],
+      "visibility": "public",
+      "name": "msg",
+      "dependencies": [
+        "errorMessage",
+        "errMsg"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "外部调用方法\n设置规则 ，主要用于小程序自定义检验规则",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setRules",
+      "params": [
+        {
+          "name": "rules",
+          "type": "Array",
+          "description": "规则源数据",
+          "defaultValue": "null",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setRules(rules: Array = null): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "兼容老版本表单组件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setValue",
+      "params": [],
+      "syntax": [
+        "setValue(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "外部调用方法\n校验数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onFieldChange",
+      "params": [
+        {
+          "name": "value",
+          "type": "any",
+          "description": "需要校验的数据",
+          "rest": false
+        },
+        {
+          "name": "formtrigger",
+          "type": "boolean",
+          "defaultValue": "true",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "async onFieldChange(value: any, formtrigger: boolean = true): Array | null"
+      ],
+      "returns": {
+        "type": [
+          "Array",
+          "null"
+        ],
+        "description": "校验内容"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "初始组件数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [
+        {
+          "name": "type",
+          "type": "boolean",
+          "defaultValue": "false",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "init(type: boolean = false): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "unInit",
+      "params": [],
+      "syntax": [
+        "unInit(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "设置item 的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemSetValue",
+      "params": [
+        {
+          "name": "value",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "itemSetValue(value: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "移除该表单项的校验结果",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearValidate",
+      "params": [],
+      "syntax": [
+        "clearValidate(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "是否显示星号",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_isRequired",
+      "params": [],
+      "syntax": [
+        "_isRequired(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "处理对齐方式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_justifyContent",
+      "params": [],
+      "syntax": [
+        "_justifyContent(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "处理 label宽度单位 ,继承父元素的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_labelWidthUnit",
+      "params": [
+        {
+          "name": "labelWidth",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_labelWidthUnit(labelWidth: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "处理 label 位置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_labelPosition",
+      "params": [],
+      "syntax": [
+        "_labelPosition(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "触发时机",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isTrigger",
+      "params": [
+        {
+          "name": "rule",
+          "type": "Object",
+          "description": "当前规则内时机",
+          "rest": false
+        },
+        {
+          "name": "itemRlue",
+          "type": "Object",
+          "description": "当前组件时机",
+          "rest": false
+        },
+        {
+          "name": "parentRule",
+          "type": "Object",
+          "description": "父组件时机",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "isTrigger(rule: Object, itemRlue: Object, parentRule: Object): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "num2px",
+      "params": [
+        {
+          "name": "num",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "num2px(num: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    }
+  ],
+  "name": "uniFormsItem",
+  "description": "uni-fomrs-item 表单子组件"
 }

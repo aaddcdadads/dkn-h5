@@ -1,0 +1,238 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "区隔内容的分割线，一般用于页面底部\"没有更多\"的提示。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/divider.html"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} half-width 文字左或右边线条宽度，数值或百分比，数值时单位为rpx"
+    },
+    {
+      "name": "property",
+      "description": "{String} border-color 线条颜色，优先级高于type（默认#dcdfe6）"
+    },
+    {
+      "name": "property",
+      "description": "{String} color 文字颜色（默认#909399）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} fontSize 字体大小，单位rpx（默认26）"
+    },
+    {
+      "name": "property",
+      "description": "{String} bg-color 整个divider的背景颜色（默认呢#ffffff）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} height 整个divider的高度，单位rpx（默认40）"
+    },
+    {
+      "name": "property",
+      "description": "{String} type 将线条设置主题色（默认primary）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} useSlot 是否使用slot传入内容，如果不传入，中间不会有空隙（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} margin-top 与前一个组件的距离，单位rpx（默认0）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} margin-bottom 与后一个组件的距离，单位rpx（0）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click divider组件被点击时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-divider color=\"#fa3534\">长河落日圆</u-divider>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "单一边divider横线的宽度(数值)，单位rpx。或者百分比",
+      "keywords": [],
+      "visibility": "public",
+      "name": "half-width",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "150",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "divider横线的颜色，如设置，",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-color",
+      "type": "String",
+      "default": "\"#dcdfe6\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "主题色，可以是primary|info|success|warning|error之一值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "type",
+      "type": "String",
+      "default": "\"primary\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "文字颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "default": "\"#909399\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "文字大小，单位rpx",
+      "keywords": [],
+      "visibility": "public",
+      "name": "font-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "26",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "整个divider的背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"#ffffff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "整个divider的高度单位rpx",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"auto\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "上边距",
+      "keywords": [],
+      "visibility": "public",
+      "name": "margin-top",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "下边距",
+      "keywords": [],
+      "visibility": "public",
+      "name": "margin-bottom",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否使用slot传入内容，如果不用slot传入内容，先的中间就不会有空隙",
+      "keywords": [],
+      "visibility": "public",
+      "name": "use-slot",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lineStyle",
+      "dependencies": [
+        "halfWidth",
+        "borderColor"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "params": [],
+      "syntax": [
+        "click(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-divider",
+  "description": "divider 分割线"
+}

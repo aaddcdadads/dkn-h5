@@ -1,0 +1,436 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般用于向下展开菜单，同时可切换多个选项卡的场景"
+    },
+    {
+      "name": "tutorial",
+      "description": "http://uviewui.com/components/dropdown.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} active-color 标题和选项卡选中的颜色（默认#2979ff）"
+    },
+    {
+      "name": "property",
+      "description": "{String} inactive-color 标题和选项卡未选中的颜色（默认#606266）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} close-on-click-mask 点击遮罩是否关闭菜单（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} close-on-click-self 点击当前激活项标题是否关闭菜单（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} duration 选项卡展开和收起的过渡时间，单位ms（默认300）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} height 标题菜单的高度，单位任意（默认80）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} border-radius 菜单展开内容下方的圆角值，单位任意（默认0）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} border-bottom 标题菜单是否显示下边框（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} title-size 标题的字体大小，单位任意，数值默认为rpx单位（默认28）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} open 下拉菜单被打开时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} close 下拉菜单被关闭时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-dropdown></u-dropdown>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "菜单标题和选项的激活态颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active-color",
+      "type": "String",
+      "default": "\"#2979ff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "菜单标题和选项的未激活态颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactive-color",
+      "type": "String",
+      "default": "\"#606266\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击遮罩是否关闭菜单",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close-on-click-mask",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击当前激活项标题是否关闭菜单",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close-on-click-self",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "过渡时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "duration",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "300",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题菜单的高度，单位任意，数值默认为rpx单位",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "80",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示下边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-bottom",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题的字体大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "28",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "下拉出来的内容部分的圆角值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-radius",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "菜单右侧的icon图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "menu-icon",
+      "type": "String",
+      "default": "\"arrow-down\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "菜单右侧图标的大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "menu-icon-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "26",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showDropdown",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "kind": "data",
+      "description": "是否打开下来菜单,",
+      "keywords": [],
+      "visibility": "public",
+      "name": "menuList",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "description": "显示的菜单",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "无能的TX没有使用===而是使用==判断，导致程序认为前后二者没有变化，从而不会触发视图更新",
+      "keywords": [],
+      "visibility": "public",
+      "name": "current",
+      "type": "number",
+      "initialValue": "99999"
+    },
+    {
+      "kind": "data",
+      "description": "外层内容的样式，初始时处于底层，且透明",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentStyle",
+      "type": "object",
+      "initialValue": "{\"zIndex\":{\"type\":\"number\",\"value\":-1,\"raw\":\"-1\"},\"opacity\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"}}"
+    },
+    {
+      "kind": "data",
+      "description": "让某个菜单保持高亮的状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "highlightIndex",
+      "type": "number",
+      "initialValue": "99999"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentHeight",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "下拉出来部分的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "popupStyle",
+      "dependencies": [
+        "active",
+        "duration",
+        "$u",
+        "borderRadius"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "arguments": [
+        {
+          "name": "current",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "arguments": [
+        {
+          "name": "current",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击菜单",
+      "keywords": [],
+      "visibility": "public",
+      "name": "menuClick",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "menuClick(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "打开下拉菜单",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "open(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "设置下拉菜单处于收起状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击遮罩",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maskClick",
+      "params": [],
+      "syntax": [
+        "maskClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "外部手动设置某个菜单高亮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "highlight",
+      "params": [
+        {
+          "name": "index",
+          "type": "any",
+          "defaultValue": "undefined",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "highlight(index: any = undefined): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取下拉菜单内容的高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getContentHeight",
+      "params": [],
+      "syntax": [
+        "getContentHeight(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-dropdown",
+  "description": "dropdown 下拉菜单"
+}

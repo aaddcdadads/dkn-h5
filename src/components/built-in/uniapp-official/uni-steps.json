@@ -1,128 +1,108 @@
 {
-  "displayName": "UniSteps",
-  "description": "Steps 步骤条",
-  "tags": {
-    "description": [
-      {
-        "description": "评分组件",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=34",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "name": "active",
-        "description": "当前步骤"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "direction",
-        "description": "= [row|column] 当前步骤"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "activeColor",
-        "description": "选中状态的颜色"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Array"
-        },
-        "name": "options",
-        "description": "数据源，格式为：[{title:'xxx',desc:'xxx'},{title:'xxx',desc:'xxx'}]"
-      }
-    ],
-    "value": [
-      {
-        "description": "row 横向",
-        "title": "value"
-      },
-      {
-        "description": "column 纵向",
-        "title": "value"
-      }
-    ]
-  },
-  "exportName": "default",
-  "props": [
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
     {
-      "name": "direction",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'row'"
-      }
+      "name": "description",
+      "description": "评分组件"
     },
     {
-      "name": "activeColor",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'#2979FF'"
-      }
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=34"
     },
     {
-      "name": "deactiveColor",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'#B7BDC6'"
-      }
+      "name": "property",
+      "description": "{Number} active 当前步骤"
     },
     {
-      "name": "active",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "0"
-      }
+      "name": "property",
+      "description": "{String} direction = [row|column] 当前步骤"
     },
     {
-      "name": "activeIcon",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'checkbox-filled'"
-      }
+      "name": "value",
+      "description": "row 横向"
     },
     {
-      "name": "options",
-      "type": {
-        "name": "array"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "[]"
-      }
+      "name": "value",
+      "description": "column 纵向"
+    },
+    {
+      "name": "property",
+      "description": "{String} activeColor 选中状态的颜色"
+    },
+    {
+      "name": "property",
+      "description": "{Array} options 数据源，格式为：[{title:'xxx',desc:'xxx'},{title:'xxx',desc:'xxx'}]"
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-steps/uni-steps.vue"
-  ]
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "direction",
+      "type": "String",
+      "default": "\"row\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active-color",
+      "type": "String",
+      "default": "\"#2979FF\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "deactive-color",
+      "type": "String",
+      "default": "\"#B7BDC6\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active",
+      "type": "Number",
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active-icon",
+      "type": "String",
+      "default": "\"checkbox-filled\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "options",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn []\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "name": "UniSteps",
+  "description": "Steps 步骤条"
 }

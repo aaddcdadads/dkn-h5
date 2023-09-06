@@ -1,0 +1,326 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般用于验证用户短信验证码的场景，也可以结合uView的键盘组件使用"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/messageInput.html"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} maxlength 输入字符个数（默认4）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} dot-fill 是否用圆点填充（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String} mode 模式选择，见上方\"基本使用\"说明（默认box）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} value 预置值"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} breathe 是否开启呼吸效果，见上方说明（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} focus 是否自动获取焦点（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} bold 字体和输入横线是否加粗（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} font-size 字体大小，单位rpx（默认60）"
+    },
+    {
+      "name": "property",
+      "description": "{String} active-color 当前激活输入框的样式（默认#2979ff）"
+    },
+    {
+      "name": "property",
+      "description": "{String} inactive-color 非激活输入框的样式，文字颜色同此值（默认#606266）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number} width 输入框宽度，单位rpx，高等于宽（默认80）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} disabled-keyboard 禁止点击输入框唤起系统键盘（默认false）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change 输入内容发生改变时触发，具体见官网说明"
+    },
+    {
+      "name": "event",
+      "description": "{Function} finish 输入字符个数达maxlength值时触发，见官网说明"
+    },
+    {
+      "name": "example",
+      "description": "<u-message-input mode=\"bottomLine\"></u-message-input>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "最大输入长度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maxlength",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "4",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否用圆点填充",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dot-fill",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示模式，box-盒子模式，bottomLine-横线在底部模式，middleLine-横线在中部模式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "default": "\"box\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "预置值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description": "当前激活输入item，是否带有呼吸效果",
+      "keywords": [],
+      "visibility": "public",
+      "name": "breathe",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否自动获取焦点",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "字体是否加粗",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bold",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "字体大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "font-size",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "60",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "激活样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active-color",
+      "type": "String",
+      "default": "\"#2979ff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "未激活的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactive-color",
+      "type": "String",
+      "default": "\"#606266\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "输入框的大小，单位rpx，宽等于高",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"80\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否隐藏原生键盘，如果想用自定义键盘的话，需设置此参数为true",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled-keyboard",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "valueModel",
+      "type": "string",
+      "initialValue": "\"\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "是否显示呼吸灯效果",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animationClass",
+      "dependencies": [
+        "breathe",
+        "charArr"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "用于显示字符",
+      "keywords": [],
+      "visibility": "public",
+      "name": "charArr",
+      "dependencies": [
+        "valueModel"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "charArrLength",
+      "dependencies": [
+        "charArr"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "根据长度，循环输入框的个数，因为头条小程序数值不能用于v-for",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loopCharArr",
+      "dependencies": [
+        "maxlength"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "description": "未达到maxlength之前，发送change事件，达到后发送finish事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "finish",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getVal",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getVal(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-message-input",
+  "description": "messageInput 验证码输入框"
+}

@@ -1,27 +1,79 @@
 {
-  "displayName": "uniSwipeAction",
-  "description": "SwipeAction 滑动操作",
-  "tags": {
-    "description": [
-      {
-        "description": "通过滑动触发选项的容器",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=181",
-        "title": "tutorial"
-      }
-    ]
-  },
-  "exportName": "default",
-  "slots": [
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
     {
-      "name": "default"
+      "name": "description",
+      "description": "通过滑动触发选项的容器"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=181"
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-swipe-action/uni-swipe-action.vue"
-  ]
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "公开给用户使用，重制组件样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resize",
+      "params": [],
+      "syntax": [
+        "resize(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "公开给用户使用，关闭全部 已经打开的组件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeAll",
+      "params": [],
+      "syntax": [
+        "closeAll(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeOther",
+      "params": [
+        {
+          "name": "vm",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "closeOther(vm: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "uniSwipeAction",
+  "description": "SwipeAction 滑动操作"
 }

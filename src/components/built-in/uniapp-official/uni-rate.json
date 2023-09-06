@@ -1,272 +1,433 @@
 {
-  "displayName": "UniRate",
-  "description": "Rate 评分",
-  "tags": {
-    "description": [
-      {
-        "description": "评分组件",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=33",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "description": "isFill = [true|false] \t\t星星的类型，是否为实心类型, 默认为实心"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "description": "color \t\t\t\t\t\t未选中状态的星星颜色，默认为 \"#ececec\""
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "description": "activeColor \t\t\t\t选中状态的星星颜色，默认为 \"#ffca3e\""
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "description": "disabledColor \t\t\t\t禁用状态的星星颜色，默认为 \"#c0c0c0\""
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "description": "size \t\t\t\t\t\t星星的大小"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "description": "value/v-model \t\t\t\t当前评分"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "description": "max \t\t\t\t\t\t最大评分评分数量，目前一分一颗星"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "description": "margin \t\t\t\t\t\t星星的间距，单位 px"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "description": "disabled = [true|false] \t是否为禁用状态，默认为 false"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "description": "readonly = [true|false] \t是否为只读状态，默认为 false"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "description": "allowHalf = [true|false] \t是否实现半星，默认为 false"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "description": "touchable = [true|false] \t是否支持滑动手势，默认为 true"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} change \t\t\t\t\t\tuniRate 的 value 改变时触发事件，e={value:Number}",
-        "title": "event"
-      }
-    ]
-  },
-  "exportName": "default",
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
   "props": [
     {
-      "name": "isFill",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "is-fill",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "true",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "color",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "\"#ececec\""
-      }
+      "type": "String",
+      "default": "\"#ececec\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "activeColor",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "\"#ffca3e\""
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active-color",
+      "type": "String",
+      "default": "\"#ffca3e\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "disabledColor",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "\"#c0c0c0\""
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled-color",
+      "type": "String",
+      "default": "\"#c0c0c0\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "size",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "24"
-      }
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "24",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "value",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "0"
-      }
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": true
     },
     {
-      "name": "modelValue",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "0"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "model-value",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "max",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "5"
-      }
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "5",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "margin",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "0"
-      }
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "disabled",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "readonly",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "allowHalf",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "allow-half",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "touchable",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "valueSync",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "userMouseFristMove",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "userRated",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "userLastRate",
+      "type": "number",
+      "initialValue": "1"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "stars",
+      "dependencies": [
+        "valueSync",
+        "max"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "marginNumber",
+      "dependencies": [
+        "margin"
+      ]
     }
   ],
   "events": [
     {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
       "name": "input",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
+      "arguments": [
+        {
+          "name": "valueSync",
+          "type": "any",
+          "rest": false
+        }
+      ]
     },
     {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
       "name": "update:modelValue",
-      "type": {
-        "names": [
-          "undefined"
-        ]
+      "arguments": [
+        {
+          "name": "valueSync",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "{ value: this.valueSync }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "touchstart",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "touchstart(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
       }
     },
     {
-      "name": "change",
-      "type": {
-        "names": [
-          "undefined"
-        ]
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "touchmove",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "touchmove(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "兼容 PC @tian",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mousedown",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "mousedown(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mousemove",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "mousemove(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mouseleave",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "mouseleave(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "#ifdef H5",
+      "keywords": [],
+      "visibility": "public",
+      "name": "IsPC",
+      "params": [],
+      "syntax": [
+        "IsPC(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取星星个数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_getRateCount",
+      "params": [
+        {
+          "name": "clientX",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_getRateCount(clientX: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "触发动态修改",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_onChange",
+      "params": [],
+      "syntax": [
+        "_onChange(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取星星距离屏幕左侧距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_getSize",
+      "params": [
+        {
+          "name": "fn",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_getSize(fn: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
       }
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-rate/uni-rate.vue"
-  ]
+  "name": "UniRate",
+  "description": "#endif"
 }

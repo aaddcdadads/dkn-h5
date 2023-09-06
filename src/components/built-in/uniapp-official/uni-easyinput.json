@@ -1,300 +1,790 @@
 {
-  "displayName": "uni-easyinput",
-  "exportName": "default",
-  "description": "",
-  "tags": {},
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "props": []
+    }
+  ],
   "props": [
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "name",
-      "type": {
-        "name": "string"
-      }
+      "type": "String",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "value",
-      "type": {
-        "name": "number|string"
-      }
+      "type": [
+        "Number",
+        "String"
+      ],
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "v-model",
-      "type": {
-        "name": "number|string"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "model-value",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "type",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'text'"
-      }
+      "type": "String",
+      "default": "\"text\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "clearable",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "autoHeight",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "auto-height",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "placeholder",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "' '"
-      }
+      "type": "String",
+      "default": "\" \"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "placeholderStyle",
-      "type": {
-        "name": "string"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder-style",
+      "type": "String",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "focus",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "disabled",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "maxlength",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "140"
-      }
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "140",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "confirmType",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'done'"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-type",
+      "type": "String",
+      "default": "\"done\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "clearSize",
-      "type": {
-        "name": "number|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "24"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "24",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "inputBorder",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input-border",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "prefixIcon",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "prefix-icon",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "suffixIcon",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "suffix-icon",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "trim",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "cursorSpacing",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "0"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cursor-spacing",
+      "type": "Number",
+      "default": "0",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "passwordIcon",
-      "type": {
-        "name": "boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "true"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "password-icon",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "primaryColor",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'#2979ff'"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "primary-color",
+      "type": "String",
+      "default": "\"#2979ff\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "styles",
-      "type": {
-        "name": "object"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "{\n    color: '#333',\n    backgroundColor: '#fff',\n    disableColor: '#F7F6F6',\n    borderColor: '#e5e5e5'\n}"
-      }
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {\r\n\t\t\t\t\tcolor: '#333',\r\n\t\t\t\t\tbackgroundColor: '#fff',\r\n\t\t\t\t\tdisableColor: '#F7F6F6',\r\n\t\t\t\t\tborderColor: '#e5e5e5'\r\n\t\t\t\t};\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "errorMessage",
-      "type": {
-        "name": "string|boolean"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error-message",
+      "type": [
+        "String",
+        "Boolean"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focused",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "val",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showMsg",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isFirstBorder",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showClearIcon",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showPassword",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focusShow",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "localMsg",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isEnter",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "输入框内是否有值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isVal",
+      "dependencies": [
+        "val"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "msg",
+      "dependencies": [
+        "form",
+        "formItem",
+        "errorMessage",
+        "localMsg"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "因为uniapp的input组件的maxlength组件必须要数值，这里转为数值，用户可以传入字符串数值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputMaxlength",
+      "dependencies": [
+        "maxlength"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "处理外层样式的style",
+      "keywords": [],
+      "visibility": "public",
+      "name": "boxStyle",
+      "dependencies": [
+        "inputBorder",
+        "msg",
+        "styles"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "input 内容的类和样式处理",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputContentClass",
+      "dependencies": [
+        "inputBorder",
+        "msg",
+        "type",
+        "disabled",
+        "focusShow"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputContentStyle",
+      "dependencies": [
+        "focusShow",
+        "primaryColor",
+        "styles",
+        "inputBorder",
+        "msg",
+        "disabled"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "input右侧样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputStyle",
+      "dependencies": [
+        "type",
+        "clearable",
+        "prefixIcon"
+      ]
     }
   ],
   "events": [
     {
-      "name": "click"
-    },
-    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
       "name": "iconClick",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
+      "arguments": [
+        {
+          "name": "type",
+          "type": "any",
+          "rest": false
+        }
+      ]
     },
     {
-      "name": "update:modelValue",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
-    },
-    {
-      "name": "input",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
-    },
-    {
-      "name": "focus",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
-    },
-    {
-      "name": "blur",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
-    },
-    {
-      "name": "confirm",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
-    },
-    {
-      "name": "clear"
-    },
-    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
       "name": "eyes",
-      "type": {
-        "names": [
-          "undefined"
-        ]
-      }
+      "arguments": [
+        {
+          "name": "showPassword",
+          "type": "any",
+          "rest": false
+        }
+      ]
     },
     {
+      "kind": "event",
+      "description": "TODO 兼容 vue2",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "TODO　兼容　vue3",
+      "keywords": [],
+      "visibility": "public",
+      "name": "update:modelValue",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "arguments": [
+        {
+          "name": "null",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blur",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
       "name": "change",
-      "type": {
-        "names": [
-          "undefined"
-        ]
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "点击叉号触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "keyboardheightchange",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "初始化变量值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
       }
     },
     {
-      "name": "keyboardheightchange",
-      "type": {
-        "names": [
-          "undefined"
-        ]
+      "kind": "method",
+      "description": "点击图标时触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClickIcon",
+      "params": [
+        {
+          "name": "type",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onClickIcon(type: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "显示隐藏内容，密码框时生效",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onEyes",
+      "params": [],
+      "syntax": [
+        "onEyes(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "输入时触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onInput",
+      "params": [
+        {
+          "name": "event",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onInput(event: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "外部调用方法\n获取焦点时触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onFocus",
+      "params": [
+        {
+          "name": "event",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onFocus(event: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_Focus",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_Focus(event: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "外部调用方法\n失去焦点时触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onBlur",
+      "params": [
+        {
+          "name": "event",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onBlur(event: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_Blur",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_Blur(event: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "按下键盘的发送键",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onConfirm",
+      "params": [
+        {
+          "name": "e",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onConfirm(e: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "清理内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClear",
+      "params": [
+        {
+          "name": "event",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onClear(event: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "键盘高度发生变化的时候触发此事件\n兼容性：微信小程序2.7.0+、App 3.1.0+",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onkeyboardheightchange",
+      "params": [
+        {
+          "name": "event",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onkeyboardheightchange(event: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "去除空格",
+      "keywords": [],
+      "visibility": "public",
+      "name": "trimStr",
+      "params": [
+        {
+          "name": "str",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "pos",
+          "type": "string",
+          "defaultValue": "\"both\"",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "trimStr(str: unknow, pos: string = \"both\"): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
       }
     }
   ],
-  "slots": [
-    {
-      "name": "right"
-    }
-  ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-easyinput/uni-easyinput.vue"
-  ]
+  "name": "uni-easyinput",
+  "model": {
+    "kind": "model",
+    "keywords": [],
+    "prop": "modelValue",
+    "event": "update:modelValue",
+    "visibility": "public"
+  }
 }

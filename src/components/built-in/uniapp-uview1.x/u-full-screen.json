@@ -1,0 +1,70 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "content",
+      "type": "string",
+      "initialValue": "`\r\n\t\t\t\t\t1. 修复badge组件的size参数无效问题<br>\r\n\t\t\t\t\t2. 新增Modal模态框组件<br>\r\n\t\t\t\t\t3. 新增压窗屏组件，可以在APP上以弹窗的形式遮盖导航栏和底部tabbar<br>\r\n\t\t\t\t\t4. 修复键盘组件在微信小程序上遮罩无效的问题\r\n\t\t\t\t`"
+    }
+  ],
+  "computed": [],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel",
+      "params": [],
+      "syntax": [
+        "cancel(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "params": [],
+      "syntax": [
+        "confirm(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeModal",
+      "params": [],
+      "syntax": [
+        "closeModal(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-full-screen"
+}

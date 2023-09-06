@@ -1,259 +1,349 @@
 {
-  "displayName": "UniNoticeBar",
-  "description": "NoticeBar 自定义导航栏",
-  "tags": {
-    "description": [
-      {
-        "description": "通告栏组件",
-        "title": "description"
-      }
-    ],
-    "tutorial": [
-      {
-        "description": "https://ext.dcloud.net.cn/plugin?id=30",
-        "title": "tutorial"
-      }
-    ],
-    "property": [
-      {
-        "title": "property",
-        "type": {
-          "name": "Number"
-        },
-        "name": "speed",
-        "description": "文字滚动的速度，默认100px/秒"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "text",
-        "description": "显示文字"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "backgroundColor",
-        "description": "背景颜色"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "color",
-        "description": "文字颜色"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "moreColor",
-        "description": "查看更多文字的颜色"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "String"
-        },
-        "name": "moreText",
-        "description": "设置“查看更多”的文本"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "single",
-        "description": "= [true|false] 是否单行"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "scrollable",
-        "description": "= [true|false] 是否滚动，为true时，NoticeBar为单行"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "showIcon",
-        "description": "= [true|false] 是否显示左侧喇叭图标"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "showClose",
-        "description": "= [true|false] 是否显示左侧关闭按钮"
-      },
-      {
-        "title": "property",
-        "type": {
-          "name": "Boolean"
-        },
-        "name": "showGetMore",
-        "description": "= [true|false] 是否显示右侧查看更多图标，为true时，NoticeBar为单行"
-      }
-    ],
-    "event": [
-      {
-        "description": "{Function} click 点击 NoticeBar 触发事件",
-        "title": "event"
-      },
-      {
-        "description": "{Function} close 关闭 NoticeBar 触发事件",
-        "title": "event"
-      },
-      {
-        "description": "{Function} getmore 点击”查看更多“时触发事件",
-        "title": "event"
-      }
-    ]
-  },
-  "exportName": "default",
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
   "props": [
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "text",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "moreText",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "''"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "more-text",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "backgroundColor",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'#FFF9EA'"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "background-color",
+      "type": "String",
+      "default": "\"#FFF9EA\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "speed",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "100"
-      }
+      "type": "Number",
+      "default": "100",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "color",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'#FF9A43'"
-      }
+      "type": "String",
+      "default": "\"#FF9A43\"",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "fontSize",
-      "type": {
-        "name": "number"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "14"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "font-size",
+      "type": "Number",
+      "default": "14",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "moreColor",
-      "type": {
-        "name": "string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "'#FF9A43'"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "more-color",
+      "type": "String",
+      "default": "\"#FF9A43\"",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "single",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
       "name": "scrollable",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "showIcon",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-icon",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "showGetMore",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-get-more",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
     },
     {
-      "name": "showClose",
-      "type": {
-        "name": "boolean|string"
-      },
-      "defaultValue": {
-        "func": false,
-        "value": "false"
-      }
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-close",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textWidth",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "boxWidth",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "wrapWidth",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "webviewHide",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "#ifdef APP-NVUE",
+      "keywords": [],
+      "visibility": "public",
+      "name": "stopAnimation",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "#endif",
+      "keywords": [],
+      "visibility": "public",
+      "name": "elId",
+      "type": "string",
+      "initialValue": "`Uni_${Math.ceil(Math.random() * 10e5).toString(36)}`"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "elIdBox",
+      "type": "string",
+      "initialValue": "`Uni_${Math.ceil(Math.random() * 10e5).toString(36)}`"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animationDuration",
+      "type": "string",
+      "initialValue": "\"none\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animationPlayState",
+      "type": "string",
+      "initialValue": "\"paused\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animationDelay",
+      "type": "string",
+      "initialValue": "\"0s\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isShowGetMore",
+      "dependencies": [
+        "showGetMore"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isShowClose",
+      "dependencies": [
+        "showClose",
+        "showGetMore"
+      ]
     }
   ],
   "events": [
     {
-      "name": "click"
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getmore",
+      "arguments": []
     },
     {
-      "name": "getmore"
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "arguments": []
     },
     {
-      "name": "close"
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
     }
   ],
-  "sourceFiles": [
-    "/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-vue3/node_modules/@dcloudio/uni-ui/lib/uni-notice-bar/uni-notice-bar.vue"
-  ]
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "initSize",
+      "params": [],
+      "syntax": [
+        "initSize(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loopAnimation",
+      "params": [],
+      "syntax": [
+        "loopAnimation(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickMore",
+      "params": [],
+      "syntax": [
+        "clickMore(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClick",
+      "params": [],
+      "syntax": [
+        "onClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniNoticeBar",
+  "description": "#endif"
 }
