@@ -20,6 +20,7 @@ export default {
 
 <style lang="scss">
 /*每个页面公共css */
-@import "./uni_modules/vk-uview-ui/index.scss";
+// @import "./uni_modules/vk-uview-ui/index.scss";
+@import "./uni_modules/uview-plus/index.scss";
 @import "./static/css/index.css";
 </style>
