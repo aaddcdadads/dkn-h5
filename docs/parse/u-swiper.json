@@ -5,7 +5,7 @@
   "keywords": [
     {
       "name": "description",
-      "description": "该组件一般用于导航轮播，广告展示等场景,可开箱即用"
+      "description": "该组件一般用于导航轮播，广告展示等场景,可开箱即用，"
     },
     {
       "name": "tutorial",
@@ -13,284 +13,360 @@
     },
     {
       "name": "property",
-      "description": "{Array} list 轮播图数据，见官网\"基本使用\"说明"
+      "description": "{Array}\t\t\tlist\t\t\t\t\t轮播图数据"
     },
     {
       "name": "property",
-      "description": "{Boolean} title 是否显示标题文字，需要配合list参数，见官网说明（默认false）"
+      "description": "{Boolean}\t\t\tindicator\t\t\t\t是否显示面板指示器（默认 false ）"
     },
     {
       "name": "property",
-      "description": "{String} mode 指示器模式，见官网说明（默认round）"
+      "description": "{String}\t\t\tindicatorActiveColor\t指示器非激活颜色（默认 '#FFFFFF' ）"
     },
     {
       "name": "property",
-      "description": "{String Number} height 轮播图组件高度，单位rpx（默认250）"
+      "description": "{String}\t\t\tindicatorInactiveColor\t指示器的激活颜色（默认 'rgba(255, 255, 255, 0.35)' ）"
     },
     {
       "name": "property",
-      "description": "{String} indicator-pos 指示器的位置（默认bottomCenter）"
+      "description": "{String | Object}\tindicatorStyle\t\t\t指示器样式，可通过bottom，left，right进行定位"
     },
     {
       "name": "property",
-      "description": "{Boolean} effect3d 是否开启3D效果（默认false）"
+      "description": "{String}\t\t\tindicatorMode\t\t\t指示器模式（默认 'line' ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} autoplay 是否自动播放（默认true）"
+      "description": "{Boolean}\t\t\tautoplay\t\t\t\t是否自动切换（默认 true ）"
     },
     {
       "name": "property",
-      "description": "{String Number} interval 自动轮播时间间隔，单位ms（默认2500）"
+      "description": "{String | Number}\tcurrent\t\t\t\t\t当前所在滑块的 index（默认 0 ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} circular 是否衔接播放，见官网说明（默认true）"
+      "description": "{String}\t\t\tcurrentItemId\t\t\t当前所在滑块的 item-id ，不能与 current 被同时指定"
     },
     {
       "name": "property",
-      "description": "{String} bg-color 背景颜色（默认#f3f4f6）"
+      "description": "{String | Number}\tinterval\t\t\t\t滑块自动切换时间间隔（ms）（默认 3000 ）"
     },
     {
       "name": "property",
-      "description": "{String Number} border-radius 轮播图圆角值，单位rpx（默认8）"
+      "description": "{String | Number}\tduration\t\t\t\t滑块切换过程所需时间（ms）（默认 300 ）"
     },
     {
       "name": "property",
-      "description": "{Object} title-style 自定义标题样式"
+      "description": "{Boolean}\t\t\tcircular\t\t\t\t播放到末尾后是否重新回到开头（默认 false ）"
     },
     {
       "name": "property",
-      "description": "{String Number} effect3d-previous-margin mode = true模式的情况下，激活项与前后项之间的距离，单位rpx（默认50）"
+      "description": "{String | Number}\tpreviousMargin\t\t\t前边距，可用于露出前一项的一小部分，nvue和支付宝不支持（默认 0 ）"
     },
     {
       "name": "property",
-      "description": "{String} img-mode 图片的裁剪模式，详见image组件裁剪模式（默认aspectFill）"
+      "description": "{String | Number}\tnextMargin\t\t\t\t后边距，可用于露出后一项的一小部分，nvue和支付宝不支持（默认 0 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tacceleration\t\t\t当开启时，会根据滑动速度，连续滑动多屏，支付宝不支持（默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Number}\t\t\tdisplayMultipleItems\t同时显示的滑块数量，nvue、支付宝小程序不支持（默认 1 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\teasingFunction\t\t\t指定swiper切换缓动动画类型， 只对微信小程序有效（默认 'default' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tkeyName\t\t\t\t\tlist数组中指定对象的目标属性名（默认 'url' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\timgMode\t\t\t\t\t图片的裁剪模式（默认 'aspectFill' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\theight\t\t\t\t\t组件高度（默认 130 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tbgColor\t\t\t\t\t背景颜色（默认 \t'#f3f4f6' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tradius\t\t\t\t\t组件圆角，数值或带单位的字符串（默认 4 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tloading\t\t\t\t\t是否加载中（默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tshowTitle\t\t\t\t是否显示标题，要求数组对象中有title属性（默认 false ）"
     },
     {
       "name": "event",
-      "description": "{Function} click 点击轮播图时触发"
+      "description": "{Function(index)}\tclick\t点击轮播图时触发\tindex：点击了第几张图片，从0开始"
+    },
+    {
+      "name": "event",
+      "description": "{Function(index)}\tchange\t轮播图切换时触发(自动或者手动切换)\tindex：切换到了第几张图片，从0开始"
     },
     {
       "name": "example",
-      "description": "<u-swiper :list=\"list\" mode=\"dot\" indicator-pos=\"bottomRight\"></u-swiper>"
+      "description": "<u-swiper :list=\"list4\" keyName=\"url\" :autoplay=\"false\"></u-swiper>"
     }
   ],
-  "slots": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "indicator",
+      "props": []
+    }
+  ],
   "props": [
     {
       "kind": "prop",
-      "description": "轮播图的数据,格式如：[{image: 'xxxx', title: 'xxxx'}，{image: 'yyyy', title: 'yyyy'}]，其中title字段可选",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "list",
       "type": "Array",
-      "default": "function() {\r\n\t\t\t\t\treturn [];\r\n\t\t\t\t}",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示title标题",
-      "keywords": [],
-      "visibility": "public",
-      "name": "title",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "用户自定义的指示器的样式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "indicator",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {};\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "圆角值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "border-radius",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "8",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "隔多久自动切换",
-      "keywords": [],
-      "visibility": "public",
-      "name": "interval",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "3000",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "指示器的模式，rect|dot|number|round",
-      "keywords": [],
-      "visibility": "public",
-      "name": "mode",
-      "type": "String",
-      "default": "\"round\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "list的高度，单位rpx",
-      "keywords": [],
-      "visibility": "public",
-      "name": "height",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "250",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "指示器的位置，topLeft|topCenter|topRight|bottomLeft|bottomCenter|bottomRight",
-      "keywords": [],
-      "visibility": "public",
-      "name": "indicator-pos",
-      "type": "String",
-      "default": "\"bottomCenter\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否开启缩放效果",
-      "keywords": [],
-      "visibility": "public",
-      "name": "effect3d",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "3D模式的情况下，激活item与前后item之间的距离，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "effect3d-previous-margin",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "50",
+      "name": "indicatorActiveColor",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否自动播放",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "indicatorInactiveColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "indicatorStyle",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "indicatorMode",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "autoplay",
       "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "自动轮播时间间隔，单位ms",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "current",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "currentItemId",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "interval",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "duration",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "500",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否衔接滑动，即到最后一张时接着滑动，是否自动切换到第一张",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "circular",
       "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "图片的裁剪模式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "img-mode",
+      "name": "previousMargin",
       "type": "String",
-      "default": "\"aspectFill\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "从list数组中读取的图片的属性名",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "name",
+      "name": "nextMargin",
       "type": "String",
-      "default": "\"image\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "背景颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "bg-color",
+      "name": "acceleration",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "displayMultipleItems",
+      "type": "Number",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "easingFunction",
       "type": "String",
-      "default": "\"#f3f4f6\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "初始化时，默认显示第几项",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "current",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
+      "name": "keyName",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "标题的样式，对象形式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "title-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "name": "imgMode",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "radius",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loading",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showTitle",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     }
@@ -300,9 +376,9 @@
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "uCurrent",
-      "type": "object",
-      "initialValue": "this.current"
+      "name": "currentIndex",
+      "type": "number",
+      "initialValue": "0"
     }
   ],
   "computed": [
@@ -310,33 +386,29 @@
       "kind": "computed",
       "keywords": [],
       "visibility": "public",
-      "name": "justifyContent",
+      "name": "itemStyle",
       "dependencies": [
-        "indicatorPos"
-      ]
-    },
-    {
-      "kind": "computed",
-      "keywords": [],
-      "visibility": "public",
-      "name": "titlePaddingBottom",
-      "dependencies": [
-        "mode",
-        "indicatorPos"
-      ]
-    },
-    {
-      "kind": "computed",
-      "description": "因为uni的swiper组件的current参数只接受Number类型，这里做一个转换",
-      "keywords": [],
-      "visibility": "public",
-      "name": "elCurrent",
-      "dependencies": [
-        "current"
+        "nextMargin",
+        "previousMargin",
+        "radius",
+        "currentIndex"
       ]
     }
   ],
   "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "detail",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
     {
       "kind": "event",
       "keywords": [],
@@ -349,20 +421,6 @@
           "rest": false
         }
       ]
-    },
-    {
-      "kind": "event",
-      "description": "发出change事件，表示当前自动切换的index，从0开始",
-      "keywords": [],
-      "visibility": "public",
-      "name": "change",
-      "arguments": [
-        {
-          "name": "current",
-          "type": "any",
-          "rest": false
-        }
-      ]
     }
   ],
   "methods": [
@@ -370,16 +428,16 @@
       "kind": "method",
       "keywords": [],
       "visibility": "public",
-      "name": "listClick",
+      "name": "getItemType",
       "params": [
         {
-          "name": "index",
+          "name": "item",
           "type": "unknow",
           "rest": false
         }
       ],
       "syntax": [
-        "listClick(index: unknow): void"
+        "getItemType(item: unknow): void"
       ],
       "returns": {
         "type": "void"
@@ -387,6 +445,27 @@
     },
     {
       "kind": "method",
+      "description": "获取目标路径，可能数组中为字符串，对象的形式，额外可指定对象的目标属性名keyName",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getSource",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getSource(item: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "轮播切换事件",
       "keywords": [],
       "visibility": "public",
       "name": "change",
@@ -406,19 +485,59 @@
     },
     {
       "kind": "method",
-      "description": "暂不监听此事件，因为不再给swiper绑定uCurrent属性",
+      "description": "切换轮播时，暂停视频播放",
       "keywords": [],
       "visibility": "public",
-      "name": "animationfinish",
+      "name": "pauseVideo",
       "params": [
         {
-          "name": "e",
+          "name": "index",
           "type": "unknow",
           "rest": false
         }
       ],
       "syntax": [
-        "animationfinish(e: unknow): void"
+        "pauseVideo(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "当一个轮播item为视频时，获取它的视频海报",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getPoster",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getPoster(item: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击某个item",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "clickHandler(index: unknow): void"
       ],
       "returns": {
         "type": "void"
@@ -426,5 +545,5 @@
     }
   ],
   "name": "u-swiper",
-  "description": "swiper 轮播图"
+  "description": "Swiper 轮播图"
 }

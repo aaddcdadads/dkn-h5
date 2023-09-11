@@ -5,197 +5,202 @@
   "keywords": [
     {
       "name": "description",
-      "description": "本组件一般用于展示头像的地方，如个人中心，或者评论列表页的用户头像展示等场所。"
+      "description": "该组件一般用于图标右上角显示未读的消息数量，提示用户点击，有圆点和圆包含文字两种形式。"
     },
     {
       "name": "tutorial",
-      "description": "https://www.uviewui.com/components/badge.html"
+      "description": "https://uviewui.com/components/badge.html"
     },
     {
       "name": "property",
-      "description": "{String Number} count 展示的数字，大于 overflowCount 时显示为 ${overflowCount}+，为0且show-zero为false时隐藏"
+      "description": "{Boolean} \t\t\tisDot \t\t是否显示圆点 （默认 false ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} is-dot 不展示数字，只有一个小点（默认false）"
+      "description": "{String | Number} \tvalue \t\t显示的内容"
     },
     {
       "name": "property",
-      "description": "{Boolean} absolute 组件是否绝对定位，为true时，offset参数才有效（默认true）"
+      "description": "{Boolean} \t\t\tshow \t\t是否显示 （默认 true ）"
     },
     {
       "name": "property",
-      "description": "{String Number} overflow-count 展示封顶的数字值（默认99）"
+      "description": "{String | Number} \tmax \t\t最大值，超过最大值会显示 '{max}+'  （默认999）"
     },
     {
       "name": "property",
-      "description": "{String} type 使用预设的背景颜色（默认error）"
+      "description": "{String} \t\t\ttype \t\t主题类型，error|warning|success|primary （默认 'error' ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} show-zero 当数值为 0 时，是否展示 Badge（默认false）"
+      "description": "{Boolean} \t\t\tshowZero\t当数值为 0 时，是否展示 Badge （默认 false ）"
     },
     {
       "name": "property",
-      "description": "{String} size Badge的尺寸，设为mini会得到小一号的Badge（默认default）"
+      "description": "{String} \t\t\tbgColor \t背景颜色，优先级比type高，如设置，type参数会失效"
     },
     {
       "name": "property",
-      "description": "{Array} offset 设置badge的位置偏移，格式为 [x, y]，也即设置的为top和right的值，单位rpx。absolute为true时有效（默认[20, 20]）"
+      "description": "{String} \t\t\tcolor \t\t字体颜色 （默认 '#ffffff' ）"
     },
     {
       "name": "property",
-      "description": "{String} color 字体颜色（默认#ffffff）"
+      "description": "{String} \t\t\tshape \t\t徽标形状，circle-四角均为圆角，horn-左下角为直角 （默认 'circle' ）"
     },
     {
       "name": "property",
-      "description": "{String} bgColor 背景颜色，优先级比type高，如设置，type参数会失效"
+      "description": "{String} \t\t\tnumberType\t设置数字的显示方式，overflow|ellipsis|limit  （默认 'overflow' ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} is-center 组件中心点是否和父组件右上角重合，优先级比offset高，如设置，offset参数会失效（默认false）"
+      "description": "{Array}} \t\t\toffset\t\t设置badge的位置偏移，格式为 [x, y]，也即设置的为top和right的值，absolute为true时有效"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} \t\t\tinverted\t是否反转背景和字体颜色（默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} \t\t\tabsolute\t是否绝对定位（默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t定义需要用到的外部样式"
     },
     {
       "name": "example",
-      "description": "<u-badge type=\"error\" count=\"7\"></u-badge>"
+      "description": "<u-badge :type=\"type\" :count=\"count\"></u-badge>"
     }
   ],
   "slots": [],
   "props": [
     {
       "kind": "prop",
-      "description": "primary,warning,success,error,info",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isDot",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "max",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "type",
       "type": "String",
-      "default": "\"error\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "default, mini",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "size",
+      "name": "showZero",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgColor",
       "type": "String",
-      "default": "\"default\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否是圆点",
-      "keywords": [],
-      "visibility": "public",
-      "name": "is-dot",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "显示的数值内容",
-      "keywords": [],
-      "visibility": "public",
-      "name": "count",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "展示封顶的数字值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "overflow-count",
-      "type": "Number",
-      "default": "99",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "当数值为 0 时，是否展示 Badge",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-zero",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "位置偏移",
-      "keywords": [],
-      "visibility": "public",
-      "name": "offset",
-      "type": "Array",
-      "default": "() => { return [20, 20] }",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否开启绝对定位，开启了offset才会起作用",
-      "keywords": [],
-      "visibility": "public",
-      "name": "absolute",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "字体大小",
-      "keywords": [],
-      "visibility": "public",
-      "name": "font-size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"24\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "字体演示",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "color",
       "type": "String",
-      "default": "\"#ffffff\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "badge的背景颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "bg-color",
+      "name": "shape",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否让badge组件的中心点和父组件右上角重合，配置的话，offset将会失效",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "is-center",
+      "name": "numberType",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "offset",
+      "type": "Array",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inverted",
       "type": "Boolean",
-      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "absolute",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     }
@@ -208,38 +213,36 @@
       "keywords": [],
       "visibility": "public",
       "name": "boxStyle",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "description": "整个组件的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "badgeStyle",
       "dependencies": [
-        "isCenter",
-        "offset",
-        "size"
+        "color",
+        "bgColor",
+        "inverted",
+        "absolute",
+        "offset"
       ]
     },
     {
       "kind": "computed",
-      "description": "isDot类型时，不显示文字",
       "keywords": [],
       "visibility": "public",
-      "name": "showText",
+      "name": "showValue",
       "dependencies": [
-        "isDot",
-        "count",
-        "overflowCount"
-      ]
-    },
-    {
-      "kind": "computed",
-      "description": "是否显示组件",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show",
-      "dependencies": [
-        "count",
-        "showZero"
+        "numberType",
+        "value",
+        "max"
       ]
     }
   ],
   "events": [],
   "methods": [],
   "name": "u-badge",
-  "description": "badge 角标"
+  "description": "badge 徽标数"
 }

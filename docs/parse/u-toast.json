@@ -13,7 +13,63 @@
     },
     {
       "name": "property",
-      "description": "{String} z-index toast展示时的z-index值"
+      "description": "{String | Number}\tzIndex\t\ttoast展示时的zIndex值 (默认 10090 )"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tloading\t\t是否加载中 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tmessage\t\t显示的文字内容"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ticon\t\t图标，或者绝对路径的图片"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttype\t\t主题类型 （默认 default）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tshow\t\t是否显示该组件 （默认 false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\toverlay\t\t是否显示透明遮罩，防止点击穿透 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tposition\t位置 （默认 'center' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tparams\t\t跳转的参数"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}  duration\t展示时间，单位ms （默认 2000 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tisTab\t\t是否返回的为tab页面 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\turl\t\t\ttoast消失后是否跳转页面，有则跳转，优先级高于back参数"
+    },
+    {
+      "name": "property",
+      "description": "{Function}\t\t\tcomplete\t执行完后的回调函数"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tback\t\t结束toast是否自动返回上一页 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t组件的样式，对象形式"
     },
     {
       "name": "event",
@@ -25,22 +81,7 @@
     }
   ],
   "slots": [],
-  "props": [
-    {
-      "kind": "prop",
-      "description": "z-index值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "z-index",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    }
-  ],
+  "props": [],
   "data": [
     {
       "kind": "data",
@@ -65,7 +106,7 @@
       "visibility": "public",
       "name": "config",
       "type": "object",
-      "initialValue": "{\"params\":{\"type\":\"object\",\"value\":{},\"raw\":\"{}\"},\"title\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"type\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"duration\":{\"type\":\"number\",\"value\":2000,\"raw\":\"2000\"},\"isTab\":{\"type\":\"boolean\",\"value\":false,\"raw\":\"false\"},\"url\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"icon\":{\"type\":\"boolean\",\"value\":true,\"raw\":\"true\"},\"position\":{\"type\":\"string\",\"value\":\"center\",\"raw\":\"\\\"center\\\"\"},\"callback\":{\"type\":\"any\",\"value\":null,\"raw\":\"null\"},\"back\":{\"type\":\"boolean\",\"value\":false,\"raw\":\"false\"}}"
+      "initialValue": "{\"message\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"type\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"duration\":{\"type\":\"number\",\"value\":2000,\"raw\":\"2000\"},\"icon\":{\"type\":\"boolean\",\"value\":true,\"raw\":\"true\"},\"position\":{\"type\":\"string\",\"value\":\"center\",\"raw\":\"\\\"center\\\"\"},\"complete\":{\"type\":\"any\",\"value\":null,\"raw\":\"null\"},\"overlay\":{\"type\":\"boolean\",\"value\":false,\"raw\":\"false\"},\"loading\":{\"type\":\"boolean\",\"value\":false,\"raw\":\"false\"}}"
     },
     {
       "kind": "data",
@@ -83,19 +124,40 @@
       "visibility": "public",
       "name": "iconName",
       "dependencies": [
-        "tmpConfig",
-        "$u"
+        "tmpConfig"
       ]
     },
     {
       "kind": "computed",
       "keywords": [],
       "visibility": "public",
-      "name": "uZIndex",
+      "name": "overlayStyle",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconStyle",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadingIconColor",
       "dependencies": [
-        "isShow",
-        "zIndex",
-        "$u"
+        "tmpConfig"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "内容盒子的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentStyle",
+      "dependencies": [
+        "tmpConfig"
       ]
     }
   ],
@@ -137,13 +199,12 @@
     },
     {
       "kind": "method",
-      "description": "倒计时结束之后，进行的一些操作",
       "keywords": [],
       "visibility": "public",
-      "name": "timeEnd",
+      "name": "clearTimer",
       "params": [],
       "syntax": [
-        "timeEnd(): void"
+        "clearTimer(): void"
       ],
       "returns": {
         "type": "void"

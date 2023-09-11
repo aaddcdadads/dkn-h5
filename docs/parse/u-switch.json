@@ -13,31 +13,47 @@
     },
     {
       "name": "property",
-      "description": "{Boolean} loading 是否处于加载中（默认false）"
+      "description": "{Boolean}\t\t\t\t\t\tloading\t\t\t是否处于加载中（默认 false ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} disabled 是否禁用（默认false）"
+      "description": "{Boolean}\t\t\t\t\t\tdisabled\t\t是否禁用（默认 false ）"
     },
     {
       "name": "property",
-      "description": "{String Number} size 开关尺寸，单位rpx（默认50）"
+      "description": "{String | Number}\t\t\t\tsize\t\t\t开关尺寸，单位px （默认 25 ）"
     },
     {
       "name": "property",
-      "description": "{String} active-color 打开时的背景色（默认#2979ff）"
+      "description": "{String}\t\t\t\t\t\tactiveColor\t\t打开时的背景色 （默认 '#2979ff' ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} inactive-color 关闭时的背景色（默认#ffffff）"
+      "description": "{String} \t\t\t\t\t\tinactiveColor\t关闭时的背景色 （默认 '#ffffff' ）"
     },
     {
       "name": "property",
-      "description": "{Boolean | Number | String} active-value 打开选择器时通过change事件发出的值（默认true）"
+      "description": "{Boolean | String | Number}\tvalue\t\t\t通过v-model双向绑定的值 （默认 false ）"
     },
     {
       "name": "property",
-      "description": "{Boolean | Number | String} inactive-value 关闭选择器时通过change事件发出的值（默认false）"
+      "description": "{Boolean | String | Number}\tactiveValue\t\t打开选择器时通过change事件发出的值 （默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean | String | Number}\tinactiveValue\t关闭选择器时通过change事件发出的值 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\t\t\t\tasyncChange\t\t是否开启异步变更，开启后需要手动控制输入值 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\t\t\t\tspace\t\t\t圆点与外边框的距离 （默认 0 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\t\t\t\tcustomStyle\t\t定义需要用到的外部样式"
     },
     {
       "name": "event",
@@ -52,117 +68,126 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否为加载中状态",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "loading",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否为禁用装填",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "开关尺寸，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "size",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "50",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "打开时的背景颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "active-color",
+      "name": "activeColor",
       "type": "String",
-      "default": "\"#2979ff\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "关闭时的背景颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "inactive-color",
+      "name": "inactiveColor",
       "type": "String",
-      "default": "\"#ffffff\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "通过v-model双向绑定的值",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "value",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": true
-    },
-    {
-      "kind": "prop",
-      "description": "是否使手机发生短促震动，目前只在iOS的微信小程序有效(2020-05-06)",
-      "keywords": [],
-      "visibility": "public",
-      "name": "vibrate-short",
-      "type": "Boolean",
-      "default": "false",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "打开选择器时的值",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "active-value",
-      "type": [
-        "Number",
-        "String",
-        "Boolean"
-      ],
-      "default": "true",
+      "name": "activeValue",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "关闭选择器时的值",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "inactive-value",
-      "type": [
-        "Number",
-        "String",
-        "Boolean"
-      ],
-      "default": "false",
+      "name": "inactiveValue",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "asyncChange",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "space",
+      "type": "String",
       "required": false,
       "describeModel": false
     }
   ],
-  "data": [],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgColor",
+      "type": "string",
+      "initialValue": "\"#ffffff\""
+    }
+  ],
   "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isActive",
+      "dependencies": [
+        "value",
+        "activeValue"
+      ]
+    },
     {
       "kind": "computed",
       "keywords": [],
@@ -171,6 +196,8 @@
       "dependencies": [
         "size",
         "value",
+        "customInactiveColor",
+        "isActive",
         "activeColor",
         "inactiveColor"
       ]
@@ -179,10 +206,31 @@
       "kind": "computed",
       "keywords": [],
       "visibility": "public",
-      "name": "loadingColor",
+      "name": "nodeStyle",
       "dependencies": [
-        "value",
-        "activeColor"
+        "size",
+        "space",
+        "isActive"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgStyle",
+      "dependencies": [
+        "size",
+        "inactiveColor",
+        "isActive"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "customInactiveColor",
+      "dependencies": [
+        "inactiveColor"
       ]
     }
   ],
@@ -194,7 +242,7 @@
       "name": "input",
       "arguments": [
         {
-          "name": "!this.value",
+          "name": "oldValue",
           "type": "any",
           "rest": false
         }
@@ -207,8 +255,8 @@
       "name": "change",
       "arguments": [
         {
-          "name": "this.value ? this.activeValue : this.inactiveValue",
-          "type": "ConditionalExpression",
+          "name": "oldValue",
+          "type": "any",
           "rest": false
         }
       ]
@@ -219,10 +267,10 @@
       "kind": "method",
       "keywords": [],
       "visibility": "public",
-      "name": "onClick",
+      "name": "clickHandler",
       "params": [],
       "syntax": [
-        "onClick(): void"
+        "clickHandler(): void"
       ],
       "returns": {
         "type": "void"

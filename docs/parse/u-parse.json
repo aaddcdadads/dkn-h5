@@ -15,73 +15,27 @@
   "props": [
     {
       "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "html",
+      "name": "content",
       "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "autopause",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "autoscroll",
+      "name": "copyLink",
       "type": "Boolean",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "autoset-title",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "#ifndef H5 || APP-PLUS-NVUE || MP-360",
-      "keywords": [],
-      "visibility": "public",
-      "name": "compress",
-      "type": "Number",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "loading-img",
-      "type": "String",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "use-cache",
-      "type": "Boolean",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "#endif",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "domain",
@@ -91,15 +45,67 @@
     },
     {
       "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "lazy-load",
+      "name": "errorImg",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lazyLoad",
       "type": "Boolean",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadingImg",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pauseVideo",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "previewImg",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scrollTable",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "selectable",
@@ -109,28 +115,31 @@
     },
     {
       "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "tag-style",
+      "name": "setTitle",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showImgMenu",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tagStyle",
       "type": "Object",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-with-animation",
-      "type": "Boolean",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "use-anchor",
-      "type": "Boolean",
       "required": false,
       "describeModel": false
     }
@@ -138,12 +147,11 @@
   "data": [
     {
       "kind": "data",
-      "description": "#ifdef H5 || MP-360",
       "keywords": [],
       "visibility": "public",
-      "name": "uid",
-      "type": "object",
-      "initialValue": "this._uid"
+      "name": "nodes",
+      "type": "array",
+      "initialValue": "[]"
     },
     {
       "kind": "data",
@@ -152,25 +160,7 @@
       "visibility": "public",
       "name": "height",
       "type": "number",
-      "initialValue": "1"
-    },
-    {
-      "kind": "data",
-      "description": "#ifndef APP-PLUS-NVUE",
-      "keywords": [],
-      "visibility": "public",
-      "name": "showAm",
-      "type": "string",
-      "initialValue": "\"\""
-    },
-    {
-      "kind": "data",
-      "description": "#endif",
-      "keywords": [],
-      "visibility": "public",
-      "name": "nodes",
-      "type": "array",
-      "initialValue": "[]"
+      "initialValue": "0"
     }
   ],
   "computed": [],
@@ -186,10 +176,10 @@
       "kind": "event",
       "keywords": [],
       "visibility": "public",
-      "name": "parse",
+      "name": "imgTap",
       "arguments": [
         {
-          "name": "nodes",
+          "name": "attrs",
           "type": "any",
           "rest": false
         }
@@ -199,10 +189,10 @@
       "kind": "event",
       "keywords": [],
       "visibility": "public",
-      "name": "imgtap",
+      "name": "linkTap",
       "arguments": [
         {
-          "name": "img",
+          "name": "attrs",
           "type": "any",
           "rest": false
         }
@@ -212,14 +202,8 @@
       "kind": "event",
       "keywords": [],
       "visibility": "public",
-      "name": "linkpress",
-      "arguments": [
-        {
-          "name": "{ href, ignore: () => jump = false }",
-          "type": "object",
-          "rest": false
-        }
-      ]
+      "name": "tap",
+      "arguments": []
     },
     {
       "kind": "event",
@@ -228,89 +212,46 @@
       "name": "error",
       "arguments": [
         {
-          "name": "{ source: d.source, target: d.target }",
+          "name": "{ source: message.source, attrs: message.attrs }",
           "type": "object",
           "rest": false
         }
       ]
-    },
-    {
-      "kind": "event",
-      "keywords": [],
-      "visibility": "public",
-      "name": "click",
-      "arguments": []
-    },
-    {
-      "kind": "event",
-      "keywords": [],
-      "visibility": "public",
-      "name": "tap",
-      "arguments": []
     }
   ],
   "methods": [
     {
       "kind": "method",
-      "description": "设置富文本内容",
-      "keywords": [],
-      "visibility": "public",
-      "name": "setContent",
-      "params": [
+      "keywords": [
         {
-          "name": "html",
-          "type": "unknow",
-          "rest": false
-        },
-        {
-          "name": "append",
-          "type": "unknow",
-          "rest": false
+          "name": "description",
+          "description": "将锚点跳转的范围限定在一个 scroll-view 内"
         }
       ],
-      "syntax": [
-        "setContent(html: unknow, append: unknow): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "description": "获取文本内容",
-      "keywords": [],
-      "visibility": "public",
-      "name": "getText",
-      "params": [
-        {
-          "name": "ns",
-          "type": "object",
-          "defaultValue": "this.nodes",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "getText(ns: object = this.nodes): unknow"
-      ],
-      "returns": {
-        "type": "unknow"
-      }
-    },
-    {
-      "kind": "method",
-      "description": "锚点跳转",
-      "keywords": [],
       "visibility": "public",
       "name": "in",
       "params": [
         {
-          "name": "obj",
-          "type": "unknow",
+          "name": "page",
+          "type": "Object",
+          "description": "scroll-view 所在页面的示例",
+          "rest": false
+        },
+        {
+          "name": "selector",
+          "type": "String",
+          "description": "scroll-view 的选择器",
+          "rest": false
+        },
+        {
+          "name": "scrollTop",
+          "type": "String",
+          "description": "scroll-view scroll-top 属性绑定的变量名",
           "rest": false
         }
       ],
       "syntax": [
-        "in(obj: unknow): void"
+        "in(page: Object, selector: String, scrollTop: String): void"
       ],
       "returns": {
         "type": "void"
@@ -318,38 +259,97 @@
     },
     {
       "kind": "method",
-      "keywords": [],
+      "keywords": [
+        {
+          "name": "description",
+          "description": "锚点跳转"
+        }
+      ],
       "visibility": "public",
       "name": "navigateTo",
       "params": [
         {
-          "name": "obj",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "navigateTo(obj: unknow): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "description": "获取视频对象",
-      "keywords": [],
-      "visibility": "public",
-      "name": "getVideoContext",
-      "params": [
-        {
           "name": "id",
-          "type": "unknow",
+          "type": "String",
+          "description": "要跳转的锚点 id",
+          "rest": false
+        },
+        {
+          "name": "offset",
+          "type": "Number",
+          "description": "跳转位置的偏移量",
           "rest": false
         }
       ],
       "syntax": [
-        "getVideoContext(id: unknow): void"
+        "navigateTo(id: String, offset: Number): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [
+        {
+          "name": "description",
+          "description": "获取文本内容"
+        }
+      ],
+      "visibility": "public",
+      "name": "getText",
+      "params": [],
+      "syntax": [
+        "getText(): String"
+      ],
+      "returns": {
+        "type": "String"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [
+        {
+          "name": "description",
+          "description": "获取内容大小和位置"
+        }
+      ],
+      "visibility": "public",
+      "name": "getRect",
+      "params": [],
+      "syntax": [
+        "getRect(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [
+        {
+          "name": "description",
+          "description": "设置内容"
+        }
+      ],
+      "visibility": "public",
+      "name": "setContent",
+      "params": [
+        {
+          "name": "content",
+          "type": "String",
+          "description": "html 内容",
+          "rest": false
+        },
+        {
+          "name": "append",
+          "type": "Boolean",
+          "description": "是否在尾部追加",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setContent(content: String, append: Boolean): void"
       ],
       "returns": {
         "type": "void"
@@ -357,13 +357,41 @@
     },
     {
       "kind": "method",
-      "description": "#ifdef H5 || APP-PLUS-NVUE || MP-360",
-      "keywords": [],
+      "keywords": [
+        {
+          "name": "description",
+          "description": "调用插件钩子函数"
+        }
+      ],
       "visibility": "public",
-      "name": "_handleHtml",
+      "name": "_hook",
       "params": [
         {
-          "name": "html",
+          "name": "name",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_hook(name: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [
+        {
+          "name": "description",
+          "description": "设置内容"
+        }
+      ],
+      "visibility": "public",
+      "name": "_set",
+      "params": [
+        {
+          "name": "nodes",
           "type": "unknow",
           "rest": false
         },
@@ -374,18 +402,22 @@
         }
       ],
       "syntax": [
-        "_handleHtml(html: unknow, append: unknow): unknow"
+        "_set(nodes: unknow, append: unknow): void"
       ],
       "returns": {
-        "type": "unknow"
+        "type": "void"
       }
     },
     {
       "kind": "method",
-      "description": "#ifdef APP-PLUS-NVUE",
-      "keywords": [],
+      "keywords": [
+        {
+          "name": "description",
+          "description": "接收到 web-view 消息"
+        }
+      ],
       "visibility": "public",
-      "name": "_message",
+      "name": "_onMessage",
       "params": [
         {
           "name": "e",
@@ -394,13 +426,13 @@
         }
       ],
       "syntax": [
-        "_message(e: unknow): void"
+        "_onMessage(e: unknow): void"
       ],
       "returns": {
         "type": "void"
       }
     }
   ],
-  "name": "parser",
+  "name": "mp-html",
   "description": "#endif"
 }

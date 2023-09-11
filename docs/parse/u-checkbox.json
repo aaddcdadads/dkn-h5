@@ -5,43 +5,71 @@
   "keywords": [
     {
       "name": "description",
-      "description": "该组件需要搭配checkboxGroup组件使用，以便用户进行操作时，获得当前复选框组的选中情况。"
+      "description": "复选框组件一般用于需要多个选择的场景，该组件功能完整，使用方便"
     },
     {
       "name": "tutorial",
-      "description": "https://www.uviewui.com/components/checkbox.html"
+      "description": "https://uviewui.com/components/checkbox.html"
     },
     {
       "name": "property",
-      "description": "{String Number} icon-size 图标大小，单位rpx（默认20）"
+      "description": "{String | Number | Boolean}\tname\t\t\tcheckbox组件的标示符"
     },
     {
       "name": "property",
-      "description": "{String Number} label-size label字体大小，单位rpx（默认28）"
+      "description": "{String}\t\t\t\t\t\tshape\t\t\t形状，square为方形，circle为圆型"
     },
     {
       "name": "property",
-      "description": "{String Number} name checkbox组件的标示符"
+      "description": "{String | Number}\t\t\t\tsize\t\t\t整体的大小"
     },
     {
       "name": "property",
-      "description": "{String} shape 形状，见官网说明（默认circle）"
+      "description": "{Boolean}\t\t\t\t\t\tchecked\t\t\t是否默认选中"
     },
     {
       "name": "property",
-      "description": "{Boolean} disabled 是否禁用"
+      "description": "{String | Boolean}\t\t\t\tdisabled\t\t是否禁用"
     },
     {
       "name": "property",
-      "description": "{Boolean} label-disabled 是否禁止点击文本操作checkbox"
+      "description": "{String}\t\t\t\t\t\tactiveColor\t\t选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值"
     },
     {
       "name": "property",
-      "description": "{String} active-color 选中时的颜色，如设置CheckboxGroup的active-color将失效"
+      "description": "{String}\t\t\t\t\t\tinactiveColor\t未选中的颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\t\t\t\ticonSize\t\t图标的大小，单位px"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\t\t\t\ticonColor\t\t图标颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\t\t\t\tlabel\t\t\tlabel提示文字，因为nvue下，直接slot进来的文字，由于特殊的结构，无法修改样式"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\t\t\t\tlabelColor \t\tlabel的颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\t\t\t\tlabelSize\t\tlabel的字体大小，px单位"
+    },
+    {
+      "name": "property",
+      "description": "{String | Boolean}\t\t\t\tlabelDisabled\t是否禁止点击提示语选中复选框"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\t\t\t\tcustomStyle\t\t定义需要用到的外部样式"
     },
     {
       "name": "event",
-      "description": "{Function} change 某个checkbox状态发生变化时触发，回调为一个对象"
+      "description": "{Function}\tchange\t任一个checkbox状态发生变化时触发，回调为一个对象"
     },
     {
       "name": "example",
@@ -53,125 +81,138 @@
       "kind": "slot",
       "keywords": [],
       "visibility": "public",
-      "name": "default",
+      "name": "icon",
       "props": []
     }
   ],
   "props": [
     {
       "kind": "prop",
-      "description": "checkbox的名称",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "name",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "形状，square为方形，circle为原型",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "shape",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否为选中状态",
-      "keywords": [],
-      "visibility": "public",
-      "name": "value",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": true
-    },
-    {
-      "kind": "prop",
-      "description": "是否禁用",
-      "keywords": [],
-      "visibility": "public",
-      "name": "disabled",
-      "type": [
-        "String",
-        "Boolean"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否禁止点击提示语选中复选框",
-      "keywords": [],
-      "visibility": "public",
-      "name": "label-disabled",
-      "type": [
-        "String",
-        "Boolean"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "选中状态下的颜色，如设置此值，将会覆盖checkboxGroup的activeColor值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "active-color",
-      "type": "String",
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "图标的大小，单位rpx",
-      "keywords": [],
-      "visibility": "public",
-      "name": "icon-size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "label的字体大小，rpx单位",
-      "keywords": [],
-      "visibility": "public",
-      "name": "label-size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "组件的整体大小",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "checked",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "activeColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactiveColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelDisabled",
+      "type": "String",
       "required": false,
       "describeModel": false
     }
@@ -181,29 +222,30 @@
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "parentDisabled",
+      "name": "isChecked",
       "type": "boolean",
       "initialValue": "false"
     },
     {
       "kind": "data",
+      "description": "故只能使用如此方法",
       "keywords": [],
       "visibility": "public",
-      "name": "newParams",
+      "name": "parentData",
       "type": "object",
-      "initialValue": "{}"
+      "initialValue": "{\"iconSize\":{\"type\":\"number\",\"value\":12,\"raw\":\"12\"},\"labelDisabled\":{\"type\":\"any\",\"value\":null,\"raw\":\"null\"},\"disabled\":{\"type\":\"any\",\"value\":null,\"raw\":\"null\"},\"shape\":{\"type\":\"string\",\"value\":\"square\",\"raw\":\"\\\"square\\\"\"},\"activeColor\":{\"type\":\"any\",\"value\":null,\"raw\":\"null\"},\"inactiveColor\":{\"type\":\"any\",\"value\":null,\"raw\":\"null\"},\"size\":{\"type\":\"number\",\"value\":18,\"raw\":\"18\"},\"value\":{\"type\":\"any\",\"value\":null,\"raw\":\"null\"},\"iconColor\":{\"type\":\"any\",\"value\":null,\"raw\":\"null\"},\"placement\":{\"type\":\"string\",\"value\":\"row\",\"raw\":\"\\\"row\\\"\"},\"borderBottom\":{\"type\":\"boolean\",\"value\":false,\"raw\":\"false\"},\"iconPlacement\":{\"type\":\"string\",\"value\":\"left\",\"raw\":\"\\\"left\\\"\"}}"
     }
   ],
   "computed": [
     {
       "kind": "computed",
-      "description": "是否禁用，如果父组件u-checkbox-group禁用的话，将会忽略子组件的配置",
+      "description": "是否禁用，如果父组件u-raios-group禁用的话，将会忽略子组件的配置",
       "keywords": [],
       "visibility": "public",
-      "name": "isDisabled",
+      "name": "elDisabled",
       "dependencies": [
         "disabled",
-        "parent"
+        "parentData"
       ]
     },
     {
@@ -211,32 +253,32 @@
       "description": "是否禁用label点击",
       "keywords": [],
       "visibility": "public",
-      "name": "isLabelDisabled",
+      "name": "elLabelDisabled",
       "dependencies": [
         "labelDisabled",
-        "parent"
+        "parentData"
       ]
     },
     {
       "kind": "computed",
-      "description": "组件尺寸，对应size的值，默认值为34rpx",
+      "description": "组件尺寸，对应size的值，默认值为21px",
       "keywords": [],
       "visibility": "public",
-      "name": "checkboxSize",
+      "name": "elSize",
       "dependencies": [
         "size",
-        "parent"
+        "parentData"
       ]
     },
     {
       "kind": "computed",
-      "description": "组件的勾选图标的尺寸，默认20",
+      "description": "组件的勾选图标的尺寸，默认12px",
       "keywords": [],
       "visibility": "public",
-      "name": "checkboxIconSize",
+      "name": "elIconSize",
       "dependencies": [
         "iconSize",
-        "parent"
+        "parentData"
       ]
     },
     {
@@ -247,7 +289,29 @@
       "name": "elActiveColor",
       "dependencies": [
         "activeColor",
-        "parent"
+        "parentData"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "组件选未中激活时的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "elInactiveColor",
+      "dependencies": [
+        "inactiveColor",
+        "parentData"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "label的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "elLabelColor",
+      "dependencies": [
+        "labelColor",
+        "parentData"
       ]
     },
     {
@@ -258,41 +322,56 @@
       "name": "elShape",
       "dependencies": [
         "shape",
-        "parent"
+        "parentData"
       ]
     },
     {
       "kind": "computed",
+      "description": "label大小",
       "keywords": [],
       "visibility": "public",
-      "name": "iconStyle",
+      "name": "elLabelSize",
       "dependencies": [
-        "elActiveColor",
-        "value",
-        "isDisabled",
-        "$u",
-        "checkboxSize"
+        "labelSize",
+        "parentData"
       ]
     },
     {
       "kind": "computed",
-      "description": "checkbox内部的勾选图标，如果选中状态，为白色，否则为透明色即可",
       "keywords": [],
       "visibility": "public",
-      "name": "iconColor",
+      "name": "elIconColor",
       "dependencies": [
-        "value"
+        "iconColor",
+        "parentData",
+        "elDisabled",
+        "isChecked",
+        "elInactiveColor"
       ]
     },
     {
       "kind": "computed",
       "keywords": [],
       "visibility": "public",
-      "name": "iconClass",
+      "name": "iconClasses",
       "dependencies": [
         "elShape",
-        "value",
-        "isDisabled"
+        "elDisabled",
+        "isChecked"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconWrapStyle",
+      "dependencies": [
+        "isChecked",
+        "elDisabled",
+        "elActiveColor",
+        "elInactiveColor",
+        "elSize",
+        "parentData"
       ]
     },
     {
@@ -301,7 +380,8 @@
       "visibility": "public",
       "name": "checkboxStyle",
       "dependencies": [
-        "parent"
+        "parentData",
+        "customStyle"
       ]
     }
   ],
@@ -313,20 +393,7 @@
       "name": "change",
       "arguments": [
         {
-          "name": "{ value: !this.value, name: this.name }",
-          "type": "object",
-          "rest": false
-        }
-      ]
-    },
-    {
-      "kind": "event",
-      "keywords": [],
-      "visibility": "public",
-      "name": "input",
-      "arguments": [
-        {
-          "name": "!this.value",
+          "name": "isChecked",
           "type": "any",
           "rest": false
         }
@@ -338,10 +405,10 @@
       "kind": "method",
       "keywords": [],
       "visibility": "public",
-      "name": "onClickLabel",
+      "name": "init",
       "params": [],
       "syntax": [
-        "onClickLabel(): void"
+        "init(): void"
       ],
       "returns": {
         "type": "void"
@@ -351,10 +418,70 @@
       "kind": "method",
       "keywords": [],
       "visibility": "public",
-      "name": "toggle",
+      "name": "updateParentData",
       "params": [],
       "syntax": [
-        "toggle(): void"
+        "updateParentData(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "横向两端排列时，点击组件即可触发选中事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "wrapperClickHandler",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "wrapperClickHandler(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconClickHandler",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "iconClickHandler(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击label",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelClickHandler",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "labelClickHandler(e: unknow): void"
       ],
       "returns": {
         "type": "void"
@@ -375,13 +502,13 @@
     },
     {
       "kind": "method",
-      "description": "设置input的值，这里通过input事件，设置通过v-model绑定的组件的值",
+      "description": "将本组件外的其他u-checkbox的checked都设置为false(都被取消选中状态)，因而只剩下一个为选中状态",
       "keywords": [],
       "visibility": "public",
-      "name": "setValue",
+      "name": "setRadioCheckedStatus",
       "params": [],
       "syntax": [
-        "setValue(): void"
+        "setRadioCheckedStatus(): void"
       ],
       "returns": {
         "type": "void"
@@ -389,5 +516,5 @@
     }
   ],
   "name": "u-checkbox",
-  "description": "checkbox 复选框"
+  "description": "checkbox  复选框"
 }

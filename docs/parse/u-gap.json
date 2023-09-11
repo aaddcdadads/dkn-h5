@@ -13,19 +13,23 @@
     },
     {
       "name": "property",
-      "description": "{String} bg-color 背景颜色（默认#f3f4f6）"
+      "description": "{String}\t\t\tbgColor\t\t\t背景颜色 （默认 'transparent' ）"
     },
     {
       "name": "property",
-      "description": "{String Number} height 分割槽高度，单位rpx（默认30）"
+      "description": "{String | Number}\theight\t\t\t分割槽高度，单位px （默认 20 ）"
     },
     {
       "name": "property",
-      "description": "{String Number} margin-top 与前一个组件的距离，单位rpx（默认0）"
+      "description": "{String | Number}\tmarginTop\t\t与前一个组件的距离，单位px（ 默认 0 ）"
     },
     {
       "name": "property",
-      "description": "{String Number} margin-bottom 与后一个组件的距离，单位rpx（0）"
+      "description": "{String | Number}\tmarginBottom\t与后一个组件的距离，单位px （默认 0 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t\t定义需要用到的外部样式"
     },
     {
       "name": "example",
@@ -36,53 +40,41 @@
   "props": [
     {
       "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "bg-color",
+      "name": "bgColor",
       "type": "String",
-      "default": "\"transparent \"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "高度",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "height",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "30",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "与上一个组件的距离",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "margin-top",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "0",
+      "name": "marginTop",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "与下一个组件的距离",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "margin-bottom",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "0",
+      "name": "marginBottom",
+      "type": "String",
       "required": false,
       "describeModel": false
     }
@@ -98,7 +90,8 @@
         "bgColor",
         "height",
         "marginTop",
-        "marginBottom"
+        "marginBottom",
+        "customStyle"
       ]
     }
   ],

@@ -13,47 +13,71 @@
     },
     {
       "name": "property",
-      "description": "{String Number} max 最多能选中多少个checkbox（默认999）"
+      "description": "{String}\t\t\tname\t\t\t标识符"
     },
     {
       "name": "property",
-      "description": "{String Number} size 组件整体的大小，单位rpx（默认40）"
+      "description": "{Array}\t\t\tvalue\t\t\t绑定的值"
     },
     {
       "name": "property",
-      "description": "{Boolean} disabled 是否禁用所有checkbox（默认false）"
+      "description": "{String}\t\t\tshape\t\t\t形状，circle-圆形，square-方形 （默认 'square' ）"
     },
     {
       "name": "property",
-      "description": "{String Number} icon-size 图标大小，单位rpx（默认20）"
+      "description": "{Boolean}\t\t\tdisabled\t\t是否禁用全部checkbox （默认 false ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} label-disabled 是否禁止点击文本操作checkbox(默认false)"
+      "description": "{String}\t\t\tactiveColor\t\t选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值 （默认 '#2979ff' ）"
     },
     {
       "name": "property",
-      "description": "{String} width 宽度，需带单位"
+      "description": "{String}\t\t\tinactiveColor\t未选中的颜色 （默认 '#c8c9cc' ）"
     },
     {
       "name": "property",
-      "description": "{String} width 宽度，需带单位"
+      "description": "{String | Number}\tsize\t\t\t整个组件的尺寸 单位px （默认 18 ）"
     },
     {
       "name": "property",
-      "description": "{String} shape 外观形状，shape-方形，circle-圆形(默认circle)"
+      "description": "{String}\t\t\tplacement\t\t布局方式，row-横向，column-纵向 （默认 'row' ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} wrap 是否每个checkbox都换行（默认false）"
+      "description": "{String | Number}\tlabelSize\t\tlabel的字体大小，px单位  （默认 14 ）"
     },
     {
       "name": "property",
-      "description": "{String} active-color 选中时的颜色，应用到所有子Checkbox组件（默认#2979ff）"
+      "description": "{String}\t\t\tlabelColor\t\tlabel的字体颜色 （默认 '#303133' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tlabelDisabled\t是否禁止点击文本操作 (默认 false )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ticonColor\t\t图标颜色 （默认 '#ffffff' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\ticonSize\t\t图标的大小，单位px （默认 12 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ticonPlacement\t勾选图标的对齐方式，left-左边，right-右边  （默认 'left' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tborderBottom\tplacement为row时，是否显示下边框 （默认 false ）"
     },
     {
       "name": "event",
-      "description": "{Function} change 任一个checkbox状态发生变化时触发，回调为一个对象"
+      "description": "{Function}\tchange\t任一个checkbox状态发生变化时触发，回调为一个对象"
+    },
+    {
+      "name": "event",
+      "description": "{Function}\tinput\t修改通过v-model绑定的值时触发，回调为一个对象"
     },
     {
       "name": "example",
@@ -72,135 +96,207 @@
   "props": [
     {
       "kind": "prop",
-      "description": "最多能选中多少个checkbox",
-      "keywords": [],
-      "visibility": "public",
-      "name": "max",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "999",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否禁用所有复选框",
-      "keywords": [],
-      "visibility": "public",
-      "name": "disabled",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "在表单内提交时的标识符",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "name",
-      "type": [
-        "Boolean",
-        "String"
-      ],
-      "default": "\"\"",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否禁止点击提示语选中复选框",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "label-disabled",
-      "type": "Boolean",
-      "default": "false",
+      "name": "value",
+      "type": "Array",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "形状，square为方形，circle为原型",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "shape",
       "type": "String",
-      "default": "\"square\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "选中状态下的颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "active-color",
-      "type": "String",
-      "default": "\"#2979ff\"",
+      "name": "disabled",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "组件的整体大小",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "activeColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactiveColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "34",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "每个checkbox占u-checkbox-group的宽度",
-      "keywords": [],
-      "visibility": "public",
-      "name": "width",
       "type": "String",
-      "default": "\"auto\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否每个checkbox都换行",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "wrap",
+      "name": "placement",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelColor",
+      "type": "[String]",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelDisabled",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "图标的大小，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "icon-size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "20",
+      "name": "iconColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconPlacement",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "borderBottom",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     }
   ],
   "data": [],
-  "computed": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "拉取父组件新的变化后的参数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "parentData",
+      "dependencies": [
+        "value",
+        "disabled",
+        "inactiveColor",
+        "activeColor",
+        "size",
+        "labelDisabled",
+        "shape",
+        "iconSize",
+        "borderBottom",
+        "placement"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bemClass",
+      "dependencies": [
+        "bem"
+      ]
+    }
+  ],
   "events": [
     {
       "kind": "event",
+      "description": "发出事件",
       "keywords": [],
       "visibility": "public",
       "name": "change",
+      "arguments": [
+        {
+          "name": "values",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "修改通过v-model绑定的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
       "arguments": [
         {
           "name": "values",
@@ -213,12 +309,19 @@
   "methods": [
     {
       "kind": "method",
+      "description": "将其他的checkbox设置为未选中的状态",
       "keywords": [],
       "visibility": "public",
-      "name": "emitEvent",
-      "params": [],
+      "name": "unCheckedOther",
+      "params": [
+        {
+          "name": "childInstance",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
       "syntax": [
-        "emitEvent(): void"
+        "unCheckedOther(childInstance: unknow): void"
       ],
       "returns": {
         "type": "void"
@@ -226,5 +329,5 @@
     }
   ],
   "name": "u-checkbox-group",
-  "description": "checkboxGroup 开关选择器父组件Group"
+  "description": "checkboxGroup 复选框组"
 }

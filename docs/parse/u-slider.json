@@ -2,313 +2,150 @@
   "inheritAttrs": true,
   "errors": [],
   "warnings": [],
-  "keywords": [
-    {
-      "name": "tutorial",
-      "description": "https://uviewui.com/components/slider.html"
-    },
-    {
-      "name": "property",
-      "description": "{Number | String} value 滑块默认值（默认0）"
-    },
-    {
-      "name": "property",
-      "description": "{Number | String} min 最小值（默认0）"
-    },
-    {
-      "name": "property",
-      "description": "{Number | String} max 最大值（默认100）"
-    },
-    {
-      "name": "property",
-      "description": "{Number | String} step 步长（默认1）"
-    },
-    {
-      "name": "property",
-      "description": "{Number | String} blockWidth 滑块宽度，高等于宽（30）"
-    },
-    {
-      "name": "property",
-      "description": "{Number | String} height 滑块条高度，单位rpx（默认6）"
-    },
-    {
-      "name": "property",
-      "description": "{String} inactiveColor 底部条背景颜色（默认#c0c4cc）"
-    },
-    {
-      "name": "property",
-      "description": "{String} activeColor 底部选择部分的背景颜色（默认#2979ff）"
-    },
-    {
-      "name": "property",
-      "description": "{String} blockColor 滑块颜色（默认#ffffff）"
-    },
-    {
-      "name": "property",
-      "description": "{Object} blockStyle 给滑块自定义样式，对象形式"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} disabled 是否禁用滑块(默认为false)"
-    },
-    {
-      "name": "event",
-      "description": "{Function} start 滑动触发"
-    },
-    {
-      "name": "event",
-      "description": "{Function} moving 正在滑动中"
-    },
-    {
-      "name": "event",
-      "description": "{Function} end 滑动结束"
-    },
-    {
-      "name": "example",
-      "description": "<u-slider v-model=\"value\" />"
-    }
-  ],
-  "slots": [
-    {
-      "kind": "slot",
-      "keywords": [],
-      "visibility": "public",
-      "name": "default",
-      "props": []
-    }
-  ],
+  "keywords": [],
+  "slots": [],
   "props": [
     {
       "kind": "prop",
-      "description": "当前进度百分比值，范围0-100",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
+      "name": "min",
+      "type": "String",
       "required": false,
-      "describeModel": true
+      "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否禁用滑块",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "max",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "step",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "activeColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactiveColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blockSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blockColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "滑块宽度，高等于宽，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "block-width",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "30",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "最小值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "min",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "最大值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "max",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "100",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "步进值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "step",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "1",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "滑块条高度，单位rpx",
-      "keywords": [],
-      "visibility": "public",
-      "name": "height",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "6",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "进度条的激活部分颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "active-color",
-      "type": "String",
-      "default": "\"#2979ff\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "进度条的背景颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "inactive-color",
-      "type": "String",
-      "default": "\"#c0c4cc\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "滑块的背景颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "block-color",
-      "type": "String",
-      "default": "\"#ffffff\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "用户对滑块的自定义颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "block-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\treturn {};\r\n\t\t\t}",
+      "name": "showValue",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     }
   ],
-  "data": [
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "startX",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "status",
-      "type": "string",
-      "initialValue": "\"end\""
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "newValue",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "distanceX",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "startValue",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "barStyle",
-      "type": "object",
-      "initialValue": "{}"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "sliderRect",
-      "type": "object",
-      "initialValue": "{\"left\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"},\"width\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"}}"
-    }
-  ],
+  "data": [],
   "computed": [],
   "events": [
     {
       "kind": "event",
-      "keywords": [],
-      "visibility": "public",
-      "name": "start",
-      "arguments": []
-    },
-    {
-      "kind": "event",
-      "description": "发出moving事件",
-      "keywords": [],
-      "visibility": "public",
-      "name": "moving",
-      "arguments": []
-    },
-    {
-      "kind": "event",
-      "keywords": [],
-      "visibility": "public",
-      "name": "end",
-      "arguments": []
-    },
-    {
-      "kind": "event",
-      "description": "修改value值",
+      "description": "更新v-model的值",
       "keywords": [],
       "visibility": "public",
       "name": "input",
       "arguments": [
         {
-          "name": "width",
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "触发事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "changing",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "触发事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "value",
           "type": "any",
           "rest": false
         }
@@ -318,18 +155,19 @@
   "methods": [
     {
       "kind": "method",
+      "description": "拖动过程中触发",
       "keywords": [],
       "visibility": "public",
-      "name": "onTouchStart",
+      "name": "changingHandler",
       "params": [
         {
-          "name": "event",
+          "name": "e",
           "type": "unknow",
           "rest": false
         }
       ],
       "syntax": [
-        "onTouchStart(event: unknow): void"
+        "changingHandler(e: unknow): void"
       ],
       "returns": {
         "type": "void"
@@ -337,99 +175,24 @@
     },
     {
       "kind": "method",
+      "description": "滑动结束时触发",
       "keywords": [],
       "visibility": "public",
-      "name": "onTouchMove",
+      "name": "changeHandler",
       "params": [
         {
-          "name": "event",
+          "name": "e",
           "type": "unknow",
           "rest": false
         }
       ],
       "syntax": [
-        "onTouchMove(event: unknow): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "onTouchEnd",
-      "params": [],
-      "syntax": [
-        "onTouchEnd(): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "updateValue",
-      "params": [
-        {
-          "name": "value",
-          "type": "unknow",
-          "rest": false
-        },
-        {
-          "name": "drag",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "updateValue(value: unknow, drag: unknow): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "format",
-      "params": [
-        {
-          "name": "value",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "format(value: unknow): unknow"
-      ],
-      "returns": {
-        "type": "unknow"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "onClick",
-      "params": [
-        {
-          "name": "event",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "onClick(event: unknow): void"
+        "changeHandler(e: unknow): void"
       ],
       "returns": {
         "type": "void"
       }
     }
   ],
-  "name": "u-slider",
-  "description": "slider 滑块选择器"
+  "name": "u--slider"
 }

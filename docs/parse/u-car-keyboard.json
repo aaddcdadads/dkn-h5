@@ -2,17 +2,51 @@
   "inheritAttrs": true,
   "errors": [],
   "warnings": [],
-  "keywords": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "此为uView自定义的键盘面板，内含了数字键盘，车牌号键，身份证号键盘3种模式，都有可以打乱按键顺序的选项。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://uviewui.com/components/keyboard.html"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} random 是否打乱键盘的顺序"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change 点击键盘触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} backspace 点击退格键触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-keyboard ref=\"uKeyboard\" mode=\"car\" v-model=\"show\"></u-keyboard>"
+    }
+  ],
   "slots": [],
   "props": [
     {
       "kind": "prop",
-      "description": "是否打乱键盘按键的顺序",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "random",
       "type": "Boolean",
-      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "autoChange",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     }
@@ -35,18 +69,16 @@
       "visibility": "public",
       "name": "areaList",
       "dependencies": [
-        "random",
-        "$u"
+        "random"
       ]
     },
     {
       "kind": "computed",
       "keywords": [],
       "visibility": "public",
-      "name": "EngKeyBoardList",
+      "name": "engKeyBoardList",
       "dependencies": [
-        "random",
-        "$u"
+        "random"
       ]
     }
   ],
@@ -140,5 +172,6 @@
       }
     }
   ],
-  "name": "u-keyboard"
+  "name": "u-keyboard",
+  "description": "keyboard 键盘组件"
 }

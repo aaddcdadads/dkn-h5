@@ -13,39 +13,43 @@
     },
     {
       "name": "property",
-      "description": "{String Number} offset-top 吸顶时与顶部的距离，单位rpx（默认0）"
+      "description": "{String ｜ Number}\toffsetTop\t\t吸顶时与顶部的距离，单位px（默认 0 ）"
     },
     {
       "name": "property",
-      "description": "{String Number} index 自定义标识，用于区分是哪一个组件"
+      "description": "{String ｜ Number}\tcustomNavHeight\t自定义导航栏的高度 （h5 默认44  其他默认 0 ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} enable 是否开启吸顶功能（默认true）"
+      "description": "{Boolean}\t\t\tdisabled\t\t是否开启吸顶功能 （默认 false ）"
     },
     {
       "name": "property",
-      "description": "{String} bg-color 组件背景颜色（默认#ffffff）"
+      "description": "{String}\t\t\tbgColor\t\t\t组件背景颜色（默认 '#ffffff' ）"
     },
     {
       "name": "property",
-      "description": "{String Number} z-index 吸顶时的z-index值（默认970）"
+      "description": "{String ｜ Number}\tzIndex\t\t\t吸顶时的z-index值"
     },
     {
       "name": "property",
-      "description": "{String Number} h5-nav-height 导航栏高度，自定义导航栏时(无导航栏时需设置为0)，需要传入此值，单位px（默认44）"
+      "description": "{String ｜ Number}\tindex\t\t\t自定义标识，用于区分是哪一个组件"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t\t组件的样式，对象形式"
     },
     {
       "name": "event",
-      "description": "{Function} fixed 组件吸顶时触发"
+      "description": "{Function} fixed\t\t组件吸顶时触发"
     },
     {
       "name": "event",
-      "description": "{Function} unfixed 组件取消吸顶时触发"
+      "description": "{Function} unfixed\t组件取消吸顶时触发"
     },
     {
       "name": "example",
-      "description": "<u-sticky offset-top=\"200\"><view>塞下秋来风景异，衡阳雁去无留意</view></u-sticky>"
+      "description": "<u-sticky offsetTop=\"200\"><view>塞下秋来风景异，衡阳雁去无留意</view></u-sticky>"
     }
   ],
   "slots": [
@@ -60,79 +64,61 @@
   "props": [
     {
       "kind": "prop",
-      "description": "吸顶容器到顶部某个距离的时候，进行吸顶，在H5平台，NavigationBar为44px",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "offset-top",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
+      "name": "offsetTop",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "列表中的索引值",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "customNavHeight",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "zIndex",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "index",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否开启吸顶功能",
-      "keywords": [],
-      "visibility": "public",
-      "name": "enable",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "h5顶部导航栏的高度",
-      "keywords": [],
-      "visibility": "public",
-      "name": "h5-nav-height",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "44",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "吸顶区域的背景颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "bg-color",
       "type": "String",
-      "default": "\"#ffffff\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "z-index值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "z-index",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     }
@@ -142,9 +128,44 @@
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "fixed",
+      "name": "cssSticky",
       "type": "boolean",
       "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "是否使用css的sticky实现",
+      "keywords": [],
+      "visibility": "public",
+      "name": "stickyTop",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "description": "吸顶的top值，因为可能受自定义导航栏影响，最终的吸顶值非offsetTop值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "elId",
+      "type": "CallExpression",
+      "initialValue": "uni.$u.guid()"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "description": "js模式时，吸顶的内容因为处于postition: fixed模式，为了和原来保持一致的样式，需要记录并重新设置它的left，height，width属性",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": "string",
+      "initialValue": "\"auto\""
     },
     {
       "kind": "data",
@@ -158,33 +179,9 @@
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "stickyTop",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "elClass",
-      "type": "CallExpression",
-      "initialValue": "this.$u.guid()"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "left",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "width",
-      "type": "string",
-      "initialValue": "\"auto\""
+      "name": "fixed",
+      "type": "boolean",
+      "initialValue": "false"
     }
   ],
   "computed": [
@@ -192,37 +189,66 @@
       "kind": "computed",
       "keywords": [],
       "visibility": "public",
-      "name": "uZIndex",
+      "name": "style",
       "dependencies": [
-        "zIndex",
-        "$u"
+        "disabled",
+        "cssSticky",
+        "uZindex",
+        "stickyTop",
+        "fixed",
+        "height",
+        "bgColor",
+        "customStyle"
       ]
-    }
-  ],
-  "events": [
+    },
     {
-      "kind": "event",
+      "kind": "computed",
+      "description": "吸顶内容的样式",
       "keywords": [],
       "visibility": "public",
-      "name": "fixed",
-      "arguments": [
-        {
-          "name": "index",
-          "type": "any",
-          "rest": false
-        }
+      "name": "stickyContent",
+      "dependencies": [
+        "cssSticky",
+        "fixed",
+        "stickyTop",
+        "left",
+        "width",
+        "uZindex"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uZindex",
+      "dependencies": [
+        "zIndex"
       ]
     }
   ],
+  "events": [],
   "methods": [
     {
       "kind": "method",
       "keywords": [],
       "visibility": "public",
-      "name": "initObserver",
+      "name": "init",
       "params": [],
       "syntax": [
-        "initObserver(): void"
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "initObserveContent",
+      "params": [],
+      "syntax": [
+        "initObserveContent(): void"
       ],
       "returns": {
         "type": "void"
@@ -277,6 +303,60 @@
       ],
       "returns": {
         "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getStickyTop",
+      "params": [],
+      "syntax": [
+        "getStickyTop(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "checkSupportCssSticky",
+      "params": [],
+      "syntax": [
+        "async checkSupportCssSticky(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "在APP和微信小程序上，通过uni.createSelectorQuery可以判断是否支持css sticky",
+      "keywords": [],
+      "visibility": "public",
+      "name": "checkComputedStyle",
+      "params": [],
+      "syntax": [
+        "checkComputedStyle(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "判断浏览器是否支持sticky属性",
+      "keywords": [],
+      "visibility": "public",
+      "name": "checkCssStickyForH5",
+      "params": [],
+      "syntax": [
+        "checkCssStickyForH5(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
       }
     }
   ],

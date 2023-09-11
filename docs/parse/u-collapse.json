@@ -13,31 +13,19 @@
     },
     {
       "name": "property",
-      "description": "{Boolean} accordion 是否手风琴模式（默认true）"
+      "description": "{String | Number | Array}\tvalue\t\t当前展开面板的name，非手风琴模式：[<string | number>]，手风琴模式：string | number"
     },
     {
       "name": "property",
-      "description": "{Boolean} arrow 是否显示标题右侧的箭头（默认true）"
+      "description": "{Boolean}\t\t\t\t\taccordion\t是否手风琴模式（ 默认 false ）"
     },
     {
       "name": "property",
-      "description": "{String} arrow-color 标题右侧箭头的颜色（默认#909399）"
-    },
-    {
-      "name": "property",
-      "description": "{Object} head-style 标题自定义样式，对象形式"
-    },
-    {
-      "name": "property",
-      "description": "{Object} body-style 主体自定义样式，对象形式"
-    },
-    {
-      "name": "property",
-      "description": "{String} hover-class 样式类名，按下时有效（默认u-hover-class）"
+      "description": "{Boolean}\t\t\t\t\tborder\t\t是否显示外边框 ( 默认 true ）"
     },
     {
       "name": "event",
-      "description": "{Function} change 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array)"
+      "description": "{Function}\tchange \t\t当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array)"
     },
     {
       "name": "example",
@@ -56,84 +44,48 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否手风琴模式",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "accordion",
       "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "头部的样式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "head-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "主体的样式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "body-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "每一个item的样式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "item-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示右侧的箭头",
-      "keywords": [],
-      "visibility": "public",
-      "name": "arrow",
+      "name": "border",
       "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "箭头的颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "arrow-color",
-      "type": "String",
-      "default": "\"#909399\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "标题部分按压时的样式类，\"none\"为无效果",
-      "keywords": [],
-      "visibility": "public",
-      "name": "hover-class",
-      "type": "String",
-      "default": "\"u-hover-class\"",
       "required": false,
       "describeModel": false
     }
   ],
   "data": [],
-  "computed": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "needInit",
+      "dependencies": [
+        "accordion",
+        "value"
+      ]
+    }
+  ],
   "events": [
     {
       "kind": "event",
@@ -142,7 +94,20 @@
       "name": "change",
       "arguments": [
         {
-          "name": "activeItem",
+          "name": "changeArr",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "target.expanded ? 'open' : 'close'",
+      "arguments": [
+        {
+          "name": "name",
           "type": "any",
           "rest": false
         }
@@ -152,7 +117,7 @@
   "methods": [
     {
       "kind": "method",
-      "description": "重新初始化一次内部的所有子元素的高度计算，用于异步获取数据渲染的情况",
+      "description": "重新初始化一次内部的所有子元素",
       "keywords": [],
       "visibility": "public",
       "name": "init",
@@ -166,13 +131,20 @@
     },
     {
       "kind": "method",
-      "description": "collapse item被点击，由collapse item调用父组件方法",
+      "description": "collapse-item被点击时触发，由collapse统一处理各子组件的状态",
       "keywords": [],
       "visibility": "public",
       "name": "onChange",
-      "params": [],
+      "params": [
+        {
+          "name": "target",
+          "type": "Object",
+          "description": "被操作的面板的实例",
+          "rest": false
+        }
+      ],
       "syntax": [
-        "onChange(): void"
+        "onChange(target: Object): void"
       ],
       "returns": {
         "type": "void"
@@ -180,5 +152,5 @@
     }
   ],
   "name": "u-collapse",
-  "description": "collapse 手风琴"
+  "description": "collapse 折叠面板"
 }

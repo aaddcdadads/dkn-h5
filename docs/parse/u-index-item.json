@@ -1,0 +1,75 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [],
+  "data": [
+    {
+      "kind": "data",
+      "description": "本组件到滚动条顶部的距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "top",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "id",
+      "type": "string",
+      "initialValue": "\"\""
+    }
+  ],
+  "computed": [],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getIndexItemRect",
+      "params": [],
+      "syntax": [
+        "getIndexItemRect(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    }
+  ],
+  "name": "u-index-item",
+  "description": "#endif"
+}

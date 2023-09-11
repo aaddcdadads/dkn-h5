@@ -5,27 +5,43 @@
   "keywords": [
     {
       "name": "description",
-      "description": "通过基础的 12 分栏，迅速简便地创建布局（搭配<u-row>使用）"
+      "description": "该组件一般用于Layout 布局 通过基础的 12 分栏，迅速简便地创建布局"
     },
     {
       "name": "tutorial",
-      "description": "https://www.uviewui.com/components/layout.html"
+      "description": "https://www.uviewui.com/components/Layout.html"
     },
     {
       "name": "property",
-      "description": "{String Number} span 栅格占据的列数，总12等分（默认0）"
+      "description": "{String | Number}\tspan\t\t栅格占据的列数，总12等份 (默认 12 )"
     },
     {
       "name": "property",
-      "description": "{String} text-align 文字水平对齐方式（默认left）"
+      "description": "{String | Number}\toffset\t\t分栏左边偏移，计算方式与span相同 (默认 0 )"
     },
     {
       "name": "property",
-      "description": "{String Number} offset 分栏左边偏移，计算方式与span相同（默认0）"
+      "description": "{String}\t\t\tjustify\t\t水平排列方式，可选值为`start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`)  (默认 'start' )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\talign\t\t垂直对齐方式，可选值为top、center、bottom、stretch (默认 'stretch' )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttextAlign\t文字水平对齐方式 (默认 'left' )"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t定义需要用到的外部样式"
+    },
+    {
+      "name": "event",
+      "description": "{Function}\tclick\tcol被点击，会阻止事件冒泡到row"
     },
     {
       "name": "example",
-      "description": "<u-col span=\"3\"><view class=\"demo-layout bg-purple\"></view></u-col>"
+      "description": "<u-col  span=\"3\" offset=\"3\" > <view class=\"demo-layout bg-purple\"></view> </u-col>"
     }
   ],
   "slots": [
@@ -40,73 +56,51 @@
   "props": [
     {
       "kind": "prop",
-      "description": "占父容器宽度的多少等分，总分为12份",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "span",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "12",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "指定栅格左侧的间隔数(总12栏)",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "offset",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "水平排列方式，可选值为`start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`)",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "justify",
       "type": "String",
-      "default": "\"start\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "垂直对齐方式，可选值为top、center、bottom",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "align",
       "type": "String",
-      "default": "\"center\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "文字对齐方式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "text-align",
+      "name": "textAlign",
       "type": "String",
-      "default": "\"left\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否阻止事件传播",
-      "keywords": [],
-      "visibility": "public",
-      "name": "stop",
-      "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     }
@@ -116,9 +110,25 @@
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "gutter",
+      "name": "width",
       "type": "number",
-      "initialValue": "20"
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "parentData",
+      "type": "object",
+      "initialValue": "{\"gutter\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"}}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "gridNum",
+      "type": "number",
+      "initialValue": "12"
     }
   ],
   "computed": [
@@ -139,6 +149,23 @@
       "dependencies": [
         "align"
       ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "colStyle",
+      "dependencies": [
+        "parentData",
+        "uAlignItem",
+        "uJustify",
+        "textAlign",
+        "gridNum",
+        "span",
+        "offset",
+        "width",
+        "customStyle"
+      ]
     }
   ],
   "events": [
@@ -155,7 +182,33 @@
       "kind": "method",
       "keywords": [],
       "visibility": "public",
-      "name": "click",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "async init(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateParentData",
+      "params": [],
+      "syntax": [
+        "updateParentData(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
       "params": [
         {
           "name": "e",
@@ -164,7 +217,7 @@
         }
       ],
       "syntax": [
-        "click(e: unknow): void"
+        "clickHandler(e: unknow): void"
       ],
       "returns": {
         "type": "void"
@@ -172,5 +225,5 @@
     }
   ],
   "name": "u-col",
-  "description": "col 布局单元格"
+  "description": "CodeInput 栅格系统的列"
 }

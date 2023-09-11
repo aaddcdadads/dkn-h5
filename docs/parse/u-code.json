@@ -9,113 +9,108 @@
     },
     {
       "name": "tutorial",
-      "description": "https://www.uviewui.com/components/verificationCode.html"
+      "description": "https://www.uviewui.com/components/code.html"
     },
     {
       "name": "property",
-      "description": "{Number String} seconds 倒计时所需的秒数（默认60）"
+      "description": "{String | Number}\tseconds\t\t\t倒计时所需的秒数（默认 60 ）"
     },
     {
       "name": "property",
-      "description": "{String} start-text 开始前的提示语，见官网说明（默认获取验证码）"
+      "description": "{String}\t\t\tstartText\t\t开始前的提示语，见官网说明（默认 '获取验证码' ）"
     },
     {
       "name": "property",
-      "description": "{String} change-text 倒计时期间的提示语，必须带有字母\"x\"，见官网说明（默认X秒重新获取）"
+      "description": "{String}\t\t\tchangeText\t\t倒计时期间的提示语，必须带有字母\"x\"，见官网说明（默认 'X秒重新获取' ）"
     },
     {
       "name": "property",
-      "description": "{String} end-text 倒计结束的提示语，见官网说明（默认重新获取）"
+      "description": "{String}\t\t\tendText\t\t\t倒计结束的提示语，见官网说明（默认 '重新获取' ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} keep-running 是否在H5刷新或各端返回再进入时继续倒计时（默认false）"
+      "description": "{Boolean}\t\t\tkeepRunning\t\t是否在H5刷新或各端返回再进入时继续倒计时（ 默认false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tuniqueKey\t\t为了区分多个页面，或者一个页面多个倒计时组件本地存储的继续倒计时变了"
     },
     {
       "name": "event",
-      "description": "{Function} change 倒计时期间，每秒触发一次"
+      "description": "{Function}\tchange\t倒计时期间，每秒触发一次"
     },
     {
       "name": "event",
-      "description": "{Function} start 开始倒计时触发"
+      "description": "{Function}\tstart\t开始倒计时触发"
     },
     {
       "name": "event",
-      "description": "{Function} end 结束倒计时触发"
+      "description": "{Function}\tend\t\t结束倒计时触发"
     },
     {
       "name": "example",
-      "description": "<u-verification-code :seconds=\"seconds\" @end=\"end\" @start=\"start\" ref=\"uCode\""
+      "description": "<u-code ref=\"uCode\" @change=\"codeChange\" seconds=\"20\"></u-code>"
     }
   ],
   "slots": [],
   "props": [
     {
       "kind": "prop",
-      "description": "倒计时总秒数",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "seconds",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "60",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "尚未开始时提示",
-      "keywords": [],
-      "visibility": "public",
-      "name": "start-text",
       "type": "String",
-      "default": "\"获取验证码\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "正在倒计时中的提示",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "change-text",
+      "name": "startText",
       "type": "String",
-      "default": "\"X秒重新获取\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "倒计时结束时的提示",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "end-text",
+      "name": "changeText",
       "type": "String",
-      "default": "\"重新获取\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否在H5刷新或各端返回再进入时继续倒计时",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "keep-running",
+      "name": "endText",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "keepRunning",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "为了区分多个页面，或者一个页面多个倒计时组件本地存储的继续倒计时变了",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "unique-key",
+      "name": "uniqueKey",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     }
@@ -245,6 +240,6 @@
       }
     }
   ],
-  "name": "u-verification-code",
-  "description": "verificationCode 验证码输入框"
+  "name": "u-code",
+  "description": "Code 验证码输入框"
 }

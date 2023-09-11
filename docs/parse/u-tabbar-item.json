@@ -1,0 +1,227 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "此组件提供了自定义tabbar的能力。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/tabbar.html"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tname\t\titem标签的名称，作为与u-tabbar的value参数匹配的标识符"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ticon\t\tuView内置图标或者绝对路径的图片"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tbadge\t\t右上角的角标提示信息"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tdot\t\t\t是否显示圆点，将会覆盖badge参数（默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttext\t\t描述文本"
+    },
+    {
+      "name": "property",
+      "description": "{Object | String}\tbadgeStyle\t控制徽标的位置，对象或者字符串形式，可以设置top和right属性（默认 'top: 6px;right:2px;' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t定义需要用到的外部样式"
+    },
+    {
+      "name": "example",
+      "description": "<u-tabbar :value=\"value2\" :placeholder=\"false\" @change=\"name => value2 = name\" :fixed=\"false\" :safeAreaInsetBottom=\"false\"><u-tabbar-item text=\"首页\" icon=\"home\" dot ></u-tabbar-item></u-tabbar>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active-icon",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactive-icon",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "text",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "name",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "badge",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dot",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "text",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "badgeStyle",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isActive",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "是否处于激活状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "parentData",
+      "type": "object",
+      "initialValue": "{\"value\":{\"type\":\"any\",\"value\":null,\"raw\":\"null\"},\"activeColor\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"inactiveColor\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"}}"
+    }
+  ],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "name",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": [
+        {
+          "name": "name",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateParentData",
+      "params": [],
+      "syntax": [
+        "updateParentData(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "此方法将会被父组件u-tabbar调用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateFromParent",
+      "params": [],
+      "syntax": [
+        "updateFromParent(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [],
+      "syntax": [
+        "clickHandler(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-tabbar-item",
+  "description": "TabbarItem 底部导航栏子组件"
+}

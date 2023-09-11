@@ -2,248 +2,136 @@
   "inheritAttrs": true,
   "errors": [],
   "warnings": [],
-  "keywords": [
-    {
-      "name": "description",
-      "description": "该组件一般用于满意度调查，星型评分的场景"
-    },
-    {
-      "name": "tutorial",
-      "description": "https://www.uviewui.com/components/rate.html"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} count 最多可选的星星数量（默认5）"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} current 默认选中的星星数量（默认0）"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} disabled 是否禁止用户操作（默认false）"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} size 星星的大小，单位rpx（默认32）"
-    },
-    {
-      "name": "property",
-      "description": "{String} inactive-color 未选中星星的颜色（默认#b2b2b2）"
-    },
-    {
-      "name": "property",
-      "description": "{String} active-color 选中的星星颜色（默认#FA3534）"
-    },
-    {
-      "name": "property",
-      "description": "{String} active-icon 选中时的图标名，只能为uView的内置图标（默认star-fill）"
-    },
-    {
-      "name": "property",
-      "description": "{String} inactive-icon 未选中时的图标名，只能为uView的内置图标（默认star）"
-    },
-    {
-      "name": "property",
-      "description": "{String} gutter 星星之间的距离（默认10）"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} min-count 最少选中星星的个数（默认0）"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} allow-half 是否允许半星选择（默认false）"
-    },
-    {
-      "name": "event",
-      "description": "{Function} change 选中的星星发生变化时触发"
-    },
-    {
-      "name": "example",
-      "description": "<u-rate :count=\"count\" :current=\"2\"></u-rate>"
-    }
-  ],
+  "keywords": [],
   "slots": [],
   "props": [
     {
       "kind": "prop",
-      "description": "1.4.5版新增",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "value",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "-1",
+      "type": "String",
       "required": false,
-      "describeModel": true
+      "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "要显示的星星数量",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "count",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "5",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "1.4.5后通过value双向绑定，不再建议使用此参数",
-      "keywords": [],
-      "visibility": "public",
-      "name": "current",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否不可选中",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "星星的大小，单位rpx",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "readonly",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "size",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "32",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "未选中时的颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "inactive-color",
+      "name": "inactiveColor",
       "type": "String",
-      "default": "\"#b2b2b2\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "选中的颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "active-color",
+      "name": "activeColor",
       "type": "String",
-      "default": "\"#FA3534\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "星星之间的间距，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "gutter",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "10",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "最少能选择的星星个数",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "min-count",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
+      "name": "minCount",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否允许半星(功能尚未实现)",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "allow-half",
+      "name": "allowHalf",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "选中时的图标(星星)",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "active-icon",
+      "name": "activeIcon",
       "type": "String",
-      "default": "\"star-fill\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "未选中时的图标(星星)",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "inactive-icon",
+      "name": "inactiveIcon",
       "type": "String",
-      "default": "\"star\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "自定义扩展前缀，方便用户扩展自己的图标库",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "custom-prefix",
-      "type": "String",
-      "default": "\"uicon\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "colors",
-      "type": "Array",
-      "default": "function() {\r\n\t\t\t\treturn []\r\n\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "icons",
-      "type": "Array",
-      "default": "function() {\r\n\t\t\t\treturn []\r\n\t\t\t}",
+      "name": "touchable",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     }
@@ -256,7 +144,7 @@
       "visibility": "public",
       "name": "elId",
       "type": "CallExpression",
-      "initialValue": "this.$u.guid()"
+      "initialValue": "uni.$u.guid()"
     },
     {
       "kind": "data",
@@ -264,80 +152,44 @@
       "visibility": "public",
       "name": "elClass",
       "type": "CallExpression",
-      "initialValue": "this.$u.guid()"
+      "initialValue": "uni.$u.guid()"
     },
     {
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "starBoxLeft",
+      "name": "rateBoxLeft",
       "type": "number",
       "initialValue": "0"
     },
     {
       "kind": "data",
-      "description": "当前激活的星星的index，如果存在value，优先使用value，因为它可以双向绑定(1.4.5新增)",
+      "description": "评分盒子左边到屏幕左边的距离，用于滑动选择时计算距离",
       "keywords": [],
       "visibility": "public",
       "name": "activeIndex",
-      "type": "ConditionalExpression",
-      "initialValue": "this.value != -1 ? this.value : this.current"
+      "type": "object",
+      "initialValue": "this.value"
     },
     {
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "starWidth",
+      "name": "rateWidth",
       "type": "number",
       "initialValue": "0"
     },
     {
       "kind": "data",
-      "description": "每个星星的宽度",
+      "description": "标识是否正在滑动，由于iOS事件上touch比click先触发，导致快速滑动结束后，接着触发click，导致事件混乱而出错",
       "keywords": [],
       "visibility": "public",
-      "name": "starWidthArr",
-      "type": "array",
-      "initialValue": "[]"
+      "name": "moving",
+      "type": "boolean",
+      "initialValue": "false"
     }
   ],
-  "computed": [
-    {
-      "kind": "computed",
-      "keywords": [],
-      "visibility": "public",
-      "name": "decimal",
-      "dependencies": [
-        "disabled",
-        "activeIndex",
-        "allowHalf"
-      ]
-    },
-    {
-      "kind": "computed",
-      "keywords": [],
-      "visibility": "public",
-      "name": "elActiveIcon",
-      "dependencies": [
-        "icons",
-        "count",
-        "activeIndex",
-        "activeIcon"
-      ]
-    },
-    {
-      "kind": "computed",
-      "keywords": [],
-      "visibility": "public",
-      "name": "elActiveColor",
-      "dependencies": [
-        "colors",
-        "count",
-        "activeIndex",
-        "activeColor"
-      ]
-    }
-  ],
+  "computed": [],
   "events": [
     {
       "kind": "event",
@@ -355,6 +207,7 @@
     },
     {
       "kind": "event",
+      "description": "同时修改双向绑定的value的值",
       "keywords": [],
       "visibility": "public",
       "name": "input",
@@ -370,13 +223,12 @@
   "methods": [
     {
       "kind": "method",
-      "description": "获取评分组件盒子的布局信息",
       "keywords": [],
       "visibility": "public",
-      "name": "getElRectById",
+      "name": "init",
       "params": [],
       "syntax": [
-        "getElRectById(): void"
+        "init(): void"
       ],
       "returns": {
         "type": "void"
@@ -384,13 +236,27 @@
     },
     {
       "kind": "method",
+      "description": "获取评分组件盒子的布局信息",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getRateItemRect",
+      "params": [],
+      "syntax": [
+        "async getRateItemRect(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
       "description": "获取单个星星的尺寸",
       "keywords": [],
       "visibility": "public",
-      "name": "getElRectByClass",
+      "name": "getRateIconWrapRect",
       "params": [],
       "syntax": [
-        "getElRectByClass(): void"
+        "getRateIconWrapRect(): void"
       ],
       "returns": {
         "type": "void"
@@ -418,16 +284,11 @@
     },
     {
       "kind": "method",
-      "description": "通过点击，直接选中",
+      "description": "停止滑动",
       "keywords": [],
       "visibility": "public",
-      "name": "click",
+      "name": "touchEnd",
       "params": [
-        {
-          "name": "index",
-          "type": "unknow",
-          "rest": false
-        },
         {
           "name": "e",
           "type": "unknow",
@@ -435,7 +296,32 @@
         }
       ],
       "syntax": [
-        "click(index: unknow, e: unknow): void"
+        "touchEnd(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "通过点击，直接选中",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "clickHandler(e: unknow, index: unknow): void"
       ],
       "returns": {
         "type": "void"
@@ -457,24 +343,31 @@
     },
     {
       "kind": "method",
+      "description": "获取当前激活的评分图标",
       "keywords": [],
       "visibility": "public",
-      "name": "showDecimalIcon",
+      "name": "getActiveIndex",
       "params": [
         {
-          "name": "index",
+          "name": "x",
           "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "isClick",
+          "type": "boolean",
+          "defaultValue": "false",
           "rest": false
         }
       ],
       "syntax": [
-        "showDecimalIcon(index: unknow): unknow"
+        "getActiveIndex(x: unknow, isClick: boolean = false): void"
       ],
       "returns": {
-        "type": "unknow"
+        "type": "void"
       }
     }
   ],
   "name": "u-rate",
-  "description": "rate 评分"
+  "description": "#endif"
 }

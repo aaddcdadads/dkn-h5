@@ -9,43 +9,43 @@
     },
     {
       "name": "tutorial",
-      "description": "http://uviewui.com/components/form.html"
+      "description": "https://www.uviewui.com/components/form.html"
     },
     {
       "name": "property",
-      "description": "{Object} model 表单数据对象"
+      "description": "{Object}\t\t\t\t\t\tmodel\t\t\t当前form的需要验证字段的集合"
     },
     {
       "name": "property",
-      "description": "{Boolean} border-bottom 是否显示表单域的下划线边框"
+      "description": "{Object | Function | Array}\trules\t\t\t验证规则"
     },
     {
       "name": "property",
-      "description": "{String} label-position 表单域提示文字的位置，left-左侧，top-上方"
+      "description": "{String}\t\t\t\t\t\terrorType\t\t错误的提示方式，见上方说明 ( 默认 message )"
     },
     {
       "name": "property",
-      "description": "{String Number} label-width 提示文字的宽度，单位rpx（默认90）"
+      "description": "{Boolean}\t\t\t\t\t\tborderBottom\t是否显示表单域的下划线边框   ( 默认 true ）"
     },
     {
       "name": "property",
-      "description": "{Object} label-style lable的样式，对象形式"
+      "description": "{String}\t\t\t\t\t\tlabelPosition\t表单域提示文字的位置，left-左侧，top-上方 ( 默认 'left' ）"
     },
     {
       "name": "property",
-      "description": "{String} label-align lable的对齐方式"
+      "description": "{String | Number}\t\t\t\tlabelWidth\t\t提示文字的宽度，单位px  ( 默认 45 ）"
     },
     {
       "name": "property",
-      "description": "{Object} rules 通过ref设置，见官网说明"
+      "description": "{String}\t\t\t\t\t\tlabelAlign\t\tlable字体的对齐方式   ( 默认 ‘left' ）"
     },
     {
       "name": "property",
-      "description": "{Array} error-type 错误的提示方式，数组形式，见上方说明(默认['message'])"
+      "description": "{Object}\t\t\t\t\t\tlabelStyle\t\tlable的样式，对象形式"
     },
     {
       "name": "example",
-      "description": "<u-form :model=\"form\" ref=\"uForm\"></u-form>"
+      "description": "<u--formlabelPosition=\"left\" :model=\"model1\" :rules=\"rules\" ref=\"form1\"></u--form>"
     }
   ],
   "slots": [
@@ -60,81 +60,81 @@
   "props": [
     {
       "kind": "prop",
-      "description": "当前form的需要验证字段的集合",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "model",
       "type": "Object",
-      "default": "function() {\r\n\t\t\t\treturn {};\r\n\t\t\t}",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "border-bottom-下边框呈现红色，none-无提示",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "error-type",
-      "type": "Array",
-      "default": "function() {\r\n\t\t\t\treturn ['message', 'toast']\r\n\t\t\t}",
+      "name": "rules",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示表单域的下划线边框",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "border-bottom",
+      "name": "errorType",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "borderBottom",
       "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "label的位置，left-左边，top-上边",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "label-position",
+      "name": "labelPosition",
       "type": "String",
-      "default": "\"left\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "label的宽度，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "label-width",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "90",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "lable字体的对齐方式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "label-align",
+      "name": "labelWidth",
       "type": "String",
-      "default": "\"left\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "lable的样式，对象形式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "label-style",
+      "name": "labelAlign",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelStyle",
       "type": "Object",
-      "default": "function() {\r\n\t\t\t\treturn {}\r\n\t\t\t}",
       "required": false,
       "describeModel": false
     }
@@ -144,16 +144,50 @@
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "rules",
+      "name": "formRules",
       "type": "object",
       "initialValue": "{}"
+    },
+    {
+      "kind": "data",
+      "description": "规则校验器",
+      "keywords": [],
+      "visibility": "public",
+      "name": "validator",
+      "type": "object",
+      "initialValue": "{}"
+    },
+    {
+      "kind": "data",
+      "description": "原始的model快照，用于resetFields方法重置表单时使用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "originalModel",
+      "type": "any",
+      "initialValue": "null"
     }
   ],
-  "computed": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "propsChange",
+      "dependencies": [
+        "errorType",
+        "borderBottom",
+        "labelPosition",
+        "labelWidth",
+        "labelAlign",
+        "labelStyle"
+      ]
+    }
+  ],
   "events": [],
   "methods": [
     {
       "kind": "method",
+      "description": "手动设置校验的规则，如果规则中有函数的话，微信小程序中会过滤掉，所以只能手动调用设置规则",
       "keywords": [],
       "visibility": "public",
       "name": "setRules",
@@ -187,6 +221,77 @@
     },
     {
       "kind": "method",
+      "description": "重置model为初始值的快照",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resetModel",
+      "params": [
+        {
+          "name": "obj",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "resetModel(obj: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "清空校验结果",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearValidate",
+      "params": [
+        {
+          "name": "props",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "clearValidate(props: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "对部分表单字段进行校验",
+      "keywords": [],
+      "visibility": "public",
+      "name": "validateField",
+      "params": [
+        {
+          "name": "value",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "callback",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "event",
+          "type": "any",
+          "defaultValue": "null",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "async validateField(value: unknow, callback: unknow, event: any = null): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
       "description": "校验全部数据",
       "keywords": [],
       "visibility": "public",
@@ -207,5 +312,5 @@
     }
   ],
   "name": "u-form",
-  "description": "form 表单"
+  "description": "Form 表单"
 }

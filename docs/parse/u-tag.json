@@ -5,7 +5,7 @@
   "keywords": [
     {
       "name": "description",
-      "description": "该组件一般用于标记和选择"
+      "description": "tag组件一般用于标记和选择，我们提供了更加丰富的表现形式，能够较全面的涵盖您的使用场景"
     },
     {
       "name": "tutorial",
@@ -13,211 +13,234 @@
     },
     {
       "name": "property",
-      "description": "{String} type 主题类型（默认primary）"
+      "description": "{String}\t\t\ttype\t\t标签类型info、primary、success、warning、error （默认 'primary' ）"
     },
     {
       "name": "property",
-      "description": "{String} size 标签大小（默认default）"
+      "description": "{Boolean | String}\tdisabled\t不可用（默认 false ）"
     },
     {
       "name": "property",
-      "description": "{String} shape 标签形状（默认square）"
+      "description": "{String}\t\t\tsize\t\t标签的大小，large，medium，mini （默认 'medium' ）"
     },
     {
       "name": "property",
-      "description": "{String} text 标签的文字内容"
+      "description": "{String}\t\t\tshape\t\ttag的形状，circle（两边半圆形）, square（方形，带圆角）（默认 'square' ）"
     },
     {
       "name": "property",
-      "description": "{String} bg-color 自定义标签的背景颜色"
+      "description": "{String | Number}\ttext\t\t标签的文字内容"
     },
     {
       "name": "property",
-      "description": "{String} border-color 标签的边框颜色"
+      "description": "{String}\t\t\tbgColor\t\t背景颜色，默认为空字符串，即不处理"
     },
     {
       "name": "property",
-      "description": "{String} close-color 关闭按钮的颜色"
+      "description": "{String}\t\t\tcolor\t\t标签字体颜色，默认为空字符串，即不处理"
     },
     {
       "name": "property",
-      "description": "{String Number} index 点击标签时，会通过click事件返回该值"
+      "description": "{String}\t\t\tborderColor\t镂空形式标签的边框颜色"
     },
     {
       "name": "property",
-      "description": "{String} mode 模式选择，见官网说明（默认light）"
+      "description": "{String}\t\t\tcloseColor\t关闭按钮图标的颜色（默认 #C6C7CB）"
     },
     {
       "name": "property",
-      "description": "{Boolean} closeable 是否可关闭，设置为true，文字右边会出现一个关闭图标（默认false）"
+      "description": "{String | Number}\tname\t\t点击时返回的索引值，用于区分例遍的数组哪个元素被点击了"
     },
     {
       "name": "property",
-      "description": "{Boolean} show 标签显示与否（默认true）"
+      "description": "{Boolean}\t\t\tplainFill\t镂空时是否填充背景色（默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tplain\t\t是否镂空（默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tclosable\t是否可关闭，设置为true，文字右边会出现一个关闭图标（默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tshow\t\t标签显示与否（默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ticon\t\t内置图标，或绝对路径的图片"
     },
     {
       "name": "event",
-      "description": "{Function} click 点击标签触发"
+      "description": "{Function(index)} click 点击标签时触发 index: 传递的index参数值"
     },
     {
       "name": "event",
-      "description": "{Function} close closeable为true时，点击标签关闭按钮触发"
+      "description": "{Function(index)} close closable为true时，点击标签关闭按钮触发 index: 传递的index参数值"
     },
     {
       "name": "example",
-      "description": "<u-tag text=\"雪月夜\" type=\"success\" />"
+      "description": "<u-tag text=\"标签\" type=\"error\" plain plainFill></u-tag>"
     }
   ],
-  "slots": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "props": []
+    }
+  ],
   "props": [
     {
       "kind": "prop",
-      "description": "标签类型info、primary、success、warning、error",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "type",
       "type": "String",
-      "default": "\"primary\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
-      "type": [
-        "Boolean",
-        "String"
-      ],
-      "default": "false",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "标签的大小，分为default（默认），mini（较小）",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "size",
       "type": "String",
-      "default": "\"default\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "tag的形状，circle（两边半圆形）, square（方形，带圆角），circleLeft（左边是半圆），circleRight（右边是半圆）",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "shape",
       "type": "String",
-      "default": "\"square\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "标签文字",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "text",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "背景颜色，默认为空字符串，即不处理",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "bg-color",
+      "name": "bgColor",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "标签字体颜色，默认为空字符串，即不处理",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "color",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "镂空形式标签的边框颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "border-color",
+      "name": "borderColor",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "关闭按钮图标的颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "close-color",
+      "name": "closeColor",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "点击时返回的索引值，用于区分例遍的数组哪个元素被点击了",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "index",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "模式选择，dark|light|plain",
-      "keywords": [],
-      "visibility": "public",
-      "name": "mode",
+      "name": "name",
       "type": "String",
-      "default": "\"light\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否可关闭",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "closeable",
+      "name": "plainFill",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "plain",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closable",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "show",
       "type": "Boolean",
-      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "type": "String",
       "required": false,
       "describeModel": false
     }
@@ -228,37 +251,61 @@
       "kind": "computed",
       "keywords": [],
       "visibility": "public",
-      "name": "customStyle",
+      "name": "style",
       "dependencies": [
-        "color",
         "bgColor",
-        "mode",
+        "color",
         "borderColor"
       ]
     },
     {
       "kind": "computed",
+      "description": "nvue下，文本颜色无法继承父元素",
       "keywords": [],
       "visibility": "public",
-      "name": "iconStyle",
+      "name": "textColor",
       "dependencies": [
-        "closeable",
-        "size",
-        "mode",
-        "type",
-        "closeColor"
+        "color"
       ]
     },
     {
       "kind": "computed",
-      "description": "关闭图标的颜色",
       "keywords": [],
       "visibility": "public",
-      "name": "closeIconColor",
+      "name": "imgStyle",
       "dependencies": [
-        "closeColor",
-        "color",
-        "mode",
+        "size"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "文本的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeSize",
+      "dependencies": [
+        "size"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "图标大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconSize",
+      "dependencies": [
+        "size"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "图标颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "elIconColor",
+      "dependencies": [
+        "iconColor",
+        "plain",
         "type"
       ]
     }
@@ -268,10 +315,10 @@
       "kind": "event",
       "keywords": [],
       "visibility": "public",
-      "name": "click",
+      "name": "close",
       "arguments": [
         {
-          "name": "index",
+          "name": "name",
           "type": "any",
           "rest": false
         }
@@ -281,10 +328,10 @@
       "kind": "event",
       "keywords": [],
       "visibility": "public",
-      "name": "close",
+      "name": "click",
       "arguments": [
         {
-          "name": "index",
+          "name": "name",
           "type": "any",
           "rest": false
         }
@@ -294,13 +341,13 @@
   "methods": [
     {
       "kind": "method",
-      "description": "标签被点击",
+      "description": "点击关闭按钮",
       "keywords": [],
       "visibility": "public",
-      "name": "clickTag",
+      "name": "closeHandler",
       "params": [],
       "syntax": [
-        "clickTag(): void"
+        "closeHandler(): void"
       ],
       "returns": {
         "type": "void"
@@ -308,13 +355,13 @@
     },
     {
       "kind": "method",
-      "description": "点击标签关闭按钮",
+      "description": "点击标签",
       "keywords": [],
       "visibility": "public",
-      "name": "close",
+      "name": "clickHandler",
       "params": [],
       "syntax": [
-        "close(): void"
+        "clickHandler(): void"
       ],
       "returns": {
         "type": "void"
@@ -322,5 +369,5 @@
     }
   ],
   "name": "u-tag",
-  "description": "tag 提示"
+  "description": "Tag 标签"
 }

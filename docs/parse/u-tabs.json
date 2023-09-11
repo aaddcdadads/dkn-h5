@@ -1,11 +1,13 @@
 {
   "inheritAttrs": true,
-  "errors": [],
+  "errors": [
+    "tag <view> has no matching end tag."
+  ],
   "warnings": [],
   "keywords": [
     {
       "name": "description",
-      "description": "该组件，是一个tabs标签组件，在标签多的时候，可以配置为左右滑动，标签少的时候，可以禁止滑动。 该组件的一个特点是配置为滚动模式时，激活的tab会自动移动到组件的中间位置。"
+      "description": "tabs标签组件，在标签多的时候，可以配置为左右滑动，标签少的时候，可以禁止滑动。 该组件的一个特点是配置为滚动模式时，激活的tab会自动移动到组件的中间位置。"
     },
     {
       "name": "tutorial",
@@ -13,341 +15,176 @@
     },
     {
       "name": "property",
-      "description": "{Boolean} is-scroll tabs是否可以左右拖动（默认true）"
+      "description": "{String | Number}\tduration\t\t\t滑块移动一次所需的时间，单位秒（默认 200 ）"
     },
     {
       "name": "property",
-      "description": "{Array} list 标签数组，元素为对象，如[{name: '推荐'}]"
+      "description": "{String | Number}\tswierWidth\t\t\tswiper的宽度（默认 '750rpx' ）"
     },
     {
       "name": "property",
-      "description": "{String Number} current 指定哪个tab为激活状态（默认0）"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} height 导航栏的高度，单位rpx（默认80）"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} font-size tab文字大小，单位rpx（默认30）"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} duration 滑块移动一次所需的时间，单位秒（默认0.5）"
-    },
-    {
-      "name": "property",
-      "description": "{String} active-color 滑块和激活tab文字的颜色（默认#2979ff）"
-    },
-    {
-      "name": "property",
-      "description": "{String} inactive-color tabs文字颜色（默认#303133）"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} bar-width 滑块宽度，单位rpx（默认40）"
-    },
-    {
-      "name": "property",
-      "description": "{Object} active-item-style 活动tabs item的样式，对象形式"
-    },
-    {
-      "name": "property",
-      "description": "{Object} bar-style 底部滑块的样式，对象形式"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} show-bar 是否显示底部的滑块（默认true）"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} bar-height 滑块高度，单位rpx（默认6）"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} item-width 标签的宽度（默认auto）"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} gutter 单个tab标签的左右内边距之和，单位rpx（默认40）"
-    },
-    {
-      "name": "property",
-      "description": "{String} bg-color tabs导航栏的背景颜色（默认#ffffff）"
-    },
-    {
-      "name": "property",
-      "description": "{String} name 组件内部读取的list参数中的属性名（tab名称），见官网说明（默认name）"
-    },
-    {
-      "name": "property",
-      "description": "{String} count 组件内部读取的list参数中的属性名（badge徽标数），同name属性的使用，见官网说明（默认count）"
-    },
-    {
-      "name": "property",
-      "description": "{Array} offset 设置badge徽标数的位置偏移，格式为 [x, y]，也即设置的为top和right的值，单位rpx（默认[5, 20]）"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} bold 激活选项的字体是否加粗（默认true）"
+      "description": "{String}\tkeyName\t 从`list`元素对象中读取的键名（默认 'name' ）"
     },
     {
       "name": "event",
-      "description": "{Function} change 点击标签时触发"
+      "description": "{Function(index)} change 标签改变时触发 index: 点击了第几个tab，索引从0开始"
+    },
+    {
+      "name": "event",
+      "description": "{Function(index)} click 点击标签时触发 index: 点击了第几个tab，索引从0开始"
     },
     {
       "name": "example",
-      "description": "<u-tabs ref=\"tabs\" :list=\"list\" :is-scroll=\"false\"></u-tabs>"
+      "description": "<u-tabs :list=\"list\" :is-scroll=\"false\" :current=\"current\" @change=\"change\"></u-tabs>"
     }
   ],
-  "slots": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "props": []
+    }
+  ],
   "props": [
     {
       "kind": "prop",
-      "description": "导航菜单是否需要滚动，如只有2或者3个的时候，就不需要滚动了，此时使用flex平分tab的宽度",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "is-scroll",
-      "type": "Boolean",
-      "default": "true",
+      "name": "duration",
+      "type": "Number",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "需循环的标签列表",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "list",
       "type": "Array",
-      "default": "function() {\r\n\t\t\t\t\treturn [];\r\n\t\t\t\t}",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "当前活动tab的索引",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lineColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "activeStyle",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactiveStyle",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lineWidth",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lineHeight",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lineBgSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemStyle",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scrollable",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "current",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "导航栏的高度和行高",
-      "keywords": [],
-      "visibility": "public",
-      "name": "height",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "80",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "字体大小",
-      "keywords": [],
-      "visibility": "public",
-      "name": "font-size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "30",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "过渡动画时长, 单位ms",
-      "keywords": [],
-      "visibility": "public",
-      "name": "duration",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "0.5",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "选中项的主题颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "active-color",
       "type": "String",
-      "default": "\"#2979ff\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "未选中项的颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "inactive-color",
+      "name": "keyName",
       "type": "String",
-      "default": "\"#303133\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "菜单底部移动的bar的宽度，单位rpx",
-      "keywords": [],
-      "visibility": "public",
-      "name": "bar-width",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "40",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "移动bar的高度",
-      "keywords": [],
-      "visibility": "public",
-      "name": "bar-height",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "6",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "单个tab的左或有内边距（左右相同）",
-      "keywords": [],
-      "visibility": "public",
-      "name": "gutter",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "30",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "导航栏的背景颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "bg-color",
-      "type": "String",
-      "default": "\"#ffffff\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "读取传入的数组对象的属性(tab名称)",
-      "keywords": [],
-      "visibility": "public",
-      "name": "name",
-      "type": "String",
-      "default": "\"name\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "读取传入的数组对象的属性(徽标数)",
-      "keywords": [],
-      "visibility": "public",
-      "name": "count",
-      "type": "String",
-      "default": "\"count\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "徽标数位置偏移",
-      "keywords": [],
-      "visibility": "public",
-      "name": "offset",
-      "type": "Array",
-      "default": "() => { return [5, 20] }",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "活动tab字体是否加粗",
-      "keywords": [],
-      "visibility": "public",
-      "name": "bold",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "当前活动tab item的样式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "active-item-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示底部的滑块",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-bar",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "底部滑块的自定义样式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "bar-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "标签的宽度",
-      "keywords": [],
-      "visibility": "public",
-      "name": "item-width",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"auto\"",
       "required": false,
       "describeModel": false
     }
   ],
   "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "firstTime",
+      "type": "boolean",
+      "initialValue": "true"
+    },
     {
       "kind": "data",
       "keywords": [],
@@ -358,117 +195,90 @@
     },
     {
       "kind": "data",
-      "description": "滚动scroll-view的左边滚动距离",
       "keywords": [],
       "visibility": "public",
-      "name": "tabQueryInfo",
-      "type": "array",
-      "initialValue": "[]"
-    },
-    {
-      "kind": "data",
-      "description": "存放对tab菜单查询后的节点信息",
-      "keywords": [],
-      "visibility": "public",
-      "name": "componentWidth",
+      "name": "scrollViewWidth",
       "type": "number",
       "initialValue": "0"
     },
     {
       "kind": "data",
-      "description": "屏幕宽度，单位为px",
       "keywords": [],
       "visibility": "public",
-      "name": "scrollBarLeft",
+      "name": "lineOffsetLeft",
       "type": "number",
       "initialValue": "0"
     },
     {
       "kind": "data",
-      "description": "移动bar需要通过translateX()移动的距离",
       "keywords": [],
       "visibility": "public",
-      "name": "parentLeft",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "description": "父元素(tabs组件)到屏幕左边的距离",
-      "keywords": [],
-      "visibility": "public",
-      "name": "id",
-      "type": "CallExpression",
-      "initialValue": "this.$u.guid()"
-    },
-    {
-      "kind": "data",
-      "description": "id值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "currentIndex",
+      "name": "tabsRect",
       "type": "object",
-      "initialValue": "this.current"
+      "initialValue": "{\"left\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"}}"
     },
     {
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "barFirstTimeMove",
+      "name": "innerCurrent",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "moving",
       "type": "boolean",
-      "initialValue": "true"
+      "initialValue": "false"
     }
   ],
   "computed": [
     {
       "kind": "computed",
-      "description": "移动bar的样式",
       "keywords": [],
       "visibility": "public",
-      "name": "tabBarStyle",
+      "name": "textStyle",
       "dependencies": [
-        "barWidth",
-        "scrollBarLeft",
-        "barFirstTimeMove",
-        "duration",
-        "activeColor",
-        "barHeight",
-        "barStyle"
+        "innerCurrent",
+        "activeStyle",
+        "inactiveStyle",
+        "list"
       ]
     },
     {
       "kind": "computed",
-      "description": "tab的样式",
       "keywords": [],
       "visibility": "public",
-      "name": "tabItemStyle",
-      "dependencies": [
-        "height",
-        "fontSize",
-        "duration",
-        "isScroll",
-        "gutter",
-        "$u",
-        "itemWidth",
-        "currentIndex",
-        "bold",
-        "activeColor",
-        "activeItemStyle",
-        "inactiveColor"
-      ]
+      "name": "propsBadge",
+      "dependencies": []
     }
   ],
   "events": [
     {
       "kind": "event",
-      "description": "发送事件给父组件",
+      "description": "因为标签可能为disabled状态，所以click是一定会发出的，但是change事件是需要可用的状态才发出",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": [
+        {
+          "name": "{ ...item, index }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
       "keywords": [],
       "visibility": "public",
       "name": "change",
       "arguments": [
         {
-          "name": "index",
-          "type": "any",
+          "name": "{ ...item, index }",
+          "type": "object",
           "rest": false
         }
       ]
@@ -477,25 +287,55 @@
   "methods": [
     {
       "kind": "method",
-      "description": "设置一个init方法，方便多处调用",
       "keywords": [],
       "visibility": "public",
-      "name": "init",
+      "name": "setLineLeft",
       "params": [],
       "syntax": [
-        "async init(): Promise"
+        "setLineLeft(): void"
       ],
       "returns": {
-        "type": "Promise"
+        "type": "void"
       }
     },
     {
       "kind": "method",
-      "description": "点击某一个tab菜单",
+      "description": "nvue下设置滑块的位置",
       "keywords": [],
       "visibility": "public",
-      "name": "clickTab",
+      "name": "animation",
       "params": [
+        {
+          "name": "x",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "defaultValue": "0",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "animation(x: unknow, duration: number = 0): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击某一个标签",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        },
         {
           "name": "index",
           "type": "unknow",
@@ -503,7 +343,7 @@
         }
       ],
       "syntax": [
-        "clickTab(index: unknow): void"
+        "clickHandler(item: unknow, index: unknow): void"
       ],
       "returns": {
         "type": "void"
@@ -511,13 +351,12 @@
     },
     {
       "kind": "method",
-      "description": "查询tab的布局信息",
       "keywords": [],
       "visibility": "public",
-      "name": "getTabRect",
+      "name": "init",
       "params": [],
       "syntax": [
-        "getTabRect(): void"
+        "init(): void"
       ],
       "returns": {
         "type": "void"
@@ -525,19 +364,85 @@
     },
     {
       "kind": "method",
-      "description": "滚动scroll-view，让活动的tab处于屏幕的中间位置",
       "keywords": [],
       "visibility": "public",
-      "name": "scrollByIndex",
+      "name": "setScrollLeft",
       "params": [],
       "syntax": [
-        "scrollByIndex(): void"
+        "setScrollLeft(): void"
       ],
       "returns": {
         "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取所有标签的尺寸",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resize",
+      "params": [],
+      "syntax": [
+        "resize(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取导航菜单的尺寸",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getTabsRect",
+      "params": [],
+      "syntax": [
+        "getTabsRect(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取所有标签的尺寸",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getAllItemRect",
+      "params": [],
+      "syntax": [
+        "getAllItemRect(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取各个标签的尺寸",
+      "keywords": [],
+      "visibility": "public",
+      "name": "queryRect",
+      "params": [
+        {
+          "name": "el",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "queryRect(el: unknow, item: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
       }
     }
   ],
   "name": "u-tabs",
-  "description": "tabs 标签"
+  "description": "Tabs 标签"
 }

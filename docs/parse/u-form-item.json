@@ -9,62 +9,54 @@
     },
     {
       "name": "tutorial",
-      "description": "http://uviewui.com/components/form.html"
+      "description": "https://www.uviewui.com/components/form.html"
     },
     {
       "name": "property",
-      "description": "{String} label 左侧提示文字"
+      "description": "{String}\t\t\tlabel\t\t\tinput的label提示语"
     },
     {
       "name": "property",
-      "description": "{Object} prop 表单域model对象的属性名，在使用 validate、resetFields 方法的情况下，该属性是必填的"
+      "description": "{String}\t\t\tprop\t\t\t绑定的值"
     },
     {
       "name": "property",
-      "description": "{Boolean} border-bottom 是否显示表单域的下划线边框"
+      "description": "{String | Boolean}\tborderBottom\t是否显示表单域的下划线边框"
     },
     {
       "name": "property",
-      "description": "{String} label-position 表单域提示文字的位置，left-左侧，top-上方"
+      "description": "{String | Number}\tlabelWidth\t\tlabel的宽度，单位px"
     },
     {
       "name": "property",
-      "description": "{String Number} label-width 提示文字的宽度，单位rpx（默认90）"
+      "description": "{String}\t\t\trightIcon\t\t右侧图标"
     },
     {
       "name": "property",
-      "description": "{Object} label-style lable的样式，对象形式"
+      "description": "{String}\t\t\tleftIcon\t\t左侧图标"
     },
     {
       "name": "property",
-      "description": "{String} label-align lable的对齐方式"
+      "description": "{String | Object} leftIconStyle 左侧图标的样式"
     },
     {
       "name": "property",
-      "description": "{String} right-icon 右侧自定义字体图标(限uView内置图标)或图片地址"
-    },
-    {
-      "name": "property",
-      "description": "{String} left-icon 左侧自定义字体图标(限uView内置图标)或图片地址"
-    },
-    {
-      "name": "property",
-      "description": "{Object} left-icon-style 左侧图标的样式，对象形式"
-    },
-    {
-      "name": "property",
-      "description": "{Object} right-icon-style 右侧图标的样式，对象形式"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} required 是否显示左边的\"*\"号，这里仅起展示作用，如需校验必填，请通过rules配置必填规则(默认false)"
+      "description": "{Boolean}\t\t\trequired\t\t是否显示左边的必填星号，只作显示用，具体校验必填的逻辑，请在rules中配置 (默认 false )"
     },
     {
       "name": "example",
-      "description": "<u-form-item label=\"姓名\"><u-input v-model=\"form.name\" /></u-form-item>"
+      "description": "<u-form-item label=\"姓名\" prop=\"userInfo.name\" borderBottom ref=\"item1\"></u-form-item>"
     }
   ],
   "slots": [
+    {
+      "kind": "slot",
+      "description": "微信小程序中，将一个参数设置空字符串，结果会变成字符串\"true\"",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label",
+      "props": []
+    },
     {
       "kind": "slot",
       "keywords": [],
@@ -78,144 +70,103 @@
       "visibility": "public",
       "name": "right",
       "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error",
+      "props": []
     }
   ],
   "props": [
     {
       "kind": "prop",
-      "description": "input的label提示语",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "label",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "绑定的值",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "prop",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示表单域的下划线边框",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "border-bottom",
-      "type": [
-        "String",
-        "Boolean"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "label的位置，left-左边，top-上边",
-      "keywords": [],
-      "visibility": "public",
-      "name": "label-position",
+      "name": "borderBottom",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "label的宽度，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "label-width",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "lable的样式，对象形式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "label-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "lable字体的对齐方式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "label-align",
+      "name": "labelPosition",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "右侧图标",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "right-icon",
+      "name": "labelWidth",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "左侧图标",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "left-icon",
+      "name": "rightIcon",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "左侧图标的样式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "left-icon-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "name": "leftIcon",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "左侧图标的样式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "right-icon-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示左边的必填星号，只作显示用，具体校验必填的逻辑，请在rules中配置",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "required",
       "type": "Boolean",
-      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "leftIconStyle",
+      "type": "String",
       "required": false,
       "describeModel": false
     }
@@ -223,145 +174,49 @@
   "data": [
     {
       "kind": "data",
+      "description": "错误提示语",
       "keywords": [],
       "visibility": "public",
-      "name": "initialValue",
+      "name": "message",
       "type": "string",
       "initialValue": "\"\""
     },
     {
       "kind": "data",
-      "description": "isRequired: false, // 是否必填，由于人性化考虑，必填\"*\"号通过props的required配置，不再通过rules的规则自动生成",
-      "keywords": [],
-      "visibility": "public",
-      "name": "validateState",
-      "type": "string",
-      "initialValue": "\"\""
-    },
-    {
-      "kind": "data",
-      "description": "是否校验成功",
-      "keywords": [],
-      "visibility": "public",
-      "name": "validateMessage",
-      "type": "string",
-      "initialValue": "\"\""
-    },
-    {
-      "kind": "data",
-      "description": "有错误时的提示方式，message-提示信息，border-如果input设置了边框，变成呈红色，",
-      "keywords": [],
-      "visibility": "public",
-      "name": "errorType",
-      "type": "array",
-      "initialValue": "['message']"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "fieldValue",
-      "type": "string",
-      "initialValue": "\"\""
-    },
-    {
-      "kind": "data",
-      "description": "父组件的参数，在computed计算中，无法得知this.parent发生变化，故将父组件的参数值，放到data中",
       "keywords": [],
       "visibility": "public",
       "name": "parentData",
       "type": "object",
-      "initialValue": "{\"borderBottom\":{\"type\":\"boolean\",\"value\":true,\"raw\":\"true\"},\"labelWidth\":{\"type\":\"number\",\"value\":90,\"raw\":\"90\"},\"labelPosition\":{\"type\":\"string\",\"value\":\"left\",\"raw\":\"\\\"left\\\"\"},\"labelStyle\":{\"type\":\"object\",\"value\":{},\"raw\":\"{}\"},\"labelAlign\":{\"type\":\"string\",\"value\":\"left\",\"raw\":\"\\\"left\\\"\"}}"
+      "initialValue": "{\"labelPosition\":{\"type\":\"string\",\"value\":\"left\",\"raw\":\"\\\"left\\\"\"},\"labelAlign\":{\"type\":\"string\",\"value\":\"left\",\"raw\":\"\\\"left\\\"\"},\"labelStyle\":{\"type\":\"object\",\"value\":{},\"raw\":\"{}\"},\"labelWidth\":{\"type\":\"number\",\"value\":45,\"raw\":\"45\"},\"errorType\":{\"type\":\"string\",\"value\":\"message\",\"raw\":\"\\\"message\\\"\"}}"
     }
   ],
   "computed": [
     {
       "kind": "computed",
-      "description": "计算后的label宽度，由于需要多个判断，故放到computed中",
       "keywords": [],
       "visibility": "public",
-      "name": "uLabelWidth",
-      "dependencies": [
-        "elLabelPosition",
-        "label",
-        "$u"
-      ]
-    },
-    {
-      "kind": "computed",
-      "keywords": [],
-      "visibility": "public",
-      "name": "showError",
-      "dependencies": [
-        "errorType"
-      ]
-    },
-    {
-      "kind": "computed",
-      "description": "label的宽度",
-      "keywords": [],
-      "visibility": "public",
-      "name": "elLabelWidth",
-      "dependencies": [
-        "labelWidth",
-        "parentData"
-      ]
-    },
-    {
-      "kind": "computed",
-      "description": "label的样式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "elLabelStyle",
-      "dependencies": [
-        "labelStyle",
-        "parentData"
-      ]
-    },
-    {
-      "kind": "computed",
-      "description": "label的位置，左侧或者上方",
-      "keywords": [],
-      "visibility": "public",
-      "name": "elLabelPosition",
-      "dependencies": [
-        "labelPosition",
-        "parentData"
-      ]
-    },
-    {
-      "kind": "computed",
-      "description": "label的对齐方式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "elLabelAlign",
-      "dependencies": [
-        "labelAlign",
-        "parentData"
-      ]
-    },
-    {
-      "kind": "computed",
-      "description": "label的下划线",
-      "keywords": [],
-      "visibility": "public",
-      "name": "elBorderBottom",
-      "dependencies": [
-        "borderBottom",
-        "parentData"
-      ]
+      "name": "propsLine",
+      "dependencies": []
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    }
+  ],
   "methods": [
     {
       "kind": "method",
       "keywords": [],
       "visibility": "public",
-      "name": "broadcastInputError",
+      "name": "init",
       "params": [],
       "syntax": [
-        "broadcastInputError(): void"
+        "init(): void"
       ],
       "returns": {
         "type": "void"
@@ -369,13 +224,13 @@
     },
     {
       "kind": "method",
-      "description": "判断是否需要required校验",
+      "description": "获取父组件的参数",
       "keywords": [],
       "visibility": "public",
-      "name": "setRules",
+      "name": "updateParentData",
       "params": [],
       "syntax": [
-        "setRules(): void"
+        "updateParentData(): void"
       ],
       "returns": {
         "type": "void"
@@ -383,27 +238,13 @@
     },
     {
       "kind": "method",
-      "description": "从u-form的rules属性中，取出当前u-form-item的校验规则",
+      "description": "移除u-form-item的校验结果",
       "keywords": [],
       "visibility": "public",
-      "name": "getRules",
+      "name": "clearValidate",
       "params": [],
       "syntax": [
-        "getRules(): unknow"
-      ],
-      "returns": {
-        "type": "unknow"
-      }
-    },
-    {
-      "kind": "method",
-      "description": "blur事件时进行表单校验",
-      "keywords": [],
-      "visibility": "public",
-      "name": "onFieldBlur",
-      "params": [],
-      "syntax": [
-        "onFieldBlur(): void"
+        "clearValidate(): void"
       ],
       "returns": {
         "type": "void"
@@ -411,68 +252,7 @@
     },
     {
       "kind": "method",
-      "description": "change事件进行表单校验",
-      "keywords": [],
-      "visibility": "public",
-      "name": "onFieldChange",
-      "params": [],
-      "syntax": [
-        "onFieldChange(): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "description": "过滤出符合要求的rule规则",
-      "keywords": [],
-      "visibility": "public",
-      "name": "getFilteredRule",
-      "params": [
-        {
-          "name": "triggerType",
-          "type": "string",
-          "defaultValue": "\"\"",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "getFilteredRule(triggerType: string = \"\"): unknow"
-      ],
-      "returns": {
-        "type": "unknow"
-      }
-    },
-    {
-      "kind": "method",
-      "description": "校验数据",
-      "keywords": [],
-      "visibility": "public",
-      "name": "validation",
-      "params": [
-        {
-          "name": "trigger",
-          "type": "unknow",
-          "rest": false
-        },
-        {
-          "name": "callback",
-          "type": "ArrowFunctionExpression",
-          "defaultValue": "() => {}",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "validation(trigger: unknow, callback: ArrowFunctionExpression = () => {}): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "description": "清空当前的u-form-item",
+      "description": "清空当前的组件的校验结果，并重置为初始值",
       "keywords": [],
       "visibility": "public",
       "name": "resetField",
@@ -483,8 +263,22 @@
       "returns": {
         "type": "void"
       }
+    },
+    {
+      "kind": "method",
+      "description": "点击组件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [],
+      "syntax": [
+        "clickHandler(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
     }
   ],
   "name": "u-form-item",
-  "description": "form-item 表单item"
+  "description": "Form 表单"
 }
