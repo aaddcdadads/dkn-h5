@@ -6,7 +6,8 @@
       "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
     }
   },
-  "pages": [{
+  "pages": [
+    {
       "path": "pages/index/index",
       "style": {
         "navigationBarTitleText": "uni-app"
@@ -74,7 +75,6 @@
         "navigationBarTitleText": "uni-app"
       }
     },
- 
     {
       "path": "components/built-in/uniapp-haomo/HmNewsDetail",
       "style": {
@@ -222,6 +222,12 @@
     },
     {
       "path": "components/built-in/uniapp-haomo/HmEmailCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "pages/test/TestHmExam",
       "style": {
         "navigationBarTitleText": "uni-app"
       }
@@ -1208,7 +1214,8 @@
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
       }
-    },{
+    },
+    {
       "path": "pages/1599675588405104642/page",
       "style": {
         "navigationBarTitleText": "",
@@ -1233,7 +1240,8 @@
   },
   "condition": {
     "current": 0,
-    "list": [{
+    "list": [
+      {
         "name": "HmScanCode",
         "path": "components/built-in/uniapp/HmScanCode",
         "query": ""
