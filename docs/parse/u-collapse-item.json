@@ -2,52 +2,7 @@
   "inheritAttrs": true,
   "errors": [],
   "warnings": [],
-  "keywords": [
-    {
-      "name": "description",
-      "description": "通过折叠面板收纳内容区域（搭配u-collapse使用）"
-    },
-    {
-      "name": "tutorial",
-      "description": "https://www.uviewui.com/components/collapse.html"
-    },
-    {
-      "name": "property",
-      "description": "{String} title 面板标题"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} index 主要用于事件的回调，标识那个Item被点击"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} disabled 面板是否可以打开或收起（默认false）"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} open 设置某个面板的初始状态是否打开（默认false）"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} name 唯一标识符，如不设置，默认用当前collapse-item的索引值"
-    },
-    {
-      "name": "property",
-      "description": "{String} align 标题的对齐方式（默认left）"
-    },
-    {
-      "name": "property",
-      "description": "{Object} active-style 不显示箭头时，可以添加当前选择的collapse-item活动样式，对象形式"
-    },
-    {
-      "name": "event",
-      "description": "{Function} change 某个item被打开或者收起时触发"
-    },
-    {
-      "name": "example",
-      "description": "<u-collapse-item :title=\"item.head\" v-for=\"(item, index) in itemList\" :key=\"index\">{{item.body}}</u-collapse-item>"
-    }
-  ],
+  "keywords": [],
   "slots": [
     {
       "kind": "slot",
@@ -60,7 +15,21 @@
       "kind": "slot",
       "keywords": [],
       "visibility": "public",
-      "name": "title-all",
+      "name": "icon",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right-icon",
       "props": []
     },
     {
@@ -74,84 +43,111 @@
   "props": [
     {
       "kind": "prop",
-      "description": "标题",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "title",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "标题的对齐方式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "align",
+      "name": "value",
       "type": "String",
-      "default": "\"left\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否可以点击收起",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "collapse显示与否",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "open",
+      "name": "isLink",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "唯一标识符",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickable",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "align",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "name",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"\"",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "活动样式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "active-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "name": "icon",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "标识当前为第几个",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "index",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
+      "name": "duration",
+      "type": "Number",
       "required": false,
       "describeModel": false
     }
@@ -161,98 +157,58 @@
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "isShow",
+      "name": "elId",
+      "type": "CallExpression",
+      "initialValue": "uni.$u.guid()"
+    },
+    {
+      "kind": "data",
+      "description": "uni.createAnimation的导出数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animationData",
+      "type": "object",
+      "initialValue": "{}"
+    },
+    {
+      "kind": "data",
+      "description": "是否展开状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "expanded",
       "type": "boolean",
       "initialValue": "false"
     },
     {
       "kind": "data",
+      "description": "根据expanded确定是否显示border，为了控制展开时，cell的下划线更好的显示效果，进行一定时间的延时",
       "keywords": [],
       "visibility": "public",
-      "name": "elId",
-      "type": "CallExpression",
-      "initialValue": "this.$u.guid()"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "height",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "description": "body内容的高度",
-      "keywords": [],
-      "visibility": "public",
-      "name": "headStyle",
-      "type": "object",
-      "initialValue": "{}"
-    },
-    {
-      "kind": "data",
-      "description": "头部样式，对象形式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "bodyStyle",
-      "type": "object",
-      "initialValue": "{}"
-    },
-    {
-      "kind": "data",
-      "description": "主体部分样式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "itemStyle",
-      "type": "object",
-      "initialValue": "{}"
-    },
-    {
-      "kind": "data",
-      "description": "每个item的整体样式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "arrowColor",
-      "type": "string",
-      "initialValue": "\"\""
-    },
-    {
-      "kind": "data",
-      "description": "箭头的颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "hoverClass",
-      "type": "string",
-      "initialValue": "\"\""
-    },
-    {
-      "kind": "data",
-      "description": "头部按下时的效果样式类",
-      "keywords": [],
-      "visibility": "public",
-      "name": "arrow",
+      "name": "showBorder",
       "type": "boolean",
-      "initialValue": "true"
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "是否动画中，如果是则不允许继续触发点击",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animating",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "父组件u-collapse的参数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "parentData",
+      "type": "object",
+      "initialValue": "{\"accordion\":{\"type\":\"boolean\",\"value\":false,\"raw\":\"false\"},\"border\":{\"type\":\"boolean\",\"value\":false,\"raw\":\"false\"}}"
     }
   ],
   "computed": [],
-  "events": [
-    {
-      "kind": "event",
-      "description": "触发本组件的事件",
-      "keywords": [],
-      "visibility": "public",
-      "name": "change",
-      "arguments": [
-        {
-          "name": "{ index: this.index, show: this.isShow }",
-          "type": "object",
-          "rest": false
-        }
-      ]
-    }
-  ],
+  "events": [],
   "methods": [
     {
       "kind": "method",
@@ -270,13 +226,39 @@
     },
     {
       "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateParentData",
+      "params": [],
+      "syntax": [
+        "updateParentData(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setContentAnimate",
+      "params": [],
+      "syntax": [
+        "async setContentAnimate(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
       "description": "点击collapsehead头部",
       "keywords": [],
       "visibility": "public",
-      "name": "headClick",
+      "name": "clickHandler",
       "params": [],
       "syntax": [
-        "headClick(): void"
+        "clickHandler(): void"
       ],
       "returns": {
         "type": "void"
@@ -290,13 +272,13 @@
       "name": "queryRect",
       "params": [],
       "syntax": [
-        "queryRect(): void"
+        "queryRect(): unknow"
       ],
       "returns": {
-        "type": "void"
+        "type": "unknow"
       }
     }
   ],
   "name": "u-collapse-item",
-  "description": "collapseItem 手风琴Item"
+  "description": "#endif"
 }

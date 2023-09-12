@@ -3,171 +3,83 @@
   "errors": [],
   "warnings": [],
   "keywords": [],
-  "slots": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "props": []
+    }
+  ],
   "props": [
     {
       "kind": "prop",
-      "description": "显示的内容，数组",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "list",
-      "type": "Array",
-      "default": "function() {\r\n\t\t\t\treturn [];\r\n\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "none主题默认为透明背景，黑色(contentColor)字体",
-      "keywords": [],
-      "visibility": "public",
-      "name": "type",
+      "name": "text",
       "type": "String",
-      "default": "\"warning\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示左侧的音量图标",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "volume-icon",
-      "type": "Boolean",
-      "default": "true",
+      "name": "icon",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示右侧的右箭头图标",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "more-icon",
-      "type": "Boolean",
-      "default": "false",
+      "name": "mode",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示右侧的关闭图标",
-      "keywords": [],
-      "visibility": "public",
-      "name": "close-icon",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否自动播放",
-      "keywords": [],
-      "visibility": "public",
-      "name": "autoplay",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "文字颜色，各图标也会使用文字颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "color",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "背景颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "bg-color",
+      "name": "bgColor",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "show",
-      "type": "Boolean",
-      "default": "true",
+      "name": "fontSize",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "字体大小，单位rpx",
-      "keywords": [],
-      "visibility": "public",
-      "name": "font-size",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "26",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "音量喇叭的大小",
-      "keywords": [],
-      "visibility": "public",
-      "name": "volume-size",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "34",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "水平滚动时的滚动速度，即每秒滚动多少rpx，这有利于控制文字无论多少时，都能有一个恒定的速度",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "speed",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "160",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "播放状态，play-播放，paused-暂停",
-      "keywords": [],
-      "visibility": "public",
-      "name": "play-state",
       "type": "String",
-      "default": "\"play\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "通知的边距",
-      "keywords": [],
-      "visibility": "public",
-      "name": "padding",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"18rpx 24rpx\"",
       "required": false,
       "describeModel": false
     }
@@ -177,27 +89,9 @@
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "textWidth",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "description": "滚动的文字宽度",
-      "keywords": [],
-      "visibility": "public",
-      "name": "boxWidth",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "description": "供文字滚动的父盒子的宽度，和前者一起为了计算滚动速度",
-      "keywords": [],
-      "visibility": "public",
       "name": "animationDuration",
       "type": "string",
-      "initialValue": "\"10s\""
+      "initialValue": "\"0\""
     },
     {
       "kind": "data",
@@ -210,26 +104,23 @@
     },
     {
       "kind": "data",
-      "description": "动画的开始和结束执行",
+      "description": "不能在内容变化时直接重新计算，因为nvue的animation模块上一次的滚动不是刚好结束，会有影响",
       "keywords": [],
       "visibility": "public",
-      "name": "showText",
-      "type": "string",
-      "initialValue": "\"\""
+      "name": "nvueInit",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "boolean",
+      "initialValue": "true"
     }
   ],
   "computed": [
-    {
-      "kind": "computed",
-      "description": "计算字体颜色，如果没有自定义的，就用uview主题颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "computeColor",
-      "dependencies": [
-        "color",
-        "type"
-      ]
-    },
     {
       "kind": "computed",
       "description": "文字内容的样式",
@@ -238,19 +129,27 @@
       "name": "textStyle",
       "dependencies": [
         "color",
-        "type",
         "fontSize"
       ]
     },
     {
       "kind": "computed",
-      "description": "计算背景颜色",
       "keywords": [],
       "visibility": "public",
-      "name": "computeBgColor",
+      "name": "animationStyle",
       "dependencies": [
-        "bgColor",
-        "type"
+        "animationDuration",
+        "animationPlayState"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "放在一个text标签中进行滚动，在低端安卓机上，动画可能会出现抖动现象，需要分割到多个text中可解决此问题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "innerText",
+      "dependencies": [
+        "text"
       ]
     }
   ],
@@ -268,13 +167,6 @@
       "visibility": "public",
       "name": "close",
       "arguments": []
-    },
-    {
-      "kind": "event",
-      "keywords": [],
-      "visibility": "public",
-      "name": "getMore",
-      "arguments": []
     }
   ],
   "methods": [
@@ -282,10 +174,10 @@
       "kind": "method",
       "keywords": [],
       "visibility": "public",
-      "name": "initSize",
+      "name": "init",
       "params": [],
       "syntax": [
-        "initSize(): void"
+        "init(): void"
       ],
       "returns": {
         "type": "void"
@@ -293,10 +185,81 @@
     },
     {
       "kind": "method",
+      "description": "vue版处理",
+      "keywords": [],
+      "visibility": "public",
+      "name": "vue",
+      "params": [],
+      "syntax": [
+        "async vue(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "nvue版处理",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nvue",
+      "params": [],
+      "syntax": [
+        "async nvue(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loopAnimation",
+      "params": [
+        {
+          "name": "textWidth",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "boxWidth",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "loopAnimation(textWidth: unknow, boxWidth: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getNvueRect",
+      "params": [
+        {
+          "name": "el",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getNvueRect(el: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
       "description": "点击通告栏",
       "keywords": [],
       "visibility": "public",
-      "name": "click",
+      "name": "clickHandler",
       "params": [
         {
           "name": "index",
@@ -305,7 +268,7 @@
         }
       ],
       "syntax": [
-        "click(index: unknow): void"
+        "clickHandler(index: unknow): void"
       ],
       "returns": {
         "type": "void"
@@ -313,7 +276,7 @@
     },
     {
       "kind": "method",
-      "description": "点击关闭按钮",
+      "description": "点击右侧按钮，需要判断点击的是关闭图标还是箭头图标",
       "keywords": [],
       "visibility": "public",
       "name": "close",
@@ -324,21 +287,8 @@
       "returns": {
         "type": "void"
       }
-    },
-    {
-      "kind": "method",
-      "description": "点击更多箭头按钮",
-      "keywords": [],
-      "visibility": "public",
-      "name": "getMore",
-      "params": [],
-      "syntax": [
-        "getMore(): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
     }
   ],
-  "name": "u-row-notice"
+  "name": "u-row-notice",
+  "description": "#endif"
 }

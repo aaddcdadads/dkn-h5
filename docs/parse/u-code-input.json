@@ -1,0 +1,370 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般用于验证用户短信验证码的场景，也可以结合uView的键盘组件使用"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/codeInput.html"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tmaxlength\t\t\t最大输入长度 （默认 6 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tdot\t\t\t\t\t是否用圆点填充 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tmode\t\t\t\t显示模式，box-盒子模式，line-底部横线模式 （默认 'box' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\thairline\t\t\t是否细边框 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tspace\t\t\t\t字符间的距离 （默认 10 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tvalue\t\t\t\t预置值"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tfocus\t\t\t\t是否自动获取焦点 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tbold\t\t\t\t字体和输入横线是否加粗 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tcolor\t\t\t\t字体颜色 （默认 '#606266' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tfontSize\t\t\t字体大小，单位px （默认 18 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tsize\t\t\t\t输入框的大小，宽等于高 （默认 35 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tdisabledKeyboard\t是否隐藏原生键盘，如果想用自定义键盘的话，需设置此参数为true （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tborderColor\t\t\t边框和线条颜色 （默认 '#c9cacc' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tdisabledDot\t\t\t是否禁止输入\".\"符号 （默认 true ）"
+    },
+    {
+      "name": "event",
+      "description": "{Function}\tchange\t输入内容发生改变时触发，具体见上方说明\t\t\tvalue：当前输入的值"
+    },
+    {
+      "name": "event",
+      "description": "{Function}\tfinish\t输入字符个数达maxlength值时触发，见上方说明\tvalue：当前输入的值"
+    },
+    {
+      "name": "example",
+      "description": "<u-code-input v-model=\"value4\" :focus=\"true\"></u-code-input>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "adjustPosition",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maxlength",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dot",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hairline",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "space",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bold",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fontSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "size",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabledKeyboard",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "borderColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabledDot",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputValue",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isFocus",
+      "type": "object",
+      "initialValue": "this.focus"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "根据长度，循环输入框的个数，因为头条小程序数值不能用于v-for",
+      "keywords": [],
+      "visibility": "public",
+      "name": "codeLength",
+      "dependencies": [
+        "maxlength"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "循环item的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemStyle",
+      "dependencies": [
+        "size",
+        "mode",
+        "hairline",
+        "borderColor",
+        "space",
+        "codeLength"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "将输入的值，转为数组，给item历遍时，根据当前的索引显示数组的元素",
+      "keywords": [],
+      "visibility": "public",
+      "name": "codeArray",
+      "dependencies": [
+        "inputValue"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "下划线模式下，横线的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lineStyle",
+      "dependencies": [
+        "hairline",
+        "size",
+        "borderColor"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "description": "未达到maxlength之前，发送change事件，达到后发送finish事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "修改通过v-model双向绑定的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "finish",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "监听输入框的值发生变化",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputHandler",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "inputHandler(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-code-input",
+  "description": "CodeInput 验证码输入"
+}

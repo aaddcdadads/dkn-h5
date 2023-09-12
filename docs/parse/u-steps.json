@@ -9,139 +9,172 @@
     },
     {
       "name": "tutorial",
-      "description": "https://www.uviewui.com/components/steps.html"
+      "description": "https://uviewui.com/components/steps.html"
     },
     {
       "name": "property",
-      "description": "{String} mode 设置模式（默认dot）"
+      "description": "{String}\t\t\tdirection\t\trow-横向，column-竖向 (默认 'row' )"
     },
     {
       "name": "property",
-      "description": "{Array} list 数轴条数据，数组。具体见上方示例"
+      "description": "{String | Number}\tcurrent\t\t\t设置当前处于第几步 (默认 0 )"
     },
     {
       "name": "property",
-      "description": "{String} type type主题（默认primary）"
+      "description": "{String}\t\t\tactiveColor\t\t激活状态颜色 (默认 '#3c9cff' )"
     },
     {
       "name": "property",
-      "description": "{String} direction row-横向，column-竖向（默认row）"
+      "description": "{String}\t\t\tinactiveColor\t未激活状态颜色 (默认 '#969799' )"
     },
     {
       "name": "property",
-      "description": "{Number String} current 设置当前处于第几步"
+      "description": "{String}\t\t\tactiveIcon\t\t激活状态的图标"
     },
     {
       "name": "property",
-      "description": "{String} active-color 已完成步骤的激活颜色，如设置，type值会失效"
+      "description": "{String}\t\t\tinactiveIcon\t未激活状态图标"
     },
     {
       "name": "property",
-      "description": "{String} un-active-color 未激活的颜色，用于表示未完成步骤的颜色（默认#606266）"
+      "description": "{Boolean}\t\t\tdot\t\t\t\t是否显示点类型 (默认 false )"
     },
     {
       "name": "example",
-      "description": "<u-steps :list=\"numList\" active-color=\"#fa3534\"></u-steps>"
+      "description": "<u-steps current=\"0\"><u-steps-item title=\"已出库\" desc=\"10:35\" ></u-steps-item></u-steps>"
     }
   ],
-  "slots": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
   "props": [
     {
       "kind": "prop",
-      "description": "步骤条的类型，dot|number",
-      "keywords": [],
-      "visibility": "public",
-      "name": "mode",
-      "type": "String",
-      "default": "\"dot\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "步骤条的数据",
-      "keywords": [],
-      "visibility": "public",
-      "name": "list",
-      "type": "Array",
-      "default": "function() {\r\n\t\t\t\treturn [];\r\n\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "主题类型, primary|success|info|warning|error",
-      "keywords": [],
-      "visibility": "public",
-      "name": "type",
-      "type": "String",
-      "default": "\"primary\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "当前哪一步是激活的",
-      "keywords": [],
-      "visibility": "public",
-      "name": "current",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "激活步骤的颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "active-color",
-      "type": "String",
-      "default": "\"#2979ff\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "未激活的颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "un-active-color",
-      "type": "String",
-      "default": "\"#909399\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "自定义图标",
-      "keywords": [],
-      "visibility": "public",
-      "name": "icon",
-      "type": "String",
-      "default": "\"checkmark\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "step的排列方向，row-横向，column-竖向",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "direction",
       "type": "String",
-      "default": "\"row\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "current",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "activeColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactiveColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "activeIcon",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactiveIcon",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dot",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     }
   ],
   "data": [],
-  "computed": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "监听参数的变化，通过watch中，手动去更新子组件的数据，否则子组件不会自动变化",
+      "keywords": [],
+      "visibility": "public",
+      "name": "parentData",
+      "dependencies": [
+        "current",
+        "direction",
+        "activeColor",
+        "inactiveColor",
+        "activeIcon",
+        "inactiveIcon",
+        "dot"
+      ]
+    }
+  ],
   "events": [],
-  "methods": [],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "更新子组件的数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateChildData",
+      "params": [],
+      "syntax": [
+        "updateChildData(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "接受子组件的通知，去修改其他子组件的数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateFromChild",
+      "params": [],
+      "syntax": [
+        "updateFromChild(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
   "name": "u-steps",
-  "description": "steps 步骤条"
+  "description": "Steps 步骤条"
 }

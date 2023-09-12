@@ -4,40 +4,22 @@
   "warnings": [],
   "keywords": [
     {
-      "name": "description",
-      "description": "该组件一般用于向下展开菜单，同时可切换多个选项卡的场景"
+      "name": "description"
     },
     {
       "name": "tutorial",
-      "description": "http://uviewui.com/components/dropdown.html"
+      "description": "url"
     },
     {
       "name": "property",
-      "description": "{String | Number} v-model 双向绑定选项卡选择值"
+      "description": "{String}"
     },
     {
-      "name": "property",
-      "description": "{String} title 菜单项标题"
+      "name": "event",
+      "description": "{Function}"
     },
     {
-      "name": "property",
-      "description": "{Array[Object]} options 选项数据，如果传入了默认slot，此参数无效"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} disabled 是否禁用此选项卡（默认false）"
-    },
-    {
-      "name": "property",
-      "description": "{String | Number} duration 选项卡展开和收起的过渡时间，单位ms（默认300）"
-    },
-    {
-      "name": "property",
-      "description": "{String | Number} height 弹窗下拉内容的高度(内容超出将会滚动)（默认auto）"
-    },
-    {
-      "name": "example",
-      "description": "<u-dropdown-item title=\"标题\"></u-dropdown-item>"
+      "name": "example"
     }
   ],
   "slots": [
@@ -52,66 +34,61 @@
   "props": [
     {
       "kind": "prop",
-      "description": "当前选中项的value值",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "value",
-      "type": [
-        "Number",
-        "String",
-        "Array"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": true
-    },
-    {
-      "kind": "prop",
-      "description": "菜单项标题",
-      "keywords": [],
-      "visibility": "public",
-      "name": "title",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "选项数据，如果传入了默认slot，此参数无效",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "options",
       "type": "Array",
-      "default": "function() {\r\n\t\t\t\t\treturn []\r\n\t\t\t\t}",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否禁用此菜单项",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "下拉弹窗的高度",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "height",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"auto\"",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeOnClickOverlay",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     }
@@ -119,83 +96,44 @@
   "data": [
     {
       "kind": "data",
+      "description": "�˵�����",
       "keywords": [],
       "visibility": "public",
-      "name": "active",
-      "type": "boolean",
-      "initialValue": "false"
+      "name": "menuList",
+      "type": "array",
+      "initialValue": "[]"
     },
     {
       "kind": "data",
-      "description": "当前项是否处于展开状态",
       "keywords": [],
       "visibility": "public",
-      "name": "activeColor",
-      "type": "string",
-      "initialValue": "\"#2979ff\""
-    },
-    {
-      "kind": "data",
-      "description": "激活时左边文字和右边对勾图标的颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "inactiveColor",
-      "type": "string",
-      "initialValue": "\"#606266\""
+      "name": "current",
+      "type": "number",
+      "initialValue": "0"
     }
   ],
-  "computed": [
-    {
-      "kind": "computed",
-      "description": "监听props是否发生了变化，有些值需要传递给父组件u-dropdown，无法双向绑定",
-      "keywords": [],
-      "visibility": "public",
-      "name": "propsChange",
-      "dependencies": [
-        "title",
-        "disabled"
-      ]
-    }
-  ],
-  "events": [
-    {
-      "kind": "event",
-      "description": "修改通过v-model绑定的值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "input",
-      "arguments": [
-        {
-          "name": "value",
-          "type": "any",
-          "rest": false
-        }
-      ]
-    },
-    {
-      "kind": "event",
-      "description": "发出事件，抛出当前勾选项的value",
-      "keywords": [],
-      "visibility": "public",
-      "name": "change",
-      "arguments": [
-        {
-          "name": "value",
-          "type": "any",
-          "rest": false
-        }
-      ]
-    }
-  ],
+  "computed": [],
+  "events": [],
   "methods": [
     {
       "kind": "method",
       "keywords": [],
       "visibility": "public",
-      "name": "init",
-      "params": [],
+      "name": "clickHandler",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
       "syntax": [
-        "init(): void"
+        "clickHandler(item: unknow, index: unknow): void"
       ],
       "returns": {
         "type": "void"
@@ -203,25 +141,25 @@
     },
     {
       "kind": "method",
-      "description": "cell被点击",
+      "description": "��ȡ��ǩ�ĳߴ�λ��",
       "keywords": [],
       "visibility": "public",
-      "name": "cellClick",
+      "name": "queryRect",
       "params": [
         {
-          "name": "value",
+          "name": "el",
           "type": "unknow",
           "rest": false
         }
       ],
       "syntax": [
-        "cellClick(value: unknow): void"
+        "queryRect(el: unknow): unknow"
       ],
       "returns": {
-        "type": "void"
+        "type": "unknow"
       }
     }
   ],
-  "name": "u-dropdown-item",
-  "description": "dropdown-item 下拉菜单"
+  "name": "u-dropdown",
+  "description": "Dropdown"
 }

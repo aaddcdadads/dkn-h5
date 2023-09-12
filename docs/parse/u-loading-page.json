@@ -2,12 +2,165 @@
   "inheritAttrs": true,
   "errors": [],
   "warnings": [],
-  "keywords": [],
-  "slots": [],
-  "props": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "警此组件为一个小动画，目前用在uView的loadmore加载更多和switch开关等组件的正在加载状态场景。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/loading.html"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tloadingText\t\t提示内容  (默认 '正在加载' )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\timage\t\t\t文字上方用于替换loading动画的图片"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tloadingMode\t\t加载动画的模式，circle-圆形，spinner-花朵形，semicircle-半圆形 （默认 'circle' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tloading\t\t\t是否加载中 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tbgColor\t\t\t背景色 （默认 '#ffffff' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tcolor\t\t\t文字颜色 （默认 '#C8C8C8' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tfontSize\t\t文字大小 （默认 19 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\ticonSize\t\t图标大小 （默认 28 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tloadingColor\t加载中图标的颜色，只能rgb或者十六进制颜色值 （默认 '#C8C8C8' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t\t自定义样式"
+    },
+    {
+      "name": "example",
+      "description": "<u-loading mode=\"circle\"></u-loading>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadingText",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "image",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadingMode",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loading",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fontSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadingColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
   "data": [],
   "computed": [],
   "events": [],
   "methods": [],
-  "name": "u-loading-page"
+  "name": "u-loading-page",
+  "description": "loadingPage 加载动画"
 }

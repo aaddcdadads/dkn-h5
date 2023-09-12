@@ -13,103 +13,83 @@
     },
     {
       "name": "property",
-      "description": "{String} name 图标名称，见示例图标集"
+      "description": "{String}\t\t\tname\t\t\t图标名称，见示例图标集"
     },
     {
       "name": "property",
-      "description": "{String} color 图标颜色（默认inherit）"
+      "description": "{String}\t\t\tcolor\t\t\t图标颜色,可接受主题色 （默认 color['u-content-color'] ）"
     },
     {
       "name": "property",
-      "description": "{String | Number} size 图标字体大小，单位rpx（默认32）"
+      "description": "{String | Number}\tsize\t\t\t图标字体大小，单位px （默认 '16px' ）"
     },
     {
       "name": "property",
-      "description": "{String | Number} label-size label字体大小，单位rpx（默认28）"
+      "description": "{Boolean}\t\t\tbold\t\t\t是否显示粗体 （默认 false ）"
     },
     {
       "name": "property",
-      "description": "{String} label 图标右侧的label文字（默认28）"
+      "description": "{String | Number}\tindex\t\t\t点击图标的时候传递事件出去的index（用于区分点击了哪一个）"
     },
     {
       "name": "property",
-      "description": "{String} label-pos label文字相对于图标的位置，只能right或bottom（默认right）"
+      "description": "{String}\t\t\thoverClass\t\t图标按下去的样式类，用法同uni的view组件的hoverClass参数，详情见官网"
     },
     {
       "name": "property",
-      "description": "{String} label-color label字体颜色（默认#606266）"
+      "description": "{String}\t\t\tcustomPrefix\t自定义扩展前缀，方便用户扩展自己的图标库 （默认 'uicon' ）"
     },
     {
       "name": "property",
-      "description": "{Object} custom-style icon的样式，对象形式"
+      "description": "{String | Number}\tlabel\t\t\t图标右侧的label文字"
     },
     {
       "name": "property",
-      "description": "{String} custom-prefix 自定义字体图标库时，需要写上此值"
+      "description": "{String}\t\t\tlabelPos\t\tlabel相对于图标的位置，只能right或bottom （默认 'right' ）"
     },
     {
       "name": "property",
-      "description": "{String | Number} margin-left label在右侧时与图标的距离，单位rpx（默认6）"
+      "description": "{String | Number}\tlabelSize\t\tlabel字体大小，单位px （默认 '15px' ）"
     },
     {
       "name": "property",
-      "description": "{String | Number} margin-top label在下方时与图标的距离，单位rpx（默认6）"
+      "description": "{String}\t\t\tlabelColor\t\t图标右侧的label文字颜色 （ 默认 color['u-content-color'] ）"
     },
     {
       "name": "property",
-      "description": "{String | Number} margin-bottom label在上方时与图标的距离，单位rpx（默认6）"
+      "description": "{String | Number}\tspace\t\t\tlabel与图标的距离，单位px （默认 '3px' ）"
     },
     {
       "name": "property",
-      "description": "{String | Number} margin-right label在左侧时与图标的距离，单位rpx（默认6）"
+      "description": "{String}\t\t\timgMode\t\t\t图片的mode"
     },
     {
       "name": "property",
-      "description": "{String} label-pos label相对于图标的位置，只能right或bottom（默认right）"
+      "description": "{String | Number}\twidth\t\t\t显示图片小图标时的宽度"
     },
     {
       "name": "property",
-      "description": "{String} index 一个用于区分多个图标的值，点击图标时通过click事件传出"
+      "description": "{String | Number}\theight\t\t\t显示图片小图标时的高度"
     },
     {
       "name": "property",
-      "description": "{String} hover-class 图标按下去的样式类，用法同uni的view组件的hover-class参数，详情见官网"
+      "description": "{String | Number}\ttop\t\t\t\t图标在垂直方向上的定位 用于解决某些情况下，让图标垂直居中的用途  （默认 0 ）"
     },
     {
       "name": "property",
-      "description": "{String} width 显示图片小图标时的宽度"
+      "description": "{Boolean}\t\t\tstop\t\t\t是否阻止事件传播 （默认 false ）"
     },
     {
       "name": "property",
-      "description": "{String} height 显示图片小图标时的高度"
-    },
-    {
-      "name": "property",
-      "description": "{String} top 图标在垂直方向上的定位"
-    },
-    {
-      "name": "property",
-      "description": "{String} top 图标在垂直方向上的定位"
-    },
-    {
-      "name": "property",
-      "description": "{String} top 图标在垂直方向上的定位"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} show-decimal-icon 是否为DecimalIcon"
-    },
-    {
-      "name": "property",
-      "description": "{String} inactive-color 背景颜色，可接受主题色，仅Decimal时有效"
-    },
-    {
-      "name": "property",
-      "description": "{String | Number} percent 显示的百分比，仅Decimal时有效"
+      "description": "{Object}\t\t\tcustomStyle\t\ticon的样式，对象形式"
     },
     {
       "name": "event",
       "description": "{Function} click 点击图标时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} touchstart 事件触摸时触发"
     },
     {
       "name": "example",
@@ -120,290 +100,171 @@
   "props": [
     {
       "kind": "prop",
-      "description": "图标类名",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "name",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "图标颜色，可接受主题色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "color",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "字体大小，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "size",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"inherit\"",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示粗体",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "bold",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "点击图标的时候传递事件出去的index（用于区分点击了哪一个）",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "index",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"\"",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "触摸图标时的类名",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "hover-class",
+      "name": "hoverClass",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "自定义扩展前缀，方便用户扩展自己的图标库",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "custom-prefix",
+      "name": "customPrefix",
       "type": "String",
-      "default": "\"uicon\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "图标右边或者下面的文字",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "label",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "label的位置，只能右边或者下边",
-      "keywords": [],
-      "visibility": "public",
-      "name": "label-pos",
       "type": "String",
-      "default": "\"right\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "label的大小",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "label-size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"28\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "label的颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "label-color",
+      "name": "labelPos",
       "type": "String",
-      "default": "\"#606266\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "label与图标的距离(横向排列)",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "margin-left",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"6\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "label与图标的距离(竖向排列)",
-      "keywords": [],
-      "visibility": "public",
-      "name": "margin-top",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"6\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "label与图标的距离(竖向排列)",
-      "keywords": [],
-      "visibility": "public",
-      "name": "margin-right",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"6\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "label与图标的距离(竖向排列)",
-      "keywords": [],
-      "visibility": "public",
-      "name": "margin-bottom",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"6\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "图片的mode",
-      "keywords": [],
-      "visibility": "public",
-      "name": "img-mode",
+      "name": "labelSize",
       "type": "String",
-      "default": "\"widthFix\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "自定义样式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "custom-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\treturn {}\r\n\t\t\t}",
+      "name": "labelColor",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "用于显示图片小图标时，图片的宽度",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "space",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "imgMode",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "width",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "用于显示图片小图标时，图片的高度",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "height",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "用于解决某些情况下，让图标垂直居中的用途",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "top",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "0",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否为DecimalIcon",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-decimal-icon",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "背景颜色，可接受主题色，仅Decimal时有效",
-      "keywords": [],
-      "visibility": "public",
-      "name": "inactive-color",
       "type": "String",
-      "default": "\"#ececec\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "显示的百分比，仅Decimal时有效",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "percent",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"50\"",
+      "name": "stop",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     }
@@ -414,13 +275,10 @@
       "kind": "computed",
       "keywords": [],
       "visibility": "public",
-      "name": "customClass",
+      "name": "uClasses",
       "dependencies": [
         "customPrefix",
         "name",
-        "showDecimalIcon",
-        "inactiveColor",
-        "$u",
         "color"
       ]
     },
@@ -431,11 +289,8 @@
       "name": "iconStyle",
       "dependencies": [
         "size",
-        "$u",
         "bold",
         "top",
-        "showDecimalIcon",
-        "inactiveColor",
         "color"
       ]
     },
@@ -456,35 +311,18 @@
       "name": "imgStyle",
       "dependencies": [
         "width",
-        "$u",
         "size",
         "height"
       ]
     },
     {
       "kind": "computed",
+      "description": "通过图标名，查找对应的图标",
       "keywords": [],
       "visibility": "public",
-      "name": "decimalIconStyle",
+      "name": "icon",
       "dependencies": [
-        "size",
-        "$u",
-        "bold",
-        "top",
-        "percent",
-        "color"
-      ]
-    },
-    {
-      "kind": "computed",
-      "keywords": [],
-      "visibility": "public",
-      "name": "decimalIconClass",
-      "dependencies": [
-        "customPrefix",
-        "name",
-        "color",
-        "$u"
+        "name"
       ]
     }
   ],
@@ -501,19 +339,6 @@
           "rest": false
         }
       ]
-    },
-    {
-      "kind": "event",
-      "keywords": [],
-      "visibility": "public",
-      "name": "touchstart",
-      "arguments": [
-        {
-          "name": "index",
-          "type": "any",
-          "rest": false
-        }
-      ]
     }
   ],
   "methods": [
@@ -521,23 +346,16 @@
       "kind": "method",
       "keywords": [],
       "visibility": "public",
-      "name": "click",
-      "params": [],
-      "syntax": [
-        "click(): void"
+      "name": "clickHandler",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
       ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "touchstart",
-      "params": [],
       "syntax": [
-        "touchstart(): void"
+        "clickHandler(e: unknow): void"
       ],
       "returns": {
         "type": "void"

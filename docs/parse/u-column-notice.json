@@ -2,244 +2,181 @@
   "inheritAttrs": true,
   "errors": [],
   "warnings": [],
-  "keywords": [],
-  "slots": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件用于滚动通告场景，是其中的垂直滚动方式"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/noticeBar.html"
+    },
+    {
+      "name": "property",
+      "description": "{Array}\t\t\ttext \t\t\t显示的内容，字符串"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ticon \t\t\t是否显示左侧的音量图标 （ 默认 'volume' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tmode \t\t\t通告模式，link-显示右箭头，closable-显示右侧关闭图标"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tcolor \t\t\t文字颜色，各图标也会使用文字颜色 （ 默认 '#f9ae3d' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tbgColor \t\t背景颜色 （ 默认 '#fdf6ec' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tfontSize\t\t字体大小，单位px  （ 默认 14 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tspeed\t\t\t水平滚动时的滚动速度，即每秒滚动多少px(rpx)，这有利于控制文字无论多少时，都能有一个恒定的速度 （ 默认 80 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tstep\t\t\tdirection = row时，是否使用步进形式滚动 （ 默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tduration\t\t滚动一个周期的时间长，单位ms （ 默认 1500 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tdisableTouch\t是否禁止用手滑动切换   目前HX2.6.11，只支持App 2.5.5+、H5 2.5.5+、支付宝小程序、字节跳动小程序 （ 默认 true ）"
+    },
+    {
+      "name": "example"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "props": []
+    }
+  ],
   "props": [
     {
       "kind": "prop",
-      "description": "显示的内容，数组",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "list",
-      "type": "Array",
-      "default": "function() {\r\n\t\t\t\treturn [];\r\n\t\t\t}",
+      "name": "text",
+      "type": "[Array]",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "显示的主题，success|error|primary|info|warning",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "type",
+      "name": "icon",
       "type": "String",
-      "default": "\"warning\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示左侧的音量图标",
-      "keywords": [],
-      "visibility": "public",
-      "name": "volume-icon",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示右侧的右箭头图标",
-      "keywords": [],
-      "visibility": "public",
-      "name": "more-icon",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示右侧的关闭图标",
-      "keywords": [],
-      "visibility": "public",
-      "name": "close-icon",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否自动播放",
-      "keywords": [],
-      "visibility": "public",
-      "name": "autoplay",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "文字颜色，各图标也会使用文字颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "color",
-      "type": "String",
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "背景颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "bg-color",
-      "type": "String",
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "滚动方向，row-水平滚动，column-垂直滚动",
-      "keywords": [],
-      "visibility": "public",
-      "name": "direction",
-      "type": "String",
-      "default": "\"row\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "字体大小，单位rpx",
-      "keywords": [],
-      "visibility": "public",
-      "name": "font-size",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "26",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "滚动一个周期的时间长，单位ms",
-      "keywords": [],
-      "visibility": "public",
-      "name": "duration",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "2000",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "音量喇叭的大小",
-      "keywords": [],
-      "visibility": "public",
-      "name": "volume-size",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "34",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "水平滚动时的滚动速度，即每秒滚动多少rpx，这有利于控制文字无论多少时，都能有一个恒定的速度",
-      "keywords": [],
-      "visibility": "public",
-      "name": "speed",
-      "type": "Number",
-      "default": "160",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "水平滚动时，是否采用衔接形式滚动",
-      "keywords": [],
-      "visibility": "public",
-      "name": "is-circular",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "滚动方向，horizontal-水平滚动，vertical-垂直滚动",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "mode",
       "type": "String",
-      "default": "\"horizontal\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "播放状态，play-播放，paused-暂停",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "play-state",
+      "name": "color",
       "type": "String",
-      "default": "\"play\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "目前HX2.6.11，只支持App 2.5.5+、H5 2.5.5+、支付宝小程序、字节跳动小程序",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "disable-touch",
+      "name": "bgColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fontSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "speed",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "step",
       "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "通知的边距",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "padding",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"18rpx 24rpx\"",
+      "name": "duration",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disableTouch",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     }
   ],
-  "data": [],
-  "computed": [
+  "data": [
     {
-      "kind": "computed",
-      "description": "计算字体颜色，如果没有自定义的，就用uview主题颜色",
+      "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "computeColor",
-      "dependencies": [
-        "color",
-        "type"
-      ]
-    },
+      "name": "index",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [
     {
       "kind": "computed",
       "description": "文字内容的样式",
@@ -248,7 +185,6 @@
       "name": "textStyle",
       "dependencies": [
         "color",
-        "type",
         "fontSize"
       ]
     },
@@ -260,17 +196,6 @@
       "name": "vertical",
       "dependencies": [
         "mode"
-      ]
-    },
-    {
-      "kind": "computed",
-      "description": "计算背景颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "computeBgColor",
-      "dependencies": [
-        "bgColor",
-        "type"
       ]
     }
   ],
@@ -294,38 +219,37 @@
       "visibility": "public",
       "name": "close",
       "arguments": []
-    },
-    {
-      "kind": "event",
-      "keywords": [],
-      "visibility": "public",
-      "name": "getMore",
-      "arguments": []
-    },
-    {
-      "kind": "event",
-      "keywords": [],
-      "visibility": "public",
-      "name": "end",
-      "arguments": []
     }
   ],
   "methods": [
     {
       "kind": "method",
-      "description": "点击通告栏",
       "keywords": [],
       "visibility": "public",
-      "name": "click",
+      "name": "noticeChange",
       "params": [
         {
-          "name": "index",
+          "name": "e",
           "type": "unknow",
           "rest": false
         }
       ],
       "syntax": [
-        "click(index: unknow): void"
+        "noticeChange(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击通告栏",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [],
+      "syntax": [
+        "clickHandler(): void"
       ],
       "returns": {
         "type": "void"
@@ -344,40 +268,8 @@
       "returns": {
         "type": "void"
       }
-    },
-    {
-      "kind": "method",
-      "description": "点击更多箭头按钮",
-      "keywords": [],
-      "visibility": "public",
-      "name": "getMore",
-      "params": [],
-      "syntax": [
-        "getMore(): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "change",
-      "params": [
-        {
-          "name": "e",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "change(e: unknow): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
     }
   ],
+  "description": "ColumnNotice 滚动通知中的垂直滚动 内部组件",
   "name": "u-column-notice"
 }

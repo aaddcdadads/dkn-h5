@@ -9,272 +9,96 @@
     },
     {
       "name": "tutorial",
-      "description": "https://www.uviewui.com/components/countDown.html"
+      "description": "https://uviewui.com/components/countDown.html"
     },
     {
       "name": "property",
-      "description": "{String Number} timestamp 倒计时，单位为秒"
+      "description": "{String | Number}\ttime\t\t倒计时时长，单位ms （默认 0 ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} autoplay 是否自动开始倒计时，如果为false，需手动调用开始方法。见官网说明（默认true）"
+      "description": "{String}\t\t\tformat\t\t时间格式，DD-日，HH-时，mm-分，ss-秒，SSS-毫秒  （默认 'HH:mm:ss' ）"
     },
     {
       "name": "property",
-      "description": "{String} separator 分隔符，colon为英文冒号，zh为中文（默认colon）"
+      "description": "{Boolean}\t\t\tautoStart\t是否自动开始倒计时 （默认 true ）"
     },
     {
       "name": "property",
-      "description": "{String Number} separator-size 分隔符的字体大小，单位rpx（默认30）"
-    },
-    {
-      "name": "property",
-      "description": "{String} separator-color 分隔符的颜色（默认#303133）"
-    },
-    {
-      "name": "property",
-      "description": "{String Number} font-size 倒计时字体大小，单位rpx（默认30）"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} show-border 是否显示倒计时数字的边框（默认false）"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} hide-zero-day 当\"天\"的部分为0时，隐藏该字段 （默认true）"
-    },
-    {
-      "name": "property",
-      "description": "{String} border-color 数字边框的颜色（默认#303133）"
-    },
-    {
-      "name": "property",
-      "description": "{String} bg-color 倒计时数字的背景颜色（默认#ffffff）"
-    },
-    {
-      "name": "property",
-      "description": "{String} color 倒计时数字的颜色（默认#303133）"
-    },
-    {
-      "name": "property",
-      "description": "{String} height 数字高度值(宽度等同此值)，设置边框时看情况是否需要设置此值，单位rpx（默认auto）"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} show-days 是否显示倒计时的\"天\"部分（默认true）"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} show-hours 是否显示倒计时的\"时\"部分（默认true）"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} show-minutes 是否显示倒计时的\"分\"部分（默认true）"
-    },
-    {
-      "name": "property",
-      "description": "{Boolean} show-seconds 是否显示倒计时的\"秒\"部分（默认true）"
+      "description": "{Boolean}\t\t\tmillisecond\t是否展示毫秒倒计时 （默认 false ）"
     },
     {
       "name": "event",
-      "description": "{Function} end 倒计时结束"
+      "description": "{Function} finish 倒计时结束时触发"
     },
     {
       "name": "event",
-      "description": "{Function} change 每秒触发一次，回调为当前剩余的倒计秒数"
+      "description": "{Function} change 倒计时变化时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} start\t开始倒计时"
+    },
+    {
+      "name": "event",
+      "description": "{Function} pause\t暂停倒计时"
+    },
+    {
+      "name": "event",
+      "description": "{Function} reset\t重设倒计时，若 auto-start 为 true，重设后会自动开始倒计时"
     },
     {
       "name": "example",
-      "description": "<u-count-down ref=\"uCountDown\" :timestamp=\"86400\" :autoplay=\"false\"></u-count-down>"
+      "description": "<u-count-down :time=\"time\"></u-count-down>"
     }
   ],
-  "slots": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
   "props": [
     {
       "kind": "prop",
-      "description": "倒计时的时间，秒为单位",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "timestamp",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否自动开始倒计时",
-      "keywords": [],
-      "visibility": "public",
-      "name": "autoplay",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "用英文冒号(colon)或者中文(zh)当做分隔符，false的时候为中文，如：\"11:22\"或\"11时22秒\"",
-      "keywords": [],
-      "visibility": "public",
-      "name": "separator",
+      "name": "time",
       "type": "String",
-      "default": "\"colon\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "分隔符的大小，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "separator-size",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "30",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "分隔符颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "separator-color",
+      "name": "format",
       "type": "String",
-      "default": "\"#303133\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "字体颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "color",
-      "type": "String",
-      "default": "\"#303133\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "字体大小，单位rpx",
-      "keywords": [],
-      "visibility": "public",
-      "name": "font-size",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "30",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "背景颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "bg-color",
-      "type": "String",
-      "default": "\"#fff\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "数字框高度，单位rpx",
-      "keywords": [],
-      "visibility": "public",
-      "name": "height",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"auto\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示数字框",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-border",
+      "name": "autoStart",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "边框颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "border-color",
-      "type": "String",
-      "default": "\"#303133\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示秒",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-seconds",
+      "name": "millisecond",
       "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示分钟",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-minutes",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示小时",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-hours",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示“天”",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-days",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "当\"天\"的部分为0时，不显示",
-      "keywords": [],
-      "visibility": "public",
-      "name": "hide-zero-day",
-      "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     }
@@ -284,101 +108,95 @@
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "d",
-      "type": "string",
-      "initialValue": "\"00\""
-    },
-    {
-      "kind": "data",
-      "description": "天的默认值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "h",
-      "type": "string",
-      "initialValue": "\"00\""
-    },
-    {
-      "kind": "data",
-      "description": "小时的默认值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "i",
-      "type": "string",
-      "initialValue": "\"00\""
-    },
-    {
-      "kind": "data",
-      "description": "分钟的默认值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "s",
-      "type": "string",
-      "initialValue": "\"00\""
-    },
-    {
-      "kind": "data",
-      "description": "秒的默认值",
-      "keywords": [],
-      "visibility": "public",
       "name": "timer",
       "type": "any",
       "initialValue": "null"
     },
     {
       "kind": "data",
-      "description": "定时器",
+      "description": "各单位(天，时，分等)剩余时间",
       "keywords": [],
       "visibility": "public",
-      "name": "seconds",
+      "name": "timeData",
+      "type": "parseTimeData",
+      "initialValue": "parseTimeData(0)"
+    },
+    {
+      "kind": "data",
+      "description": "格式化后的时间，如\"03:23:21\"",
+      "keywords": [],
+      "visibility": "public",
+      "name": "formattedTime",
+      "type": "string",
+      "initialValue": "\"0\""
+    },
+    {
+      "kind": "data",
+      "description": "倒计时是否正在进行中",
+      "keywords": [],
+      "visibility": "public",
+      "name": "runing",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "endTime",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "description": "结束的毫秒时间戳",
+      "keywords": [],
+      "visibility": "public",
+      "name": "remainTime",
       "type": "number",
       "initialValue": "0"
     }
   ],
-  "computed": [
-    {
-      "kind": "computed",
-      "description": "倒计时item的样式，item为分别的时分秒部分的数字",
-      "keywords": [],
-      "visibility": "public",
-      "name": "itemStyle",
-      "dependencies": [
-        "height",
-        "showBorder",
-        "borderColor",
-        "bgColor"
-      ]
-    },
-    {
-      "kind": "computed",
-      "description": "倒计时数字的样式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "letterStyle",
-      "dependencies": [
-        "fontSize",
-        "color"
-      ]
-    }
-  ],
+  "computed": [],
   "events": [
     {
       "kind": "event",
       "keywords": [],
       "visibility": "public",
-      "name": "end",
+      "name": "change",
       "arguments": [
         {
-          "name": "{}",
-          "type": "object",
+          "name": "timeData",
+          "type": "any",
           "rest": false
         }
       ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "finish",
+      "arguments": []
     }
   ],
   "methods": [
     {
       "kind": "method",
-      "description": "倒计时",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "开始倒计时",
       "keywords": [],
       "visibility": "public",
       "name": "start",
@@ -392,19 +210,73 @@
     },
     {
       "kind": "method",
-      "description": "格式化时间",
+      "description": "根据是否展示毫秒，执行不同操作函数",
       "keywords": [],
       "visibility": "public",
-      "name": "formatTime",
+      "name": "toTick",
+      "params": [],
+      "syntax": [
+        "toTick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "macroTick",
+      "params": [],
+      "syntax": [
+        "macroTick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "microTick",
+      "params": [],
+      "syntax": [
+        "microTick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取剩余的时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getRemainTime",
+      "params": [],
+      "syntax": [
+        "getRemainTime(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "设置剩余的时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setRemainTime",
       "params": [
         {
-          "name": "seconds",
+          "name": "remain",
           "type": "unknow",
           "rest": false
         }
       ],
       "syntax": [
-        "formatTime(seconds: unknow): void"
+        "setRemainTime(remain: unknow): void"
       ],
       "returns": {
         "type": "void"
@@ -412,13 +284,13 @@
     },
     {
       "kind": "method",
-      "description": "停止倒计时",
+      "description": "重置倒计时",
       "keywords": [],
       "visibility": "public",
-      "name": "end",
+      "name": "reset",
       "params": [],
       "syntax": [
-        "end(): void"
+        "reset(): void"
       ],
       "returns": {
         "type": "void"
@@ -426,13 +298,27 @@
     },
     {
       "kind": "method",
-      "description": "清除定时器",
+      "description": "暂停倒计时",
       "keywords": [],
       "visibility": "public",
-      "name": "clearTimer",
+      "name": "pause",
       "params": [],
       "syntax": [
-        "clearTimer(): void"
+        "pause(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "清空定时器",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearTimeout",
+      "params": [],
+      "syntax": [
+        "clearTimeout(): void"
       ],
       "returns": {
         "type": "void"
@@ -440,5 +326,5 @@
     }
   ],
   "name": "u-count-down",
-  "description": "countDown 倒计时"
+  "description": "u-count-down 倒计时"
 }

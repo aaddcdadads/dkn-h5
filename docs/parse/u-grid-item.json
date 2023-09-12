@@ -13,15 +13,15 @@
     },
     {
       "name": "property",
-      "description": "{String} bg-color 宫格的背景颜色（默认#ffffff）"
+      "description": "{String | Number}\tname\t\t宫格的name ( 默认 null )"
     },
     {
       "name": "property",
-      "description": "{String Number} index 点击宫格时，返回的值"
+      "description": "{String}\t\t\tbgColor\t\t宫格的背景颜色 （默认 'transparent' ）"
     },
     {
       "name": "property",
-      "description": "{Object} custom-style 自定义样式，对象形式"
+      "description": "{Object}\t\t\tcustomStyle\t自定义样式，对象形式"
     },
     {
       "name": "event",
@@ -39,42 +39,33 @@
       "visibility": "public",
       "name": "default",
       "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
     }
   ],
   "props": [
     {
       "kind": "prop",
-      "description": "背景颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "bg-color",
+      "name": "name",
       "type": "String",
-      "default": "\"#ffffff\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "点击时返回的index",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "index",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "自定义样式，对象形式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "custom-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\tpadding: '30rpx 0'\r\n\t\t\t\t\t}\r\n\t\t\t\t}",
+      "name": "bgColor",
+      "type": "String",
       "required": false,
       "describeModel": false
     }
@@ -86,22 +77,60 @@
       "visibility": "public",
       "name": "parentData",
       "type": "object",
-      "initialValue": "{\"hoverClass\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"col\":{\"type\":\"number\",\"value\":3,\"raw\":\"3\"},\"border\":{\"type\":\"boolean\",\"value\":true,\"raw\":\"true\"}}"
+      "initialValue": "{\"col\":{\"type\":\"number\",\"value\":3,\"raw\":\"3\"},\"border\":{\"type\":\"boolean\",\"value\":true,\"raw\":\"true\"}}"
+    },
+    {
+      "kind": "data",
+      "description": "#ifdef APP-NVUE",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "description": "#endif",
+      "keywords": [],
+      "visibility": "public",
+      "name": "classes",
+      "type": "array",
+      "initialValue": "[]"
     }
   ],
   "computed": [
     {
       "kind": "computed",
-      "description": "每个grid-item的宽度",
+      "description": "vue下放到computed中，否则会因为延时造成闪烁",
       "keywords": [],
       "visibility": "public",
       "name": "width",
       "dependencies": [
         "parentData"
       ]
+    },
+    {
+      "kind": "computed",
+      "description": "#endif",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemStyle",
+      "dependencies": [
+        "bgColor",
+        "width",
+        "customStyle"
+      ]
     }
   ],
   "events": [
+    {
+      "kind": "event",
+      "description": "发出事件，通知所有的grid-item都重新计算自己的边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "$uGridItem",
+      "arguments": []
+    },
     {
       "kind": "event",
       "keywords": [],
@@ -109,7 +138,7 @@
       "name": "click",
       "arguments": [
         {
-          "name": "index",
+          "name": "name",
           "type": "any",
           "rest": false
         }
@@ -117,6 +146,19 @@
     }
   ],
   "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
     {
       "kind": "method",
       "description": "获取父组件的参数",
@@ -135,10 +177,50 @@
       "kind": "method",
       "keywords": [],
       "visibility": "public",
-      "name": "click",
+      "name": "clickHandler",
       "params": [],
       "syntax": [
-        "click(): void"
+        "clickHandler(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getItemWidth",
+      "params": [],
+      "syntax": [
+        "async getItemWidth(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取父元素的尺寸",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getParentWidth",
+      "params": [],
+      "syntax": [
+        "getParentWidth(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "gridItemClasses",
+      "params": [],
+      "syntax": [
+        "gridItemClasses(): void"
       ],
       "returns": {
         "type": "void"

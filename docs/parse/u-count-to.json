@@ -13,43 +13,47 @@
     },
     {
       "name": "property",
-      "description": "{String Number} start-val 开始值"
+      "description": "{String | Number}\tstartVal\t开始的数值，默认从0增长到某一个数（默认 0 ）"
     },
     {
       "name": "property",
-      "description": "{String Number} end-val 结束值"
+      "description": "{String | Number}\tendVal\t\t要滚动的目标数值，必须 （默认 0 ）"
     },
     {
       "name": "property",
-      "description": "{String Number} duration 滚动过程所需的时间，单位ms（默认2000）"
+      "description": "{String | Number}\tduration\t滚动到目标数值的动画持续时间，单位为毫秒（ms） （默认 2000 ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} autoplay 是否自动开始滚动（默认true）"
+      "description": "{Boolean}\t\t\tautoplay\t设置数值后是否自动开始滚动 （默认 true ）"
     },
     {
       "name": "property",
-      "description": "{String Number} decimals 要显示的小数位数，见官网说明（默认0）"
+      "description": "{String | Number}\tdecimals\t要显示的小数位数，见官网说明（默认 0 ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} use-easing 滚动结束时，是否缓动结尾，见官网说明（默认true）"
+      "description": "{Boolean}\t\t\tuseEasing\t滚动结束时，是否缓动结尾，见官网说明（默认 true ）"
     },
     {
       "name": "property",
-      "description": "{String} separator 千位分隔符，见官网说明"
+      "description": "{String}\t\t\tdecimal\t\t十进制分割 （ 默认 \".\" ）"
     },
     {
       "name": "property",
-      "description": "{String} color 字体颜色（默认#303133）"
+      "description": "{String}\t\t\tcolor\t\t字体颜色（ 默认 '#606266' )"
     },
     {
       "name": "property",
-      "description": "{String Number} font-size 字体大小，单位rpx（默认50）"
+      "description": "{String | Number}\tfontSize\t字体大小，单位px（ 默认 22 ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} bold 字体是否加粗（默认false）"
+      "description": "{Boolean}\t\t\tbold\t\t字体是否加粗（默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tseparator\t千位分隔符，见官网说明"
     },
     {
       "name": "event",
@@ -64,140 +68,111 @@
   "props": [
     {
       "kind": "prop",
-      "description": "开始的数值，默认从0增长到某一个数",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "start-val",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
+      "name": "startVal",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "要滚动的目标数值，必须",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "end-val",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
-      "required": true,
+      "name": "endVal",
+      "type": "String",
+      "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "滚动到目标数值的动画持续时间，单位为毫秒（ms）",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "duration",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "2000",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "设置数值后是否自动开始滚动",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "autoplay",
       "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "要显示的小数位数",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "decimals",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否在即将到达目标数值的时候，使用缓慢滚动的效果",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "use-easing",
+      "name": "useEasing",
       "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "十进制分割",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "decimal",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\".\"",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "字体颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "color",
       "type": "String",
-      "default": "\"#303133\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "字体大小",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "font-size",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "50",
+      "name": "fontSize",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否加粗字体",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "bold",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "千位分隔符，类似金额的分割(￥23,321.05中的\",\")",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "separator",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     }

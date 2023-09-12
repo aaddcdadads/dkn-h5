@@ -13,91 +13,143 @@
     },
     {
       "name": "property",
-      "description": "{String} size 按钮的大小"
+      "description": "{Boolean}\t\t\thairline\t\t\t\t是否显示按钮的细边框 (默认 true )"
     },
     {
       "name": "property",
-      "description": "{Boolean} ripple 是否开启点击水波纹效果"
+      "description": "{String}\t\t\ttype\t\t\t\t\t按钮的预置样式，info，primary，error，warning，success (默认 'info' )"
     },
     {
       "name": "property",
-      "description": "{String} ripple-bg-color 水波纹的背景色，ripple为true时有效"
+      "description": "{String}\t\t\tsize\t\t\t\t\t按钮尺寸，large，normal，mini （默认 normal）"
     },
     {
       "name": "property",
-      "description": "{String} type 按钮的样式类型"
+      "description": "{String}\t\t\tshape\t\t\t\t\t按钮形状，circle（两边为半圆），square（带圆角） （默认 'square' ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} plain 按钮是否镂空，背景色透明"
+      "description": "{Boolean}\t\t\tplain\t\t\t\t\t按钮是否镂空，背景色透明 （默认 false）"
     },
     {
       "name": "property",
-      "description": "{Boolean} disabled 是否禁用"
+      "description": "{Boolean}\t\t\tdisabled\t\t\t\t是否禁用 （默认 false）"
     },
     {
       "name": "property",
-      "description": "{Boolean} hair-line 是否显示按钮的细边框(默认true)"
+      "description": "{Boolean}\t\t\tloading\t\t\t\t\t按钮名称前是否带 loading 图标(App-nvue 平台，在 ios 上为雪花，Android上为圆圈) （默认 false）"
     },
     {
       "name": "property",
-      "description": "{Boolean} shape 按钮外观形状，见文档说明"
+      "description": "{String | Number}\tloadingText\t\t\t\t加载中提示文字"
     },
     {
       "name": "property",
-      "description": "{Boolean} loading 按钮名称前是否带 loading 图标(App-nvue 平台，在 ios 上为雪花，Android上为圆圈)"
+      "description": "{String}\t\t\tloadingMode\t\t\t\t加载状态图标类型 （默认 'spinner' ）"
     },
     {
       "name": "property",
-      "description": "{String} form-type 用于 <form> 组件，点击分别会触发 <form> 组件的 submit/reset 事件"
+      "description": "{String | Number}\tloadingSize\t\t\t\t加载图标大小 （默认 15 ）"
     },
     {
       "name": "property",
-      "description": "{String} open-type 开放能力"
+      "description": "{String}\t\t\topenType\t\t\t\t开放能力，具体请看uniapp稳定关于button组件部分说明"
     },
     {
       "name": "property",
-      "description": "{String} data-name 额外传参参数，用于小程序的data-xxx属性，通过target.dataset.name获取"
+      "description": "{String}\t\t\tformType\t\t\t\t用于 <form> 组件，点击分别会触发 <form> 组件的 submit/reset 事件"
     },
     {
       "name": "property",
-      "description": "{String} hover-class 指定按钮按下去的样式类。当 hover-class=\"none\" 时，没有点击态效果(App-nvue 平台暂不支持)"
+      "description": "{String}\t\t\tappParameter\t\t\t打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效 （注：只微信小程序、QQ小程序有效）"
     },
     {
       "name": "property",
-      "description": "{Number} hover-start-time 按住后多久出现点击态，单位毫秒"
+      "description": "{Boolean}\t\t\thoverStopPropagation\t指定是否阻止本节点的祖先节点出现点击态，微信小程序有效（默认 true ）"
     },
     {
       "name": "property",
-      "description": "{Number} hover-stay-time 手指松开后点击态保留时间，单位毫秒"
+      "description": "{String}\t\t\tlang\t\t\t\t\t指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文（默认 en ）"
     },
     {
       "name": "property",
-      "description": "{Object} custom-style 对按钮的自定义样式，对象形式，见文档说明"
+      "description": "{String}\t\t\tsessionFrom\t\t\t\t会话来源，openType=\"contact\"时有效"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tsendMessageTitle\t\t会话内消息卡片标题，openType=\"contact\"时有效"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tsendMessagePath\t\t\t会话内消息卡片点击跳转小程序路径，openType=\"contact\"时有效"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tsendMessageImg\t\t\t会话内消息卡片图片，openType=\"contact\"时有效"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tshowMessageCard\t\t\t是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示\"可能要发送的小程序\"提示，用户点击后可以快速发送小程序消息，openType=\"contact\"时有效（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tdataName\t\t\t\t额外传参参数，用于小程序的data-xxx属性，通过target.dataset.name获取"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tthrottleTime\t\t\t节流，一定时间内只能触发一次 （默认 0 )"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\thoverStartTime\t\t\t按住后多久出现点击态，单位毫秒 （默认 0 )"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\thoverStayTime\t\t\t手指松开后点击态保留时间，单位毫秒 （默认 200 )"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\ttext\t\t\t\t\t按钮文字，之所以通过props传入，是因为slot传入的话（注：nvue中无法控制文字的样式）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ticon\t\t\t\t\t按钮图标"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ticonColor\t\t\t\t按钮图标颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tcolor\t\t\t\t\t按钮颜色，支持传入linear-gradient渐变色"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t\t\t\t定义需要用到的外部样式"
     },
     {
       "name": "event",
-      "description": "{Function} click 按钮点击"
+      "description": "{Function}\tclick\t\t\t非禁止并且非加载中，才能点击"
     },
     {
       "name": "event",
-      "description": "{Function} getphonenumber open-type=\"getPhoneNumber\"时有效"
+      "description": "{Function}\tgetphonenumber\topen-type=\"getPhoneNumber\"时有效"
     },
     {
       "name": "event",
-      "description": "{Function} getuserinfo 用户点击该按钮时，会返回获取到的用户信息，从返回参数的detail中获取到的值同uni.getUserInfo"
+      "description": "{Function}\tgetuserinfo\t\t用户点击该按钮时，会返回获取到的用户信息，从返回参数的detail中获取到的值同uni.getUserInfo"
     },
     {
       "name": "event",
-      "description": "{Function} error 当使用开放能力时，发生错误的回调"
+      "description": "{Function}\terror\t\t\t当使用开放能力时，发生错误的回调"
     },
     {
       "name": "event",
-      "description": "{Function} opensetting 在打开授权设置页并关闭后回调"
+      "description": "{Function}\topensetting\t\t在打开授权设置页并关闭后回调"
     },
     {
       "name": "event",
-      "description": "{Function} launchapp 打开 APP 成功的回调"
+      "description": "{Function}\tlaunchapp\t\t打开 APP 成功的回调"
     },
     {
       "name": "example",
@@ -116,363 +168,351 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否细边框",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "hair-line",
+      "name": "hairline",
       "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "按钮的预置样式，default，primary，error，warning，success",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "type",
       "type": "String",
-      "default": "\"default\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "按钮尺寸，default，medium，mini",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "size",
       "type": "String",
-      "default": "\"default\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "按钮形状，circle（两边为半圆），square（带圆角）",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "shape",
       "type": "String",
-      "default": "\"square\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "按钮是否镂空",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "plain",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否禁止状态",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否加载中",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "loading",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "https://uniapp.dcloud.io/component/button",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "open-type",
+      "name": "loadingText",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "取值为submit（提交表单），reset（重置表单）",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "form-type",
+      "name": "loadingMode",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "只微信小程序、QQ小程序有效",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "app-parameter",
+      "name": "loadingSize",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "指定是否阻止本节点的祖先节点出现点击态，微信小程序有效",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "hover-stop-propagation",
+      "name": "openType",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "formType",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "appParameter",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hoverStopPropagation",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。只微信小程序有效",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "lang",
       "type": "String",
-      "default": "\"en\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "会话来源，open-type=\"contact\"时有效。只微信小程序有效",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "session-from",
+      "name": "sessionFrom",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "默认当前标题，只微信小程序有效",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "send-message-title",
+      "name": "sendMessageTitle",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "默认当前分享路径，只微信小程序有效",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "send-message-path",
+      "name": "sendMessagePath",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "默认当前页面截图，只微信小程序有效",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "send-message-img",
+      "name": "sendMessageImg",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "用户点击后可以快速发送小程序消息，open-type=\"contact\"时有效",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "show-message-card",
+      "name": "showMessageCard",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "手指按（触摸）按钮时按钮时的背景颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "hover-bg-color",
+      "name": "dataName",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "水波纹的背景颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "ripple-bg-color",
+      "name": "throttleTime",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否开启水波纹效果",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "ripple",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "按下的类名",
-      "keywords": [],
-      "visibility": "public",
-      "name": "hover-class",
+      "name": "hoverStartTime",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "自定义样式，对象形式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "custom-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\treturn {};\r\n\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "额外传参参数，用于小程序的data-xxx属性，通过target.dataset.name获取",
-      "keywords": [],
-      "visibility": "public",
-      "name": "data-name",
+      "name": "hoverStayTime",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "节流，一定时间内只能触发一次",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "throttle-time",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "1000",
+      "name": "text",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "按住后多久出现点击态，单位毫秒",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "hover-start-time",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "20",
+      "name": "icon",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "手指松开后点击态保留时间，单位毫秒",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "hover-stay-time",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "150",
+      "name": "iconColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
       "required": false,
       "describeModel": false
     }
   ],
-  "data": [
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "rippleTop",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "description": "水波纹的起点Y坐标到按钮上边界的距离",
-      "keywords": [],
-      "visibility": "public",
-      "name": "rippleLeft",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "description": "水波纹起点X坐标到按钮左边界的距离",
-      "keywords": [],
-      "visibility": "public",
-      "name": "fields",
-      "type": "object",
-      "initialValue": "{}"
-    },
-    {
-      "kind": "data",
-      "description": "波纹按钮节点信息",
-      "keywords": [],
-      "visibility": "public",
-      "name": "waveActive",
-      "type": "boolean",
-      "initialValue": "false"
-    }
-  ],
+  "data": [],
   "computed": [
     {
       "kind": "computed",
-      "description": "当没有传bgColor变量时，按钮按下去的颜色类名",
+      "description": "生成bem风格的类名",
       "keywords": [],
       "visibility": "public",
-      "name": "getHoverClass",
+      "name": "bemClass",
       "dependencies": [
-        "loading",
-        "disabled",
-        "ripple",
-        "hoverClass",
+        "bem",
+        "color"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadingColor",
+      "dependencies": [
         "plain",
+        "color",
         "type"
       ]
     },
     {
       "kind": "computed",
-      "description": "在'primary', 'success', 'error', 'warning'类型下，不显示边框，否则会造成四角有毛刺现象",
       "keywords": [],
       "visibility": "public",
-      "name": "showHairLineBorder",
+      "name": "iconColorCom",
       "dependencies": [
-        "type",
+        "iconColor",
+        "plain",
+        "color",
+        "type"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "baseColor",
+      "dependencies": [
+        "color",
         "plain"
       ]
+    },
+    {
+      "kind": "computed",
+      "description": "nvue版本按钮的字体不会继承父组件的颜色，需要对每一个text组件进行单独的设置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nvueTextStyle",
+      "dependencies": [
+        "type",
+        "color",
+        "plain",
+        "textSize"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "字体大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textSize",
+      "dependencies": []
     }
   ],
   "events": [
@@ -545,56 +585,15 @@
   "methods": [
     {
       "kind": "method",
-      "description": "按钮点击",
       "keywords": [],
       "visibility": "public",
-      "name": "click",
-      "params": [
-        {
-          "name": "e",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "click(e: unknow): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "description": "查询按钮的节点信息",
-      "keywords": [],
-      "visibility": "public",
-      "name": "getWaveQuery",
-      "params": [
-        {
-          "name": "e",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "getWaveQuery(e: unknow): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "description": "获取节点信息",
-      "keywords": [],
-      "visibility": "public",
-      "name": "getElQuery",
+      "name": "clickHandler",
       "params": [],
       "syntax": [
-        "getElQuery(): unknow"
+        "clickHandler(): void"
       ],
       "returns": {
-        "type": "unknow"
+        "type": "void"
       }
     },
     {

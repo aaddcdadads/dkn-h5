@@ -2,13 +2,105 @@
   "inheritAttrs": true,
   "errors": [],
   "warnings": [],
-  "keywords": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "此组件一般用于在特殊情况下，需要自定义导航栏的时候用到，一般建议使用uni-app带的导航栏。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/navbar.html"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tsafeAreaInsetTop\t是否开启顶部安全区适配  （默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tplaceholder\t\t\t固定在顶部时，是否生成一个等高元素，以防止塌陷 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tfixed\t\t\t\t导航栏是否固定在顶部 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tborder\t\t\t\t导航栏底部是否显示下边框 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tleftIcon\t\t\t左边返回图标的名称，只能为uView自带的图标 （默认 'arrow-left' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tleftText\t\t\t左边的提示文字"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\trightText\t\t\t右边的提示文字"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\trightIcon\t\t\t右边返回图标的名称，只能为uView自带的图标"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttitle\t\t\t\t导航栏标题，如设置为空字符，将会隐藏标题占位区域"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tbgColor\t\t\t\t导航栏背景设置 （默认 '#ffffff' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\ttitleWidth\t\t\t导航栏标题的最大宽度，内容超出会以省略号隐藏 （默认 '400rpx' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\theight\t\t\t\t导航栏高度(不包括状态栏高度在内，内部自动加上)（默认 '44px' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tleftIconSize\t\t左侧返回图标的大小（默认 20px ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tleftIconColor\t\t左侧返回图标的颜色（默认 #303133 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t        autoBack\t\t\t点击左侧区域(返回图标)，是否自动返回上一页（默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object | String}\ttitleStyle\t\t\t标题的样式，对象或字符串"
+    },
+    {
+      "name": "event",
+      "description": "{Function} leftClick\t\t点击左侧区域"
+    },
+    {
+      "name": "event",
+      "description": "{Function} rightClick\t\t点击右侧区域"
+    },
+    {
+      "name": "example",
+      "description": "<u-navbar title=\"剑未配妥，出门已是江湖\" left-text=\"返回\" right-text=\"帮助\" @click-left=\"onClickBack\" @click-right=\"onClickRight\"></u-navbar>"
+    }
+  ],
   "slots": [
     {
       "kind": "slot",
       "keywords": [],
       "visibility": "public",
-      "name": "default",
+      "name": "left",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "center",
       "props": []
     },
     {
@@ -22,292 +114,208 @@
   "props": [
     {
       "kind": "prop",
-      "description": "导航栏高度，单位px，非rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "height",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
+      "name": "safeAreaInsetTop",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "返回箭头的颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "back-icon-color",
+      "name": "placeholder",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fixed",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "leftIcon",
       "type": "String",
-      "default": "\"#606266\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "左边返回的图标",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "back-icon-name",
+      "name": "leftText",
       "type": "String",
-      "default": "\"nav-back\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "左边返回图标的大小，rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "back-icon-size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"44\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "返回的文字提示",
-      "keywords": [],
-      "visibility": "public",
-      "name": "back-text",
+      "name": "rightText",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "返回的文字的 样式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "back-text-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\tcolor: '#606266'\r\n\t\t\t\t\t}\r\n\t\t\t\t}",
+      "name": "rightIcon",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "导航栏标题",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "title",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "标题的宽度，如果需要自定义右侧内容，且右侧内容很多时，可能需要减少这个宽度，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "title-width",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"250\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "标题的颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "title-color",
+      "name": "bgColor",
       "type": "String",
-      "default": "\"#606266\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "标题字体是否加粗",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "title-bold",
+      "name": "titleWidth",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "leftIconSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "leftIconColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "autoBack",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "标题的字体大小",
-      "keywords": [],
-      "visibility": "public",
-      "name": "title-size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "32",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "is-back",
-      "type": [
-        "Boolean",
-        "String"
-      ],
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "对象形式，因为用户可能定义一个纯色，或者线性渐变的颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "background",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\tbackground: '#ffffff'\r\n\t\t\t\t\t}\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "导航栏是否固定在顶部",
-      "keywords": [],
-      "visibility": "public",
-      "name": "is-fixed",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否沉浸式，允许fixed定位后导航栏塌陷，仅fixed定位下生效",
-      "keywords": [],
-      "visibility": "public",
-      "name": "immersive",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示导航栏的下边框",
-      "keywords": [],
-      "visibility": "public",
-      "name": "border-bottom",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "z-index",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "自定义返回逻辑",
-      "keywords": [],
-      "visibility": "public",
-      "name": "custom-back",
-      "type": "Function",
-      "default": "null",
-      "required": false,
-      "describeModel": false
-    }
-  ],
-  "data": [
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "menuButtonInfo",
-      "type": "object",
-      "initialValue": "{}"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "statusBarHeight",
-      "type": "object",
-      "initialValue": "systemInfo.statusBarHeight"
-    }
-  ],
-  "computed": [
-    {
-      "kind": "computed",
-      "description": "导航栏内部盒子的样式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "navbarInnerStyle",
-      "dependencies": [
-        "navbarHeight"
-      ]
-    },
-    {
-      "kind": "computed",
-      "description": "整个导航栏的样式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "navbarStyle",
-      "dependencies": [
-        "zIndex",
-        "$u",
-        "background"
-      ]
-    },
-    {
-      "kind": "computed",
-      "description": "导航中间的标题的样式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "titleStyle",
-      "dependencies": [
-        "titleWidth"
-      ]
-    },
-    {
-      "kind": "computed",
-      "description": "转换字符数值为真正的数值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "navbarHeight",
-      "dependencies": [
-        "height",
-        "statusBarHeight"
-      ]
+      "type": "String",
+      "required": false,
+      "describeModel": false
     }
   ],
-  "events": [],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "description": "如果配置了autoBack，自动返回上一页",
+      "keywords": [],
+      "visibility": "public",
+      "name": "leftClick",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightClick",
+      "arguments": []
+    }
+  ],
   "methods": [
     {
       "kind": "method",
+      "description": "点击左侧区域",
       "keywords": [],
       "visibility": "public",
-      "name": "goBack",
+      "name": "leftClick",
       "params": [],
       "syntax": [
-        "goBack(): void"
+        "leftClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击右侧区域",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightClick",
+      "params": [],
+      "syntax": [
+        "rightClick(): void"
       ],
       "returns": {
         "type": "void"
@@ -315,5 +323,5 @@
     }
   ],
   "name": "u-navbar",
-  "description": "#endif"
+  "description": "Navbar 自定义导航栏"
 }

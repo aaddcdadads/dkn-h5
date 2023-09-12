@@ -7,7 +7,7 @@ import { exec,execSync } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const componentPath = path.resolve(__dirname, `../node_modules/uview-ui/components/${process.argv[2]}/${process.argv[2]}.vue`);
+const componentPath = path.resolve(__dirname, `../src/uni_modules/uview-ui/components/${process.argv[2]}/${process.argv[2]}.vue`);
 const output = path.resolve(__dirname, `../docs/parse/${process.argv[2]}.json`);
 async function extractComponentInfo() {
   try {
@@ -22,14 +22,16 @@ async function extractComponentInfo() {
 
 //生成parsh.sh脚本内容
 function getDirectories() {
-  const cpath = path.resolve(__dirname, `../node_modules/uview-ui/components`);
+  const cpath = path.resolve(__dirname, `../src/uni_modules/uview-ui/components`);
   let directories = fs.readdirSync(cpath, { withFileTypes: true })
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name);
 
     directories.forEach(e=>{
-      console.log(`npm run parse ${e}`);
+      if(e.indexOf("--" == -1)){
+        console.log(`npm run parse ${e}`);
+      }
     });
 }
-
+//getDirectories()
 extractComponentInfo();

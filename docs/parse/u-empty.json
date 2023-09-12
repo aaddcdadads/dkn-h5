@@ -13,39 +13,51 @@
     },
     {
       "name": "property",
-      "description": "{String} color 文字颜色（默认#c0c4cc）"
+      "description": "{String}\t\t\ticon\t\t内置图标名称，或图片路径，建议绝对路径"
     },
     {
       "name": "property",
-      "description": "{String} text 文字提示（默认“无内容”）"
+      "description": "{String}\t\t\ttext\t\t提示文字"
     },
     {
       "name": "property",
-      "description": "{String} src 自定义图标路径，如定义，mode参数会失效"
+      "description": "{String}\t\t\ttextColor\t文字颜色 (默认 '#c0c4cc' )"
     },
     {
       "name": "property",
-      "description": "{String Number} font-size 提示文字的大小，单位rpx（默认28）"
+      "description": "{String | Number}\ttextSize\t文字大小 （默认 14 ）"
     },
     {
       "name": "property",
-      "description": "{String} mode 内置的图标，见官网说明（默认data）"
+      "description": "{String}\t\t\ticonColor\t图标的颜色 （默认 '#c0c4cc' ）"
     },
     {
       "name": "property",
-      "description": "{String Number} img-width 图标的宽度，单位rpx（默认240）"
+      "description": "{String | Number}\ticonSize\t图标的大小 （默认 90 ）"
     },
     {
       "name": "property",
-      "description": "{String} img-height 图标的高度，单位rpx（默认auto）"
+      "description": "{String}\t\t\tmode\t\t选择预置的图标类型 （默认 'data' ）"
     },
     {
       "name": "property",
-      "description": "{String Number} margin-top 组件距离上一个元素之间的距离（默认0）"
+      "description": "{String | Number}\twidth\t\t图标宽度，单位px （默认 160 ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} show 是否显示组件（默认true）"
+      "description": "{String | Number}\theight\t\t图标高度，单位px （默认 160 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tshow\t\t是否显示组件 （默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tmarginTop\t组件距离上一个元素之间的距离，默认px单位 （默认 0 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t定义需要用到的外部样式"
     },
     {
       "name": "event",
@@ -65,154 +77,118 @@
       "kind": "slot",
       "keywords": [],
       "visibility": "public",
-      "name": "bottom",
+      "name": "default",
       "props": []
     }
   ],
   "props": [
     {
       "kind": "prop",
-      "description": "图标路径",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "src",
+      "name": "icon",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "提示文字",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "text",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "文字颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "color",
+      "name": "textColor",
       "type": "String",
-      "default": "\"#c0c4cc\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "图标的颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "icon-color",
+      "name": "textSize",
       "type": "String",
-      "default": "\"#c0c4cc\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "图标的大小",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "icon-size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "120",
+      "name": "iconColor",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "文字大小，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "font-size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "26",
+      "name": "iconSize",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "选择预置的图标类型",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "mode",
       "type": "String",
-      "default": "\"data\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "图标宽度，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "img-width",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "120",
+      "name": "width",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "图标高度，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "img-height",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"auto\"",
+      "name": "height",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示组件",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "show",
       "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "组件距离上一个元素之间的距离",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "margin-top",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "0",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "icon-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "name": "marginTop",
+      "type": "String",
       "required": false,
       "describeModel": false
     }
@@ -224,10 +200,43 @@
       "visibility": "public",
       "name": "icons",
       "type": "object",
-      "initialValue": "{\"car\":{\"type\":\"string\",\"value\":\"购物车为空\",\"raw\":\"\\\"购物车为空\\\"\"},\"page\":{\"type\":\"string\",\"value\":\"页面不存在\",\"raw\":\"\\\"页面不存在\\\"\"},\"search\":{\"type\":\"string\",\"value\":\"没有搜索结果\",\"raw\":\"\\\"没有搜索结果\\\"\"},\"address\":{\"type\":\"string\",\"value\":\"没有收货地址\",\"raw\":\"\\\"没有收货地址\\\"\"},\"wifi\":{\"type\":\"string\",\"value\":\"没有WiFi\",\"raw\":\"\\\"没有WiFi\\\"\"},\"order\":{\"type\":\"string\",\"value\":\"订单为空\",\"raw\":\"\\\"订单为空\\\"\"},\"coupon\":{\"type\":\"string\",\"value\":\"没有优惠券\",\"raw\":\"\\\"没有优惠券\\\"\"},\"favor\":{\"type\":\"string\",\"value\":\"暂无收藏\",\"raw\":\"\\\"暂无收藏\\\"\"},\"permission\":{\"type\":\"string\",\"value\":\"无权限\",\"raw\":\"\\\"无权限\\\"\"},\"history\":{\"type\":\"string\",\"value\":\"无历史记录\",\"raw\":\"\\\"无历史记录\\\"\"},\"news\":{\"type\":\"string\",\"value\":\"无新闻列表\",\"raw\":\"\\\"无新闻列表\\\"\"},\"message\":{\"type\":\"string\",\"value\":\"消息列表为空\",\"raw\":\"\\\"消息列表为空\\\"\"},\"list\":{\"type\":\"string\",\"value\":\"列表为空\",\"raw\":\"\\\"列表为空\\\"\"},\"data\":{\"type\":\"string\",\"value\":\"数据为空\",\"raw\":\"\\\"数据为空\\\"\"}}"
+      "initialValue": "{\"car\":{\"type\":\"string\",\"value\":\"购物车为空\",\"raw\":\"\\\"购物车为空\\\"\"},\"page\":{\"type\":\"string\",\"value\":\"页面不存在\",\"raw\":\"\\\"页面不存在\\\"\"},\"search\":{\"type\":\"string\",\"value\":\"没有搜索结果\",\"raw\":\"\\\"没有搜索结果\\\"\"},\"address\":{\"type\":\"string\",\"value\":\"没有收货地址\",\"raw\":\"\\\"没有收货地址\\\"\"},\"wifi\":{\"type\":\"string\",\"value\":\"没有WiFi\",\"raw\":\"\\\"没有WiFi\\\"\"},\"order\":{\"type\":\"string\",\"value\":\"订单为空\",\"raw\":\"\\\"订单为空\\\"\"},\"coupon\":{\"type\":\"string\",\"value\":\"没有优惠券\",\"raw\":\"\\\"没有优惠券\\\"\"},\"favor\":{\"type\":\"string\",\"value\":\"暂无收藏\",\"raw\":\"\\\"暂无收藏\\\"\"},\"permission\":{\"type\":\"string\",\"value\":\"无权限\",\"raw\":\"\\\"无权限\\\"\"},\"history\":{\"type\":\"string\",\"value\":\"无历史记录\",\"raw\":\"\\\"无历史记录\\\"\"},\"news\":{\"type\":\"string\",\"value\":\"无新闻列表\",\"raw\":\"\\\"无新闻列表\\\"\"},\"message\":{\"type\":\"string\",\"value\":\"消息列表为空\",\"raw\":\"\\\"消息列表为空\\\"\"},\"list\":{\"type\":\"string\",\"value\":\"列表为空\",\"raw\":\"\\\"列表为空\\\"\"},\"data\":{\"type\":\"string\",\"value\":\"数据为空\",\"raw\":\"\\\"数据为空\\\"\"},\"comment\":{\"type\":\"string\",\"value\":\"暂无评论\",\"raw\":\"\\\"暂无评论\\\"\"}}"
     }
   ],
-  "computed": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "组件样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "emptyStyle",
+      "dependencies": [
+        "marginTop",
+        "customStyle"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "文本样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textStyle",
+      "dependencies": [
+        "textColor",
+        "textSize"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "判断icon是否图片路径",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isSrc",
+      "dependencies": [
+        "icon"
+      ]
+    }
+  ],
   "events": [],
   "methods": [],
   "name": "u-empty",

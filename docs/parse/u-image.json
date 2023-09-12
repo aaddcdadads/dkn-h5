@@ -13,79 +13,79 @@
     },
     {
       "name": "property",
-      "description": "{String} src 图片地址"
+      "description": "{String}\t\t\tsrc \t\t\t\t图片地址"
     },
     {
       "name": "property",
-      "description": "{String} mode 裁剪模式，见官网说明"
+      "description": "{String}\t\t\tmode \t\t\t\t裁剪模式，见官网说明 （默认 'aspectFill' ）"
     },
     {
       "name": "property",
-      "description": "{String | Number} width 宽度，单位任意，如果为数值，则为rpx单位（默认100%）"
+      "description": "{String | Number}\twidth \t\t\t\t宽度，单位任意，如果为数值，则为px单位 （默认 '300' ）"
     },
     {
       "name": "property",
-      "description": "{String | Number} height 高度，单位任意，如果为数值，则为rpx单位（默认 auto）"
+      "description": "{String | Number}\theight \t\t\t\t高度，单位任意，如果为数值，则为px单位 （默认 '225' ）"
     },
     {
       "name": "property",
-      "description": "{String} shape 图片形状，circle-圆形，square-方形（默认square）"
+      "description": "{String}\t\t\tshape \t\t\t\t图片形状，circle-圆形，square-方形 （默认 'square' ）"
     },
     {
       "name": "property",
-      "description": "{String | Number} border-radius 圆角值，单位任意，如果为数值，则为rpx单位（默认 0）"
+      "description": "{String | Number}\tradius\t\t \t\t圆角值，单位任意，如果为数值，则为px单位 （默认 0 ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} lazy-load 是否懒加载，仅微信小程序、App、百度小程序、字节跳动小程序有效（默认 true）"
+      "description": "{Boolean}\t\t\tlazyLoad\t\t\t是否懒加载，仅微信小程序、App、百度小程序、字节跳动小程序有效 （默认 true ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} show-menu-by-longpress 是否开启长按图片显示识别小程序码菜单，仅微信小程序有效（默认 false）"
+      "description": "{Boolean}\t\t\tshowMenuByLongpress\t是否开启长按图片显示识别小程序码菜单，仅微信小程序有效 （默认 true ）"
     },
     {
       "name": "property",
-      "description": "{String} loading-icon 加载中的图标，或者小图片（默认 photo）"
+      "description": "{String}\t\t\tloadingIcon \t\t加载中的图标，或者小图片 （默认 'photo' ）"
     },
     {
       "name": "property",
-      "description": "{String} error-icon 加载失败的图标，或者小图片（默认 error-circle）"
+      "description": "{String}\t\t\terrorIcon \t\t\t加载失败的图标，或者小图片 （默认 'error-circle' ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} show-loading 是否显示加载中的图标或者自定义的slot（默认 true）"
+      "description": "{Boolean}\t\t\tshowLoading \t\t是否显示加载中的图标或者自定义的slot （默认 true ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} show-error 是否显示加载错误的图标或者自定义的slot（默认 true）"
+      "description": "{Boolean}\t\t\tshowError \t\t\t是否显示加载错误的图标或者自定义的slot （默认 true ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} fade 是否需要淡入效果（默认 true）"
+      "description": "{Boolean}\t\t\tfade \t\t\t\t是否需要淡入效果 （默认 true ）"
     },
     {
       "name": "property",
-      "description": "{String Number} width 传入图片路径时图片的宽度"
+      "description": "{Boolean}\t\t\twebp \t\t\t\t只支持网络资源，只对微信小程序有效 （默认 false ）"
     },
     {
       "name": "property",
-      "description": "{String Number} height 传入图片路径时图片的高度"
+      "description": "{String | Number}\tduration \t\t\t搭配fade参数的过渡时间，单位ms （默认 500 ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} webp 只支持网络资源，只对微信小程序有效（默认 false）"
+      "description": "{String}\t\t\tbgColor \t\t\t背景颜色，用于深色页面加载图片时，为了和背景色融合  (默认 '#f3f4f6' )"
     },
     {
       "name": "property",
-      "description": "{String | Number} duration 搭配fade参数的过渡时间，单位ms（默认 500）"
+      "description": "{Object}\t\t\tcustomStyle  \t\t定义需要用到的外部样式"
     },
     {
       "name": "event",
-      "description": "{Function} click 点击图片时触发"
+      "description": "{Function}\tclick\t点击图片时触发"
     },
     {
       "name": "event",
-      "description": "{Function} error 图片加载失败时触发"
+      "description": "{Function}\terror\t图片加载失败时触发"
     },
     {
       "name": "event",
@@ -93,7 +93,7 @@
     },
     {
       "name": "example",
-      "description": "<u-image width=\"100%\" height=\"300rpx\" :src=\"src\"></u-image>"
+      "description": "<u-image width=\"100%\" height=\"300px\" :src=\"src\"></u-image>"
     }
   ],
   "slots": [
@@ -115,189 +115,161 @@
   "props": [
     {
       "kind": "prop",
-      "description": "图片地址",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "src",
       "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "裁剪模式",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "mode",
       "type": "String",
-      "default": "\"aspectFill\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "宽度，单位任意",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "width",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"100%\"",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "高度，单位任意",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "height",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"auto\"",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "图片形状，circle-圆形，square-方形",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "shape",
       "type": "String",
-      "default": "\"square\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "圆角，单位任意",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "border-radius",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "0",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否懒加载，微信小程序、App、百度小程序、字节跳动小程序",
-      "keywords": [],
-      "visibility": "public",
-      "name": "lazy-load",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "开启长按图片显示识别微信小程序码菜单",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-menu-by-longpress",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "加载中的图标，或者小图片",
-      "keywords": [],
-      "visibility": "public",
-      "name": "loading-icon",
+      "name": "radius",
       "type": "String",
-      "default": "\"photo\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "加载失败的图标，或者小图片",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "error-icon",
+      "name": "lazyLoad",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showMenuByLongpress",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadingIcon",
       "type": "String",
-      "default": "\"error-circle\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示加载中的图标或者自定义的slot",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "show-loading",
-      "type": "Boolean",
-      "default": "true",
+      "name": "errorIcon",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示加载错误的图标或者自定义的slot",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "show-error",
+      "name": "showLoading",
       "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否需要淡入效果",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showError",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "fade",
       "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "只支持网络资源，只对微信小程序有效",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "webp",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "过渡时间，单位ms",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "duration",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "500",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "背景颜色，用于深色页面加载图片时，为了和背景色融合",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "bg-color",
+      "name": "bgColor",
       "type": "String",
-      "default": "\"#f3f4f6\"",
       "required": false,
       "describeModel": false
     }
@@ -347,6 +319,15 @@
       "name": "backgroundStyle",
       "type": "object",
       "initialValue": "{}"
+    },
+    {
+      "kind": "data",
+      "description": "用于fade模式的控制组件显示与否",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "boolean",
+      "initialValue": "false"
     }
   ],
   "computed": [
@@ -360,10 +341,12 @@
         "width",
         "height",
         "shape",
+        "radius",
         "borderRadius",
         "fade",
         "opacity",
-        "durationTime"
+        "durationTime",
+        "customStyle"
       ]
     }
   ],
@@ -393,7 +376,13 @@
       "keywords": [],
       "visibility": "public",
       "name": "load",
-      "arguments": []
+      "arguments": [
+        {
+          "name": "event",
+          "type": "any",
+          "rest": false
+        }
+      ]
     }
   ],
   "methods": [
@@ -437,9 +426,15 @@
       "keywords": [],
       "visibility": "public",
       "name": "onLoadHandler",
-      "params": [],
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
       "syntax": [
-        "onLoadHandler(): void"
+        "onLoadHandler(event: unknow): void"
       ],
       "returns": {
         "type": "void"

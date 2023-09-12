@@ -4,32 +4,30 @@
   "warnings": [],
   "keywords": [
     {
-      "name": "description",
-      "description": "表格组件一般用于展示大量结构化数据的场景（搭配<u-table>使用）"
+      "name": "description"
     },
     {
       "name": "tutorial",
-      "description": "https://www.uviewui.com/components/table.html"
+      "description": "url"
     },
     {
-      "name": "example",
-      "description": "<u-tr></u-tr>"
-    }
-  ],
-  "slots": [
+      "name": "property",
+      "description": "{String}"
+    },
     {
-      "kind": "slot",
-      "keywords": [],
-      "visibility": "public",
-      "name": "default",
-      "props": []
+      "name": "event",
+      "description": "{Function}"
+    },
+    {
+      "name": "example"
     }
   ],
+  "slots": [],
   "props": [],
   "data": [],
   "computed": [],
   "events": [],
   "methods": [],
   "name": "u-tr",
-  "description": "tr 表格行标签"
+  "description": "Tr"
 }

@@ -13,35 +13,71 @@
     },
     {
       "name": "property",
-      "description": "{Boolean} disabled 是否禁用所有radio（默认false）"
+      "description": "{String | Number | Boolean}\tvalue \t\t\t绑定的值"
     },
     {
       "name": "property",
-      "description": "{String Number} size 组件整体的大小，单位rpx（默认40）"
+      "description": "{Boolean}\t\t\t\t\t\tdisabled\t\t是否禁用所有radio（默认 false ）"
     },
     {
       "name": "property",
-      "description": "{String} active-color 选中时的颜色，应用到所有子Radio组件（默认#2979ff）"
+      "description": "{String}\t\t\t\t\t\tshape\t\t\t外观形状，shape-方形，circle-圆形(默认 circle )"
     },
     {
       "name": "property",
-      "description": "{String Number} icon-size 图标大小，单位rpx（默认20）"
+      "description": "{String}\t\t\t\t\t\tactiveColor\t\t选中时的颜色，应用到所有子Radio组件（默认 '#2979ff' ）"
     },
     {
       "name": "property",
-      "description": "{String} shape 外观形状，shape-方形，circle-圆形(默认circle)"
+      "description": "{String}\t\t\t\t\t\tinactiveColor\t未选中的颜色 (默认 '#c8c9cc' )"
     },
     {
       "name": "property",
-      "description": "{Boolean} label-disabled 是否禁止点击文本操作checkbox(默认false)"
+      "description": "{String}\t\t\t\t\t\tname\t\t\t标识符"
     },
     {
       "name": "property",
-      "description": "{String} width 宽度，需带单位"
+      "description": "{String | Number}\t\t\t\tsize\t\t\t组件整体的大小，单位px（默认 18 ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} wrap 是否每个radio都换行（默认false）"
+      "description": "{String}\t\t\t\t\t\tplacement\t\t布局方式，row-横向，column-纵向 （默认 'row' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\t\t\t\tlabel\t\t\t文本"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\t\t\t\tlabelColor\t\tlabel的颜色 （默认 '#303133' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\t\t\t\tlabelSize\t\tlabel的字体大小，px单位 （默认 14 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\t\t\t\tlabelDisabled\t是否禁止点击文本操作checkbox(默认 false )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\t\t\t\ticonColor\t\t图标颜色 （默认 '#ffffff' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\t\t\t\ticonSize\t\t图标的大小，单位px （默认 12 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\t\t\t\tborderBottom\tplacement为row时，是否显示下边框 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\t\t\t\ticonPlacement\t图标与文字的对齐方式 （默认 'left' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\t\t\t\tcustomStyle\t\t组件的样式，对象形式"
     },
     {
       "name": "event",
@@ -64,112 +100,161 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否禁用所有单选框",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "匹配某一个radio组件，如果某个radio的name值等于此值，那么这个radio就被会选中",
-      "keywords": [],
-      "visibility": "public",
-      "name": "value",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": true
-    },
-    {
-      "kind": "prop",
-      "description": "选中状态下的颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "active-color",
-      "type": "String",
-      "default": "\"#2979ff\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "组件的整体大小",
-      "keywords": [],
-      "visibility": "public",
-      "name": "size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "34",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否禁止点击提示语选中复选框",
-      "keywords": [],
-      "visibility": "public",
-      "name": "label-disabled",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "形状，square为方形，circle为原型",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "shape",
       "type": "String",
-      "default": "\"circle\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "图标的大小，单位rpx",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "icon-size",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "20",
+      "name": "activeColor",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "每个checkbox占u-checkbox-group的宽度",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "width",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"auto\"",
+      "name": "inactiveColor",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否每个checkbox都换行",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "wrap",
+      "name": "name",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "size",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placement",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label",
+      "type": "[String]",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelColor",
+      "type": "[String]",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelDisabled",
       "type": "Boolean",
-      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "borderBottom",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconPlacement",
+      "type": "String",
       "required": false,
       "describeModel": false
     }
@@ -185,13 +270,23 @@
       "dependencies": [
         "value",
         "disabled",
+        "inactiveColor",
         "activeColor",
         "size",
         "labelDisabled",
         "shape",
         "iconSize",
-        "width",
-        "wrap"
+        "borderBottom",
+        "placement"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bemClass",
+      "dependencies": [
+        "bem"
       ]
     }
   ],
@@ -204,7 +299,7 @@
       "name": "input",
       "arguments": [
         {
-          "name": "val",
+          "name": "name",
           "type": "any",
           "rest": false
         }
@@ -212,12 +307,13 @@
     },
     {
       "kind": "event",
+      "description": "发出事件",
       "keywords": [],
       "visibility": "public",
       "name": "change",
       "arguments": [
         {
-          "name": "val",
+          "name": "name",
           "type": "any",
           "rest": false
         }
@@ -227,19 +323,19 @@
   "methods": [
     {
       "kind": "method",
-      "description": "该方法有子组件radio调用，当一个radio被选中的时候，给父组件设置value值(props传递的value)",
+      "description": "将其他的radio设置为未选中的状态",
       "keywords": [],
       "visibility": "public",
-      "name": "setValue",
+      "name": "unCheckedOther",
       "params": [
         {
-          "name": "val",
+          "name": "childInstance",
           "type": "unknow",
           "rest": false
         }
       ],
       "syntax": [
-        "setValue(val: unknow): void"
+        "unCheckedOther(childInstance: unknow): void"
       ],
       "returns": {
         "type": "void"

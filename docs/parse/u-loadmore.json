@@ -13,43 +13,75 @@
     },
     {
       "name": "property",
-      "description": "{String} status 组件状态（默认loadmore）"
+      "description": "{String}\t\t\tstatus\t\t\t组件状态（默认 'loadmore' ）"
     },
     {
       "name": "property",
-      "description": "{String} bg-color 组件背景颜色，在页面是非白色时会用到（默认#ffffff）"
+      "description": "{String}\t\t\tbgColor\t\t\t组件背景颜色，在页面是非白色时会用到（默认 'transparent' ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} icon 加载中时是否显示图标（默认true）"
+      "description": "{Boolean}\t\t\ticon\t\t\t加载中时是否显示图标（默认 true ）"
     },
     {
       "name": "property",
-      "description": "{String} icon-type 加载中时的图标类型（默认circle）"
+      "description": "{String | Number}\tfontSize\t\t字体大小（默认 14 ）"
     },
     {
       "name": "property",
-      "description": "{String} icon-color icon-type为circle时有效，加载中的动画图标的颜色（默认#b7b7b7）"
+      "description": "{String | Number}\ticonSize\t\t图标大小（默认 17 ）"
     },
     {
       "name": "property",
-      "description": "{Boolean} is-dot status为nomore时，内容显示为一个\"●\"（默认false）"
+      "description": "{String}\t\t\tcolor\t\t\t字体颜色（默认 '#606266' ）"
     },
     {
       "name": "property",
-      "description": "{String} color 字体颜色（默认#606266）"
+      "description": "{String}\t\t\tloadingIcon\t\t加载图标（默认 'circle' ）"
     },
     {
       "name": "property",
-      "description": "{String Number} margin-top 到上一个相邻元素的距离"
+      "description": "{String}\t\t\tloadmoreText\t加载前的提示语（默认 '加载更多' ）"
     },
     {
       "name": "property",
-      "description": "{String Number} margin-bottom 到下一个相邻元素的距离"
+      "description": "{String}\t\t\tloadingText\t\t加载中提示语（默认 '正在加载...' ）"
     },
     {
       "name": "property",
-      "description": "{Object} load-text 自定义显示的文字，见上方说明示例"
+      "description": "{String}\t\t\tnomoreText\t\t没有更多的提示语（默认 '没有更多了' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tisDot\t\t\t到上一个相邻元素的距离 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ticonColor\t\t加载中图标的颜色 （默认 '#b7b7b7' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tlineColor\t\t线条颜色（默认 #E6E8EB ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tmarginTop\t\t上边距 （默认 10 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tmarginBottom\t下边距 （默认 10 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\theight\t\t\t高度，单位px （默认 'auto' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tline\t\t\t是否显示左边分割线  （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tdashed\t\t// 是否虚线，true-虚线，false-实线  （默认 false ）"
     },
     {
       "name": "event",
@@ -64,142 +96,181 @@
   "props": [
     {
       "kind": "prop",
-      "description": "组件背景色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "bg-color",
-      "type": "String",
-      "default": "\"transparent\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示加载中的图标",
-      "keywords": [],
-      "visibility": "public",
-      "name": "icon",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "字体大小",
-      "keywords": [],
-      "visibility": "public",
-      "name": "font-size",
-      "type": "String",
-      "default": "\"28\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "字体颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "color",
-      "type": "String",
-      "default": "\"#606266\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "组件状态，loadmore-加载前的状态，loading-加载中的状态，nomore-没有更多的状态",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "status",
       "type": "String",
-      "default": "\"loadmore\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "加载中状态的图标，flower-花朵状图标，circle-圆圈状图标",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "icon-type",
+      "name": "bgColor",
       "type": "String",
-      "default": "\"circle\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "显示的文字",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "load-text",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\tloadmore: '加载更多',\r\n\t\t\t\t\t\tloading: '正在加载...',\r\n\t\t\t\t\t\tnomore: '没有更多了'\r\n\t\t\t\t\t}\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "在“没有更多”状态下，是否显示粗点",
-      "keywords": [],
-      "visibility": "public",
-      "name": "is-dot",
+      "name": "icon",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "加载中显示圆圈动画时，动画的颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "icon-color",
+      "name": "fontSize",
       "type": "String",
-      "default": "\"#b7b7b7\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "上边距",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "margin-top",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "0",
+      "name": "iconSize",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "下边距",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "margin-bottom",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "0",
+      "name": "color",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "高度，单位rpx",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadingIcon",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadmoreText",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadingText",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nomoreText",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isDot",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "marginTop",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "marginBottom",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "height",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"auto\"",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "line",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lineColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dashed",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     }
@@ -230,33 +301,17 @@
     },
     {
       "kind": "computed",
-      "description": "加载中圆圈动画的样式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "cricleStyle",
-      "dependencies": [
-        "circleColor"
-      ]
-    },
-    {
-      "kind": "computed",
-      "description": "动画由base64图片生成，暂不支持修改",
-      "keywords": [],
-      "visibility": "public",
-      "name": "flowerStyle",
-      "dependencies": []
-    },
-    {
-      "kind": "computed",
       "description": "显示的提示文字",
       "keywords": [],
       "visibility": "public",
       "name": "showText",
       "dependencies": [
         "status",
-        "loadText",
+        "loadmoreText",
+        "loadingText",
         "isDot",
-        "dotText"
+        "dotText",
+        "nomoreText"
       ]
     }
   ],

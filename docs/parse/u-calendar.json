@@ -5,111 +5,131 @@
   "keywords": [
     {
       "name": "description",
-      "description": "此组件用于单个选择日期，范围选择日期等，日历被包裹在底部弹起的容器中。"
+      "description": "此组件用于单个选择日期，范围选择日期等，日历被包裹在底部弹起的容器中."
     },
     {
       "name": "tutorial",
-      "description": "http://uviewui.com/components/calendar.html"
+      "description": "https://www.uviewui.com/components/calendar.html"
     },
     {
       "name": "property",
-      "description": "{String} mode 选择日期的模式，date-为单个日期，range-为选择日期范围"
+      "description": "{String}\t\t\t\ttitle\t\t\t\t标题内容 (默认 日期选择 )"
     },
     {
       "name": "property",
-      "description": "{Boolean} v-model 布尔值变量，用于控制日历的弹出与收起"
+      "description": "{Boolean}\t\t\t\tshowTitle\t\t\t是否显示标题  (默认 true )"
     },
     {
       "name": "property",
-      "description": "{Boolean} safe-area-inset-bottom 是否开启底部安全区适配(默认false)"
+      "description": "{Boolean}\t\t\t\tshowSubtitle\t\t是否显示副标题\t(默认 true )"
     },
     {
       "name": "property",
-      "description": "{Boolean} change-year 是否显示顶部的切换年份方向的按钮(默认true)"
+      "description": "{String}\t\t\t\tmode\t\t\t\t日期类型选择  single-选择单个日期，multiple-可以选择多个日期，range-选择日期范围 （ 默认 'single' )"
     },
     {
       "name": "property",
-      "description": "{Boolean} change-month 是否显示顶部的切换月份方向的按钮(默认true)"
+      "description": "{String}\t\t\t\tstartText\t\t\tmode=range时，第一个日期底部的提示文字  (默认 '开始' )"
     },
     {
       "name": "property",
-      "description": "{String Number} max-year 可切换的最大年份(默认2050)"
+      "description": "{String}\t\t\t\tendText\t\t\t\tmode=range时，最后一个日期底部的提示文字 (默认 '结束' )"
     },
     {
       "name": "property",
-      "description": "{String Number} min-year 可切换的最小年份(默认1950)"
+      "description": "{Array}\t\t\t\tcustomList\t\t\t自定义列表"
     },
     {
       "name": "property",
-      "description": "{String Number} min-date 最小可选日期(默认1950-01-01)"
+      "description": "{String}\t\t\t\tcolor\t\t\t\t主题色，对底部按钮和选中日期有效  (默认 ‘#3c9cff' )"
     },
     {
       "name": "property",
-      "description": "{String Number} max-date 最大可选日期(默认当前日期)"
+      "description": "{String | Number}\t\tminDate\t\t\t\t最小的可选日期\t (默认 0 )"
     },
     {
       "name": "property",
-      "description": "{String Number} 弹窗顶部左右两边的圆角值，单位rpx(默认20)"
+      "description": "{String | Number}\t\tmaxDate\t\t\t\t最大可选日期  (默认 0 )"
     },
     {
       "name": "property",
-      "description": "{Boolean} mask-close-able 是否允许通过点击遮罩关闭日历(默认true)"
+      "description": "{Array | String| Date}\tdefaultDate\t\t\t默认选中的日期，mode为multiple或range是必须为数组格式"
     },
     {
       "name": "property",
-      "description": "{String} month-arrow-color 月份切换按钮箭头颜色(默认#606266)"
+      "description": "{String | Number}\t\tmaxCount\t\t\tmode=multiple时，最多可选多少个日期  (默认 \tNumber.MAX_SAFE_INTEGER  )"
     },
     {
       "name": "property",
-      "description": "{String} year-arrow-color 年份切换按钮箭头颜色(默认#909399)"
+      "description": "{String | Number}\t\trowHeight\t\t\t日期行高 (默认 56 )"
     },
     {
       "name": "property",
-      "description": "{String} color 日期字体的默认颜色(默认#303133)"
+      "description": "{Function}\t\t\t\tformatter\t\t\t日期格式化函数"
     },
     {
       "name": "property",
-      "description": "{String} active-bg-color 起始/结束日期按钮的背景色(默认#2979ff)"
+      "description": "{Boolean}\t\t\t\tshowLunar\t\t\t是否显示农历  (默认 false )"
     },
     {
       "name": "property",
-      "description": "{String Number} z-index 弹出时的z-index值(默认10075)"
+      "description": "{Boolean}\t\t\t\tshowMark\t\t\t是否显示月份背景色 (默认 true )"
     },
     {
       "name": "property",
-      "description": "{String} active-color 起始/结束日期按钮的字体颜色(默认#ffffff)"
+      "description": "{String}\t\t\t\tconfirmText\t\t\t确定按钮的文字 (默认 '确定' )"
     },
     {
       "name": "property",
-      "description": "{String} range-bg-color 起始/结束日期之间的区域的背景颜色(默认rgba(41,121,255,0.13))"
+      "description": "{String}\t\t\t\tconfirmDisabledText\t确认按钮处于禁用状态时的文字 (默认 '确定' )"
     },
     {
       "name": "property",
-      "description": "{String} range-color 选择范围内字体颜色(默认#2979ff)"
+      "description": "{Boolean}\t\t\t\tshow\t\t\t\t是否显示日历弹窗 (默认 false )"
     },
     {
       "name": "property",
-      "description": "{String} start-text 起始日期底部的提示文字(默认 '开始')"
+      "description": "{Boolean}\t\t\t\tcloseOnClickOverlay\t是否允许点击遮罩关闭日历 (默认 false )"
     },
     {
       "name": "property",
-      "description": "{String} end-text 结束日期底部的提示文字(默认 '结束')"
+      "description": "{Boolean}\t\t\t\treadonly\t        是否为只读状态，只读状态下禁止选择日期 (默认 false )"
     },
     {
       "name": "property",
-      "description": "{String} btn-type 底部确定按钮的主题(默认 'primary')"
+      "description": "{String | Number}\t\tmaxRange\t        日期区间最多可选天数，默认无限制，mode = range时有效"
     },
     {
       "name": "property",
-      "description": "{String} toolTip 顶部提示文字，如设置名为tooltip的slot，此参数将失效(默认 '选择日期')"
+      "description": "{String}\t\t\t\trangePrompt\t        范围选择超过最多可选天数时的提示文案，mode = range时有效"
     },
     {
       "name": "property",
-      "description": "{Boolean} closeable 是否显示右上角的关闭图标(默认true)"
+      "description": "{Boolean}\t\t\t\tshowRangePrompt\t    范围选择超过最多可选天数时，是否展示提示文案，mode = range时有效 (默认 true )"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\t\tallowSameDay\t    是否允许日期范围的起止时间为同一天，mode = range时有效 (默认 false )"
+    },
+    {
+      "name": "property",
+      "description": "{Number|String}\t    round\t\t\t\t圆角值，默认无圆角  (默认 0 )"
+    },
+    {
+      "name": "property",
+      "description": "{Number|String}\t    monthNum\t\t\t最多展示的月份数量  (默认 3 )"
+    },
+    {
+      "name": "event",
+      "description": "{Function()} confirm \t\t点击确定按钮时触发\t\t选择日期相关的返回参数"
+    },
+    {
+      "name": "event",
+      "description": "{Function()} close \t\t日历关闭时触发\t\t\t可定义页面关闭时的回调事件"
     },
     {
       "name": "example",
-      "description": "<u-calendar v-model=\"show\" :mode=\"mode\"></u-calendar>"
+      "description": "<u-calendar  :defaultDate=\"defaultDateMultiple\" :show=\"show\" mode=\"multiple\" @confirm=\"confirm\">\n</u-calendar>"
     }
   ],
   "slots": [
@@ -117,311 +137,288 @@
       "kind": "slot",
       "keywords": [],
       "visibility": "public",
-      "name": "tooltip",
+      "name": "footer",
       "props": []
     }
   ],
   "props": [
     {
       "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "safe-area-inset-bottom",
-      "type": "Boolean",
-      "default": "false",
+      "name": "title",
+      "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否允许通过点击遮罩关闭Picker",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "mask-close-able",
+      "name": "showTitle",
       "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "通过双向绑定控制组件的弹出与收起",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "showSubtitle",
       "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": true
-    },
-    {
-      "kind": "prop",
-      "description": "弹出的z-index值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "z-index",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "0",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否允许切换年份",
-      "keywords": [],
-      "visibility": "public",
-      "name": "change-year",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否允许切换月份",
-      "keywords": [],
-      "visibility": "public",
-      "name": "change-month",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "date-单个日期选择，range-开始日期+结束日期选择",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "mode",
       "type": "String",
-      "default": "\"date\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "可切换的最大年份",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "max-year",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "2050",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "可切换的最小年份",
-      "keywords": [],
-      "visibility": "public",
-      "name": "min-year",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "1950",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "最小可选日期(不在范围内日期禁用不可选)",
-      "keywords": [],
-      "visibility": "public",
-      "name": "min-date",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"1950-01-01\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "最大可选日期\n默认最大值为今天，之后的日期不可选\n2030-12-31",
-      "keywords": [],
-      "visibility": "public",
-      "name": "max-date",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "弹窗顶部左右两边的圆角值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "border-radius",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "20",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "月份切换按钮箭头颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "month-arrow-color",
+      "name": "startText",
       "type": "String",
-      "default": "\"#606266\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "年份切换按钮箭头颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "year-arrow-color",
+      "name": "endText",
       "type": "String",
-      "default": "\"#909399\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "默认日期字体颜色",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "customList",
+      "type": "Array",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "name": "color",
       "type": "String",
-      "default": "\"#303133\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "选中|起始结束日期背景色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "active-bg-color",
+      "name": "minDate",
       "type": "String",
-      "default": "\"#2979ff\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "选中|起始结束日期字体颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "active-color",
+      "name": "maxDate",
       "type": "String",
-      "default": "\"#ffffff\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "范围内日期背景色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "range-bg-color",
+      "name": "defaultDate",
       "type": "String",
-      "default": "\"rgba(41,121,255,0.13)\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "范围内日期字体颜色",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "range-color",
+      "name": "maxCount",
       "type": "String",
-      "default": "\"#2979ff\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "mode=range时生效，起始日期自定义文案",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "start-text",
+      "name": "rowHeight",
       "type": "String",
-      "default": "\"开始\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "mode=range时生效，结束日期自定义文案",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "end-text",
+      "name": "formatter",
       "type": "String",
-      "default": "\"结束\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "按钮样式类型",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "btn-type",
-      "type": "String",
-      "default": "\"primary\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "当前选中日期带选中效果",
-      "keywords": [],
-      "visibility": "public",
-      "name": "is-active-current",
+      "name": "showLunar",
       "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "切换年月是否触发事件 mode=date时生效",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "is-change",
+      "name": "showMark",
       "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示右上角的关闭图标",
+      "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "closeable",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "顶部的提示文字",
-      "keywords": [],
-      "visibility": "public",
-      "name": "tool-tip",
+      "name": "confirmText",
       "type": "String",
-      "default": "\"选择日期\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirmDisabledText",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeOnClickOverlay",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "readonly",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showConfirm",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maxRange",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rangePrompt",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showRangePrompt",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "allowSameDay",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "round",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "monthNum",
+      "type": "String",
       "required": false,
       "describeModel": false
     }
@@ -429,35 +426,37 @@
   "data": [
     {
       "kind": "data",
-      "description": "星期几,值为1-7",
+      "description": "需要显示的月份的数组",
       "keywords": [],
       "visibility": "public",
-      "name": "weekday",
-      "type": "number",
-      "initialValue": "1"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "weekdayArr",
+      "name": "months",
       "type": "array",
       "initialValue": "[]"
     },
     {
       "kind": "data",
-      "description": "当前月有多少天",
+      "description": "在月份滚动区域中，当前视图中月份的index索引",
       "keywords": [],
       "visibility": "public",
-      "name": "days",
+      "name": "monthIndex",
       "type": "number",
       "initialValue": "0"
     },
     {
       "kind": "data",
+      "description": "月份滚动区域的高度",
       "keywords": [],
       "visibility": "public",
-      "name": "daysArr",
+      "name": "listHeight",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "description": "month组件中选择的日期数组",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selected",
       "type": "array",
       "initialValue": "[]"
     },
@@ -465,7 +464,7 @@
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "showTitle",
+      "name": "scrollIntoView",
       "type": "string",
       "initialValue": "\"\""
     },
@@ -473,148 +472,28 @@
       "kind": "data",
       "keywords": [],
       "visibility": "public",
-      "name": "year",
-      "type": "number",
-      "initialValue": "2020"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "month",
+      "name": "scrollTop",
       "type": "number",
       "initialValue": "0"
     },
     {
       "kind": "data",
+      "description": "过滤处理方法",
       "keywords": [],
       "visibility": "public",
-      "name": "day",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "startYear",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "startMonth",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "startDay",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "endYear",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "endMonth",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "endDay",
-      "type": "number",
-      "initialValue": "0"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "today",
-      "type": "string",
-      "initialValue": "\"\""
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "activeDate",
-      "type": "string",
-      "initialValue": "\"\""
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "startDate",
-      "type": "string",
-      "initialValue": "\"\""
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "endDate",
-      "type": "string",
-      "initialValue": "\"\""
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "isStart",
-      "type": "boolean",
-      "initialValue": "true"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "min",
-      "type": "any",
-      "initialValue": "null"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "max",
-      "type": "any",
-      "initialValue": "null"
-    },
-    {
-      "kind": "data",
-      "keywords": [],
-      "visibility": "public",
-      "name": "weekDayZh",
-      "type": "array",
-      "initialValue": "['日', '一', '二', '三', '四', '五', '六']"
+      "name": "innerFormatter",
+      "type": "ArrowFunctionExpression",
+      "initialValue": "(value) => value"
     }
   ],
   "computed": [
     {
       "kind": "computed",
+      "description": "由于maxDate和minDate可以为字符串(2021-10-10)，或者数值(时间戳)，但是dayjs如果接受字符串形式的时间戳会有问题，这里进行处理",
       "keywords": [],
       "visibility": "public",
-      "name": "dataChange",
+      "name": "innerMaxDate",
       "dependencies": [
-        "mode",
-        "minDate",
         "maxDate"
       ]
     },
@@ -622,24 +501,54 @@
       "kind": "computed",
       "keywords": [],
       "visibility": "public",
-      "name": "uZIndex",
+      "name": "innerMinDate",
       "dependencies": [
-        "zIndex",
-        "$u"
+        "minDate"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "多个条件的变化，会引起选中日期的变化，这里统一管理监听",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selectedChange",
+      "dependencies": [
+        "innerMinDate",
+        "innerMaxDate",
+        "defaultDate"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "subtitle",
+      "dependencies": [
+        "months",
+        "monthIndex"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "buttonDisabled",
+      "dependencies": [
+        "mode",
+        "selected"
       ]
     }
   ],
   "events": [
     {
       "kind": "event",
-      "description": "修改通过v-model绑定的父组件变量的值为false，从而隐藏日历弹窗",
       "keywords": [],
       "visibility": "public",
-      "name": "input",
+      "name": "confirm",
       "arguments": [
         {
-          "name": "false",
-          "type": "boolean",
+          "name": "selected",
+          "type": "any",
           "rest": false
         }
       ]
@@ -648,39 +557,49 @@
       "kind": "event",
       "keywords": [],
       "visibility": "public",
-      "name": "change",
-      "arguments": [
-        {
-          "name": "{ year: year, month: month, day: day, days: days, result: result, week: weekText, isToday: isToday, // switch: show //是否是切换年月操作 }",
-          "type": "object",
-          "rest": false
-        }
-      ]
+      "name": "close",
+      "arguments": []
     }
   ],
   "methods": [
     {
       "kind": "method",
+      "description": "在微信小程序中，不支持将函数当做props参数，故只能通过ref形式调用",
       "keywords": [],
       "visibility": "public",
-      "name": "getColor",
+      "name": "setFormatter",
       "params": [
         {
-          "name": "index",
-          "type": "unknow",
-          "rest": false
-        },
-        {
-          "name": "type",
+          "name": "e",
           "type": "unknow",
           "rest": false
         }
       ],
       "syntax": [
-        "getColor(index: unknow, type: unknow): unknow"
+        "setFormatter(e: unknow): void"
       ],
       "returns": {
-        "type": "unknow"
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "month组件内部选择日期后，通过事件通知给父组件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "monthSelected",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "monthSelected(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
       }
     },
     {
@@ -691,236 +610,6 @@
       "params": [],
       "syntax": [
         "init(): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "description": "日期处理",
-      "keywords": [],
-      "visibility": "public",
-      "name": "initDate",
-      "params": [
-        {
-          "name": "date",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "initDate(date: unknow): unknow"
-      ],
-      "returns": {
-        "type": "unknow"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "openDisAbled",
-      "params": [
-        {
-          "name": "year",
-          "type": "unknow",
-          "rest": false
-        },
-        {
-          "name": "month",
-          "type": "unknow",
-          "rest": false
-        },
-        {
-          "name": "day",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "openDisAbled(year: unknow, month: unknow, day: unknow): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "generateArray",
-      "params": [
-        {
-          "name": "start",
-          "type": "unknow",
-          "rest": false
-        },
-        {
-          "name": "end",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "generateArray(start: unknow, end: unknow): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "formatNum",
-      "params": [
-        {
-          "name": "num",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "formatNum(num: unknow): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "description": "一个月有多少天",
-      "keywords": [],
-      "visibility": "public",
-      "name": "getMonthDay",
-      "params": [
-        {
-          "name": "year",
-          "type": "unknow",
-          "rest": false
-        },
-        {
-          "name": "month",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "getMonthDay(year: unknow, month: unknow): unknow"
-      ],
-      "returns": {
-        "type": "unknow"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "getWeekday",
-      "params": [
-        {
-          "name": "year",
-          "type": "unknow",
-          "rest": false
-        },
-        {
-          "name": "month",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "getWeekday(year: unknow, month: unknow): unknow"
-      ],
-      "returns": {
-        "type": "unknow"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "checkRange",
-      "params": [
-        {
-          "name": "year",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "checkRange(year: unknow): unknow"
-      ],
-      "returns": {
-        "type": "unknow"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "changeMonthHandler",
-      "params": [
-        {
-          "name": "isAdd",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "changeMonthHandler(isAdd: unknow): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "changeYearHandler",
-      "params": [
-        {
-          "name": "isAdd",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "changeYearHandler(isAdd: unknow): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "changeData",
-      "params": [],
-      "syntax": [
-        "changeData(): void"
-      ],
-      "returns": {
-        "type": "void"
-      }
-    },
-    {
-      "kind": "method",
-      "keywords": [],
-      "visibility": "public",
-      "name": "dateClick",
-      "params": [
-        {
-          "name": "day",
-          "type": "unknow",
-          "rest": false
-        }
-      ],
-      "syntax": [
-        "dateClick(day: unknow): void"
       ],
       "returns": {
         "type": "void"
@@ -941,18 +630,38 @@
     },
     {
       "kind": "method",
+      "description": "点击确定按钮",
       "keywords": [],
       "visibility": "public",
-      "name": "getWeekText",
+      "name": "confirm",
+      "params": [],
+      "syntax": [
+        "confirm(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获得两个日期之间的月份数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getMonths",
       "params": [
         {
-          "name": "date",
+          "name": "minDate",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "maxDate",
           "type": "unknow",
           "rest": false
         }
       ],
       "syntax": [
-        "getWeekText(date: unknow): unknow"
+        "getMonths(minDate: unknow, maxDate: unknow): unknow"
       ],
       "returns": {
         "type": "unknow"
@@ -960,18 +669,74 @@
     },
     {
       "kind": "method",
+      "description": "设置月份数据",
       "keywords": [],
       "visibility": "public",
-      "name": "btnFix",
+      "name": "setMonth",
+      "params": [],
+      "syntax": [
+        "setMonth(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "滚动到默认设置的月份",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scrollIntoDefaultMonth",
       "params": [
         {
-          "name": "show",
+          "name": "selected",
           "type": "unknow",
           "rest": false
         }
       ],
       "syntax": [
-        "btnFix(show: unknow): void"
+        "scrollIntoDefaultMonth(selected: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "scroll-view滚动监听",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onScroll",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onScroll(event: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "更新月份的top值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateMonthTop",
+      "params": [
+        {
+          "name": "topArr",
+          "type": "array",
+          "defaultValue": "[]",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "updateMonthTop(topArr: array = []): void"
       ],
       "returns": {
         "type": "void"
@@ -979,5 +744,5 @@
     }
   ],
   "name": "u-calendar",
-  "description": "calendar 日历"
+  "description": "Calendar 日历"
 }

@@ -1,0 +1,183 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description"
+    },
+    {
+      "name": "tutorial"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tshow\t\t\t是否展示组件 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tmode\t\t\t使用的动画模式 （默认 'fade' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tduration\t\t动画的执行时间，单位ms （默认 '300' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttimingFunction\t使用的动画过渡函数 （默认 'ease-out' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t\t自定义样式"
+    },
+    {
+      "name": "event",
+      "description": "{Function} before-enter\t进入前触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} enter\t\t\t进入中触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} after-enter\t进入后触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} before-leave\t离开前触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} leave\t\t\t离开中触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} after-leave\t离开后触发"
+    },
+    {
+      "name": "example"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "duration",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timingFunction",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inited",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "是否显示/隐藏组件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "viewStyle",
+      "type": "object",
+      "initialValue": "{}"
+    },
+    {
+      "kind": "data",
+      "description": "组件内部的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "status",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "description": "记录组件动画的状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "transitionEnded",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "组件是否结束的标记",
+      "keywords": [],
+      "visibility": "public",
+      "name": "display",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "组件是否展示",
+      "keywords": [],
+      "visibility": "public",
+      "name": "classes",
+      "type": "string",
+      "initialValue": "\"\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mergeStyle",
+      "dependencies": [
+        "duration",
+        "display",
+        "timingFunction"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [],
+  "name": "u-transition",
+  "description": "transition  动画组件"
+}
