@@ -1,0 +1,232 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件无需任何配置，引入即可，内部自动处理所有功能和事件。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/noNetwork.html"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttips \t没有网络时的提示语 （默认：'哎呀，网络信号丢失' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tzIndex\t组件的z-index值"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\timage\t无网络的图片提示，可用的src地址或base64图片"
+    },
+    {
+      "name": "event",
+      "description": "{Function}\t\t\tretry\t用户点击页面的\"重试\"按钮时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-no-network></u-no-network>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tips",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "zIndex",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "image",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isConnected",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "kind": "data",
+      "description": "是否有网络连接",
+      "keywords": [],
+      "visibility": "public",
+      "name": "networkType",
+      "type": "string",
+      "initialValue": "\"none\""
+    }
+  ],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "retry",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "networkType === 'none' ? 'disconnected' : 'connected'",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "retry",
+      "params": [],
+      "syntax": [
+        "retry(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "发出事件给父组件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "emitEvent",
+      "params": [
+        {
+          "name": "networkType",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "emitEvent(networkType: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "openSettings",
+      "params": [],
+      "syntax": [
+        "async openSettings(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "openAppSettings",
+      "params": [],
+      "syntax": [
+        "openAppSettings(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "openSystemSettings",
+      "params": [],
+      "syntax": [
+        "openSystemSettings(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "network",
+      "params": [],
+      "syntax": [
+        "network(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "gotoAppSetting",
+      "params": [],
+      "syntax": [
+        "gotoAppSetting(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "gotoiOSSetting",
+      "params": [],
+      "syntax": [
+        "gotoiOSSetting(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "gotoAndroidSetting",
+      "params": [],
+      "syntax": [
+        "gotoAndroidSetting(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-no-network",
+  "description": "noNetwork 无网络提示"
+}

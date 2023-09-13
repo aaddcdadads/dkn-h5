@@ -1,0 +1,79 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "cell单元格一般用于一组列表的情况，比如个人中心页，设置页等。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://uviewui.com/components/cell.html"
+    },
+    {
+      "name": "property",
+      "description": "{String}\ttitle\t\t分组标题"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\tborder\t\t是否显示外边框 (默认 true )"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\tcustomStyle\t定义需要用到的外部样式"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click \t点击cell列表时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-cell-group title=\"设置喜好\">"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "name": "u-cell-group",
+  "description": "cellGroup  单元格"
+}

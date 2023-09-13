@@ -1,0 +1,367 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "基于字体的图标集，包含了大多数常见场景的图标。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/icon.html"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tname\t\t\t图标名称，见示例图标集"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tcolor\t\t\t图标颜色,可接受主题色 （默认 color['u-content-color'] ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tsize\t\t\t图标字体大小，单位px （默认 '16px' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tbold\t\t\t是否显示粗体 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tindex\t\t\t点击图标的时候传递事件出去的index（用于区分点击了哪一个）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\thoverClass\t\t图标按下去的样式类，用法同uni的view组件的hoverClass参数，详情见官网"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tcustomPrefix\t自定义扩展前缀，方便用户扩展自己的图标库 （默认 'uicon' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tlabel\t\t\t图标右侧的label文字"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tlabelPos\t\tlabel相对于图标的位置，只能right或bottom （默认 'right' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tlabelSize\t\tlabel字体大小，单位px （默认 '15px' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tlabelColor\t\t图标右侧的label文字颜色 （ 默认 color['u-content-color'] ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tspace\t\t\tlabel与图标的距离，单位px （默认 '3px' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\timgMode\t\t\t图片的mode"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\twidth\t\t\t显示图片小图标时的宽度"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\theight\t\t\t显示图片小图标时的高度"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\ttop\t\t\t\t图标在垂直方向上的定位 用于解决某些情况下，让图标垂直居中的用途  （默认 0 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tstop\t\t\t是否阻止事件传播 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t\ticon的样式，对象形式"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 点击图标时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} touchstart 事件触摸时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-icon name=\"photo\" color=\"#2979ff\" size=\"28\"></u-icon>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "name",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "size",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bold",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "index",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hoverClass",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "customPrefix",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelPos",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "space",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "imgMode",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "top",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "stop",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uClasses",
+      "dependencies": [
+        "customPrefix",
+        "name",
+        "color"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconStyle",
+      "dependencies": [
+        "size",
+        "bold",
+        "top",
+        "color"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "判断传入的name属性，是否图片路径，只要带有\"/\"均认为是图片形式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isImg",
+      "dependencies": [
+        "name"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "imgStyle",
+      "dependencies": [
+        "width",
+        "size",
+        "height"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "通过图标名，查找对应的图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "dependencies": [
+        "name"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "clickHandler(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-icon",
+  "description": "icon 图标"
+}

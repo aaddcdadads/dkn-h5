@@ -1,0 +1,207 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "desc",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "desc",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "index",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "childLength",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showLine",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "size",
+      "type": "object",
+      "initialValue": "{\"height\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"},\"width\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"}}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "parentData",
+      "type": "object",
+      "initialValue": "{\"direction\":{\"type\":\"string\",\"value\":\"row\",\"raw\":\"\\\"row\\\"\"},\"current\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"},\"activeColor\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"inactiveColor\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"activeIcon\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"inactiveIcon\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"dot\":{\"type\":\"boolean\",\"value\":false,\"raw\":\"false\"}}"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lineStyle",
+      "dependencies": [
+        "parentData",
+        "size",
+        "parent",
+        "index"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "statusClass",
+      "dependencies": [
+        "parentData"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "statusColor",
+      "dependencies": [
+        "statusClass",
+        "parentData"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentStyle",
+      "dependencies": [
+        "parentData"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateParentData",
+      "params": [],
+      "syntax": [
+        "updateParentData(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "父组件数据发生变化",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateFromParent",
+      "params": [],
+      "syntax": [
+        "updateFromParent(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取组件的尺寸，用于设置横线的位置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getStepsItemRect",
+      "params": [],
+      "syntax": [
+        "getStepsItemRect(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-steps-item",
+  "description": "#endif"
+}

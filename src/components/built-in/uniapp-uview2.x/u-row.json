@@ -1,0 +1,158 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "通过基础的 12 分栏，迅速简便地创建布局"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/layout.html"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tgutter\t\t栅格间隔，左右各为此值的一半，单位px  (默认 0 )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tjustify\t\t水平排列方式(微信小程序暂不支持) 可选值为`start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`)  (默认 'start' )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\talign\t\t垂直排列方式 (默认 'center' )"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t定义需要用到的外部样式"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click row被点击"
+    },
+    {
+      "name": "example",
+      "description": "<u-row justify=\"space-between\" customStyle=\"margin-bottom: 10px\"></u-row>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "gutter",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "justify",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "align",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uJustify",
+      "dependencies": [
+        "justify"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uAlignItem",
+      "dependencies": [
+        "align"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rowStyle",
+      "dependencies": [
+        "uAlignItem",
+        "uJustify",
+        "gutter",
+        "customStyle"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "clickHandler(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getComponentWidth",
+      "params": [],
+      "syntax": [
+        "async getComponentWidth(): Promise<unknow>"
+      ],
+      "returns": {
+        "type": "Promise<unknow>"
+      }
+    }
+  ],
+  "name": "u-row",
+  "description": "Row 栅格系统中的行"
+}

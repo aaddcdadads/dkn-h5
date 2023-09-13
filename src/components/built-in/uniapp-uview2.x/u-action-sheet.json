@@ -1,0 +1,315 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "本组件用于从底部弹出一个操作菜单，供用户选择并返回结果。本组件功能类似于uni的uni.showActionSheetAPI，配置更加灵活，所有平台都表现一致。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/actionSheet.html"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tshow\t\t\t\t操作菜单是否展示 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttitle\t\t\t\t操作菜单标题"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tdescription\t\t\t选项上方的描述信息"
+    },
+    {
+      "name": "property",
+      "description": "{Array<Object>}\tactions\t\t\t\t按钮的文字数组，见官方文档示例"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tcancelText\t\t\t取消按钮的提示文字,不为空时显示按钮"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tcloseOnClickAction\t点击某个菜单项时是否关闭弹窗 （默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tsafeAreaInsetBottom\t处理底部安全区 （默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\topenType\t\t\t小程序的打开方式 (contact | launchApp | getUserInfo | openSetting ｜getPhoneNumber ｜error )"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tcloseOnClickOverlay\t点击遮罩是否允许关闭  (默认 true )"
+    },
+    {
+      "name": "property",
+      "description": "{Number|String}\tround\t\t\t\t圆角值，默认无圆角  (默认 0 )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tlang\t\t\t\t指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tsessionFrom\t\t\t会话来源，openType=\"contact\"时有效"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tsendMessageTitle\t会话内消息卡片标题，openType=\"contact\"时有效"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tsendMessagePath\t\t会话内消息卡片点击跳转小程序路径，openType=\"contact\"时有效"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tsendMessageImg\t\t会话内消息卡片图片，openType=\"contact\"时有效"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tshowMessageCard\t\t是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示\"可能要发送的小程序\"提示，用户点击后可以快速发送小程序消息，openType=\"contact\"时有效 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tappParameter\t\t打开 APP 时，向 APP 传递的参数，openType=launchApp 时有效"
+    },
+    {
+      "name": "event",
+      "description": "{Function} select\t\t\t点击ActionSheet列表项时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} close\t\t\t点击取消按钮时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} getuserinfo\t用户点击该按钮时，会返回获取到的用户信息，回调的 detail 数据与 wx.getUserInfo 返回的一致，openType=\"getUserInfo\"时有效"
+    },
+    {
+      "name": "event",
+      "description": "{Function} contact\t\t客服消息回调，openType=\"contact\"时有效"
+    },
+    {
+      "name": "event",
+      "description": "{Function} getphonenumber\t获取用户手机号回调，openType=\"getPhoneNumber\"时有效"
+    },
+    {
+      "name": "event",
+      "description": "{Function} error\t\t\t当使用开放能力时，发生错误的回调，openType=\"error\"时有效"
+    },
+    {
+      "name": "event",
+      "description": "{Function} launchapp\t\t打开 APP 成功的回调，openType=\"launchApp\"时有效"
+    },
+    {
+      "name": "event",
+      "description": "{Function} opensetting\t在打开授权设置页后回调，openType=\"openSetting\"时有效"
+    },
+    {
+      "name": "example",
+      "description": "<u-action-sheet :actions=\"list\" :title=\"title\" :show=\"show\"></u-action-sheet>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "description",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "actions",
+      "type": "Array",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancelText",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeOnClickAction",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "safeAreaInsetBottom",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "openType",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeOnClickOverlay",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "round",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "操作项目的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemStyle",
+      "dependencies": [
+        "actions"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "select",
+      "arguments": [
+        {
+          "name": "item",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeHandler",
+      "params": [],
+      "syntax": [
+        "closeHandler(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击取消按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel",
+      "params": [],
+      "syntax": [
+        "cancel(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selectHandler",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "selectHandler(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-action-sheet",
+  "description": "ActionSheet 操作菜单"
+}

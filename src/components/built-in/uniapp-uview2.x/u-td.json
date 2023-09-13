@@ -1,0 +1,33 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description"
+    },
+    {
+      "name": "tutorial",
+      "description": "url"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}"
+    },
+    {
+      "name": "event",
+      "description": "{Function}"
+    },
+    {
+      "name": "example"
+    }
+  ],
+  "slots": [],
+  "props": [],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "name": "u-td",
+  "description": "Td 表格中的单元格"
+}
