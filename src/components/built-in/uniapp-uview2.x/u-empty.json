@@ -1,0 +1,244 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件用于需要加载内容，但是加载的第一页数据就为空，提示一个\"没有内容\"的场景， 我们精心挑选了十几个场景的图标，方便您使用。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/empty.html"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ticon\t\t内置图标名称，或图片路径，建议绝对路径"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttext\t\t提示文字"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttextColor\t文字颜色 (默认 '#c0c4cc' )"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\ttextSize\t文字大小 （默认 14 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ticonColor\t图标的颜色 （默认 '#c0c4cc' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\ticonSize\t图标的大小 （默认 90 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tmode\t\t选择预置的图标类型 （默认 'data' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\twidth\t\t图标宽度，单位px （默认 160 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\theight\t\t图标高度，单位px （默认 160 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tshow\t\t是否显示组件 （默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tmarginTop\t组件距离上一个元素之间的距离，默认px单位 （默认 0 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t定义需要用到的外部样式"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 点击组件时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} close 点击关闭按钮时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-empty text=\"所谓伊人，在水一方\" mode=\"list\"></u-empty>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "text",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "marginTop",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icons",
+      "type": "object",
+      "initialValue": "{\"car\":{\"type\":\"string\",\"value\":\"购物车为空\",\"raw\":\"\\\"购物车为空\\\"\"},\"page\":{\"type\":\"string\",\"value\":\"页面不存在\",\"raw\":\"\\\"页面不存在\\\"\"},\"search\":{\"type\":\"string\",\"value\":\"没有搜索结果\",\"raw\":\"\\\"没有搜索结果\\\"\"},\"address\":{\"type\":\"string\",\"value\":\"没有收货地址\",\"raw\":\"\\\"没有收货地址\\\"\"},\"wifi\":{\"type\":\"string\",\"value\":\"没有WiFi\",\"raw\":\"\\\"没有WiFi\\\"\"},\"order\":{\"type\":\"string\",\"value\":\"订单为空\",\"raw\":\"\\\"订单为空\\\"\"},\"coupon\":{\"type\":\"string\",\"value\":\"没有优惠券\",\"raw\":\"\\\"没有优惠券\\\"\"},\"favor\":{\"type\":\"string\",\"value\":\"暂无收藏\",\"raw\":\"\\\"暂无收藏\\\"\"},\"permission\":{\"type\":\"string\",\"value\":\"无权限\",\"raw\":\"\\\"无权限\\\"\"},\"history\":{\"type\":\"string\",\"value\":\"无历史记录\",\"raw\":\"\\\"无历史记录\\\"\"},\"news\":{\"type\":\"string\",\"value\":\"无新闻列表\",\"raw\":\"\\\"无新闻列表\\\"\"},\"message\":{\"type\":\"string\",\"value\":\"消息列表为空\",\"raw\":\"\\\"消息列表为空\\\"\"},\"list\":{\"type\":\"string\",\"value\":\"列表为空\",\"raw\":\"\\\"列表为空\\\"\"},\"data\":{\"type\":\"string\",\"value\":\"数据为空\",\"raw\":\"\\\"数据为空\\\"\"},\"comment\":{\"type\":\"string\",\"value\":\"暂无评论\",\"raw\":\"\\\"暂无评论\\\"\"}}"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "组件样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "emptyStyle",
+      "dependencies": [
+        "marginTop",
+        "customStyle"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "文本样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textStyle",
+      "dependencies": [
+        "textColor",
+        "textSize"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "判断icon是否图片路径",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isSrc",
+      "dependencies": [
+        "icon"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [],
+  "name": "u-empty",
+  "description": "empty 内容为空"
+}

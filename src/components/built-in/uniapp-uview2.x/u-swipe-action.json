@@ -1,0 +1,85 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般用于左滑唤出操作菜单的场景，用的最多的是左滑删除操作"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/swipeAction.html"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\tautoClose\t是否自动关闭其他swipe按钮组"
+    },
+    {
+      "name": "event",
+      "description": "{Function(index)}\tclick\t点击组件时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-swipe-action><u-swipe-action-item :rightOptions=\"options1\" ></u-swipe-action-item></u-swipe-action>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "autoClose",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "拉取父组件新的变化后的参数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "parentData",
+      "dependencies": [
+        "autoClose"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeOther",
+      "params": [
+        {
+          "name": "child",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "closeOther(child: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-swipe-action",
+  "description": "SwipeAction 滑动单元格"
+}

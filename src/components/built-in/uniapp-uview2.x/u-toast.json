@@ -1,0 +1,216 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "此组件表现形式类似uni的uni.showToastAPI，但也有不同的地方。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/toast.html"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tzIndex\t\ttoast展示时的zIndex值 (默认 10090 )"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tloading\t\t是否加载中 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tmessage\t\t显示的文字内容"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ticon\t\t图标，或者绝对路径的图片"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttype\t\t主题类型 （默认 default）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tshow\t\t是否显示该组件 （默认 false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\toverlay\t\t是否显示透明遮罩，防止点击穿透 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tposition\t位置 （默认 'center' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tparams\t\t跳转的参数"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}  duration\t展示时间，单位ms （默认 2000 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tisTab\t\t是否返回的为tab页面 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\turl\t\t\ttoast消失后是否跳转页面，有则跳转，优先级高于back参数"
+    },
+    {
+      "name": "property",
+      "description": "{Function}\t\t\tcomplete\t执行完后的回调函数"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tback\t\t结束toast是否自动返回上一页 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t组件的样式，对象形式"
+    },
+    {
+      "name": "event",
+      "description": "{Function} show 显示toast，如需一进入页面就显示toast，请在onReady生命周期调用"
+    },
+    {
+      "name": "example",
+      "description": "<u-toast ref=\"uToast\" />"
+    }
+  ],
+  "slots": [],
+  "props": [],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isShow",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timer",
+      "type": "any",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "description": "定时器",
+      "keywords": [],
+      "visibility": "public",
+      "name": "config",
+      "type": "object",
+      "initialValue": "{\"message\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"type\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"duration\":{\"type\":\"number\",\"value\":2000,\"raw\":\"2000\"},\"icon\":{\"type\":\"boolean\",\"value\":true,\"raw\":\"true\"},\"position\":{\"type\":\"string\",\"value\":\"center\",\"raw\":\"\\\"center\\\"\"},\"complete\":{\"type\":\"any\",\"value\":null,\"raw\":\"null\"},\"overlay\":{\"type\":\"boolean\",\"value\":false,\"raw\":\"false\"},\"loading\":{\"type\":\"boolean\",\"value\":false,\"raw\":\"false\"}}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tmpConfig",
+      "type": "object",
+      "initialValue": "{}"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconName",
+      "dependencies": [
+        "tmpConfig"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "overlayStyle",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconStyle",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loadingIconColor",
+      "dependencies": [
+        "tmpConfig"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "内容盒子的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentStyle",
+      "dependencies": [
+        "tmpConfig"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "显示toast组件，由父组件通过this.$refs.xxx.show(options)形式调用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "params": [
+        {
+          "name": "options",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "show(options: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "隐藏toast组件，由父组件通过this.$refs.xxx.hide()形式调用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hide",
+      "params": [],
+      "syntax": [
+        "hide(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearTimer",
+      "params": [],
+      "syntax": [
+        "clearTimer(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-toast",
+  "description": "toast 消息提示"
+}

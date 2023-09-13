@@ -1,0 +1,217 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description"
+    },
+    {
+      "name": "tutorial"
+    },
+    {
+      "name": "property",
+      "description": "{String}\tmode\t\t键盘的类型，number-数字键盘，card-身份证键盘"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\tdotDisabled\t是否显示键盘的\".\"符号"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\trandom\t\t是否打乱键盘按键的顺序"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change\t\t点击键盘触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} backspace\t点击退格键触发"
+    },
+    {
+      "name": "example"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dotDisabled",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "random",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "backspace",
+      "type": "string",
+      "initialValue": "\"backspace\""
+    },
+    {
+      "kind": "data",
+      "description": "退格键内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dot",
+      "type": "string",
+      "initialValue": "\".\""
+    },
+    {
+      "kind": "data",
+      "description": "点",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timer",
+      "type": "any",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "description": "长按多次删除的事件监听",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cardX",
+      "type": "string",
+      "initialValue": "\"X\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "键盘需要显示的内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "numList",
+      "dependencies": [
+        "dotDisabled",
+        "mode",
+        "random",
+        "dot",
+        "cardX"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "按键的样式，在非乱序&&数字键盘&&不显示点按钮时，index为9时，按键占位两个空间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemStyle",
+      "dependencies": [
+        "mode",
+        "dotDisabled"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "是否让按键显示灰色，只在非乱序&&数字键盘&&且允许点按键的时候",
+      "keywords": [],
+      "visibility": "public",
+      "name": "btnBgGray",
+      "dependencies": [
+        "random",
+        "mode"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "backspace",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "点击退格键",
+      "keywords": [],
+      "visibility": "public",
+      "name": "backspaceClick",
+      "params": [],
+      "syntax": [
+        "backspaceClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearTimer",
+      "params": [],
+      "syntax": [
+        "clearTimer(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取键盘显示的内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "keyboardClick",
+      "params": [
+        {
+          "name": "val",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "keyboardClick(val: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "description": "keyboard 键盘组件",
+  "name": "u-number-keyboard"
+}

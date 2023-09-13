@@ -1,0 +1,770 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般用于商城购物选择物品数量的场景。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://uviewui.com/components/numberBox.html"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tname\t\t\t步进器标识符，在change回调返回"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tvalue\t\t\t用于双向绑定的值，初始化时设置设为默认min值(最小值)  （默认 0 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tmin\t\t\t\t最小值 （默认 1 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tmax\t\t\t\t最大值 （默认 Number.MAX_SAFE_INTEGER ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tstep\t\t\t加减的步长，可为小数 （默认 1 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tinteger\t\t\t是否只允许输入整数 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tdisabled\t\t是否禁用，包括输入框，加减按钮 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tdisabledInput\t是否禁用输入框 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tasyncChange\t\t是否开启异步变更，开启后需要手动控制输入值 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tinputWidth\t\t输入框宽度，单位为px （默认 35 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tshowMinus\t\t是否显示减少按钮 （默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tshowPlus\t\t是否显示增加按钮 （默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tdecimalLength\t显示的小数位数"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tlongPress\t\t是否开启长按加减手势 （默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tcolor\t\t\t输入框文字和加减按钮图标的颜色 （默认 '#323233' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tbuttonSize\t\t按钮大小，宽高等于此值，单位px，输入框高度和此值保持一致 （默认 30 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tbgColor\t\t\t输入框和按钮的背景颜色 （默认 '#EBECEE' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tcursorSpacing\t指定光标于键盘的距离，避免键盘遮挡输入框，单位px （默认 100 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tdisablePlus\t\t是否禁用增加按钮 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tdisableMinus\t是否禁用减少按钮 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object ｜ String}\ticonStyle\t\t加减按钮图标的样式"
+    },
+    {
+      "name": "event",
+      "description": "{Function}\tonFocus\t输入框活动焦点"
+    },
+    {
+      "name": "event",
+      "description": "{Function}\tonBlur\t输入框失去焦点"
+    },
+    {
+      "name": "event",
+      "description": "{Function}\tonInput\t输入框值发生变化"
+    },
+    {
+      "name": "event",
+      "description": "{Function}\tonChange"
+    },
+    {
+      "name": "example",
+      "description": "<u-number-box v-model=\"value\" @change=\"valChange\"></u-number-box>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "minus",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "plus",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "name",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "min",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "max",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "step",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "integer",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabledInput",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "asyncChange",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputWidth",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showMinus",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showPlus",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "decimalLength",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "longPress",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "buttonSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cursorSpacing",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disablePlus",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disableMinus",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconStyle",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "description": "输入框实际操作的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "currentValue",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "description": "定时器",
+      "keywords": [],
+      "visibility": "public",
+      "name": "longPressTimer",
+      "type": "any",
+      "initialValue": "null"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getCursorSpacing",
+      "dependencies": [
+        "cursorSpacing"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "按钮的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "buttonStyle",
+      "dependencies": [
+        "bgColor",
+        "buttonSize",
+        "color",
+        "isDisabled"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "输入框的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputStyle",
+      "dependencies": [
+        "disabled",
+        "disabledInput",
+        "color",
+        "bgColor",
+        "buttonSize",
+        "inputWidth"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "用于监听多个值发生变化",
+      "keywords": [],
+      "visibility": "public",
+      "name": "watchChange",
+      "dependencies": [
+        "integer",
+        "decimalLength",
+        "min",
+        "max"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isDisabled",
+      "dependencies": [
+        "disabled",
+        "disablePlus",
+        "currentValue",
+        "max",
+        "disableMinus",
+        "min"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "arguments": [
+        {
+          "name": "{ ...event.detail, name: this.name, }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "发出blur事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blur",
+      "arguments": [
+        {
+          "name": "{ ...event.detail, name: this.name, }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "{ value, name: this.name, }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "***unhandled***",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "格式化整理数据，限制范围",
+      "keywords": [],
+      "visibility": "public",
+      "name": "format",
+      "params": [
+        {
+          "name": "value",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "format(value: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "过滤非法的字符",
+      "keywords": [],
+      "visibility": "public",
+      "name": "filter",
+      "params": [
+        {
+          "name": "value",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "filter(value: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "check",
+      "params": [],
+      "syntax": [
+        "check(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "输入框活动焦点",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onFocus",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onFocus(event: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "输入框失去焦点",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onBlur",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onBlur(event: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "输入框值发生变化",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onInput",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onInput(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "发出change事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "emitChange",
+      "params": [
+        {
+          "name": "value",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "emitChange(value: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onChange",
+      "params": [],
+      "syntax": [
+        "onChange(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "对值扩大后进行四舍五入，再除以扩大因子，避免出现浮点数操作的精度问题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "add",
+      "params": [
+        {
+          "name": "num1",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "num2",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "add(num1: unknow, num2: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击加减按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "clickHandler(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "longPressStep",
+      "params": [],
+      "syntax": [
+        "longPressStep(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onTouchStart",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onTouchStart(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "触摸结束，清除定时器，停止长按加减",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onTouchEnd",
+      "params": [],
+      "syntax": [
+        "onTouchEnd(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "清除定时器",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearTimeout",
+      "params": [],
+      "syntax": [
+        "clearTimeout(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-number-box",
+  "description": "numberBox 步进器"
+}

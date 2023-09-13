@@ -1,0 +1,229 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般用于Layout 布局 通过基础的 12 分栏，迅速简便地创建布局"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/Layout.html"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tspan\t\t栅格占据的列数，总12等份 (默认 12 )"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\toffset\t\t分栏左边偏移，计算方式与span相同 (默认 0 )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tjustify\t\t水平排列方式，可选值为`start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`)  (默认 'start' )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\talign\t\t垂直对齐方式，可选值为top、center、bottom、stretch (默认 'stretch' )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttextAlign\t文字水平对齐方式 (默认 'left' )"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t定义需要用到的外部样式"
+    },
+    {
+      "name": "event",
+      "description": "{Function}\tclick\tcol被点击，会阻止事件冒泡到row"
+    },
+    {
+      "name": "example",
+      "description": "<u-col  span=\"3\" offset=\"3\" > <view class=\"demo-layout bg-purple\"></view> </u-col>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "span",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "offset",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "justify",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "align",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textAlign",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "parentData",
+      "type": "object",
+      "initialValue": "{\"gutter\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"}}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "gridNum",
+      "type": "number",
+      "initialValue": "12"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uJustify",
+      "dependencies": [
+        "justify"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uAlignItem",
+      "dependencies": [
+        "align"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "colStyle",
+      "dependencies": [
+        "parentData",
+        "uAlignItem",
+        "uJustify",
+        "textAlign",
+        "gridNum",
+        "span",
+        "offset",
+        "width",
+        "customStyle"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "async init(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateParentData",
+      "params": [],
+      "syntax": [
+        "updateParentData(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "clickHandler(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-col",
+  "description": "CodeInput 栅格系统的列"
+}

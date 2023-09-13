@@ -1,0 +1,127 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "anchor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "description": "节点信息",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rect",
+      "type": "object",
+      "initialValue": "{}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "index",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sys",
+      "type": "CallExpression",
+      "initialValue": "uni.$u.sys()"
+    }
+  ],
+  "computed": [],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateParentData",
+      "params": [],
+      "syntax": [
+        "updateParentData(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resize",
+      "params": [],
+      "syntax": [
+        "resize(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "查询元素尺寸",
+      "keywords": [],
+      "visibility": "public",
+      "name": "queryRect",
+      "params": [
+        {
+          "name": "el",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "queryRect(el: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    }
+  ],
+  "name": "u-list-item",
+  "description": "#endif"
+}

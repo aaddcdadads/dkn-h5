@@ -1,0 +1,303 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该分段器一般用于用户从几个选项中选择某一个的场景"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/subsection.html"
+    },
+    {
+      "name": "property",
+      "description": "{Array}\t\t\tlist\t\t\ttab的数据"
+    },
+    {
+      "name": "property",
+      "description": "{String ｜ Number}\tcurrent\t\t\t当前活动的tab的index（默认 0 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tactiveColor\t\t激活时的颜色（默认 '#3c9cff' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tinactiveColor\t未激活时的颜色（默认 '#303133' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tmode\t\t\t模式选择，mode=button为按钮形式，mode=subsection时为分段模式（默认 'button' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String ｜ Number}\tfontSize\t\t字体大小，单位px（默认 12 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tbold\t\t\t激活选项的字体是否加粗（默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tbgColor\t\t\t组件背景颜色，mode为button时有效（默认 '#eeeeef' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t\t定义需要用到的外部样式"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t        keyName\t        从`list`元素对象中读取的键名（默认 'name' ）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change\t\t分段器选项发生改变时触发  回调 index：选项的index索引值，从0开始"
+    },
+    {
+      "name": "example",
+      "description": "<u-subsection :list=\"list\" :current=\"curNow\" @change=\"sectionChange\"></u-subsection>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "list",
+      "type": "Array",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "current",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "activeColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactiveColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fontSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bold",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "name": "keyName",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "description": "组件尺寸",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemRect",
+      "type": "object",
+      "initialValue": "{\"width\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"},\"height\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"}}"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "wrapperStyle",
+      "dependencies": [
+        "mode",
+        "bgColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "滑块的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "barStyle",
+      "dependencies": [
+        "itemRect",
+        "current",
+        "mode",
+        "activeColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "分段器item的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemStyle",
+      "dependencies": [
+        "mode",
+        "activeColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "分段器文字颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textStyle",
+      "dependencies": [
+        "bold",
+        "current",
+        "fontSize",
+        "mode",
+        "inactiveColor",
+        "activeColor"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "判断展示文本",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getText",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getText(item: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取组件的尺寸",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getRect",
+      "params": [],
+      "syntax": [
+        "getRect(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "clickHandler(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-subsection",
+  "description": "Subsection 分段器"
+}
