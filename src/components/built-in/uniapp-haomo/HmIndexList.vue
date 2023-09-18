@@ -1,22 +1,25 @@
 <template>
   <view class="HmIndexList">
     <u-index-list :scrollTop="scrollTop">
-      <view v-for="(item, index) in cList" :key="index">
-        <u-index-anchor :index="item.title" />
-        <view class="list-cell" v-for="(dataItem, dataIndex) in item.data" :key="dataIndex">
-          <!-- 
+      <view v-for="(item, index) in indexList" :key="index">
+        <!-- 隐藏没有数据的锚点 -->
+        <view v-show="totalList[item] !== undefined && totalList[item].length > 0">
+          <u-index-anchor :index="item" />
+          <view class="list-cell" v-for="(dataItem, dataIndex) in totalList[item]" :key="dataIndex">
+            <!-- 
           @prop item - 数组条目数据
         -->
-          <slot :item="dataItem">
-            <view class="dataItemCard" @click="itemClick(dataItem, dataIndex)">
-              <u-avatar class="dataItemCard_avatar" v-if="dataItem.src || dataItem.text" :src="dataItem.src"
-                :text="dataItem.text" bg-color="cyan"></u-avatar>
-              <view class="dataItemCard_text">
-                <text decode class="dataItemCard_text_name">{{ dataItem.name }}</text>
-                <text decode class="dataItemCard_text_subName">{{ dataItem.subName }}</text>
+            <slot :item="dataItem">
+              <view class="dataItemCard" @click="itemClick(dataItem, dataIndex)">
+                <u-avatar class="dataItemCard_avatar" v-if="dataItem.src || dataItem.text" :src="dataItem.src"
+                  :text="dataItem.text" bg-color="cyan"></u-avatar>
+                <view class="dataItemCard_text">
+                  <text decode class="dataItemCard_text_name">{{ dataItem.name }}</text>
+                  <text decode class="dataItemCard_text_subName">{{ dataItem.subName }}</text>
+                </view>
               </view>
-            </view>
-          </slot>
+            </slot>
+          </view>
         </view>
       </view>
     </u-index-list>
@@ -36,7 +39,7 @@ export default {
      */
     list: {
       type: Array,
-      default: function() {
+      default: function () {
         return [
           {
             title: "123",
@@ -96,7 +99,7 @@ export default {
      */
     params: {
       type: Object,
-      default: function() {
+      default: function () {
         return {};
       },
     },
@@ -105,7 +108,7 @@ export default {
      */
     getDataMap: {
       type: Object,
-      default: function() {
+      default: function () {
         return {
           title: "title",
           src: "src",
@@ -128,7 +131,7 @@ export default {
       this.getData(value);
     },
     params: {
-      handler: function(value, oldValue) {
+      handler: function (value, oldValue) {
         if (JSON.stringify(value) == JSON.stringify(oldValue)) {
           return;
         }
@@ -137,7 +140,7 @@ export default {
       deep: true,
     },
     list: {
-      handler: function(value, oldValue) {
+      handler: function (value, oldValue) {
         this.cList = this.mapData(value);
       },
       deep: true,
@@ -150,6 +153,10 @@ export default {
   data() {
     return {
       cList: [],
+      totalList: {},
+      // 储存所有有数据的字母
+      indexList: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",
+        "T", "U", "V", "W", "X", "Y", "Z"],
     };
   },
   methods: {
@@ -200,49 +207,23 @@ export default {
         keys.forEach((key) => {
           item[key] = item[self.getDataMap[key]];
         });
-      });
-      return this.transData(data);
-    },
-    //转换数据格式
-    transData(data) {
-      if (!data) {
-        return [{title: "A",data: [],}]
-      }
-      //储存所有有数据的字母
-      let pinyinObj = {}
-      //转换后的数组
-      let transList = []
-      data.forEach(item => {
-        if (!item || !item.name) {
-          return
-        }
         //获取中文首字母大写
-        let Capital = pinyin(item.name, { pattern: 'first', toneType: 'none' }).charAt(0).toUpperCase()
-        if (!pinyinObj[Capital]) {
-          pinyinObj[Capital] = []
+        let Capital = pinyin(item.name, {
+          pattern: 'first',
+          toneType: 'none'
+        }).charAt(0).toUpperCase();
+        item.pinyinKey = Capital;
+      });
+      self.totalList = data.reduce((result, item) => {
+        const key = item.pinyinKey;
+        if (!result[key]) {
+          result[key] = [];
         }
-        pinyinObj[Capital].push(item)
-      });
-      if (Object.keys(pinyinObj).length == 0) {
-        return [{title: "A",data: [],}]
-      }
-      let keys = Object.keys(pinyinObj);
-      keys.forEach((item, index) => {
-        transList.push({ title: item, data: pinyinObj[item] });
-      });
-      console.log("transList", this.sortList(transList))
-      return this.sortList(transList)
+        result[key].push(item);
+        return result;
+      }, {});
+      return data;
     },
-    //数组按照字母排序
-    sortList(list){
-      list.sort(function(a,b){
-        return a.title.localeCompare(b.title)
-      })
-      return list
-    }
-    
-
-
   },
 };
 </script>
