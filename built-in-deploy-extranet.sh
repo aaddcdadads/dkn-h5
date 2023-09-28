@@ -38,13 +38,3 @@ rsync -avz src/components/built-in/uniapp-official -e 'ssh -p 22327' haomo@haomo
 rsync -avz src/components/built-in/uniapp-official -e 'ssh -p 22327' haomo@haomo.tpddns.cn:/data/docker/design-cloud.stage/files/built-in
 rsync -avz src/components/built-in/uniapp-official -e 'ssh -p 22327' haomo@haomo.tpddns.cn:/data/docker/design-cloud.dev/files/built-in
 rsync -avz src/components/built-in/uniapp-official -e 'ssh -p 22328' haomo@haomo.tpddns.cn:/data/docker/design-cloud.dev/files/built-in
-
-rsync -avz src/components/built-in/uniapp-uview1.x -e 'ssh -p 22327' haomo@haomo.tpddns.cn:/data/docker/design-cloud/files/built-in
-rsync -avz src/components/built-in/uniapp-uview1.x -e 'ssh -p 22327' haomo@haomo.tpddns.cn:/data/docker/design-cloud.stage/files/built-in
-rsync -avz src/components/built-in/uniapp-uview1.x -e 'ssh -p 22327' haomo@haomo.tpddns.cn:/data/docker/design-cloud.dev/files/built-in
-rsync -avz src/components/built-in/uniapp-uview1.x -e 'ssh -p 22328' haomo@haomo.tpddns.cn:/data/docker/design-cloud.dev/files/built-in
-
-rsync -avz src/components/built-in/uniapp-uview2.x -e 'ssh -p 22327' haomo@haomo.tpddns.cn:/data/docker/design-cloud/files/built-in
-rsync -avz src/components/built-in/uniapp-uview2.x -e 'ssh -p 22327' haomo@haomo.tpddns.cn:/data/docker/design-cloud.stage/files/built-in
-rsync -avz src/components/built-in/uniapp-uview2.x -e 'ssh -p 22327' haomo@haomo.tpddns.cn:/data/docker/design-cloud.dev/files/built-in
-rsync -avz src/components/built-in/uniapp-uview2.x -e 'ssh -p 22328' haomo@haomo.tpddns.cn:/data/docker/design-cloud.dev/files/built-in

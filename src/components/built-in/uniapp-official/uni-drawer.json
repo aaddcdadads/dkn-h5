@@ -15,11 +15,16 @@
   "props": [
     {
       "kind": "prop",
-      "description": "显示模式（左、右），只在初始化生效",
-      "keywords": [],
+      "description": "显示模式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\",\"right\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"\"",
       "required": false,
       "describeModel": false
@@ -37,7 +42,7 @@
     },
     {
       "kind": "prop",
-      "description": "遮罩是否可点击关闭",
+      "description": "点击遮罩关闭",
       "keywords": [],
       "visibility": "public",
       "name": "mask-click",

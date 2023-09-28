@@ -98,6 +98,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"暗黑模式",
       "keywords": [],
       "visibility": "public",
       "name": "dark",
@@ -108,6 +109,7 @@
     },
     {
       "kind": "prop",
+      "description":"标题",
       "keywords": [],
       "visibility": "public",
       "name": "title",
@@ -118,6 +120,7 @@
     },
     {
       "kind": "prop",
+      "description":"左侧按钮文本",
       "keywords": [],
       "visibility": "public",
       "name": "left-text",
@@ -128,6 +131,7 @@
     },
     {
       "kind": "prop",
+      "description":"右侧按钮文本",
       "keywords": [],
       "visibility": "public",
       "name": "right-text",
@@ -138,6 +142,7 @@
     },
     {
       "kind": "prop",
+      "description":"左侧按钮图标",
       "keywords": [],
       "visibility": "public",
       "name": "left-icon",
@@ -148,6 +153,7 @@
     },
     {
       "kind": "prop",
+      "description":"右侧按钮图标",
       "keywords": [],
       "visibility": "public",
       "name": "right-icon",
@@ -158,6 +164,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否固定顶部",
       "keywords": [],
       "visibility": "public",
       "name": "fixed",
@@ -171,6 +178,7 @@
     },
     {
       "kind": "prop",
+      "description":"图标文字颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -181,6 +189,7 @@
     },
     {
       "kind": "prop",
+      "description":"导航栏背景色",
       "keywords": [],
       "visibility": "public",
       "name": "background-color",
@@ -191,6 +200,7 @@
     },
     {
       "kind": "prop",
+      "description":"包含状态栏",
       "keywords": [],
       "visibility": "public",
       "name": "status-bar",
@@ -204,6 +214,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否有阴影",
       "keywords": [],
       "visibility": "public",
       "name": "shadow",
@@ -217,6 +228,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否有边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",
@@ -230,6 +242,7 @@
     },
     {
       "kind": "prop",
+      "description":"导航栏高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",
@@ -243,6 +256,7 @@
     },
     {
       "kind": "prop",
+      "description":"左侧插槽宽度",
       "keywords": [],
       "visibility": "public",
       "name": "left-width",
@@ -256,6 +270,7 @@
     },
     {
       "kind": "prop",
+      "description":"右侧插槽宽度",
       "keywords": [],
       "visibility": "public",
       "name": "right-width",
@@ -269,6 +284,7 @@
     },
     {
       "kind": "prop",
+      "description":"开启统计功能",
       "keywords": [],
       "visibility": "public",
       "name": "stat",

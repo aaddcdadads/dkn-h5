@@ -56,6 +56,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"当前值",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -69,6 +70,7 @@
     },
     {
       "kind": "prop",
+      "description":"当前值",
       "keywords": [],
       "visibility": "public",
       "name": "model-value",
@@ -82,6 +84,7 @@
     },
     {
       "kind": "prop",
+      "description":"最小值",
       "keywords": [],
       "visibility": "public",
       "name": "min",
@@ -92,6 +95,7 @@
     },
     {
       "kind": "prop",
+      "description":"最大值",
       "keywords": [],
       "visibility": "public",
       "name": "max",
@@ -102,6 +106,7 @@
     },
     {
       "kind": "prop",
+      "description":"间隔大小",
       "keywords": [],
       "visibility": "public",
       "name": "step",
@@ -112,6 +117,7 @@
     },
     {
       "kind": "prop",
+      "description":"背景色",
       "keywords": [],
       "visibility": "public",
       "name": "background",
@@ -122,6 +128,7 @@
     },
     {
       "kind": "prop",
+      "description":"文字颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -132,6 +139,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否禁用状态",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",

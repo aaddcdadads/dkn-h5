@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"数据对象",
       "keywords": [],
       "visibility": "public",
       "name": "options",
@@ -17,6 +18,7 @@
     },
     {
       "kind": "prop",
+      "description":"展示模式",
       "keywords": [],
       "visibility": "public",
       "name": "show-select",

@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"当前页",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -20,19 +21,7 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "model-value",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "1",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
+      "description":"左侧按钮文字",
       "keywords": [],
       "visibility": "public",
       "name": "prev-text",
@@ -42,24 +31,17 @@
     },
     {
       "kind": "prop",
+      "description":"右侧按钮文字",
       "keywords": [],
       "visibility": "public",
       "name": "next-text",
       "type": "String",
       "required": false,
       "describeModel": false
-    },
+    }, 
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "piece-per-page-text",
-      "type": "String",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
+      "description":"当前页",
       "keywords": [],
       "visibility": "public",
       "name": "current",
@@ -73,6 +55,7 @@
     },
     {
       "kind": "prop",
+      "description":"数据总量",
       "keywords": [],
       "visibility": "public",
       "name": "total",
@@ -86,6 +69,7 @@
     },
     {
       "kind": "prop",
+      "description":"每页数据量",
       "keywords": [],
       "visibility": "public",
       "name": "page-size",
@@ -99,6 +83,7 @@
     },
     {
       "kind": "prop",
+      "description":"图标形式按钮",
       "keywords": [],
       "visibility": "public",
       "name": "show-icon",
@@ -107,39 +92,6 @@
         "String"
       ],
       "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-page-size",
-      "type": [
-        "Boolean",
-        "String"
-      ],
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "pager-count",
-      "type": "Number",
-      "default": "7",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "page-size-range",
-      "type": "Array",
-      "default": "() => [20, 50, 100, 500]",
       "required": false,
       "describeModel": false
     }

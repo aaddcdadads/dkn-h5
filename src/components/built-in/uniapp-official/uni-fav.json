@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"是否带星星",
       "keywords": [],
       "visibility": "public",
       "name": "star",
@@ -20,6 +21,7 @@
     },
     {
       "kind": "prop",
+      "description":"未收藏背景色",
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
@@ -30,6 +32,7 @@
     },
     {
       "kind": "prop",
+      "description":"未收藏文字颜色",
       "keywords": [],
       "visibility": "public",
       "name": "fg-color",
@@ -40,6 +43,7 @@
     },
     {
       "kind": "prop",
+      "description":"已收藏背景色",
       "keywords": [],
       "visibility": "public",
       "name": "bg-color-checked",
@@ -50,6 +54,7 @@
     },
     {
       "kind": "prop",
+      "description":"已收藏文字颜色",
       "keywords": [],
       "visibility": "public",
       "name": "fg-color-checked",
@@ -60,6 +65,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否为圆角",
       "keywords": [],
       "visibility": "public",
       "name": "circle",
@@ -73,6 +79,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否为已收藏",
       "keywords": [],
       "visibility": "public",
       "name": "checked",
@@ -83,6 +90,7 @@
     },
     {
       "kind": "prop",
+      "description":"收藏按钮文字",
       "keywords": [],
       "visibility": "public",
       "name": "content-text",
@@ -93,6 +101,7 @@
     },
     {
       "kind": "prop",
+      "description":"开启统计功能",
       "keywords": [],
       "visibility": "public",
       "name": "stat",

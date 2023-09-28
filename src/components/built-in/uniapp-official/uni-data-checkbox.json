@@ -92,16 +92,23 @@
   "props": [
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"模式",
+      "keywords": [
+        {
+          "name":"options",
+          "description": "[\"default\",\"list\",\"button\",\"tag\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"default\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"是否多选",
       "keywords": [],
       "visibility": "public",
       "name": "multiple",
@@ -112,6 +119,7 @@
     },
     {
       "kind": "prop",
+      "description":"默认值",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -126,21 +134,7 @@
     },
     {
       "kind": "prop",
-      "description": "TODO vue3",
-      "keywords": [],
-      "visibility": "public",
-      "name": "model-value",
-      "type": [
-        "Array",
-        "String",
-        "Number"
-      ],
-      "default": "function() {\r\n\t\t\t\t\treturn '';\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
+      "description":"数据",
       "keywords": [],
       "visibility": "public",
       "name": "localdata",
@@ -151,6 +145,7 @@
     },
     {
       "kind": "prop",
+      "description":"最小值",
       "keywords": [],
       "visibility": "public",
       "name": "min",
@@ -164,6 +159,7 @@
     },
     {
       "kind": "prop",
+      "description":"最大值",
       "keywords": [],
       "visibility": "public",
       "name": "max",
@@ -177,6 +173,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否换行",
       "keywords": [],
       "visibility": "public",
       "name": "wrap",
@@ -187,16 +184,23 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"图标位置",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\",\"right\"]"
+        }
+      ],
       "visibility": "public",
       "name": "icon",
-      "type": "String",
+      "type": "Enum",
       "default": "\"left\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"选中颜色",
       "keywords": [],
       "visibility": "public",
       "name": "selected-color",
@@ -207,6 +211,7 @@
     },
     {
       "kind": "prop",
+      "description":"选中文字颜色",
       "keywords": [],
       "visibility": "public",
       "name": "selected-text-color",
@@ -217,6 +222,7 @@
     },
     {
       "kind": "prop",
+      "description":"数据为空提示",
       "keywords": [],
       "visibility": "public",
       "name": "empty-text",
@@ -227,6 +233,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -237,6 +244,7 @@
     },
     {
       "kind": "prop",
+      "description":"数据映射",
       "keywords": [],
       "visibility": "public",
       "name": "map",

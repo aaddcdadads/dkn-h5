@@ -15,16 +15,23 @@
   "props": [
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"datetime\",\"daterange\",\"datetime\",\"datetimerange\"]"
+        }
+      ],
       "visibility": "public",
       "name": "type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"datetime\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"默认值",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -40,6 +47,7 @@
     },
     {
       "kind": "prop",
+      "description":"默认值",
       "keywords": [],
       "visibility": "public",
       "name": "model-value",
@@ -55,6 +63,7 @@
     },
     {
       "kind": "prop",
+      "description":"最小值",
       "keywords": [],
       "visibility": "public",
       "name": "start",
@@ -68,6 +77,7 @@
     },
     {
       "kind": "prop",
+      "description":"最大值",
       "keywords": [],
       "visibility": "public",
       "name": "end",
@@ -81,16 +91,23 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"返回值格式",
+      "keywords": [
+        {
+          "name":"options",
+          "description": "[\"timestamp\",\"string\",\"date\"]"
+        }
+      ],
       "visibility": "public",
       "name": "return-type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"string\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"占位内容",
       "keywords": [],
       "visibility": "public",
       "name": "placeholder",
@@ -101,6 +118,7 @@
     },
     {
       "kind": "prop",
+      "description":"开始占位内容",
       "keywords": [],
       "visibility": "public",
       "name": "start-placeholder",
@@ -112,6 +130,7 @@
     {
       "kind": "prop",
       "keywords": [],
+      "description":"结束占位内容",
       "visibility": "public",
       "name": "end-placeholder",
       "type": "String",
@@ -121,6 +140,7 @@
     },
     {
       "kind": "prop",
+      "description":"分隔符",
       "keywords": [],
       "visibility": "public",
       "name": "range-separator",
@@ -131,6 +151,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否显示边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",
@@ -143,6 +164,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -155,6 +177,7 @@
     },
     {
       "kind": "prop",
+      "description":"显示清除按钮",
       "keywords": [],
       "visibility": "public",
       "name": "clear-icon",
@@ -167,6 +190,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否显示秒",
       "keywords": [],
       "visibility": "public",
       "name": "hide-second",
@@ -174,20 +198,6 @@
         "Boolean"
       ],
       "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "default-value",
-      "type": [
-        "String",
-        "Object",
-        "Array"
-      ],
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     }

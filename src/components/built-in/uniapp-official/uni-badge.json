@@ -100,16 +100,23 @@
   "props": [
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"default\",\"primary\",\"success\",\"warning\",\"error\"]"
+        }
+      ],
       "visibility": "public",
       "name": "type",
-      "type": "String",
-      "default": "\"error\"",
+      "type": "Enum",
+      "default": "\"default\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"无需背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "inverted",
@@ -120,6 +127,7 @@
     },
     {
       "kind": "prop",
+      "description":"点做标记",
       "keywords": [],
       "visibility": "public",
       "name": "is-dot",
@@ -130,6 +138,7 @@
     },
     {
       "kind": "prop",
+      "description":"最大值",
       "keywords": [],
       "visibility": "public",
       "name": "max-num",
@@ -140,16 +149,23 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"绝对定位",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"rightTop\",\"rightBottom\",\"leftBottom\",\"leftTop\"]"
+        }
+      ],
       "visibility": "public",
       "name": "absolute",
-      "type": "String",
-      "default": "\"\"",
+      "type": "Enum",
+      "default": "\"rightTop\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"偏移量",
       "keywords": [],
       "visibility": "public",
       "name": "offset",
@@ -160,6 +176,7 @@
     },
     {
       "kind": "prop",
+      "description":"角标内容",
       "keywords": [],
       "visibility": "public",
       "name": "text",
@@ -173,6 +190,7 @@
     },
     {
       "kind": "prop",
+      "description":"尺寸",
       "keywords": [],
       "visibility": "public",
       "name": "size",
@@ -183,6 +201,7 @@
     },
     {
       "kind": "prop",
+      "description":"自定义样式",
       "keywords": [],
       "visibility": "public",
       "name": "custom-style",

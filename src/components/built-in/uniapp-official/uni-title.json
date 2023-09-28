@@ -68,6 +68,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"标题类型",
       "keywords": [],
       "visibility": "public",
       "name": "type",
@@ -78,6 +79,7 @@
     },
     {
       "kind": "prop",
+      "description":"章节标题内容",
       "keywords": [],
       "visibility": "public",
       "name": "title",
@@ -88,6 +90,7 @@
     },
     {
       "kind": "prop",
+      "description":"对齐方式",
       "keywords": [],
       "visibility": "public",
       "name": "align",
@@ -98,6 +101,7 @@
     },
     {
       "kind": "prop",
+      "description":"字体颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -108,6 +112,7 @@
     },
     {
       "kind": "prop",
+      "description":"开启统计功能",
       "keywords": [],
       "visibility": "public",
       "name": "stat",

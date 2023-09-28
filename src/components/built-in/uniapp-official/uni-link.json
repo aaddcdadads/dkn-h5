@@ -63,6 +63,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"链接地址",
       "keywords": [],
       "visibility": "public",
       "name": "href",
@@ -73,6 +74,7 @@
     },
     {
       "kind": "prop",
+      "description":"显示文字",
       "keywords": [],
       "visibility": "public",
       "name": "text",
@@ -83,6 +85,7 @@
     },
     {
       "kind": "prop",
+      "description":"下载文件名",
       "keywords": [],
       "visibility": "public",
       "name": "download",
@@ -93,6 +96,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否显示下划线",
       "keywords": [],
       "visibility": "public",
       "name": "show-under-line",
@@ -106,6 +110,7 @@
     },
     {
       "kind": "prop",
+      "description":"复制提示语",
       "keywords": [],
       "visibility": "public",
       "name": "copy-tips",
@@ -116,6 +121,7 @@
     },
     {
       "kind": "prop",
+      "description":"链接文字颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -126,11 +132,11 @@
     },
     {
       "kind": "prop",
+      "description":"链接文字大小",
       "keywords": [],
       "visibility": "public",
       "name": "font-size",
       "type": [
-        "Number",
         "String"
       ],
       "default": "14",

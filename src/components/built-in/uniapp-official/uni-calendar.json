@@ -76,6 +76,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"当前时间",
       "keywords": [],
       "visibility": "public",
       "name": "date",
@@ -86,6 +87,7 @@
     },
     {
       "kind": "prop",
+      "description":"打点",
       "keywords": [],
       "visibility": "public",
       "name": "selected",
@@ -96,6 +98,7 @@
     },
     {
       "kind": "prop",
+      "description":"显示农历",
       "keywords": [],
       "visibility": "public",
       "name": "lunar",
@@ -106,6 +109,7 @@
     },
     {
       "kind": "prop",
+      "description":"开始日期",
       "keywords": [],
       "visibility": "public",
       "name": "start-date",
@@ -116,6 +120,7 @@
     },
     {
       "kind": "prop",
+      "description":"结束日期",
       "keywords": [],
       "visibility": "public",
       "name": "end-date",
@@ -126,6 +131,7 @@
     },
     {
       "kind": "prop",
+      "description":"范围选择",
       "keywords": [],
       "visibility": "public",
       "name": "range",
@@ -136,6 +142,7 @@
     },
     {
       "kind": "prop",
+      "description":"插入模式",
       "keywords": [],
       "visibility": "public",
       "name": "insert",
@@ -146,6 +153,7 @@
     },
     {
       "kind": "prop",
+      "description":"月份为背景",
       "keywords": [],
       "visibility": "public",
       "name": "show-month",
@@ -156,6 +164,7 @@
     },
     {
       "kind": "prop",
+      "description":"清空上次选择",
       "keywords": [],
       "visibility": "public",
       "name": "clear-date",

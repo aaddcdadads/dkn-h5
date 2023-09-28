@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"样式配置项",
       "keywords": [],
       "visibility": "public",
       "name": "pattern",
@@ -17,36 +18,55 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"水平对齐方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\",\"right\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "horizontal",
-      "type": "String",
+      "type": "Enum",
       "default": "\"left\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"垂直对齐方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"bottom\",\"top\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "vertical",
-      "type": "String",
+      "type": "Enum",
       "default": "\"bottom\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"展开菜单方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"horizontal\",\"vertical\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "direction",
-      "type": "String",
+      "type": "Enum",
       "default": "\"horizontal\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"菜单内容配置",
       "keywords": [],
       "visibility": "public",
       "name": "content",
@@ -57,16 +77,7 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
+      "description":"是否弹出菜单",
       "keywords": [],
       "visibility": "public",
       "name": "pop-menu",

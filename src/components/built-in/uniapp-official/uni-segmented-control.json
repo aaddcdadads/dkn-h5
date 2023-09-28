@@ -44,6 +44,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"选中索引值",
       "keywords": [],
       "visibility": "public",
       "name": "current",
@@ -54,6 +55,7 @@
     },
     {
       "kind": "prop",
+      "description":"选项数组",
       "keywords": [],
       "visibility": "public",
       "name": "values",
@@ -64,6 +66,7 @@
     },
     {
       "kind": "prop",
+      "description":"选种颜色",
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
@@ -74,10 +77,16 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"样式类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"button\",\"text\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "style-type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"button\"",
       "required": false,
       "describeModel": false

@@ -40,6 +40,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"日期",
       "keywords": [],
       "visibility": "public",
       "name": "date",
@@ -54,16 +55,23 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"格式化语言",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"zh\",\"en\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "locale",
-      "type": "String",
+      "type": "Enum",
       "default": "\"zh\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"时间阈值",
       "keywords": [],
       "visibility": "public",
       "name": "threshold",
@@ -79,20 +87,6 @@
       "name": "format",
       "type": "String",
       "default": "\"yyyy/MM/dd hh:mm:ss\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "refreshRate使用不当可能导致性能问题，谨慎使用",
-      "keywords": [],
-      "visibility": "public",
-      "name": "refresh-rate",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
       "required": false,
       "describeModel": false
     }

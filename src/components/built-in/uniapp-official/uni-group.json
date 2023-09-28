@@ -43,6 +43,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"主标题",
       "keywords": [],
       "visibility": "public",
       "name": "title",
@@ -53,6 +54,7 @@
     },
     {
       "kind": "prop",
+      "description":"分组间隔",
       "keywords": [],
       "visibility": "public",
       "name": "top",
@@ -66,16 +68,23 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"模式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"default\",\"card\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"default\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"开启统计功能",
       "keywords": [],
       "visibility": "public",
       "name": "stat",

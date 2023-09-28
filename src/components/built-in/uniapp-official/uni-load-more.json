@@ -68,16 +68,23 @@
   "props": [
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"加载的状态",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"more\",\"loading\",\"noMore\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "status",
-      "type": "String",
+      "type": "Enum",
       "default": "\"more\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"是否显示图标",
       "keywords": [],
       "visibility": "public",
       "name": "show-icon",
@@ -88,16 +95,23 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"指定图标样式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"snow\",\"circle\",\"auto\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "icon-type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"auto\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"指定图标大小",
       "keywords": [],
       "visibility": "public",
       "name": "icon-size",
@@ -108,6 +122,7 @@
     },
     {
       "kind": "prop",
+      "description":"图标文字颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -118,6 +133,7 @@
     },
     {
       "kind": "prop",
+      "description":"状态文字说明",
       "keywords": [],
       "visibility": "public",
       "name": "content-text",
@@ -128,6 +144,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否显示文本",
       "keywords": [],
       "visibility": "public",
       "name": "show-text",

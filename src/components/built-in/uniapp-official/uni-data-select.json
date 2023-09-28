@@ -48,6 +48,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"数据",
       "keywords": [],
       "visibility": "public",
       "name": "localdata",
@@ -58,6 +59,7 @@
     },
     {
       "kind": "prop",
+      "description":"默认值",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -71,19 +73,7 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "model-value",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
+      "description":"左侧标题",
       "keywords": [],
       "visibility": "public",
       "name": "label",
@@ -94,6 +84,7 @@
     },
     {
       "kind": "prop",
+      "description":"提示文字",
       "keywords": [],
       "visibility": "public",
       "name": "placeholder",
@@ -104,9 +95,10 @@
     },
     {
       "kind": "prop",
+      "description":"",
       "keywords": [],
       "visibility": "public",
-      "name": "empty-tips",
+      "name": "empty-text",
       "type": "String",
       "default": "\"无选项\"",
       "required": false,
@@ -119,37 +111,6 @@
       "name": "clear",
       "type": "Boolean",
       "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "def-item",
-      "type": "Number",
-      "default": "0",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "disabled",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "格式化输出 用法 field=\"_id as value, version as text, uni_platform as label\" format=\"{label} - {text}\"",
-      "keywords": [],
-      "visibility": "public",
-      "name": "format",
-      "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     }

@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"实心类型",
       "keywords": [],
       "visibility": "public",
       "name": "is-fill",
@@ -20,6 +21,7 @@
     },
     {
       "kind": "prop",
+      "description":"未选颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -30,6 +32,7 @@
     },
     {
       "kind": "prop",
+      "description":"选中颜色",
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
@@ -40,6 +43,7 @@
     },
     {
       "kind": "prop",
+      "description":"禁用颜色",
       "keywords": [],
       "visibility": "public",
       "name": "disabled-color",
@@ -50,6 +54,7 @@
     },
     {
       "kind": "prop",
+      "description":"星星大小",
       "keywords": [],
       "visibility": "public",
       "name": "size",
@@ -63,6 +68,7 @@
     },
     {
       "kind": "prop",
+      "description":"当前评分",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -76,6 +82,7 @@
     },
     {
       "kind": "prop",
+      "description":"当前评分",
       "keywords": [],
       "visibility": "public",
       "name": "model-value",
@@ -89,6 +96,7 @@
     },
     {
       "kind": "prop",
+      "description":"最大评分数量",
       "keywords": [],
       "visibility": "public",
       "name": "max",
@@ -102,6 +110,7 @@
     },
     {
       "kind": "prop",
+      "description":"间距",
       "keywords": [],
       "visibility": "public",
       "name": "margin",
@@ -115,6 +124,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -128,6 +138,7 @@
     },
     {
       "kind": "prop",
+      "description":"只读状态",
       "keywords": [],
       "visibility": "public",
       "name": "readonly",
@@ -141,6 +152,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否展示半星",
       "keywords": [],
       "visibility": "public",
       "name": "allow-half",
@@ -154,6 +166,7 @@
     },
     {
       "kind": "prop",
+      "description":"支持滑动手势",
       "keywords": [],
       "visibility": "public",
       "name": "touchable",

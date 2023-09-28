@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"显示文字",
       "keywords": [],
       "visibility": "public",
       "name": "text",
@@ -17,6 +18,7 @@
     },
     {
       "kind": "prop",
+      "description":"查看更多",
       "keywords": [],
       "visibility": "public",
       "name": "more-text",
@@ -27,6 +29,7 @@
     },
     {
       "kind": "prop",
+      "description":"背景色",
       "keywords": [],
       "visibility": "public",
       "name": "background-color",
@@ -37,6 +40,7 @@
     },
     {
       "kind": "prop",
+      "description":"滚动速度",
       "keywords": [],
       "visibility": "public",
       "name": "speed",
@@ -47,6 +51,7 @@
     },
     {
       "kind": "prop",
+      "description":"文字颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -57,6 +62,7 @@
     },
     {
       "kind": "prop",
+      "description":"文字大小",
       "keywords": [],
       "visibility": "public",
       "name": "font-size",
@@ -67,6 +73,7 @@
     },
     {
       "kind": "prop",
+      "description":"更多文字颜色",
       "keywords": [],
       "visibility": "public",
       "name": "more-color",
@@ -77,6 +84,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否单行",
       "keywords": [],
       "visibility": "public",
       "name": "single",
@@ -90,6 +98,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否滚动",
       "keywords": [],
       "visibility": "public",
       "name": "scrollable",
@@ -103,6 +112,7 @@
     },
     {
       "kind": "prop",
+      "description":"显示左侧图标",
       "keywords": [],
       "visibility": "public",
       "name": "show-icon",
@@ -116,6 +126,7 @@
     },
     {
       "kind": "prop",
+      "description":"显示右侧图标",
       "keywords": [],
       "visibility": "public",
       "name": "show-get-more",
@@ -129,6 +140,7 @@
     },
     {
       "kind": "prop",
+      "description":"显示左侧按钮",
       "keywords": [],
       "visibility": "public",
       "name": "show-close",

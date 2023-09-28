@@ -39,6 +39,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"显示的内容",
       "keywords": [],
       "visibility": "public",
       "name": "content",
@@ -49,6 +50,7 @@
     },
     {
       "kind": "prop",
+      "description":"出现位置",
       "keywords": [],
       "visibility": "public",
       "name": "placement",

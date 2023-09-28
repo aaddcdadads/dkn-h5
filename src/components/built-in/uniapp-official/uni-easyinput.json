@@ -15,20 +15,11 @@
   "props": [
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "name",
-      "type": "String",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
+      "description":"输入内容",
       "keywords": [],
       "visibility": "public",
       "name": "value",
       "type": [
-        "Number",
         "String"
       ],
       "required": false,
@@ -36,6 +27,7 @@
     },
     {
       "kind": "prop",
+      "description":"输入内容",
       "keywords": [],
       "visibility": "public",
       "name": "model-value",
@@ -48,16 +40,23 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"类型",
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"text\",\"textarea\",\"password\",\"number\",\"idcard\",\"digit\"]"
+        }
+      ],
       "visibility": "public",
       "name": "type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"text\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"显示清空图标",
       "keywords": [],
       "visibility": "public",
       "name": "clearable",
@@ -68,6 +67,7 @@
     },
     {
       "kind": "prop",
+      "description":"自动增高区域",
       "keywords": [],
       "visibility": "public",
       "name": "auto-height",
@@ -78,6 +78,7 @@
     },
     {
       "kind": "prop",
+      "description":"提示文字",
       "keywords": [],
       "visibility": "public",
       "name": "placeholder",
@@ -88,6 +89,7 @@
     },
     {
       "kind": "prop",
+      "description":"提示样式",
       "keywords": [],
       "visibility": "public",
       "name": "placeholder-style",
@@ -97,6 +99,7 @@
     },
     {
       "kind": "prop",
+      "description":"自动获得焦点",
       "keywords": [],
       "visibility": "public",
       "name": "focus",
@@ -107,6 +110,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -117,12 +121,12 @@
     },
     {
       "kind": "prop",
+      "description":"最大输入长度",
       "keywords": [],
       "visibility": "public",
       "name": "maxlength",
       "type": [
-        "Number",
-        "String"
+        "Number"
       ],
       "default": "140",
       "required": false,
@@ -130,6 +134,7 @@
     },
     {
       "kind": "prop",
+      "description":"键盘按钮文字",
       "keywords": [],
       "visibility": "public",
       "name": "confirm-type",
@@ -140,6 +145,7 @@
     },
     {
       "kind": "prop",
+      "description":"清除图标大小",
       "keywords": [],
       "visibility": "public",
       "name": "clear-size",
@@ -153,6 +159,7 @@
     },
     {
       "kind": "prop",
+      "description":"输入框边框",
       "keywords": [],
       "visibility": "public",
       "name": "input-border",
@@ -163,6 +170,7 @@
     },
     {
       "kind": "prop",
+      "description":"头部图标",
       "keywords": [],
       "visibility": "public",
       "name": "prefix-icon",
@@ -173,6 +181,7 @@
     },
     {
       "kind": "prop",
+      "description":"尾部图标",
       "keywords": [],
       "visibility": "public",
       "name": "suffix-icon",
@@ -183,6 +192,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否自动去除空格",
       "keywords": [],
       "visibility": "public",
       "name": "trim",
@@ -196,6 +206,7 @@
     },
     {
       "kind": "prop",
+      "description":"光标与键盘的距离",
       "keywords": [],
       "visibility": "public",
       "name": "cursor-spacing",
@@ -206,21 +217,12 @@
     },
     {
       "kind": "prop",
+      "description":"显示眼睛图标",
       "keywords": [],
       "visibility": "public",
       "name": "password-icon",
       "type": "Boolean",
       "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "primary-color",
-      "type": "String",
-      "default": "\"#2979ff\"",
       "required": false,
       "describeModel": false
     },
@@ -240,7 +242,6 @@
       "visibility": "public",
       "name": "error-message",
       "type": [
-        "String",
         "Boolean"
       ],
       "default": "\"\"",

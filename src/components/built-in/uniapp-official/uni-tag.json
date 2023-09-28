@@ -76,7 +76,13 @@
   "props": [
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"颜色类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"default\",\"primary\",\"success\",\"warning\",\"error\",\"royal\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "type",
       "type": "String",
@@ -86,6 +92,7 @@
     },
     {
       "kind": "prop",
+      "description":"大小尺寸",
       "keywords": [],
       "visibility": "public",
       "name": "size",
@@ -107,6 +114,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否为禁用状态",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -120,6 +128,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否无需背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "inverted",
@@ -133,6 +142,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否为圆角",
       "keywords": [],
       "visibility": "public",
       "name": "circle",
@@ -146,6 +156,7 @@
     },
     {
       "kind": "prop",
+      "description":"标记样式",
       "keywords": [],
       "visibility": "public",
       "name": "mark",
@@ -159,6 +170,7 @@
     },
     {
       "kind": "prop",
+      "description":"自定义样式",
       "keywords": [],
       "visibility": "public",
       "name": "custom-style",

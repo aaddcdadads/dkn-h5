@@ -64,6 +64,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"显示天数",
       "keywords": [],
       "visibility": "public",
       "name": "show-day",
@@ -74,6 +75,7 @@
     },
     {
       "kind": "prop",
+      "description":"冒号为分隔符",
       "keywords": [],
       "visibility": "public",
       "name": "show-colon",
@@ -84,6 +86,7 @@
     },
     {
       "kind": "prop",
+      "description":"开始倒计时",
       "keywords": [],
       "visibility": "public",
       "name": "start",
@@ -94,6 +97,7 @@
     },
     {
       "kind": "prop",
+      "description":"背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "background-color",
@@ -104,6 +108,7 @@
     },
     {
       "kind": "prop",
+      "description":"颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -114,6 +119,7 @@
     },
     {
       "kind": "prop",
+      "description":"",
       "keywords": [],
       "visibility": "public",
       "name": "font-size",
@@ -124,6 +130,7 @@
     },
     {
       "kind": "prop",
+      "description":"分割符号颜色",
       "keywords": [],
       "visibility": "public",
       "name": "splitor-color",
@@ -134,6 +141,7 @@
     },
     {
       "kind": "prop",
+      "description":"天数",
       "keywords": [],
       "visibility": "public",
       "name": "day",
@@ -144,6 +152,7 @@
     },
     {
       "kind": "prop",
+      "description":"小时",
       "keywords": [],
       "visibility": "public",
       "name": "hour",
@@ -154,6 +163,7 @@
     },
     {
       "kind": "prop",
+      "description":"分钟",
       "keywords": [],
       "visibility": "public",
       "name": "minute",
@@ -164,31 +174,12 @@
     },
     {
       "kind": "prop",
+      "description":"秒",
       "keywords": [],
       "visibility": "public",
       "name": "second",
       "type": "Number",
       "default": "0",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "timestamp",
-      "type": "Number",
-      "default": "0",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "zero-pad",
-      "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     }

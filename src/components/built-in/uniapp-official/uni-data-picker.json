@@ -96,19 +96,18 @@
   "props": [
     {
       "kind": "prop",
+      "description":"数据",
       "keywords": [],
       "visibility": "public",
-      "name": "options",
-      "type": [
-        "Object",
-        "Array"
-      ],
-      "default": "function() {\r\n          return {}\r\n        }",
+      "name": "localdata",
+      "type": "Array",
+      "default": "function() {\r\n          return []\r\n        }",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"弹出层标题",
       "keywords": [],
       "visibility": "public",
       "name": "popup-title",
@@ -119,6 +118,7 @@
     },
     {
       "kind": "prop",
+      "description":"占位符",
       "keywords": [],
       "visibility": "public",
       "name": "placeholder",
@@ -129,16 +129,7 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "height-mobile",
-      "type": "String",
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
+      "description":"是否禁用",
       "keywords": [],
       "visibility": "public",
       "name": "readonly",
@@ -149,6 +140,7 @@
     },
     {
       "kind": "prop",
+      "description":"显示清除按钮",
       "keywords": [],
       "visibility": "public",
       "name": "clear-icon",
@@ -159,6 +151,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否有边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",
@@ -169,16 +162,7 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "split",
-      "type": "String",
-      "default": "\"/\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
+      "description":"隐藏过长文本",
       "keywords": [],
       "visibility": "public",
       "name": "ellipsis",
