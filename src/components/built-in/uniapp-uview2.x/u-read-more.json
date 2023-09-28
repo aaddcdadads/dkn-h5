@@ -1,0 +1,282 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般用于内容较长，预先收起一部分，点击展开全部内容的场景。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/readMore.html"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tshowHeight\t内容超出此高度才会显示展开全文按钮，单位px（默认 400 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\ttoggle\t\t展开后是否显示收起按钮（默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tcloseText\t关闭时的提示文字（默认 '展开阅读全文' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\topenText\t展开时的提示文字（默认 '收起' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tcolor\t\t提示文字的颜色（默认 '#2979ff' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tfontSize\t提示文字的大小，单位px （默认 14 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tshadowStyle\t显示阴影的样式"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttextIndent\t段落首行缩进的字符个数 （默认 '2em' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tname\t\t用于在 open 和 close 事件中当作回调参数返回"
+    },
+    {
+      "name": "event",
+      "description": "{Function} open 内容被展开时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} close 内容被收起时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-read-more><rich-text :nodes=\"content\"></rich-text></u-read-more>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toggle",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "展示内容高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showHeight",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示收起按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toggle",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "关闭时提示文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeText",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "展开时提示文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "openText",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "文字的大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fontSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "阴影处理样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "shadowStyle",
+      "type": "Object",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "首行缩进个数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textIndent",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "回调参数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "name",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isLongContent",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "是否需要隐藏一部分内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "status",
+      "type": "string",
+      "initialValue": "\"close\""
+    },
+    {
+      "kind": "data",
+      "description": "当前隐藏与显示的状态，close-收起状态，open-展开状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "elId",
+      "type": "CallExpression",
+      "initialValue": "uni.$u.guid()"
+    },
+    {
+      "kind": "data",
+      "description": "生成唯一class",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentHeight",
+      "type": "number",
+      "initialValue": "100"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "展开后无需阴影，收起时才需要阴影样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "innerShadowStyle",
+      "dependencies": [
+        "status",
+        "shadowStyle"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "description": "发出打开或者收齐的事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "this.status",
+      "arguments": [
+        {
+          "name": "name",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "async init(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取内容的高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getContentHeight",
+      "params": [],
+      "syntax": [
+        "async getContentHeight(): Promise<unknow>"
+      ],
+      "returns": {
+        "type": "Promise<unknow>"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "展开或者收起",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toggleReadMore",
+      "params": [],
+      "syntax": [
+        "toggleReadMore(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-read-more",
+  "description": "readMore 阅读更多"
+}

@@ -1,0 +1,271 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般用于页面顶部向下滑出一个提示，尔后自动收起的场景"
+    },
+    {
+      "name": "tutorial"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\ttop\t\t\t\t\t到顶部的距离 ( 默认 0 )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttype\t\t\t\t主题，primary，success，warning，error ( 默认 'primary' )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tcolor\t\t\t\t字体颜色 ( 默认 '#ffffff' )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tbgColor\t\t\t\t背景颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tmessage\t\t\t\t展示的文字内容"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tduration\t\t\t展示时长，为0时不消失，单位ms ( 默认 3000 )"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tfontSize\t\t\t字体大小 ( 默认 15 )"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tsafeAreaInsetTop\t是否留出顶部安全距离（状态栏高度） ( 默认 false )"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t\t\t组件的样式，对象形式"
+    },
+    {
+      "name": "event",
+      "description": "{Function}\topen\t开启组件时调用的函数"
+    },
+    {
+      "name": "event",
+      "description": "{Function}\tclose\t关闭组件式调用的函数"
+    },
+    {
+      "name": "example",
+      "description": "<u-notify message=\"Hi uView\"></u-notify>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "到顶部距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "top",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "主题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "type",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "字体颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "展示文字内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "message",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "展示时长",
+      "keywords": [],
+      "visibility": "public",
+      "name": "duration",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "字体大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fontSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "顶部安全距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "safeAreaInsetTop",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "description": "是否展示组件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timer",
+      "type": "any",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "config",
+      "type": "object",
+      "initialValue": "{\"top\":{\"type\":\"Object\",\"value\":\"uni.$u.props.notify.top\",\"raw\":\"uni.$u.props.notify.top\"},\"type\":{\"type\":\"Object\",\"value\":\"uni.$u.props.notify.type\",\"raw\":\"uni.$u.props.notify.type\"},\"color\":{\"type\":\"Object\",\"value\":\"uni.$u.props.notify.color\",\"raw\":\"uni.$u.props.notify.color\"},\"bgColor\":{\"type\":\"Object\",\"value\":\"uni.$u.props.notify.bgColor\",\"raw\":\"uni.$u.props.notify.bgColor\"},\"message\":{\"type\":\"Object\",\"value\":\"uni.$u.props.notify.message\",\"raw\":\"uni.$u.props.notify.message\"},\"duration\":{\"type\":\"Object\",\"value\":\"uni.$u.props.notify.duration\",\"raw\":\"uni.$u.props.notify.duration\"},\"fontSize\":{\"type\":\"Object\",\"value\":\"uni.$u.props.notify.fontSize\",\"raw\":\"uni.$u.props.notify.fontSize\"},\"safeAreaInsetTop\":{\"type\":\"Object\",\"value\":\"uni.$u.props.notify.safeAreaInsetTop\",\"raw\":\"uni.$u.props.notify.safeAreaInsetTop\"}}"
+    },
+    {
+      "kind": "data",
+      "description": "合并后的配置，避免多次调用组件后，可能会复用之前使用的配置参数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tmpConfig",
+      "type": "object",
+      "initialValue": "{}"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "containerStyle",
+      "dependencies": [
+        "tmpConfig"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "组件背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "backgroundColor",
+      "dependencies": [
+        "tmpConfig"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "默认主题下的图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "dependencies": [
+        "tmpConfig"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "params": [
+        {
+          "name": "options",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "show(options: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "关闭notify",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearTimer",
+      "params": [],
+      "syntax": [
+        "clearTimer(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-notify",
+  "description": "notify 顶部提示"
+}

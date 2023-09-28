@@ -1,0 +1,294 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "显示内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "text",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "通告模式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "文字颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "字体大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fontSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "滚动速度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "speed",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animationDuration",
+      "type": "string",
+      "initialValue": "\"0\""
+    },
+    {
+      "kind": "data",
+      "description": "动画执行时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animationPlayState",
+      "type": "string",
+      "initialValue": "\"paused\""
+    },
+    {
+      "kind": "data",
+      "description": "不能在内容变化时直接重新计算，因为nvue的animation模块上一次的滚动不是刚好结束，会有影响",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nvueInit",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "boolean",
+      "initialValue": "true"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "文字内容的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textStyle",
+      "dependencies": [
+        "color",
+        "fontSize"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animationStyle",
+      "dependencies": [
+        "animationDuration",
+        "animationPlayState"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "放在一个text标签中进行滚动，在低端安卓机上，动画可能会出现抖动现象，需要分割到多个text中可解决此问题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "innerText",
+      "dependencies": [
+        "text"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "vue版处理",
+      "keywords": [],
+      "visibility": "public",
+      "name": "vue",
+      "params": [],
+      "syntax": [
+        "async vue(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "nvue版处理",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nvue",
+      "params": [],
+      "syntax": [
+        "async nvue(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loopAnimation",
+      "params": [
+        {
+          "name": "textWidth",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "boxWidth",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "loopAnimation(textWidth: unknow, boxWidth: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getNvueRect",
+      "params": [
+        {
+          "name": "el",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getNvueRect(el: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击通告栏",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "clickHandler(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击右侧按钮，需要判断点击的是关闭图标还是箭头图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-row-notice",
+  "description": "#endif"
+}

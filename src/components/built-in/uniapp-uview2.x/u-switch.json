@@ -1,0 +1,282 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "选择开关一般用于只有两个选择，且只能选其一的场景。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/switch.html"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\t\t\t\tloading\t\t\t是否处于加载中（默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\t\t\t\tdisabled\t\t是否禁用（默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\t\t\t\tsize\t\t\t开关尺寸，单位px （默认 25 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\t\t\t\tactiveColor\t\t打开时的背景色 （默认 '#2979ff' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String} \t\t\t\t\t\tinactiveColor\t关闭时的背景色 （默认 '#ffffff' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean | String | Number}\tvalue\t\t\t通过v-model双向绑定的值 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean | String | Number}\tactiveValue\t\t打开选择器时通过change事件发出的值 （默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean | String | Number}\tinactiveValue\t关闭选择器时通过change事件发出的值 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\t\t\t\tasyncChange\t\t是否开启异步变更，开启后需要手动控制输入值 （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\t\t\t\tspace\t\t\t圆点与外边框的距离 （默认 0 ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\t\t\t\tcustomStyle\t\t定义需要用到的外部样式"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change 在switch打开或关闭时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-switch v-model=\"checked\" active-color=\"red\" inactive-color=\"#eee\"></u-switch>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "处于加载中",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loading",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否禁用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "开关尺寸",
+      "keywords": [],
+      "visibility": "public",
+      "name": "size",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "打开时背景色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "activeColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "关闭时背景色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactiveColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "绑定的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "打开时的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "activeValue",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "关闭时的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactiveValue",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否开启异步",
+      "keywords": [],
+      "visibility": "public",
+      "name": "asyncChange",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "圆点与外边框距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "space",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgColor",
+      "type": "string",
+      "initialValue": "\"#ffffff\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isActive",
+      "dependencies": [
+        "value",
+        "activeValue"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "switchStyle",
+      "dependencies": [
+        "size",
+        "value",
+        "customInactiveColor",
+        "isActive",
+        "activeColor",
+        "inactiveColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nodeStyle",
+      "dependencies": [
+        "size",
+        "space",
+        "isActive"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgStyle",
+      "dependencies": [
+        "size",
+        "inactiveColor",
+        "isActive"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "customInactiveColor",
+      "dependencies": [
+        "inactiveColor"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "oldValue",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "oldValue",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [],
+      "syntax": [
+        "clickHandler(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-switch",
+  "description": "switch 开关选择器"
+}

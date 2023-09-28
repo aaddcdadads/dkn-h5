@@ -1,0 +1,208 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "骨架占位图",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loading",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "开启动画效果",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animate",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "占位图行数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rows",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "占位图宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rowsWidth",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "段落高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rowsHeight",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题占位图",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题的宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "titleWidth",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题的高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "titleHeight",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "头像占位图",
+      "keywords": [],
+      "visibility": "public",
+      "name": "avatar",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "占位图大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "avatarSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "占位图的形状",
+      "keywords": [],
+      "visibility": "public",
+      "name": "avatarShape",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rowsArray",
+      "dependencies": [
+        "rowsHeight",
+        "rows",
+        "rowsWidth",
+        "row",
+        "title",
+        "width"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uTitleWidth",
+      "dependencies": [
+        "titleWidth",
+        "width"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setNvueAnimation",
+      "params": [],
+      "syntax": [
+        "async setNvueAnimation(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取组件的宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getComponentWidth",
+      "params": [],
+      "syntax": [
+        "async getComponentWidth(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    }
+  ],
+  "name": "u-skeleton",
+  "description": "#endif"
+}

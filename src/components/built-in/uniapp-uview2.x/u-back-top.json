@@ -1,0 +1,183 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "按钮形状",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"circle\",\"square\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "default":"\"circle\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图片路径",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "提示文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "text",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "过渡时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "duration",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "页面的滚动距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scrollTop",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "滑动距离显示组件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "top",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "位置底部距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bottom",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "右边的距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "按钮的层级",
+      "keywords": [],
+      "visibility": "public",
+      "name": "zIndex",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图标的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconStyle",
+      "type": "Object",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "backTopStyle",
+      "dependencies": [
+        "bottom",
+        "right"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "dependencies": [
+        "scrollTop",
+        "top"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentStyle",
+      "dependencies": [
+        "mode",
+        "customStyle"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "description": "#endif",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "backToTop",
+      "params": [],
+      "syntax": [
+        "backToTop(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-back-top",
+  "description": "#endif"
+}

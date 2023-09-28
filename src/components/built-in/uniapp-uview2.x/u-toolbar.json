@@ -1,0 +1,158 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/toolbar.html"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\tshow\t\t\t是否展示工具条（默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\tcancelText\t\t取消按钮的文字（默认 '取消' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\tconfirmText\t\t确认按钮的文字（默认 '确认' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\tcancelColor\t\t取消按钮的颜色（默认 '#909193' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\tconfirmColor\t确认按钮的颜色（默认 '#3c9cff' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\ttitle\t\t\t标题文字"
+    },
+    {
+      "name": "event",
+      "description": "{Function}"
+    },
+    {
+      "name": "example"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "是否显示",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "取消文字内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancelText",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "确认文字内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirmText",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "取消颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancelColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "确认颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirmColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "点击取消按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel",
+      "params": [],
+      "syntax": [
+        "cancel(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击确定按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "params": [],
+      "syntax": [
+        "confirm(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-toolbar",
+  "description": "Toolbar 工具条"
+}

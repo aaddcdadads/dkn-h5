@@ -1,0 +1,75 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "进度百分比",
+      "keywords": [],
+      "visibility": "public",
+      "name": "percentage",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "leftBorderColor",
+      "type": "string",
+      "initialValue": "\"rgb(200, 200, 200)\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightBorderColor",
+      "type": "string",
+      "initialValue": "\"rgb(200, 200, 200)\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "leftSyle",
+      "dependencies": [
+        "leftBorderColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightSyle",
+      "dependencies": [
+        "rightBorderColor"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-circle-progress",
+  "description": "#endif"
+}

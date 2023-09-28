@@ -1,0 +1,65 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "本组件主要用于状态填充，比如在自定导航栏的时候，它会自动适配一个恰当的状态栏高度。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://uviewui.com/components/statusBar.html"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tbgColor\t\t\t背景色 (默认 'transparent' )"
+    },
+    {
+      "name": "property",
+      "description": "{String | Object}\tcustomStyle\t\t自定义样式"
+    },
+    {
+      "name": "example",
+      "description": "<u-status-bar></u-status-bar>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "背景色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "style",
+      "dependencies": [
+        "bgColor",
+        "customStyle"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [],
+  "name": "u-status-bar",
+  "description": "StatbusBar 状态栏占位"
+}

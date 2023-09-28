@@ -1,0 +1,330 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般使用于某个活动的截止时间上，通过数字的变化，给用户明确的时间感受，提示用户进行某一个行为操作。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://uviewui.com/components/countDown.html"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\ttime\t\t倒计时时长，单位ms （默认 0 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tformat\t\t时间格式，DD-日，HH-时，mm-分，ss-秒，SSS-毫秒  （默认 'HH:mm:ss' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tautoStart\t是否自动开始倒计时 （默认 true ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tmillisecond\t是否展示毫秒倒计时 （默认 false ）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} finish 倒计时结束时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change 倒计时变化时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} start\t开始倒计时"
+    },
+    {
+      "name": "event",
+      "description": "{Function} pause\t暂停倒计时"
+    },
+    {
+      "name": "event",
+      "description": "{Function} reset\t重设倒计时，若 auto-start 为 true，重设后会自动开始倒计时"
+    },
+    {
+      "name": "example",
+      "description": "<u-count-down :time=\"time\"></u-count-down>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "倒计时时长",
+      "keywords": [],
+      "visibility": "public",
+      "name": "time",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "时间格式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "format",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自动倒计时",
+      "keywords": [],
+      "visibility": "public",
+      "name": "autoStart",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否展示毫秒倒计时",
+      "keywords": [],
+      "visibility": "public",
+      "name": "millisecond",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timer",
+      "type": "any",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "description": "各单位(天，时，分等)剩余时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timeData",
+      "type": "parseTimeData",
+      "initialValue": "parseTimeData(0)"
+    },
+    {
+      "kind": "data",
+      "description": "格式化后的时间，如\"03:23:21\"",
+      "keywords": [],
+      "visibility": "public",
+      "name": "formattedTime",
+      "type": "string",
+      "initialValue": "\"0\""
+    },
+    {
+      "kind": "data",
+      "description": "倒计时是否正在进行中",
+      "keywords": [],
+      "visibility": "public",
+      "name": "runing",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "endTime",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "description": "结束的毫秒时间戳",
+      "keywords": [],
+      "visibility": "public",
+      "name": "remainTime",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "timeData",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "finish",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "开始倒计时",
+      "keywords": [],
+      "visibility": "public",
+      "name": "start",
+      "params": [],
+      "syntax": [
+        "start(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "根据是否展示毫秒，执行不同操作函数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toTick",
+      "params": [],
+      "syntax": [
+        "toTick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "macroTick",
+      "params": [],
+      "syntax": [
+        "macroTick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "microTick",
+      "params": [],
+      "syntax": [
+        "microTick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取剩余的时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getRemainTime",
+      "params": [],
+      "syntax": [
+        "getRemainTime(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "设置剩余的时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setRemainTime",
+      "params": [
+        {
+          "name": "remain",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setRemainTime(remain: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "重置倒计时",
+      "keywords": [],
+      "visibility": "public",
+      "name": "reset",
+      "params": [],
+      "syntax": [
+        "reset(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "暂停倒计时",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pause",
+      "params": [],
+      "syntax": [
+        "pause(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "清空定时器",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearTimeout",
+      "params": [],
+      "syntax": [
+        "clearTimeout(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-count-down",
+  "description": "u-count-down 倒计时"
+}

@@ -1,0 +1,138 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "此组件一般用于显示一根线条，用于分隔内容块，有横向和竖向两种模式，且能设置0.5px线条，使用也很简单"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/line.html"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tcolor\t\t线条的颜色 ( 默认 '#d6d7d9' )"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tlength\t\t长度，竖向时表现为高度，横向时表现为长度，可以为百分比，带px单位的值等 ( 默认 '100%' )"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tdirection\t线条的方向，row-横向，col-竖向 (默认 'row' )"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\thairline\t是否显示细线条 (默认 true )"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tmargin\t\t线条与上下左右元素的间距，字符串形式，如\"30px\"  (默认 0 )"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tdashed\t\t是否虚线，true-虚线，false-实线 (默认 false )"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t定义需要用到的外部样式"
+    },
+    {
+      "name": "example",
+      "description": "<u-line color=\"red\"></u-line>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "线条的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "长度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "length",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "线条的方向",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"row\",\"col\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "direction",
+      "type": "String",
+      "default":"\"row\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示细边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hairline",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "间距",
+      "keywords": [],
+      "visibility": "public",
+      "name": "margin",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否虚线",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dashed",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lineStyle",
+      "dependencies": [
+        "margin",
+        "direction",
+        "dashed",
+        "length",
+        "hairline",
+        "color",
+        "customStyle"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [],
+  "name": "u-line",
+  "description": "line 线条"
+}
