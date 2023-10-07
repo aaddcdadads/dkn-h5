@@ -36,7 +36,7 @@ function setEnvConfig(config) {
     if (globalParams.length === 0) return
 
     globalParams.forEach(item => {
-        item.name && item.enabled && (config.headers[item.name] = item.default);
+        item.name && item.enabled && (config.header[item.name] = item.default);
     })
 }
 
