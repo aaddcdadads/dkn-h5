@@ -20,6 +20,26 @@ function setGlobal(config) {
     }
 }
 
+function setEnvConfig(config) {
+    let projectItem = uni.getStorageSync("projectItem")
+    if(!projectItem){
+        return
+    }
+    const params = JSON.parse(
+        JSON.parse(uni.getStorageSync("projectItem")).params
+    );
+
+    if (!params.globalParams) return
+
+    let globalParams = params.globalParams.Header;
+
+    if (globalParams.length === 0) return
+
+    globalParams.forEach(item => {
+        item.name && item.enabled && (config.headers[item.name] = item.default);
+    })
+}
+
 /**
  * 转换成代理的请求
  * @param {*} config
@@ -110,6 +130,7 @@ uni.addInterceptor('request', {
         setJeecgAuth(config)
         setBlockDesignAuth(config)
         // setEleAdminAuth(config)
+        setEnvConfig(config);
 
         if(window) {
           transformAxiosRequest(config)
