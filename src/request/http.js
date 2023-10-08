@@ -4,6 +4,10 @@ import {
     BLOCK_DESIGN_TOKEN
 } from "../store/mutation-types";
 
+/**
+ * 设置全局配置
+ * @param {*} config 
+ */
 function setGlobal(config) {
     // 配置基础路径
     let baseUrl = ''
@@ -21,31 +25,42 @@ function setGlobal(config) {
 }
 
 /**
+ * 设置设计云环境变量，projectItem为设计云项目的params属性
+ * @param {*} config 
+ * @returns 
+ */
+function setEnvConfig(config) {
+    let projectItem = uni.getStorageSync("projectItem")
+    if(!projectItem){
+        return
+    }
+    const params = JSON.parse(
+        JSON.parse(uni.getStorageSync("projectItem")).params
+    );
+
+    if (!params.globalParams) return
+
+    let globalParams = params.globalParams.Header;
+
+    if (globalParams.length === 0) return
+
+    globalParams.forEach(item => {
+        item.name && item.enabled && (config.header[item.name] = item.default);
+    })
+}
+
+/**
  * 转换成代理的请求
  * @param {*} config
  * @returns
  */
 function transformAxiosRequest(config) {
-    if(!config.url) return;
-
-    if (!window) {
-      return;
-    }
-
-    // 本地调试不转换
-    let host = window.location.host;
-    if (host.indexOf('localhost') !== -1 
-      || host.indexOf('127.0.0.1') !== -1 
-      || host.indexOf('192.168') !== -1) {
-      return;
-    }
-
-    console.log('转换前的Url:  ',config.url, config)
+    if(!localStorage.getItem("projectItem")) return config;
+    if (!config.url) return config;
     //转换proxy
     transformUrlProxy(config)
-    console.log('转换后的Url:  ',config.url, config)
     // 相对路径拼接本地域名
-    if(config.url.indexOf(":") == -1){
+    if (config.url.indexOf(":") == -1) {
         config.url = window.location.protocol + '//' + window.location.host + config.url
     }
     let url = new URL(config.url);
@@ -56,20 +71,22 @@ function transformAxiosRequest(config) {
     VueCookieNext.setCookie('x-project-api-hostname', url.hostname);
     VueCookieNext.setCookie('x-project-api-port', port);
     config.url = `/project-api${url.pathname}`;
-    console.log('最终的Url:  ',config.url, config)
     return config;
 }
 
 function transformUrlProxy(config) {
-  if(!localStorage.getItem('pro__msg')) return;
+  const params = JSON.parse(
+    JSON.parse(localStorage.getItem("projectItem")).params
+  );
+  
+  console.log("params",params)
+  if (params.currentEnvConfig === "") return
 
-  let { proxy } = JSON.parse(JSON.parse(localStorage.getItem('pro__msg')).value)
-
-  if(!proxy) return;
-
-  proxy.forEach(item => {
-    config.url = config.url.indexOf(item[0]) == 0 ? `${item[1]}${config.url}` : config.url
+  params.envConfigs[params.currentEnvConfig].proxyConfig.forEach(item => {
+    config.url = config.url.indexOf(item.prefix) == 0 ? `${item.target}${config.url}` : config.url
   })
+
+  console.log("config.url",config.url)
 }
 
 function setJeecgAuth(config) {
@@ -110,6 +127,7 @@ uni.addInterceptor('request', {
         setJeecgAuth(config)
         setBlockDesignAuth(config)
         // setEleAdminAuth(config)
+        setEnvConfig(config);
 
         if(window) {
           transformAxiosRequest(config)
