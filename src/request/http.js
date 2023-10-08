@@ -4,6 +4,10 @@ import {
     BLOCK_DESIGN_TOKEN
 } from "../store/mutation-types";
 
+/**
+ * 设置全局配置
+ * @param {*} config 
+ */
 function setGlobal(config) {
     // 配置基础路径
     let baseUrl = ''
@@ -20,6 +24,11 @@ function setGlobal(config) {
     }
 }
 
+/**
+ * 设置设计云环境变量，projectItem为设计云项目的params属性
+ * @param {*} config 
+ * @returns 
+ */
 function setEnvConfig(config) {
     let projectItem = uni.getStorageSync("projectItem")
     if(!projectItem){
