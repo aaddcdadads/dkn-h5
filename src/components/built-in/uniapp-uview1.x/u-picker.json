@@ -100,7 +100,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "picker中需要显示的参数",
+      "description": "参数",
       "keywords": [],
       "visibility": "public",
       "name": "params",
@@ -111,7 +111,7 @@
     },
     {
       "kind": "prop",
-      "description": "当mode=selector或者mode=multiSelector时，提供的数组",
+      "description": "自定义选择的数据",
       "keywords": [],
       "visibility": "public",
       "name": "range",
@@ -122,7 +122,7 @@
     },
     {
       "kind": "prop",
-      "description": "当mode=selector或者mode=multiSelector时，提供的默认选中的下标",
+      "description": "默认选中的下标",
       "keywords": [],
       "visibility": "public",
       "name": "default-selector",
@@ -133,7 +133,7 @@
     },
     {
       "kind": "prop",
-      "description": "当 range 是一个 Array＜Object＞ 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容",
+      "description": "选择器显示内容",
       "keywords": [],
       "visibility": "public",
       "name": "range-key",
@@ -144,11 +144,16 @@
     },
     {
       "kind": "prop",
-      "description": "模式选择，region-地区类型，time-时间类型，selector-单列模式，multiSelector-多列模式",
-      "keywords": [],
+      "description": "模式选择",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"region\", \"selector\", \"multiSelector\",\"time\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"time\"",
       "required": false,
       "describeModel": false
@@ -183,7 +188,7 @@
     },
     {
       "kind": "prop",
-      "description": "\"取消\"按钮的颜色",
+      "description": "\"取消\"按钮颜色",
       "keywords": [],
       "visibility": "public",
       "name": "cancel-color",
@@ -194,7 +199,7 @@
     },
     {
       "kind": "prop",
-      "description": "\"确定\"按钮的颜色",
+      "description": "\"确定\"按钮颜色",
       "keywords": [],
       "visibility": "public",
       "name": "confirm-color",
@@ -205,7 +210,7 @@
     },
     {
       "kind": "prop",
-      "description": "默认显示的时间，2025-07-02 || 2025-07-02 13:01:00 || 2025/07/02",
+      "description": "默认显示时间",
       "keywords": [],
       "visibility": "public",
       "name": "default-time",
@@ -216,7 +221,7 @@
     },
     {
       "kind": "prop",
-      "description": "默认显示的地区，可传类似[\"河北省\", \"秦皇岛市\", \"北戴河区\"]",
+      "description": "默认显示地区",
       "keywords": [],
       "visibility": "public",
       "name": "default-region",
@@ -227,7 +232,7 @@
     },
     {
       "kind": "prop",
-      "description": "时间模式时，是否显示后面的年月日中文提示",
+      "description": "时间模式时",
       "keywords": [],
       "visibility": "public",
       "name": "show-time-tag",
@@ -238,7 +243,7 @@
     },
     {
       "kind": "prop",
-      "description": "默认显示地区的编码，defaultRegion和areaCode同时存在，areaCode优先，可传类似[\"13\", \"1303\", \"130304\"]",
+      "description": "默认显示地区的编码",
       "keywords": [],
       "visibility": "public",
       "name": "area-code",
@@ -249,6 +254,7 @@
     },
     {
       "kind": "prop",
+      "description":"底部安全区适配",
       "keywords": [],
       "visibility": "public",
       "name": "safe-area-inset-bottom",
@@ -259,7 +265,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否允许通过点击遮罩关闭Picker",
+      "description": "点击遮罩关闭",
       "keywords": [],
       "visibility": "public",
       "name": "mask-close-able",
@@ -270,7 +276,7 @@
     },
     {
       "kind": "prop",
-      "description": "通过双向绑定控制组件的弹出与收起",
+      "description": "弹出与收起",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -281,7 +287,7 @@
     },
     {
       "kind": "prop",
-      "description": "弹出的z-index值",
+      "description": "z-index值",
       "keywords": [],
       "visibility": "public",
       "name": "z-index",
@@ -306,7 +312,7 @@
     },
     {
       "kind": "prop",
-      "description": "取消按钮的文字",
+      "description": "取消按钮文字",
       "keywords": [],
       "visibility": "public",
       "name": "cancel-text",
@@ -317,7 +323,7 @@
     },
     {
       "kind": "prop",
-      "description": "确认按钮的文字",
+      "description": "确认按钮文字",
       "keywords": [],
       "visibility": "public",
       "name": "confirm-text",

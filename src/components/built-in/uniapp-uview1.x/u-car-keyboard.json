@@ -7,7 +7,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否打乱键盘按键的顺序",
+      "description": "打乱按键顺序",
       "keywords": [],
       "visibility": "public",
       "name": "random",

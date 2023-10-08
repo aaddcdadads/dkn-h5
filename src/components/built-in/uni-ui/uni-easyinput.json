@@ -1,0 +1,791 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"输入内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": [
+        "String"
+      ],
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"输入内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "model-value",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"类型",
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"text\",\"textarea\",\"password\",\"number\",\"idcard\",\"digit\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "type",
+      "type": "Enum",
+      "default": "\"text\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"显示清空图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearable",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"自动增高区域",
+      "keywords": [],
+      "visibility": "public",
+      "name": "auto-height",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"提示文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder",
+      "type": "String",
+      "default": "\" \"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"提示样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder-style",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"自动获得焦点",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否禁用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"最大输入长度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maxlength",
+      "type": [
+        "Number"
+      ],
+      "default": "140",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"键盘按钮文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-type",
+      "type": "String",
+      "default": "\"done\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"清除图标大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "24",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"输入框边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input-border",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"头部图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "prefix-icon",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"尾部图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "suffix-icon",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否自动去除空格",
+      "keywords": [],
+      "visibility": "public",
+      "name": "trim",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"光标与键盘的距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cursor-spacing",
+      "type": "Number",
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"显示眼睛图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "password-icon",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "styles",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {\r\n\t\t\t\t\tcolor: '#333',\r\n\t\t\t\t\tbackgroundColor: '#fff',\r\n\t\t\t\t\tdisableColor: '#F7F6F6',\r\n\t\t\t\t\tborderColor: '#e5e5e5'\r\n\t\t\t\t};\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error-message",
+      "type": [
+        "Boolean"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focused",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "val",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showMsg",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isFirstBorder",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showClearIcon",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showPassword",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focusShow",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "localMsg",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isEnter",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "输入框内是否有值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isVal",
+      "dependencies": [
+        "val"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "msg",
+      "dependencies": [
+        "form",
+        "formItem",
+        "errorMessage",
+        "localMsg"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "因为uniapp的input组件的maxlength组件必须要数值，这里转为数值，用户可以传入字符串数值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputMaxlength",
+      "dependencies": [
+        "maxlength"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "处理外层样式的style",
+      "keywords": [],
+      "visibility": "public",
+      "name": "boxStyle",
+      "dependencies": [
+        "inputBorder",
+        "msg",
+        "styles"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "input 内容的类和样式处理",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputContentClass",
+      "dependencies": [
+        "inputBorder",
+        "msg",
+        "type",
+        "disabled",
+        "focusShow"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputContentStyle",
+      "dependencies": [
+        "focusShow",
+        "primaryColor",
+        "styles",
+        "inputBorder",
+        "msg",
+        "disabled"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "input右侧样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputStyle",
+      "dependencies": [
+        "type",
+        "clearable",
+        "prefixIcon"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconClick",
+      "arguments": [
+        {
+          "name": "type",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "eyes",
+      "arguments": [
+        {
+          "name": "showPassword",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "TODO 兼容 vue2",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "TODO　兼容　vue3",
+      "keywords": [],
+      "visibility": "public",
+      "name": "update:modelValue",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "arguments": [
+        {
+          "name": "null",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blur",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "点击叉号触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "keyboardheightchange",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "初始化变量值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击图标时触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClickIcon",
+      "params": [
+        {
+          "name": "type",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onClickIcon(type: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "显示隐藏内容，密码框时生效",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onEyes",
+      "params": [],
+      "syntax": [
+        "onEyes(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "输入时触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onInput",
+      "params": [
+        {
+          "name": "event",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onInput(event: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "外部调用方法\n获取焦点时触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onFocus",
+      "params": [
+        {
+          "name": "event",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onFocus(event: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_Focus",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_Focus(event: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "外部调用方法\n失去焦点时触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onBlur",
+      "params": [
+        {
+          "name": "event",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onBlur(event: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_Blur",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_Blur(event: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "按下键盘的发送键",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onConfirm",
+      "params": [
+        {
+          "name": "e",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onConfirm(e: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "清理内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClear",
+      "params": [
+        {
+          "name": "event",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onClear(event: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "键盘高度发生变化的时候触发此事件\n兼容性：微信小程序2.7.0+、App 3.1.0+",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onkeyboardheightchange",
+      "params": [
+        {
+          "name": "event",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onkeyboardheightchange(event: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "去除空格",
+      "keywords": [],
+      "visibility": "public",
+      "name": "trimStr",
+      "params": [
+        {
+          "name": "str",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "pos",
+          "type": "string",
+          "defaultValue": "\"both\"",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "trimStr(str: unknow, pos: string = \"both\"): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    }
+  ],
+  "name": "uni-easyinput",
+  "model": {
+    "kind": "model",
+    "keywords": [],
+    "prop": "modelValue",
+    "event": "update:modelValue",
+    "visibility": "public"
+  }
+}

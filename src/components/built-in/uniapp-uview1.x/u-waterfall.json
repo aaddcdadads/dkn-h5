@@ -43,6 +43,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"传递参数",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -67,7 +68,7 @@
     },
     {
       "kind": "prop",
-      "description": "那么该把idKey设置为idx",
+      "description": "唯一值的键名",
       "keywords": [],
       "visibility": "public",
       "name": "id-key",

@@ -144,7 +144,7 @@
     },
     {
       "kind": "prop",
-      "description": "步进值，每次加或减的值",
+      "description": "步进值",
       "keywords": [],
       "visibility": "public",
       "name": "step",
@@ -155,7 +155,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否禁用加减操作",
+      "description": "禁用加减操作",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -166,7 +166,7 @@
     },
     {
       "kind": "prop",
-      "description": "input的字体大小，单位rpx",
+      "description": "字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "size",
@@ -180,7 +180,7 @@
     },
     {
       "kind": "prop",
-      "description": "加减图标的颜色",
+      "description": "加减图标颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -191,7 +191,7 @@
     },
     {
       "kind": "prop",
-      "description": "input宽度，单位rpx",
+      "description": "宽度",
       "keywords": [],
       "visibility": "public",
       "name": "input-width",
@@ -205,7 +205,7 @@
     },
     {
       "kind": "prop",
-      "description": "input高度，单位rpx",
+      "description": "高度",
       "keywords": [],
       "visibility": "public",
       "name": "input-height",
@@ -219,7 +219,7 @@
     },
     {
       "kind": "prop",
-      "description": "index索引，用于列表中使用，让用户知道是哪个numberbox发生了变化，一般使用for循环出来的index值即可",
+      "description": "index索引",
       "keywords": [],
       "visibility": "public",
       "name": "index",
@@ -233,7 +233,7 @@
     },
     {
       "kind": "prop",
-      "description": "设置disabled为false，disabledInput为true即可",
+      "description": "是否禁止输入",
       "keywords": [],
       "visibility": "public",
       "name": "disabled-input",
@@ -244,7 +244,7 @@
     },
     {
       "kind": "prop",
-      "description": "输入框于键盘之间的距离",
+      "description": "输入框与键盘的距离",
       "keywords": [],
       "visibility": "public",
       "name": "cursor-spacing",
@@ -258,7 +258,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否开启长按连续递增或递减",
+      "description": "长按连续加减",
       "keywords": [],
       "visibility": "public",
       "name": "long-press",
@@ -269,7 +269,7 @@
     },
     {
       "kind": "prop",
-      "description": "开启长按触发后，每触发一次需要多久",
+      "description": "长按执行时间",
       "keywords": [],
       "visibility": "public",
       "name": "press-time",
@@ -283,7 +283,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否只能输入大于或等于0的整数(正整数)",
+      "description": "只能输入正整数",
       "keywords": [],
       "visibility": "public",
       "name": "positive-integer",

@@ -36,6 +36,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"背景色",
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
@@ -60,7 +61,7 @@
     },
     {
       "kind": "prop",
-      "description": "与上一个组件的距离",
+      "description": "组件的上边距",
       "keywords": [],
       "visibility": "public",
       "name": "margin-top",
@@ -74,7 +75,7 @@
     },
     {
       "kind": "prop",
-      "description": "与下一个组件的距离",
+      "description": "组件的下边距",
       "keywords": [],
       "visibility": "public",
       "name": "margin-bottom",

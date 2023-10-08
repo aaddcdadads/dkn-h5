@@ -77,7 +77,7 @@
     },
     {
       "kind": "prop",
-      "description": "正在倒计时中的提示",
+      "description": "倒计时的提示",
       "keywords": [],
       "visibility": "public",
       "name": "change-text",
@@ -88,7 +88,7 @@
     },
     {
       "kind": "prop",
-      "description": "倒计时结束时的提示",
+      "description": "结束时的提示",
       "keywords": [],
       "visibility": "public",
       "name": "end-text",
@@ -99,7 +99,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否在H5刷新或各端返回再进入时继续倒计时",
+      "description": "继续倒计时",
       "keywords": [],
       "visibility": "public",
       "name": "keep-running",
@@ -110,7 +110,7 @@
     },
     {
       "kind": "prop",
-      "description": "为了区分多个页面，或者一个页面多个倒计时组件本地存储的继续倒计时变了",
+      "description": "区分多个倒计时",
       "keywords": [],
       "visibility": "public",
       "name": "unique-key",

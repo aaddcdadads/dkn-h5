@@ -75,7 +75,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示加载中的图标",
+      "description": "显示加载中图标",
       "keywords": [],
       "visibility": "public",
       "name": "icon",
@@ -108,22 +108,32 @@
     },
     {
       "kind": "prop",
-      "description": "组件状态，loadmore-加载前的状态，loading-加载中的状态，nomore-没有更多的状态",
-      "keywords": [],
+      "description": "组件状态",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"loadmore\", \"loading\", \"nomore\"]"
+        }
+      ],
       "visibility": "public",
       "name": "status",
-      "type": "String",
+      "type": "Enum",
       "default": "\"loadmore\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "加载中状态的图标，flower-花朵状图标，circle-圆圈状图标",
-      "keywords": [],
+      "description": "图标类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"flower\", \"circle\"]"
+        }
+      ],
       "visibility": "public",
       "name": "icon-type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"circle\"",
       "required": false,
       "describeModel": false
@@ -141,7 +151,7 @@
     },
     {
       "kind": "prop",
-      "description": "在“没有更多”状态下，是否显示粗点",
+      "description": "是否显示●点",
       "keywords": [],
       "visibility": "public",
       "name": "is-dot",
@@ -152,7 +162,7 @@
     },
     {
       "kind": "prop",
-      "description": "加载中显示圆圈动画时，动画的颜色",
+      "description": "动画图标颜色",
       "keywords": [],
       "visibility": "public",
       "name": "icon-color",
@@ -191,7 +201,7 @@
     },
     {
       "kind": "prop",
-      "description": "高度，单位rpx",
+      "description": "高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",

@@ -102,7 +102,7 @@
     },
     {
       "kind": "prop",
-      "description": "通过双向绑定控制组件的弹出与收起",
+      "description": "弹出与收起",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -113,7 +113,7 @@
     },
     {
       "kind": "prop",
-      "description": "\"取消\"按钮的颜色",
+      "description": "取消按钮颜色",
       "keywords": [],
       "visibility": "public",
       "name": "cancel-color",
@@ -124,7 +124,7 @@
     },
     {
       "kind": "prop",
-      "description": "\"确定\"按钮的颜色",
+      "description": "确定按钮颜色",
       "keywords": [],
       "visibility": "public",
       "name": "confirm-color",
@@ -135,7 +135,7 @@
     },
     {
       "kind": "prop",
-      "description": "弹出的z-index值",
+      "description": "z-index值",
       "keywords": [],
       "visibility": "public",
       "name": "z-index",
@@ -149,6 +149,7 @@
     },
     {
       "kind": "prop",
+      "description":"底部安全区适配",
       "keywords": [],
       "visibility": "public",
       "name": "safe-area-inset-bottom",
@@ -159,7 +160,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否允许通过点击遮罩关闭Picker",
+      "description": "点击遮罩关闭",
       "keywords": [],
       "visibility": "public",
       "name": "mask-close-able",
@@ -170,7 +171,7 @@
     },
     {
       "kind": "prop",
-      "description": "提供的默认选中的下标",
+      "description": "默认选中下标",
       "keywords": [],
       "visibility": "public",
       "name": "default-value",
@@ -181,18 +182,23 @@
     },
     {
       "kind": "prop",
-      "description": "模式选择，single-column-单列，mutil-column-多列，mutil-column-auto-多列联动",
-      "keywords": [],
+      "description": "模式选择",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"single-column\", \"mutil-column\", \"mutil-column-auto\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"single-column\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "自定义value属性名",
+      "description": "value属性名",
       "keywords": [],
       "visibility": "public",
       "name": "value-name",
@@ -203,7 +209,7 @@
     },
     {
       "kind": "prop",
-      "description": "自定义label属性名",
+      "description": "label属性名",
       "keywords": [],
       "visibility": "public",
       "name": "label-name",
@@ -214,7 +220,7 @@
     },
     {
       "kind": "prop",
-      "description": "自定义多列联动模式的children属性名",
+      "description": "children属性名",
       "keywords": [],
       "visibility": "public",
       "name": "child-name",
@@ -236,7 +242,7 @@
     },
     {
       "kind": "prop",
-      "description": "取消按钮的文字",
+      "description": "取消按钮文字",
       "keywords": [],
       "visibility": "public",
       "name": "cancel-text",
@@ -247,7 +253,7 @@
     },
     {
       "kind": "prop",
-      "description": "确认按钮的文字",
+      "description": "确认按钮文字",
       "keywords": [],
       "visibility": "public",
       "name": "confirm-text",

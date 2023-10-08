@@ -64,7 +64,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "点击遮罩是否可以关闭actionsheet",
+      "description": "点击遮罩关闭",
       "keywords": [],
       "visibility": "public",
       "name": "mask-close-able",
@@ -75,7 +75,7 @@
     },
     {
       "kind": "prop",
-      "description": "按钮的文字数组，可以自定义颜色和字体大小，字体单位为rpx",
+      "description": "按钮文字数组",
       "keywords": [],
       "visibility": "public",
       "name": "list",
@@ -86,7 +86,7 @@
     },
     {
       "kind": "prop",
-      "description": "顶部的提示文字",
+      "description": "顶部提示文字",
       "keywords": [],
       "visibility": "public",
       "name": "tips",
@@ -97,7 +97,7 @@
     },
     {
       "kind": "prop",
-      "description": "底部的取消按钮",
+      "description": "底部取消按钮",
       "keywords": [],
       "visibility": "public",
       "name": "cancel-btn",
@@ -108,7 +108,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否开启底部安全区适配，开启的话，会在iPhoneX机型底部添加一定的内边距",
+      "description": "底部安全区适配",
       "keywords": [],
       "visibility": "public",
       "name": "safe-area-inset-bottom",
@@ -119,7 +119,7 @@
     },
     {
       "kind": "prop",
-      "description": "通过双向绑定控制组件的弹出与收起",
+      "description": "组件弹出收起",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -130,7 +130,7 @@
     },
     {
       "kind": "prop",
-      "description": "弹出的顶部圆角值",
+      "description": "顶部圆角值",
       "keywords": [],
       "visibility": "public",
       "name": "border-radius",
@@ -144,7 +144,7 @@
     },
     {
       "kind": "prop",
-      "description": "弹出的z-index值",
+      "description": "层级值",
       "keywords": [],
       "visibility": "public",
       "name": "z-index",
@@ -158,7 +158,7 @@
     },
     {
       "kind": "prop",
-      "description": "取消按钮的文字提示",
+      "description": "按钮文字提示",
       "keywords": [],
       "visibility": "public",
       "name": "cancel-text",

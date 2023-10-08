@@ -159,15 +159,18 @@
   "props": [
     {
       "kind": "prop",
+      "description":"左边的图标",
       "keywords": [],
       "visibility": "public",
       "name": "icon",
       "type": "String",
+      "default":"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"右边的图标",
       "keywords": [],
       "visibility": "public",
       "name": "right-icon",
@@ -177,7 +180,7 @@
     },
     {
       "kind": "prop",
-      "description": "},",
+      "description": "是否必填",
       "keywords": [],
       "visibility": "public",
       "name": "required",
@@ -187,6 +190,7 @@
     },
     {
       "kind": "prop",
+      "description": "左侧标题",
       "keywords": [],
       "visibility": "public",
       "name": "label",
@@ -196,6 +200,7 @@
     },
     {
       "kind": "prop",
+      "description": "密码输入方式",
       "keywords": [],
       "visibility": "public",
       "name": "password",
@@ -205,6 +210,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否显示清空",
       "keywords": [],
       "visibility": "public",
       "name": "clearable",
@@ -215,7 +221,7 @@
     },
     {
       "kind": "prop",
-      "description": "左边标题的宽度单位rpx",
+      "description": "左边标题宽度",
       "keywords": [],
       "visibility": "public",
       "name": "label-width",
@@ -229,8 +235,13 @@
     },
     {
       "kind": "prop",
-      "description": "对齐方式，left|center|right",
-      "keywords": [],
+      "description": "对齐方式",
+      "keywords": [
+        {
+          "name":"options",
+          "description": "[\"left\",\"center\",\"right\"]"
+        }
+      ],
       "visibility": "public",
       "name": "label-align",
       "type": "String",
@@ -240,7 +251,13 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"内容对齐方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\",\"center\",\"right\"]"
+        }
+      ],
       "visibility": "public",
       "name": "input-align",
       "type": "String",
@@ -250,6 +267,7 @@
     },
     {
       "kind": "prop",
+      "description":"图标的颜色",
       "keywords": [],
       "visibility": "public",
       "name": "icon-color",
@@ -260,6 +278,7 @@
     },
     {
       "kind": "prop",
+      "description":"自动增高",
       "keywords": [],
       "visibility": "public",
       "name": "auto-height",
@@ -270,6 +289,7 @@
     },
     {
       "kind": "prop",
+      "description":"错误提示",
       "keywords": [],
       "visibility": "public",
       "name": "error-message",
@@ -283,6 +303,7 @@
     },
     {
       "kind": "prop",
+      "description":"提示文字",
       "keywords": [],
       "visibility": "public",
       "name": "placeholder",
@@ -292,6 +313,7 @@
     },
     {
       "kind": "prop",
+      "description":"placeholder的样式",
       "keywords": [],
       "visibility": "public",
       "name": "placeholder-style",
@@ -301,6 +323,7 @@
     },
     {
       "kind": "prop",
+      "description":"自动获得焦点",
       "keywords": [],
       "visibility": "public",
       "name": "focus",
@@ -310,6 +333,7 @@
     },
     {
       "kind": "prop",
+      "description":"固定定位",
       "keywords": [],
       "visibility": "public",
       "name": "fixed",
@@ -319,6 +343,7 @@
     },
     {
       "kind": "prop",
+      "description":"",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -331,6 +356,7 @@
     },
     {
       "kind": "prop",
+      "description":"类型",
       "keywords": [],
       "visibility": "public",
       "name": "type",
@@ -341,6 +367,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否不可输入",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -351,6 +378,7 @@
     },
     {
       "kind": "prop",
+      "description":"最大输入长度",
       "keywords": [],
       "visibility": "public",
       "name": "maxlength",
@@ -364,6 +392,7 @@
     },
     {
       "kind": "prop",
+      "description":"键盘右下角文字",
       "keywords": [],
       "visibility": "public",
       "name": "confirm-type",
@@ -374,8 +403,13 @@
     },
     {
       "kind": "prop",
-      "description": "lable的位置，可选为 left-左边，top-上边",
-      "keywords": [],
+      "description": "lable的位置",
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"left\",\"top\"]"
+        }
+      ],
       "visibility": "public",
       "name": "label-position",
       "type": "String",
@@ -385,7 +419,7 @@
     },
     {
       "kind": "prop",
-      "description": "输入框的自定义样式",
+      "description": "输入框样式",
       "keywords": [],
       "visibility": "public",
       "name": "field-style",
@@ -396,7 +430,7 @@
     },
     {
       "kind": "prop",
-      "description": "清除按钮的大小",
+      "description": "清除按钮大小",
       "keywords": [],
       "visibility": "public",
       "name": "clear-size",
@@ -443,7 +477,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否自动去除两端的空格",
+      "description": "去除两端空格",
       "keywords": [],
       "visibility": "public",
       "name": "trim",

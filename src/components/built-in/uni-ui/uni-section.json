@@ -1,0 +1,214 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "标题栏"
+    },
+    {
+      "name": "property",
+      "description": "{String} type = [line|circle|square] 标题装饰类型"
+    },
+    {
+      "name": "value",
+      "description": "line 竖线"
+    },
+    {
+      "name": "value",
+      "description": "circle 圆形"
+    },
+    {
+      "name": "value",
+      "description": "square 正方形"
+    },
+    {
+      "name": "property",
+      "description": "{String} title 主标题"
+    },
+    {
+      "name": "property",
+      "description": "{String} titleFontSize 主标题字体大小"
+    },
+    {
+      "name": "property",
+      "description": "{String} titleColor 主标题字体颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String} subTitle 副标题"
+    },
+    {
+      "name": "property",
+      "description": "{String} subTitleFontSize 副标题字体大小"
+    },
+    {
+      "name": "property",
+      "description": "{String} subTitleColor 副标题字体颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String} padding 默认插槽 padding"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "decoration",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"装饰类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"line\",\"circle\",\"square\"]"  
+        }
+      ],
+      "visibility": "public",
+      "name": "type",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"主标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "default": "\"\"",
+      "required": true,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"主题字体大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title-font-size",
+      "type": "String",
+      "default": "\"14px\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"主标题字体颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title-color",
+      "type": "String",
+      "default": "\"#333\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"副标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sub-title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"副标题大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sub-title-font-size",
+      "type": "String",
+      "default": "\"12px\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"副标题字体颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sub-title-color",
+      "type": "String",
+      "default": "\"#999\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"插槽内边距",
+      "keywords": [],
+      "visibility": "public",
+      "name": "padding",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_padding",
+      "dependencies": [
+        "padding"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClick",
+      "params": [],
+      "syntax": [
+        "onClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniSection",
+  "description": "Section 标题栏"
+}

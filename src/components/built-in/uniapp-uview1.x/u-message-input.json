@@ -101,11 +101,16 @@
     },
     {
       "kind": "prop",
-      "description": "显示模式，box-盒子模式，bottomLine-横线在底部模式，middleLine-横线在中部模式",
-      "keywords": [],
+      "description": "显示模式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"box\", \"bottomLine\", \"middleLine\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"box\"",
       "required": false,
       "describeModel": false
@@ -126,7 +131,7 @@
     },
     {
       "kind": "prop",
-      "description": "当前激活输入item，是否带有呼吸效果",
+      "description": "呼吸效果",
       "keywords": [],
       "visibility": "public",
       "name": "breathe",
@@ -137,7 +142,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否自动获取焦点",
+      "description": "自动获取焦点",
       "keywords": [],
       "visibility": "public",
       "name": "focus",
@@ -195,7 +200,7 @@
     },
     {
       "kind": "prop",
-      "description": "输入框的大小，单位rpx，宽等于高",
+      "description": "输入框的大小",
       "keywords": [],
       "visibility": "public",
       "name": "width",
@@ -209,7 +214,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否隐藏原生键盘，如果想用自定义键盘的话，需设置此参数为true",
+      "description": "是否隐藏原生键盘",
       "keywords": [],
       "visibility": "public",
       "name": "disabled-keyboard",

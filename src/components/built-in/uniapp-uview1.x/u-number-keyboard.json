@@ -7,18 +7,23 @@
   "props": [
     {
       "kind": "prop",
-      "description": "键盘的类型，number-数字键盘，card-身份证键盘",
-      "keywords": [],
+      "description": "键盘的类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"number\", \"car\", \"card\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"number\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示键盘的\".\"符号",
+      "description": "显示\".\"符号",
       "keywords": [],
       "visibility": "public",
       "name": "dot-enabled",
@@ -29,7 +34,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否打乱键盘按键的顺序",
+      "description": "打乱按键顺序",
       "keywords": [],
       "visibility": "public",
       "name": "random",

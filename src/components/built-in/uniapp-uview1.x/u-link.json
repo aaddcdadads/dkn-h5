@@ -46,6 +46,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "default",
+      "default":"点击链接",
       "props": []
     }
   ],
@@ -63,7 +64,7 @@
     },
     {
       "kind": "prop",
-      "description": "字体大小，单位rpx",
+      "description": "字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "font-size",
@@ -99,7 +100,7 @@
     },
     {
       "kind": "prop",
-      "description": "小程序中复制到粘贴板的提示语",
+      "description": "复制时提示语",
       "keywords": [],
       "visibility": "public",
       "name": "mp-tips",

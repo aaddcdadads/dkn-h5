@@ -81,7 +81,7 @@
     },
     {
       "kind": "prop",
-      "description": "用户自定义样式",
+      "description": "自定义样式",
       "keywords": [],
       "visibility": "public",
       "name": "custom-style",
@@ -92,7 +92,7 @@
     },
     {
       "kind": "prop",
-      "description": "遮罩的动画样式， 是否使用使用zoom进行scale进行缩放",
+      "description": "遮罩是否缩放",
       "keywords": [],
       "visibility": "public",
       "name": "zoom",
@@ -103,7 +103,7 @@
     },
     {
       "kind": "prop",
-      "description": "遮罩的过渡时间，单位为ms",
+      "description": "遮罩过渡时间",
       "keywords": [],
       "visibility": "public",
       "name": "duration",
@@ -117,7 +117,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否可以通过点击遮罩进行关闭",
+      "description": "触发点击事件",
       "keywords": [],
       "visibility": "public",
       "name": "mask-click-able",

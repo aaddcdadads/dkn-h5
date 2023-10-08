@@ -131,7 +131,7 @@
     },
     {
       "kind": "prop",
-      "description": "图标颜色，可接受主题色",
+      "description": "图标颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -142,7 +142,7 @@
     },
     {
       "kind": "prop",
-      "description": "字体大小，单位rpx",
+      "description": "字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "size",
@@ -167,7 +167,7 @@
     },
     {
       "kind": "prop",
-      "description": "点击图标的时候传递事件出去的index（用于区分点击了哪一个）",
+      "description": "图标的下标",
       "keywords": [],
       "visibility": "public",
       "name": "index",
@@ -181,7 +181,7 @@
     },
     {
       "kind": "prop",
-      "description": "触摸图标时的类名",
+      "description": "触摸图标类名",
       "keywords": [],
       "visibility": "public",
       "name": "hover-class",
@@ -192,7 +192,7 @@
     },
     {
       "kind": "prop",
-      "description": "自定义扩展前缀，方便用户扩展自己的图标库",
+      "description": "自定义图标",
       "keywords": [],
       "visibility": "public",
       "name": "custom-prefix",
@@ -203,7 +203,7 @@
     },
     {
       "kind": "prop",
-      "description": "图标右边或者下面的文字",
+      "description": "图标文字",
       "keywords": [],
       "visibility": "public",
       "name": "label",
@@ -217,18 +217,23 @@
     },
     {
       "kind": "prop",
-      "description": "label的位置，只能右边或者下边",
-      "keywords": [],
+      "description": "label的位置",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\", \"right\", \"top\"]"
+        }
+      ],
       "visibility": "public",
       "name": "label-pos",
-      "type": "String",
+      "type": "Enum",
       "default": "\"right\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "label的大小",
+      "description": "label大小",
       "keywords": [],
       "visibility": "public",
       "name": "label-size",
@@ -253,7 +258,7 @@
     },
     {
       "kind": "prop",
-      "description": "label与图标的距离(横向排列)",
+      "description": "label在右方时与图标的距离",
       "keywords": [],
       "visibility": "public",
       "name": "margin-left",
@@ -267,7 +272,7 @@
     },
     {
       "kind": "prop",
-      "description": "label与图标的距离(竖向排列)",
+      "description": "label在下方时与图标的距离",
       "keywords": [],
       "visibility": "public",
       "name": "margin-top",
@@ -281,7 +286,7 @@
     },
     {
       "kind": "prop",
-      "description": "label与图标的距离(竖向排列)",
+      "description": "label在左侧时与图标的距离",
       "keywords": [],
       "visibility": "public",
       "name": "margin-right",
@@ -295,7 +300,7 @@
     },
     {
       "kind": "prop",
-      "description": "label与图标的距离(竖向排列)",
+      "description": "label在上方时与图标的距离",
       "keywords": [],
       "visibility": "public",
       "name": "margin-bottom",
@@ -304,17 +309,6 @@
         "Number"
       ],
       "default": "\"6\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "图片的mode",
-      "keywords": [],
-      "visibility": "public",
-      "name": "img-mode",
-      "type": "String",
-      "default": "\"widthFix\"",
       "required": false,
       "describeModel": false
     },
@@ -331,7 +325,7 @@
     },
     {
       "kind": "prop",
-      "description": "用于显示图片小图标时，图片的宽度",
+      "description": "图片的宽度",
       "keywords": [],
       "visibility": "public",
       "name": "width",
@@ -345,7 +339,7 @@
     },
     {
       "kind": "prop",
-      "description": "用于显示图片小图标时，图片的高度",
+      "description": "图片的高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",
@@ -359,7 +353,7 @@
     },
     {
       "kind": "prop",
-      "description": "用于解决某些情况下，让图标垂直居中的用途",
+      "description": "图标垂直居中",
       "keywords": [],
       "visibility": "public",
       "name": "top",
@@ -384,7 +378,7 @@
     },
     {
       "kind": "prop",
-      "description": "背景颜色，可接受主题色，仅Decimal时有效",
+      "description": "背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "inactive-color",
@@ -395,7 +389,7 @@
     },
     {
       "kind": "prop",
-      "description": "显示的百分比，仅Decimal时有效",
+      "description": "显示的百分比",
       "keywords": [],
       "visibility": "public",
       "name": "percent",

@@ -86,7 +86,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示右边的内容",
+      "description": "右边的内容",
       "keywords": [],
       "visibility": "public",
       "name": "right",
@@ -97,6 +97,7 @@
     },
     {
       "kind": "prop",
+      "description":"标题字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "font-size",
@@ -110,7 +111,7 @@
     },
     {
       "kind": "prop",
-      "description": "主标题是否加粗",
+      "description": "主标题加粗",
       "keywords": [],
       "visibility": "public",
       "name": "bold",
@@ -121,7 +122,7 @@
     },
     {
       "kind": "prop",
-      "description": "主标题的颜色",
+      "description": "主标题颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -132,7 +133,7 @@
     },
     {
       "kind": "prop",
-      "description": "右边副标题的颜色",
+      "description": "副标题的颜色",
       "keywords": [],
       "visibility": "public",
       "name": "sub-color",
@@ -143,7 +144,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示左边的竖条",
+      "description": "是否显示竖条",
       "keywords": [],
       "visibility": "public",
       "name": "show-line",
@@ -154,7 +155,7 @@
     },
     {
       "kind": "prop",
-      "description": "左边竖线的颜色",
+      "description": "竖线的颜色",
       "keywords": [],
       "visibility": "public",
       "name": "line-color",
@@ -165,7 +166,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示右边箭头",
+      "description": "是否显示箭头",
       "keywords": [],
       "visibility": "public",
       "name": "arrow",

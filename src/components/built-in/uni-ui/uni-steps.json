@@ -1,0 +1,92 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "评分组件"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=34"
+    },
+    {
+      "name": "property",
+      "description": "{Number} active 当前步骤"
+    },
+    {
+      "name": "property",
+      "description": "{String} direction = [row|column] 当前步骤"
+    },
+    {
+      "name": "value",
+      "description": "row 横向"
+    },
+    {
+      "name": "value",
+      "description": "column 纵向"
+    },
+    {
+      "name": "property",
+      "description": "{String} activeColor 选中状态的颜色"
+    },
+    {
+      "name": "property",
+      "description": "{Array} options 数据源，格式为：[{title:'xxx',desc:'xxx'},{title:'xxx',desc:'xxx'}]"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"排列方向",
+      "keywords": [],
+      "visibility": "public",
+      "name": "direction",
+      "type": "String",
+      "default": "\"row\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"选中状态颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active-color",
+      "type": "String",
+      "default": "\"#2979FF\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"当前步骤",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active",
+      "type": "Number",
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"数据源",
+      "keywords": [],
+      "visibility": "public",
+      "name": "options",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn []\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "name": "UniSteps",
+  "description": "Steps 步骤条"
+}

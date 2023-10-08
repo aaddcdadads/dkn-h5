@@ -124,6 +124,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"适配安全区",
       "keywords": [],
       "visibility": "public",
       "name": "safe-area-inset-bottom",
@@ -134,7 +135,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否允许通过点击遮罩关闭Picker",
+      "description": "点击遮罩关闭",
       "keywords": [],
       "visibility": "public",
       "name": "mask-close-able",
@@ -145,7 +146,7 @@
     },
     {
       "kind": "prop",
-      "description": "通过双向绑定控制组件的弹出与收起",
+      "description": "弹出与收起",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -156,7 +157,7 @@
     },
     {
       "kind": "prop",
-      "description": "弹出的z-index值",
+      "description": "层级值",
       "keywords": [],
       "visibility": "public",
       "name": "z-index",
@@ -170,7 +171,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否允许切换年份",
+      "description": "允许切换年份",
       "keywords": [],
       "visibility": "public",
       "name": "change-year",
@@ -181,7 +182,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否允许切换月份",
+      "description": "允许切换月份",
       "keywords": [],
       "visibility": "public",
       "name": "change-month",
@@ -192,18 +193,23 @@
     },
     {
       "kind": "prop",
-      "description": "date-单个日期选择，range-开始日期+结束日期选择",
-      "keywords": [],
+      "description": "模式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"date\",\"range\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"date\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "可切换的最大年份",
+      "description": "最大年份",
       "keywords": [],
       "visibility": "public",
       "name": "max-year",
@@ -217,7 +223,7 @@
     },
     {
       "kind": "prop",
-      "description": "可切换的最小年份",
+      "description": "最小年份",
       "keywords": [],
       "visibility": "public",
       "name": "min-year",
@@ -231,7 +237,7 @@
     },
     {
       "kind": "prop",
-      "description": "最小可选日期(不在范围内日期禁用不可选)",
+      "description": "最小日期",
       "keywords": [],
       "visibility": "public",
       "name": "min-date",
@@ -245,7 +251,7 @@
     },
     {
       "kind": "prop",
-      "description": "最大可选日期\n默认最大值为今天，之后的日期不可选\n2030-12-31",
+      "description": "最大日期",
       "keywords": [],
       "visibility": "public",
       "name": "max-date",
@@ -259,7 +265,7 @@
     },
     {
       "kind": "prop",
-      "description": "弹窗顶部左右两边的圆角值",
+      "description": "圆角值",
       "keywords": [],
       "visibility": "public",
       "name": "border-radius",
@@ -273,7 +279,7 @@
     },
     {
       "kind": "prop",
-      "description": "月份切换按钮箭头颜色",
+      "description": "月份箭头颜色",
       "keywords": [],
       "visibility": "public",
       "name": "month-arrow-color",
@@ -284,7 +290,7 @@
     },
     {
       "kind": "prop",
-      "description": "年份切换按钮箭头颜色",
+      "description": "年份箭头颜色",
       "keywords": [],
       "visibility": "public",
       "name": "year-arrow-color",
@@ -295,7 +301,7 @@
     },
     {
       "kind": "prop",
-      "description": "默认日期字体颜色",
+      "description": "日期字体颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -306,7 +312,7 @@
     },
     {
       "kind": "prop",
-      "description": "选中|起始结束日期背景色",
+      "description": "日期背景色",
       "keywords": [],
       "visibility": "public",
       "name": "active-bg-color",
@@ -317,7 +323,7 @@
     },
     {
       "kind": "prop",
-      "description": "选中|起始结束日期字体颜色",
+      "description": "日期字体颜色",
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
@@ -328,7 +334,7 @@
     },
     {
       "kind": "prop",
-      "description": "范围内日期背景色",
+      "description": "范围日期背景色",
       "keywords": [],
       "visibility": "public",
       "name": "range-bg-color",
@@ -339,7 +345,7 @@
     },
     {
       "kind": "prop",
-      "description": "范围内日期字体颜色",
+      "description": "范围日期字体颜色",
       "keywords": [],
       "visibility": "public",
       "name": "range-color",
@@ -350,7 +356,7 @@
     },
     {
       "kind": "prop",
-      "description": "mode=range时生效，起始日期自定义文案",
+      "description": "起始日期文案",
       "keywords": [],
       "visibility": "public",
       "name": "start-text",
@@ -361,7 +367,7 @@
     },
     {
       "kind": "prop",
-      "description": "mode=range时生效，结束日期自定义文案",
+      "description": "结束日期文案",
       "keywords": [],
       "visibility": "public",
       "name": "end-text",
@@ -373,39 +379,22 @@
     {
       "kind": "prop",
       "description": "按钮样式类型",
-      "keywords": [],
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"default\",\"success\",\"info\",\"warning\",\"error\"]"
+        }
+      ],
       "visibility": "public",
       "name": "btn-type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"primary\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "当前选中日期带选中效果",
-      "keywords": [],
-      "visibility": "public",
-      "name": "is-active-current",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "切换年月是否触发事件 mode=date时生效",
-      "keywords": [],
-      "visibility": "public",
-      "name": "is-change",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示右上角的关闭图标",
+      "description": "显示关闭图标",
       "keywords": [],
       "visibility": "public",
       "name": "closeable",
@@ -416,7 +405,7 @@
     },
     {
       "kind": "prop",
-      "description": "顶部的提示文字",
+      "description": "顶部提示文字",
       "keywords": [],
       "visibility": "public",
       "name": "tool-tip",

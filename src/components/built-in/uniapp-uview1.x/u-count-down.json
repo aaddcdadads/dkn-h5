@@ -92,7 +92,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "倒计时的时间，秒为单位",
+      "description": "倒计时时间",
       "keywords": [],
       "visibility": "public",
       "name": "timestamp",
@@ -106,7 +106,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否自动开始倒计时",
+      "description": "自动倒计时",
       "keywords": [],
       "visibility": "public",
       "name": "autoplay",
@@ -117,18 +117,23 @@
     },
     {
       "kind": "prop",
-      "description": "用英文冒号(colon)或者中文(zh)当做分隔符，false的时候为中文，如：\"11:22\"或\"11时22秒\"",
-      "keywords": [],
+      "description": "分隔符",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"colon\",\"zh\"]"
+        }
+      ],
       "visibility": "public",
       "name": "separator",
-      "type": "String",
+      "type": "Enum",
       "default": "\"colon\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "分隔符的大小，单位rpx",
+      "description": "分隔符大小",
       "keywords": [],
       "visibility": "public",
       "name": "separator-size",
@@ -164,7 +169,7 @@
     },
     {
       "kind": "prop",
-      "description": "字体大小，单位rpx",
+      "description": "字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "font-size",
@@ -189,21 +194,18 @@
     },
     {
       "kind": "prop",
-      "description": "数字框高度，单位rpx",
+      "description": "数字框高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",
-      "type": [
-        "Number",
-        "String"
-      ],
+      "type": "String",
       "default": "\"auto\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示数字框",
+      "description": "显示数字框",
       "keywords": [],
       "visibility": "public",
       "name": "show-border",
@@ -258,7 +260,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示“天”",
+      "description": "显示“天”",
       "keywords": [],
       "visibility": "public",
       "name": "show-days",
@@ -269,7 +271,7 @@
     },
     {
       "kind": "prop",
-      "description": "当\"天\"的部分为0时，不显示",
+      "description": "天数为0不显示",
       "keywords": [],
       "visibility": "public",
       "name": "hide-zero-day",

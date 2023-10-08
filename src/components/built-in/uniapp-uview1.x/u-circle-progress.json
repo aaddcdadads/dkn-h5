@@ -60,7 +60,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "圆环进度百分比值",
+      "description": "进度百分比值",
       "keywords": [],
       "visibility": "public",
       "name": "percent",
@@ -71,7 +71,7 @@
     },
     {
       "kind": "prop",
-      "description": "底部圆环的颜色（灰色的圆环）",
+      "description": "底部圆环颜色",
       "keywords": [],
       "visibility": "public",
       "name": "inactive-color",
@@ -82,7 +82,7 @@
     },
     {
       "kind": "prop",
-      "description": "圆环激活部分的颜色",
+      "description": "激活部分颜色",
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
@@ -93,7 +93,7 @@
     },
     {
       "kind": "prop",
-      "description": "圆环线条的宽度，单位rpx",
+      "description": "线条宽度",
       "keywords": [],
       "visibility": "public",
       "name": "border-width",
@@ -107,7 +107,7 @@
     },
     {
       "kind": "prop",
-      "description": "整个圆形的宽度，单位rpx",
+      "description": "整个圆形宽度",
       "keywords": [],
       "visibility": "public",
       "name": "width",
@@ -121,7 +121,7 @@
     },
     {
       "kind": "prop",
-      "description": "整个圆环执行一圈的时间，单位ms",
+      "description": "执行一圈时间",
       "keywords": [],
       "visibility": "public",
       "name": "duration",
@@ -136,7 +136,12 @@
     {
       "kind": "prop",
       "description": "主题类型",
-      "keywords": [],
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"success\",\"primary\",\"error\",\"warning\",\"info\"]"
+        }
+      ],
       "visibility": "public",
       "name": "type",
       "type": "String",
@@ -146,7 +151,7 @@
     },
     {
       "kind": "prop",
-      "description": "整个圆环进度区域的背景色",
+      "description": "进度区域背景色",
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",

@@ -15,11 +15,16 @@
   "props": [
     {
       "kind": "prop",
-      "description": "返回顶部的形状，circle-圆形，square-方形",
-      "keywords": [],
+      "description": "返回顶部的形状",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"circle\",\"square\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"circle\"",
       "required": false,
       "describeModel": false
@@ -48,7 +53,7 @@
     },
     {
       "kind": "prop",
-      "description": "返回顶部滚动时间",
+      "description": "返回顶部时间",
       "keywords": [],
       "visibility": "public",
       "name": "duration",
@@ -76,7 +81,7 @@
     },
     {
       "kind": "prop",
-      "description": "距离顶部多少距离显示，单位rpx",
+      "description": "距离顶部显示",
       "keywords": [],
       "visibility": "public",
       "name": "top",
@@ -90,7 +95,7 @@
     },
     {
       "kind": "prop",
-      "description": "返回顶部按钮到底部的距离，单位rpx",
+      "description": "按钮到底部距离",
       "keywords": [],
       "visibility": "public",
       "name": "bottom",
@@ -104,7 +109,7 @@
     },
     {
       "kind": "prop",
-      "description": "返回顶部按钮到右边的距离，单位rpx",
+      "description": "按钮到右边距离",
       "keywords": [],
       "visibility": "public",
       "name": "right",
@@ -132,7 +137,7 @@
     },
     {
       "kind": "prop",
-      "description": "图标的样式，对象形式",
+      "description": "图标的样式",
       "keywords": [],
       "visibility": "public",
       "name": "icon-style",
@@ -143,7 +148,7 @@
     },
     {
       "kind": "prop",
-      "description": "整个组件的样式",
+      "description": "整个组件样式",
       "keywords": [],
       "visibility": "public",
       "name": "custom-style",
