@@ -1,0 +1,343 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "本组件一般用于展示头像的地方，如个人中心，或者评论列表页的用户头像展示等场所。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/avatar.html"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tsrc\t\t\t\t头像路径，如加载失败，将会显示默认头像(不能为相对路径)"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tshape\t\t\t头像形状  （ circle (默认) | square）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tsize\t\t\t头像尺寸，可以为指定字符串(large, default, mini)，或者数值 （默认 40 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tmode\t\t\t头像图片的裁剪类型，与uni的image组件的mode参数一致，如效果达不到需求，可尝试传widthFix值 （默认 'scaleToFill' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ttext\t\t\t用文字替代图片，级别优先于src"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tbgColor\t\t\t背景颜色，一般显示文字时用 （默认 '#c0c4cc' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tcolor\t\t\t文字颜色 （默认 '#ffffff' ）"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tfontSize\t\t文字大小  （默认 18 ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\ticon\t\t\t显示的图标"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\tmpAvatar\t\t显示小程序头像，只对百度，微信，QQ小程序有效  （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean}\t\t\trandomBgColor\t是否使用随机背景色  （默认 false ）"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tdefaultUrl\t\t加载失败的默认头像(组件有内置默认图片)"
+    },
+    {
+      "name": "property",
+      "description": "{String | Number}\tcolorIndex\t\t如果配置了randomBgColor为true，且配置了此值，则从默认的背景色数组中取出对应索引的颜色值，取值0-19之间"
+    },
+    {
+      "name": "property",
+      "description": "{String}\t\t\tname\t\t\t组件标识符  （默认 'level' ）"
+    },
+    {
+      "name": "property",
+      "description": "{Object}\t\t\tcustomStyle\t\t定义需要用到的外部样式"
+    },
+    {
+      "name": "event",
+      "description": "{Function}        click       点击组件时触发   index: 用户传递的标识符"
+    },
+    {
+      "name": "example",
+      "description": "<u-avatar :src=\"src\" mode=\"square\"></u-avatar>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "头像路径",
+      "keywords": [],
+      "visibility": "public",
+      "name": "src",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "头像形状",
+      "keywords": [],
+      "visibility": "public",
+      "name": "shape",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "头像尺寸",
+      "keywords": [],
+      "visibility": "public",
+      "name": "size",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "裁剪类型",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "文字替代图片",
+      "keywords": [],
+      "visibility": "public",
+      "name": "text",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "文字颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "文字大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fontSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示的图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示小程序头像",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mpAvatar",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "随机背景色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "randomBgColor",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "加载失败头像",
+      "keywords": [],
+      "visibility": "public",
+      "name": "defaultUrl",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "索引的颜色值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "colorIndex",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "组件标识符",
+      "keywords": [],
+      "visibility": "public",
+      "name": "name",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "description": "如果配置randomBgColor参数为true，在图标或者文字的模式下，会随机从中取出一个颜色值当做背景色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "colors",
+      "type": "array",
+      "initialValue": "['#ffb34b', '#f2bba9', '#f7a196', '#f18080', '#88a867', '#bfbf39', '#89c152', '#94d554', '#f19ec2', '#afaae4', '#e1b0df', '#c38cc1', '#72dcdc', '#9acdcb', '#77b1cc', '#448aca', '#86cefa', '#98d1ee', '#73d1f1', '#80a7dc' ]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "avatarUrl",
+      "type": "object",
+      "initialValue": "this.src"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "allowMp",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "imageStyle",
+      "dependencies": []
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": [
+        {
+          "name": "name",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "判断传入的name属性，是否图片路径，只要带有\"/\"均认为是图片形式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isImg",
+      "params": [],
+      "syntax": [
+        "isImg(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "图片加载时失败时触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "errorHandler",
+      "params": [],
+      "syntax": [
+        "errorHandler(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickHandler",
+      "params": [],
+      "syntax": [
+        "clickHandler(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-avatar",
+  "description": "Avatar  头像"
+}

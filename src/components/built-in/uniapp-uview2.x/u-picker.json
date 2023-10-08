@@ -1,0 +1,463 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "弹出与收起",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示操作栏",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showToolbar",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "顶部中间标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "每一列的数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "columns",
+      "type": "Array",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "加载状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loading",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "单个选项高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemHeight",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "取消按钮文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancelText",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "确认按钮文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirmText",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "取消按钮颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancelColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "确认按钮颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirmColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "可见选项数量",
+      "keywords": [],
+      "visibility": "public",
+      "name": "visibleItemCount",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "text属性键名",
+      "keywords": [],
+      "visibility": "public",
+      "name": "keyName",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击遮罩关闭",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeOnClickOverlay",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "默认索引",
+      "keywords": [],
+      "visibility": "public",
+      "name": "defaultIndex",
+      "type": "Array",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "手指松开立即触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "immediateChange",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "description": "上一次选择的列索引",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lastIndex",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "description": "索引值 ，对应picker-view的value",
+      "keywords": [],
+      "visibility": "public",
+      "name": "innerIndex",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "description": "各列的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "innerColumns",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "description": "上一次的变化列索引",
+      "keywords": [],
+      "visibility": "public",
+      "name": "columnIndex",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "arguments": [
+        {
+          "name": "{ indexs: this.innerIndex, value: this.innerColumns.map((item, index) => item[this.innerIndex[index]]), values: this.innerColumns }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "{ // #ifndef MP-WEIXIN || MP-LARK // 微信小程序不能传递this，会因为循环引用而报错 picker: this, // #endif value: this.innerColumns.map((item, index) => item[value[index]]), index, indexs: value, // values为当前变化列的数组内容 values, columnIndex }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "获取item需要显示的文字，判别为对象还是文本",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getItemText",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getItemText(item: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "关闭选择器",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeHandler",
+      "params": [],
+      "syntax": [
+        "closeHandler(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击工具栏的取消按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel",
+      "params": [],
+      "syntax": [
+        "cancel(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击工具栏的确定按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "params": [],
+      "syntax": [
+        "confirm(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "选择器某一列的数据发生变化时触发",
+      "keywords": [],
+      "visibility": "public",
+      "name": "changeHandler",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "changeHandler(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "设置index索引，此方法可被外部调用设置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setIndexs",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "setLastIndex",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setIndexs(index: unknow, setLastIndex: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "记录上一次的各列索引位置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setLastIndex",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setLastIndex(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "设置对应列选项的所有值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setColumnValues",
+      "params": [
+        {
+          "name": "columnIndex",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "values",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setColumnValues(columnIndex: unknow, values: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取对应列的所有选项",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getColumnValues",
+      "params": [
+        {
+          "name": "columnIndex",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getColumnValues(columnIndex: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "设置整体各列的columns的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setColumns",
+      "params": [
+        {
+          "name": "columns",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setColumns(columns: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取各列选中值对应的索引",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getIndexs",
+      "params": [],
+      "syntax": [
+        "getIndexs(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取各列选中的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getValues",
+      "params": [],
+      "syntax": [
+        "getValues(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    }
+  ],
+  "name": "u-picker"
+}

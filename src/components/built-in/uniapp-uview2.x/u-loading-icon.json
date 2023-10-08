@@ -1,0 +1,237 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "是否显示动画",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图标颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "提示文本颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否垂直排列",
+      "keywords": [],
+      "visibility": "public",
+      "name": "vertical",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "模式选择",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"circle\", \"semicircle\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图标大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "size",
+      "type": "String",
+      "default":"\"circle\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "文字大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textSize",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "文字内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "text",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "动画效果",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timingFunction",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "周期时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "duration",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "暗边颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inactiveColor",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "description": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from",
+      "keywords": [],
+      "visibility": "public",
+      "name": "array12",
+      "type": "CallExpression",
+      "initialValue": "Array.from({\r\n\t\t\t\t\tlength: 12\r\n\t\t\t\t})"
+    },
+    {
+      "kind": "data",
+      "description": "在iOS nvue上，则会一开始默认执行两个周期的动画",
+      "keywords": [],
+      "visibility": "public",
+      "name": "aniAngel",
+      "type": "number",
+      "initialValue": "360"
+    },
+    {
+      "kind": "data",
+      "description": "动画旋转角度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "webviewHide",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "监听webview的状态，如果隐藏了页面，则停止动画，以免性能消耗",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loading",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "而不能是固定的某一个其他颜色(因为这个固定的颜色可能浅蓝，导致效果没有那么细腻良好)",
+      "keywords": [],
+      "visibility": "public",
+      "name": "otherBorderColor",
+      "dependencies": [
+        "color",
+        "mode",
+        "inactiveColor"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "监听webview的显示与隐藏",
+      "keywords": [],
+      "visibility": "public",
+      "name": "addEventListenerToWebview",
+      "params": [],
+      "syntax": [
+        "addEventListenerToWebview(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "#ifdef APP-NVUE",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nvueAnimate",
+      "params": [],
+      "syntax": [
+        "nvueAnimate(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "执行nvue的animate模块动画",
+      "keywords": [],
+      "visibility": "public",
+      "name": "startAnimate",
+      "params": [],
+      "syntax": [
+        "startAnimate(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-loading-icon",
+  "description": "#endif"
+}
