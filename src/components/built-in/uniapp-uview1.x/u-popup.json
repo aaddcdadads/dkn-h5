@@ -114,11 +114,16 @@
     },
     {
       "kind": "prop",
-      "description": "弹出方向，left|right|top|bottom|center",
-      "keywords": [],
+      "description": "弹出方向",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\", \"right\", \"top\",\"bottom\",\"center\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"left\"",
       "required": false,
       "describeModel": false
@@ -136,7 +141,7 @@
     },
     {
       "kind": "prop",
-      "description": "或者百分比\"50%\"，表示由内容撑开高度或者宽度",
+      "description": "撑开高度或者宽度",
       "keywords": [],
       "visibility": "public",
       "name": "length",
@@ -150,7 +155,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否开启缩放动画，只在mode=center时有效",
+      "description": "开启缩放动画",
       "keywords": [],
       "visibility": "public",
       "name": "zoom",
@@ -161,7 +166,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否开启底部安全区适配，开启的话，会在iPhoneX机型底部添加一定的内边距",
+      "description": "底部安全区适配",
       "keywords": [],
       "visibility": "public",
       "name": "safe-area-inset-bottom",
@@ -172,7 +177,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否可以通过点击遮罩进行关闭",
+      "description": "点击遮罩关闭",
       "keywords": [],
       "visibility": "public",
       "name": "mask-close-able",
@@ -183,7 +188,7 @@
     },
     {
       "kind": "prop",
-      "description": "用户自定义样式",
+      "description": "自定义样式",
       "keywords": [],
       "visibility": "public",
       "name": "custom-style",
@@ -204,18 +209,7 @@
     },
     {
       "kind": "prop",
-      "description": "对v-model双向绑定多层调用造成报错不能修改props值的问题",
-      "keywords": [],
-      "visibility": "public",
-      "name": "popup",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "显示显示弹窗的圆角，单位rpx",
+      "description": "弹窗圆角",
       "keywords": [],
       "visibility": "public",
       "name": "border-radius",
@@ -229,6 +223,7 @@
     },
     {
       "kind": "prop",
+      "description":"z-index的值",
       "keywords": [],
       "visibility": "public",
       "name": "z-index",
@@ -242,7 +237,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示关闭图标",
+      "description": "显示关闭图标",
       "keywords": [],
       "visibility": "public",
       "name": "closeable",
@@ -253,7 +248,7 @@
     },
     {
       "kind": "prop",
-      "description": "关闭图标的名称，只能uView的内置图标",
+      "description": "关闭图标的名称",
       "keywords": [],
       "visibility": "public",
       "name": "close-icon",
@@ -264,11 +259,16 @@
     },
     {
       "kind": "prop",
-      "description": "自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角",
-      "keywords": [],
+      "description": "关闭图标位置",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"top-left\", \"top-right\", \"bottom-left\",\"bottom-right\"]"
+        }
+      ],
       "visibility": "public",
       "name": "close-icon-pos",
-      "type": "String",
+      "type": "Enum",
       "default": "\"top-right\"",
       "required": false,
       "describeModel": false
@@ -286,7 +286,7 @@
     },
     {
       "kind": "prop",
-      "description": "关闭图标的大小，单位rpx",
+      "description": "关闭图标大小",
       "keywords": [],
       "visibility": "public",
       "name": "close-icon-size",
@@ -300,7 +300,7 @@
     },
     {
       "kind": "prop",
-      "description": "或者百分比\"50%\"，表示由内容撑开高度或者宽度，优先级高于length参数",
+      "description": "宽度",
       "keywords": [],
       "visibility": "public",
       "name": "width",
@@ -311,7 +311,7 @@
     },
     {
       "kind": "prop",
-      "description": "或者百分比\"50%\"，表示由内容撑开高度或者宽度，优先级高于length参数",
+      "description": "高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",
@@ -322,7 +322,7 @@
     },
     {
       "kind": "prop",
-      "description": "给一个负的margin-top，往上偏移，避免和键盘重合的情况，仅在mode=center时有效",
+      "description": "向上偏移值",
       "keywords": [],
       "visibility": "public",
       "name": "negative-top",
@@ -336,7 +336,7 @@
     },
     {
       "kind": "prop",
-      "description": "遮罩的样式，一般用于修改遮罩的透明度",
+      "description": "遮罩的样式",
       "keywords": [],
       "visibility": "public",
       "name": "mask-custom-style",
@@ -347,7 +347,7 @@
     },
     {
       "kind": "prop",
-      "description": "遮罩打开或收起的动画过渡时间，单位ms",
+      "description": "画过渡时间",
       "keywords": [],
       "visibility": "public",
       "name": "duration",

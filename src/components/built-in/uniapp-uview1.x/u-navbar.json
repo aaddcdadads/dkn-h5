@@ -22,7 +22,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "导航栏高度，单位px，非rpx",
+      "description": "导航栏高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",
@@ -36,7 +36,7 @@
     },
     {
       "kind": "prop",
-      "description": "返回箭头的颜色",
+      "description": "返回箭头颜色",
       "keywords": [],
       "visibility": "public",
       "name": "back-icon-color",
@@ -47,7 +47,7 @@
     },
     {
       "kind": "prop",
-      "description": "左边返回的图标",
+      "description": "左边返回图标",
       "keywords": [],
       "visibility": "public",
       "name": "back-icon-name",
@@ -58,7 +58,7 @@
     },
     {
       "kind": "prop",
-      "description": "左边返回图标的大小，rpx",
+      "description": "左边返回图标大小",
       "keywords": [],
       "visibility": "public",
       "name": "back-icon-size",
@@ -72,7 +72,7 @@
     },
     {
       "kind": "prop",
-      "description": "返回的文字提示",
+      "description": "返回文字提示",
       "keywords": [],
       "visibility": "public",
       "name": "back-text",
@@ -83,7 +83,7 @@
     },
     {
       "kind": "prop",
-      "description": "返回的文字的 样式",
+      "description": "返回文字样式",
       "keywords": [],
       "visibility": "public",
       "name": "back-text-style",
@@ -105,7 +105,7 @@
     },
     {
       "kind": "prop",
-      "description": "标题的宽度，如果需要自定义右侧内容，且右侧内容很多时，可能需要减少这个宽度，单位rpx",
+      "description": "标题的宽度",
       "keywords": [],
       "visibility": "public",
       "name": "title-width",
@@ -130,7 +130,7 @@
     },
     {
       "kind": "prop",
-      "description": "标题字体是否加粗",
+      "description": "标题字体加粗",
       "keywords": [],
       "visibility": "public",
       "name": "title-bold",
@@ -168,7 +168,7 @@
     },
     {
       "kind": "prop",
-      "description": "对象形式，因为用户可能定义一个纯色，或者线性渐变的颜色",
+      "description": "背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "background",
@@ -179,7 +179,7 @@
     },
     {
       "kind": "prop",
-      "description": "导航栏是否固定在顶部",
+      "description": "是否固定在顶部",
       "keywords": [],
       "visibility": "public",
       "name": "is-fixed",
@@ -190,7 +190,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否沉浸式，允许fixed定位后导航栏塌陷，仅fixed定位下生效",
+      "description": "是否沉浸式",
       "keywords": [],
       "visibility": "public",
       "name": "immersive",
@@ -201,7 +201,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示导航栏的下边框",
+      "description": "显示导航栏下边框",
       "keywords": [],
       "visibility": "public",
       "name": "border-bottom",
@@ -212,6 +212,7 @@
     },
     {
       "kind": "prop",
+      "description":"z-index值",
       "keywords": [],
       "visibility": "public",
       "name": "z-index",

@@ -137,7 +137,7 @@
     },
     {
       "kind": "prop",
-      "description": "宽度，单位任意",
+      "description": "宽度",
       "keywords": [],
       "visibility": "public",
       "name": "width",
@@ -151,7 +151,7 @@
     },
     {
       "kind": "prop",
-      "description": "高度，单位任意",
+      "description": "高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",
@@ -165,18 +165,23 @@
     },
     {
       "kind": "prop",
-      "description": "图片形状，circle-圆形，square-方形",
-      "keywords": [],
+      "description": "图片形状",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"circle\", \"square\"]"
+        }
+      ],
       "visibility": "public",
       "name": "shape",
-      "type": "String",
+      "type": "Enum",
       "default": "\"square\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "圆角，单位任意",
+      "description": "圆角",
       "keywords": [],
       "visibility": "public",
       "name": "border-radius",
@@ -190,7 +195,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否懒加载，微信小程序、App、百度小程序、字节跳动小程序",
+      "description": "是否懒加载",
       "keywords": [],
       "visibility": "public",
       "name": "lazy-load",
@@ -201,7 +206,7 @@
     },
     {
       "kind": "prop",
-      "description": "开启长按图片显示识别微信小程序码菜单",
+      "description": "长按显示小程序码",
       "keywords": [],
       "visibility": "public",
       "name": "show-menu-by-longpress",
@@ -212,7 +217,7 @@
     },
     {
       "kind": "prop",
-      "description": "加载中的图标，或者小图片",
+      "description": "加载中的图标",
       "keywords": [],
       "visibility": "public",
       "name": "loading-icon",
@@ -223,7 +228,7 @@
     },
     {
       "kind": "prop",
-      "description": "加载失败的图标，或者小图片",
+      "description": "加载失败的图标",
       "keywords": [],
       "visibility": "public",
       "name": "error-icon",
@@ -234,7 +239,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示加载中的图标或者自定义的slot",
+      "description": "显示加载中图标",
       "keywords": [],
       "visibility": "public",
       "name": "show-loading",
@@ -245,7 +250,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示加载错误的图标或者自定义的slot",
+      "description": "加载错误图标",
       "keywords": [],
       "visibility": "public",
       "name": "show-error",
@@ -256,7 +261,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否需要淡入效果",
+      "description": "淡入效果",
       "keywords": [],
       "visibility": "public",
       "name": "fade",
@@ -267,7 +272,7 @@
     },
     {
       "kind": "prop",
-      "description": "只支持网络资源，只对微信小程序有效",
+      "description": "支持网络资源",
       "keywords": [],
       "visibility": "public",
       "name": "webp",
@@ -278,7 +283,7 @@
     },
     {
       "kind": "prop",
-      "description": "过渡时间，单位ms",
+      "description": "过渡时间",
       "keywords": [],
       "visibility": "public",
       "name": "duration",
@@ -292,7 +297,7 @@
     },
     {
       "kind": "prop",
-      "description": "背景颜色，用于深色页面加载图片时，为了和背景色融合",
+      "description": "背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",

@@ -76,6 +76,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"",
       "keywords": [],
       "visibility": "public",
       "name": "index",
@@ -88,7 +89,7 @@
     },
     {
       "kind": "prop",
-      "description": "要显示的图片",
+      "description": "显示的图片",
       "keywords": [],
       "visibility": "public",
       "name": "image",
@@ -121,7 +122,7 @@
     },
     {
       "kind": "prop",
-      "description": "加载失败的错误占位图",
+      "description": "加载失败占位图",
       "keywords": [],
       "visibility": "public",
       "name": "error-img",
@@ -132,7 +133,7 @@
     },
     {
       "kind": "prop",
-      "description": "负数为图片超出屏幕底部多少距离后触发懒加载，正数为图片顶部距离屏幕底部多少距离时触发(图片还没出现在屏幕上)",
+      "description": "触发加载的位置",
       "keywords": [],
       "visibility": "public",
       "name": "threshold",
@@ -146,7 +147,7 @@
     },
     {
       "kind": "prop",
-      "description": "淡入淡出动画的过渡时间",
+      "description": "过渡时间",
       "keywords": [],
       "visibility": "public",
       "name": "duration",
@@ -160,18 +161,23 @@
     },
     {
       "kind": "prop",
-      "description": "linear|ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n);",
-      "keywords": [],
+      "description": "动画效果linear|ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n);",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"linear\",\"ease\",\"ease-in\",\"ease-out\",\"ease-in-out\"]"
+        }
+      ],
       "visibility": "public",
       "name": "effect",
-      "type": "String",
+      "type": "Enum",
       "default": "\"ease-in-out\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否使用过渡效果",
+      "description": "使用过渡效果",
       "keywords": [],
       "visibility": "public",
       "name": "is-effect",
@@ -196,7 +202,7 @@
     },
     {
       "kind": "prop",
-      "description": "图片高度，单位rpx",
+      "description": "图片高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",

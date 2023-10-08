@@ -48,18 +48,23 @@
   "props": [
     {
       "kind": "prop",
-      "description": "步骤条的类型，dot|number",
-      "keywords": [],
+      "description": "步骤条类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"dot\", \"number\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"dot\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "步骤条的数据",
+      "description": "步骤条数据",
       "keywords": [],
       "visibility": "public",
       "name": "list",
@@ -70,18 +75,23 @@
     },
     {
       "kind": "prop",
-      "description": "主题类型, primary|success|info|warning|error",
-      "keywords": [],
+      "description": "主题类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"primary\", \"success\", \"info\",\"warning\",\"error\"]"
+        }
+      ],
       "visibility": "public",
       "name": "type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"primary\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "当前哪一步是激活的",
+      "description": "当前阶段",
       "keywords": [],
       "visibility": "public",
       "name": "current",
@@ -95,7 +105,7 @@
     },
     {
       "kind": "prop",
-      "description": "激活步骤的颜色",
+      "description": "激活步骤颜色",
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
@@ -128,11 +138,16 @@
     },
     {
       "kind": "prop",
-      "description": "step的排列方向，row-横向，column-竖向",
-      "keywords": [],
+      "description": "排列方向",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"row\", \"column\"]"
+        }
+      ],
       "visibility": "public",
       "name": "direction",
-      "type": "String",
+      "type": "Enum",
       "default": "\"row\"",
       "required": false,
       "describeModel": false

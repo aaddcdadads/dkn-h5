@@ -110,6 +110,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "default",
+      "default":"按钮",
       "props": []
     }
   ],
@@ -127,33 +128,48 @@
     },
     {
       "kind": "prop",
-      "description": "按钮的预置样式，default，primary，error，warning，success",
-      "keywords": [],
+      "description": "按钮的样式",
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"default\",\"primary\",\"error\",\"warnin\",\"success\"]"
+        }
+      ],
       "visibility": "public",
       "name": "type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"default\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "按钮尺寸，default，medium，mini",
-      "keywords": [],
+      "description": "按钮尺寸",
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"default\",\"medium\",\"mini\"]"
+        }
+      ],
       "visibility": "public",
       "name": "size",
-      "type": "String",
+      "type": "Enum",
       "default": "\"default\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "按钮形状，circle（两边为半圆），square（带圆角）",
-      "keywords": [],
+      "description": "按钮形状",
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"circle\",\"square\"]"
+        }
+      ],
       "visibility": "public",
       "name": "shape",
-      "type": "String",
+      "type": "Enum",
       "default": "\"square\"",
       "required": false,
       "describeModel": false
@@ -193,7 +209,7 @@
     },
     {
       "kind": "prop",
-      "description": "https://uniapp.dcloud.io/component/button",
+      "description": "开放能力",
       "keywords": [],
       "visibility": "public",
       "name": "open-type",
@@ -204,18 +220,23 @@
     },
     {
       "kind": "prop",
-      "description": "取值为submit（提交表单），reset（重置表单）",
-      "keywords": [],
+      "description": "点击触发事件",
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"submit\",\"reset\"]"
+        }
+      ],
       "visibility": "public",
       "name": "form-type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "只微信小程序、QQ小程序有效",
+      "description": "向APP传递的参数",
       "keywords": [],
       "visibility": "public",
       "name": "app-parameter",
@@ -226,7 +247,7 @@
     },
     {
       "kind": "prop",
-      "description": "指定是否阻止本节点的祖先节点出现点击态，微信小程序有效",
+      "description": "阻止祖先节点出现点击态",
       "keywords": [],
       "visibility": "public",
       "name": "hover-stop-propagation",
@@ -237,18 +258,23 @@
     },
     {
       "kind": "prop",
-      "description": "指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。只微信小程序有效",
-      "keywords": [],
+      "description": "指定信息语言",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"en\",\"zh_CN\",\"zh_TW\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "lang",
-      "type": "String",
+      "type": "Enum",
       "default": "\"en\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "会话来源，open-type=\"contact\"时有效。只微信小程序有效",
+      "description": "会话来源",
       "keywords": [],
       "visibility": "public",
       "name": "session-from",
@@ -259,7 +285,7 @@
     },
     {
       "kind": "prop",
-      "description": "默认当前标题，只微信小程序有效",
+      "description": "默认当前标题",
       "keywords": [],
       "visibility": "public",
       "name": "send-message-title",
@@ -270,7 +296,7 @@
     },
     {
       "kind": "prop",
-      "description": "默认当前分享路径，只微信小程序有效",
+      "description": "当前分享路径",
       "keywords": [],
       "visibility": "public",
       "name": "send-message-path",
@@ -281,7 +307,7 @@
     },
     {
       "kind": "prop",
-      "description": "默认当前页面截图，只微信小程序有效",
+      "description": "当前页面截图",
       "keywords": [],
       "visibility": "public",
       "name": "send-message-img",
@@ -292,7 +318,7 @@
     },
     {
       "kind": "prop",
-      "description": "用户点击后可以快速发送小程序消息，open-type=\"contact\"时有效",
+      "description": "显示消息卡片",
       "keywords": [],
       "visibility": "public",
       "name": "show-message-card",
@@ -303,7 +329,7 @@
     },
     {
       "kind": "prop",
-      "description": "手指按（触摸）按钮时按钮时的背景颜色",
+      "description": "触摸按钮时背景色",
       "keywords": [],
       "visibility": "public",
       "name": "hover-bg-color",
@@ -314,7 +340,7 @@
     },
     {
       "kind": "prop",
-      "description": "水波纹的背景颜色",
+      "description": "水波纹背景色",
       "keywords": [],
       "visibility": "public",
       "name": "ripple-bg-color",
@@ -325,7 +351,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否开启水波纹效果",
+      "description": "开启水波纹效果",
       "keywords": [],
       "visibility": "public",
       "name": "ripple",
@@ -347,7 +373,7 @@
     },
     {
       "kind": "prop",
-      "description": "自定义样式，对象形式",
+      "description": "自定义样式",
       "keywords": [],
       "visibility": "public",
       "name": "custom-style",
@@ -358,7 +384,7 @@
     },
     {
       "kind": "prop",
-      "description": "额外传参参数，用于小程序的data-xxx属性，通过target.dataset.name获取",
+      "description": "额外传参参数",
       "keywords": [],
       "visibility": "public",
       "name": "data-name",
@@ -369,7 +395,7 @@
     },
     {
       "kind": "prop",
-      "description": "节流，一定时间内只能触发一次",
+      "description": "节流",
       "keywords": [],
       "visibility": "public",
       "name": "throttle-time",
@@ -383,7 +409,7 @@
     },
     {
       "kind": "prop",
-      "description": "按住后多久出现点击态，单位毫秒",
+      "description": "出现点击态时间",
       "keywords": [],
       "visibility": "public",
       "name": "hover-start-time",
@@ -397,7 +423,7 @@
     },
     {
       "kind": "prop",
-      "description": "手指松开后点击态保留时间，单位毫秒",
+      "description": "点击态持续时间",
       "keywords": [],
       "visibility": "public",
       "name": "hover-stay-time",

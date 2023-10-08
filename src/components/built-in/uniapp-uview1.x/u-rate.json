@@ -68,10 +68,10 @@
   "props": [
     {
       "kind": "prop",
-      "description": "1.4.5版新增",
+      "description": "星星的数量",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "v-model",
       "type": [
         "Number",
         "String"
@@ -82,7 +82,7 @@
     },
     {
       "kind": "prop",
-      "description": "要显示的星星数量",
+      "description": "可选星星数量",
       "keywords": [],
       "visibility": "public",
       "name": "count",
@@ -96,7 +96,7 @@
     },
     {
       "kind": "prop",
-      "description": "1.4.5后通过value双向绑定，不再建议使用此参数",
+      "description": "选中的星星数量",
       "keywords": [],
       "visibility": "public",
       "name": "current",
@@ -121,7 +121,7 @@
     },
     {
       "kind": "prop",
-      "description": "星星的大小，单位rpx",
+      "description": "星星的大小",
       "keywords": [],
       "visibility": "public",
       "name": "size",
@@ -157,7 +157,7 @@
     },
     {
       "kind": "prop",
-      "description": "星星之间的间距，单位rpx",
+      "description": "星星之间的间距",
       "keywords": [],
       "visibility": "public",
       "name": "gutter",
@@ -171,7 +171,7 @@
     },
     {
       "kind": "prop",
-      "description": "最少能选择的星星个数",
+      "description": "最少能选择个数",
       "keywords": [],
       "visibility": "public",
       "name": "min-count",
@@ -185,7 +185,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否允许半星(功能尚未实现)",
+      "description": "是否允许半星",
       "keywords": [],
       "visibility": "public",
       "name": "allow-half",
@@ -196,7 +196,7 @@
     },
     {
       "kind": "prop",
-      "description": "选中时的图标(星星)",
+      "description": "选中时的图标",
       "keywords": [],
       "visibility": "public",
       "name": "active-icon",
@@ -207,7 +207,7 @@
     },
     {
       "kind": "prop",
-      "description": "未选中时的图标(星星)",
+      "description": "未选中时图标",
       "keywords": [],
       "visibility": "public",
       "name": "inactive-icon",
@@ -218,7 +218,7 @@
     },
     {
       "kind": "prop",
-      "description": "自定义扩展前缀，方便用户扩展自己的图标库",
+      "description": "扩展图库",
       "keywords": [],
       "visibility": "public",
       "name": "custom-prefix",
@@ -229,6 +229,7 @@
     },
     {
       "kind": "prop",
+      "description":"颜色分级显示",
       "keywords": [],
       "visibility": "public",
       "name": "colors",
@@ -239,6 +240,7 @@
     },
     {
       "kind": "prop",
+      "description":"图标分级显示",
       "keywords": [],
       "visibility": "public",
       "name": "icons",

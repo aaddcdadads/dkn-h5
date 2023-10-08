@@ -1,0 +1,224 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "uni-link是一个外部网页超链接组件，在小程序内复制url，在app内打开外部浏览器，在h5端打开新网页"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=1182"
+    },
+    {
+      "name": "property",
+      "description": "{String} href 点击后打开的外部网页url"
+    },
+    {
+      "name": "property",
+      "description": "{String} text 显示的文字"
+    },
+    {
+      "name": "property",
+      "description": "{String} downlaod H5平台下载文件名"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} showUnderLine 是否显示下划线"
+    },
+    {
+      "name": "property",
+      "description": "{String} copyTips 在小程序端复制链接时显示的提示语"
+    },
+    {
+      "name": "property",
+      "description": "{String} color 链接文字颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String} fontSize 链接文字大小"
+    },
+    {
+      "name": "example",
+      "description": "* <uni-link href=\"https://ext.dcloud.net.cn\" text=\"https://ext.dcloud.net.cn\"></uni-link>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"链接地址",
+      "keywords": [],
+      "visibility": "public",
+      "name": "href",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"显示文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "text",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"下载文件名",
+      "keywords": [],
+      "visibility": "public",
+      "name": "download",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否显示下划线",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-under-line",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"复制提示语",
+      "keywords": [],
+      "visibility": "public",
+      "name": "copy-tips",
+      "type": "String",
+      "default": "\"已自动复制网址，请在手机浏览器里粘贴该网址\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"链接文字颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "default": "\"#999999\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"链接文字大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "font-size",
+      "type": [
+        "String"
+      ],
+      "default": "14",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isShowA",
+      "dependencies": [
+        "_isH5",
+        "isMail",
+        "isTel"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isMail",
+      "params": [],
+      "syntax": [
+        "isMail(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isTel",
+      "params": [],
+      "syntax": [
+        "isTel(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "openURL",
+      "params": [],
+      "syntax": [
+        "openURL(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "makePhoneCall",
+      "params": [
+        {
+          "name": "phoneNumber",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "makePhoneCall(phoneNumber: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "uniLink",
+  "description": "Link 外部网页超链接组件"
+}

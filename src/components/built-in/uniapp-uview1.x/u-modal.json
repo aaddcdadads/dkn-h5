@@ -165,7 +165,7 @@
     },
     {
       "kind": "prop",
-      "description": "弹窗宽度，可以是数值(rpx)，百分比，auto等",
+      "description": "弹窗宽度",
       "keywords": [],
       "visibility": "public",
       "name": "width",
@@ -201,7 +201,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示确认按钮",
+      "description": "显示确认按钮",
       "keywords": [],
       "visibility": "public",
       "name": "show-confirm-button",
@@ -212,7 +212,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示取消按钮",
+      "description": "显示取消按钮",
       "keywords": [],
       "visibility": "public",
       "name": "show-cancel-button",
@@ -303,7 +303,7 @@
     },
     {
       "kind": "prop",
-      "description": "取消按钮的样式",
+      "description": "取消按钮样式",
       "keywords": [],
       "visibility": "public",
       "name": "cancel-style",
@@ -314,7 +314,7 @@
     },
     {
       "kind": "prop",
-      "description": "确定按钮的样式",
+      "description": "确定按钮样式",
       "keywords": [],
       "visibility": "public",
       "name": "confirm-style",
@@ -325,7 +325,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否开启缩放效果",
+      "description": "开启缩放效果",
       "keywords": [],
       "visibility": "public",
       "name": "zoom",
@@ -336,7 +336,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否异步关闭，只对确定按钮有效",
+      "description": "是否异步关闭",
       "keywords": [],
       "visibility": "public",
       "name": "async-close",
@@ -347,7 +347,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否允许点击遮罩关闭modal",
+      "description": "点击遮罩关闭",
       "keywords": [],
       "visibility": "public",
       "name": "mask-close-able",
@@ -358,7 +358,7 @@
     },
     {
       "kind": "prop",
-      "description": "给一个负的margin-top，往上偏移，避免和键盘重合的情况",
+      "description": "往上偏移的值",
       "keywords": [],
       "visibility": "public",
       "name": "negative-top",

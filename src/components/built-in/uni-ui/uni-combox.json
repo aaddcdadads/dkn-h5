@@ -1,0 +1,308 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "组合输入框一般用于既可以输入也可以选择的场景"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=1261"
+    },
+    {
+      "name": "property",
+      "description": "{String} label 左侧文字"
+    },
+    {
+      "name": "property",
+      "description": "{String} labelWidth 左侧内容宽度"
+    },
+    {
+      "name": "property",
+      "description": "{String} placeholder 输入框占位符"
+    },
+    {
+      "name": "property",
+      "description": "{Array} candidates 候选项列表"
+    },
+    {
+      "name": "property",
+      "description": "{String} emptyTips 筛选结果为空时显示的文字"
+    },
+    {
+      "name": "property",
+      "description": "{String} value 组合框的值"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"标签文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"标签宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label-width",
+      "type": "String",
+      "default": "\"auto\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"输入框占位符",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"候选字段",
+      "keywords": [],
+      "visibility": "public",
+      "name": "candidates",
+      "type": "Array",
+      "default": "function() {\n\t\t\t\t\treturn []\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"空选项提示语",
+      "keywords": [],
+      "visibility": "public",
+      "name": "empty-tips",
+      "type": "String",
+      "default": "\"无匹配项\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "为定义vue3的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description": "定义vue3的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "model-value",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showSelector",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputVal",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blurTimer",
+      "type": "any",
+      "initialValue": "null"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelStyle",
+      "dependencies": [
+        "labelWidth"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "filterCandidates",
+      "dependencies": [
+        "inputVal",
+        "candidates"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "filterCandidatesLength",
+      "dependencies": [
+        "filterCandidates"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "inputVal",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "update:modelValue",
+      "arguments": [
+        {
+          "name": "inputVal",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toggleSelector",
+      "params": [],
+      "syntax": [
+        "toggleSelector(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onFocus",
+      "params": [],
+      "syntax": [
+        "onFocus(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onBlur",
+      "params": [],
+      "syntax": [
+        "onBlur(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onScroll",
+      "params": [],
+      "syntax": [
+        "onScroll(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onSelectorClick",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onSelectorClick(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onInput",
+      "params": [],
+      "syntax": [
+        "onInput(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "uniCombox",
+  "description": "Combox 组合输入框"
+}

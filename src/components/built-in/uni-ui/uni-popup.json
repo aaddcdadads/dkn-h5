@@ -1,0 +1,468 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "开启动画",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animation",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "弹出方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"top\",\"center\",\"bottom\",\"left\",\"right\",\"message\",\"dialog\",\"share\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "type",
+      "type": "Enum",
+      "default": "\"center\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击遮罩关闭",
+      "keywords": [],
+      "visibility": "public",
+      "name": "is-mask-click",
+      "type": "Boolean",
+      "default": "null",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击遮罩关闭",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask-click",
+      "type": "Boolean",
+      "default": "null",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"主窗口背景色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "background-color",
+      "type": "String",
+      "default": "\"none\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"适配安全区",
+      "keywords": [],
+      "visibility": "public",
+      "name": "safe-area",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"遮罩颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask-background-color",
+      "type": "String",
+      "default": "\"rgba(0, 0, 0, 0.4)\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "duration",
+      "type": "number",
+      "initialValue": "300"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "ani",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showPopup",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showTrans",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "popupWidth",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "popupHeight",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "config",
+      "type": "object",
+      "initialValue": "{\"top\":{\"type\":\"string\",\"value\":\"top\",\"raw\":\"\\\"top\\\"\"},\"bottom\":{\"type\":\"string\",\"value\":\"bottom\",\"raw\":\"\\\"bottom\\\"\"},\"center\":{\"type\":\"string\",\"value\":\"center\",\"raw\":\"\\\"center\\\"\"},\"left\":{\"type\":\"string\",\"value\":\"left\",\"raw\":\"\\\"left\\\"\"},\"right\":{\"type\":\"string\",\"value\":\"right\",\"raw\":\"\\\"right\\\"\"},\"message\":{\"type\":\"string\",\"value\":\"top\",\"raw\":\"\\\"top\\\"\"},\"dialog\":{\"type\":\"string\",\"value\":\"center\",\"raw\":\"\\\"center\\\"\"},\"share\":{\"type\":\"string\",\"value\":\"bottom\",\"raw\":\"\\\"bottom\\\"\"}}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maskClass",
+      "type": "object",
+      "initialValue": "{\"position\":{\"type\":\"string\",\"value\":\"fixed\",\"raw\":\"\\\"fixed\\\"\"},\"bottom\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"},\"top\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"},\"left\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"},\"right\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"},\"backgroundColor\":{\"type\":\"string\",\"value\":\"rgba(0, 0, 0, 0.4)\",\"raw\":\"\\\"rgba(0, 0, 0, 0.4)\\\"\"}}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "transClass",
+      "type": "object",
+      "initialValue": "{\"position\":{\"type\":\"string\",\"value\":\"fixed\",\"raw\":\"\\\"fixed\\\"\"},\"left\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"},\"right\":{\"type\":\"number\",\"value\":0,\"raw\":\"0\"}}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maskShow",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mkclick",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "popupstyle",
+      "type": "string",
+      "initialValue": "\"top\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isDesktop",
+      "dependencies": [
+        "popupWidth",
+        "popupHeight"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg",
+      "dependencies": [
+        "backgroundColor"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "{ show: true, type: direction }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maskClick",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setH5Visible",
+      "params": [],
+      "syntax": [
+        "setH5Visible(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "公用方法，不显示遮罩层",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeMask",
+      "params": [],
+      "syntax": [
+        "closeMask(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "公用方法，遮罩层禁止点击",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disableMask",
+      "params": [],
+      "syntax": [
+        "disableMask(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "TODO nvue 取消冒泡",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "clear(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "params": [
+        {
+          "name": "direction",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "open(direction: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "close(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "TODO 处理冒泡事件，头条的冒泡事件有问题 ，先这样兼容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "touchstart",
+      "params": [],
+      "syntax": [
+        "touchstart(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onTap",
+      "params": [],
+      "syntax": [
+        "onTap(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "顶部弹出样式处理",
+      "keywords": [],
+      "visibility": "public",
+      "name": "top",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "top(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "底部弹出样式处理",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bottom",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "bottom(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "中间弹出样式处理",
+      "keywords": [],
+      "visibility": "public",
+      "name": "center",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "center(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "left(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "right(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "uniPopup",
+  "description": "#endif"
+}

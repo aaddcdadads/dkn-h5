@@ -64,22 +64,32 @@
   "props": [
     {
       "kind": "prop",
-      "description": "primary,warning,success,error,info",
-      "keywords": [],
+      "description": "类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"primary\",\"warning\",\"success\",\"error\",\"info\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"error\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "default, mini",
-      "keywords": [],
+      "description": "尺寸",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"default\",\"mini\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "size",
-      "type": "String",
+      "type": "Enum",
       "default": "\"default\"",
       "required": false,
       "describeModel": false
@@ -97,7 +107,7 @@
     },
     {
       "kind": "prop",
-      "description": "显示的数值内容",
+      "description": "显示数值内容",
       "keywords": [],
       "visibility": "public",
       "name": "count",
@@ -121,7 +131,7 @@
     },
     {
       "kind": "prop",
-      "description": "当数值为 0 时，是否展示 Badge",
+      "description": "为0时展示组件",
       "keywords": [],
       "visibility": "public",
       "name": "show-zero",
@@ -143,7 +153,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否开启绝对定位，开启了offset才会起作用",
+      "description": "开启绝对定位",
       "keywords": [],
       "visibility": "public",
       "name": "absolute",
@@ -179,7 +189,7 @@
     },
     {
       "kind": "prop",
-      "description": "badge的背景颜色",
+      "description": "背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
@@ -190,7 +200,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否让badge组件的中心点和父组件右上角重合，配置的话，offset将会失效",
+      "description": "组件右上角重合",
       "keywords": [],
       "visibility": "public",
       "name": "is-center",

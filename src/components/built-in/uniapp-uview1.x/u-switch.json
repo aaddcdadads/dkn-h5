@@ -52,7 +52,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否为加载中状态",
+      "description": "加载中状态",
       "keywords": [],
       "visibility": "public",
       "name": "loading",
@@ -63,7 +63,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否为禁用装填",
+      "description": "是否禁用装填",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -74,7 +74,7 @@
     },
     {
       "kind": "prop",
-      "description": "开关尺寸，单位rpx",
+      "description": "开关尺寸",
       "keywords": [],
       "visibility": "public",
       "name": "size",
@@ -88,7 +88,7 @@
     },
     {
       "kind": "prop",
-      "description": "打开时的背景颜色",
+      "description": "打开时背景色",
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
@@ -99,7 +99,7 @@
     },
     {
       "kind": "prop",
-      "description": "关闭时的背景颜色",
+      "description": "关闭时背景色",
       "keywords": [],
       "visibility": "public",
       "name": "inactive-color",
@@ -110,7 +110,7 @@
     },
     {
       "kind": "prop",
-      "description": "通过v-model双向绑定的值",
+      "description": "开关状态",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -121,7 +121,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否使手机发生短促震动，目前只在iOS的微信小程序有效(2020-05-06)",
+      "description": "手机短促震动",
       "keywords": [],
       "visibility": "public",
       "name": "vibrate-short",
@@ -132,7 +132,7 @@
     },
     {
       "kind": "prop",
-      "description": "打开选择器时的值",
+      "description": "打开时的值",
       "keywords": [],
       "visibility": "public",
       "name": "active-value",
@@ -147,7 +147,7 @@
     },
     {
       "kind": "prop",
-      "description": "关闭选择器时的值",
+      "description": "关闭时的值",
       "keywords": [],
       "visibility": "public",
       "name": "inactive-value",

@@ -44,6 +44,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"线条的颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -54,7 +55,7 @@
     },
     {
       "kind": "prop",
-      "description": "长度，竖向时表现为高度，横向时表现为长度，可以为百分比，带rpx单位的值等",
+      "description": "长度",
       "keywords": [],
       "visibility": "public",
       "name": "length",
@@ -65,18 +66,23 @@
     },
     {
       "kind": "prop",
-      "description": "线条方向，col-竖向，row-横向",
-      "keywords": [],
+      "description": "线条方向",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"col\",\"row\"]"
+        }
+      ],
       "visibility": "public",
       "name": "direction",
-      "type": "String",
+      "type": "Enum",
       "default": "\"row\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示细边框",
+      "description": "显示细边框",
       "keywords": [],
       "visibility": "public",
       "name": "hair-line",
@@ -87,7 +93,7 @@
     },
     {
       "kind": "prop",
-      "description": "线条与上下左右元素的间距，字符串形式，如\"30rpx\"、\"20rpx 30rpx\"",
+      "description": "线条间距",
       "keywords": [],
       "visibility": "public",
       "name": "margin",
@@ -98,11 +104,16 @@
     },
     {
       "kind": "prop",
-      "description": "线条的类型，solid-实线，dashed-方形虚线，dotted-圆点虚线",
-      "keywords": [],
+      "description": "线条的类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"dashed\",\"dotted\",\"solid\"]"
+        }
+      ],
       "visibility": "public",
       "name": "border-style",
-      "type": "String",
+      "type": "Enum",
       "default": "\"solid\"",
       "required": false,
       "describeModel": false

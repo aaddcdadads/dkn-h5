@@ -80,7 +80,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "轮播图的数据,格式如：[{image: 'xxxx', title: 'xxxx'}，{image: 'yyyy', title: 'yyyy'}]，其中title字段可选",
+      "description": "轮播图的数据",
       "keywords": [],
       "visibility": "public",
       "name": "list",
@@ -91,23 +91,12 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示title标题",
+      "description": "显示title标题",
       "keywords": [],
       "visibility": "public",
       "name": "title",
       "type": "Boolean",
       "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "用户自定义的指示器的样式",
-      "keywords": [],
-      "visibility": "public",
-      "name": "indicator",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {};\r\n\t\t\t\t}",
       "required": false,
       "describeModel": false
     },
@@ -127,7 +116,7 @@
     },
     {
       "kind": "prop",
-      "description": "隔多久自动切换",
+      "description": "切换间隔时间",
       "keywords": [],
       "visibility": "public",
       "name": "interval",
@@ -141,18 +130,23 @@
     },
     {
       "kind": "prop",
-      "description": "指示器的模式，rect|dot|number|round",
-      "keywords": [],
+      "description": "指示器的模式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"rect\", \"dot\", \"round\",\"number\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"round\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "list的高度，单位rpx",
+      "description": "list的高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",
@@ -166,18 +160,23 @@
     },
     {
       "kind": "prop",
-      "description": "指示器的位置，topLeft|topCenter|topRight|bottomLeft|bottomCenter|bottomRight",
-      "keywords": [],
+      "description": "指示器的位置",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"topLeft\",\"topCenter\",\"topRight\",\"bottomLeft\",\"bottomCenter\",\"bottomRight\"]"
+        }
+      ],
       "visibility": "public",
       "name": "indicator-pos",
-      "type": "String",
+      "type": "Enum",
       "default": "\"bottomCenter\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否开启缩放效果",
+      "description": "开启缩放效果",
       "keywords": [],
       "visibility": "public",
       "name": "effect3d",
@@ -188,7 +187,7 @@
     },
     {
       "kind": "prop",
-      "description": "3D模式的情况下，激活item与前后item之间的距离，单位rpx",
+      "description": "激活项前后距离",
       "keywords": [],
       "visibility": "public",
       "name": "effect3d-previous-margin",
@@ -213,7 +212,7 @@
     },
     {
       "kind": "prop",
-      "description": "自动轮播时间间隔，单位ms",
+      "description": "时间间隔",
       "keywords": [],
       "visibility": "public",
       "name": "duration",
@@ -227,7 +226,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否衔接滑动，即到最后一张时接着滑动，是否自动切换到第一张",
+      "description": "是否衔接滑动",
       "keywords": [],
       "visibility": "public",
       "name": "circular",
@@ -238,7 +237,7 @@
     },
     {
       "kind": "prop",
-      "description": "图片的裁剪模式",
+      "description": "图片裁剪模式",
       "keywords": [],
       "visibility": "public",
       "name": "img-mode",
@@ -249,7 +248,7 @@
     },
     {
       "kind": "prop",
-      "description": "从list数组中读取的图片的属性名",
+      "description": "图片的属性名",
       "keywords": [],
       "visibility": "public",
       "name": "name",
@@ -271,7 +270,7 @@
     },
     {
       "kind": "prop",
-      "description": "初始化时，默认显示第几项",
+      "description": "初始项",
       "keywords": [],
       "visibility": "public",
       "name": "current",
@@ -285,7 +284,7 @@
     },
     {
       "kind": "prop",
-      "description": "标题的样式，对象形式",
+      "description": "标题的样式",
       "keywords": [],
       "visibility": "public",
       "name": "title-style",
