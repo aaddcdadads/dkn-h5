@@ -1,0 +1,144 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件为超链接组件，在不同平台有不同表现形式：在APP平台会通过plus环境打开内置浏览器，在小程序中把链接复制到粘贴板，同时提示信息，在H5中通过window.open打开链接。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/link.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} color 文字颜色（默认#606266）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} font-size 字体大小，单位rpx（默认28）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} under-line 是否显示下划线（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String} href 跳转的链接，要带上http(s)"
+    },
+    {
+      "name": "property",
+      "description": "{String} line-color 下划线颜色，默认同color参数颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String} mp-tips 各个小程序平台把链接复制到粘贴板后的提示语（默认“链接已复制，请在浏览器打开”）"
+    },
+    {
+      "name": "example",
+      "description": "<u-link href=\"http://www.uviewui.com\">蜀道难，难于上青天</u-link>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "default":"点击链接",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "文字颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "default": "\"#2979ff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "字体大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "font-size",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "28",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示下划线",
+      "keywords": [],
+      "visibility": "public",
+      "name": "under-line",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "要跳转的链接",
+      "keywords": [],
+      "visibility": "public",
+      "name": "href",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "复制时提示语",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mp-tips",
+      "type": "String",
+      "default": "\"链接已复制，请在浏览器打开\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "下划线颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "line-color",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "openLink",
+      "params": [],
+      "syntax": [
+        "openLink(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-link",
+  "description": "link 超链接"
+}

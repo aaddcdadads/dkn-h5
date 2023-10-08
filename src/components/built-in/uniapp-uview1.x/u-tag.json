@@ -1,0 +1,347 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般用于标记和选择"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/tag.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} type 主题类型（默认primary）"
+    },
+    {
+      "name": "property",
+      "description": "{String} size 标签大小（默认default）"
+    },
+    {
+      "name": "property",
+      "description": "{String} shape 标签形状（默认square）"
+    },
+    {
+      "name": "property",
+      "description": "{String} text 标签的文字内容"
+    },
+    {
+      "name": "property",
+      "description": "{String} bg-color 自定义标签的背景颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String} border-color 标签的边框颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String} close-color 关闭按钮的颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} index 点击标签时，会通过click事件返回该值"
+    },
+    {
+      "name": "property",
+      "description": "{String} mode 模式选择，见官网说明（默认light）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} closeable 是否可关闭，设置为true，文字右边会出现一个关闭图标（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show 标签显示与否（默认true）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 点击标签触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} close closeable为true时，点击标签关闭按钮触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-tag text=\"雪月夜\" type=\"success\" />"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "标签类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"info\", \"primary\", \"success\",\"warning\",\"error\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "type",
+      "type": "Enum",
+      "default": "\"primary\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否禁用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标签的大小",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"default\",\"mini\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "size",
+      "type": "Enum",
+      "default": "\"default\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "tag的形状",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"circle\",\"square\",\"circleLeft\",\"circleRight\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "shape",
+      "type": "Enum",
+      "default": "\"square\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标签文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "text",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标签字体颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "边框颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-color",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "关闭按钮颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close-color",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击标签时",
+      "keywords": [],
+      "visibility": "public",
+      "name": "index",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "模式选择",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"dark\", \"light\", \"plain\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "mode",
+      "type": "Enum",
+      "default": "\"light\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否可关闭",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeable",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "customStyle",
+      "dependencies": [
+        "color",
+        "bgColor",
+        "mode",
+        "borderColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "iconStyle",
+      "dependencies": [
+        "closeable",
+        "size",
+        "mode",
+        "type",
+        "closeColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "关闭图标的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeIconColor",
+      "dependencies": [
+        "closeColor",
+        "color",
+        "mode",
+        "type"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "标签被点击",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickTag",
+      "params": [],
+      "syntax": [
+        "clickTag(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击标签关闭按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-tag",
+  "description": "tag 提示"
+}

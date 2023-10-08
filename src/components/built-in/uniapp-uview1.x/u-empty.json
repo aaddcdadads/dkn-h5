@@ -1,0 +1,241 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件用于需要加载内容，但是加载的第一页数据就为空，提示一个\"没有内容\"的场景， 我们精心挑选了十几个场景的图标，方便您使用。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/empty.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} color 文字颜色（默认#c0c4cc）"
+    },
+    {
+      "name": "property",
+      "description": "{String} text 文字提示（默认“无内容”）"
+    },
+    {
+      "name": "property",
+      "description": "{String} src 自定义图标路径，如定义，mode参数会失效"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} font-size 提示文字的大小，单位rpx（默认28）"
+    },
+    {
+      "name": "property",
+      "description": "{String} mode 内置的图标，见官网说明（默认data）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} img-width 图标的宽度，单位rpx（默认240）"
+    },
+    {
+      "name": "property",
+      "description": "{String} img-height 图标的高度，单位rpx（默认auto）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} margin-top 组件距离上一个元素之间的距离（默认0）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show 是否显示组件（默认true）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 点击组件时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} close 点击关闭按钮时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-empty text=\"所谓伊人，在水一方\" mode=\"list\"></u-empty>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bottom",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "图标路径",
+      "keywords": [],
+      "visibility": "public",
+      "name": "src",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "提示文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "text",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "文字颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "default": "\"#c0c4cc\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图标的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon-color",
+      "type": "String",
+      "default": "\"#c0c4cc\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图标的大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon-size",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "120",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "文字大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "font-size",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "26",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "预置图标类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"car\", \"page\", \"search\",\"address\",\"wifi\",\"order\",\"coupon\",\"favor\",\"permission\",\"history\",\"news\",\"message\",\"list\",\"data\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "mode",
+      "type": "Enum",
+      "default": "\"data\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图标宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "img-width",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "120",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图标高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "img-height",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"auto\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示组件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "组件距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "margin-top",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"icon的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icons",
+      "type": "object",
+      "initialValue": "{\"car\":{\"type\":\"string\",\"value\":\"购物车为空\",\"raw\":\"\\\"购物车为空\\\"\"},\"page\":{\"type\":\"string\",\"value\":\"页面不存在\",\"raw\":\"\\\"页面不存在\\\"\"},\"search\":{\"type\":\"string\",\"value\":\"没有搜索结果\",\"raw\":\"\\\"没有搜索结果\\\"\"},\"address\":{\"type\":\"string\",\"value\":\"没有收货地址\",\"raw\":\"\\\"没有收货地址\\\"\"},\"wifi\":{\"type\":\"string\",\"value\":\"没有WiFi\",\"raw\":\"\\\"没有WiFi\\\"\"},\"order\":{\"type\":\"string\",\"value\":\"订单为空\",\"raw\":\"\\\"订单为空\\\"\"},\"coupon\":{\"type\":\"string\",\"value\":\"没有优惠券\",\"raw\":\"\\\"没有优惠券\\\"\"},\"favor\":{\"type\":\"string\",\"value\":\"暂无收藏\",\"raw\":\"\\\"暂无收藏\\\"\"},\"permission\":{\"type\":\"string\",\"value\":\"无权限\",\"raw\":\"\\\"无权限\\\"\"},\"history\":{\"type\":\"string\",\"value\":\"无历史记录\",\"raw\":\"\\\"无历史记录\\\"\"},\"news\":{\"type\":\"string\",\"value\":\"无新闻列表\",\"raw\":\"\\\"无新闻列表\\\"\"},\"message\":{\"type\":\"string\",\"value\":\"消息列表为空\",\"raw\":\"\\\"消息列表为空\\\"\"},\"list\":{\"type\":\"string\",\"value\":\"列表为空\",\"raw\":\"\\\"列表为空\\\"\"},\"data\":{\"type\":\"string\",\"value\":\"数据为空\",\"raw\":\"\\\"数据为空\\\"\"}}"
+    }
+  ],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "name": "u-empty",
+  "description": "empty 内容为空"
+}

@@ -1,0 +1,580 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "弹出层容器，用于展示弹窗、信息提示等内容，支持上、下、左、右和中部弹出。组件只提供容器，内部内容由用户自定义"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/popup.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} mode 弹出方向（默认left）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} mask 是否显示遮罩（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Stringr | Number} length mode=left | 见官网说明（默认auto）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} zoom 是否开启缩放动画，只在mode为center时有效（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} safe-area-inset-bottom 是否开启底部安全区适配（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} mask-close-able 点击遮罩是否可以关闭弹出层（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Object} custom-style 用户自定义样式"
+    },
+    {
+      "name": "property",
+      "description": "{Stringr | Number} negative-top 中部弹出时，往上偏移的值"
+    },
+    {
+      "name": "property",
+      "description": "{Numberr | String} border-radius 弹窗圆角值（默认0）"
+    },
+    {
+      "name": "property",
+      "description": "{Numberr | String} z-index 弹出内容的z-index值（默认1075）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} closeable 是否显示关闭图标（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String} close-icon 关闭图标的名称，只能uView的内置图标"
+    },
+    {
+      "name": "property",
+      "description": "{String} close-icon-pos 自定义关闭图标位置（默认top-right）"
+    },
+    {
+      "name": "property",
+      "description": "{String} close-icon-color 关闭图标的颜色（默认#909399）"
+    },
+    {
+      "name": "property",
+      "description": "{Number | String} close-icon-size 关闭图标的大小，单位rpx（默认30）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} open 弹出层打开"
+    },
+    {
+      "name": "event",
+      "description": "{Function} close 弹出层收起"
+    },
+    {
+      "name": "example",
+      "description": "<u-popup v-model=\"show\"><view>出淤泥而不染，濯清涟而不妖</view></u-popup>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "显示状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "弹出方向",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\", \"right\", \"top\",\"bottom\",\"center\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "mode",
+      "type": "Enum",
+      "default": "\"left\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示遮罩",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "撑开高度或者宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "length",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"auto\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "开启缩放动画",
+      "keywords": [],
+      "visibility": "public",
+      "name": "zoom",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "底部安全区适配",
+      "keywords": [],
+      "visibility": "public",
+      "name": "safe-area-inset-bottom",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击遮罩关闭",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask-close-able",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自定义样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "custom-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {};\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description": "弹窗圆角",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-radius",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"z-index的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "z-index",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示关闭图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeable",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "关闭图标的名称",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close-icon",
+      "type": "String",
+      "default": "\"close\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "关闭图标位置",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"top-left\", \"top-right\", \"bottom-left\",\"bottom-right\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "close-icon-pos",
+      "type": "Enum",
+      "default": "\"top-right\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "关闭图标的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close-icon-color",
+      "type": "String",
+      "default": "\"#909399\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "关闭图标大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close-icon-size",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"30\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "向上偏移值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "negative-top",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "遮罩的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask-custom-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {}\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "画过渡时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "duration",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "250",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "visibleSync",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showDrawer",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timer",
+      "type": "any",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeFromInner",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "根据mode的位置，设定其弹窗的宽度(mode = left|right)，或者高度(mode = top|bottom)",
+      "keywords": [],
+      "visibility": "public",
+      "name": "style",
+      "dependencies": [
+        "mode",
+        "width",
+        "getUnitValue",
+        "length",
+        "height",
+        "uZindex",
+        "borderRadius",
+        "duration"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "中部弹窗的特有样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "centerStyle",
+      "dependencies": [
+        "width",
+        "getUnitValue",
+        "length",
+        "height",
+        "uZindex",
+        "$u",
+        "negativeTop",
+        "borderRadius"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "计算整理后的z-index值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uZindex",
+      "dependencies": [
+        "zIndex",
+        "$u"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "status",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "status ? 'open' : 'close'",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "判断传入的值，是否带有单位，如果没有，就默认用rpx单位",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getUnitValue",
+      "params": [
+        {
+          "name": "val",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getUnitValue(val: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "遮罩被点击",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maskClick",
+      "params": [],
+      "syntax": [
+        "maskClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "让其只在mode=center时起作用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "modeCenterClose",
+      "params": [
+        {
+          "name": "mode",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "modeCenterClose(mode: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "params": [],
+      "syntax": [
+        "open(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "打开时，先渲染组件，延时一定时间再让遮罩和弹窗的动画起作用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "params": [
+        {
+          "name": "param1",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "param2",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "status",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "change(param1: unknow, param2: unknow, status: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-popup",
+  "description": "popup 弹窗"
+}

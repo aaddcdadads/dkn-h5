@@ -1,0 +1,412 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "cell单元格一般用于一组列表的情况，比如个人中心页，设置页等。搭配u-cell-group使用"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/cell.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} title 左侧标题"
+    },
+    {
+      "name": "property",
+      "description": "{String} icon 左侧图标名，只支持uView内置图标，见Icon 图标"
+    },
+    {
+      "name": "property",
+      "description": "{Object} icon-style 左边图标的样式，对象形式"
+    },
+    {
+      "name": "property",
+      "description": "{String} value 右侧内容"
+    },
+    {
+      "name": "property",
+      "description": "{String} label 标题下方的描述信息"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} border-bottom 是否显示cell的下边框（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} border-top 是否显示cell的上边框（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} center 是否使内容垂直居中（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String} hover-class 是否开启点击反馈，none为无效果（默认true）\n// @property {Boolean} border-gap border-bottom为true时，Cell列表中间的条目的下边框是否与左边有一个间隔（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} arrow 是否显示右侧箭头（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} required 箭头方向，可选值（默认right）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} arrow-direction 是否显示左边表示必填的星号（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Object} title-style 标题样式，对象形式"
+    },
+    {
+      "name": "property",
+      "description": "{Object} value-style 右侧内容样式，对象形式"
+    },
+    {
+      "name": "property",
+      "description": "{Object} label-style 标题下方描述信息的样式，对象形式"
+    },
+    {
+      "name": "property",
+      "description": "{String} bg-color 背景颜色（默认transparent）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} index 用于在click事件回调中返回，标识当前是第几个Item"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} title-width 标题的宽度，单位rpx"
+    },
+    {
+      "name": "example",
+      "description": "<u-cell-item icon=\"integral-fill\" title=\"会员等级\" value=\"新版本\"></u-cell-item>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right-icon",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "左侧图标名称(只能uView内置图标)，或者图标src",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "左侧标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "右侧内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description": "标题下方的描述信息",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示下边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-bottom",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示上边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-top",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否开启点击反馈，即点击时cell背景为灰色，none为无效果",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-class",
+      "type": "String",
+      "default": "\"u-cell-hover\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示右侧箭头",
+      "keywords": [],
+      "visibility": "public",
+      "name": "arrow",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "内容是否垂直居中",
+      "keywords": [],
+      "visibility": "public",
+      "name": "center",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示左边表示必填的星号",
+      "keywords": [],
+      "visibility": "public",
+      "name": "required",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题的宽度，单位rpx",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title-width",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "右侧箭头方向，可选值：right|up|down，默认为right",
+      "keywords": [],
+      "visibility": "public",
+      "name": "arrow-direction",
+      "type": "String",
+      "default": "\"right\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "控制标题的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {};\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "右侧显示内容的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {};\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "描述信息的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {};\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"transparent\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "用于识别被点击的是第几个cell",
+      "keywords": [],
+      "visibility": "public",
+      "name": "index",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否使用lable插槽",
+      "keywords": [],
+      "visibility": "public",
+      "name": "use-label-slot",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "左边图标的大小，单位rpx，只对传入icon字段时有效",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "34",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "左边图标的样式，对象形式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {}\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "arrowStyle",
+      "dependencies": [
+        "arrowDirection"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "params": [],
+      "syntax": [
+        "click(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-cell-item",
+  "description": "cellItem 单元格Item"
+}

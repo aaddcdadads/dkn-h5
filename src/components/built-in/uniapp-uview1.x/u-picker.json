@@ -1,0 +1,935 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "此选择器有两种弹出模式：一是时间模式，可以配置年，日，月，时，分，秒参数 二是地区模式，可以配置省，市，区参数"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/picker.html"
+    },
+    {
+      "name": "property",
+      "description": "{Object} params 需要显示的参数，见官网说明"
+    },
+    {
+      "name": "property",
+      "description": "{String} mode 模式选择，region-地区类型，time-时间类型（默认time）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} start-year 可选的开始年份，mode=time时有效（默认1950）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} end-year 可选的结束年份，mode=time时有效（默认2050）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} safe-area-inset-bottom 是否开启底部安全区适配（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show-time-tag 时间模式时，是否显示后面的年月日中文提示"
+    },
+    {
+      "name": "property",
+      "description": "{String} cancel-color 取消按钮的颜色（默认#606266）"
+    },
+    {
+      "name": "property",
+      "description": "{String} confirm-color 确认按钮的颜色（默认#2979ff）"
+    },
+    {
+      "name": "property",
+      "description": "{String} default-time 默认选中的时间，mode=time时有效"
+    },
+    {
+      "name": "property",
+      "description": "{String} confirm-text 确认按钮的文字"
+    },
+    {
+      "name": "property",
+      "description": "{String} cancel-text 取消按钮的文字"
+    },
+    {
+      "name": "property",
+      "description": "{String} default-region 默认选中的地区，中文形式，mode=region时有效"
+    },
+    {
+      "name": "property",
+      "description": "{String} default-code 默认选中的地区，编号形式，mode=region时有效"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} mask-close-able 是否允许通过点击遮罩关闭Picker（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} z-index 弹出时的z-index值（默认1075）"
+    },
+    {
+      "name": "property",
+      "description": "{Array} default-selector 数组形式，其中每一项表示选择了range对应项中的第几个"
+    },
+    {
+      "name": "property",
+      "description": "{Array} range 自定义选择的数据，mode=selector或mode=multiSelector时有效"
+    },
+    {
+      "name": "property",
+      "description": "{String} range-key 当range参数的元素为对象时，指定Object中的哪个key的值作为选择器显示内容"
+    },
+    {
+      "name": "event",
+      "description": "{Function} confirm 点击确定按钮，返回当前选择的值"
+    },
+    {
+      "name": "event",
+      "description": "{Function} cancel 点击取消按钮，返回当前选择的值"
+    },
+    {
+      "name": "example",
+      "description": "<u-picker v-model=\"show\" mode=\"time\"></u-picker>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "参数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "params",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {\r\n\t\t\t\t\tyear: true,\r\n\t\t\t\t\tmonth: true,\r\n\t\t\t\t\tday: true,\r\n\t\t\t\t\thour: false,\r\n\t\t\t\t\tminute: false,\r\n\t\t\t\t\tsecond: false,\r\n\t\t\t\t\tprovince: true,\r\n\t\t\t\t\tcity: true,\r\n\t\t\t\t\tarea: true,\r\n\t\t\t\t\ttimestamp: true,\r\n\t\t\t\t};\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自定义选择的数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "range",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\treturn [];\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "默认选中的下标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default-selector",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\treturn [0];\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "选择器显示内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "range-key",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "模式选择",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"region\", \"selector\", \"multiSelector\",\"time\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "mode",
+      "type": "Enum",
+      "default": "\"time\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "年份开始时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "start-year",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "1950",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "年份结束时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "end-year",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "2050",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "\"取消\"按钮颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel-color",
+      "type": "String",
+      "default": "\"#606266\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "\"确定\"按钮颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-color",
+      "type": "String",
+      "default": "\"#2979ff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "默认显示时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default-time",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "默认显示地区",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default-region",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\treturn [];\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "时间模式时",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-time-tag",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "默认显示地区的编码",
+      "keywords": [],
+      "visibility": "public",
+      "name": "area-code",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\treturn [];\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"底部安全区适配",
+      "keywords": [],
+      "visibility": "public",
+      "name": "safe-area-inset-bottom",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击遮罩关闭",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask-close-able",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "弹出与收起",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description": "z-index值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "z-index",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "顶部标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "取消按钮文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel-text",
+      "type": "String",
+      "default": "\"取消\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "确认按钮文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-text",
+      "type": "String",
+      "default": "\"确认\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "years",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "months",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "days",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hours",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "minutes",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "seconds",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "year",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "month",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "day",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hour",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "minute",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "second",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "reset",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "startDate",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "endDate",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "valueArr",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "provinces",
+      "type": "Identifier",
+      "initialValue": "provinces"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "citys",
+      "type": "object",
+      "initialValue": "citys[0]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "areas",
+      "type": "object",
+      "initialValue": "areas[0][0]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "province",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "city",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "area",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "moving",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "propsChange",
+      "dependencies": [
+        "mode",
+        "defaultTime",
+        "startYear",
+        "endYear",
+        "defaultRegion",
+        "areaCode"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "regionChange",
+      "dependencies": [
+        "province",
+        "city"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "yearAndMonth",
+      "dependencies": [
+        "year",
+        "month"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uZIndex",
+      "dependencies": [
+        "zIndex",
+        "$u"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "false",
+          "type": "boolean",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "***unhandled***",
+      "arguments": [
+        {
+          "name": "result",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "标识滑动开始，只有微信小程序才有这样的事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pickstart",
+      "params": [],
+      "syntax": [
+        "pickstart(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "标识滑动结束",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pickend",
+      "params": [],
+      "syntax": [
+        "pickend(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "对单列和多列形式的判断是否有传入变量的情况",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getItemValue",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "mode",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getItemValue(item: unknow, mode: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "小于10前面补0，用于月份，日期，时分秒等",
+      "keywords": [],
+      "visibility": "public",
+      "name": "formatNumber",
+      "params": [
+        {
+          "name": "num",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "formatNumber(num: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "生成递进的数组",
+      "keywords": [],
+      "visibility": "public",
+      "name": "generateArray",
+      "params": [
+        {
+          "name": "start",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "end",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "generateArray(start: unknow, end: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getIndex",
+      "params": [
+        {
+          "name": "arr",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "val",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getIndex(arr: unknow, val: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "日期时间处理",
+      "keywords": [],
+      "visibility": "public",
+      "name": "initTimeValue",
+      "params": [],
+      "syntax": [
+        "initTimeValue(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "init",
+      "params": [],
+      "syntax": [
+        "init(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "设置picker的某一列值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setYears",
+      "params": [],
+      "syntax": [
+        "setYears(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setMonths",
+      "params": [],
+      "syntax": [
+        "setMonths(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setDays",
+      "params": [],
+      "syntax": [
+        "setDays(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setHours",
+      "params": [],
+      "syntax": [
+        "setHours(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setMinutes",
+      "params": [],
+      "syntax": [
+        "setMinutes(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setSeconds",
+      "params": [],
+      "syntax": [
+        "setSeconds(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setProvinces",
+      "params": [],
+      "syntax": [
+        "setProvinces(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setCitys",
+      "params": [],
+      "syntax": [
+        "setCitys(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setAreas",
+      "params": [],
+      "syntax": [
+        "setAreas(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "用户更改picker的列选项",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "change(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "用户点击确定按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getResult",
+      "params": [
+        {
+          "name": "event",
+          "type": "any",
+          "defaultValue": "null",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getResult(event: any = null): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取时间戳",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getTimestamp",
+      "params": [],
+      "syntax": [
+        "getTimestamp(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    }
+  ],
+  "name": "u-picker",
+  "description": "picker picker弹出选择器"
+}
