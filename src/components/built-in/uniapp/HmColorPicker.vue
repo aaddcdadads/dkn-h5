@@ -27,29 +27,39 @@
         <!-- #ifdef H5 -->
         <view class="t-controller boxs" 
         @mousedown="touchstart($event, 1)"  @mousemove="touchmove($event, 1)" @mouseup="touchend($event, 1)">
-        <!-- #endif -->
-        <!-- #ifndef H5 -->
-        <view class="t-controller boxs" 
-        @touchstart="touchstart($event, 1)" @touchmove="touchmove($event, 1)" @touchend="touchend($event, 1)">
-        <!-- #endif -->
           <view class="t-hue">
             <view class="t-circle" :style="{ left: site[1].left - 12 + 'px' }"></view>
           </view>
         </view>
-        <!-- #ifdef H5 -->
-        <view class="t-controller boxs" 
-        @mousedown="touchstart($event, 2)"  @mousemove="touchmove($event, 2)" @mouseup="touchend($event, 2)">
         <!-- #endif -->
         <!-- #ifndef H5 -->
         <view class="t-controller boxs" 
-        @touchstart="touchstart($event, 2)" @touchmove="touchmove($event, 2)" @touchend="touchend($event, 2)">
+        @touchstart="touchstart($event, 1)" @touchmove="touchmove($event, 1)" @touchend="touchend($event, 1)">
+          <view class="t-hue">
+            <view class="t-circle" :style="{ left: site[1].left - 12 + 'px' }"></view>
+          </view>
+        </view>
         <!-- #endif -->
+        <!-- #ifdef H5 -->
+        <view class="t-controller boxs" 
+        @mousedown="touchstart($event, 2)"  @mousemove="touchmove($event, 2)" @mouseup="touchend($event, 2)">
           <view class="t-transparency" :style="{
             background: `linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(${rgba.r}, ${rgba.g}, ${rgba.b}, 1))`
           }">
             <view class="t-circle" :style="{ left: site[2].left - 12 + 'px' }"></view>
           </view>
         </view>
+        <!-- #endif -->
+        <!-- #ifndef H5 -->
+        <view class="t-controller boxs" 
+        @touchstart="touchstart($event, 2)" @touchmove="touchmove($event, 2)" @touchend="touchend($event, 2)">
+          <view class="t-transparency" :style="{
+            background: `linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(${rgba.r}, ${rgba.g}, ${rgba.b}, 1))`
+          }">
+            <view class="t-circle" :style="{ left: site[2].left - 12 + 'px' }"></view>
+          </view>
+        </view>
+        <!-- #endif -->
       </view>
     </view>
     <view class="t-result__box">
