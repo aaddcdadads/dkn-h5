@@ -7,7 +7,6 @@ import { toCamelCase, upperFirst } from './util';
 export default {
 	install(app, options){
     // //根据modules加载所有组件
-    console.log(`modules: `, modules);
     Object.keys(modules).forEach((key) => {
       let module = modules[key];
       let arr = key.split("/");
@@ -17,7 +16,6 @@ export default {
       app.component(upperFirst(toCamelCase(componentName)), defineAsyncComponent(module));
     })
 
-    console.log(`uviewUiModules: `, uviewUiModules);
     // 加载uni-ui的所有组件
     Object.keys(uviewUiModules).forEach((key) => {
       let module = modules[key];
@@ -28,13 +26,11 @@ export default {
       if (componentName.indexOf('u-') != 0) {
         return;
       }
-      console.log(`componentName: `, componentName, key);
       try {
         app.component(componentName, defineAsyncComponent(() => import(key)));
       } catch (err) {
         console.log(`component: `, err);
       }
-      
     })
   }
 }
