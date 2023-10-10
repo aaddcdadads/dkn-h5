@@ -16,6 +16,7 @@ export default {
       app.component(upperFirst(toCamelCase(componentName)), defineAsyncComponent(module));
     })
 
+    console.log(`uniUiModules: `, uniUiModules);
     // 加载uni-ui的所有组件
     Object.keys(uniUiModules).forEach((key) => {
       let module = modules[key];
