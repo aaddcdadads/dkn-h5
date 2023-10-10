@@ -1,86 +1,93 @@
 <template>
   <!-- #ifdef H5 -->
   <view class="t-box" @mouseup="touchend($event, 0)" @mouseleave="touchend($event, 0)">
-  <!-- #endif -->
-  <!-- #ifndef H5 -->
-  <view class="t-box">
-  <!-- #endif -->
-  <!-- <view class="t-box" @mouseup="touchend($event, 0)" @mouseleave="touchend($event, 0)"> -->
-    <view class="t-color__box" :style="{ background: 'rgb(' + bgcolor.r + ',' + bgcolor.g + ',' + bgcolor.b + ')'}">
-      <!-- #ifdef H5 -->
-      <view class="t-background boxs" 
-      @mousedown="touchstart($event, 0)"  @mousemove="touchmove($event, 0)" @mouseup="touchend($event, 0)">
+    <!-- #endif -->
+    <!-- #ifndef H5 -->
+    <view class="t-box">
       <!-- #endif -->
-      <!-- #ifndef H5 -->
-      <view class="t-background boxs" 
-      @touchstart="touchstart($event, 0)" @touchmove="touchmove($event, 0)" @touchend="touchend($event, 0)">
-      <!-- #endif -->
-        <view class="t-color-mask"></view>
-        <view class="t-pointer" :style="{ top: site[0].top - 8 + 'px', left: site[0].left - 8 + 'px' }"></view>
-      </view>
-    </view>
-    <view class="t-control__box">
-      <view class="t-control__color">
-        <view class="t-control__color-content" :style="{ background: 'rgba(' + rgba.r + ',' + rgba.g + ',' + rgba.b + ',' + rgba.a + ')' }"></view>
-      </view>
-      <view class="t-control-box__item">
+      <!-- <view class="t-box" @mouseup="touchend($event, 0)" @mouseleave="touchend($event, 0)"> -->
+      <view class="t-color__box" :style="{ background: 'rgb(' + bgcolor.r + ',' + bgcolor.g + ',' + bgcolor.b + ')' }">
         <!-- #ifdef H5 -->
-        <view class="t-controller boxs" 
-        @mousedown="touchstart($event, 1)"  @mousemove="touchmove($event, 1)" @mouseup="touchend($event, 1)">
-        <!-- #endif -->
-        <!-- #ifndef H5 -->
-        <view class="t-controller boxs" 
-        @touchstart="touchstart($event, 1)" @touchmove="touchmove($event, 1)" @touchend="touchend($event, 1)">
-        <!-- #endif -->
-          <view class="t-hue">
-            <view class="t-circle" :style="{ left: site[1].left - 12 + 'px' }"></view>
+        <view class="t-background boxs" @mousedown="touchstart($event, 0)" @mousemove="touchmove($event, 0)"
+          @mouseup="touchend($event, 0)">
+          <!-- #endif -->
+          <!-- #ifndef H5 -->
+          <view class="t-background boxs" @touchstart="touchstart($event, 0)" @touchmove="touchmove($event, 0)"
+            @touchend="touchend($event, 0)">
+            <!-- #endif -->
+            <view class="t-color-mask"></view>
+            <view class="t-pointer" :style="{ top: site[0].top - 8 + 'px', left: site[0].left - 8 + 'px' }"></view>
           </view>
         </view>
-        <!-- #ifdef H5 -->
-        <view class="t-controller boxs" 
-        @mousedown="touchstart($event, 2)"  @mousemove="touchmove($event, 2)" @mouseup="touchend($event, 2)">
-        <!-- #endif -->
-        <!-- #ifndef H5 -->
-        <view class="t-controller boxs" 
-        @touchstart="touchstart($event, 2)" @touchmove="touchmove($event, 2)" @touchend="touchend($event, 2)">
-        <!-- #endif -->
-          <view class="t-transparency" :style="{
-            background: `linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(${rgba.r}, ${rgba.g}, ${rgba.b}, 1))`
-          }">
-            <view class="t-circle" :style="{ left: site[2].left - 12 + 'px' }"></view>
+        <view class="t-control__box">
+          <view class="t-control__color">
+            <view class="t-control__color-content"
+              :style="{ background: 'rgba(' + rgba.r + ',' + rgba.g + ',' + rgba.b + ',' + rgba.a + ')' }"></view>
           </view>
-        </view>
-      </view>
-    </view>
-    <view class="t-result__box">
-      <view v-if="mode" class="t-result__item">
-        <input class="t-result__box-input" :value="hex" @input="hexChange" />
-        <view class="t-result__box-text">HEX</view>
-      </view>
-      <template v-else>
-        <view class="t-result__item">
-          <input class="t-result__box-input" type="number" :value="rgba.r" @input="rgbChange($event, 'r')" />
-          <view class="t-result__box-text">R</view>
-        </view>
-        <view class="t-result__item">
-          <input class="t-result__box-input" type="number" :value="rgba.g" @input="rgbChange($event, 'g')" />
-          <view class="t-result__box-text">G</view>
-        </view>
-        <view class="t-result__item">
-          <input class="t-result__box-input" type="number" :value="rgba.b" @input="rgbChange($event, 'b')" />
-          <view class="t-result__box-text">B</view>
-        </view>
-        <view class="t-result__item">
-          <input class="t-result__box-input" type="number" :value="rgba.a" @input="rgbChange($event, 'a')" />
-          <view class="t-result__box-text">A</view>
-        </view>
-      </template>
-      <view class="t-result__item t-select" role="button" aria-label="Change another color definition" @click="select">
-        <view class="vc-chrome-toggle-icon">
-          <image style="width:24px; height:24px" src="./img/color-switch.png" />
-          <!-- <svg style="width:24px; height:24px" viewBox="0 0 24 24">
+          <view class="t-control-box__item">
+            <!-- #ifdef H5 -->
+            <view class="t-controller boxs" @mousedown="touchstart($event, 1)" @mousemove="touchmove($event, 1)"
+              @mouseup="touchend($event, 1)">
+              <!-- #endif -->
+              <!-- #ifndef H5 -->
+              <view class="t-controller boxs" @touchstart="touchstart($event, 1)" @touchmove="touchmove($event, 1)"
+                @touchend="touchend($event, 1)">
+                <!-- #endif -->
+                <view class="t-hue">
+                  <view class="t-circle" :style="{ left: site[1].left - 12 + 'px' }"></view>
+                </view>
+              </view>
+              <!-- #ifdef H5 -->
+              <view class="t-controller boxs" @mousedown="touchstart($event, 2)" @mousemove="touchmove($event, 2)"
+                @mouseup="touchend($event, 2)">
+                <!-- #endif -->
+                <!-- #ifndef H5 -->
+                <view class="t-controller boxs" @touchstart="touchstart($event, 2)" @touchmove="touchmove($event, 2)"
+                  @touchend="touchend($event, 2)">
+                  <!-- #endif -->
+                  <view class="t-transparency" :style="{
+                    background: `linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(${rgba.r}, ${rgba.g}, ${rgba.b}, 1))`
+                  }">
+                    <view class="t-circle" :style="{ left: site[2].left - 12 + 'px' }"></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="t-result__box">
+              <view v-if="mode" class="t-result__item">
+                <input class="t-result__box-input" :value="hex" @input="hexChange" />
+                <view class="t-result__box-text">HEX</view>
+              </view>
+              <template v-else>
+                <view class="t-result__item">
+                  <input class="t-result__box-input" type="number" :value="rgba.r" @input="rgbChange($event, 'r')" />
+                  <view class="t-result__box-text">R</view>
+                </view>
+                <view class="t-result__item">
+                  <input class="t-result__box-input" type="number" :value="rgba.g" @input="rgbChange($event, 'g')" />
+                  <view class="t-result__box-text">G</view>
+                </view>
+                <view class="t-result__item">
+                  <input class="t-result__box-input" type="number" :value="rgba.b" @input="rgbChange($event, 'b')" />
+                  <view class="t-result__box-text">B</view>
+                </view>
+                <view class="t-result__item">
+                  <input class="t-result__box-input" type="number" :value="rgba.a" @input="rgbChange($event, 'a')" />
+                  <view class="t-result__box-text">A</view>
+                </view>
+              </template>
+              <view class="t-result__item t-select" role="button" aria-label="Change another color definition"
+                @click="select">
+                <view class="vc-chrome-toggle-icon">
+                  <image style="width:24px; height:24px" src="./img/color-switch.png" />
+                  <!-- <svg style="width:24px; height:24px" viewBox="0 0 24 24">
             <path fill="#333" d="M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z" />
           </svg> -->
+                </view>
+              </view>
+            </view>
+
+          </view>
         </view>
       </view>
     </view>
@@ -150,15 +157,15 @@ export default {
     this.cWidth = this.$getCssUnit(this.width);
     this.rgba = this.hexToRgb(this.value)
   },
-  mounted(){
+  mounted() {
     let self = this
     self.$nextTick(() => {
       self.getSelectorQuery()
     })
   },
-  watch:{
+  watch: {
     hex: {
-      handler(val){
+      handler(val) {
         this.emitHexChange(val)
       },
       immediate: false
@@ -194,7 +201,7 @@ export default {
       this.setColorBySelect(item)
     },
     touchstart(e, index) {
-      console.log('e',e)
+      console.log('e', e)
       const {
         pageX,
         pageY
@@ -204,11 +211,11 @@ export default {
       this.status = index;
       this.setPosition(pageX, pageY, index);
     },
-    mouseout(){
+    mouseout() {
       console.log('mouseout')
     },
     touchmove(e, index) {
-      if(this.status == index){
+      if (this.status == index) {
         const {
           pageX,
           pageY
@@ -288,7 +295,7 @@ export default {
      */
     rgbToHex(rgb) {
       let hex = [rgb.r.toString(16), rgb.g.toString(16), rgb.b.toString(16)];
-      hex.map(function(str, i) {
+      hex.map(function (str, i) {
         if (str.length == 1) {
           hex[i] = '0' + str;
         }
@@ -432,8 +439,8 @@ export default {
         })
         .exec();
     },
-    hexChange(e){
-      if(e.detail.value && e.detail.value.length == 7){
+    hexChange(e) {
+      if (e.detail.value && e.detail.value.length == 7) {
         this.hex = e.detail.value
         this.rgba = this.hexToRgb(this.hex)
         console.log('this.rgba', this.rgba)
@@ -441,8 +448,8 @@ export default {
         this.changeViewByHsb();
       }
     },
-    rgbChange(e, val){
-      if(e.detail.value){
+    rgbChange(e, val) {
+      if (e.detail.value) {
         this.rgba[val] = parseInt(e.detail.value)
         this.setValue(this.rgba)
         this.hsb = this.rgbToHsb(this.rgba);
