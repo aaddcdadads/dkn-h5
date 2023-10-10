@@ -45,7 +45,12 @@ export default {
         return;
       }
       console.log(`componentName: `, componentName);
-      app.component(componentName, defineAsyncComponent(module));
+      try {
+        app.component(componentName, defineAsyncComponent(module));
+      } catch (err) {
+        console.log(`component: `, err);
+      }
+      
     })
   }
 }
