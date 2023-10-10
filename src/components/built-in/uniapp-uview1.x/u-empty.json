@@ -130,7 +130,7 @@
     },
     {
       "kind": "prop",
-      "description": "文字大小，单位rpx",
+      "description": "文字大小",
       "keywords": [],
       "visibility": "public",
       "name": "font-size",
@@ -144,18 +144,23 @@
     },
     {
       "kind": "prop",
-      "description": "选择预置的图标类型",
-      "keywords": [],
+      "description": "预置图标类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"car\", \"page\", \"search\",\"address\",\"wifi\",\"order\",\"coupon\",\"favor\",\"permission\",\"history\",\"news\",\"message\",\"list\",\"data\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"data\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "图标宽度，单位rpx",
+      "description": "图标宽度",
       "keywords": [],
       "visibility": "public",
       "name": "img-width",
@@ -169,7 +174,7 @@
     },
     {
       "kind": "prop",
-      "description": "图标高度，单位rpx",
+      "description": "图标高度",
       "keywords": [],
       "visibility": "public",
       "name": "img-height",
@@ -194,7 +199,7 @@
     },
     {
       "kind": "prop",
-      "description": "组件距离上一个元素之间的距离",
+      "description": "组件距离",
       "keywords": [],
       "visibility": "public",
       "name": "margin-top",
@@ -208,6 +213,7 @@
     },
     {
       "kind": "prop",
+      "description":"icon的颜色",
       "keywords": [],
       "visibility": "public",
       "name": "icon-style",

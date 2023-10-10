@@ -79,7 +79,7 @@
     },
     {
       "kind": "prop",
-      "description": "当前活动的tab的index",
+      "description": "tab的index",
       "keywords": [],
       "visibility": "public",
       "name": "current",
@@ -115,18 +115,23 @@
     },
     {
       "kind": "prop",
-      "description": "模式选择，mode=button为按钮形式，mode=subsection时为分段模式",
-      "keywords": [],
+      "description": "模式选择",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"button\", \"subsection\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"button\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "字体大小，单位rpx",
+      "description": "字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "font-size",
@@ -140,7 +145,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否开启动画效果",
+      "description": "开启动画效果",
       "keywords": [],
       "visibility": "public",
       "name": "animation",
@@ -151,7 +156,7 @@
     },
     {
       "kind": "prop",
-      "description": "组件的高度，单位rpx",
+      "description": "组件的高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",
@@ -165,7 +170,7 @@
     },
     {
       "kind": "prop",
-      "description": "激活tab的字体是否加粗",
+      "description": "字体是否加粗",
       "keywords": [],
       "visibility": "public",
       "name": "bold",
@@ -176,7 +181,7 @@
     },
     {
       "kind": "prop",
-      "description": "mode=button时，组件背景颜色",
+      "description": "组件背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
@@ -187,7 +192,7 @@
     },
     {
       "kind": "prop",
-      "description": "mode = button时，滑块背景颜色",
+      "description": "滑块背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "button-color",
@@ -198,7 +203,7 @@
     },
     {
       "kind": "prop",
-      "description": "在切换分段器的时候，是否让设备震一下",
+      "description": "设备震动",
       "keywords": [],
       "visibility": "public",
       "name": "vibrate-short",

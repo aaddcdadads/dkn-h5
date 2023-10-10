@@ -40,7 +40,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "需要渲染的元素背景颜色，十六进制或者rgb等都可以",
+      "description": "元素背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "el-color",
@@ -51,7 +51,7 @@
     },
     {
       "kind": "prop",
-      "description": "整个骨架屏页面的背景颜色",
+      "description": "组件背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
@@ -62,7 +62,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示加载动画",
+      "description": "显示加载动画",
       "keywords": [],
       "visibility": "public",
       "name": "animation",
@@ -73,7 +73,7 @@
     },
     {
       "kind": "prop",
-      "description": "圆角值，只对类名为u-skeleton-fillet的元素生效，为数值，不带单位",
+      "description": "圆角值",
       "keywords": [],
       "visibility": "public",
       "name": "border-radius",
@@ -87,7 +87,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示骨架，true-显示，false-隐藏",
+      "description": "是否显示骨架",
       "keywords": [],
       "visibility": "public",
       "name": "loading",

@@ -104,7 +104,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "导航菜单是否需要滚动，如只有2或者3个的时候，就不需要滚动了，此时使用flex平分tab的宽度",
+      "description": "菜单是否滚动",
       "keywords": [],
       "visibility": "public",
       "name": "is-scroll",
@@ -115,7 +115,7 @@
     },
     {
       "kind": "prop",
-      "description": "需循环的标签列表",
+      "description": "循环标签列表",
       "keywords": [],
       "visibility": "public",
       "name": "list",
@@ -126,7 +126,7 @@
     },
     {
       "kind": "prop",
-      "description": "当前活动tab的索引",
+      "description": "tab的索引",
       "keywords": [],
       "visibility": "public",
       "name": "current",
@@ -140,7 +140,7 @@
     },
     {
       "kind": "prop",
-      "description": "导航栏的高度和行高",
+      "description": "高度和行高",
       "keywords": [],
       "visibility": "public",
       "name": "height",
@@ -168,7 +168,7 @@
     },
     {
       "kind": "prop",
-      "description": "过渡动画时长, 单位ms",
+      "description": "过渡动画时长",
       "keywords": [],
       "visibility": "public",
       "name": "duration",
@@ -182,7 +182,7 @@
     },
     {
       "kind": "prop",
-      "description": "选中项的主题颜色",
+      "description": "选中项颜色",
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
@@ -193,7 +193,7 @@
     },
     {
       "kind": "prop",
-      "description": "未选中项的颜色",
+      "description": "未选中项颜色",
       "keywords": [],
       "visibility": "public",
       "name": "inactive-color",
@@ -204,7 +204,7 @@
     },
     {
       "kind": "prop",
-      "description": "菜单底部移动的bar的宽度，单位rpx",
+      "description": "底部移动的宽度",
       "keywords": [],
       "visibility": "public",
       "name": "bar-width",
@@ -218,7 +218,7 @@
     },
     {
       "kind": "prop",
-      "description": "移动bar的高度",
+      "description": "移动的高度",
       "keywords": [],
       "visibility": "public",
       "name": "bar-height",
@@ -232,7 +232,7 @@
     },
     {
       "kind": "prop",
-      "description": "单个tab的左或有内边距（左右相同）",
+      "description": "左右内边距",
       "keywords": [],
       "visibility": "public",
       "name": "gutter",
@@ -246,7 +246,7 @@
     },
     {
       "kind": "prop",
-      "description": "导航栏的背景颜色",
+      "description": "导航栏背景色",
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
@@ -257,7 +257,7 @@
     },
     {
       "kind": "prop",
-      "description": "读取传入的数组对象的属性(tab名称)",
+      "description": "读取参数属性",
       "keywords": [],
       "visibility": "public",
       "name": "name",
@@ -268,7 +268,7 @@
     },
     {
       "kind": "prop",
-      "description": "读取传入的数组对象的属性(徽标数)",
+      "description": "读取参数属性",
       "keywords": [],
       "visibility": "public",
       "name": "count",
@@ -279,7 +279,7 @@
     },
     {
       "kind": "prop",
-      "description": "徽标数位置偏移",
+      "description": "徽标数位置",
       "keywords": [],
       "visibility": "public",
       "name": "offset",
@@ -290,7 +290,7 @@
     },
     {
       "kind": "prop",
-      "description": "活动tab字体是否加粗",
+      "description": "字体是否加粗",
       "keywords": [],
       "visibility": "public",
       "name": "bold",
@@ -301,7 +301,7 @@
     },
     {
       "kind": "prop",
-      "description": "当前活动tab item的样式",
+      "description": "当前活动样式",
       "keywords": [],
       "visibility": "public",
       "name": "active-item-style",
@@ -312,7 +312,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示底部的滑块",
+      "description": "显示底部滑块",
       "keywords": [],
       "visibility": "public",
       "name": "show-bar",
@@ -323,7 +323,7 @@
     },
     {
       "kind": "prop",
-      "description": "底部滑块的自定义样式",
+      "description": "底部滑块样式",
       "keywords": [],
       "visibility": "public",
       "name": "bar-style",

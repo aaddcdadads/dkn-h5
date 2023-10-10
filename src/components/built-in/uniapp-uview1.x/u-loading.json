@@ -58,7 +58,7 @@
     },
     {
       "kind": "prop",
-      "description": "加载图标的大小，单位rpx",
+      "description": "加载图标大小",
       "keywords": [],
       "visibility": "public",
       "name": "size",

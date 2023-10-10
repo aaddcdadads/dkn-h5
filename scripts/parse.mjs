@@ -21,7 +21,7 @@ async function extractComponentInfo() {
 
 //生成parsh.sh脚本内容
 function getDirectories() {
-  let directories = fs.readdirSync('/Users/mac/sili/project-workspcae/设计云/workspace-fork/uniapp-uview-vite/node_modules/uview-ui/components', { withFileTypes: true })
+  let directories = fs.readdirSync(path.resolve(__dirname, '../node_modules/uview-ui/components'), { withFileTypes: true })
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name);
 

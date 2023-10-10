@@ -75,11 +75,16 @@
     },
     {
       "kind": "prop",
-      "description": "主题，success/warning/info/error",
-      "keywords": [],
+      "description": "主题",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"success\",\"warning\",\"info\",\"error\"]"
+        }
+      ],
       "visibility": "public",
       "name": "type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"warning\"",
       "required": false,
       "describeModel": false
@@ -108,7 +113,7 @@
     },
     {
       "kind": "prop",
-      "description": "关闭按钮自定义文本",
+      "description": "关闭按钮文本",
       "keywords": [],
       "visibility": "public",
       "name": "close-text",
@@ -125,17 +130,6 @@
       "name": "show-icon",
       "type": "Boolean",
       "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "文字颜色，如果定义了color值，icon会失效",
-      "keywords": [],
-      "visibility": "public",
-      "name": "color",
-      "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
@@ -174,7 +168,7 @@
     },
     {
       "kind": "prop",
-      "description": "左边显示的icon",
+      "description": "左边的图标",
       "keywords": [],
       "visibility": "public",
       "name": "icon",
@@ -185,7 +179,7 @@
     },
     {
       "kind": "prop",
-      "description": "icon的样式",
+      "description": "图标的样式",
       "keywords": [],
       "visibility": "public",
       "name": "icon-style",
@@ -207,7 +201,7 @@
     },
     {
       "kind": "prop",
-      "description": "描述文字的样式",
+      "description": "描述文字样式",
       "keywords": [],
       "visibility": "public",
       "name": "desc-style",

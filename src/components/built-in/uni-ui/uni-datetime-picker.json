@@ -1,0 +1,957 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"datetime\",\"daterange\",\"datetime\",\"datetimerange\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "type",
+      "type": "Enum",
+      "default": "\"datetime\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"默认值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": [
+        "String",
+        "Number",
+        "Array",
+        "Date"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description":"默认值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "model-value",
+      "type": [
+        "String",
+        "Number",
+        "Array",
+        "Date"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"最小值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "start",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"最大值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "end",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"返回值格式",
+      "keywords": [
+        {
+          "name":"options",
+          "description": "[\"timestamp\",\"string\",\"date\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "return-type",
+      "type": "Enum",
+      "default": "\"string\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"占位内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"开始占位内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "start-placeholder",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "description":"结束占位内容",
+      "visibility": "public",
+      "name": "end-placeholder",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"分隔符",
+      "keywords": [],
+      "visibility": "public",
+      "name": "range-separator",
+      "type": "String",
+      "default": "\"-\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否显示边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": [
+        "Boolean"
+      ],
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否禁用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"显示清除按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear-icon",
+      "type": [
+        "Boolean"
+      ],
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否显示秒",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hide-second",
+      "type": [
+        "Boolean"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isRange",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hasTime",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "displayValue",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputDate",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "calendarDate",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pickerTime",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "calendarRange",
+      "type": "object",
+      "initialValue": "{\"startDate\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"startTime\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"endDate\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"endTime\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"}}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "displayRangeValue",
+      "type": "object",
+      "initialValue": "{\"startDate\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"endDate\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"}}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tempRange",
+      "type": "object",
+      "initialValue": "{\"startDate\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"startTime\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"endDate\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"endTime\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"}}"
+    },
+    {
+      "kind": "data",
+      "description": "左右日历同步数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "startMultipleStatus",
+      "type": "object",
+      "initialValue": "{\"before\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"after\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"data\":{\"type\":\"array\",\"value\":\"[]\",\"raw\":\"[]\"},\"fulldate\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"}}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "endMultipleStatus",
+      "type": "object",
+      "initialValue": "{\"before\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"after\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"data\":{\"type\":\"array\",\"value\":\"[]\",\"raw\":\"[]\"},\"fulldate\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"}}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pickerVisible",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pickerPositionStyle",
+      "type": "any",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isEmitValue",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isPhone",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isFirstShow",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "i18nT",
+      "type": "ArrowFunctionExpression",
+      "initialValue": "() => {}"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timepickerStartTime",
+      "dependencies": [
+        "isRange",
+        "tempRange",
+        "inputDate",
+        "calendarRange"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timepickerEndTime",
+      "dependencies": [
+        "isRange",
+        "tempRange",
+        "inputDate",
+        "calendarRange"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mobileCalendarTime",
+      "dependencies": [
+        "tempRange",
+        "isRange",
+        "pickerTime"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mobSelectableTime",
+      "dependencies": [
+        "calendarRange"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "datePopupWidth",
+      "dependencies": [
+        "isRange"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "for i18n",
+      "keywords": [],
+      "visibility": "public",
+      "name": "singlePlaceholderText",
+      "dependencies": [
+        "placeholder",
+        "type",
+        "selectDateText",
+        "selectDateTimeText"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "startPlaceholderText",
+      "dependencies": [
+        "startPlaceholder",
+        "startDateText"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "endPlaceholderText",
+      "dependencies": [
+        "endPlaceholder",
+        "endDateText"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selectDateText",
+      "dependencies": [
+        "i18nT"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selectDateTimeText",
+      "dependencies": [
+        "i18nT"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selectTimeText",
+      "dependencies": [
+        "i18nT"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "startDateText",
+      "dependencies": [
+        "startPlaceholder",
+        "i18nT"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "startTimeText",
+      "dependencies": [
+        "i18nT"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "endDateText",
+      "dependencies": [
+        "endPlaceholder",
+        "i18nT"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "endTimeText",
+      "dependencies": [
+        "i18nT"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "okText",
+      "dependencies": [
+        "i18nT"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearText",
+      "dependencies": [
+        "i18nT"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showClearIcon",
+      "dependencies": [
+        "clearIcon",
+        "disabled",
+        "displayValue",
+        "displayRangeValue"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maskClick",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "update:modelValue",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "initI18nT",
+      "params": [],
+      "syntax": [
+        "initI18nT(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "initPicker",
+      "params": [
+        {
+          "name": "newVal",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "initPicker(newVal: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateLeftCale",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "updateLeftCale(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateRightCale",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "updateRightCale(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "platform",
+      "params": [],
+      "syntax": [
+        "platform(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "params": [],
+      "syntax": [
+        "show(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setEmit",
+      "params": [
+        {
+          "name": "value",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setEmit(value: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "createTimestamp",
+      "params": [
+        {
+          "name": "date",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "createTimestamp(date: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "singleChange",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "singleChange(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirmSingleChange",
+      "params": [],
+      "syntax": [
+        "confirmSingleChange(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "leftChange",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "leftChange(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightChange",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "rightChange(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mobileChange",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "mobileChange(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rangeChange",
+      "params": [
+        {
+          "name": "before",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "after",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "rangeChange(before: unknow, after: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirmRangeChange",
+      "params": [],
+      "syntax": [
+        "confirmRangeChange(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleStartAndEnd",
+      "params": [
+        {
+          "name": "before",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "after",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "temp",
+          "type": "boolean",
+          "defaultValue": "false",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleStartAndEnd(before: unknow, after: unknow, temp: boolean = false): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "比较时间大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dateCompare",
+      "params": [
+        {
+          "name": "startDate",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "endDate",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "dateCompare(startDate: unknow, endDate: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "比较时间差",
+      "keywords": [],
+      "visibility": "public",
+      "name": "diffDate",
+      "params": [
+        {
+          "name": "startDate",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "endDate",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "diffDate(startDate: unknow, endDate: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear",
+      "params": [
+        {
+          "name": "needEmit",
+          "type": "boolean",
+          "defaultValue": "true",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "clear(needEmit: boolean = true): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniDatetimePicker"
+}

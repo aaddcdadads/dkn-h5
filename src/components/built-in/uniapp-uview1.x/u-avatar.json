@@ -116,11 +116,16 @@
     },
     {
       "kind": "prop",
-      "description": "头像模型，square-带圆角方形，circle-圆形",
-      "keywords": [],
+      "description": "头像模型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"square\",\"circle\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"circle\"",
       "required": false,
       "describeModel": false
@@ -138,11 +143,16 @@
     },
     {
       "kind": "prop",
-      "description": "图片的裁剪模型",
-      "keywords": [],
+      "description": "图片裁剪模型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"scaleToFill\",\"aspectFit\",\"aspectFill\",\"widthFix\",\"heightFix\",\"top\",\"bottom\",\"center\",\"left\",\"right\",\"top left\",\"top right\",\"bottom left\",\"bottom right\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "img-mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"aspectFill\"",
       "required": false,
       "describeModel": false
@@ -163,18 +173,23 @@
     },
     {
       "kind": "prop",
-      "description": "右上角性别角标，man-男，woman-女",
-      "keywords": [],
+      "description": "右上角性别角标",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"man\",\"woman\"]"  
+        }
+      ],
       "visibility": "public",
       "name": "sex-icon",
-      "type": "String",
+      "type": "Enum",
       "default": "\"man\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "右下角的等级图标",
+      "description": "右下角图标",
       "keywords": [],
       "visibility": "public",
       "name": "level-icon",
@@ -185,7 +200,7 @@
     },
     {
       "kind": "prop",
-      "description": "右下角等级图标背景颜色",
+      "description": "右下角图标背景色",
       "keywords": [],
       "visibility": "public",
       "name": "level-bg-color",
@@ -196,7 +211,7 @@
     },
     {
       "kind": "prop",
-      "description": "右上角性别图标的背景颜色",
+      "description": "右上角图标背景色",
       "keywords": [],
       "visibility": "public",
       "name": "sex-bg-color",
@@ -207,7 +222,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示性别图标",
+      "description": "显示性别图标",
       "keywords": [],
       "visibility": "public",
       "name": "show-sex",
@@ -218,7 +233,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示等级图标",
+      "description": "显示等级图标",
       "keywords": [],
       "visibility": "public",
       "name": "show-level",

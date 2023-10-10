@@ -146,7 +146,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "与屏幕两侧是否留空隙",
+      "description": "屏幕两侧留空隙",
       "keywords": [],
       "visibility": "public",
       "name": "full",
@@ -179,7 +179,7 @@
     },
     {
       "kind": "prop",
-      "description": "标题字体大小，单位rpx",
+      "description": "标题字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "title-size",
@@ -215,7 +215,7 @@
     },
     {
       "kind": "prop",
-      "description": "副标题字体大小，单位rpx",
+      "description": "副标题字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "sub-title-size",
@@ -229,7 +229,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示外部边框，只对full=false时有效(卡片与边框有空隙时)",
+      "description": "显示外部边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",
@@ -240,7 +240,7 @@
     },
     {
       "kind": "prop",
-      "description": "用于标识点击了第几个",
+      "description": "标识点击标",
       "keywords": [],
       "visibility": "public",
       "name": "index",
@@ -255,7 +255,7 @@
     },
     {
       "kind": "prop",
-      "description": "用于隔开上下左右的边距，带单位的写法，如：\"30rpx 30rpx\"，\"20rpx 20rpx 30rpx 30rpx\"",
+      "description": "边距",
       "keywords": [],
       "visibility": "public",
       "name": "margin",
@@ -266,7 +266,7 @@
     },
     {
       "kind": "prop",
-      "description": "card卡片的圆角",
+      "description": "卡片圆角",
       "keywords": [],
       "visibility": "public",
       "name": "border-radius",
@@ -280,7 +280,7 @@
     },
     {
       "kind": "prop",
-      "description": "头部自定义样式，对象形式",
+      "description": "头部样式",
       "keywords": [],
       "visibility": "public",
       "name": "head-style",
@@ -291,7 +291,7 @@
     },
     {
       "kind": "prop",
-      "description": "主体自定义样式，对象形式",
+      "description": "主体样式",
       "keywords": [],
       "visibility": "public",
       "name": "body-style",
@@ -302,7 +302,7 @@
     },
     {
       "kind": "prop",
-      "description": "底部自定义样式，对象形式",
+      "description": "底部样式",
       "keywords": [],
       "visibility": "public",
       "name": "foot-style",
@@ -313,7 +313,7 @@
     },
     {
       "kind": "prop",
-      "description": "头部是否下边框",
+      "description": "头部下边框",
       "keywords": [],
       "visibility": "public",
       "name": "head-border-bottom",
@@ -324,7 +324,7 @@
     },
     {
       "kind": "prop",
-      "description": "底部是否有上边框",
+      "description": "底部有上边框",
       "keywords": [],
       "visibility": "public",
       "name": "foot-border-top",
@@ -335,7 +335,7 @@
     },
     {
       "kind": "prop",
-      "description": "标题左边的缩略图",
+      "description": "标题左边图片",
       "keywords": [],
       "visibility": "public",
       "name": "thumb",
@@ -346,7 +346,7 @@
     },
     {
       "kind": "prop",
-      "description": "缩略图宽高，单位rpx",
+      "description": "缩略图宽高",
       "keywords": [],
       "visibility": "public",
       "name": "thumb-width",
@@ -360,7 +360,7 @@
     },
     {
       "kind": "prop",
-      "description": "缩略图是否为圆形",
+      "description": "缩略图为圆形",
       "keywords": [],
       "visibility": "public",
       "name": "thumb-circle",
@@ -371,7 +371,7 @@
     },
     {
       "kind": "prop",
-      "description": "给head，body，foot的内边距",
+      "description": "内边距",
       "keywords": [],
       "visibility": "public",
       "name": "padding",
@@ -407,7 +407,7 @@
     },
     {
       "kind": "prop",
-      "description": "卡片外围阴影，字符串形式",
+      "description": "卡片外围阴影",
       "keywords": [],
       "visibility": "public",
       "name": "box-shadow",

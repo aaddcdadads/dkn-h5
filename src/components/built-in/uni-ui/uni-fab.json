@@ -1,0 +1,365 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"样式配置项",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pattern",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"水平对齐方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\",\"right\"]"  
+        }
+      ],
+      "visibility": "public",
+      "name": "horizontal",
+      "type": "Enum",
+      "default": "\"left\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"垂直对齐方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"bottom\",\"top\"]"  
+        }
+      ],
+      "visibility": "public",
+      "name": "vertical",
+      "type": "Enum",
+      "default": "\"bottom\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"展开菜单方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"horizontal\",\"vertical\"]"  
+        }
+      ],
+      "visibility": "public",
+      "name": "direction",
+      "type": "Enum",
+      "default": "\"horizontal\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"菜单内容配置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "content",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn []\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否弹出菜单",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pop-menu",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fabShow",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isShow",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isAndroidNvue",
+      "type": "BinaryExpression",
+      "initialValue": "platform === 'android'"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "styles",
+      "type": "object",
+      "initialValue": "{\"color\":{\"type\":\"string\",\"value\":\"#3c3e49\",\"raw\":\"\\\"#3c3e49\\\"\"},\"selectedColor\":{\"type\":\"string\",\"value\":\"#007AFF\",\"raw\":\"\\\"#007AFF\\\"\"},\"backgroundColor\":{\"type\":\"string\",\"value\":\"#fff\",\"raw\":\"\\\"#fff\\\"\"},\"buttonColor\":{\"type\":\"string\",\"value\":\"#007AFF\",\"raw\":\"\\\"#007AFF\\\"\"},\"iconColor\":{\"type\":\"string\",\"value\":\"#fff\",\"raw\":\"\\\"#fff\\\"\"},\"icon\":{\"type\":\"string\",\"value\":\"plusempty\",\"raw\":\"\\\"plusempty\\\"\"}}"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentWidth",
+      "dependencies": [
+        "content"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentWidthMin",
+      "dependencies": []
+    },
+    {
+      "kind": "computed",
+      "description": "动态计算宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "boxWidth",
+      "dependencies": [
+        "getPosition"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "动态计算高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "boxHeight",
+      "dependencies": [
+        "getPosition"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "计算左下位置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "leftBottom",
+      "dependencies": [
+        "getPosition"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "计算右下位置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightBottom",
+      "dependencies": [
+        "getPosition"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "计算左上位置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "leftTop",
+      "dependencies": [
+        "getPosition"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightTop",
+      "dependencies": [
+        "getPosition"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "flexDirectionStart",
+      "dependencies": [
+        "getPosition"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "flexDirectionEnd",
+      "dependencies": [
+        "getPosition"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "horizontalLeft",
+      "dependencies": [
+        "getPosition"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "horizontalRight",
+      "dependencies": [
+        "getPosition"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "计算 nvue bottom",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nvueBottom",
+      "dependencies": []
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fabClick",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "trigger",
+      "arguments": [
+        {
+          "name": "{ index, item }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_onClick",
+      "params": [],
+      "syntax": [
+        "_onClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "params": [],
+      "syntax": [
+        "open(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "按钮点击事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_onItemClick",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_onItemClick(index: unknow, item: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取 位置信息",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getPosition",
+      "params": [
+        {
+          "name": "types",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "paramA",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "paramB",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getPosition(types: unknow, paramA: unknow, paramB: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniFab",
+  "description": "#endif"
+}

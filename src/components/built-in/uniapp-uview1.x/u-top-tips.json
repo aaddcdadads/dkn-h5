@@ -28,7 +28,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "导航栏高度，用于提示的初始化",
+      "description": "导航栏高度",
       "keywords": [],
       "visibility": "public",
       "name": "navbar-height",

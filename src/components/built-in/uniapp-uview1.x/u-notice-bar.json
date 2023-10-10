@@ -120,7 +120,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "显示的内容，数组",
+      "description": "显示的内容",
       "keywords": [],
       "visibility": "public",
       "name": "list",
@@ -131,18 +131,23 @@
     },
     {
       "kind": "prop",
-      "description": "显示的主题，success|error|primary|info|warning",
-      "keywords": [],
+      "description": "显示的主题",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"success\", \"error\", \"primary\",\"info\",\"warning\"]"
+        }
+      ],
       "visibility": "public",
       "name": "type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"warning\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示左侧的音量图标",
+      "description": "显示音量图标",
       "keywords": [],
       "visibility": "public",
       "name": "volume-icon",
@@ -153,7 +158,7 @@
     },
     {
       "kind": "prop",
-      "description": "音量喇叭的大小",
+      "description": "音量喇叭大小",
       "keywords": [],
       "visibility": "public",
       "name": "volume-size",
@@ -167,7 +172,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示右侧的右箭头图标",
+      "description": "右箭头图标",
       "keywords": [],
       "visibility": "public",
       "name": "more-icon",
@@ -178,7 +183,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示右侧的关闭图标",
+      "description": "显示右侧关闭图标",
       "keywords": [],
       "visibility": "public",
       "name": "close-icon",
@@ -200,7 +205,7 @@
     },
     {
       "kind": "prop",
-      "description": "文字颜色，各图标也会使用文字颜色",
+      "description": "文字颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -222,11 +227,16 @@
     },
     {
       "kind": "prop",
-      "description": "滚动方向，horizontal-水平滚动，vertical-垂直滚动",
-      "keywords": [],
+      "description": "滚动方向",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"vertical\",\"horizontal\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"horizontal\"",
       "required": false,
       "describeModel": false
@@ -244,7 +254,7 @@
     },
     {
       "kind": "prop",
-      "description": "字体大小，单位rpx",
+      "description": "字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "font-size",
@@ -258,7 +268,7 @@
     },
     {
       "kind": "prop",
-      "description": "滚动一个周期的时间长，单位ms",
+      "description": "滚动一个周期的时间长",
       "keywords": [],
       "visibility": "public",
       "name": "duration",
@@ -272,7 +282,7 @@
     },
     {
       "kind": "prop",
-      "description": "水平滚动时的滚动速度，即每秒滚动多少rpx，这有利于控制文字无论多少时，都能有一个恒定的速度",
+      "description": "滚动速度",
       "keywords": [],
       "visibility": "public",
       "name": "speed",
@@ -286,7 +296,7 @@
     },
     {
       "kind": "prop",
-      "description": "水平衔接模式，采用的是swiper组件，水平滚动",
+      "description": "水平衔接模式",
       "keywords": [],
       "visibility": "public",
       "name": "is-circular",
@@ -298,7 +308,12 @@
     {
       "kind": "prop",
       "description": "播放状态，play-播放，paused-暂停",
-      "keywords": [],
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"play\",\"paused\"]"
+        }
+      ],
       "visibility": "public",
       "name": "play-state",
       "type": "String",
@@ -308,7 +323,7 @@
     },
     {
       "kind": "prop",
-      "description": "目前HX2.6.11，只支持App 2.5.5+、H5 2.5.5+、支付宝小程序、字节跳动小程序",
+      "description": "禁止手动切换",
       "keywords": [],
       "visibility": "public",
       "name": "disable-touch",
@@ -319,7 +334,7 @@
     },
     {
       "kind": "prop",
-      "description": "滚动通知设置圆角",
+      "description": "滚动通知圆角",
       "keywords": [],
       "visibility": "public",
       "name": "border-radius",
@@ -347,7 +362,7 @@
     },
     {
       "kind": "prop",
-      "description": "list列表为空时，是否显示组件",
+      "description": "为空显示组件",
       "keywords": [],
       "visibility": "public",
       "name": "no-list-hidden",

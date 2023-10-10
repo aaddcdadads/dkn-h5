@@ -15,6 +15,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"显示的字符串",
       "keywords": [],
       "visibility": "public",
       "name": "html",
@@ -24,6 +25,7 @@
     },
     {
       "kind": "prop",
+      "description":"播放视频时暂停其他",
       "keywords": [],
       "visibility": "public",
       "name": "autopause",
@@ -34,6 +36,7 @@
     },
     {
       "kind": "prop",
+      "description":"加一个滚动层",
       "keywords": [],
       "visibility": "public",
       "name": "autoscroll",
@@ -43,6 +46,7 @@
     },
     {
       "kind": "prop",
+      "description":"将标签内容设置到页面标题",
       "keywords": [],
       "visibility": "public",
       "name": "autoset-title",
@@ -53,7 +57,7 @@
     },
     {
       "kind": "prop",
-      "description": "#ifndef H5 || APP-PLUS-NVUE || MP-360",
+      "description": "压缩等级",
       "keywords": [],
       "visibility": "public",
       "name": "compress",
@@ -63,6 +67,7 @@
     },
     {
       "kind": "prop",
+      "description":"占位图",
       "keywords": [],
       "visibility": "public",
       "name": "loading-img",
@@ -72,6 +77,7 @@
     },
     {
       "kind": "prop",
+      "description":"是否使用缓存",
       "keywords": [],
       "visibility": "public",
       "name": "use-cache",
@@ -81,7 +87,7 @@
     },
     {
       "kind": "prop",
-      "description": "#endif",
+      "description": "主域名",
       "keywords": [],
       "visibility": "public",
       "name": "domain",
@@ -91,6 +97,7 @@
     },
     {
       "kind": "prop",
+      "description":"图片懒加载",
       "keywords": [],
       "visibility": "public",
       "name": "lazy-load",
@@ -100,6 +107,7 @@
     },
     {
       "kind": "prop",
+      "description":"长按复制内容",
       "keywords": [],
       "visibility": "public",
       "name": "selectable",
@@ -109,6 +117,7 @@
     },
     {
       "kind": "prop",
+      "description":"默认样式",
       "keywords": [],
       "visibility": "public",
       "name": "tag-style",
@@ -118,6 +127,7 @@
     },
     {
       "kind": "prop",
+      "description":"使用渐显动画",
       "keywords": [],
       "visibility": "public",
       "name": "show-with-animation",
@@ -127,6 +137,7 @@
     },
     {
       "kind": "prop",
+      "description":"使用页面锚点",
       "keywords": [],
       "visibility": "public",
       "name": "use-anchor",

@@ -64,7 +64,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "两端是否显示半圆形",
+      "description": "显示半圆形",
       "keywords": [],
       "visibility": "public",
       "name": "round",
@@ -97,6 +97,7 @@
     },
     {
       "kind": "prop",
+      "description":"进度条的底色",
       "keywords": [],
       "visibility": "public",
       "name": "inactive-color",
@@ -107,7 +108,7 @@
     },
     {
       "kind": "prop",
-      "description": "进度百分比，数值",
+      "description": "进度百分比",
       "keywords": [],
       "visibility": "public",
       "name": "percent",
@@ -118,7 +119,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否在进度条内部显示百分比的值",
+      "description": "显示百分比值",
       "keywords": [],
       "visibility": "public",
       "name": "show-percent",
@@ -129,7 +130,7 @@
     },
     {
       "kind": "prop",
-      "description": "进度条的高度，单位rpx",
+      "description": "进度条的高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",
@@ -154,7 +155,7 @@
     },
     {
       "kind": "prop",
-      "description": "条纹是否显示活动状态",
+      "description": "显示条纹状态",
       "keywords": [],
       "visibility": "public",
       "name": "striped-active",

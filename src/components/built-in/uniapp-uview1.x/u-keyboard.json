@@ -96,18 +96,23 @@
   "props": [
     {
       "kind": "prop",
-      "description": "键盘的类型，number-数字键盘，card-身份证键盘，car-车牌号键盘",
-      "keywords": [],
+      "description": "键盘的类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"car\", \"number\", \"card\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"number\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否显示键盘的\".\"符号",
+      "description": "显示键盘\".\"符号",
       "keywords": [],
       "visibility": "public",
       "name": "dot-enabled",
@@ -118,7 +123,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示顶部工具条",
+      "description": "显示顶部工具条",
       "keywords": [],
       "visibility": "public",
       "name": "tooltip",
@@ -129,7 +134,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示工具条中间的提示",
+      "description": "显示工具条中间提示",
       "keywords": [],
       "visibility": "public",
       "name": "show-tips",
@@ -140,7 +145,7 @@
     },
     {
       "kind": "prop",
-      "description": "工具条中间的提示文字",
+      "description": "工具条提示文字",
       "keywords": [],
       "visibility": "public",
       "name": "tips",
@@ -151,7 +156,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示工具条左边的\"取消\"按钮",
+      "description": "显示\"取消\"按钮",
       "keywords": [],
       "visibility": "public",
       "name": "cancel-btn",
@@ -162,7 +167,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示工具条右边的\"完成\"按钮",
+      "description": "显示\"完成\"按钮",
       "keywords": [],
       "visibility": "public",
       "name": "confirm-btn",
@@ -173,7 +178,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否打乱键盘按键的顺序",
+      "description": "打乱按键顺序",
       "keywords": [],
       "visibility": "public",
       "name": "random",
@@ -184,7 +189,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否开启底部安全区适配，开启的话，会在iPhoneX机型底部添加一定的内边距",
+      "description": "底部安全区适配",
       "keywords": [],
       "visibility": "public",
       "name": "safe-area-inset-bottom",
@@ -195,7 +200,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否允许通过点击遮罩关闭键盘",
+      "description": "点击遮罩关闭",
       "keywords": [],
       "visibility": "public",
       "name": "mask-close-able",
@@ -206,7 +211,7 @@
     },
     {
       "kind": "prop",
-      "description": "通过双向绑定控制键盘的弹出与收起",
+      "description": "弹出与收起",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -217,7 +222,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示遮罩，某些时候数字键盘时，用户希望看到自己的数值，所以可能不想要遮罩",
+      "description": "是否显示遮罩",
       "keywords": [],
       "visibility": "public",
       "name": "mask",
@@ -242,7 +247,7 @@
     },
     {
       "kind": "prop",
-      "description": "取消按钮的文字",
+      "description": "取消按钮文字",
       "keywords": [],
       "visibility": "public",
       "name": "cancel-text",
@@ -253,7 +258,7 @@
     },
     {
       "kind": "prop",
-      "description": "确认按钮的文字",
+      "description": "确认按钮文字",
       "keywords": [],
       "visibility": "public",
       "name": "confirm-text",

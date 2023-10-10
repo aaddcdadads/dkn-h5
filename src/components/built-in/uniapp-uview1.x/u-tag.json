@@ -72,17 +72,23 @@
   "props": [
     {
       "kind": "prop",
-      "description": "标签类型info、primary、success、warning、error",
-      "keywords": [],
+      "description": "标签类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"info\", \"primary\", \"success\",\"warning\",\"error\"]"
+        }
+      ],
       "visibility": "public",
       "name": "type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"primary\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"是否禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -96,22 +102,32 @@
     },
     {
       "kind": "prop",
-      "description": "标签的大小，分为default（默认），mini（较小）",
-      "keywords": [],
+      "description": "标签的大小",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"default\",\"mini\"]"
+        }
+      ],
       "visibility": "public",
       "name": "size",
-      "type": "String",
+      "type": "Enum",
       "default": "\"default\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "tag的形状，circle（两边半圆形）, square（方形，带圆角），circleLeft（左边是半圆），circleRight（右边是半圆）",
-      "keywords": [],
+      "description": "tag的形状",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"circle\",\"square\",\"circleLeft\",\"circleRight\"]"
+        }
+      ],
       "visibility": "public",
       "name": "shape",
-      "type": "String",
+      "type": "Enum",
       "default": "\"square\"",
       "required": false,
       "describeModel": false
@@ -132,7 +148,7 @@
     },
     {
       "kind": "prop",
-      "description": "背景颜色，默认为空字符串，即不处理",
+      "description": "背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
@@ -143,7 +159,7 @@
     },
     {
       "kind": "prop",
-      "description": "标签字体颜色，默认为空字符串，即不处理",
+      "description": "标签字体颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -154,7 +170,7 @@
     },
     {
       "kind": "prop",
-      "description": "镂空形式标签的边框颜色",
+      "description": "边框颜色",
       "keywords": [],
       "visibility": "public",
       "name": "border-color",
@@ -165,7 +181,7 @@
     },
     {
       "kind": "prop",
-      "description": "关闭按钮图标的颜色",
+      "description": "关闭按钮颜色",
       "keywords": [],
       "visibility": "public",
       "name": "close-color",
@@ -176,7 +192,7 @@
     },
     {
       "kind": "prop",
-      "description": "点击时返回的索引值，用于区分例遍的数组哪个元素被点击了",
+      "description": "点击标签时",
       "keywords": [],
       "visibility": "public",
       "name": "index",
@@ -190,11 +206,16 @@
     },
     {
       "kind": "prop",
-      "description": "模式选择，dark|light|plain",
-      "keywords": [],
+      "description": "模式选择",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"dark\", \"light\", \"plain\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
-      "type": "String",
+      "type": "Enum",
       "default": "\"light\"",
       "required": false,
       "describeModel": false

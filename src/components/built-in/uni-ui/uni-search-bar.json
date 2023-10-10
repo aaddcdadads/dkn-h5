@@ -1,0 +1,474 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "搜索栏组件，通常用于搜索商品、文章等"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=866"
+    },
+    {
+      "name": "property",
+      "description": "{Number} radius 搜索栏圆角"
+    },
+    {
+      "name": "property",
+      "description": "{Number} maxlength 输入最大长度"
+    },
+    {
+      "name": "property",
+      "description": "{String} placeholder 搜索栏Placeholder"
+    },
+    {
+      "name": "property",
+      "description": "{String} clearButton = [always|auto|none] 是否显示清除按钮"
+    },
+    {
+      "name": "value",
+      "description": "always 一直显示"
+    },
+    {
+      "name": "value",
+      "description": "auto 输入框不为空时显示"
+    },
+    {
+      "name": "value",
+      "description": "none 一直不显示"
+    },
+    {
+      "name": "property",
+      "description": "{String} cancelButton = [always|auto|none] 是否显示取消按钮"
+    },
+    {
+      "name": "value",
+      "description": "always 一直显示"
+    },
+    {
+      "name": "value",
+      "description": "auto 输入框不为空时显示"
+    },
+    {
+      "name": "value",
+      "description": "none 一直不显示"
+    },
+    {
+      "name": "property",
+      "description": "{String} cancelText 取消按钮的文字"
+    },
+    {
+      "name": "property",
+      "description": "{String} bgColor 输入框背景颜色"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} focus 是否自动聚焦"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} readonly 组件只读，不能有任何操作，只做展示"
+    },
+    {
+      "name": "event",
+      "description": "{Function} confirm uniSearchBar 的输入框 confirm 事件，返回参数为uniSearchBar的value，e={value:Number}"
+    },
+    {
+      "name": "event",
+      "description": "{Function} input uniSearchBar 的 value 改变时触发事件，返回参数为uniSearchBar的value，e=value"
+    },
+    {
+      "name": "event",
+      "description": "{Function} cancel 点击取消按钮时触发事件，返回参数为uniSearchBar的value，e={value:Number}"
+    },
+    {
+      "name": "event",
+      "description": "{Function} clear 点击清除按钮时触发事件，返回参数为uniSearchBar的value，e={value:Number}"
+    },
+    {
+      "name": "event",
+      "description": "{Function} blur input失去焦点时触发事件，返回参数为uniSearchBar的value，e={value:Number}"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "searchIcon",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearIcon",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"输入框提示",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"搜索栏圆角",
+      "keywords": [],
+      "visibility": "public",
+      "name": "radius",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "5",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"显示清除按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear-button",
+      "type": "String",
+      "default": "\"auto\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"显示取消按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel-button",
+      "type": "String",
+      "default": "\"auto\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"取消文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel-text",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"输入框背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"#F8F8F8\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"输入最大长度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maxlength",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "100",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"搜索栏绑定值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": [
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description":"搜索栏绑定值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "model-value",
+      "type": [
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"自动获取焦点",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"只读模式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "readonly",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showSync",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "searchVal",
+      "type": "string",
+      "initialValue": "\"\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancelTextI18n",
+      "dependencies": [
+        "cancelText"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholderText",
+      "dependencies": [
+        "placeholder"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "newVal",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "#ifdef VUE3",
+      "keywords": [],
+      "visibility": "public",
+      "name": "update:modelValue",
+      "arguments": [
+        {
+          "name": "newVal",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear",
+      "arguments": [
+        {
+          "name": "{ value: this.searchVal }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel",
+      "arguments": [
+        {
+          "name": "{ value: this.searchVal }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "#endif",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "arguments": [
+        {
+          "name": "{ value: this.searchVal }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "description": "#endif",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blur",
+      "arguments": [
+        {
+          "name": "{ value: this.searchVal }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "arguments": [
+        {
+          "name": "detail",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "searchClick",
+      "params": [],
+      "syntax": [
+        "searchClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear",
+      "params": [],
+      "syntax": [
+        "clear(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel",
+      "params": [],
+      "syntax": [
+        "cancel(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "params": [],
+      "syntax": [
+        "confirm(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blur",
+      "params": [],
+      "syntax": [
+        "blur(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "emitFocus",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "emitFocus(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniSearchBar",
+  "description": "SearchBar 搜索栏"
+}

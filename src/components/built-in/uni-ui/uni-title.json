@@ -1,0 +1,158 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "标题，通常用于记录页面标题，使用当前组件，uni-app 如果开启统计，将会自动统计页面标题"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=1066"
+    },
+    {
+      "name": "property",
+      "description": "{String} type = [h1|h2|h3|h4|h5] 标题类型"
+    },
+    {
+      "name": "value",
+      "description": "h1 一级标题"
+    },
+    {
+      "name": "value",
+      "description": "h2 二级标题"
+    },
+    {
+      "name": "value",
+      "description": "h3 三级标题"
+    },
+    {
+      "name": "value",
+      "description": "h4 四级标题"
+    },
+    {
+      "name": "value",
+      "description": "h5 五级标题"
+    },
+    {
+      "name": "property",
+      "description": "{String} title 标题内容"
+    },
+    {
+      "name": "property",
+      "description": "{String} align = [left|center|right] 对齐方式"
+    },
+    {
+      "name": "value",
+      "description": "left 做对齐"
+    },
+    {
+      "name": "value",
+      "description": "center 居中对齐"
+    },
+    {
+      "name": "value",
+      "description": "right 右对齐"
+    },
+    {
+      "name": "property",
+      "description": "{String} color 字体颜色"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} stat = [true|false] 是否开启统计功能呢，如不填写type值，默认为开启，填写 type 属性，默认为关闭"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"标题类型",
+      "keywords": [],
+      "visibility": "public",
+      "name": "type",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"章节标题内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"对齐方式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "align",
+      "type": "String",
+      "default": "\"left\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"字体颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "default": "\"#333333\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"开启统计功能",
+      "keywords": [],
+      "visibility": "public",
+      "name": "stat",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "textAlign",
+      "dependencies": [
+        "align"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isOpenStat",
+      "params": [],
+      "syntax": [
+        "isOpenStat(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    }
+  ],
+  "name": "UniTitle",
+  "description": "Title 标题"
+}

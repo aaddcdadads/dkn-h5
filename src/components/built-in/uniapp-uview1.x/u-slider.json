@@ -80,10 +80,10 @@
   "props": [
     {
       "kind": "prop",
-      "description": "当前进度百分比值，范围0-100",
+      "description": "进度百分比值",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "v-model",
       "type": [
         "Number",
         "String"
@@ -105,7 +105,7 @@
     },
     {
       "kind": "prop",
-      "description": "滑块宽度，高等于宽，单位rpx",
+      "description": "滑块宽度",
       "keywords": [],
       "visibility": "public",
       "name": "block-width",
@@ -161,7 +161,7 @@
     },
     {
       "kind": "prop",
-      "description": "滑块条高度，单位rpx",
+      "description": "滑块条高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",
@@ -175,7 +175,7 @@
     },
     {
       "kind": "prop",
-      "description": "进度条的激活部分颜色",
+      "description": "激活部分颜色",
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
@@ -186,7 +186,7 @@
     },
     {
       "kind": "prop",
-      "description": "进度条的背景颜色",
+      "description": "进度条背景色",
       "keywords": [],
       "visibility": "public",
       "name": "inactive-color",
@@ -197,7 +197,7 @@
     },
     {
       "kind": "prop",
-      "description": "滑块的背景颜色",
+      "description": "滑块背景色",
       "keywords": [],
       "visibility": "public",
       "name": "block-color",
@@ -208,7 +208,7 @@
     },
     {
       "kind": "prop",
-      "description": "用户对滑块的自定义颜色",
+      "description": "自定义颜色",
       "keywords": [],
       "visibility": "public",
       "name": "block-style",
