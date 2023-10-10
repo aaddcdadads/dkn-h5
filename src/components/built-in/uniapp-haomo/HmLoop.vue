@@ -45,7 +45,9 @@ export default {
      */
     value: {
       type: Array,
-      default: []
+      default: function() {
+        return [];
+      }
     },
     /**
      * GET URL
