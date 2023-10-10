@@ -7,6 +7,7 @@ import { toCamelCase, upperFirst } from './util';
 export default {
 	install(app, options){
     // //根据modules加载所有组件
+    console.log(`modules: `, modules);
     Object.keys(modules).forEach((key) => {
       let module = modules[key];
       let arr = key.split("/");
@@ -24,10 +25,14 @@ export default {
       let lastName = arr[arr.length - 1];
       let componentName = lastName == "index.vue" ? 
         arr[arr.length - 2] : lastName.split(".vue")[0];
-      
+      if (componentName.indexOf('uni-') != 0) {
+        return;
+      }
       let uniUiComponentName = componentName.replace('uni-', 'u-');
       console.log(`uniUiComponentName: `, uniUiComponentName);
       app.component(uniUiComponentName, defineAsyncComponent(module));
     })
+
+    console.log(`app: `, app);
   }
 }
