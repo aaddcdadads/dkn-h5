@@ -30,7 +30,6 @@ export default {
         return;
       }
       let uniUiComponentName = componentName.replace('uni-', 'u-');
-      console.log(`uniUiComponentName: `, uniUiComponentName);
       // app.component(uniUiComponentName, defineAsyncComponent(module));
     })
 
@@ -45,6 +44,7 @@ export default {
       if (componentName.indexOf('u-') != 0) {
         return;
       }
+      console.log(`componentName: `, componentName);
       app.component(componentName, defineAsyncComponent(module));
     })
   }
