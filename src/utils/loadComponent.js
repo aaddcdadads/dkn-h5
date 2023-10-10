@@ -23,8 +23,11 @@ export default {
       let arr = key.split("/");
       let lastName = arr[arr.length - 1];
       let componentName = lastName == "index.vue" ? 
-        arr[arr.length - 2] : lastName.split(".vue")[0]
-      app.component(upperFirst(toCamelCase(componentName)), defineAsyncComponent(module));
+        arr[arr.length - 2] : lastName.split(".vue")[0];
+      
+      let uniUiComponentName = componentName.replace('uni-', 'u-');
+      console.log(`uniUiComponentName: `, uniUiComponentName);
+      app.component(uniUiComponentName, defineAsyncComponent(module));
     })
   }
 }
