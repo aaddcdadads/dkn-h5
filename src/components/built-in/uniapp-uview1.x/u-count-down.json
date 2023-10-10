@@ -1,0 +1,446 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般使用于某个活动的截止时间上，通过数字的变化，给用户明确的时间感受，提示用户进行某一个行为操作。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/countDown.html"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} timestamp 倒计时，单位为秒"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} autoplay 是否自动开始倒计时，如果为false，需手动调用开始方法。见官网说明（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String} separator 分隔符，colon为英文冒号，zh为中文（默认colon）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} separator-size 分隔符的字体大小，单位rpx（默认30）"
+    },
+    {
+      "name": "property",
+      "description": "{String} separator-color 分隔符的颜色（默认#303133）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} font-size 倒计时字体大小，单位rpx（默认30）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show-border 是否显示倒计时数字的边框（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} hide-zero-day 当\"天\"的部分为0时，隐藏该字段 （默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String} border-color 数字边框的颜色（默认#303133）"
+    },
+    {
+      "name": "property",
+      "description": "{String} bg-color 倒计时数字的背景颜色（默认#ffffff）"
+    },
+    {
+      "name": "property",
+      "description": "{String} color 倒计时数字的颜色（默认#303133）"
+    },
+    {
+      "name": "property",
+      "description": "{String} height 数字高度值(宽度等同此值)，设置边框时看情况是否需要设置此值，单位rpx（默认auto）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show-days 是否显示倒计时的\"天\"部分（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show-hours 是否显示倒计时的\"时\"部分（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show-minutes 是否显示倒计时的\"分\"部分（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show-seconds 是否显示倒计时的\"秒\"部分（默认true）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} end 倒计时结束"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change 每秒触发一次，回调为当前剩余的倒计秒数"
+    },
+    {
+      "name": "example",
+      "description": "<u-count-down ref=\"uCountDown\" :timestamp=\"86400\" :autoplay=\"false\"></u-count-down>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "倒计时时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timestamp",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自动倒计时",
+      "keywords": [],
+      "visibility": "public",
+      "name": "autoplay",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "分隔符",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"colon\",\"zh\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "separator",
+      "type": "Enum",
+      "default": "\"colon\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "分隔符大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "separator-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "30",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "分隔符颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "separator-color",
+      "type": "String",
+      "default": "\"#303133\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "字体颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "default": "\"#303133\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "字体大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "font-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "30",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"#fff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "数字框高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": "String",
+      "default": "\"auto\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示数字框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-border",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "边框颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-color",
+      "type": "String",
+      "default": "\"#303133\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示秒",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-seconds",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示分钟",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-minutes",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示小时",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-hours",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示“天”",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-days",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "天数为0不显示",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hide-zero-day",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "d",
+      "type": "string",
+      "initialValue": "\"00\""
+    },
+    {
+      "kind": "data",
+      "description": "天的默认值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "h",
+      "type": "string",
+      "initialValue": "\"00\""
+    },
+    {
+      "kind": "data",
+      "description": "小时的默认值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "i",
+      "type": "string",
+      "initialValue": "\"00\""
+    },
+    {
+      "kind": "data",
+      "description": "分钟的默认值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "s",
+      "type": "string",
+      "initialValue": "\"00\""
+    },
+    {
+      "kind": "data",
+      "description": "秒的默认值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timer",
+      "type": "any",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "description": "定时器",
+      "keywords": [],
+      "visibility": "public",
+      "name": "seconds",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "倒计时item的样式，item为分别的时分秒部分的数字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemStyle",
+      "dependencies": [
+        "height",
+        "showBorder",
+        "borderColor",
+        "bgColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "倒计时数字的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "letterStyle",
+      "dependencies": [
+        "fontSize",
+        "color"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "end",
+      "arguments": [
+        {
+          "name": "{}",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "倒计时",
+      "keywords": [],
+      "visibility": "public",
+      "name": "start",
+      "params": [],
+      "syntax": [
+        "start(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "格式化时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "formatTime",
+      "params": [
+        {
+          "name": "seconds",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "formatTime(seconds: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "停止倒计时",
+      "keywords": [],
+      "visibility": "public",
+      "name": "end",
+      "params": [],
+      "syntax": [
+        "end(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "清除定时器",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearTimer",
+      "params": [],
+      "syntax": [
+        "clearTimer(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-count-down",
+  "description": "countDown 倒计时"
+}

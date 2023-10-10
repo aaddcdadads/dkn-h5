@@ -1,0 +1,188 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "显示模式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\",\"right\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "mode",
+      "type": "Enum",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "蒙层显示状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击遮罩关闭",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mask-click",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "抽屉宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": "Number",
+      "default": "220",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "visibleSync",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showDrawer",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightMode",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "watchTimer",
+      "type": "any",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "drawerWidth",
+      "type": "number",
+      "initialValue": "220"
+    }
+  ],
+  "computed": [],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear",
+      "params": [],
+      "syntax": [
+        "clear(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "close(type: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "params": [],
+      "syntax": [
+        "open(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_change",
+      "params": [
+        {
+          "name": "param1",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "param2",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "status",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_change(param1: unknow, param2: unknow, status: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniDrawer",
+  "description": "#endif"
+}

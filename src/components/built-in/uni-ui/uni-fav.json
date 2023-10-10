@@ -1,0 +1,160 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"是否带星星",
+      "keywords": [],
+      "visibility": "public",
+      "name": "star",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"未收藏背景色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"#eeeeee\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"未收藏文字颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fg-color",
+      "type": "String",
+      "default": "\"#666666\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"已收藏背景色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color-checked",
+      "type": "String",
+      "default": "\"#007aff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"已收藏文字颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fg-color-checked",
+      "type": "String",
+      "default": "\"#FFFFFF\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否为圆角",
+      "keywords": [],
+      "visibility": "public",
+      "name": "circle",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否为已收藏",
+      "keywords": [],
+      "visibility": "public",
+      "name": "checked",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"收藏按钮文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "content-text",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\tcontentDefault: \"\",\r\n\t\t\t\t\t\tcontentFav: \"\"\r\n\t\t\t\t\t};\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"开启统计功能",
+      "keywords": [],
+      "visibility": "public",
+      "name": "stat",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentDefault",
+      "dependencies": [
+        "contentText"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentFav",
+      "dependencies": [
+        "contentText"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClick",
+      "params": [],
+      "syntax": [
+        "onClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniFav"
+}

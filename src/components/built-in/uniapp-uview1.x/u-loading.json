@@ -1,0 +1,104 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "警此组件为一个小动画，目前用在uView的loadmore加载更多和switch开关等组件的正在加载状态场景。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/loading.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} mode 模式选择，见官网说明（默认circle）"
+    },
+    {
+      "name": "property",
+      "description": "{String} color 动画活动区域的颜色，只对 mode = flower 模式有效（默认#c7c7c7）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} size 加载图标的大小，单位rpx（默认34）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show 是否显示动画（默认true）"
+    },
+    {
+      "name": "example",
+      "description": "<u-loading mode=\"circle\"></u-loading>"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "动画的类型",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "default": "\"circle\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "动画的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "default": "\"#c7c7c7\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "加载图标大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "size",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"34\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示动画",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "加载中圆圈动画的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cricleStyle",
+      "dependencies": [
+        "size",
+        "mode",
+        "color"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [],
+  "name": "u-loading",
+  "description": "loading 加载动画"
+}

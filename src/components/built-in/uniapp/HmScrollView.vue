@@ -35,7 +35,7 @@
 </template>
 <script>
 export default {
-  name: 'HmScrillView',
+  name: 'HmScrollView',
   props: {
     /**
      * 数据

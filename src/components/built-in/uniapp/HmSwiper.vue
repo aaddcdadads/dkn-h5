@@ -27,7 +27,7 @@
 </template>
 <script>
 export default {
-  name: 'HmScrillView',
+  name: 'HmSwiper',
   props: {
        /**
      * 宽度

@@ -1,0 +1,298 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "用于展示多条结构类似的数据"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=3270"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} \tborder \t\t\t\t是否带有纵向边框"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} \tstripe \t\t\t\t是否显示斑马线"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} \ttype \t\t\t\t\t是否开启多选"
+    },
+    {
+      "name": "property",
+      "description": "{String} \temptyText \t\t\t空数据时显示的文本内容"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} \tloading \t\t\t显示加载中"
+    },
+    {
+      "name": "event",
+      "description": "{Function} \tselection-change \t开启多选时，当选择项发生变化时会触发该事件"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "data",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\treturn []\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否有竖线",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示斑马线",
+      "keywords": [],
+      "visibility": "public",
+      "name": "stripe",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "多选",
+      "keywords": [],
+      "visibility": "public",
+      "name": "type",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "没有更多数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "empty-text",
+      "type": "String",
+      "default": "\"没有更多数据\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loading",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "row-key",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "noData",
+      "type": "boolean",
+      "initialValue": "true"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "minWidth",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "multiTableHeads",
+      "type": "array",
+      "initialValue": "[]"
+    }
+  ],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "description": "this.backData = JSON.parse(JSON.stringify(this.data))",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selection-change",
+      "arguments": [
+        {
+          "name": "{ detail: { value: this.backData, index: this.backIndexData } }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isNodata",
+      "params": [],
+      "syntax": [
+        "isNodata(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "选中所有",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selectionAll",
+      "params": [],
+      "syntax": [
+        "selectionAll(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "用于多选表格，切换某一行的选中状态，如果使用了第二个参数，则是设置这一行选中与否（selected 为 true 则选中）",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toggleRowSelection",
+      "params": [
+        {
+          "name": "row",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "selected",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "toggleRowSelection(row: unknow, selected: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "用于多选表格，清空用户的选择",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearSelection",
+      "params": [],
+      "syntax": [
+        "clearSelection(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "用于多选表格，切换所有行的选中状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toggleAllSelection",
+      "params": [],
+      "syntax": [
+        "toggleAllSelection(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "选中\\取消选中",
+      "keywords": [],
+      "visibility": "public",
+      "name": "check",
+      "params": [
+        {
+          "name": "child",
+          "type": "Object",
+          "rest": false
+        },
+        {
+          "name": "check",
+          "type": "Object",
+          "rest": false
+        },
+        {
+          "name": "keyValue",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "emit",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "rowValue",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "check(child: Object, check: Object, keyValue: unknow, emit: unknow, rowValue: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "uniTable",
+  "description": "Table 表格"
+}

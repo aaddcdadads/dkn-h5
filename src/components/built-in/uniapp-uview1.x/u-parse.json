@@ -1,0 +1,417 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"显示的字符串",
+      "keywords": [],
+      "visibility": "public",
+      "name": "html",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"播放视频时暂停其他",
+      "keywords": [],
+      "visibility": "public",
+      "name": "autopause",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"加一个滚动层",
+      "keywords": [],
+      "visibility": "public",
+      "name": "autoscroll",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"将标签内容设置到页面标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "autoset-title",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "压缩等级",
+      "keywords": [],
+      "visibility": "public",
+      "name": "compress",
+      "type": "Number",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"占位图",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loading-img",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否使用缓存",
+      "keywords": [],
+      "visibility": "public",
+      "name": "use-cache",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "主域名",
+      "keywords": [],
+      "visibility": "public",
+      "name": "domain",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"图片懒加载",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lazy-load",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"长按复制内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selectable",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"默认样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tag-style",
+      "type": "Object",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"使用渐显动画",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-with-animation",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"使用页面锚点",
+      "keywords": [],
+      "visibility": "public",
+      "name": "use-anchor",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "description": "#ifdef H5 || MP-360",
+      "keywords": [],
+      "visibility": "public",
+      "name": "uid",
+      "type": "object",
+      "initialValue": "this._uid"
+    },
+    {
+      "kind": "data",
+      "description": "#ifdef APP-PLUS-NVUE",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": "number",
+      "initialValue": "1"
+    },
+    {
+      "kind": "data",
+      "description": "#ifndef APP-PLUS-NVUE",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showAm",
+      "type": "string",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "description": "#endif",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nodes",
+      "type": "array",
+      "initialValue": "[]"
+    }
+  ],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "load",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "parse",
+      "arguments": [
+        {
+          "name": "nodes",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "imgtap",
+      "arguments": [
+        {
+          "name": "img",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "linkpress",
+      "arguments": [
+        {
+          "name": "{ href, ignore: () => jump = false }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error",
+      "arguments": [
+        {
+          "name": "{ source: d.source, target: d.target }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tap",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "设置富文本内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setContent",
+      "params": [
+        {
+          "name": "html",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "append",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setContent(html: unknow, append: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取文本内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getText",
+      "params": [
+        {
+          "name": "ns",
+          "type": "object",
+          "defaultValue": "this.nodes",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getText(ns: object = this.nodes): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "锚点跳转",
+      "keywords": [],
+      "visibility": "public",
+      "name": "in",
+      "params": [
+        {
+          "name": "obj",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "in(obj: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "navigateTo",
+      "params": [
+        {
+          "name": "obj",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "navigateTo(obj: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取视频对象",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getVideoContext",
+      "params": [
+        {
+          "name": "id",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getVideoContext(id: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "#ifdef H5 || APP-PLUS-NVUE || MP-360",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_handleHtml",
+      "params": [
+        {
+          "name": "html",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "append",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_handleHtml(html: unknow, append: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "#ifdef APP-PLUS-NVUE",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_message",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_message(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "parser",
+  "description": "#endif"
+}

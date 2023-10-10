@@ -428,7 +428,7 @@ export default {
       }
       getAction(url, params).then((resp) => {
         console.log(`get table data: `, resp);
-        if(this.isPaging){
+        if(this.isPaging && this.cPagination && this.cPagination.pageNo > 1){
           self.mapData(self.getDataList(resp)).forEach(item => {
             self.cList.push(item)
           })

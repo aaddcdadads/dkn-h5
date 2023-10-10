@@ -1,0 +1,461 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "该组件一般用于左滑唤出操作菜单的场景，用的最多的是左滑删除操作。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/swipeAction.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} bg-color 整个组件背景颜色（默认#ffffff）"
+    },
+    {
+      "name": "property",
+      "description": "{Array} options 数组形式，可以配置背景颜色和文字"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} index 标识符，点击时候用于区分点击了哪一个，用v-for循环时的index即可"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} btn-width 按钮宽度，单位rpx（默认180）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} disabled 是否禁止某个swipeAction滑动（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} show 打开或者关闭某个组件（默认false）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 点击组件时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} close 组件触发关闭状态时"
+    },
+    {
+      "name": "event",
+      "description": "{Function} content-click 点击内容时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} open 组件触发打开状态时"
+    },
+    {
+      "name": "example",
+      "description": "<u-swipe-action btn-text=\"收藏\">...</u-swipe-action>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "index值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "index",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "按钮的宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "btn-width",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "180",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否禁止滑动",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "打开或关闭",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "组件背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"#ffffff\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否短促震动",
+      "keywords": [],
+      "visibility": "public",
+      "name": "vibrate-short",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "按钮操作参数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "options",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\treturn [];\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "moveX",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "description": "movable-view元素在x轴上需要移动的目标移动距离，用于展开或收起滑动的按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scrollX",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "description": "movable-view移动过程中产生的change事件中的x轴移动值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "status",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "description": "滑动的状态，表示当前是展开还是关闭按钮的状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "movableAreaWidth",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "description": "滑动区域",
+      "keywords": [],
+      "visibility": "public",
+      "name": "elId",
+      "type": "CallExpression",
+      "initialValue": "this.$u.guid()"
+    },
+    {
+      "kind": "data",
+      "description": "id，用于通知另外组件关闭时的识别",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showBtn",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "movableViewWidth",
+      "dependencies": [
+        "movableAreaWidth",
+        "allBtnWidth"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "innerBtnWidth",
+      "dependencies": [
+        "btnWidth"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "allBtnWidth",
+      "dependencies": [
+        "btnWidth",
+        "options"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "btnStyle",
+      "dependencies": [
+        "btnWidth"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "description": "this.index为点击的几个组件，index为点击某个组件的第几个按钮(options数组的索引)",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        },
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "content-click",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "点击按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "btnClick",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "btnClick(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "movable-view元素移动事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "change(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "关闭按钮状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "打开按钮的状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "params": [],
+      "syntax": [
+        "open(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "用户手指离开movable-view元素，停止触摸",
+      "keywords": [],
+      "visibility": "public",
+      "name": "touchend",
+      "params": [],
+      "syntax": [
+        "touchend(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "emitOpenEvent",
+      "params": [],
+      "syntax": [
+        "emitOpenEvent(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "emitCloseEvent",
+      "params": [],
+      "syntax": [
+        "emitCloseEvent(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "开始触摸",
+      "keywords": [],
+      "visibility": "public",
+      "name": "touchstart",
+      "params": [],
+      "syntax": [
+        "touchstart(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getActionRect",
+      "params": [],
+      "syntax": [
+        "getActionRect(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击内容触发事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contentClick",
+      "params": [],
+      "syntax": [
+        "contentClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-swipe-action",
+  "description": "swipeAction 左滑单元格"
+}

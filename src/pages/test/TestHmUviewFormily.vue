@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HmUviewFormily ref="test" :schema="schema"></HmUviewFormily>
+    <HmUviewFormily ref="test" :schema="schema" :rules="rules"></HmUviewFormily>
     <u-button @click="validate">validate</u-button>
     <u-button @click="reset">reset</u-button>
     <u-button @click="getValues">getValues</u-button>
@@ -439,6 +439,22 @@ export default {
             }
           }
         },
+      },
+      rules: {
+        input: [
+          {
+            required: true,
+            message: '请输入姓名',
+            trigger: ['change', 'blur'],
+          },
+          {
+            validator: function (rule, value, callback) {
+              return self.$u.test.mobile(value);
+            },
+            message: '手机号码不正确',
+            trigger: ['blur'],
+          }
+        ]
       }
     }
   },

@@ -1,0 +1,230 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "展示可以折叠 / 展开的内容区域"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=23"
+    },
+    {
+      "name": "property",
+      "description": "{String|Array} value 当前激活面板改变时触发(如果是手风琴模式，参数类型为string，否则为array)"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} accordion = [true|false] 是否开启手风琴效果是否开启手风琴效果"
+    },
+    {
+      "name": "event",
+      "description": "{Function} change 切换面板时触发，如果是手风琴模式，返回类型为string，否则为array"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": [
+        "String",
+        "Array"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "model-value",
+      "type": [
+        "String",
+        "Array"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "accordion",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "TODO 兼容 vue2 和 vue3",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dataValue",
+      "dependencies": [
+        "value",
+        "modelValue"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "activeItem",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "update:modelValue",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setOpen",
+      "params": [
+        {
+          "name": "val",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setOpen(val: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setAccordion",
+      "params": [
+        {
+          "name": "self",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setAccordion(self: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resize",
+      "params": [],
+      "syntax": [
+        "resize(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onChange",
+      "params": [
+        {
+          "name": "isOpen",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "self",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onChange(isOpen: unknow, self: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "emit",
+      "params": [
+        {
+          "name": "val",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "emit(val: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "uniCollapse",
+  "description": "Collapse 折叠面板"
+}

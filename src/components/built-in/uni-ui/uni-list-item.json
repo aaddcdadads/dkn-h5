@@ -1,0 +1,546 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "列表子组件"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=24"
+    },
+    {
+      "name": "property",
+      "description": "{String} \ttitle \t\t\t\t\t\t\t标题"
+    },
+    {
+      "name": "property",
+      "description": "{String} \tnote \t\t\t\t\t\t\t描述"
+    },
+    {
+      "name": "property",
+      "description": "{String} \tthumb \t\t\t\t\t\t\t左侧缩略图，若thumb有值，则不会显示扩展图标"
+    },
+    {
+      "name": "property",
+      "description": "{String}  \tthumbSize = [lg|base|sm]\t\t略缩图大小"
+    },
+    {
+      "name": "value",
+      "description": "lg\t\t\t大图"
+    },
+    {
+      "name": "value",
+      "description": "base\t\t一般"
+    },
+    {
+      "name": "value",
+      "description": "sm\t\t\t小图"
+    },
+    {
+      "name": "property",
+      "description": "{String} \tbadgeText\t\t\t\t\t\t数字角标内容"
+    },
+    {
+      "name": "property",
+      "description": "{String} \tbadgeType \t\t\t\t\t\t数字角标类型，参考[uni-icons](https://ext.dcloud.net.cn/plugin?id=21)"
+    },
+    {
+      "name": "property",
+      "description": "{Object}   badgeStyle           数字角标样式"
+    },
+    {
+      "name": "property",
+      "description": "{String} \trightText \t\t\t\t\t\t右侧文字内容"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} \tdisabled = [true|false]\t\t\t是否禁用"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} \tclickable = [true|false] \t\t是否开启点击反馈"
+    },
+    {
+      "name": "property",
+      "description": "{String} \tlink = [navigateTo|redirectTo|reLaunch|switchTab] 是否展示右侧箭头并开启点击反馈"
+    },
+    {
+      "name": "value",
+      "description": "navigateTo \t同 uni.navigateTo()"
+    },
+    {
+      "name": "value",
+      "description": "redirectTo \t同 uni.redirectTo()"
+    },
+    {
+      "name": "value",
+      "description": "reLaunch   \t同 uni.reLaunch()"
+    },
+    {
+      "name": "value",
+      "description": "switchTab  \t同 uni.switchTab()"
+    },
+    {
+      "name": "property",
+      "description": "{String | PageURIString} \tto  \t\t\t跳转目标页面"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} \tshowBadge = [true|false] \t\t是否显示数字角标"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} \tshowSwitch = [true|false] \t\t是否显示Switch"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} \tswitchChecked = [true|false] \tSwitch是否被选中"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} \tshowExtraIcon = [true|false] \t左侧是否显示扩展图标"
+    },
+    {
+      "name": "property",
+      "description": "{Object} \textraIcon \t\t\t\t\t\t扩展图标参数，格式为 {color: '#4cd964',size: '22',type: 'spinner'}"
+    },
+    {
+      "name": "property",
+      "description": "{String} \tdirection = [row|column]\t\t排版方向"
+    },
+    {
+      "name": "value",
+      "description": "row \t\t\t水平排列"
+    },
+    {
+      "name": "value",
+      "description": "column \t\t垂直排列"
+    },
+    {
+      "name": "event",
+      "description": "{Function} \tclick \t\t\t\t\t\t\t点击 uniListItem 触发事件"
+    },
+    {
+      "name": "event",
+      "description": "{Function} \tswitchChange \t\t\t\t\t点击切换 Switch 时触发"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "header",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "body",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "footer",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "direction",
+      "type": "String",
+      "default": "\"row\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "note",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "ellipsis",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickable",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-arrow",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "link",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "to",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-badge",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-switch",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "switch-checked",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "badge-text",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "badge-type",
+      "type": "String",
+      "default": "\"success\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "badge-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right-text",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "thumb",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "thumb-size",
+      "type": "String",
+      "default": "\"base\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-extra-icon",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "extra-icon",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\ttype: '',\r\n\t\t\t\t\t\tcolor: '#000000',\r\n\t\t\t\t\t\tsize: 20,\n\t\t\t\t\t\tcustomPrefix: ''\r\n\t\t\t\t\t};\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "custom-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\tpadding: '',\r\n\t\t\t\t\t\tbackgroundColor: '#FFFFFF'\r\n\t\t\t\t\t}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "keep-scroll-position",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isFirstChild",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "padding",
+      "type": "object",
+      "initialValue": "{\"top\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"right\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"bottom\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"},\"left\":{\"type\":\"string\",\"value\":\"\",\"raw\":\"\\\"\\\"\"}}"
+    }
+  ],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": [
+        {
+          "name": "{ data: {} }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "switchChange",
+      "arguments": [
+        {
+          "name": "detail",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "获取父元素实例",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getForm",
+      "params": [
+        {
+          "name": "name",
+          "type": "string",
+          "defaultValue": "\"uniList\"",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getForm(name: string = \"uniList\"): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClick",
+      "params": [],
+      "syntax": [
+        "onClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onSwitchChange",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onSwitchChange(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "openPage",
+      "params": [],
+      "syntax": [
+        "openPage(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pageApi",
+      "params": [
+        {
+          "name": "api",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "pageApi(api: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniListItem",
+  "description": "ListItem 列表子组件"
+}

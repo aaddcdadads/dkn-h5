@@ -1,0 +1,502 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [
+    "Invalid JSDoc syntax: '{Function} 回调函数'"
+  ],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "即将弃用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn null;\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description": "vue3 替换 value 属性",
+      "keywords": [],
+      "visibility": "public",
+      "name": "model-value",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn null;\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "1.4.0 开始将不支持 v-model ，且废弃 value 和 modelValue",
+      "keywords": [],
+      "visibility": "public",
+      "name": "model",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn null;\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "表单校验规则",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rules",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {};\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "校验错误信息提示方式 默认 undertext 取值 [undertext|toast|modal]",
+      "keywords": [],
+      "visibility": "public",
+      "name": "err-show-type",
+      "type": "String",
+      "default": "\"undertext\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "校验触发器方式 默认 bind 取值 [bind|submit]",
+      "keywords": [],
+      "visibility": "public",
+      "name": "validate-trigger",
+      "type": "String",
+      "default": "\"submit\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "label 位置，默认 left 取值  top/left",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label-position",
+      "type": "String",
+      "default": "\"left\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "label 宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label-width",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "label 居中方式，默认 left 取值 left/center/right",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label-align",
+      "type": "String",
+      "default": "\"left\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "description": "表单本地值的记录，不应该与传如的值进行关联",
+      "keywords": [],
+      "visibility": "public",
+      "name": "formData",
+      "type": "object",
+      "initialValue": "{}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "formRules",
+      "type": "object",
+      "initialValue": "{}"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "计算数据源变化的",
+      "keywords": [],
+      "visibility": "public",
+      "name": "localData",
+      "dependencies": [
+        "model",
+        "modelValue",
+        "value"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "submit",
+      "arguments": [
+        {
+          "name": "{ detail: { value: tempFormData, errors: results } }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "validate",
+      "arguments": [
+        {
+          "name": "result",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "外部调用方法\n设置规则 ，主要用于小程序自定义检验规则",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setRules",
+      "params": [
+        {
+          "name": "rules",
+          "type": "Array",
+          "description": "规则源数据",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setRules(rules: Array): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "外部调用方法\n设置数据，用于设置表单数据，公开给用户使用 ， 不支持在动态表单中使用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setValue",
+      "params": [
+        {
+          "name": "key",
+          "type": "Object",
+          "rest": false
+        },
+        {
+          "name": "value",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setValue(key: Object, value: Object): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "外部调用方法\n手动提交校验表单\n对整个表单进行校验的方法，参数为一个回调函数。",
+      "keywords": [],
+      "visibility": "public",
+      "name": "validate",
+      "params": [
+        {
+          "name": "keepitem",
+          "type": "Array",
+          "description": "保留不参与校验的字段",
+          "rest": false
+        },
+        {
+          "name": "callback",
+          "type": "type",
+          "description": "方法回调",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "validate(keepitem: Array, callback: type): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "外部调用方法\n部分表单校验",
+      "keywords": [],
+      "visibility": "public",
+      "name": "validateField",
+      "params": [
+        {
+          "name": "props",
+          "type": [
+            "Array",
+            "String"
+          ],
+          "description": "需要校验的字段",
+          "defaultValue": "[]",
+          "rest": false
+        },
+        {
+          "name": "callback",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "validateField(props: Array | String = [], callback: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "外部调用方法\n移除表单项的校验结果。传入待移除的表单项的 prop 属性或者 prop 组成的数组，如不传则移除整个表单的校验结果",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearValidate",
+      "params": [
+        {
+          "name": "props",
+          "type": [
+            "Array",
+            "String"
+          ],
+          "description": "需要移除校验的字段 ，不填为所有",
+          "defaultValue": "[]",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "clearValidate(props: Array | String = []): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "外部调用方法 ，即将废弃\n手动提交校验表单\n对整个表单进行校验的方法，参数为一个回调函数。",
+      "keywords": [],
+      "visibility": "public",
+      "name": "submit",
+      "params": [
+        {
+          "name": "keepitem",
+          "type": "Array",
+          "description": "保留不参与校验的字段",
+          "rest": false
+        },
+        {
+          "name": "callback",
+          "type": "type",
+          "description": "方法回调",
+          "rest": false
+        },
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "submit(keepitem: Array, callback: type, type: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "校验所有",
+      "keywords": [],
+      "visibility": "public",
+      "name": "checkAll",
+      "params": [
+        {
+          "name": "invalidFields",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "keepitem",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "callback",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "type",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "async checkAll(invalidFields: unknow, keepitem: unknow, callback: unknow, type: unknow): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "返回validate事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "validateCheck",
+      "params": [
+        {
+          "name": "result",
+          "type": "Object",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "validateCheck(result: Object): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_getValue",
+      "params": [],
+      "syntax": [
+        "_getValue(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_isRequiredField",
+      "params": [],
+      "syntax": [
+        "_isRequiredField(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_setDataValue",
+      "params": [],
+      "syntax": [
+        "_setDataValue(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_getDataValue",
+      "params": [],
+      "syntax": [
+        "_getDataValue(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_realName",
+      "params": [],
+      "syntax": [
+        "_realName(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_isRealName",
+      "params": [],
+      "syntax": [
+        "_isRealName(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_isEqual",
+      "params": [],
+      "syntax": [
+        "_isEqual(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    }
+  ],
+  "name": "uniForms",
+  "description": "#endif"
+}

@@ -1,0 +1,60 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "显示当前页面的路径，快速返回之前的任意页面"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=xxx"
+    },
+    {
+      "name": "property",
+      "description": "{String} separator 分隔符，默认为斜杠'/'"
+    },
+    {
+      "name": "property",
+      "description": "{String} separatorClass 图标分隔符 class"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "separator",
+      "type": "String",
+      "default": "\"/\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "separator-class",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "description": "Breadcrumb 面包屑导航父组件",
+  "name": "uni-breadcrumb"
+}

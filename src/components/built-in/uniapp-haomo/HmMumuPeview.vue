@@ -7,6 +7,7 @@
 		<view class="loading">预览模块加载中...</view>
 
 		<view class="close" @click="closePre()">关闭</view>
+		<u-button class="okButton" type="primary" v-if="btnText"  @click="onClick(fileUrl)">{{ btnText }}</u-button>
 	</view>
 </template>
 <script>
@@ -26,8 +27,16 @@ export default {
          * 是否显示
          */
 		value: {
-			type: Boolean
-		}
+			type: Boolean,
+      default:true
+		},
+    /**
+     * 按钮文字
+     */
+    btnText:{
+      type:String,
+      default:""
+    }
 	},
 	data() {
 		return {
@@ -75,6 +84,9 @@ export default {
 	methods: {
 		closePre() {
 			this.$emit('change', false)
+		},
+		onClick(e) {
+			this.$emit('onClick',e);
 		},
 		paseOfficeUrl(url) {
 			url = encodeURIComponent(url)
@@ -189,7 +201,14 @@ export default {
 		font-size: 12px;
 		z-index: 102;
 	}
-
+	.okButton {
+		position: absolute;
+		bottom:6%;
+		left: 50%;
+    transform: translateX(-50%);
+		font-size: 12px;
+		z-index: 102;
+	}
 	.error {
 		position: absolute;
 		top: 50%;

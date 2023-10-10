@@ -1,0 +1,245 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "这是一个瀑布流形式的组件，内容分为左右两列，结合uView的懒加载组件效果更佳。相较于某些只是奇偶数左右分别，或者没有利用vue作用域插槽的做法，uView的瀑布流实现了真正的 组件化，搭配LazyLoad 懒加载和loadMore 加载更多组件，让您开箱即用，眼前一亮。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/waterfall.html"
+    },
+    {
+      "name": "property",
+      "description": "{Array} flow-list 用于渲染的数据"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} add-time 单条数据添加到队列的时间间隔，单位ms，见上方注意事项说明（默认200）"
+    },
+    {
+      "name": "example",
+      "description": "<u-waterfall :flowList=\"flowList\"></u-waterfall>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"传递参数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\treturn [];\r\n\t\t\t}",
+      "required": true,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description": "单位ms",
+      "keywords": [],
+      "visibility": "public",
+      "name": "add-time",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "200",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "唯一值的键名",
+      "keywords": [],
+      "visibility": "public",
+      "name": "id-key",
+      "type": "String",
+      "default": "\"id\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "leftList",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightList",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tempList",
+      "type": "array",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "children",
+      "type": "array",
+      "initialValue": "[]"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "破坏flowList变量的引用，否则watch的结果新旧值是一样的",
+      "keywords": [],
+      "visibility": "public",
+      "name": "copyFlowList",
+      "dependencies": [
+        "cloneData",
+        "value"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "description": "同时清除父组件列表中的数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "[]",
+          "type": "array",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "splitData",
+      "params": [],
+      "syntax": [
+        "async splitData(): Promise"
+      ],
+      "returns": {
+        "type": "Promise"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "复制而不是引用对象和数组",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cloneData",
+      "params": [
+        {
+          "name": "data",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "cloneData(data: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "清空数据列表",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear",
+      "params": [],
+      "syntax": [
+        "clear(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "清除某一条指定的数据，根据id实现",
+      "keywords": [],
+      "visibility": "public",
+      "name": "remove",
+      "params": [
+        {
+          "name": "id",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "remove(id: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "修改某条数据的某个属性",
+      "keywords": [],
+      "visibility": "public",
+      "name": "modify",
+      "params": [
+        {
+          "name": "id",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "key",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "value",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "modify(id: unknow, key: unknow, value: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-waterfall",
+  "description": "waterfall 瀑布流"
+}

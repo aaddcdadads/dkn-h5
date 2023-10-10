@@ -40,6 +40,12 @@
       }
     },
     {
+      "path": "components/built-in/uniapp-uview-vue3/HmUviewButton",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
       "path": "components/built-in/uniapp-haomo/HmIndexList",
       "style": {
         "navigationBarTitleText": "uni-app"
@@ -64,7 +70,139 @@
       }
     },
     {
+      "path": "components/built-in/uniapp-haomo/HmFriendsRequestsCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmNewsDetail",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmActiveUsersCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmHeadPortraitCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmInformationCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmCommodityDisplayCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmLabelCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmNewsCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmCoverCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmTaskListCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmTaskCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmDownloadsCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmFriendInformationCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmStoriesCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmFriendsList",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmRowVideoCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
       "path": "components/built-in/uniapp-haomo/HmSimpleChatRoom",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmCommentItemsCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmGoodsCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmPhotoCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmVisitsCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmCallOptionCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmTalkCard",
       "style": {
         "navigationBarTitleText": "uni-app"
       }
@@ -83,7 +221,49 @@
       }
     },
     {
+      "path": "components/built-in/uniapp-haomo/HmEmailCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "pages/test/TestHmExam",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
       "path": "components/built-in/uniapp-haomo/HmMomentPictureWall",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmFollowCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmRequestCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmSmsListCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmDynamicDetailCard",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "components/built-in/uniapp-haomo/HmCreditCard",
       "style": {
         "navigationBarTitleText": "uni-app"
       }
@@ -1030,6 +1210,13 @@
     },
     {
       "path": "pages/test/TestHmMumuPeview",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/1599675588405104642/page",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false

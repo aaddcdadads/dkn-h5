@@ -1,0 +1,249 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "uni-data-pickerview"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=3796"
+    },
+    {
+      "name": "property",
+      "description": "{Array} localdata 本地数据，参考"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} step-searh = [true|false] 是否分布查询"
+    },
+    {
+      "name": "value",
+      "description": "true 启用分布查询，仅查询当前选中节点"
+    },
+    {
+      "name": "value",
+      "description": "false 关闭分布查询，一次查询出所有数据"
+    },
+    {
+      "name": "property",
+      "description": "{String|DBFieldString} self-field 分布查询当前字段名称"
+    },
+    {
+      "name": "property",
+      "description": "{String|DBFieldString} parent-field 分布查询父字段名称"
+    },
+    {
+      "name": "property",
+      "description": "{String|DBCollectionString} collection 表名"
+    },
+    {
+      "name": "property",
+      "description": "{String|DBFieldString} field 查询字段，多个字段用 `,` 分割"
+    },
+    {
+      "name": "property",
+      "description": "{String} orderby 排序字段及正序倒叙设置"
+    },
+    {
+      "name": "property",
+      "description": "{String|JQLString} where 查询条件"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "managed-mode",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "ellipsis",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "datachange",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nodeclick",
+      "arguments": [
+        {
+          "name": "node",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "this.selected.slice(0)",
+          "type": "CallExpression",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onPropsChange",
+      "params": [],
+      "syntax": [
+        "onPropsChange(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleSelect",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleSelect(index: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleNodeClick",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "i",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "j",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleNodeClick(item: unknow, i: unknow, j: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateData",
+      "params": [
+        {
+          "name": "data",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "updateData(data: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onDataChange",
+      "params": [],
+      "syntax": [
+        "onDataChange(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onSelectedChange",
+      "params": [
+        {
+          "name": "node",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "isleaf",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onSelectedChange(node: unknow, isleaf: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_dispatchEvent",
+      "params": [],
+      "syntax": [
+        "_dispatchEvent(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniDataPickerView",
+  "description": "DataPickerview"
+}

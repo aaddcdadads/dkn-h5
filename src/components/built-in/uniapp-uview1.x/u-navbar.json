@@ -1,0 +1,320 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "导航栏高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "返回箭头颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "back-icon-color",
+      "type": "String",
+      "default": "\"#606266\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "左边返回图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "back-icon-name",
+      "type": "String",
+      "default": "\"nav-back\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "左边返回图标大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "back-icon-size",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"44\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "返回文字提示",
+      "keywords": [],
+      "visibility": "public",
+      "name": "back-text",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "返回文字样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "back-text-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\tcolor: '#606266'\r\n\t\t\t\t\t}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "导航栏标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题的宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title-width",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"250\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title-color",
+      "type": "String",
+      "default": "\"#606266\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题字体加粗",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title-bold",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标题的字体大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title-size",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "32",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "is-back",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "background",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\tbackground: '#ffffff'\r\n\t\t\t\t\t}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否固定在顶部",
+      "keywords": [],
+      "visibility": "public",
+      "name": "is-fixed",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否沉浸式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "immersive",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示导航栏下边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-bottom",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"z-index值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "z-index",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自定义返回逻辑",
+      "keywords": [],
+      "visibility": "public",
+      "name": "custom-back",
+      "type": "Function",
+      "default": "null",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "menuButtonInfo",
+      "type": "object",
+      "initialValue": "{}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "statusBarHeight",
+      "type": "object",
+      "initialValue": "systemInfo.statusBarHeight"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "导航栏内部盒子的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "navbarInnerStyle",
+      "dependencies": [
+        "navbarHeight"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "整个导航栏的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "navbarStyle",
+      "dependencies": [
+        "zIndex",
+        "$u",
+        "background"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "导航中间的标题的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "titleStyle",
+      "dependencies": [
+        "titleWidth"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "转换字符数值为真正的数值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "navbarHeight",
+      "dependencies": [
+        "height",
+        "statusBarHeight"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "goBack",
+      "params": [],
+      "syntax": [
+        "goBack(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-navbar",
+  "description": "#endif"
+}

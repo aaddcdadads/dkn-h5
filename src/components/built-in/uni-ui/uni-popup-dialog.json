@@ -1,0 +1,328 @@
+{
+  "inheritAttrs": true,
+  "errors": [
+    "tag <input> has no matching end tag."
+  ],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "弹出层-对话框样式"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=329"
+    },
+    {
+      "name": "property",
+      "description": "{String} value input 模式下的默认值"
+    },
+    {
+      "name": "property",
+      "description": "{String} placeholder input 模式下输入提示"
+    },
+    {
+      "name": "property",
+      "description": "{String} type = [success|warning|info|error] 主题样式"
+    },
+    {
+      "name": "value",
+      "description": "success 成功"
+    },
+    {
+      "name": "value",
+      "description": "warning 提示"
+    },
+    {
+      "name": "value",
+      "description": "info 消息"
+    },
+    {
+      "name": "value",
+      "description": "error 错误"
+    },
+    {
+      "name": "property",
+      "description": "{String} mode = [base|input] 模式、"
+    },
+    {
+      "name": "value",
+      "description": "base 基础对话框"
+    },
+    {
+      "name": "value",
+      "description": "input 可输入对话框"
+    },
+    {
+      "name": "property",
+      "description": "{String} content 对话框内容"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} beforeClose 是否拦截取消事件"
+    },
+    {
+      "name": "event",
+      "description": "{Function} confirm 点击确认按钮触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} close 点击取消按钮触发"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input-type",
+      "type": "String",
+      "default": "\"text\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "type",
+      "type": "String",
+      "default": "\"error\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mode",
+      "type": "String",
+      "default": "\"base\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "content",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "before-close",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel-text",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-text",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dialogType",
+      "type": "string",
+      "initialValue": "\"error\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "val",
+      "type": "string",
+      "initialValue": "\"\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "okText",
+      "dependencies": [
+        "confirmText"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeText",
+      "dependencies": [
+        "cancelText"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholderText",
+      "dependencies": [
+        "placeholder"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "titleText",
+      "dependencies": [
+        "title"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "点击确认按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onOk",
+      "params": [],
+      "syntax": [
+        "onOk(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击取消按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeDialog",
+      "params": [],
+      "syntax": [
+        "closeDialog(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [],
+      "syntax": [
+        "close(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "uniPopupDialog",
+  "description": "PopUp 弹出层-对话框样式"
+}

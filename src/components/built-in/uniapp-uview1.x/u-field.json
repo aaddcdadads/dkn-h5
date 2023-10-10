@@ -1,0 +1,761 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "借助此组件，可以实现表单的输入， 有\"text\"和\"textarea\"类型的，此外，借助uView的picker和actionSheet组件可以快速实现上拉菜单，时间，地区选择等， 为表单解决方案的利器。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/field.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} type 输入框的类型（默认text）"
+    },
+    {
+      "name": "property",
+      "description": "{String} icon label左边的图标，限uView的图标名称"
+    },
+    {
+      "name": "property",
+      "description": "{Object} icon-style 左边图标的样式，对象形式"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} right-icon 输入框右边的图标名称，限uView的图标名称（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} required 是否必填，左边您显示红色\"*\"号（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String} label 输入框左边的文字提示"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} password 是否密码输入方式(用点替换文字)，type为text时有效（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} clearable 是否显示右侧清空内容的图标控件(输入框有内容，且获得焦点时才显示)，点击可清空输入框内容（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Number String} label-width label的宽度，单位rpx（默认130）"
+    },
+    {
+      "name": "property",
+      "description": "{String} label-align label的文字对齐方式（默认left）"
+    },
+    {
+      "name": "property",
+      "description": "{Object} field-style 自定义输入框的样式，对象形式"
+    },
+    {
+      "name": "property",
+      "description": "{Number | String} clear-size 清除图标的大小，单位rpx（默认30）"
+    },
+    {
+      "name": "property",
+      "description": "{String} input-align 输入框内容对齐方式（默认left）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} border-bottom 是否显示field的下边框（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} border-top 是否显示field的上边框（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{String} icon-color 左边通过icon配置的图标的颜色（默认#606266）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} auto-height 是否自动增高输入区域，type为textarea时有效（默认true）"
+    },
+    {
+      "name": "property",
+      "description": "{String Boolean} error-message 显示的错误提示内容，如果为空字符串或者false，则不显示错误信息"
+    },
+    {
+      "name": "property",
+      "description": "{String} placeholder 输入框的提示文字"
+    },
+    {
+      "name": "property",
+      "description": "{String} placeholder-style placeholder的样式(内联样式，字符串)，如\"color: #ddd\""
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} focus 是否自动获得焦点（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} fixed 如果type为textarea，且在一个\"position:fixed\"的区域，需要指明为true（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} disabled 是否不可输入（默认false）"
+    },
+    {
+      "name": "property",
+      "description": "{Number String} maxlength 最大输入长度，设置为 -1 的时候不限制最大长度（默认140）"
+    },
+    {
+      "name": "property",
+      "description": "{String} confirm-type 设置键盘右下角按钮的文字，仅在type=\"text\"时生效（默认done）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} input 输入框内容发生变化时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} focus 输入框获得焦点时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} blur 输入框失去焦点时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} confirm 点击完成按钮时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} right-icon-click 通过right-icon生成的图标被点击时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 输入框被点击或者通过right-icon生成的图标被点击时触发，这样设计是考虑到传递右边的图标，一般都为需要弹出\"picker\"等操作时的场景，点击倒三角图标，理应发出此事件，见上方说明"
+    },
+    {
+      "name": "example",
+      "description": "<u-field v-model=\"mobile\" label=\"手机号\" required :error-message=\"errorMessage\"></u-field>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"左边的图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon",
+      "type": "String",
+      "default":"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"右边的图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right-icon",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否必填",
+      "keywords": [],
+      "visibility": "public",
+      "name": "required",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "左侧标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "密码输入方式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "password",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示清空",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearable",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "左边标题宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "label-width",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "130",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "对齐方式",
+      "keywords": [
+        {
+          "name":"options",
+          "description": "[\"left\",\"center\",\"right\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "label-align",
+      "type": "String",
+      "default": "\"left\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"内容对齐方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\",\"center\",\"right\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "input-align",
+      "type": "String",
+      "default": "\"left\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"图标的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon-color",
+      "type": "String",
+      "default": "\"#606266\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"自动增高",
+      "keywords": [],
+      "visibility": "public",
+      "name": "auto-height",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"错误提示",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error-message",
+      "type": [
+        "String",
+        "Boolean"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"提示文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"placeholder的样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder-style",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"自动获得焦点",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"固定定位",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fixed",
+      "type": "Boolean",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"",
+      "keywords": [],
+      "visibility": "public",
+      "name": "value",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description":"类型",
+      "keywords": [],
+      "visibility": "public",
+      "name": "type",
+      "type": "String",
+      "default": "\"text\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否不可输入",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"最大输入长度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maxlength",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "140",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"键盘右下角文字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-type",
+      "type": "String",
+      "default": "\"done\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "lable的位置",
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"left\",\"top\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "label-position",
+      "type": "String",
+      "default": "\"left\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "输入框样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "field-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {}\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "清除按钮大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "30",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "lable左边的图标样式，对象形式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "icon-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {}\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示上边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-top",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否显示下边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-bottom",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "去除两端空格",
+      "keywords": [],
+      "visibility": "public",
+      "name": "trim",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focused",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemIndex",
+      "type": "number",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputWrapStyle",
+      "dependencies": [
+        "inputAlign",
+        "labelPosition"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightIconStyle",
+      "dependencies": [
+        "arrowDirection"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "labelStyle",
+      "dependencies": [
+        "labelAlign"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "uni不支持在computed中写style.justifyContent = 'center'的形式，故用此方法",
+      "keywords": [],
+      "visibility": "public",
+      "name": "justifyContent",
+      "dependencies": [
+        "labelAlign"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "因为uniapp的input组件的maxlength组件必须要数值，这里转为数值，给用户可以传入字符串数值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputMaxlength",
+      "dependencies": [
+        "maxlength"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "label的位置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fieldInnerStyle",
+      "dependencies": [
+        "labelPosition"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blur",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right-icon-click",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onInput",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onInput(event: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onFocus",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onFocus(event: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onBlur",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onBlur(event: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onConfirm",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onConfirm(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClear",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onClear(event: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightIconClick",
+      "params": [],
+      "syntax": [
+        "rightIconClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fieldClick",
+      "params": [],
+      "syntax": [
+        "fieldClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-field",
+  "description": "field 输入框"
+}

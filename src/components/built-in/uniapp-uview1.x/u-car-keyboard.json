@@ -1,0 +1,144 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "打乱按键顺序",
+      "keywords": [],
+      "visibility": "public",
+      "name": "random",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "description": "车牌输入时，abc=true为输入车牌号码，bac=false为输入省份中文简称",
+      "keywords": [],
+      "visibility": "public",
+      "name": "abc",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "areaList",
+      "dependencies": [
+        "random",
+        "$u"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "EngKeyBoardList",
+      "dependencies": [
+        "random",
+        "$u"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "backspace",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "点击键盘按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "carInputClick",
+      "params": [
+        {
+          "name": "i",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "j",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "carInputClick(i: unknow, j: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "修改汽车牌键盘的输入模式，中文|英文",
+      "keywords": [],
+      "visibility": "public",
+      "name": "changeCarInputMode",
+      "params": [],
+      "syntax": [
+        "changeCarInputMode(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "点击退格键",
+      "keywords": [],
+      "visibility": "public",
+      "name": "backspaceClick",
+      "params": [],
+      "syntax": [
+        "backspaceClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearTimer",
+      "params": [],
+      "syntax": [
+        "clearTimer(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-keyboard"
+}

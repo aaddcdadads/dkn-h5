@@ -1,0 +1,168 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "商品加入购物车、立即购买等"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=865"
+    },
+    {
+      "name": "property",
+      "description": "{Array} options 组件参数"
+    },
+    {
+      "name": "property",
+      "description": "{Array} buttonGroup 组件按钮组参数"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} fill = [true | false] 组件按钮组参数"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} stat 是否开启统计功能"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 左侧点击事件"
+    },
+    {
+      "name": "event",
+      "description": "{Function} buttonClick 右侧按钮组点击事件"
+    },
+    {
+      "name": "example",
+      "description": "<uni-goods-nav :fill=\"true\"  options=\"\" buttonGroup=\"buttonGroup\"  @click=\"\" @buttonClick=\"\" />"
+    }
+  ],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "options",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn [{\r\n\t\t\t\t\t\ticon: 'shop',\r\n\t\t\t\t\t\ttext: t(\"uni-goods-nav.options.shop\"),\r\n\t\t\t\t\t}, {\r\n\t\t\t\t\t\ticon: 'cart',\r\n\t\t\t\t\t\ttext: t(\"uni-goods-nav.options.cart\")\r\n\t\t\t\t\t}]\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "button-group",
+      "type": "Array",
+      "default": "function() {\r\n\t\t\t\t\treturn [{\r\n\t\t\t\t\t\t\ttext: t(\"uni-goods-nav.buttonGroup.addToCart\"),\r\n\t\t\t\t\t\t\tbackgroundColor: 'linear-gradient(90deg, #FFCD1E, #FF8A18)',\r\n\t\t\t\t\t\t\tcolor: '#fff'\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\ttext: t(\"uni-goods-nav.buttonGroup.buyNow\"),\r\n\t\t\t\t\t\t\tbackgroundColor: 'linear-gradient(90deg, #FE6035, #EF1224)',\r\n\t\t\t\t\t\t\tcolor: '#fff'\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fill",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "stat",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": [
+        {
+          "name": "{ index, content: item, }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "buttonClick",
+      "arguments": [
+        {
+          "name": "{ index, content: item }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClick",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onClick(index: unknow, item: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "buttonClick",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "item",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "buttonClick(index: unknow, item: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniGoodsNav",
+  "description": "GoodsNav 商品导航"
+}

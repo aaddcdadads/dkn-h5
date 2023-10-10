@@ -1,0 +1,416 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "导航栏组件，主要用于头部导航"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=52"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} dark 开启黑暗模式"
+    },
+    {
+      "name": "property",
+      "description": "{String} title 标题文字"
+    },
+    {
+      "name": "property",
+      "description": "{String} leftText 左侧按钮文本"
+    },
+    {
+      "name": "property",
+      "description": "{String} rightText 右侧按钮文本"
+    },
+    {
+      "name": "property",
+      "description": "{String} leftIcon 左侧按钮图标（图标类型参考 [Icon 图标](http://ext.dcloud.net.cn/plugin?id=28) type 属性）"
+    },
+    {
+      "name": "property",
+      "description": "{String} rightIcon 右侧按钮图标（图标类型参考 [Icon 图标](http://ext.dcloud.net.cn/plugin?id=28) type 属性）"
+    },
+    {
+      "name": "property",
+      "description": "{String} color 图标和文字颜色"
+    },
+    {
+      "name": "property",
+      "description": "{String} backgroundColor 导航栏背景颜色"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} fixed = [true|false] 是否固定顶部"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} statusBar = [true|false] 是否包含状态栏"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} shadow = [true|false] 导航栏下是否有阴影"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} stat 是否开启统计标题上报"
+    },
+    {
+      "name": "event",
+      "description": "{Function} clickLeft 左侧按钮点击时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} clickRight 右侧按钮点击时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} clickTitle 中间标题点击时触发"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"暗黑模式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "dark",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"左侧按钮文本",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left-text",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"右侧按钮文本",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right-text",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"左侧按钮图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left-icon",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"右侧按钮图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right-icon",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否固定顶部",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fixed",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"图标文字颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"导航栏背景色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "background-color",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"包含状态栏",
+      "keywords": [],
+      "visibility": "public",
+      "name": "status-bar",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否有阴影",
+      "keywords": [],
+      "visibility": "public",
+      "name": "shadow",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否有边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"导航栏高度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "44",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"左侧插槽宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "left-width",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "60",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"右侧插槽宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "right-width",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "default": "60",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"开启统计功能",
+      "keywords": [],
+      "visibility": "public",
+      "name": "stat",
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "themeBgColor",
+      "dependencies": [
+        "dark",
+        "backgroundColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "themeColor",
+      "dependencies": [
+        "dark",
+        "color"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "navbarHeight",
+      "dependencies": [
+        "height"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "leftIconWidth",
+      "dependencies": [
+        "leftWidth"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rightIconWidth",
+      "dependencies": [
+        "rightWidth"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickLeft",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickRight",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clickTitle",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClickLeft",
+      "params": [],
+      "syntax": [
+        "onClickLeft(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClickRight",
+      "params": [],
+      "syntax": [
+        "onClickRight(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onClickTitle",
+      "params": [],
+      "syntax": [
+        "onClickTitle(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniNavBar",
+  "description": "NavBar 自定义导航栏"
+}

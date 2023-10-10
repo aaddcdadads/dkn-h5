@@ -1,0 +1,494 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "支持单列、和多列级联选择。列数没有限制，如果屏幕显示不全，顶部tab区域会左右滚动。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=3796"
+    },
+    {
+      "name": "property",
+      "description": "{String} popup-title 弹出窗口标题"
+    },
+    {
+      "name": "property",
+      "description": "{Array} localdata 本地数据，参考"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} border = [true|false] 是否有边框"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} readonly = [true|false] 是否仅读"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} preload = [true|false] 是否预加载数据"
+    },
+    {
+      "name": "value",
+      "description": "true 开启预加载数据，点击弹出窗口后显示已加载数据"
+    },
+    {
+      "name": "value",
+      "description": "false 关闭预加载数据，点击弹出窗口后开始加载数据"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} step-searh = [true|false] 是否分布查询"
+    },
+    {
+      "name": "value",
+      "description": "true 启用分布查询，仅查询当前选中节点"
+    },
+    {
+      "name": "value",
+      "description": "false 关闭分布查询，一次查询出所有数据"
+    },
+    {
+      "name": "property",
+      "description": "{String|DBFieldString} self-field 分布查询当前字段名称"
+    },
+    {
+      "name": "property",
+      "description": "{String|DBFieldString} parent-field 分布查询父字段名称"
+    },
+    {
+      "name": "property",
+      "description": "{String|DBCollectionString} collection 表名"
+    },
+    {
+      "name": "property",
+      "description": "{String|DBFieldString} field 查询字段，多个字段用 `,` 分割"
+    },
+    {
+      "name": "property",
+      "description": "{String} orderby 排序字段及正序倒叙设置"
+    },
+    {
+      "name": "property",
+      "description": "{String|JQLString} where 查询条件"
+    },
+    {
+      "name": "event",
+      "description": "{Function} popupshow 弹出的选择窗口打开时触发此事件"
+    },
+    {
+      "name": "event",
+      "description": "{Function} popuphide 弹出的选择窗口关闭时触发此事件"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "localdata",
+      "type": "Array",
+      "default": "function() {\r\n          return []\r\n        }",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"弹出层标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "popup-title",
+      "type": "String",
+      "default": "\"请选择\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"占位符",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder",
+      "type": "String",
+      "default": "\"请选择\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否禁用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "readonly",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"显示清除按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear-icon",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"是否有边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"隐藏过长文本",
+      "keywords": [],
+      "visibility": "public",
+      "name": "ellipsis",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "isOpened",
+      "type": "boolean",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputSelected",
+      "type": "array",
+      "initialValue": "[]"
+    }
+  ],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "popupopened",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "popupclosed",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inputclick",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "nodeclick",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "update:modelValue",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "{ detail: { value: selected } }",
+          "type": "object",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear",
+      "params": [],
+      "syntax": [
+        "clear(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onPropsChange",
+      "params": [],
+      "syntax": [
+        "onPropsChange(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "load",
+      "params": [],
+      "syntax": [
+        "load(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "params": [],
+      "syntax": [
+        "show(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hide",
+      "params": [],
+      "syntax": [
+        "hide(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleInput",
+      "params": [],
+      "syntax": [
+        "handleInput(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleClose",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleClose(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onnodeclick",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onnodeclick(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "ondatachange",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "ondatachange(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onchange",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onchange(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_processReadonly",
+      "params": [
+        {
+          "name": "dataList",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "value",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_processReadonly(dataList: unknow, value: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_filterForArray",
+      "params": [
+        {
+          "name": "data",
+          "type": "unknow",
+          "rest": false
+        },
+        {
+          "name": "valueArray",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_filterForArray(data: unknow, valueArray: unknow): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "_dispatchEvent",
+      "params": [
+        {
+          "name": "selected",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "_dispatchEvent(selected: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "UniDataPicker",
+  "description": "DataPicker 级联选择"
+}

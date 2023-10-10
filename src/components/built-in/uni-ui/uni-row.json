@@ -1,0 +1,137 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "流式栅格系统，随着屏幕或视口分为 24 份，可以迅速简便地创建布局。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://ext.dcloud.net.cn/plugin?id=3958"
+    },
+    {
+      "name": "property",
+      "description": "{gutter} type = Number 栅格间隔"
+    },
+    {
+      "name": "property",
+      "description": "{justify} type = String flex 布局下的水平排列方式\n\t\t\t\t\t\t可选\tstart/end/center/space-around/space-between\tstart\n\t\t\t\t\t\t默认值\tstart"
+    },
+    {
+      "name": "property",
+      "description": "{align} type = String flex 布局下的垂直排列方式\n\t\t\t\t\t\t可选\ttop/middle/bottom\n\t\t\t\t\t\t默认值\ttop"
+    },
+    {
+      "name": "property",
+      "description": "{width} type = String|Number nvue下需要自行配置宽度用于计算\n\t\t\t\t\t\t默认值 750"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "type",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "gutter",
+      "type": "Number",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "justify",
+      "type": "String",
+      "default": "\"start\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "align",
+      "type": "String",
+      "default": "\"top\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "nvue如果使用span等属性，需要配置宽度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "width",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "750",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "marginValue",
+      "dependencies": [
+        "gutter"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "typeClass",
+      "dependencies": [
+        "type"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "justifyClass",
+      "dependencies": [
+        "justify"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "alignClass",
+      "dependencies": [
+        "align"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [],
+  "name": "uniRow",
+  "description": "Row\t布局-行"
+}

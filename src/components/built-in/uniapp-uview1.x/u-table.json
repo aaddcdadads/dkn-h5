@@ -1,0 +1,161 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "表格组件一般用于展示大量结构化数据的场景"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/table.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} border-color 表格边框的颜色（默认#e4e7ed）"
+    },
+    {
+      "name": "property",
+      "description": "{String} bg-color 表格的背景颜色（默认#ffffff）"
+    },
+    {
+      "name": "property",
+      "description": "{String} align 单元格的内容对齐方式，作用类似css的text-align（默认center）"
+    },
+    {
+      "name": "property",
+      "description": "{String} padding 单元格的内边距，同css的padding写法（默认10rpx 0）"
+    },
+    {
+      "name": "property",
+      "description": "{String Number} font-size 单元格字体大小，单位rpx（默认28）"
+    },
+    {
+      "name": "property",
+      "description": "{String} color 单元格字体颜色（默认#606266）"
+    },
+    {
+      "name": "property",
+      "description": "{Object} th-style th单元格的样式，对象形式(将th所需参数放在table组件，是为了避免每一个th组件要写一遍）"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 点击组件时触发"
+    },
+    {
+      "name": "event",
+      "description": "{Function} close 点击关闭按钮时触发"
+    },
+    {
+      "name": "example",
+      "description": "<u-table></u-table>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "border-color",
+      "type": "String",
+      "default": "\"#e4e7ed\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "name": "align",
+      "type": "String",
+      "default": "\"center\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "td的内边距",
+      "keywords": [],
+      "visibility": "public",
+      "name": "padding",
+      "type": "String",
+      "default": "\"10rpx 6rpx\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "字体大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "font-size",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "28",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "字体颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "color",
+      "type": "String",
+      "default": "\"#606266\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "th的自定义样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "th-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\t\treturn {}\r\n\t\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "table的背景颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bg-color",
+      "type": "String",
+      "default": "\"#ffffff\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tableStyle",
+      "dependencies": [
+        "borderColor",
+        "bgColor"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [],
+  "name": "u-table",
+  "description": "table 表格"
+}

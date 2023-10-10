@@ -1,0 +1,69 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "常用于展示鼠标 hover 时的提示信息。"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://uniapp.dcloud.io/component/uniui/uni-tooltip"
+    },
+    {
+      "name": "property",
+      "description": "{String} content   弹出层显示的内容"
+    },
+    {
+      "name": "property",
+      "description": "{String}  placement出现位置, 目前只支持 left"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "content",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description":"显示的内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "content",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description":"出现位置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placement",
+      "type": "String",
+      "default": "\"bottom\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "name": "uni-tooltip",
+  "description": "Tooltip 提示文字"
+}

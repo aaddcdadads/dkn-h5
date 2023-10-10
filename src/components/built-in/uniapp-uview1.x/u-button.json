@@ -1,0 +1,725 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [
+    {
+      "name": "description",
+      "description": "Button 按钮"
+    },
+    {
+      "name": "tutorial",
+      "description": "https://www.uviewui.com/components/button.html"
+    },
+    {
+      "name": "property",
+      "description": "{String} size 按钮的大小"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} ripple 是否开启点击水波纹效果"
+    },
+    {
+      "name": "property",
+      "description": "{String} ripple-bg-color 水波纹的背景色，ripple为true时有效"
+    },
+    {
+      "name": "property",
+      "description": "{String} type 按钮的样式类型"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} plain 按钮是否镂空，背景色透明"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} disabled 是否禁用"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} hair-line 是否显示按钮的细边框(默认true)"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} shape 按钮外观形状，见文档说明"
+    },
+    {
+      "name": "property",
+      "description": "{Boolean} loading 按钮名称前是否带 loading 图标(App-nvue 平台，在 ios 上为雪花，Android上为圆圈)"
+    },
+    {
+      "name": "property",
+      "description": "{String} form-type 用于 <form> 组件，点击分别会触发 <form> 组件的 submit/reset 事件"
+    },
+    {
+      "name": "property",
+      "description": "{String} open-type 开放能力"
+    },
+    {
+      "name": "property",
+      "description": "{String} data-name 额外传参参数，用于小程序的data-xxx属性，通过target.dataset.name获取"
+    },
+    {
+      "name": "property",
+      "description": "{String} hover-class 指定按钮按下去的样式类。当 hover-class=\"none\" 时，没有点击态效果(App-nvue 平台暂不支持)"
+    },
+    {
+      "name": "property",
+      "description": "{Number} hover-start-time 按住后多久出现点击态，单位毫秒"
+    },
+    {
+      "name": "property",
+      "description": "{Number} hover-stay-time 手指松开后点击态保留时间，单位毫秒"
+    },
+    {
+      "name": "property",
+      "description": "{Object} custom-style 对按钮的自定义样式，对象形式，见文档说明"
+    },
+    {
+      "name": "event",
+      "description": "{Function} click 按钮点击"
+    },
+    {
+      "name": "event",
+      "description": "{Function} getphonenumber open-type=\"getPhoneNumber\"时有效"
+    },
+    {
+      "name": "event",
+      "description": "{Function} getuserinfo 用户点击该按钮时，会返回获取到的用户信息，从返回参数的detail中获取到的值同uni.getUserInfo"
+    },
+    {
+      "name": "event",
+      "description": "{Function} error 当使用开放能力时，发生错误的回调"
+    },
+    {
+      "name": "event",
+      "description": "{Function} opensetting 在打开授权设置页并关闭后回调"
+    },
+    {
+      "name": "event",
+      "description": "{Function} launchapp 打开 APP 成功的回调"
+    },
+    {
+      "name": "example",
+      "description": "<u-button>月落</u-button>"
+    }
+  ],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "default":"按钮",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "是否细边框",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hair-line",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "按钮的样式",
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"default\",\"primary\",\"error\",\"warnin\",\"success\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "type",
+      "type": "Enum",
+      "default": "\"default\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "按钮尺寸",
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"default\",\"medium\",\"mini\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "size",
+      "type": "Enum",
+      "default": "\"default\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "按钮形状",
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"circle\",\"square\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "shape",
+      "type": "Enum",
+      "default": "\"square\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "按钮是否镂空",
+      "keywords": [],
+      "visibility": "public",
+      "name": "plain",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否禁止状态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否加载中",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loading",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "开放能力",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open-type",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击触发事件",
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"submit\",\"reset\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "form-type",
+      "type": "Enum",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "向APP传递的参数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "app-parameter",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "阻止祖先节点出现点击态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-stop-propagation",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "指定信息语言",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"en\",\"zh_CN\",\"zh_TW\"]"  
+        }
+      ],
+      "visibility": "public",
+      "name": "lang",
+      "type": "Enum",
+      "default": "\"en\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "会话来源",
+      "keywords": [],
+      "visibility": "public",
+      "name": "session-from",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "默认当前标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "send-message-title",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "当前分享路径",
+      "keywords": [],
+      "visibility": "public",
+      "name": "send-message-path",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "当前页面截图",
+      "keywords": [],
+      "visibility": "public",
+      "name": "send-message-img",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示消息卡片",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-message-card",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "触摸按钮时背景色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-bg-color",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "水波纹背景色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "ripple-bg-color",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "开启水波纹效果",
+      "keywords": [],
+      "visibility": "public",
+      "name": "ripple",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "按下的类名",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-class",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自定义样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "custom-style",
+      "type": "Object",
+      "default": "function() {\r\n\t\t\t\treturn {};\r\n\t\t\t}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "额外传参参数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "data-name",
+      "type": "String",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "节流",
+      "keywords": [],
+      "visibility": "public",
+      "name": "throttle-time",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "1000",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "出现点击态时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-start-time",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "20",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击态持续时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-stay-time",
+      "type": [
+        "String",
+        "Number"
+      ],
+      "default": "150",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rippleTop",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "description": "水波纹的起点Y坐标到按钮上边界的距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rippleLeft",
+      "type": "number",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "description": "水波纹起点X坐标到按钮左边界的距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fields",
+      "type": "object",
+      "initialValue": "{}"
+    },
+    {
+      "kind": "data",
+      "description": "波纹按钮节点信息",
+      "keywords": [],
+      "visibility": "public",
+      "name": "waveActive",
+      "type": "boolean",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "description": "当没有传bgColor变量时，按钮按下去的颜色类名",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getHoverClass",
+      "dependencies": [
+        "loading",
+        "disabled",
+        "ripple",
+        "hoverClass",
+        "plain",
+        "type"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "在'primary', 'success', 'error', 'warning'类型下，不显示边框，否则会造成四角有毛刺现象",
+      "keywords": [],
+      "visibility": "public",
+      "name": "showHairLineBorder",
+      "dependencies": [
+        "type",
+        "plain"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getphonenumber",
+      "arguments": [
+        {
+          "name": "res",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getuserinfo",
+      "arguments": [
+        {
+          "name": "res",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error",
+      "arguments": [
+        {
+          "name": "res",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "opensetting",
+      "arguments": [
+        {
+          "name": "res",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "launchapp",
+      "arguments": [
+        {
+          "name": "res",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "description": "按钮点击",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "click(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "查询按钮的节点信息",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getWaveQuery",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getWaveQuery(e: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "获取节点信息",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getElQuery",
+      "params": [],
+      "syntax": [
+        "getElQuery(): unknow"
+      ],
+      "returns": {
+        "type": "unknow"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "下面为对接uniapp官方按钮开放能力事件回调的对接",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getphonenumber",
+      "params": [
+        {
+          "name": "res",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getphonenumber(res: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getuserinfo",
+      "params": [
+        {
+          "name": "res",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getuserinfo(res: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error",
+      "params": [
+        {
+          "name": "res",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "error(res: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "opensetting",
+      "params": [
+        {
+          "name": "res",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "opensetting(res: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "launchapp",
+      "params": [
+        {
+          "name": "res",
+          "type": "unknow",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "launchapp(res: unknow): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "u-button",
+  "description": "button 按钮"
+}
