@@ -1,6 +1,7 @@
 import { defineAsyncComponent } from "vue";
 export const modules = import.meta.glob("../components/**/**.vue");
 export const uniUiModules = import.meta.glob("../components/uni-ui/lib/**/**.vue");
+export const uviewUiModules = import.meta.glob("../uni_modules/vk-uview-ui/components/**/**.vue");
 
 import { toCamelCase, upperFirst } from './util';
 
@@ -30,9 +31,21 @@ export default {
       }
       let uniUiComponentName = componentName.replace('uni-', 'u-');
       console.log(`uniUiComponentName: `, uniUiComponentName);
-      app.component(uniUiComponentName, defineAsyncComponent(module));
+      // app.component(uniUiComponentName, defineAsyncComponent(module));
     })
 
-    console.log(`app: `, app);
+    console.log(`uviewUiModules: `, uviewUiModules);
+    // 加载uni-ui的所有组件
+    Object.keys(uviewUiModules).forEach((key) => {
+      let module = modules[key];
+      let arr = key.split("/");
+      let lastName = arr[arr.length - 1];
+      let componentName = lastName == "index.vue" ? 
+        arr[arr.length - 2] : lastName.split(".vue")[0];
+      if (componentName.indexOf('u-') != 0) {
+        return;
+      }
+      app.component(componentName, defineAsyncComponent(module));
+    })
   }
 }
