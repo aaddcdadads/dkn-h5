@@ -79,7 +79,9 @@ export default {
      */
     value: {
       type: Array,
-      default: [0],
+      default: function() {
+        return [0];
+      },
     },
     /**
      * 点击遮罩关闭
