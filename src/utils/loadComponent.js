@@ -28,9 +28,9 @@ export default {
       if (componentName.indexOf('u-') != 0) {
         return;
       }
-      console.log(`componentName: `, componentName);
+      console.log(`componentName: `, componentName, key);
       try {
-        app.component(componentName, defineAsyncComponent(module));
+        app.component(componentName, defineAsyncComponent(() => import(key)));
       } catch (err) {
         console.log(`component: `, err);
       }
