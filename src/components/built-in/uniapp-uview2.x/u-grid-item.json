@@ -65,7 +65,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "bgColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     }

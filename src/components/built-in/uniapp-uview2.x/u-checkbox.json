@@ -142,7 +142,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "activeColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     },
@@ -152,7 +152,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "inactiveColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     },
@@ -172,7 +172,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "iconColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     },
@@ -202,7 +202,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "labelColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     },

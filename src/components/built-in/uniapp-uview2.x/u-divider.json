@@ -124,7 +124,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "textColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     },
@@ -134,7 +134,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "lineColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     }

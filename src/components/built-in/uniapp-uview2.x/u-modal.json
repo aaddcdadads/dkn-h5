@@ -185,7 +185,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "confirmColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     },
@@ -195,7 +195,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "cancelColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     },
