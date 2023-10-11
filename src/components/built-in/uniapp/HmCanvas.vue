@@ -12,6 +12,7 @@
 </template>
 <script>
 export default {
+  name: "HmCanvas",
   props: {
     /**
      * 绘制元素列表
