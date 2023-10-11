@@ -279,7 +279,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "close-icon-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#909399\"",
       "required": false,
       "describeModel": false

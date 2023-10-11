@@ -51,7 +51,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#c7c7c7\"",
       "required": false,
       "describeModel": false

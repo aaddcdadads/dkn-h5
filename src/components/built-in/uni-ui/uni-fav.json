@@ -25,7 +25,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#eeeeee\"",
       "required": false,
       "describeModel": false
@@ -36,7 +36,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "fg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#666666\"",
       "required": false,
       "describeModel": false
@@ -47,7 +47,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "bg-color-checked",
-      "type": "String",
+      "type": "Color",
       "default": "\"#007aff\"",
       "required": false,
       "describeModel": false
@@ -58,7 +58,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "fg-color-checked",
-      "type": "String",
+      "type": "Color",
       "default": "\"#FFFFFF\"",
       "required": false,
       "describeModel": false

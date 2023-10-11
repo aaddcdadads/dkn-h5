@@ -139,7 +139,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "inactive-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#b2b2b2\"",
       "required": false,
       "describeModel": false
@@ -150,7 +150,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#FA3534\"",
       "required": false,
       "describeModel": false

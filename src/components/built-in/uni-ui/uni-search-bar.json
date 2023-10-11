@@ -173,7 +173,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#F8F8F8\"",
       "required": false,
       "describeModel": false

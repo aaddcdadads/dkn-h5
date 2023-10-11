@@ -135,7 +135,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "color",
-      "type": "String",
+      "type": "Color",
       "default": "\"\"",
       "required": false,
       "describeModel": false
@@ -251,7 +251,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "label-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#606266\"",
       "required": false,
       "describeModel": false
@@ -382,7 +382,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "inactive-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#ececec\"",
       "required": false,
       "describeModel": false

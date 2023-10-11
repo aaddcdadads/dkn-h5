@@ -57,7 +57,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#2979ff\"",
       "required": false,
       "describeModel": false
@@ -115,7 +115,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "line-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"\"",
       "required": false,
       "describeModel": false

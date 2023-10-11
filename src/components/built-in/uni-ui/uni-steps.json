@@ -55,7 +55,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#2979FF\"",
       "required": false,
       "describeModel": false

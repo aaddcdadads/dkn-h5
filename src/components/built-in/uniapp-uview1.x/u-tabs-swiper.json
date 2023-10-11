@@ -182,7 +182,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#2979ff\"",
       "required": false,
       "describeModel": false
@@ -193,7 +193,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "inactive-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#303133\"",
       "required": false,
       "describeModel": false
@@ -260,7 +260,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#ffffff\"",
       "required": false,
       "describeModel": false
