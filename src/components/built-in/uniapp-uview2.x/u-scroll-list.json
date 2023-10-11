@@ -58,7 +58,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "indicatorColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     },
@@ -68,7 +68,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "indicatorActiveColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     },

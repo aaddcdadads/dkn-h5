@@ -156,7 +156,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "indicatorActiveColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     },
@@ -166,7 +166,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "indicatorInactiveColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     },
@@ -336,7 +336,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "bgColor",
-      "type": "String",
+      "type": "Color",
       "required": false,
       "describeModel": false
     },
