@@ -68,7 +68,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"transparent\"",
       "required": false,
       "describeModel": false
@@ -101,7 +101,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#606266\"",
       "required": false,
       "describeModel": false
@@ -166,7 +166,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "icon-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#b7b7b7\"",
       "required": false,
       "describeModel": false

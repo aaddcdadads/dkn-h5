@@ -144,7 +144,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#f2f2f2\"",
       "required": false,
       "describeModel": false
@@ -259,7 +259,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "border-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"none\"",
       "required": false,
       "describeModel": false
@@ -320,7 +320,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "search-icon-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"\"",
       "required": false,
       "describeModel": false
@@ -331,7 +331,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#606266\"",
       "required": false,
       "describeModel": false
@@ -342,7 +342,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "placeholder-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#909399\"",
       "required": false,
       "describeModel": false

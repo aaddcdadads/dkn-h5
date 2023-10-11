@@ -283,7 +283,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "month-arrow-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#606266\"",
       "required": false,
       "describeModel": false
@@ -294,7 +294,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "year-arrow-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#909399\"",
       "required": false,
       "describeModel": false
@@ -305,7 +305,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#303133\"",
       "required": false,
       "describeModel": false
@@ -316,7 +316,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "active-bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#2979ff\"",
       "required": false,
       "describeModel": false
@@ -327,7 +327,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#ffffff\"",
       "required": false,
       "describeModel": false
@@ -338,7 +338,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "range-bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"rgba(41,121,255,0.13)\"",
       "required": false,
       "describeModel": false
@@ -349,7 +349,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "range-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#2979ff\"",
       "required": false,
       "describeModel": false

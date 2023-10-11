@@ -40,8 +40,8 @@
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
-      "type": "String",
-      "default": "\"transparent \"",
+      "type": "Color",
+      "default": "\"transparent\"",
       "required": false,
       "describeModel": false
     },

@@ -47,7 +47,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#ffffff\"",
       "required": false,
       "describeModel": false

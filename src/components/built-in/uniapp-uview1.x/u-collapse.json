@@ -115,7 +115,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "arrow-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#909399\"",
       "required": false,
       "describeModel": false

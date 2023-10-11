@@ -84,7 +84,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"transparent\"",
       "required": false,
       "describeModel": false
@@ -204,7 +204,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "level-bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"\"",
       "required": false,
       "describeModel": false
@@ -215,7 +215,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "sex-bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"\"",
       "required": false,
       "describeModel": false

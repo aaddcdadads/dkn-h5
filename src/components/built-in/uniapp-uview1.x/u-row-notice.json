@@ -82,7 +82,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "color",
-      "type": "String",
+      "type": "Color",
       "default": "\"\"",
       "required": false,
       "describeModel": false
@@ -93,7 +93,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"\"",
       "required": false,
       "describeModel": false

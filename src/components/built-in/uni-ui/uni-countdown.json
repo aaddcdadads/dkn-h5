@@ -101,7 +101,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "background-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"\"",
       "required": false,
       "describeModel": false
@@ -112,7 +112,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#333\"",
       "required": false,
       "describeModel": false
@@ -134,7 +134,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "splitor-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#333\"",
       "required": false,
       "describeModel": false

@@ -33,7 +33,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "background-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#FFF9EA\"",
       "required": false,
       "describeModel": false
@@ -55,7 +55,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#FF9A43\"",
       "required": false,
       "describeModel": false
@@ -77,7 +77,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "more-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#FF9A43\"",
       "required": false,
       "describeModel": false
