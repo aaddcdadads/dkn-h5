@@ -40,7 +40,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "占父容器宽度的多少等分，总分为12份",
+      "description": "容器宽度等分",
       "keywords": [],
       "visibility": "public",
       "name": "span",
@@ -54,7 +54,7 @@
     },
     {
       "kind": "prop",
-      "description": "指定栅格左侧的间隔数(总12栏)",
+      "description": "间隔数",
       "keywords": [],
       "visibility": "public",
       "name": "offset",
@@ -68,45 +68,17 @@
     },
     {
       "kind": "prop",
-      "description": "水平排列方式，可选值为`start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`)",
-      "keywords": [],
-      "visibility": "public",
-      "name": "justify",
-      "type": "String",
-      "default": "\"start\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "垂直对齐方式，可选值为top、center、bottom",
-      "keywords": [],
-      "visibility": "public",
-      "name": "align",
-      "type": "String",
-      "default": "\"center\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
       "description": "文字对齐方式",
-      "keywords": [],
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\", \"center\", \"right\"]"
+        }
+      ],
       "visibility": "public",
       "name": "text-align",
-      "type": "String",
+      "type": "Enum",
       "default": "\"left\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否阻止事件传播",
-      "keywords": [],
-      "visibility": "public",
-      "name": "stop",
-      "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     }

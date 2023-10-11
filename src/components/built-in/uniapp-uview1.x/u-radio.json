@@ -60,7 +60,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "radio的名称",
+      "description": "名称",
       "keywords": [],
       "visibility": "public",
       "name": "name",
@@ -74,18 +74,23 @@
     },
     {
       "kind": "prop",
-      "description": "形状，square为方形，circle为原型",
-      "keywords": [],
+      "description": "形状",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"circle\", \"square\"]"
+        }
+      ],
       "visibility": "public",
       "name": "shape",
-      "type": "String",
+      "type": "Enum",
       "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否禁用",
+      "description": "禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -99,7 +104,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否禁止点击提示语选中复选框",
+      "description": "禁止点击复选框",
       "keywords": [],
       "visibility": "public",
       "name": "label-disabled",
@@ -113,7 +118,7 @@
     },
     {
       "kind": "prop",
-      "description": "选中状态颜色",
+      "description": "选中颜色",
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
@@ -138,7 +143,7 @@
     },
     {
       "kind": "prop",
-      "description": "label的字体大小，rpx单位",
+      "description": "字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "label-size",

@@ -159,20 +159,6 @@
     },
     {
       "kind": "prop",
-      "description": "标识符",
-      "keywords": [],
-      "visibility": "public",
-      "name": "index",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
       "description": "右上角性别角标",
       "keywords": [
         {

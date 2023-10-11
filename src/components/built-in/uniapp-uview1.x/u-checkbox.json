@@ -60,7 +60,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "checkbox的名称",
+      "description": "名称",
       "keywords": [],
       "visibility": "public",
       "name": "name",
@@ -74,18 +74,23 @@
     },
     {
       "kind": "prop",
-      "description": "形状，square为方形，circle为原型",
-      "keywords": [],
+      "description": "形状",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"square\", \"circle\"]"
+        }
+      ],
       "visibility": "public",
       "name": "shape",
-      "type": "String",
+      "type": "Enum",
       "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "是否为选中状态",
+      "description": "选中状态",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -96,7 +101,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否禁用",
+      "description": "禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -110,7 +115,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否禁止点击提示语选中复选框",
+      "description": "禁止提示语",
       "keywords": [],
       "visibility": "public",
       "name": "label-disabled",
@@ -124,7 +129,7 @@
     },
     {
       "kind": "prop",
-      "description": "选中状态下的颜色，如设置此值，将会覆盖checkboxGroup的activeColor值",
+      "description": "选中颜色",
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
@@ -135,7 +140,7 @@
     },
     {
       "kind": "prop",
-      "description": "图标的大小，单位rpx",
+      "description": "图标的大小",
       "keywords": [],
       "visibility": "public",
       "name": "icon-size",
@@ -149,7 +154,7 @@
     },
     {
       "kind": "prop",
-      "description": "label的字体大小，rpx单位",
+      "description": "字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "label-size",
@@ -163,7 +168,7 @@
     },
     {
       "kind": "prop",
-      "description": "组件的整体大小",
+      "description": "组件大小",
       "keywords": [],
       "visibility": "public",
       "name": "size",

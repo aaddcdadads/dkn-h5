@@ -32,7 +32,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "宽度，百分比或者具体带单位的值，如30%， 200rpx等，一般使用百分比",
+      "description": "宽度",
       "keywords": [],
       "visibility": "public",
       "name": "width",

@@ -85,7 +85,7 @@
     },
     {
       "kind": "prop",
-      "description": "标题的对齐方式",
+      "description": "标题对齐方式",
       "keywords": [],
       "visibility": "public",
       "name": "align",
@@ -96,7 +96,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否可以点击收起",
+      "description": "点击收起",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -107,7 +107,7 @@
     },
     {
       "kind": "prop",
-      "description": "collapse显示与否",
+      "description": "显示与否",
       "keywords": [],
       "visibility": "public",
       "name": "open",
@@ -143,7 +143,7 @@
     },
     {
       "kind": "prop",
-      "description": "标识当前为第几个",
+      "description": "当线下标",
       "keywords": [],
       "visibility": "public",
       "name": "index",

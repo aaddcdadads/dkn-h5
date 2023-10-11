@@ -43,7 +43,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "节点的背景颜色",
+      "description": "背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
@@ -54,7 +54,7 @@
     },
     {
       "kind": "prop",
-      "description": "节点左边图标绝对定位的top值",
+      "description": "图标的top值",
       "keywords": [],
       "visibility": "public",
       "name": "node-top",

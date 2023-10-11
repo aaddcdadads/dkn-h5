@@ -64,7 +64,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否禁用所有单选框",
+      "description": "禁用单选框",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -75,7 +75,7 @@
     },
     {
       "kind": "prop",
-      "description": "匹配某一个radio组件，如果某个radio的name值等于此值，那么这个radio就被会选中",
+      "description": "选中值",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -89,7 +89,7 @@
     },
     {
       "kind": "prop",
-      "description": "选中状态下的颜色",
+      "description": "选中颜色",
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
@@ -100,7 +100,7 @@
     },
     {
       "kind": "prop",
-      "description": "组件的整体大小",
+      "description": "组件大小",
       "keywords": [],
       "visibility": "public",
       "name": "size",
@@ -114,7 +114,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否禁止点击提示语选中复选框",
+      "description": "禁止点击复选框",
       "keywords": [],
       "visibility": "public",
       "name": "label-disabled",
@@ -125,18 +125,23 @@
     },
     {
       "kind": "prop",
-      "description": "形状，square为方形，circle为原型",
-      "keywords": [],
+      "description": "形状",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"circle\", \"square\"]"
+        }
+      ],
       "visibility": "public",
       "name": "shape",
-      "type": "String",
+      "type": "Enum",
       "default": "\"circle\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "图标的大小，单位rpx",
+      "description": "图标的大小",
       "keywords": [],
       "visibility": "public",
       "name": "icon-size",
@@ -150,7 +155,7 @@
     },
     {
       "kind": "prop",
-      "description": "每个checkbox占u-checkbox-group的宽度",
+      "description": "宽度",
       "keywords": [],
       "visibility": "public",
       "name": "width",
@@ -164,7 +169,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否每个checkbox都换行",
+      "description": "换行",
       "keywords": [],
       "visibility": "public",
       "name": "wrap",

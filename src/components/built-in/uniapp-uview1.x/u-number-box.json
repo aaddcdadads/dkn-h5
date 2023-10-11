@@ -103,7 +103,7 @@
       "description": "预显示的数字",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "Number",
       "default": "1",
       "required": false,

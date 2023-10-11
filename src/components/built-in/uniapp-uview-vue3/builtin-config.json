@@ -750,7 +750,7 @@
             "name":"uni-calendar",
             "title":"日历",
             "docPath":"built-in/uni-ui/uni-calendar.json",
-            "imgUrl":"built-in/uni-uil/img/uni-calender.png",
+            "imgUrl":"built-in/uni-uil/img/uni-calendar.png",
             "type":0,
             "isBuiltIn":true
         },
@@ -1025,14 +1025,6 @@
         "isBuiltIn": true
       },
       {
-        "name": "u-avatar-cropper",
-        "title": "头像剪裁",
-        "docPath": "built-in/uniapp-uview1.x/u-avatar-cropper.json",
-        "imgUrl": "built-in/uniapp-uview1.x/img/u-avatar-cropper.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
         "name": "u-avatar",
         "title": "头像",
         "docPath": "built-in/uniapp-uview1.x/u-avatar.json",
@@ -1089,10 +1081,66 @@
         "isBuiltIn": true
       },
       {
+        "name": "u-cell-group",
+        "title": "单元格",
+        "docPath": "built-in/uniapp-uview1.x/u-cell-group.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-cell-group.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-cell-item",
+        "title": "单元格项",
+        "docPath": "built-in/uniapp-uview1.x/u-cell-item.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-cell-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-checkbox-group",
+        "title": "单元格项",
+        "docPath": "built-in/uniapp-uview1.x/u-checkbox-group.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-checkbox-group.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-checkbox",
+        "title": "单元格",
+        "docPath": "built-in/uniapp-uview1.x/u-checkbox.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-checkbox.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "u-circle-progress",
         "title": "圆形进度条",
         "docPath": "built-in/uniapp-uview1.x/u-circle-progress.json",
         "imgUrl": "built-in/uniapp-uview1.x/img/u-circle-progress.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-col",
+        "title": "行",
+        "docPath": "built-in/uniapp-uview1.x/u-col.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-col.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-collapse",
+        "title": "折叠面板 ",
+        "docPath": "built-in/uniapp-uview1.x/u-collapse.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-collapse.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-collapse-item",
+        "title": "折叠面板项",
+        "docPath": "built-in/uniapp-uview1.x/u-collapse-item.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-collapse-item.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1129,6 +1177,22 @@
         "isBuiltIn": true
       },
       {
+        "name": "u-dropdown-item",
+        "title": "下拉菜单项",
+        "docPath": "built-in/uniapp-uview1.x/u-dropdown-item.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-dropdown-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-dropdown",
+        "title": "下拉菜单",
+        "docPath": "built-in/uniapp-uview1.x/u-dropdown.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-dropdown.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "u-empty",
         "title": "内容为空",
         "docPath": "built-in/uniapp-uview1.x/u-empty.json",
@@ -1145,10 +1209,18 @@
         "isBuiltIn": true
       },
       {
-        "name": "u-full-screen",
-        "title": "压窗屏",
-        "docPath": "built-in/uniapp-uview1.x/u-full-screen.json",
-        "imgUrl": "built-in/uniapp-uview1.x/img/u-full-screen.png",
+        "name": "u-form-item",
+        "title": "表单项",
+        "docPath": "built-in/uniapp-uview1.x/u-form-item.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-form-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-form",
+        "title": "表单",
+        "docPath": "built-in/uniapp-uview1.x/u-form.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-form.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1157,6 +1229,22 @@
         "title": "间隔槽",
         "docPath": "built-in/uniapp-uview1.x/u-gap.json",
         "imgUrl": "built-in/uniapp-uview1.x/img/u-gap.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-grid-item",
+        "title": "宫格布局项",
+        "docPath": "built-in/uniapp-uview1.x/u-grid-item.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-gap-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-grid",
+        "title": "宫格布局",
+        "docPath": "built-in/uniapp-uview1.x/u-grid.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-grid.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1173,6 +1261,22 @@
         "title": "图片",
         "docPath": "built-in/uniapp-uview1.x/u-image.json",
         "imgUrl": "built-in/uniapp-uview1.x/img/u-image.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-index-anchor",
+        "title": "索引列表锚点",
+        "docPath": "built-in/uniapp-uview1.x/u-index-anchor.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-index-anchor.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-index-list",
+        "title": "索引列表",
+        "docPath": "built-in/uniapp-uview1.x/u-index-list.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-index-list.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1221,14 +1325,6 @@
         "title": "超链接",
         "docPath": "built-in/uniapp-uview1.x/u-link.json",
         "imgUrl": "built-in/uniapp-uview1.x/img/u-link.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "u-loading-page",
-        "title": "加载页",
-        "docPath": "built-in/uniapp-uview1.x/u-loading-page.json",
-        "imgUrl": "built-in/uniapp-uview1.x/img/u-loading-page.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1337,6 +1433,22 @@
         "isBuiltIn": true
       },
       {
+        "name": "u-radio-group",
+        "title": "单选框组",
+        "docPath": "built-in/uniapp-uview1.x/u-radio-group.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-radio-group.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-radio",
+        "title": "单选框",
+        "docPath": "built-in/uniapp-uview1.x/u-radio.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-radio-group.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "u-rate",
         "title": "评分",
         "docPath": "built-in/uniapp-uview1.x/u-rate.json",
@@ -1357,6 +1469,14 @@
         "title": "横向滚动通知",
         "docPath": "built-in/uniapp-uview1.x/u-row-notice.json",
         "imgUrl": "built-in/uniapp-uview1.x/img/u-notice-bar.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-row",
+        "title": "列",
+        "docPath": "built-in/uniapp-uview1.x/u-row.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-row.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1457,6 +1577,38 @@
         "isBuiltIn": true
       },
       {
+        "name": "u-table",
+        "title": "表格",
+        "docPath": "built-in/uniapp-uview1.x/u-table.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-table.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-td",
+        "title": "单元格",
+        "docPath": "built-in/uniapp-uview1.x/u-td.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-td.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-th",
+        "title": "表头",
+        "docPath": "built-in/uniapp-uview1.x/u-th.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-th.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-tr",
+        "title": "一行",
+        "docPath": "built-in/uniapp-uview1.x/u-tr.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-tr.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "u-tabs-swiper",
         "title": "全屏选项卡",
         "docPath": "built-in/uniapp-uview1.x/u-tabs-swiper.json",
@@ -1477,6 +1629,22 @@
         "title": "导航标签",
         "docPath": "built-in/uniapp-uview1.x/u-tag.json",
         "imgUrl": "built-in/uniapp-uview1.x/img/u-tag.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-time-line-item",
+        "title": "时间轴项",
+        "docPath": "built-in/uniapp-uview1.x/u-time-line-item.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-time-line-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-time-line",
+        "title": "时间轴",
+        "docPath": "built-in/uniapp-uview1.x/u-time-line.json",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-time-line.png",
         "type": 0,
         "isBuiltIn": true
       },

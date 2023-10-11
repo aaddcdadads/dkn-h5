@@ -269,7 +269,7 @@
       "description": "初始化内容",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "String",
       "default": "\"\"",
       "required": false,

@@ -279,7 +279,7 @@
       "description": "弹出与收起",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "Boolean",
       "default": "false",
       "required": false,

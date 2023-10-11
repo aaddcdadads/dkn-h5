@@ -128,7 +128,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "左侧图标名称(只能uView内置图标)，或者图标src",
+      "description": "左侧图标",
       "keywords": [],
       "visibility": "public",
       "name": "icon",
@@ -167,7 +167,7 @@
     },
     {
       "kind": "prop",
-      "description": "标题下方的描述信息",
+      "description": "标题描述信息",
       "keywords": [],
       "visibility": "public",
       "name": "label",
@@ -181,7 +181,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示下边框",
+      "description": "显示下边框",
       "keywords": [],
       "visibility": "public",
       "name": "border-bottom",
@@ -192,7 +192,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示上边框",
+      "description": "显示上边框",
       "keywords": [],
       "visibility": "public",
       "name": "border-top",
@@ -203,7 +203,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否开启点击反馈，即点击时cell背景为灰色，none为无效果",
+      "description": "开启点击反馈",
       "keywords": [],
       "visibility": "public",
       "name": "hover-class",
@@ -214,7 +214,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示右侧箭头",
+      "description": "显示右侧箭头",
       "keywords": [],
       "visibility": "public",
       "name": "arrow",
@@ -225,7 +225,7 @@
     },
     {
       "kind": "prop",
-      "description": "内容是否垂直居中",
+      "description": "内容垂直居中",
       "keywords": [],
       "visibility": "public",
       "name": "center",
@@ -236,7 +236,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示左边表示必填的星号",
+      "description": "显示必填",
       "keywords": [],
       "visibility": "public",
       "name": "required",
@@ -247,7 +247,7 @@
     },
     {
       "kind": "prop",
-      "description": "标题的宽度，单位rpx",
+      "description": "标题的宽度",
       "keywords": [],
       "visibility": "public",
       "name": "title-width",
@@ -261,18 +261,23 @@
     },
     {
       "kind": "prop",
-      "description": "右侧箭头方向，可选值：right|up|down，默认为right",
-      "keywords": [],
+      "description": "右侧箭头方向",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"right\", \"up\", \"down\"]"
+        }
+      ],
       "visibility": "public",
       "name": "arrow-direction",
-      "type": "String",
+      "type": "Enum",
       "default": "\"right\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "控制标题的样式",
+      "description": "标题样式",
       "keywords": [],
       "visibility": "public",
       "name": "title-style",
@@ -283,7 +288,7 @@
     },
     {
       "kind": "prop",
-      "description": "右侧显示内容的样式",
+      "description": "右侧内容样式",
       "keywords": [],
       "visibility": "public",
       "name": "value-style",
@@ -294,7 +299,7 @@
     },
     {
       "kind": "prop",
-      "description": "描述信息的样式",
+      "description": "描述信息样式",
       "keywords": [],
       "visibility": "public",
       "name": "label-style",
@@ -316,7 +321,7 @@
     },
     {
       "kind": "prop",
-      "description": "用于识别被点击的是第几个cell",
+      "description": "点击的下标",
       "keywords": [],
       "visibility": "public",
       "name": "index",
@@ -330,7 +335,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否使用lable插槽",
+      "description": "使用lable插槽",
       "keywords": [],
       "visibility": "public",
       "name": "use-label-slot",
@@ -341,7 +346,7 @@
     },
     {
       "kind": "prop",
-      "description": "左边图标的大小，单位rpx，只对传入icon字段时有效",
+      "description": "左边图标大小",
       "keywords": [],
       "visibility": "public",
       "name": "icon-size",
@@ -355,7 +360,7 @@
     },
     {
       "kind": "prop",
-      "description": "左边图标的样式，对象形式",
+      "description": "左边图标的样式",
       "keywords": [],
       "visibility": "public",
       "name": "icon-style",

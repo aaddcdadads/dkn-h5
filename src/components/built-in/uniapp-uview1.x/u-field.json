@@ -346,7 +346,7 @@
       "description":"",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": [
         "Number",
         "String"

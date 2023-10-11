@@ -60,7 +60,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "当前form的需要验证字段的集合",
+      "description": "验证字段集合",
       "keywords": [],
       "visibility": "public",
       "name": "model",
@@ -71,7 +71,7 @@
     },
     {
       "kind": "prop",
-      "description": "border-bottom-下边框呈现红色，none-无提示",
+      "description": "下边框呈现红色",
       "keywords": [],
       "visibility": "public",
       "name": "error-type",
@@ -82,7 +82,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示表单域的下划线边框",
+      "description": "显示下划线边框",
       "keywords": [],
       "visibility": "public",
       "name": "border-bottom",
@@ -93,7 +93,7 @@
     },
     {
       "kind": "prop",
-      "description": "label的位置，left-左边，top-上边",
+      "description": "label的位置",
       "keywords": [],
       "visibility": "public",
       "name": "label-position",
@@ -104,7 +104,7 @@
     },
     {
       "kind": "prop",
-      "description": "label的宽度，单位rpx",
+      "description": "label的宽度",
       "keywords": [],
       "visibility": "public",
       "name": "label-width",
@@ -118,7 +118,7 @@
     },
     {
       "kind": "prop",
-      "description": "lable字体的对齐方式",
+      "description": "lable对齐方式",
       "keywords": [],
       "visibility": "public",
       "name": "label-align",
@@ -129,7 +129,7 @@
     },
     {
       "kind": "prop",
-      "description": "lable的样式，对象形式",
+      "description": "lable的样式",
       "keywords": [],
       "visibility": "public",
       "name": "label-style",

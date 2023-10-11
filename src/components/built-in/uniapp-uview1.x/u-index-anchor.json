@@ -44,6 +44,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "使用插槽",
       "keywords": [],
       "visibility": "public",
       "name": "use-slot",
@@ -54,6 +55,7 @@
     },
     {
       "kind": "prop",
+      "description":"索引字符",
       "keywords": [],
       "visibility": "public",
       "name": "index",
@@ -64,6 +66,7 @@
     },
     {
       "kind": "prop",
+      "description":"自定义样式",
       "keywords": [],
       "visibility": "public",
       "name": "custom-style",

@@ -113,7 +113,7 @@
       "description": "开关状态",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "Boolean",
       "default": "false",
       "required": false,
