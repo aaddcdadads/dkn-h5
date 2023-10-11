@@ -209,7 +209,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "icon-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#606266\"",
       "required": false,
       "describeModel": false

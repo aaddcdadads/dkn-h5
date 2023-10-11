@@ -204,7 +204,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "selected-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"\"",
       "required": false,
       "describeModel": false
@@ -215,7 +215,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "selected-text-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"\"",
       "required": false,
       "describeModel": false

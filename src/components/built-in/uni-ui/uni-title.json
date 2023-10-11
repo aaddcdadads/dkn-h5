@@ -105,7 +105,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#333333\"",
       "required": false,
       "describeModel": false

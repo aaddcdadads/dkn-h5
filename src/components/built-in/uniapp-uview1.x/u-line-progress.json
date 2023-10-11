@@ -90,7 +90,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#19be6b\"",
       "required": false,
       "describeModel": false
@@ -101,7 +101,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "inactive-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#ececec\"",
       "required": false,
       "describeModel": false

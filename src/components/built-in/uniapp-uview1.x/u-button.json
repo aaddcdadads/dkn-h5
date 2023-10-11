@@ -333,7 +333,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "hover-bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"\"",
       "required": false,
       "describeModel": false
@@ -344,7 +344,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "ripple-bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"\"",
       "required": false,
       "describeModel": false

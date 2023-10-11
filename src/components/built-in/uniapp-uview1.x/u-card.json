@@ -172,7 +172,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "title-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#303133\"",
       "required": false,
       "describeModel": false
@@ -208,7 +208,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "sub-title-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#909399\"",
       "required": false,
       "describeModel": false

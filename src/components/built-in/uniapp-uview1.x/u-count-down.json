@@ -151,7 +151,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "separator-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#303133\"",
       "required": false,
       "describeModel": false
@@ -162,7 +162,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#303133\"",
       "required": false,
       "describeModel": false
@@ -187,7 +187,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#fff\"",
       "required": false,
       "describeModel": false
@@ -220,7 +220,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "border-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"#303133\"",
       "required": false,
       "describeModel": false

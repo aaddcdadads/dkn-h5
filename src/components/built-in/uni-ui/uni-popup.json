@@ -68,7 +68,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "background-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"none\"",
       "required": false,
       "describeModel": false
@@ -90,7 +90,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "mask-background-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"rgba(0, 0, 0, 0.4)\"",
       "required": false,
       "describeModel": false

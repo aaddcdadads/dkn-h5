@@ -113,18 +113,18 @@
     },
     {
       "kind": "prop",
-      "description": "选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值",
+      "description": "选中状态颜色",
       "keywords": [],
       "visibility": "public",
       "name": "active-color",
-      "type": "String",
+      "type": "Color",
       "default": "\"\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "图标的大小，单位rpx",
+      "description": "图标的大小",
       "keywords": [],
       "visibility": "public",
       "name": "icon-size",
