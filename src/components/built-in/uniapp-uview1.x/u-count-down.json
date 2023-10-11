@@ -106,10 +106,21 @@
     },
     {
       "kind": "prop",
+      "description": "时间格式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "format",
+      "type": "String",
+      "default": "DD:HH:mm:ss",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
       "description": "自动倒计时",
       "keywords": [],
       "visibility": "public",
-      "name": "autoplay",
+      "name": "autoStart",
       "type": "Boolean",
       "default": "true",
       "required": false,
@@ -117,166 +128,12 @@
     },
     {
       "kind": "prop",
-      "description": "分隔符",
-      "keywords": [
-        {
-          "name": "options",
-          "description": "[\"colon\",\"zh\"]"
-        }
-      ],
-      "visibility": "public",
-      "name": "separator",
-      "type": "Enum",
-      "default": "\"colon\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "分隔符大小",
+      "description": "自定义样式",
       "keywords": [],
       "visibility": "public",
-      "name": "separator-size",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "30",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "分隔符颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "separator-color",
-      "type": "Color",
-      "default": "\"#303133\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "字体颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "color",
-      "type": "Color",
-      "default": "\"#303133\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "字体大小",
-      "keywords": [],
-      "visibility": "public",
-      "name": "font-size",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "30",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "背景颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "bg-color",
-      "type": "Color",
-      "default": "\"#fff\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "数字框高度",
-      "keywords": [],
-      "visibility": "public",
-      "name": "height",
+      "name": "customStyle",
       "type": "String",
-      "default": "\"auto\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "显示数字框",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-border",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "边框颜色",
-      "keywords": [],
-      "visibility": "public",
-      "name": "border-color",
-      "type": "Color",
-      "default": "\"#303133\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示秒",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-seconds",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示分钟",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-minutes",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否显示小时",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-hours",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "显示“天”",
-      "keywords": [],
-      "visibility": "public",
-      "name": "show-days",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "天数为0不显示",
-      "keywords": [],
-      "visibility": "public",
-      "name": "hide-zero-day",
-      "type": "Boolean",
-      "default": "false",
+      "default": "",
       "required": false,
       "describeModel": false
     }
