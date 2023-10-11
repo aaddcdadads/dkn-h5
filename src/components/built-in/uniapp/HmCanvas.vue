@@ -6,7 +6,7 @@
         width: canvasInfo.width + 'px',
         height: canvasInfo.height + 'px',
       }"
-      id="myCanvas"
+      canvas-id="myCanvas"
     />
   </view>
 </template>

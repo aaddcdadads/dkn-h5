@@ -23,7 +23,7 @@
       </view>
       <view class="bottomContent_state flex-row" title="选中状态">
         <text decode class="bottomContent_state_text">是否展示班牌</text>
-        <u-checkbox class="bottomContent_state_checkbox" v-model="state" shape="circle"
+        <u-checkbox class="bottomContent_state_checkbox" v-model="cState" shape="circle"
           @change="checkBoxChange"></u-checkbox>
         <view class="bottomContent_state_iconView">
           <u-icon class="bottomContent_state_iconView_icon" name="more-dot-fill" size="40" color="#9797A8"
@@ -158,6 +158,9 @@ export default {
     },
   },
   watch: {
+    state: function(value, oldValue) {
+      this.cState = value;
+    },
     talk: {
       handler: function (value, oldValue) {
         this.talks = value;
@@ -170,6 +173,7 @@ export default {
   },
   data() {
     return {
+      cState: true,
       talks: [],
       popupBtn: ["置顶", "删除"],
       popupShow: false,
