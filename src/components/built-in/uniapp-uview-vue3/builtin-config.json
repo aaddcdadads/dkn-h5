@@ -382,10 +382,10 @@
         "isBuiltIn": true
       },
       {
-        "name": "HmAutograph",
+        "name": "HmSignature",
         "title": "签名组件",
-        "importPath": "built-in/uniapp/HmAutograph",
-        "imgUrl": "built-in/uniapp/img/HmAutograph.png",
+        "importPath": "built-in/uniapp/HmSignature",
+        "imgUrl": "built-in/uniapp/img/HmSignature.png",
         "type": 0,
         "isBuiltIn": true
       },

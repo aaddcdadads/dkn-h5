@@ -16,7 +16,7 @@ export default {
       app.component(upperFirst(toCamelCase(componentName)), defineAsyncComponent(module));
     })
 
-    // 加载uni-ui的所有组件
+    // 加载uview的所有组件
     Object.keys(uviewUiModules).forEach((key) => {
       let module = modules[key];
       let arr = key.split("/");

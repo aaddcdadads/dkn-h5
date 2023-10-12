@@ -857,7 +857,7 @@
       }
     },
     {
-      "path": "components/built-in/uniapp/HmAutograph",
+      "path": "components/built-in/uniapp/HmSignature",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false
