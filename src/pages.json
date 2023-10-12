@@ -283,6 +283,13 @@
       }
     },
     {
+      "path": "pages/test/HmImagesCrop",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "components/built-in/uniapp/HmMoveView",
       "style": {
         "navigationBarTitleText": "",
