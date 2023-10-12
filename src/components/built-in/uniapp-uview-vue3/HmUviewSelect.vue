@@ -58,7 +58,7 @@ export default {
      */
     show: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     /**
      * 取消按钮颜色
