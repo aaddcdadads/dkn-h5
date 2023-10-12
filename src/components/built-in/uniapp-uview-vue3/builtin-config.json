@@ -232,6 +232,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "HmImageCrop",
+        "title": "图片裁剪",
+        "importPath": "built-in/third-party/HmImageCrop",
+        "imgUrl": "built-in/third-party/img/HmImageCrop.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmProgress",
         "title": "进度条",
         "importPath": "built-in/uniapp/HmProgress",
