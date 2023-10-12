@@ -9,53 +9,29 @@
         <text v-else-if="currentType === 5">问答题</text>
       </view>
       <view class="action">
-        <button
-          class="cu-btn bg-green shadow"
-          @click="SubmitAll"
-          data-target="modalCard"
-        >
+        <button class="cu-btn bg-green shadow" @click="SubmitAll" data-target="modalCard">
           提交
         </button>
       </view>
       <view class="action">
-        <button
-          class="cu-btn bg-green shadow"
-          @tap="showCardModal"
-          data-target="modalCard"
-        >
+        <button class="cu-btn bg-green shadow" @tap="showCardModal" data-target="modalCard">
           答题卡
         </button>
       </view>
     </view>
-    <view
-      class="cu-modal"
-      :class="modalCard == 'modalCard' ? 'show' : ''"
-      @tap="hideCardModal"
-    >
+    <view class="cu-modal" :class="modalCard == 'modalCard' ? 'show' : ''" @tap="hideCardModal">
       <view class="cu-dialog" @tap.stop>
-        <scroll-view
-          class="page padding"
-          :scroll-y="true"
-          :style="{ height: swiperHeight }"
-        >
+        <scroll-view class="page padding" :scroll-y="true" :style="{ height: swiperHeight }">
           <view class="cu-bar solid-bottom">
             <view class="action">
               <text class="cuIcon-title text-red">答题卡</text>
             </view>
           </view>
           <view class="grid col-5">
-            <view
-              class="margin-tb-sm text-center"
-              v-for="(subject, index) in subjectList"
-              :key="index"
-            >
-              <button
-                class="cu-btn round"
-                :class="[
-                  subject.userAnswer.length === 0 ? 'line-grey' : 'bg-red',
-                ]"
-                @click="AppointedSubject(index)"
-              >
+            <view class="margin-tb-sm text-center" v-for="(subject, index) in subjectList" :key="index">
+              <button class="cu-btn round" :class="[
+                subject.userAnswer.length === 0 ? 'line-grey' : 'bg-red',
+              ]" @click="AppointedSubject(index)">
                 {{ index + 1 }}
               </button>
             </view>
@@ -63,11 +39,7 @@
         </scroll-view>
       </view>
     </view>
-    <view
-      class="cu-modal padding"
-      :class="modalError == 'modalError' ? 'show' : ''"
-      @tap="hideErrorModal"
-    >
+    <view class="cu-modal padding" :class="modalError == 'modalError' ? 'show' : ''" @tap="hideErrorModal">
       <view class="cu-dialog bg-white" @tap.stop>
         <view class="cu-bar solid-bottom">
           <view class="action">
@@ -77,11 +49,7 @@
 
         <radio-group class="block" @change="ChangeErr">
           <view class="cu-list menu text-left">
-            <view
-              class="cu-item cu-item-error"
-              v-for="(error, index) in errorList"
-              :key="index"
-            >
+            <view class="cu-item cu-item-error" v-for="(error, index) in errorList" :key="index">
               <radio :value="error"></radio>
               <view class="title text-black margin-left">{{ error }}</view>
             </view>
@@ -96,82 +64,38 @@
       </view>
     </view>
     <form>
-      <swiper
-        :current="subjectIndex"
-        class="swiper-box"
-        @change="SwiperChange"
-        :style="{ height: swiperHeight }"
-      >
-        <swiper-item
-          v-for="(subject, index) in subjectList"
-          :key="subject.index"
-        >
+      <swiper :current="subjectIndex" class="swiper-box" @change="SwiperChange" :style="{ height: swiperHeight }">
+        <swiper-item v-for="(subject, index) in subjectList" :key="subject.index">
           <view v-if="index - subjectIndex >= -1 && index - subjectIndex <= 1">
             <view class="cu-bar bg-white solid-bottom">
               <view class="action text-black">
-                <text class="cuIcon-title text-red"></text
-                >{{ index + 1 + `、` + subject.title }}
+                <text class="cuIcon-title text-red"></text>{{ index + 1 + `、` + subject.title }}
               </view>
             </view>
             <view>
-              <radio-group
-                class="block"
-                @change="RadioboxChange"
-                v-if="subject.type === 1 || subject.type === 2"
-              >
-                <view
-                  class="cu-form-group"
-                  v-for="option in subject.optionList"
-                  :key="option.id"
-                >
-                  <radio
-                    :value="option.id"
-                    :checked="
-                      subject.userAnswer.indexOf(option.id) > -1 ? true : false
-                    "
-                  ></radio>
-                  <view class="title text-black"
-                    >{{ option.id }}.{{ option.content }}</view
-                  >
+              <radio-group class="block" @change="RadioboxChange" v-if="subject.type === 1 || subject.type === 2">
+                <view class="cu-form-group" v-for="option in subject.optionList" :key="option.id">
+                  <radio :value="option.id" :checked="subject.userAnswer.indexOf(option.id) > -1 ? true : false
+                    "></radio>
+                  <view class="title text-black">{{ option.id }}.{{ option.content }}</view>
                 </view>
               </radio-group>
 
-              <checkbox-group
-                class="block"
-                @change="CheckboxChange"
-                v-else-if="subject.type === 3"
-              >
-                <view
-                  class="cu-form-group"
-                  v-for="option in subject.optionList"
-                  :key="option.id"
-                >
-                  <checkbox
-                    :value="option.id"
-                    :class="
-                      subject.userAnswer.indexOf(option.id) > -1
-                        ? 'checked'
-                        : ''
-                    "
-                    :checked="
-                      subject.userAnswer.indexOf(option.id) > -1 ? true : false
-                    "
-                  ></checkbox>
-                  <view class="title text-black"
-                    >{{ option.id }}.{{ option.content }}</view
-                  >
+              <checkbox-group class="block" @change="CheckboxChange" v-else-if="subject.type === 3">
+                <view class="cu-form-group" v-for="option in subject.optionList" :key="option.id">
+                  <checkbox :value="option.id" :class="subject.userAnswer.indexOf(option.id) > -1
+                      ? 'checked'
+                      : ''
+                    " :checked="subject.userAnswer.indexOf(option.id) > -1 ? true : false
+    "></checkbox>
+                  <view class="title text-black">{{ option.id }}.{{ option.content }}</view>
                 </view>
               </checkbox-group>
 
               <view v-else-if="subject.type === 4">
                 <view class="cu-form-group solid-bottom">
                   <view class="title text-black"> 答： </view>
-                  <input
-                    placeholder="文本输入框"
-                    name="input"
-                    v-model="subject.userAnswer"
-                    @blur="textInput"
-                  />
+                  <input placeholder="文本输入框" name="input" v-model="subject.userAnswer" @blur="textInput" />
                 </view>
               </view>
 
@@ -180,12 +104,8 @@
                   <view class="action text-black"> 答： </view>
                 </view>
                 <view class="cu-form-group solid margin">
-                  <textarea
-                    maxlength="-1"
-                    @blur="textInput"
-                    v-model="subject.userAnswer"
-                    placeholder="多行文本输入框"
-                  ></textarea>
+                  <textarea maxlength="-1" @blur="textInput" v-model="subject.userAnswer"
+                    placeholder="多行文本输入框"></textarea>
                 </view>
               </view>
             </view>
@@ -229,10 +149,7 @@
 
       <view class="action" @click="FavorSubject">
         <view class="cuIcon-cu-image">
-          <text
-            class="lg cuIcon-favor"
-            :class="[userFavor ? 'text-red' : 'text-gray']"
-          ></text>
+          <text class="lg cuIcon-favor" :class="[userFavor ? 'text-red' : 'text-gray']"></text>
         </view>
         <view :class="[userFavor ? 'text-red' : 'text-gray']">收藏</view>
       </view>
@@ -262,65 +179,67 @@ export default {
      */
     topicList: {
       type: Object,
-      default: [
-        {
-          title: "水是液体？",
-          type: 1,
-          optionList: [
-            { id: "A", content: "对" },
-            { id: "B", content: "错" },
-          ],
-          answer: "A",
-          userAnswer: "",
-          userFavor: false,
-          explain: "难到是固体不成？",
-        },
-        {
-          title: "电流分有？",
-          type: 2,
-          optionList: [
-            { id: "A", content: "直流" },
-            { id: "B", content: "交流" },
-            { id: "C", content: "直流和交流" },
-          ],
-          answer: "C",
-          userAnswer: "",
-          userFavor: false,
-          explain: "科技学依据",
-        },
-        {
-          title: "酸菜鱼的味道？",
-          type: 3,
-          optionList: [
-            { id: "A", content: "咸味" },
-            { id: "B", content: "辣味" },
-            { id: "C", content: "甜味" },
-            { id: "D", content: "酸味" },
-          ],
-          answer: "A,B,D",
-          userAnswer: "",
-          userFavor: false,
-          explain: "你怎么想都行，要的就是这个味，答案只能选A,B,D",
-        },
-        {
-          title: "床前（____）光，疑是地上霜。",
-          type: 4,
-          optionList: [{ id: "", content: "" }],
-          answer: "明月",
-          userAnswer: "",
-          userFavor: false,
-          explain: "问答题没有选项，无法做答，且不参与计分",
-        },
-        {
-          title: "什么美国要限制华为？",
-          type: 5,
-          optionList: [{ id: "", content: "" }],
-          answer: "",
-          userAnswer: "",
-          userFavor: false,
-          explain: "问答题没有选项，无法做答，且不参与计分",
-        },
-      ],
+      default: function () {
+        return [
+          {
+            title: "水是液体？",
+            type: 1,
+            optionList: [
+              { id: "A", content: "对" },
+              { id: "B", content: "错" },
+            ],
+            answer: "A",
+            userAnswer: "",
+            userFavor: false,
+            explain: "难到是固体不成？",
+          },
+          {
+            title: "电流分有？",
+            type: 2,
+            optionList: [
+              { id: "A", content: "直流" },
+              { id: "B", content: "交流" },
+              { id: "C", content: "直流和交流" },
+            ],
+            answer: "C",
+            userAnswer: "",
+            userFavor: false,
+            explain: "科技学依据",
+          },
+          {
+            title: "酸菜鱼的味道？",
+            type: 3,
+            optionList: [
+              { id: "A", content: "咸味" },
+              { id: "B", content: "辣味" },
+              { id: "C", content: "甜味" },
+              { id: "D", content: "酸味" },
+            ],
+            answer: "A,B,D",
+            userAnswer: "",
+            userFavor: false,
+            explain: "你怎么想都行，要的就是这个味，答案只能选A,B,D",
+          },
+          {
+            title: "床前（____）光，疑是地上霜。",
+            type: 4,
+            optionList: [{ id: "", content: "" }],
+            answer: "明月",
+            userAnswer: "",
+            userFavor: false,
+            explain: "问答题没有选项，无法做答，且不参与计分",
+          },
+          {
+            title: "什么美国要限制华为？",
+            type: 5,
+            optionList: [{ id: "", content: "" }],
+            answer: "",
+            userAnswer: "",
+            userFavor: false,
+            explain: "问答题没有选项，无法做答，且不参与计分",
+          },
+        ]
+      },
     },
     /**
      * 标题
@@ -541,6 +460,7 @@ export default {
 @import "./css/animation.css";
 @import "./css/icon.css";
 @import "./css/main.css";
+
 page {
   background-color: #ffffff;
 }
@@ -554,7 +474,7 @@ page {
   padding-right: 0upx;
 }
 
-.cu-form-group + .cu-form-group {
+.cu-form-group+.cu-form-group {
   border-top: none;
 }
 
@@ -562,7 +482,7 @@ page {
   min-height: 50upx;
 }
 
-.cu-list.menu > .cu-item-error {
+.cu-list.menu>.cu-item-error {
   justify-content: flex-start;
 }
 </style>

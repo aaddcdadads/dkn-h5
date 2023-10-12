@@ -276,6 +276,13 @@
       }
     },
     {
+      "path": "components/built-in/uniapp/HmCanvas",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "pages/test/TestHmUviewTabs",
       "style": {
         "navigationBarTitleText": "",
