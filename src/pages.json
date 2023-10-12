@@ -297,7 +297,7 @@
       }
     },
     {
-      "path": "components/built-in/uniapp/HmFab",
+      "path": "components/built-in/uniapp-uview-vue3/HmUviewFab",
       "style": {
         "navigationBarTitleText": "",
         "enablePullDownRefresh": false

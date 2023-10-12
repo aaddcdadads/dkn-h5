@@ -19,13 +19,146 @@ export default {
      */
     elementList: {
       type: Array,
-      default: () => [],
+      default: function () {
+        return [
+          {
+            type: "image",
+            url:
+              "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/top-img.png", //顶部小图
+            width: "100%",
+            height: 51,
+            x: 0,
+            y: 0,
+          },
+          {
+            type: "image",
+            url:
+              "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/weinituijian.png",
+            width: 128,
+            height: 20,
+            x: 26,
+            y: 9,
+          },
+          {
+            type: "image",
+            shape: "circle",
+            url:
+              "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/Wechat.png",
+            width: 29,
+            height: 29,
+            x: 14,
+            y: 5,
+          },
+          {
+            type: "image",
+            url:
+              "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/2.png",
+            width: "100%",
+            height: 380,
+            x: 0,
+            y: 56,
+          },
+          {
+            type: "image",
+            url:
+              "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/bottom-img.png", //底部大图
+            width: "100%",
+            height: 156,
+            x: 0,
+            y: 288,
+          },
+          {
+            type: "image",
+            url:
+              "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/logo-bao.png", //报
+            width: 24,
+            height: 24,
+            x: 90,
+            y: 348,
+          },
+          {
+            type: "image",
+            url:
+              "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/headset.png", //耳机
+            width: 18,
+            height: 18,
+            x: 100,
+            y: 410,
+          },
+          {
+            type: "image",
+            url:
+              "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/huatai/6.png",
+            width: 24,
+            height: 24,
+            x: 244,
+            y: 392,
+          },
+          {
+            type: "text",
+            content: "本期简介：梅西一传一射，阿根廷挺进世界杯",
+            fontSize: 12,
+            color: "#ffffff",
+            x: 16,
+            y: 54,
+          },
+          {
+            type: "text",
+            content: "老友在线报",
+            fontSize: 17,
+            color: "#e77b77",
+            x: 120,
+            y: 366,
+          },
+          {
+            type: "text",
+            content: "2022年12月16日【第260期】",
+            fontSize: 14,
+            color: "#424250",
+            fontWeight: "bold",
+            x: 52,
+            y: 390,
+          },
+          {
+            type: "text",
+            content: "2.32万播放",
+            fontSize: 14,
+            textAlign: "center",
+            color: "#747485",
+            x: 123,
+            y: 424,
+          },
+          {
+            type: "text",
+            content: "长按一起听",
+            fontSize: 10,
+            color: "#1e1e33",
+            x: 232,
+            y: 432,
+          },
+          {
+            type: "rect",
+            bgColor: "#e77b77",
+            width: "100%",
+            height: 22,
+            x: 0,
+            y: 39,
+          },
+        ];
+      },
     },
     /**
+     * 画布信息
      */
     canvasInfo: {
       type: Object,
-      default: () => {},
+      default: function () {
+        return {
+          width: 296,
+          height: 446,
+          bgColor: "#fff",
+        };
+      },
     },
   },
   data() {
@@ -41,12 +174,16 @@ export default {
     },
   },
   mounted() {
-    this.draw();
+      this.draw();
   },
   methods: {
     // 画图
     async draw() {
       const { canvas, width, height } = await this.getCanvas();
+      if (!canvas){
+        console.warn("组件仅适用于微信小程序");
+        return;
+      };
       // 渲染上下文
       const ctx = canvas.getContext("2d");
 
