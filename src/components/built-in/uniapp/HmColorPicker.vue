@@ -5,7 +5,6 @@
   <!-- #ifndef H5 -->
   <view class="t-box">
   <!-- #endif -->
-  <!-- <view class="t-box" @mouseup="touchend($event, 0)" @mouseleave="touchend($event, 0)"> -->
     <view class="t-color__box" :style="{ background: 'rgb(' + bgcolor.r + ',' + bgcolor.g + ',' + bgcolor.b + ')'}">
       <!-- #ifdef H5 -->
       <view class="t-background boxs" 
@@ -17,7 +16,12 @@
       <!-- #endif -->
         <view class="t-color-mask"></view>
         <view class="t-pointer" :style="{ top: site[0].top - 8 + 'px', left: site[0].left - 8 + 'px' }"></view>
+      <!-- #ifdef H5 -->
       </view>
+      <!-- #endif -->
+      <!-- #ifndef H5 -->
+      </view>
+      <!-- #endif -->
     </view>
     <view class="t-control__box">
       <view class="t-control__color">
@@ -35,7 +39,12 @@
           <view class="t-hue">
             <view class="t-circle" :style="{ left: site[1].left - 12 + 'px' }"></view>
           </view>
+        <!-- #ifdef H5 -->
         </view>
+        <!-- #endif -->
+        <!-- #ifndef H5 -->
+        </view>
+        <!-- #endif -->
         <!-- #ifdef H5 -->
         <view class="t-controller boxs" 
         @mousedown="touchstart($event, 2)"  @mousemove="touchmove($event, 2)" @mouseup="touchend($event, 2)">
@@ -49,7 +58,12 @@
           }">
             <view class="t-circle" :style="{ left: site[2].left - 12 + 'px' }"></view>
           </view>
+        <!-- #ifdef H5 -->
         </view>
+        <!-- #endif -->
+        <!-- #ifndef H5 -->
+        </view>
+        <!-- #endif -->
       </view>
     </view>
     <view class="t-result__box">
@@ -84,7 +98,12 @@
         </view>
       </view>
     </view>
+  <!-- #ifdef H5 -->
   </view>
+  <!-- #endif -->
+  <!-- #ifndef H5 -->
+  </view>
+  <!-- #endif -->
 </template>
 
 <script>
