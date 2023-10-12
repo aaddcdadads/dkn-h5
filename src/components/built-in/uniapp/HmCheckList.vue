@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import { cloneDeep } from '/@/utils/util';
 import {
   getAction,
 } from "/@/request/http";
@@ -99,7 +98,7 @@ export default {
   watch: {
     data: {
       handler: function (value, oldValue) {
-        this.cData = cloneDeep(value);
+        this.cData = JSONfn.parse(JSONfn.stringify(value));
       },
       deep: true
     },
@@ -119,10 +118,7 @@ export default {
   },
   computed: {
     selected(){
-      return _(this.cData)
-        .filter(item => item.checked)
-        .map("key")
-        .value();
+      return this.cData.filter(item => item.checked).map(item => item.key);
     },
     isCheckAll(){
       return this.selected.length == this.cData.length;
@@ -184,9 +180,9 @@ export default {
       this.$emit('change', this.selected)
     },
     checkAll(flag){
-      this.cData.forEach((item, index) => {
-        item.checked = flag;
-      });
+      this.cData.forEach(item => {
+        item.checked = flag
+      })
       this.$emit('change', this.selected)
     }
   },
