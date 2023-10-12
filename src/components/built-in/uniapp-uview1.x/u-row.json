@@ -40,7 +40,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "给col添加间距，左右边距各占一半",
+      "description": "间距",
       "keywords": [],
       "visibility": "public",
       "name": "gutter",
@@ -54,34 +54,33 @@
     },
     {
       "kind": "prop",
-      "description": "水平排列方式，可选值为`start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`)",
-      "keywords": [],
+      "description": "水平排列方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"end\", \"center\", \"between\"]"
+        }
+      ],
       "visibility": "public",
       "name": "justify",
-      "type": "String",
+      "type": "Enum",
       "default": "\"start\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "垂直对齐方式，可选值为top、center、bottom",
-      "keywords": [],
+      "description": "垂直对齐方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"top\", \"center\", \"bottom\"]"
+        }
+      ],
       "visibility": "public",
       "name": "align",
-      "type": "String",
+      "type": "Enum",
       "default": "\"center\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否阻止事件传播",
-      "keywords": [],
-      "visibility": "public",
-      "name": "stop",
-      "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     }

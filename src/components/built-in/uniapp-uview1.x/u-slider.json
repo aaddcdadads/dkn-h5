@@ -83,7 +83,7 @@
       "description": "进度百分比值",
       "keywords": [],
       "visibility": "public",
-      "name": "v-model",
+      "name": "modelValue",
       "type": [
         "Number",
         "String"

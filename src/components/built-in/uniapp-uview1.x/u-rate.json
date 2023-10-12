@@ -71,7 +71,7 @@
       "description": "星星的数量",
       "keywords": [],
       "visibility": "public",
-      "name": "v-model",
+      "name": "modelValue",
       "type": [
         "Number",
         "String"

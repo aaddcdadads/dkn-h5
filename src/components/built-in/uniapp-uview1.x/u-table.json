@@ -64,6 +64,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"边框颜色",
       "keywords": [],
       "visibility": "public",
       "name": "border-color",
@@ -74,6 +75,7 @@
     },
     {
       "kind": "prop",
+      "description":"对齐方式",
       "keywords": [],
       "visibility": "public",
       "name": "align",
@@ -84,7 +86,7 @@
     },
     {
       "kind": "prop",
-      "description": "td的内边距",
+      "description": "内边距",
       "keywords": [],
       "visibility": "public",
       "name": "padding",
@@ -120,7 +122,7 @@
     },
     {
       "kind": "prop",
-      "description": "th的自定义样式",
+      "description": "th的样式",
       "keywords": [],
       "visibility": "public",
       "name": "th-style",
@@ -131,7 +133,7 @@
     },
     {
       "kind": "prop",
-      "description": "table的背景颜色",
+      "description": "背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "bg-color",

@@ -127,12 +127,12 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否显示Modal",
+      "description": "显示Modal",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "Boolean",
-      "default": "false",
+      "default": "true",
       "required": false,
       "describeModel": true
     },

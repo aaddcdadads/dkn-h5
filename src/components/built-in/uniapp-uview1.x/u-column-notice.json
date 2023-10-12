@@ -12,7 +12,7 @@
       "visibility": "public",
       "name": "list",
       "type": "Array",
-      "default": "function() {\r\n\t\t\t\treturn [];\r\n\t\t\t}",
+      "default": "function() {\r\n\t\t\t\treturn ['寒雨连江夜入吴',\n'一片冰心在玉壶'];\r\n\t\t\t}",
       "required": false,
       "describeModel": false
     },

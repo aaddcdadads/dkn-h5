@@ -21,7 +21,7 @@
       "description": "激活项索引值",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": [
         "String",
         "Number"

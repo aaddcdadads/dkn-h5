@@ -56,6 +56,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"自动吸顶",
       "keywords": [],
       "visibility": "public",
       "name": "sticky",
@@ -66,6 +67,7 @@
     },
     {
       "kind": "prop",
+      "description":"层级",
       "keywords": [],
       "visibility": "public",
       "name": "z-index",
@@ -79,6 +81,7 @@
     },
     {
       "kind": "prop",
+      "description":"滚动高度",
       "keywords": [],
       "visibility": "public",
       "name": "scroll-top",
@@ -92,6 +95,7 @@
     },
     {
       "kind": "prop",
+      "description":"到顶部距离",
       "keywords": [],
       "visibility": "public",
       "name": "offset-top",
@@ -105,6 +109,7 @@
     },
     {
       "kind": "prop",
+      "description":"索引字符列表",
       "keywords": [],
       "visibility": "public",
       "name": "index-list",
@@ -115,6 +120,7 @@
     },
     {
       "kind": "prop",
+      "description":"高亮颜色",
       "keywords": [],
       "visibility": "public",
       "name": "active-color",

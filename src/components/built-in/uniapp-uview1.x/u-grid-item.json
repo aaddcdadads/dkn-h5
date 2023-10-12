@@ -55,7 +55,7 @@
     },
     {
       "kind": "prop",
-      "description": "点击时返回的index",
+      "description": "点击返回下标",
       "keywords": [],
       "visibility": "public",
       "name": "index",
@@ -69,7 +69,7 @@
     },
     {
       "kind": "prop",
-      "description": "自定义样式，对象形式",
+      "description": "自定义样式",
       "keywords": [],
       "visibility": "public",
       "name": "custom-style",

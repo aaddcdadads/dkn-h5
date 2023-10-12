@@ -52,7 +52,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "当前选中项的value值",
+      "description": "选中项值",
       "keywords": [],
       "visibility": "public",
       "name": "value",
@@ -81,7 +81,7 @@
     },
     {
       "kind": "prop",
-      "description": "选项数据，如果传入了默认slot，此参数无效",
+      "description": "选项数据",
       "keywords": [],
       "visibility": "public",
       "name": "options",
@@ -92,7 +92,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否禁用此菜单项",
+      "description": "禁用菜单项",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -103,7 +103,7 @@
     },
     {
       "kind": "prop",
-      "description": "下拉弹窗的高度",
+      "description": "下拉弹窗高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",

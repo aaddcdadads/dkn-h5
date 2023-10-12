@@ -187,7 +187,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否禁止状态",
+      "description": "禁止状态",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -198,7 +198,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否加载中",
+      "description": "加载中",
       "keywords": [],
       "visibility": "public",
       "name": "loading",
@@ -329,7 +329,7 @@
     },
     {
       "kind": "prop",
-      "description": "触摸按钮时背景色",
+      "description": "触摸时背景色",
       "keywords": [],
       "visibility": "public",
       "name": "hover-bg-color",
@@ -351,7 +351,7 @@
     },
     {
       "kind": "prop",
-      "description": "开启水波纹效果",
+      "description": "水波纹效果",
       "keywords": [],
       "visibility": "public",
       "name": "ripple",

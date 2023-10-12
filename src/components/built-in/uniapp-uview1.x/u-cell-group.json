@@ -51,7 +51,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示分组list上下边框",
+      "description": "显示上下边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",
@@ -62,7 +62,7 @@
     },
     {
       "kind": "prop",
-      "description": "类似 {'font-size': '24rpx'} 和 {'fontSize': '24rpx'}",
+      "description": "分组标题样式",
       "keywords": [],
       "visibility": "public",
       "name": "title-style",
