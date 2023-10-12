@@ -444,6 +444,13 @@
       }
     },
     {
+      "path": "components/built-in/uniapp-uview-vue3/HmUviewParse",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "pages/test/test",
       "style": {
         "navigationBarTitleText": "",

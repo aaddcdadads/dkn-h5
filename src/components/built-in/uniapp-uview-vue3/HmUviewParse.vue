@@ -123,7 +123,7 @@ export default {
      */
     showHeight: {
       type: Number,
-      default: ""
+      default: 0
     },
     /**
      * 关闭文字
