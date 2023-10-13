@@ -235,7 +235,7 @@
         "name": "HmImageCrop",
         "title": "图片裁剪",
         "importPath": "built-in/third-party/HmImageCrop",
-        "imgUrl": "built-in/third-party/img/HmImagesCrops.png",
+        "imgUrl": "built-in/third-party/img/HmImageCrop.png",
         "type": 0,
         "isBuiltIn": true
       },
