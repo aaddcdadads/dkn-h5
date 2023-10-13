@@ -114,7 +114,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否为禁用状态",
+      "description":"禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -128,7 +128,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否无需背景颜色",
+      "description":"需背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "inverted",
@@ -142,7 +142,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否为圆角",
+      "description":"圆角",
       "keywords": [],
       "visibility": "public",
       "name": "circle",

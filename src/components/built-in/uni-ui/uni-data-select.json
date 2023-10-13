@@ -62,7 +62,7 @@
       "description":"默认值",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "model-value",
       "type": [
         "String",
         "Number"
@@ -95,7 +95,7 @@
     },
     {
       "kind": "prop",
-      "description":"",
+      "description":"暂无数据",
       "keywords": [],
       "visibility": "public",
       "name": "empty-text",
@@ -106,6 +106,7 @@
     },
     {
       "kind": "prop",
+      "description":"清空已选项",
       "keywords": [],
       "visibility": "public",
       "name": "clear",

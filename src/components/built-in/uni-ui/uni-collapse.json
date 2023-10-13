@@ -36,19 +36,7 @@
   "props": [
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "value",
-      "type": [
-        "String",
-        "Array"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": true
-    },
-    {
-      "kind": "prop",
+      "description":"当前激活面板",
       "keywords": [],
       "visibility": "public",
       "name": "model-value",
@@ -62,6 +50,7 @@
     },
     {
       "kind": "prop",
+      "description":"手风琴效果",
       "keywords": [],
       "visibility": "public",
       "name": "accordion",

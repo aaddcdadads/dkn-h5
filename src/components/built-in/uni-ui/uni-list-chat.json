@@ -100,6 +100,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"标题",
       "keywords": [],
       "visibility": "public",
       "name": "title",
@@ -110,6 +111,7 @@
     },
     {
       "kind": "prop",
+      "description":"描述",
       "keywords": [],
       "visibility": "public",
       "name": "note",
@@ -120,6 +122,7 @@
     },
     {
       "kind": "prop",
+      "description":"开启点击反馈",
       "keywords": [],
       "visibility": "public",
       "name": "clickable",
@@ -130,19 +133,23 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"跳转方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"navigateTo\", \"redirectTo\", \"reLaunch\",\"switchTab\"]"
+        }
+      ],
       "visibility": "public",
       "name": "link",
-      "type": [
-        "Boolean",
-        "String"
-      ],
-      "default": "false",
+      "type": "Enum",
+      "default": "navigateTo",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"跳转地址",
       "keywords": [],
       "visibility": "public",
       "name": "to",
@@ -153,6 +160,7 @@
     },
     {
       "kind": "prop",
+      "description":"角标内容",
       "keywords": [],
       "visibility": "public",
       "name": "badge-text",
@@ -166,6 +174,7 @@
     },
     {
       "kind": "prop",
+      "description":"角标位置",
       "keywords": [],
       "visibility": "public",
       "name": "badge-positon",
@@ -176,6 +185,7 @@
     },
     {
       "kind": "prop",
+      "description":"右侧时间显示",
       "keywords": [],
       "visibility": "public",
       "name": "time",
@@ -186,6 +196,7 @@
     },
     {
       "kind": "prop",
+      "description":"显示圆形头像",
       "keywords": [],
       "visibility": "public",
       "name": "avatar-circle",
@@ -196,6 +207,7 @@
     },
     {
       "kind": "prop",
+      "description":"头像地址",
       "keywords": [],
       "visibility": "public",
       "name": "avatar",
@@ -206,6 +218,7 @@
     },
     {
       "kind": "prop",
+      "description":"头像组",
       "keywords": [],
       "visibility": "public",
       "name": "avatar-list",

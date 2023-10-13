@@ -116,7 +116,7 @@
       "visibility": "public",
       "name": "list",
       "type": "Array",
-      "default": "function() {\r\n\t\t\t\t\treturn [];\r\n\t\t\t\t}",
+      "default": "function() {\r\n\t\t\t\t\treturn [{name: '待付款'},{ name: '待发货'},{ name: '待评价'},];\r\n\t\t\t\t}",
       "required": false,
       "describeModel": false
     },
@@ -300,7 +300,7 @@
     },
     {
       "kind": "prop",
-      "description": "徽标数位置偏移",
+      "description": "位置偏移",
       "keywords": [],
       "visibility": "public",
       "name": "offset",
@@ -322,7 +322,7 @@
     },
     {
       "kind": "prop",
-      "description": "当前item的样式",
+      "description": "item样式",
       "keywords": [],
       "visibility": "public",
       "name": "active-item-style",

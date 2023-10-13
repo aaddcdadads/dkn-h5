@@ -116,7 +116,7 @@
     },
     {
       "kind": "prop",
-      "description":"主标题字体颜色",
+      "description":"标题字体颜色",
       "keywords": [],
       "visibility": "public",
       "name": "title-color",

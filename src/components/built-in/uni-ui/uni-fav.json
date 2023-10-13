@@ -7,7 +7,7 @@
   "props": [
     {
       "kind": "prop",
-      "description":"是否带星星",
+      "description":"带星星",
       "keywords": [],
       "visibility": "public",
       "name": "star",
@@ -65,7 +65,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否为圆角",
+      "description":"圆角",
       "keywords": [],
       "visibility": "public",
       "name": "circle",
@@ -79,7 +79,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否为已收藏",
+      "description":"已收藏",
       "keywords": [],
       "visibility": "public",
       "name": "checked",

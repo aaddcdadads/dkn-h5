@@ -28,6 +28,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"唯一标识",
       "keywords": [],
       "visibility": "public",
       "name": "index",

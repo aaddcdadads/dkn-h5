@@ -123,7 +123,7 @@
     },
     {
       "kind": "prop",
-      "description": "表单域的属性名，在使用校验规则时必填",
+      "description": "表单域属性名",
       "keywords": [],
       "visibility": "public",
       "name": "name",
@@ -137,6 +137,7 @@
     },
     {
       "kind": "prop",
+      "description":"必填",
       "keywords": [],
       "visibility": "public",
       "name": "required",
@@ -147,6 +148,7 @@
     },
     {
       "kind": "prop",
+      "description":"文字提示",
       "keywords": [],
       "visibility": "public",
       "name": "label",
@@ -157,7 +159,7 @@
     },
     {
       "kind": "prop",
-      "description": "label的宽度 ，默认 80",
+      "description": "label宽度",
       "keywords": [],
       "visibility": "public",
       "name": "label-width",
@@ -171,18 +173,23 @@
     },
     {
       "kind": "prop",
-      "description": "label 居中方式，默认 left 取值 left/center/right",
-      "keywords": [],
+      "description": "label居中方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\", \"center\", \"right\"]"
+        }
+      ],
       "visibility": "public",
       "name": "label-align",
-      "type": "String",
-      "default": "\"\"",
+      "type": "Enum",
+      "default": "\"left\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "强制显示错误信息",
+      "description": "显示错误信息",
       "keywords": [],
       "visibility": "public",
       "name": "error-message",
@@ -196,7 +203,7 @@
     },
     {
       "kind": "prop",
-      "description": "1.4.0 以下属性已经废弃，请使用  #label 插槽代替",
+      "description": "左边的图标",
       "keywords": [],
       "visibility": "public",
       "name": "left-icon",
@@ -206,6 +213,7 @@
     },
     {
       "kind": "prop",
+      "description":"图标的颜色",
       "keywords": [],
       "visibility": "public",
       "name": "icon-color",

@@ -55,17 +55,7 @@
   "props": [
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "data",
-      "type": "Array",
-      "default": "function() {\r\n\t\t\t\treturn []\r\n\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否有竖线",
+      "description": "纵向边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",
@@ -76,7 +66,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示斑马线",
+      "description": "显示斑马线",
       "keywords": [],
       "visibility": "public",
       "name": "stripe",
@@ -98,7 +88,7 @@
     },
     {
       "kind": "prop",
-      "description": "没有更多数据",
+      "description": "空数据",
       "keywords": [],
       "visibility": "public",
       "name": "empty-text",
@@ -109,21 +99,12 @@
     },
     {
       "kind": "prop",
+      "description":"显示加载中",
       "keywords": [],
       "visibility": "public",
       "name": "loading",
       "type": "Boolean",
       "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "row-key",
-      "type": "String",
-      "default": "\"\"",
       "required": false,
       "describeModel": false
     }

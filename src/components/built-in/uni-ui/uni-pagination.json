@@ -10,7 +10,7 @@
       "description":"当前页",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "model-value",
       "type": [
         "Number",
         "String"

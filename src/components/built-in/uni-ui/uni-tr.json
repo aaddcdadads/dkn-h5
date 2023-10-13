@@ -28,31 +28,7 @@
       "props": []
     }
   ],
-  "props": [
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "disabled",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "key-value",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    }
-  ],
+  "props": [],
   "data": [
     {
       "kind": "data",

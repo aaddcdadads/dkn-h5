@@ -64,6 +64,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"数据",
       "keywords": [],
       "visibility": "public",
       "name": "info",
@@ -74,6 +75,7 @@
     },
     {
       "kind": "prop",
+      "description":"指示点索引",
       "keywords": [],
       "visibility": "public",
       "name": "current",
@@ -84,6 +86,7 @@
     },
     {
       "kind": "prop",
+      "description":"指示点样式",
       "keywords": [],
       "visibility": "public",
       "name": "dots-styles",
@@ -94,8 +97,13 @@
     },
     {
       "kind": "prop",
-      "description": "类型 ：default(默认) indexes long nav",
-      "keywords": [],
+      "description": "类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"round\", \"nav\", \"indexes\",\"default\"]"
+        }
+      ],
       "visibility": "public",
       "name": "mode",
       "type": "String",
@@ -105,7 +113,7 @@
     },
     {
       "kind": "prop",
-      "description": "只在 nav 模式下生效，变量名称",
+      "description": "内容字段",
       "keywords": [],
       "visibility": "public",
       "name": "field",
