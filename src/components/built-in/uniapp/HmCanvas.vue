@@ -174,16 +174,16 @@ export default {
     },
   },
   mounted() {
-      this.draw();
+    this.draw();
   },
   methods: {
     // 画图
     async draw() {
       const { canvas, width, height } = await this.getCanvas();
-      if (!canvas){
+      if (!canvas) {
         console.warn("组件仅适用于微信小程序");
         return;
-      };
+      }
       // 渲染上下文
       const ctx = canvas.getContext("2d");
 
@@ -290,6 +290,10 @@ export default {
           .fields({ node: true, size: true })
           .exec((res) => {
             // Canvas 对象
+            if (res[0] == null || !res[0].hasOwnProperty("node")) {
+              console.warn("组件仅适用于微信小程序");
+              return;
+            }
             resolve({
               canvas: res[0].node,
               width: res[0].width,
