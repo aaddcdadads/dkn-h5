@@ -88,7 +88,7 @@
     },
     {
       "kind": "prop",
-      "description": "加载动画的模式",
+      "description": "加载动画模式",
       "keywords": [],
       "visibility": "public",
       "name": "loadingMode",
@@ -98,7 +98,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否加载中",
+      "description": "加载中",
       "keywords": [],
       "visibility": "public",
       "name": "loading",

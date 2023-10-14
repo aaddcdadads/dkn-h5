@@ -140,7 +140,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "左侧标题",
       "keywords": [],
       "visibility": "public",
       "name": "title",
@@ -150,7 +150,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "描述信息",
       "keywords": [],
       "visibility": "public",
       "name": "label",
@@ -160,17 +160,17 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "右侧的内容",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "左侧图标名称",
       "keywords": [],
       "visibility": "public",
       "name": "icon",
@@ -180,7 +180,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -190,7 +190,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "显示下边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",
@@ -200,7 +200,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "垂直居中",
       "keywords": [],
       "visibility": "public",
       "name": "center",
@@ -210,7 +210,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "地址",
       "keywords": [],
       "visibility": "public",
       "name": "url",
@@ -220,7 +220,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "跳转的方式",
       "keywords": [],
       "visibility": "public",
       "name": "linkType",
@@ -230,7 +230,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "点击反馈",
       "keywords": [],
       "visibility": "public",
       "name": "clickable",
@@ -240,7 +240,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "展示右侧箭头",
       "keywords": [],
       "visibility": "public",
       "name": "isLink",
@@ -250,7 +250,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "显示必填星号",
       "keywords": [],
       "visibility": "public",
       "name": "required",
@@ -260,7 +260,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "右侧图标箭头",
       "keywords": [],
       "visibility": "public",
       "name": "rightIcon",
@@ -270,17 +270,23 @@
     },
     {
       "kind": "prop",
-      "description": "",
-      "keywords": [],
+      "description": "右侧箭头方向",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\", \"up\", \"down\",\"right\"]"
+        }
+      ],
       "visibility": "public",
       "name": "arrowDirection",
-      "type": "String",
+      "type": "Enum",
+      "default":"right",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "左侧图标样式",
       "keywords": [],
       "visibility": "public",
       "name": "iconStyle",
@@ -290,7 +296,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "右侧图标样式",
       "keywords": [],
       "visibility": "public",
       "name": "rightIconStyle",
@@ -300,7 +306,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "标题的样式",
       "keywords": [],
       "visibility": "public",
       "name": "titleStyle",
@@ -310,7 +316,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "单位元大小",
       "keywords": [],
       "visibility": "public",
       "name": "size",
@@ -320,7 +326,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "阻止事件传播",
       "keywords": [],
       "visibility": "public",
       "name": "stop",
@@ -330,7 +336,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "标识符",
       "keywords": [],
       "visibility": "public",
       "name": "name",

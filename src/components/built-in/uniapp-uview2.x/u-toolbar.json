@@ -46,7 +46,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否显示",
+      "description": "显示",
       "keywords": [],
       "visibility": "public",
       "name": "show",

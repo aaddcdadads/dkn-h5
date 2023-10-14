@@ -10,7 +10,7 @@
       "description": "数量",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "String",
       "required": false,
       "describeModel": false
@@ -37,7 +37,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否只读",
+      "description": "只读",
       "keywords": [],
       "visibility": "public",
       "name": "readonly",
@@ -127,7 +127,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否滑动选择",
+      "description": "滑动选择",
       "keywords": [],
       "visibility": "public",
       "name": "touchable",

@@ -227,7 +227,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否镂空",
+      "description": "镂空",
       "keywords": [],
       "visibility": "public",
       "name": "plain",
@@ -237,7 +237,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否禁用",
+      "description": "禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -247,7 +247,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "展示加载图标",
       "keywords": [],
       "visibility": "public",
       "name": "loading",
@@ -257,7 +257,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否带loading图标",
+      "description": "提示文字",
       "keywords": [],
       "visibility": "public",
       "name": "loadingText",
@@ -267,7 +267,7 @@
     },
     {
       "kind": "prop",
-      "description": "加载中提示文字",
+      "description": "图标类型",
       "keywords": [],
       "visibility": "public",
       "name": "loadingMode",
@@ -318,7 +318,7 @@
     },
     {
       "kind": "prop",
-      "description": "阻止祖先节点出现点击态",
+      "description": "阻止出现点击态",
       "keywords": [],
       "visibility": "public",
       "name": "hoverStopPropagation",

@@ -36,7 +36,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "关闭其他",
       "keywords": [],
       "visibility": "public",
       "name": "autoClose",

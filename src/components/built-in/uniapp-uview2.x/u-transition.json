@@ -69,7 +69,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否展示组件",
+      "description": "展示组件",
       "keywords": [],
       "visibility": "public",
       "name": "show",

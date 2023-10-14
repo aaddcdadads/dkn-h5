@@ -37,14 +37,14 @@
       "description": "",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "标题",
       "keywords": [],
       "visibility": "public",
       "name": "title",

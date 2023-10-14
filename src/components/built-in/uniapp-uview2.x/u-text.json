@@ -118,7 +118,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示",
+      "description": "显示",
       "keywords": [],
       "visibility": "public",
       "name": "show",
@@ -168,7 +168,7 @@
     },
     {
       "kind": "prop",
-      "description": "配置的链接",
+      "description": "配置链接",
       "keywords": [],
       "visibility": "public",
       "name": "href",
@@ -208,7 +208,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否粗体",
+      "description": "粗体",
       "keywords": [],
       "visibility": "public",
       "name": "bold",
@@ -218,7 +218,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否块状",
+      "description": "块状",
       "keywords": [],
       "visibility": "public",
       "name": "block",
@@ -284,7 +284,7 @@
     },
     {
       "kind": "prop",
-      "description": "显示的值",
+      "description": "外边距",
       "keywords": [],
       "visibility": "public",
       "name": "margin",

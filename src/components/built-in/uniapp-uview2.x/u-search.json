@@ -339,7 +339,7 @@
       "description": "初始值",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "String",
       "required": false,
       "describeModel": false

@@ -70,7 +70,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "标签名称",
       "keywords": [],
       "visibility": "public",
       "name": "name",
@@ -80,7 +80,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "提示信息",
       "keywords": [],
       "visibility": "public",
       "name": "badge",
@@ -90,7 +90,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "显示圆点",
       "keywords": [],
       "visibility": "public",
       "name": "dot",
@@ -100,7 +100,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "描述文本",
       "keywords": [],
       "visibility": "public",
       "name": "text",
@@ -110,7 +110,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "控制徽标位置",
       "keywords": [],
       "visibility": "public",
       "name": "badgeStyle",

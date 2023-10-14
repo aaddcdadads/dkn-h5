@@ -55,7 +55,7 @@
     },
     {
       "kind": "prop",
-      "description": "进度条的高度",
+      "description": "进度条高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",

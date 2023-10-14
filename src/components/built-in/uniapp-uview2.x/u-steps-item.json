@@ -22,7 +22,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "标题文字",
       "keywords": [],
       "visibility": "public",
       "name": "title",
@@ -32,7 +32,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "描述文本",
       "keywords": [],
       "visibility": "public",
       "name": "desc",
@@ -42,7 +42,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "图标大小",
       "keywords": [],
       "visibility": "public",
       "name": "iconSize",
@@ -52,7 +52,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "失败状态",
       "keywords": [],
       "visibility": "public",
       "name": "error",

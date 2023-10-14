@@ -192,7 +192,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否自动切换",
+      "description": "自动切换",
       "keywords": [],
       "visibility": "public",
       "name": "autoplay",
@@ -352,7 +352,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否加载中",
+      "description": "加载中",
       "keywords": [],
       "visibility": "public",
       "name": "loading",
@@ -362,7 +362,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示标题",
+      "description": "显示标题",
       "keywords": [],
       "visibility": "public",
       "name": "showTitle",

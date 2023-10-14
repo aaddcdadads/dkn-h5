@@ -15,7 +15,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "锚点",
       "keywords": [],
       "visibility": "public",
       "name": "anchor",

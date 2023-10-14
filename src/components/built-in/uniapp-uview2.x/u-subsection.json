@@ -124,7 +124,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否加粗",
+      "description": "加粗",
       "keywords": [],
       "visibility": "public",
       "name": "bold",

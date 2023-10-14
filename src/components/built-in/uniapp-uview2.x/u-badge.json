@@ -89,14 +89,14 @@
       "description": "展示的数字",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "组件是否显示",
+      "description": "组件显示",
       "keywords": [],
       "visibility": "public",
       "name": "show",
@@ -132,7 +132,7 @@
     },
     {
       "kind": "prop",
-      "description": "为0是否展示",
+      "description": "展示0",
       "keywords": [],
       "visibility": "public",
       "name": "showZero",

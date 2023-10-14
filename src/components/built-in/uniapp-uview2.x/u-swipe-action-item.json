@@ -25,7 +25,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "打开",
       "keywords": [],
       "visibility": "public",
       "name": "show",
@@ -35,7 +35,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "标识符",
       "keywords": [],
       "visibility": "public",
       "name": "name",
@@ -45,7 +45,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -55,7 +55,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "自动关闭",
       "keywords": [],
       "visibility": "public",
       "name": "autoClose",
@@ -65,7 +65,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "滑动距离阈值",
       "keywords": [],
       "visibility": "public",
       "name": "threshold",
@@ -75,7 +75,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "右侧按钮内容",
       "keywords": [],
       "visibility": "public",
       "name": "options",
@@ -85,7 +85,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "动画过渡时间",
       "keywords": [],
       "visibility": "public",
       "name": "duration",

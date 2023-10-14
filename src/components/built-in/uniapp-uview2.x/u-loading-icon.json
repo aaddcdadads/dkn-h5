@@ -7,7 +7,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否显示动画",
+      "description": "显示动画",
       "keywords": [],
       "visibility": "public",
       "name": "show",
@@ -37,7 +37,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否垂直排列",
+      "description": "垂直排列",
       "keywords": [],
       "visibility": "public",
       "name": "vertical",

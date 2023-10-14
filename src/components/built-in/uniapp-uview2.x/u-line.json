@@ -48,7 +48,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "线条的颜色",
+      "description": "线条颜色",
       "keywords": [],
       "visibility": "public",
       "name": "color",
@@ -68,7 +68,7 @@
     },
     {
       "kind": "prop",
-      "description": "线条的方向",
+      "description": "线条方向",
       "keywords": [
         {
           "name": "options",
@@ -104,7 +104,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否虚线",
+      "description": "虚线",
       "keywords": [],
       "visibility": "public",
       "name": "dashed",

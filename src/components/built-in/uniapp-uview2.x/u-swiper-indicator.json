@@ -40,7 +40,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "轮播长度",
       "keywords": [],
       "visibility": "public",
       "name": "length",
@@ -50,7 +50,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "索引",
       "keywords": [],
       "visibility": "public",
       "name": "current",
@@ -60,7 +60,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "非激活颜色",
       "keywords": [],
       "visibility": "public",
       "name": "indicatorActiveColor",
@@ -70,7 +70,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "激活颜色",
       "keywords": [],
       "visibility": "public",
       "name": "indicatorInactiveColor",
@@ -80,10 +80,15 @@
     },
     {
       "kind": "prop",
-      "description": "",
-      "keywords": [],
+      "description": "指示器形式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"line\", \"dot\"]"
+        }
+      ],
       "visibility": "public",
-      "name": "indicatorMode",
+      "name": "indicatorStyle",
       "type": "String",
       "required": false,
       "describeModel": false

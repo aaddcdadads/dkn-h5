@@ -48,7 +48,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "栅格间隔",
       "keywords": [],
       "visibility": "public",
       "name": "gutter",
@@ -58,21 +58,33 @@
     },
     {
       "kind": "prop",
-      "description": "",
-      "keywords": [],
+      "description": "水平排列",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"start\", \"end\", \"center\",\"between\",\"around\"]"
+        }
+      ],
       "visibility": "public",
       "name": "justify",
-      "type": "String",
+      "type": "Enum",
+      "default":"start",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
-      "keywords": [],
+      "description": "垂直排列方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"center\", \"top\", \"bottom\"]"
+        }
+      ],
       "visibility": "public",
       "name": "align",
-      "type": "String",
+      "type": "Enum",
+      "default":"center",
       "required": false,
       "describeModel": false
     }

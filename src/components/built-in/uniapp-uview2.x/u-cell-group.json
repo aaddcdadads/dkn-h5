@@ -51,7 +51,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "分组标题",
       "keywords": [],
       "visibility": "public",
       "name": "title",
@@ -61,7 +61,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "显示外边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",

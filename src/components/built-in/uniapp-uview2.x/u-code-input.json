@@ -84,7 +84,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否上推页面",
+      "description": "上推页面",
       "keywords": [],
       "visibility": "public",
       "name": "adjustPosition",
@@ -130,7 +130,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否细边框",
+      "description": "细边框",
       "keywords": [],
       "visibility": "public",
       "name": "hairline",
@@ -153,7 +153,7 @@
       "description": "预置值",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "String",
       "required": false,
       "describeModel": false
@@ -170,7 +170,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否加粗",
+      "description": "加粗",
       "keywords": [],
       "visibility": "public",
       "name": "bold",

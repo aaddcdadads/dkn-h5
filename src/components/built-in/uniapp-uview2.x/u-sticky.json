@@ -104,7 +104,7 @@
     },
     {
       "kind": "prop",
-      "description": "z-index的值",
+      "description": "z-index值",
       "keywords": [],
       "visibility": "public",
       "name": "zIndex",

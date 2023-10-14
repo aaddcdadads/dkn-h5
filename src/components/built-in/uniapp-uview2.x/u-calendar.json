@@ -154,7 +154,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示标题",
+      "description": "显示标题",
       "keywords": [],
       "visibility": "public",
       "name": "showTitle",
@@ -164,7 +164,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示副标题",
+      "description": "显示副标题",
       "keywords": [],
       "visibility": "public",
       "name": "showSubtitle",
@@ -290,7 +290,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示农历",
+      "description": "显示农历",
       "keywords": [],
       "visibility": "public",
       "name": "showLunar",
@@ -350,7 +350,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否为只读状态",
+      "description": "只读状态",
       "keywords": [],
       "visibility": "public",
       "name": "readonly",
