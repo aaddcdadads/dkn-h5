@@ -1,44 +1,92 @@
 <template>
   <view class="HmSimpleChatRoom flex-column">
     <!-- #ifdef MP-WEIXIN -->
-    <uni-nav-bar class="HmSimpleChatRoom_title" :shadow="cNavbarTitleOption.shadow"
-      :statusBar="cNavbarTitleOption.statusBar" :left-text="cNavbarTitleOption.leftText"
-      :right-text="cNavbarTitleOption.rightText" :left-icon="cNavbarTitleOption.leftIcon"
-      :right-icon="cNavbarTitleOption.rightIcon" :dark="cNavbarTitleOption.dark" :color="cNavbarTitleOption.color"
-      :backgroundColor="cNavbarTitleOption.backgroundColor" :title="cNavbarTitleOption.title"
-      :height="cNavbarTitleOption.height" @clickLeft="navbarLeftClick" @clickRight="navbarRightClick(storageInfo)" />
+    <uni-nav-bar
+      class="HmSimpleChatRoom_title"
+      :shadow="cNavbarTitleOption.shadow"
+      :statusBar="cNavbarTitleOption.statusBar"
+      :left-text="cNavbarTitleOption.leftText"
+      :right-text="cNavbarTitleOption.rightText"
+      :left-icon="cNavbarTitleOption.leftIcon"
+      :right-icon="cNavbarTitleOption.rightIcon"
+      :dark="cNavbarTitleOption.dark"
+      :color="cNavbarTitleOption.color"
+      :backgroundColor="cNavbarTitleOption.backgroundColor"
+      :title="cNavbarTitleOption.title"
+      :height="cNavbarTitleOption.height"
+      @clickLeft="navbarLeftClick"
+      @clickRight="navbarRightClick(storageInfo)"
+    />
     <!-- #endif -->
-    <view class="HmSimpleChatRoom_content flex-column" :style="{ backgroundImage: 'url(' + theme[`bgImg`] || `` + ')' }">
-      <view ref="message_box" id="message_box" class="HmSimpleChatRoom_content_messageBox"
-        :style="{ top: '0px', bottom: `${keyboardHeightBox}` }">
-        <scroll-view class="message_scroll" :scroll-y="true" :scroll-top="scrollTop" :style="{ height: scrollHeight }"
-          @scroll="onScroll">
+    <view
+      class="HmSimpleChatRoom_content flex-column"
+      :style="{ backgroundImage: 'url(' + theme[`bgImg`] || `` + ')' }"
+    >
+      <view
+        ref="message_box"
+        id="message_box"
+        class="HmSimpleChatRoom_content_messageBox"
+        :style="{ top: '0px', bottom: `${keyboardHeightBox}` }"
+      >
+        <scroll-view
+          class="message_scroll"
+          :scroll-y="true"
+          :scroll-top="scrollTop"
+          :style="{ height: scrollHeight }"
+          @scroll="onScroll"
+        >
           <view ref="message_scroll" id="message_scroll" class="messageBox">
-            <view v-for="( item, index ) in  cMessageList " :key="index" :class="{
-              'messageBox_item': true,
-              'messageBox_item-pull': item.type && item.type == 1,
-              'messageBox_item-push': item.type && item.type == 2,
-            }" @click="onClick(item)">
-              <view v-if="setTime(item, index, 'sendTime', this.cMessageList)" class="messageBox_item_time">
-                <text>{{ setTime(item, index, 'sendTime', this.cMessageList) }}</text>
+            <view
+              v-for="(item, index) in cMessageList"
+              :key="index"
+              :class="{
+                messageBox_item: true,
+                'messageBox_item-pull': item.type && item.type == 1,
+                'messageBox_item-push': item.type && item.type == 2,
+              }"
+              @click="onClick(item)"
+            >
+              <view
+                v-if="setTime(item, index, 'sendTime', cMessageList)"
+                class="messageBox_item_time"
+              >
+                <text>{{ setTime(item, index, "sendTime", cMessageList) }}</text>
               </view>
-              <view class="messageBox_item_box" :style="{ fontFamily: theme[`fontFamily`] }">
+              <view
+                class="messageBox_item_box"
+                :style="{ fontFamily: theme[`fontFamily`] }"
+              >
                 <image
                   src="http://shiebi01.oss-cn-shenzhen.aliyuncs.com/upload/20230403/%E5%A4%B4%E5%83%8F-%E7%94%B7%E8%80%81%E5%B8%88_1680508073900.png?Expires=4802572073&OSSAccessKeyId=LTAI5tNvM6MahpXq4UcFt2LB&Signature=ofMIe9thB1BY9fCXVUiCaJkrvkU%3D"
-                  mode="aspectFill" class="messageBox_item_box__pic"></image>
+                  mode="aspectFill"
+                  class="messageBox_item_box__pic"
+                ></image>
                 <view class="messageBox_item_box__content">{{ item.content }}</view>
               </view>
             </view>
           </view>
         </scroll-view>
       </view>
-      <view id="send" class="HmSimpleChatRoom_content_sendBox" :style="{ bottom: `${keyboardHeight}px` }">
+      <view
+        id="send"
+        class="HmSimpleChatRoom_content_sendBox"
+        :style="{ bottom: `${keyboardHeight}px` }"
+      >
         <view class="send flex-row">
           <view class="send_textarea flex-row">
-              <input class="uni-input" type="text" v-model="inputText" :adjust-position="cTextareaOption.adjustPosition"
-            confirm-type="done" :placeholder="cTextareaOption.placeholder"
-            :disabled="cTextareaOption.disabled" @confirm="sendMessage(inputText)" @keyboardheightchange="sendHeight"
-            @focus="textareaFocus" @blur="textareaBlur" />
+            <input
+              class="uni-input"
+              type="text"
+              v-model="inputText"
+              :adjust-position="cTextareaOption.adjustPosition"
+              confirm-type="done"
+              :placeholder="cTextareaOption.placeholder"
+              :disabled="cTextareaOption.disabled"
+              @confirm="sendMessage(inputText)"
+              @keyboardheightchange="sendHeight"
+              @focus="textareaFocus"
+              @blur="textareaBlur"
+            />
           </view>
           <button class="send-btn" @tap="sendMessage(inputText)">发送</button>
         </view>
@@ -49,6 +97,7 @@
 <script>
 import { getAction, postAction } from "/@/request/http";
 export default {
+  name: "HmSimpleChatRoom",
   // 属性
   props: {
     /**
@@ -157,9 +206,9 @@ export default {
           //right-text 和 right-icon 属性不能同时存在
           rightText: "",
           rightIcon: "",
-          height: "44px"
-        }
-      }
+          height: "44px",
+        };
+      },
     },
     /**
      * 消息框配置
@@ -184,9 +233,9 @@ export default {
       type: Object,
       default: function () {
         return {
-          // 
-          bgImg: "http://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/xingzhan/O%CC%80%C2%B5I%CC%82n%CC%83%C2%BCo%CC%80I%CC%81%C2%BC.jpg",
-          fontFamily: '',
+          // http://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/xingzhan/O%CC%80%C2%B5I%CC%82n%CC%83%C2%BCo%CC%80I%CC%81%C2%BC.jpg
+          bgImg: "",
+          fontFamily: "",
         }
       }
     }
@@ -196,7 +245,7 @@ export default {
   // 数据
   data() {
     return {
-      scrollHeight: '100%', // 高度
+      scrollHeight: "100%", // 高度
       scrollTop: 0, // 滚动距离
       old: {
         scrollTop: 0
@@ -211,7 +260,7 @@ export default {
       storageInfo: {},// 缓存信息 -- 导航栏右图标可能会用到
       timer: null, // 轮询定时器
       pollTimer: null,// 轮询定时器[查询信息]
-    }
+    };
   },
   // 监听
   watch: {
@@ -250,7 +299,7 @@ export default {
     this.cMessageList = this.mapData(this.messageList);
     this.cNavbarTitleOption = this.navbarTitleOption;
     this.cTextareaOption = this.textareaOption;
-    this.getStorage('userInfo');
+    this.getStorage("userInfo");
     this.getData();
     this.polling();
   },
@@ -268,8 +317,8 @@ export default {
       let newArr1 = await self.getDomInfo("#message_box");
       let newArr2 = await self.getDomInfo("#message_scroll");
      // scroll的固定高度
-     self.scrollHeight = newArr1[0].height.toFixed(2) + 'px';
-      let top = await newArr2[0].height - newArr1[0].height;
+     self.scrollHeight = newArr1[0].height.toFixed(2) + "px";
+      let top = await (newArr2[0].height - newArr1[0].height);
       // 滚动至底部
       self.scrollTop = self.old.scrollTop;
       this.$nextTick(function () {
@@ -363,12 +412,20 @@ export default {
       let self = this;
       if (self.pollOption.state) {
         self.pollTimer = setInterval(function () {
-          self.getData(null, null, 'polling');// polling 轮询接收消息不滚到底部
+          self.getData(null, null, "polling"); // polling 轮询接收消息不滚到底部
         }, self.pollOption.deplay);
       }
     },
     //发送数据
     setData(params) {
+      if (!this.sendUrl) {
+        params[this.getDataMap.sendTime || "sendTime"] = new Date();
+        let newArr = [...this.cMessageList];
+        newArr.push(params);
+        this.cMessageList = this.mapData(newArr);
+        setTimeout(e=>{this.scrollToBottom();},300);
+        return;
+      }
       postAction(this.sendUrl, params).then((res) => {
         //查询数据库的数组
         if (res.success) {
@@ -388,7 +445,7 @@ export default {
       params = params || (this.params ? JSON.parse(JSON.stringify(this.params)) : {});
       if (!url) return;
       let request = getAction;
-      if (this.httpMethod && this.httpMethod.toLowerCase() == 'post') {
+      if (this.httpMethod && this.httpMethod.toLowerCase() == "post") {
         request = postAction;
       }
       let self = this;
@@ -454,9 +511,13 @@ export default {
         return "昨天 " + formattedTime("time");
       }
       // 这周de消息
-      else if (endTime.getTime() < yesterday && endTime >= firstDayOfWeek && endTime <= lastDayOfWeek) {
+      else if (
+        endTime.getTime() < yesterday &&
+        endTime >= firstDayOfWeek &&
+        endTime <= lastDayOfWeek
+      ) {
         const weekDay = endTime.getDay();
-        const weekDays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+        const weekDays = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
         return `${weekDays[weekDay]} ` + formattedTime("time");
       }
       // 之前de消息
@@ -466,18 +527,18 @@ export default {
       function formattedTime(str) {
         let formatted;
         let year = endTime.getFullYear();
-        let month = String(endTime.getMonth() + 1).padStart(2, '0');
-        let day = String(endTime.getDate()).padStart(2, '0');
-        let hours = String(endTime.getHours()).padStart(2, '0');
-        let minutes = String(endTime.getMinutes()).padStart(2, '0');
-        if (str == 'time') {
+        let month = String(endTime.getMonth() + 1).padStart(2, "0");
+        let day = String(endTime.getDate()).padStart(2, "0");
+        let hours = String(endTime.getHours()).padStart(2, "0");
+        let minutes = String(endTime.getMinutes()).padStart(2, "0");
+        if (str == "time") {
           formatted = `${hours}:${minutes}`;
-        } else if (str == 'date') {
+        } else if (str == "date") {
           formatted = `${year}/${month}/${day}`;
-        } else if (str == 'dateTime' || str == 'datetime' || str == 'DateTime') {
+        } else if (str == "dateTime" || str == "datetime" || str == "DateTime") {
           formatted = `${year}/${month}/${day} ${hours}:${minutes}`;
         } else {
-          formatted = 'NULL';
+          formatted = "NULL";
         }
         return formatted;
       }
@@ -496,13 +557,13 @@ export default {
   onLoad() {
     // #ifndef H5
     // 监听键盘高度变化
-    uni.onKeyboardHeightChange(res => {
+    uni.onKeyboardHeightChange((res) => {
       this.keyboardHeight = res.height;
       if (this.keyboardHeight < 0) this.keyboardHeight = 0;
-      this.keyboardHeightBox = this.keyboardHeight + 'px';
-    })
+      this.keyboardHeightBox = this.keyboardHeight + "px";
+    });
     uni.setKeepScreenOn({
-      keepScreenOn: true
+      keepScreenOn: true,
     });
     // #endif
   },
@@ -515,12 +576,12 @@ export default {
   beforeDestroy() {
     clearInterval(this.timer);
   },
-}
+};
 </script>
 <style lang="less" scoped>
 view,
 uni-view {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .flex-row {
