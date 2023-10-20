@@ -304,6 +304,13 @@
       }
     },
     {
+      "path": "pages/test/HmKxjPreviewImages",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "components/built-in/uniapp/HmMoveView",
       "style": {
         "navigationBarTitleText": "",

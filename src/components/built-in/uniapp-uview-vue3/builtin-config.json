@@ -248,6 +248,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "HmKxjPreviewImage",
+        "title": "图片预览",
+        "importPath": "built-in/third-party/HmKxjPreviewImage",
+        "imgUrl": "built-in/third-party/img/HmKxjPreviewImage.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmProgress",
         "title": "进度条",
         "importPath": "built-in/uniapp/HmProgress",
