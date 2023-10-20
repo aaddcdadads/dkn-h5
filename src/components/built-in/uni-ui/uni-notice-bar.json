@@ -84,7 +84,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否单行",
+      "description":"单行",
       "keywords": [],
       "visibility": "public",
       "name": "single",
@@ -98,7 +98,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否滚动",
+      "description":"滚动",
       "keywords": [],
       "visibility": "public",
       "name": "scrollable",
@@ -144,10 +144,7 @@
       "keywords": [],
       "visibility": "public",
       "name": "show-close",
-      "type": [
-        "Boolean",
-        "String"
-      ],
+      "type": "Boolean",
       "default": "false",
       "required": false,
       "describeModel": false

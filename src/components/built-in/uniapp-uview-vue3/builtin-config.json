@@ -413,7 +413,7 @@
         "type": 0,
         "isBuiltIn": true
       },
-      
+
       {
         "name": "HmSlider",
         "title": "滑动选择器",
@@ -743,279 +743,487 @@
     ]
   },
   {
-    "id":10,
-    "name":"uni-ui组件",
-    "componentList":[
-        {
-            "name":"uni-badge",
-            "title":"数字角标",
-            "docPath":"built-in/uni-ui/uni-badge.json",
-            "imgUrl":"built-in/uni-ui/img/uni-badge.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-calendar",
-            "title":"日历",
-            "docPath":"built-in/uni-ui/uni-calendar.json",
-            "imgUrl":"built-in/uni-uil/img/uni-calendar.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-card",
-            "title":"卡片",
-            "docPath":"built-in/uni-ui/uni-card.json",
-            "imgUrl":"built-in/uni-ui/img/uni-card.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-combox",
-            "title":"组合输入框",
-            "docPath":"built-in/uni-ui/uni-combox.json",
-            "imgUrl":"built-in/uni-ui/img/uni-combox.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-countdown",
-            "title":"倒计时",
-            "docPath":"built-in/uni-ui/uni-countdown.json",
-            "imgUrl":"built-in/uni-ui/img/uni-countdown.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-data-checkbox",
-            "title":"数据选择器",
-            "docPath":"built-in/uni-ui/uni-data-checkbox.json",
-            "imgUrl":"built-in/uni-ui/img/uni-data-checkbox.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-data-picker",
-            "title":"级联选择器",
-            "docPath":"built-in/uni-ui/uni-data-picker.json",
-            "imgUrl":"built-in/uni-ui/img/uni-data-picker.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-data-select",
-            "title":"下拉框",
-            "docPath":"built-in/uni-ui/uni-data-select.json",
-            "imgUrl":"built-in/uni-ui/img/uni-data-select.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-dateformat",
-            "title":"日期格式化",
-            "docPath":"built-in/uni-ui/uni-dateformat.json",
-            "imgUrl":"built-in/uni-ui/img/uni-dateformat.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-datetime-picker",
-            "title":"日期选择器",
-            "docPath":"built-in/uni-ui/uni-datetime-picker.json",
-            "imgUrl":"built-in/uni-ui/img/uni-datetime-picker.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-drawer",
-            "title":"抽屉",
-            "docPath":"built-in/uni-ui/uni-drawer.json",
-            "imgUrl":"built-in/uni-ui/img/uni-drawer.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-easyinput",
-            "title":"增强输入框",
-            "docPath":"built-in/uni-ui/uni-easyinput.json",
-            "imgUrl":"built-in/uni-ui/img/uni-easyinput.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-fab",
-            "title":"悬浮按钮",
-            "docPath":"built-in/uni-ui/uni-fab.json",
-            "imgUrl":"built-in/uni-ui/img/uni-fab.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-fav",
-            "title":"收藏按钮",
-            "docPath":"built-in/uni-ui/uni-fav.json",
-            "imgUrl":"built-in/uni-ui/img/uni-fav.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-goods-nav",
-            "title":"商品导航",
-            "docPath":"built-in/uni-ui/uni-goods-nav.json",
-            "imgUrl":"built-in/uni-ui/img/uni-goods-nav.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-group",
-            "title":"分组",
-            "docPath":"built-in/uni-ui/uni-group.json",
-            "imgUrl":"built-in/uni-ui/img/uni-group.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-icons",
-            "title":"图标",
-            "docPath":"built-in/uni-ui/uni-icons.json",
-            "imgUrl":"built-in/uni-ui/img/uni-icons.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-indexed-list",
-            "title":"索引列表",
-            "docPath":"built-in/uni-ui/uni-indexed-list.json",
-            "imgUrl":"built-in/uni-ui/img/uni-indexed-list.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-link",
-            "title":"超链接",
-            "docPath":"built-in/uni-ui/uni-link.json",
-            "imgUrl":"built-in/uni-ui/img/uni-link.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-load-more",
-            "title":"加载更多",
-            "docPath":"built-in/uni-ui/uni-load-more.json",
-            "imgUrl":"built-in/uni-ui/img/uni-load-more.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-nav-bar",
-            "title":"自定义导航栏",
-            "docPath":"built-in/uni-ui/uni-nav-bar.json",
-            "imgUrl":"built-in/uni-ui/img/uni-nav-bar.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-notice-bar",
-            "title":"通告栏",
-            "docPath":"built-in/uni-ui/uni-notice-bar.json",
-            "imgUrl":"built-in/uni-ui/img/uni-notice-bar.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-number-box",
-            "title":"数字输入框",
-            "docPath":"built-in/uni-ui/uni-number-box.json",
-            "imgUrl":"built-in/uni-ui/img/uni-number-box.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-pagination",
-            "title":"分页器",
-            "docPath":"built-in/uni-ui/uni-pagination.json",
-            "imgUrl":"built-in/uni-ui/img/uni-pagination.png",
-            "type":0,
-            "isBuiltIn":true
-        },    
-        {
-            "name":"uni-popup",
-            "title":"弹出层",
-            "docPath":"built-in/uni-ui/uni-popup.json",
-            "imgUrl":"built-in/uni-ui/img/uni-popup.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-rate",
-            "title":"评分",
-            "docPath":"built-in/uni-ui/uni-rate.json",
-            "imgUrl":"built-in/uni-ui/img/uni-rate.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-search-bar",
-            "title":"搜索栏",
-            "docPath":"built-in/uni-ui/uni-search-bar.json",
-            "imgUrl":"built-in/uni-ui/img/uni-search-bar.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-section",
-            "title":"标题栏",
-            "docPath":"built-in/uni-ui/uni-section.json",
-            "imgUrl":"built-in/uni-ui/img/uni-section.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-segmented-control",
-            "title":"分段器",
-            "docPath":"built-in/uni-ui/uni-segmented-control.json",
-            "imgUrl":"built-in/uni-ui/img/uni-segmented-control.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-steps",
-            "title":"步骤条",
-            "docPath":"built-in/uni-ui/uni-steps.json",
-            "imgUrl":"built-in/uni-ui/img/uni-steps.png",
-            "type":0,
-            "isBuiltIn":true
-        }, 
-        {
-            "name":"uni-tag",
-            "title":"标签",
-            "docPath":"built-in/uni-ui/uni-tag.json",
-            "imgUrl":"built-in/uni-ui/img/uni-tag.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-title",
-            "title":"章节标题",
-            "docPath":"built-in/uni-ui/uni-title.json",
-            "imgUrl":"built-in/uni-ui/img/uni-title.png",
-            "type":0,
-            "isBuiltIn":true
-        },
-        {
-            "name":"uni-tooltip",
-            "title":"文字提示",
-            "docPath":"built-in/uni-ui/uni-tooltip.json",
-            "imgUrl":"built-in/uni-ui/img/uni-tooltip.png",
-            "type":0,
-            "isBuiltIn":true
-        }
+    "id": 10,
+    "name": "uni-ui组件",
+    "componentList": [
+      {
+        "name": "uni-badge",
+        "title": "数字角标",
+        "docPath": "built-in/uni-ui/uni-badge.json",
+        "imgUrl": "built-in/uni-ui/img/uni-badge.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-breadcrumb-item",
+        "title": "面包屑项",
+        "docPath": "built-in/uni-ui/uni-breadcrumb-item.json",
+        "imgUrl": "built-in/uni-ui/img/uni-breadcrumb-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-breadcrumb",
+        "title": "面包屑",
+        "docPath": "built-in/uni-ui/uni-breadcrumb-item.json",
+        "imgUrl": "built-in/uni-ui/img/uni-breadcrumb-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-calendar",
+        "title": "日历",
+        "docPath": "built-in/uni-ui/uni-calendar.json",
+        "imgUrl": "built-in/uni-uil/img/uni-calender.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-card",
+        "title": "卡片",
+        "docPath": "built-in/uni-ui/uni-card.json",
+        "imgUrl": "built-in/uni-ui/img/uni-card.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-col",
+        "title": "行",
+        "docPath": "built-in/uni-ui/uni-col.json",
+        "imgUrl": "built-in/uni-ui/img/uni-col.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-collapse",
+        "title": "折叠面板",
+        "docPath": "built-in/uni-ui/uni-collapse.json",
+        "imgUrl": "built-in/uni-ui/img/uni-collapse.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-collapse-item",
+        "title": "折叠项",
+        "docPath": "built-in/uni-ui/uni-uni-collapse-item.json",
+        "imgUrl": "built-in/uni-ui/img/uni-collapse-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-combox",
+        "title": "组合输入框",
+        "docPath": "built-in/uni-ui/uni-combox.json",
+        "imgUrl": "built-in/uni-ui/img/uni-combox.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-countdown",
+        "title": "倒计时",
+        "docPath": "built-in/uni-ui/uni-countdown.json",
+        "imgUrl": "built-in/uni-ui/img/uni-countdown.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-data-checkbox",
+        "title": "数据选择器",
+        "docPath": "built-in/uni-ui/uni-data-checkbox.json",
+        "imgUrl": "built-in/uni-ui/img/uni-data-checkbox.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-data-picker",
+        "title": "级联选择器",
+        "docPath": "built-in/uni-ui/uni-data-picker.json",
+        "imgUrl": "built-in/uni-ui/img/uni-data-picker.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-data-select",
+        "title": "下拉框",
+        "docPath": "built-in/uni-ui/uni-data-select.json",
+        "imgUrl": "built-in/uni-ui/img/uni-data-select.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-dateformat",
+        "title": "日期格式化",
+        "docPath": "built-in/uni-ui/uni-dateformat.json",
+        "imgUrl": "built-in/uni-ui/img/uni-dateformat.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-datetime-picker",
+        "title": "日期选择器",
+        "docPath": "built-in/uni-ui/uni-datetime-picker.json",
+        "imgUrl": "built-in/uni-ui/img/uni-datetime-picker.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-drawer",
+        "title": "抽屉",
+        "docPath": "built-in/uni-ui/uni-drawer.json",
+        "imgUrl": "built-in/uni-ui/img/uni-drawer.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-easyinput",
+        "title": "增强输入框",
+        "docPath": "built-in/uni-ui/uni-easyinput.json",
+        "imgUrl": "built-in/uni-ui/img/uni-easyinput.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-fab",
+        "title": "悬浮按钮",
+        "docPath": "built-in/uni-ui/uni-fab.json",
+        "imgUrl": "built-in/uni-ui/img/uni-fab.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-fav",
+        "title": "收藏按钮",
+        "docPath": "built-in/uni-ui/uni-fav.json",
+        "imgUrl": "built-in/uni-ui/img/uni-fav.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-forms",
+        "title": "表单",
+        "docPath": "built-in/uni-ui/uni-froms.json",
+        "imgUrl": "built-in/uni-ui/img/uni-from.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-forms-item",
+        "title": "表单项",
+        "docPath": "built-in/uni-ui/uni-forms-item.json",
+        "imgUrl": "built-in/uni-ui/img/uni-froms-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-goods-nav",
+        "title": "商品导航",
+        "docPath": "built-in/uni-ui/uni-goods-nav.json",
+        "imgUrl": "built-in/uni-ui/img/uni-goods-nav.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-grid-item",
+        "title": "商品导航",
+        "docPath": "built-in/uni-ui/uni-goods-nav.json",
+        "imgUrl": "built-in/uni-ui/img/uni-goods-nav.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-grid",
+        "title": "商品导航",
+        "docPath": "built-in/uni-ui/uni-goods-nav.json",
+        "imgUrl": "built-in/uni-ui/img/uni-goods-nav.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-group",
+        "title": "分组",
+        "docPath": "built-in/uni-ui/uni-group.json",
+        "imgUrl": "built-in/uni-ui/img/uni-group.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-icons",
+        "title": "图标",
+        "docPath": "built-in/uni-ui/uni-icons.json",
+        "imgUrl": "built-in/uni-ui/img/uni-icons.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-indexed-list",
+        "title": "索引列表",
+        "docPath": "built-in/uni-ui/uni-indexed-list.json",
+        "imgUrl": "built-in/uni-ui/img/uni-indexed-list.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-link",
+        "title": "超链接",
+        "docPath": "built-in/uni-ui/uni-link.json",
+        "imgUrl": "built-in/uni-ui/img/uni-link.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-list-ad",
+        "title": "超链接",
+        "docPath": "built-in/uni-ui/uni-link.json",
+        "imgUrl": "built-in/uni-ui/img/uni-link.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-list-chat",
+        "title": "聊天列表",
+        "docPath": "built-in/uni-ui/uni-link.json",
+        "imgUrl": "built-in/uni-ui/img/uni-link.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-list-item",
+        "title": "列表项",
+        "docPath": "built-in/uni-ui/uni-list-item.json",
+        "imgUrl": "built-in/uni-ui/img/uni-list-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-list",
+        "title": "列表",
+        "docPath": "built-in/uni-ui/uni-list.json",
+        "imgUrl": "built-in/uni-ui/img/uni-list.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-load-more",
+        "title": "加载更多",
+        "docPath": "built-in/uni-ui/uni-load-more.json",
+        "imgUrl": "built-in/uni-ui/img/uni-load-more.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-nav-bar",
+        "title": "自定义导航栏",
+        "docPath": "built-in/uni-ui/uni-nav-bar.json",
+        "imgUrl": "built-in/uni-ui/img/uni-nav-bar.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-notice-bar",
+        "title": "通告栏",
+        "docPath": "built-in/uni-ui/uni-notice-bar.json",
+        "imgUrl": "built-in/uni-ui/img/uni-notice-bar.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-number-box",
+        "title": "数字输入框",
+        "docPath": "built-in/uni-ui/uni-number-box.json",
+        "imgUrl": "built-in/uni-ui/img/uni-number-box.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-pagination",
+        "title": "分页器",
+        "docPath": "built-in/uni-ui/uni-pagination.json",
+        "imgUrl": "built-in/uni-ui/img/uni-pagination.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-popup-dialog",
+        "title": "对话框",
+        "docPath": "built-in/uni-ui/uni-popup-dialog.json",
+        "imgUrl": "built-in/uni-ui/img/uni-popup-dialog.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-popup-message",
+        "title": "提示信息",
+        "docPath": "built-in/uni-ui/uni-popup-message.json",
+        "imgUrl": "built-in/uni-ui/img/uni-popup-message.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-popup-share",
+        "title": "分享示例",
+        "docPath": "built-in/uni-ui/uni-popup-share.json",
+        "imgUrl": "built-in/uni-ui/img/uni-popup-share.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-popup",
+        "title": "弹出层",
+        "docPath": "built-in/uni-ui/uni-popup.json",
+        "imgUrl": "built-in/uni-ui/img/uni-popup.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-rate",
+        "title": "评分",
+        "docPath": "built-in/uni-ui/uni-rate.json",
+        "imgUrl": "built-in/uni-ui/img/uni-rate.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-row",
+        "title": "列",
+        "docPath": "built-in/uni-ui/uni-row.json",
+        "imgUrl": "built-in/uni-ui/img/uni-row.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-search-bar",
+        "title": "搜索栏",
+        "docPath": "built-in/uni-ui/uni-search-bar.json",
+        "imgUrl": "built-in/uni-ui/img/uni-search-bar.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-section",
+        "title": "标题栏",
+        "docPath": "built-in/uni-ui/uni-section.json",
+        "imgUrl": "built-in/uni-ui/img/uni-section.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-segmented-control",
+        "title": "分段器",
+        "docPath": "built-in/uni-ui/uni-segmented-control.json",
+        "imgUrl": "built-in/uni-ui/img/uni-segmented-control.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-steps",
+        "title": "步骤条",
+        "docPath": "built-in/uni-ui/uni-steps.json",
+        "imgUrl": "built-in/uni-ui/img/uni-steps.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-swipe-action-item",
+        "title": "滑动选项",
+        "docPath": "built-in/uni-ui/uni-swipe-action-item.json",
+        "imgUrl": "built-in/uni-ui/img/uni-swipe-action-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-swipe-action",
+        "title": "滑动选项容器",
+        "docPath": "built-in/uni-ui/uni-swipe-action.json",
+        "imgUrl": "built-in/uni-ui/img/uni-swipe-action.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-swipe-dot",
+        "title": "轮播图指示点",
+        "docPath": "built-in/uni-ui/uni-swipe-dot.json",
+        "imgUrl": "built-in/uni-ui/img/uni-swipe-dot.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-table",
+        "title": "表格",
+        "docPath": "built-in/uni-ui/uni-table.json",
+        "imgUrl": "built-in/uni-ui/img/uni-table.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-tbody",
+        "title": "表格",
+        "docPath": "built-in/uni-ui/uni-tbody.json",
+        "imgUrl": "built-in/uni-ui/img/uni-tbody.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-td",
+        "title": "表格",
+        "docPath": "built-in/uni-ui/uni-td.json",
+        "imgUrl": "built-in/uni-ui/img/uni-td.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-th",
+        "title": "表格",
+        "docPath": "built-in/uni-ui/uni-th.json",
+        "imgUrl": "built-in/uni-ui/img/uni-th.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-tr",
+        "title": "表格",
+        "docPath": "built-in/uni-ui/uni-tr.json",
+        "imgUrl": "built-in/uni-ui/img/uni-tr.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-thead",
+        "title": "表格",
+        "docPath": "built-in/uni-ui/uni-thead.json",
+        "imgUrl": "built-in/uni-ui/img/uni-thead.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-tag",
+        "title": "标签",
+        "docPath": "built-in/uni-ui/uni-tag.json",
+        "imgUrl": "built-in/uni-ui/img/uni-tag.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-title",
+        "title": "章节标题",
+        "docPath": "built-in/uni-ui/uni-title.json",
+        "imgUrl": "built-in/uni-ui/img/uni-title.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "uni-tooltip",
+        "title": "文字提示",
+        "docPath": "built-in/uni-ui/uni-tooltip.json",
+        "imgUrl": "built-in/uni-ui/img/uni-tooltip.png",
+        "type": 0,
+        "isBuiltIn": true
+      }
     ]
   },
   {
-    "id":11,
-    "name":"uView1.x组件",
-    "componentList":[
+    "id": 11,
+    "name": "uView1.x组件",
+    "componentList": [
       {
         "name": "u-action-sheet",
         "title": "操作菜单",
@@ -1108,7 +1316,7 @@
         "name": "u-checkbox-group",
         "title": "单元格项",
         "docPath": "built-in/uniapp-uview1.x/u-checkbox-group.json",
-        "imgUrl": "built-in/uniapp-uview1.x/img/u-checkbox-group.png",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-checkout-group.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1116,7 +1324,7 @@
         "name": "u-checkbox",
         "title": "单元格",
         "docPath": "built-in/uniapp-uview1.x/u-checkbox.json",
-        "imgUrl": "built-in/uniapp-uview1.x/img/u-checkbox.png",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-checkout.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1244,7 +1452,7 @@
         "name": "u-grid-item",
         "title": "宫格布局项",
         "docPath": "built-in/uniapp-uview1.x/u-grid-item.json",
-        "imgUrl": "built-in/uniapp-uview1.x/img/u-gap-item.png",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-grid-item.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1452,7 +1660,7 @@
         "name": "u-radio",
         "title": "单选框",
         "docPath": "built-in/uniapp-uview1.x/u-radio.json",
-        "imgUrl": "built-in/uniapp-uview1.x/img/u-radio-group.png",
+        "imgUrl": "built-in/uniapp-uview1.x/img/u-radio.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1690,5 +1898,4 @@
       }
     ]
   }
-  
 ]

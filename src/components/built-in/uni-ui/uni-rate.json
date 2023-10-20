@@ -71,20 +71,6 @@
       "description":"当前评分",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "0",
-      "required": false,
-      "describeModel": true
-    },
-    {
-      "kind": "prop",
-      "description":"当前评分",
-      "keywords": [],
-      "visibility": "public",
       "name": "model-value",
       "type": [
         "Number",
@@ -124,7 +110,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否禁用",
+      "description":"禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -152,7 +138,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否展示半星",
+      "description":"展示半星",
       "keywords": [],
       "visibility": "public",
       "name": "allow-half",
@@ -166,7 +152,7 @@
     },
     {
       "kind": "prop",
-      "description":"支持滑动手势",
+      "description":"滑动手势",
       "keywords": [],
       "visibility": "public",
       "name": "touchable",

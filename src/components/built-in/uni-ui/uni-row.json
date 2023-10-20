@@ -38,17 +38,10 @@
     }
   ],
   "props": [
+    
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "type",
-      "type": "String",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
+      "description":"栅格间隔",
       "keywords": [],
       "visibility": "public",
       "name": "gutter",
@@ -58,27 +51,7 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "justify",
-      "type": "String",
-      "default": "\"start\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "align",
-      "type": "String",
-      "default": "\"top\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "nvue如果使用span等属性，需要配置宽度",
+      "description": "宽度",
       "keywords": [],
       "visibility": "public",
       "name": "width",

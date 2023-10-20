@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"标题",
       "keywords": [],
       "visibility": "public",
       "name": "title",

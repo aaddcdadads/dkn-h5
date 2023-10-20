@@ -44,6 +44,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"组件参数",
       "keywords": [],
       "visibility": "public",
       "name": "options",
@@ -54,6 +55,7 @@
     },
     {
       "kind": "prop",
+      "description":"按钮组参数",
       "keywords": [],
       "visibility": "public",
       "name": "button-group",
@@ -64,19 +66,10 @@
     },
     {
       "kind": "prop",
+      "description":"按钮平铺",
       "keywords": [],
       "visibility": "public",
       "name": "fill",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "stat",
       "type": "Boolean",
       "default": "false",
       "required": false,

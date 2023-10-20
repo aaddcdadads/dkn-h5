@@ -59,20 +59,6 @@
       "description":"当前值",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "1",
-      "required": false,
-      "describeModel": true
-    },
-    {
-      "kind": "prop",
-      "description":"当前值",
-      "keywords": [],
-      "visibility": "public",
       "name": "model-value",
       "type": [
         "Number",
@@ -139,7 +125,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否禁用状态",
+      "description":"禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",

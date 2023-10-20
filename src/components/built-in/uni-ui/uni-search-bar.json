@@ -197,19 +197,6 @@
       "description":"搜索栏绑定值",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
-      "type": [
-        "String"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": true
-    },
-    {
-      "kind": "prop",
-      "description":"搜索栏绑定值",
-      "keywords": [],
-      "visibility": "public",
       "name": "model-value",
       "type": [
         "String"

@@ -22,6 +22,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"单元格宽度",
       "keywords": [],
       "visibility": "public",
       "name": "width",
@@ -35,6 +36,7 @@
     },
     {
       "kind": "prop",
+      "description":"表头对齐方式",
       "keywords": [],
       "visibility": "public",
       "name": "align",
@@ -45,32 +47,7 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "rowspan",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "1",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "colspan",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "1",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
+      "description":"启用排序",
       "keywords": [],
       "visibility": "public",
       "name": "sortable",
@@ -81,6 +58,7 @@
     },
     {
       "kind": "prop",
+      "description":"筛选类型",
       "keywords": [],
       "visibility": "public",
       "name": "filter-type",
@@ -91,24 +69,12 @@
     },
     {
       "kind": "prop",
+      "description":"筛选数据",
       "keywords": [],
       "visibility": "public",
       "name": "filter-data",
       "type": "Array",
       "default": "function() {\r\n\t\t\t\treturn []\r\n\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "filter-default-value",
-      "type": [
-        "Array",
-        "String"
-      ],
-      "default": "function() {\r\n\t\t\t\treturn \"\"\r\n\t\t\t}",
       "required": false,
       "describeModel": false
     }

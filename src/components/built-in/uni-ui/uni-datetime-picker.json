@@ -34,22 +34,6 @@
       "description":"默认值",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
-      "type": [
-        "String",
-        "Number",
-        "Array",
-        "Date"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": true
-    },
-    {
-      "kind": "prop",
-      "description":"默认值",
-      "keywords": [],
-      "visibility": "public",
       "name": "model-value",
       "type": [
         "String",
@@ -151,7 +135,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否显示边框",
+      "description":"显示边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",
@@ -164,7 +148,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否禁用",
+      "description":"禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -190,13 +174,11 @@
     },
     {
       "kind": "prop",
-      "description":"是否显示秒",
+      "description":"显示秒",
       "keywords": [],
       "visibility": "public",
       "name": "hide-second",
-      "type": [
-        "Boolean"
-      ],
+      "type": "Boolean",
       "default": "false",
       "required": false,
       "describeModel": false

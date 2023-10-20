@@ -66,6 +66,7 @@
     },
     {
       "kind": "prop",
+      "description":"",
       "keywords": [],
       "visibility": "public",
       "name": "ellipsis",

@@ -77,7 +77,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否弹出菜单",
+      "description":"弹出菜单",
       "keywords": [],
       "visibility": "public",
       "name": "pop-menu",

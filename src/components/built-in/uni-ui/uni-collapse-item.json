@@ -33,20 +33,7 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "name",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "是否禁用",
+      "description": "禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -57,7 +44,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示动画,app 端默认不开启动画，卡顿严重",
+      "description": "开启动画",
       "keywords": [],
       "visibility": "public",
       "name": "show-animation",
@@ -68,7 +55,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示动画",
+      "description": "显示动画",
       "keywords": [],
       "visibility": "public",
       "name": "show-animation",
@@ -79,7 +66,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否展开",
+      "description": "展开",
       "keywords": [],
       "visibility": "public",
       "name": "open",
@@ -101,8 +88,13 @@
     },
     {
       "kind": "prop",
-      "description": "标题分隔线显示类型",
-      "keywords": [],
+      "description": "分隔线类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"auto\", \"none\", \"show\"]"
+        }
+      ],
       "visibility": "public",
       "name": "title-border",
       "type": "String",
@@ -112,6 +104,7 @@
     },
     {
       "kind": "prop",
+      "description":"内容分隔线",
       "keywords": [],
       "visibility": "public",
       "name": "border",
@@ -122,6 +115,7 @@
     },
     {
       "kind": "prop",
+      "description":"显示右侧箭头",
       "keywords": [],
       "visibility": "public",
       "name": "show-arrow",

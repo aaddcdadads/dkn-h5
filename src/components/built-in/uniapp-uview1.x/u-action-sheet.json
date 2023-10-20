@@ -78,31 +78,9 @@
       "description": "按钮文字数组",
       "keywords": [],
       "visibility": "public",
-      "name": "list",
-      "type": "Array",
+      "name": "actions",
+      "type": "list",
       "default": "function() {\r\n\t\t\t\t\t// 如下\r\n\t\t\t\t\t// return [{\r\n\t\t\t\t\t// \ttext: '确定',\r\n\t\t\t\t\t// \tcolor: '',\r\n\t\t\t\t\t// \tfontSize: ''\r\n\t\t\t\t\t// }]\r\n\t\t\t\t\treturn [];\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "顶部提示文字",
-      "keywords": [],
-      "visibility": "public",
-      "name": "tips",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\ttext: '',\r\n\t\t\t\t\t\tcolor: '',\r\n\t\t\t\t\t\tfontSize: '26'\r\n\t\t\t\t\t}\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "底部取消按钮",
-      "keywords": [],
-      "visibility": "public",
-      "name": "cancel-btn",
-      "type": "Boolean",
-      "default": "true",
       "required": false,
       "describeModel": false
     },
@@ -122,7 +100,7 @@
       "description": "组件弹出收起",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "show",
       "type": "Boolean",
       "default": "false",
       "required": false,
@@ -133,21 +111,7 @@
       "description": "顶部圆角值",
       "keywords": [],
       "visibility": "public",
-      "name": "border-radius",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "0",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "层级值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "z-index",
+      "name": "round",
       "type": [
         "String",
         "Number"

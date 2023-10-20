@@ -52,11 +52,16 @@
   "props": [
     {
       "kind": "prop",
-      "description": "主题 success/warning/info/error\t  默认 success",
-      "keywords": [],
+      "description": "主题",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"warn\", \"success\", \"error\",\"info\"]"
+        }
+      ],
       "visibility": "public",
       "name": "type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"success\"",
       "required": false,
       "describeModel": false
@@ -74,22 +79,12 @@
     },
     {
       "kind": "prop",
-      "description": "显示时间，设置为 0 则不会自动关闭",
+      "description": "显示时间",
       "keywords": [],
       "visibility": "public",
       "name": "duration",
       "type": "Number",
       "default": "3000",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "mask-show",
-      "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     }

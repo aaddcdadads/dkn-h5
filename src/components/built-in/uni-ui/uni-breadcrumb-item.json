@@ -24,6 +24,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"跳转路径",
       "keywords": [],
       "visibility": "public",
       "name": "to",
@@ -34,6 +35,7 @@
     },
     {
       "kind": "prop",
+      "description":"添加新记录",
       "keywords": [],
       "visibility": "public",
       "name": "replace",

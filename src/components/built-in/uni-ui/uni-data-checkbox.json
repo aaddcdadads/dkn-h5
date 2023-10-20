@@ -108,7 +108,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否多选",
+      "description":"多选",
       "keywords": [],
       "visibility": "public",
       "name": "multiple",
@@ -173,7 +173,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否换行",
+      "description":"换行",
       "keywords": [],
       "visibility": "public",
       "name": "wrap",
@@ -233,7 +233,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否禁用",
+      "description":"禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",

@@ -96,7 +96,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否显示下划线",
+      "description":"显示下划线",
       "keywords": [],
       "visibility": "public",
       "name": "show-under-line",

@@ -77,41 +77,12 @@
       "visibility": "public",
       "name": "default",
       "props": []
-    },
-    {
-      "kind": "slot",
-      "keywords": [],
-      "visibility": "public",
-      "name": "default",
-      "props": []
     }
   ],
   "props": [
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "input-type",
-      "type": "String",
-      "default": "\"text\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "value",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": true
-    },
-    {
-      "kind": "prop",
+      "description":"提示文字",
       "keywords": [],
       "visibility": "public",
       "name": "placeholder",
@@ -125,6 +96,7 @@
     },
     {
       "kind": "prop",
+      "description":"标题主题",
       "keywords": [],
       "visibility": "public",
       "name": "type",
@@ -135,6 +107,7 @@
     },
     {
       "kind": "prop",
+      "description":"对话框模式",
       "keywords": [],
       "visibility": "public",
       "name": "mode",
@@ -145,6 +118,7 @@
     },
     {
       "kind": "prop",
+      "description":"对话框标题",
       "keywords": [],
       "visibility": "public",
       "name": "title",
@@ -155,6 +129,7 @@
     },
     {
       "kind": "prop",
+      "description":"对话框内容",
       "keywords": [],
       "visibility": "public",
       "name": "content",
@@ -165,6 +140,7 @@
     },
     {
       "kind": "prop",
+      "description":"拦截按钮事件",
       "keywords": [],
       "visibility": "public",
       "name": "before-close",
@@ -175,6 +151,7 @@
     },
     {
       "kind": "prop",
+      "description":"取消按钮文本",
       "keywords": [],
       "visibility": "public",
       "name": "cancel-text",
@@ -185,6 +162,7 @@
     },
     {
       "kind": "prop",
+      "description":"确定按钮文本",
       "keywords": [],
       "visibility": "public",
       "name": "confirm-text",

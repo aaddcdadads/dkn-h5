@@ -35,57 +35,12 @@
   "props": [
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "stack-from-end",
-      "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "enable-back-to-top",
-      "type": [
-        "Boolean",
-        "String"
-      ],
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "scroll-y",
-      "type": [
-        "Boolean",
-        "String"
-      ],
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
+      "description":"显示边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",
       "type": "Boolean",
       "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "render-reverse",
-      "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     }

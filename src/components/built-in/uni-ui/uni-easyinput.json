@@ -18,23 +18,8 @@
       "description":"输入内容",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
-      "type": [
-        "String"
-      ],
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description":"输入内容",
-      "keywords": [],
-      "visibility": "public",
       "name": "model-value",
-      "type": [
-        "Number",
-        "String"
-      ],
+      "type": "String",
       "required": false,
       "describeModel": false
     },
@@ -83,7 +68,7 @@
       "visibility": "public",
       "name": "placeholder",
       "type": "String",
-      "default": "\" \"",
+      "default": "\"\"",
       "required": false,
       "describeModel": false
     },
@@ -110,7 +95,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否禁用",
+      "description":"禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -192,7 +177,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否自动去除空格",
+      "description":"自动去除空格",
       "keywords": [],
       "visibility": "public",
       "name": "trim",
@@ -228,6 +213,7 @@
     },
     {
       "kind": "prop",
+      "description":"样式自定义",
       "keywords": [],
       "visibility": "public",
       "name": "styles",
@@ -238,6 +224,7 @@
     },
     {
       "kind": "prop",
+      "description":"错误信息",
       "keywords": [],
       "visibility": "public",
       "name": "error-message",

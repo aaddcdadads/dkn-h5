@@ -35,50 +35,12 @@
   "props": [
     {
       "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "width",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
+      "description":"对齐方式",
       "keywords": [],
       "visibility": "public",
       "name": "align",
       "type": "String",
       "default": "\"left\"",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "rowspan",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "1",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "colspan",
-      "type": [
-        "Number",
-        "String"
-      ],
-      "default": "1",
       "required": false,
       "describeModel": false
     }

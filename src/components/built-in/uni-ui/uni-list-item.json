@@ -154,7 +154,13 @@
   "props": [
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"排版方向",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"row\", \"column\"]"
+        }
+      ],
       "visibility": "public",
       "name": "direction",
       "type": "String",
@@ -164,6 +170,7 @@
     },
     {
       "kind": "prop",
+      "description":"标题",
       "keywords": [],
       "visibility": "public",
       "name": "title",
@@ -174,6 +181,7 @@
     },
     {
       "kind": "prop",
+      "description":"描述",
       "keywords": [],
       "visibility": "public",
       "name": "note",
@@ -184,6 +192,7 @@
     },
     {
       "kind": "prop",
+      "description":"溢出隐藏",
       "keywords": [],
       "visibility": "public",
       "name": "ellipsis",
@@ -197,6 +206,7 @@
     },
     {
       "kind": "prop",
+      "description":"禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -210,6 +220,7 @@
     },
     {
       "kind": "prop",
+      "description":"开启点击反馈",
       "keywords": [],
       "visibility": "public",
       "name": "clickable",
@@ -220,6 +231,7 @@
     },
     {
       "kind": "prop",
+      "description":"显示箭头图标",
       "keywords": [],
       "visibility": "public",
       "name": "show-arrow",
@@ -233,19 +245,23 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"跳转方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"navigateTo\", \"redirectTo\", \"reLaunch\",\"switchTab\"]"
+        }
+      ],
       "visibility": "public",
       "name": "link",
-      "type": [
-        "Boolean",
-        "String"
-      ],
-      "default": "false",
+      "type":"String",
+      "default": "\"navigateTo\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"跳转地址",
       "keywords": [],
       "visibility": "public",
       "name": "to",
@@ -256,6 +272,7 @@
     },
     {
       "kind": "prop",
+      "description":"显示数字角标",
       "keywords": [],
       "visibility": "public",
       "name": "show-badge",
@@ -269,6 +286,7 @@
     },
     {
       "kind": "prop",
+      "description":"显示Switch",
       "keywords": [],
       "visibility": "public",
       "name": "show-switch",
@@ -282,6 +300,7 @@
     },
     {
       "kind": "prop",
+      "description":"选中",
       "keywords": [],
       "visibility": "public",
       "name": "switch-checked",
@@ -295,6 +314,7 @@
     },
     {
       "kind": "prop",
+      "description":"数字角标内容",
       "keywords": [],
       "visibility": "public",
       "name": "badge-text",
@@ -305,6 +325,7 @@
     },
     {
       "kind": "prop",
+      "description":"数字角标类型",
       "keywords": [],
       "visibility": "public",
       "name": "badge-type",
@@ -315,6 +336,7 @@
     },
     {
       "kind": "prop",
+      "description":"数字角标样式",
       "keywords": [],
       "visibility": "public",
       "name": "badge-style",
@@ -325,6 +347,7 @@
     },
     {
       "kind": "prop",
+      "description":"右侧文字内容",
       "keywords": [],
       "visibility": "public",
       "name": "right-text",
@@ -335,6 +358,7 @@
     },
     {
       "kind": "prop",
+      "description":"左侧缩略图",
       "keywords": [],
       "visibility": "public",
       "name": "thumb",
@@ -345,16 +369,23 @@
     },
     {
       "kind": "prop",
-      "keywords": [],
+      "description":"略缩图尺寸",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"medium\", \"sm\", \"lg\"]"
+        }
+      ],
       "visibility": "public",
       "name": "thumb-size",
       "type": "String",
-      "default": "\"base\"",
+      "default": "\"medium\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"扩展图标",
       "keywords": [],
       "visibility": "public",
       "name": "show-extra-icon",
@@ -368,41 +399,12 @@
     },
     {
       "kind": "prop",
+      "description":"扩展图标参数",
       "keywords": [],
       "visibility": "public",
       "name": "extra-icon",
       "type": "Object",
       "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\ttype: '',\r\n\t\t\t\t\t\tcolor: '#000000',\r\n\t\t\t\t\t\tsize: 20,\n\t\t\t\t\t\tcustomPrefix: ''\r\n\t\t\t\t\t};\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "border",
-      "type": "Boolean",
-      "default": "true",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "custom-style",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\tpadding: '',\r\n\t\t\t\t\t\tbackgroundColor: '#FFFFFF'\r\n\t\t\t\t\t}\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "keywords": [],
-      "visibility": "public",
-      "name": "keep-scroll-position",
-      "type": "Boolean",
-      "default": "false",
       "required": false,
       "describeModel": false
     }

@@ -193,7 +193,7 @@
     },
     {
       "kind": "prop",
-      "description":"内容是否通栏",
+      "description":"内容通栏",
       "keywords": [],
       "visibility": "public",
       "name": "is-full",
@@ -204,7 +204,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否开启阴影",
+      "description":"开启阴影",
       "keywords": [],
       "visibility": "public",
       "name": "is-shadow",

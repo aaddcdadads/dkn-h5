@@ -84,7 +84,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否显示图标",
+      "description":"显示图标",
       "keywords": [],
       "visibility": "public",
       "name": "show-icon",
@@ -144,7 +144,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否显示文本",
+      "description":"显示文本",
       "keywords": [],
       "visibility": "public",
       "name": "show-text",

@@ -53,17 +53,6 @@
     },
     {
       "kind": "prop",
-      "description": "点击遮罩关闭",
-      "keywords": [],
-      "visibility": "public",
-      "name": "mask-click",
-      "type": "Boolean",
-      "default": "null",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
       "description":"主窗口背景色",
       "keywords": [],
       "visibility": "public",

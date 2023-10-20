@@ -75,7 +75,7 @@
     },
     {
       "kind": "prop",
-      "description":"冒号为分隔符",
+      "description":"冒号分隔符",
       "keywords": [],
       "visibility": "public",
       "name": "show-colon",
@@ -119,7 +119,7 @@
     },
     {
       "kind": "prop",
-      "description":"",
+      "description":"字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "font-size",
@@ -130,7 +130,7 @@
     },
     {
       "kind": "prop",
-      "description":"分割符号颜色",
+      "description":"分割符颜色",
       "keywords": [],
       "visibility": "public",
       "name": "splitor-color",

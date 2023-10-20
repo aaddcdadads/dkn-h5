@@ -136,7 +136,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否自动关闭",
+      "description": "自动关闭",
       "keywords": [],
       "visibility": "public",
       "name": "auto-close",

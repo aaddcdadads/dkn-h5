@@ -22,6 +22,7 @@
   "props": [
     {
       "kind": "prop",
+      "description":"栅格占据列数",
       "keywords": [],
       "visibility": "public",
       "name": "span",
@@ -32,6 +33,7 @@
     },
     {
       "kind": "prop",
+      "description":"栅格左侧格数",
       "keywords": [],
       "visibility": "public",
       "name": "offset",
@@ -42,6 +44,7 @@
     },
     {
       "kind": "prop",
+      "description":"左偏移格数",
       "keywords": [],
       "visibility": "public",
       "name": "pull",
@@ -52,6 +55,7 @@
     },
     {
       "kind": "prop",
+      "description":"右偏移格数",
       "keywords": [],
       "visibility": "public",
       "name": "push",
@@ -62,6 +66,7 @@
     },
     {
       "kind": "prop",
+      "description":"屏幕宽度<768px",
       "keywords": [],
       "visibility": "public",
       "name": "xs",
@@ -74,6 +79,7 @@
     },
     {
       "kind": "prop",
+      "description":"屏幕宽度≥768px",
       "keywords": [],
       "visibility": "public",
       "name": "sm",
@@ -86,6 +92,7 @@
     },
     {
       "kind": "prop",
+      "description":"屏幕宽度≥992px",
       "keywords": [],
       "visibility": "public",
       "name": "md",
@@ -98,6 +105,7 @@
     },
     {
       "kind": "prop",
+      "description":"屏幕宽度≥1200px",
       "keywords": [],
       "visibility": "public",
       "name": "lg",
@@ -110,6 +118,7 @@
     },
     {
       "kind": "prop",
+      "description":"屏幕宽度≥1920px",
       "keywords": [],
       "visibility": "public",
       "name": "xl",

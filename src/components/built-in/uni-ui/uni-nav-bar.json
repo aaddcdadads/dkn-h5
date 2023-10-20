@@ -164,7 +164,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否固定顶部",
+      "description":"固定顶部",
       "keywords": [],
       "visibility": "public",
       "name": "fixed",
@@ -214,7 +214,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否有阴影",
+      "description":"阴影",
       "keywords": [],
       "visibility": "public",
       "name": "shadow",
@@ -228,7 +228,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否有边框",
+      "description":"边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",

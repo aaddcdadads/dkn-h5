@@ -82,6 +82,7 @@
     },
     {
       "kind": "prop",
+      "description":"格式",
       "keywords": [],
       "visibility": "public",
       "name": "format",

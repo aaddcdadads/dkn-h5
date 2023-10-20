@@ -17,32 +17,10 @@
   "props": [
     {
       "kind": "prop",
-      "description": "即将弃用",
-      "keywords": [],
-      "visibility": "public",
-      "name": "value",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn null;\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": true
-    },
-    {
-      "kind": "prop",
-      "description": "vue3 替换 value 属性",
+      "description": "表单数据",
       "keywords": [],
       "visibility": "public",
       "name": "model-value",
-      "type": "Object",
-      "default": "function() {\r\n\t\t\t\t\treturn null;\r\n\t\t\t\t}",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "1.4.0 开始将不支持 v-model ，且废弃 value 和 modelValue",
-      "keywords": [],
-      "visibility": "public",
-      "name": "model",
       "type": "Object",
       "default": "function() {\r\n\t\t\t\t\treturn null;\r\n\t\t\t\t}",
       "required": false,
@@ -61,40 +39,55 @@
     },
     {
       "kind": "prop",
-      "description": "校验错误信息提示方式 默认 undertext 取值 [undertext|toast|modal]",
-      "keywords": [],
+      "description": "错误信息提示",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"undertext\", \"toast\", \"modal\"]"
+        }
+      ],
       "visibility": "public",
       "name": "err-show-type",
-      "type": "String",
+      "type": "Enum",
       "default": "\"undertext\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "校验触发器方式 默认 bind 取值 [bind|submit]",
-      "keywords": [],
+      "description": "触发器方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"bind\", \"submit\", \"blur\"]"
+        }
+      ],
       "visibility": "public",
       "name": "validate-trigger",
-      "type": "String",
+      "type": "Enum",
       "default": "\"submit\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "label 位置，默认 left 取值  top/left",
-      "keywords": [],
+      "description": "label位置",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"top\", \"left\"]"
+        }
+      ],
       "visibility": "public",
       "name": "label-position",
-      "type": "String",
+      "type": "Enum",
       "default": "\"left\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "label 宽度",
+      "description": "label宽度",
       "keywords": [],
       "visibility": "public",
       "name": "label-width",
@@ -108,17 +101,23 @@
     },
     {
       "kind": "prop",
-      "description": "label 居中方式，默认 left 取值 left/center/right",
-      "keywords": [],
+      "description": "label居中方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\", \"center\", \"right\"]"
+        }
+      ],
       "visibility": "public",
       "name": "label-align",
-      "type": "String",
+      "type": "Enum",
       "default": "\"left\"",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
+      "description":"显示分格线",
       "keywords": [],
       "visibility": "public",
       "name": "border",

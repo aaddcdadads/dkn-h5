@@ -159,7 +159,7 @@
   "props": [
     {
       "kind": "prop",
-      "description":"左边的图标",
+      "description":"左边图标",
       "keywords": [],
       "visibility": "public",
       "name": "icon",
@@ -180,7 +180,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否必填",
+      "description": "必填",
       "keywords": [],
       "visibility": "public",
       "name": "required",
@@ -210,7 +210,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示清空",
+      "description": "显示清空",
       "keywords": [],
       "visibility": "public",
       "name": "clearable",
@@ -313,7 +313,7 @@
     },
     {
       "kind": "prop",
-      "description":"placeholder的样式",
+      "description":"占位符样式",
       "keywords": [],
       "visibility": "public",
       "name": "placeholder-style",
@@ -343,14 +343,11 @@
     },
     {
       "kind": "prop",
-      "description":"",
+      "description":"文本内容",
       "keywords": [],
       "visibility": "public",
       "name": "modelValue",
-      "type": [
-        "Number",
-        "String"
-      ],
+      "type": "String",
       "required": false,
       "describeModel": true
     },
@@ -367,7 +364,7 @@
     },
     {
       "kind": "prop",
-      "description":"是否不可输入",
+      "description":"不可输入",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -392,7 +389,7 @@
     },
     {
       "kind": "prop",
-      "description":"键盘右下角文字",
+      "description":"键盘文字",
       "keywords": [],
       "visibility": "public",
       "name": "confirm-type",
@@ -444,7 +441,7 @@
     },
     {
       "kind": "prop",
-      "description": "lable左边的图标样式，对象形式",
+      "description": "左边图标样式",
       "keywords": [],
       "visibility": "public",
       "name": "icon-style",
@@ -455,7 +452,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示上边框",
+      "description": "显示上边框",
       "keywords": [],
       "visibility": "public",
       "name": "border-top",
@@ -466,7 +463,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示下边框",
+      "description": "显示下边框",
       "keywords": [],
       "visibility": "public",
       "name": "border-bottom",
