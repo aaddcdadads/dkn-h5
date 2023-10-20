@@ -56,7 +56,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "栅格占据列数",
       "keywords": [],
       "visibility": "public",
       "name": "span",
@@ -66,7 +66,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "左边偏移",
       "keywords": [],
       "visibility": "public",
       "name": "offset",
@@ -76,31 +76,49 @@
     },
     {
       "kind": "prop",
-      "description": "",
-      "keywords": [],
+      "description": "水平排列方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"start\", \"end\", \"center\",\"around\",\"between\"]"
+        }
+      ],
       "visibility": "public",
       "name": "justify",
-      "type": "String",
+      "type": "Enum",
+      "default":"start",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
-      "keywords": [],
+      "description": "垂直对齐方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"stretch\", \"top\", \"center\",\"bottom\"]"
+        }
+      ],
       "visibility": "public",
       "name": "align",
-      "type": "String",
+      "type": "Enum",
+      "default":"stretch",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
-      "keywords": [],
+      "description": "水平对齐方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\", \"center\", \"right\"]"
+        }
+      ],
       "visibility": "public",
       "name": "textAlign",
-      "type": "String",
+      "type": "Enum",
+      "default":"left",
       "required": false,
       "describeModel": false
     }

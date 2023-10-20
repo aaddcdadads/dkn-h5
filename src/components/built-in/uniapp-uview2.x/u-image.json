@@ -175,7 +175,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否懒加载",
+      "description": "懒加载",
       "keywords": [],
       "visibility": "public",
       "name": "lazyLoad",
@@ -195,7 +195,7 @@
     },
     {
       "kind": "prop",
-      "description": "加载中的图标",
+      "description": "加载中图标",
       "keywords": [],
       "visibility": "public",
       "name": "loadingIcon",
@@ -205,7 +205,7 @@
     },
     {
       "kind": "prop",
-      "description": "加载失败的图标",
+      "description": "加载失败图标",
       "keywords": [],
       "visibility": "public",
       "name": "errorIcon",

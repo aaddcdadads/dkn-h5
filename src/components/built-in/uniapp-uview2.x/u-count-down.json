@@ -94,7 +94,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否展示毫秒倒计时",
+      "description": "毫秒倒计时",
       "keywords": [],
       "visibility": "public",
       "name": "millisecond",

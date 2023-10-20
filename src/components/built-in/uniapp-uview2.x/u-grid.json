@@ -48,7 +48,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "宫格列数",
       "keywords": [],
       "visibility": "public",
       "name": "col",
@@ -58,7 +58,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "显示宫格边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",
@@ -68,11 +68,17 @@
     },
     {
       "kind": "prop",
-      "description": "",
-      "keywords": [],
+      "description": "对齐方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\", \"center\", \"right\"]"
+        }
+      ],
       "visibility": "public",
       "name": "align",
-      "type": "String",
+      "type": "Enum",
+      "default":"left",
       "required": false,
       "describeModel": false
     }

@@ -78,7 +78,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否禁用",
+      "description": "禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -121,7 +121,7 @@
       "description": "绑定的值",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "String",
       "required": false,
       "describeModel": false
@@ -148,7 +148,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否开启异步",
+      "description": "开启异步",
       "keywords": [],
       "visibility": "public",
       "name": "asyncChange",
@@ -158,7 +158,7 @@
     },
     {
       "kind": "prop",
-      "description": "圆点与外边框距离",
+      "description": "圆点外边框距离",
       "keywords": [],
       "visibility": "public",
       "name": "space",

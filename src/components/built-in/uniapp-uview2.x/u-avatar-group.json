@@ -130,7 +130,7 @@
     },
     {
       "kind": "prop",
-      "description": "头像之间的遮挡比例",
+      "description": "遮挡比例",
       "keywords": [],
       "visibility": "public",
       "name": "gap",

@@ -128,7 +128,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否展示",
+      "description": "展示组件",
       "keywords": [],
       "visibility": "public",
       "name": "show",
@@ -168,7 +168,7 @@
     },
     {
       "kind": "prop",
-      "description": "取消按钮的文字",
+      "description": "取消按钮文字",
       "keywords": [],
       "visibility": "public",
       "name": "cancelText",
@@ -208,7 +208,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否允许关闭",
+      "description": "允许关闭",
       "keywords": [],
       "visibility": "public",
       "name": "closeOnClickOverlay",

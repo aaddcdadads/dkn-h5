@@ -819,6 +819,38 @@
         "isBuiltIn": true
       },
       {
+        "name": "u-cell-group",
+        "title": "单元格组",
+        "docPath": "built-in/uniapp-uview2.x/u-cell-group.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-cell-group.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-cell",
+        "title": "单元格",
+        "docPath": "built-in/uniapp-uview2.x/u-cell.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-cell.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-checkbox-group",
+        "title": "复选框组",
+        "docPath": "built-in/uniapp-uview2.x/u-checkbox-group.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-checkbox-group.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-checkbox",
+        "title": "复选框",
+        "docPath": "built-in/uniapp-uview2.x/u-checkbox.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-checkbox.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "u-circle-progress",
         "title": "圆形进度条",
         "docPath": "built-in/uniapp-uview1.x/u-circle-progress.json",
@@ -839,6 +871,30 @@
         "title": "验证码输入框",
         "docPath": "built-in/uniapp-uview2.x/u-code.json",
         "imgUrl": "built-in/uniapp-uview2.x/img/u-code.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-col",
+        "title": "行",
+        "docPath": "built-in/uniapp-uview1.x/u-col.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-col.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-collapse-item",
+        "title": "折叠面板项",
+        "docPath": "built-in/uniapp-uview1.x/u-collapse-item.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-collapse-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-collapse",
+        "title": "折叠面板",
+        "docPath": "built-in/uniapp-uview1.x/u-collapse.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-collapse.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -891,10 +947,42 @@
         "isBuiltIn": true
       },
       {
+        "name": "u-form",
+        "title": "表单",
+        "docPath": "built-in/uniapp-uview2.x/u-form.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-form.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-form-item",
+        "title": "表单项",
+        "docPath": "built-in/uniapp-uview2.x/u-form-item.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-form-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "u-gap",
         "title": "间隔槽",
         "docPath": "built-in/uniapp-uview2.x/u-gap.json",
         "imgUrl": "built-in/uniapp-uview2.x/img/u-gap.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-grid",
+        "title": "宫格布局",
+        "docPath": "built-in/uniapp-uview2.x/u-grid.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-grid.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-grid-item",
+        "title": "宫格布局项",
+        "docPath": "built-in/uniapp-uview2.x/u-grid-item.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-grid-item.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -911,6 +999,30 @@
         "title": "图片",
         "docPath": "built-in/uniapp-uview2.x/u-image.json",
         "imgUrl": "built-in/uniapp-uview2.x/img/u-image.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-index-anchor",
+        "title": "列表锚点",
+        "docPath": "built-in/uniapp-uview2.x/u-index-anchor.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-index-anchor.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-index-item",
+        "title": "列表项",
+        "docPath": "built-in/uniapp-uview2.x/u-index-item.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-index-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-index-list",
+        "title": "索引列表",
+        "docPath": "built-in/uniapp-uview2.x/u-index-list.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-index-list.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -951,6 +1063,22 @@
         "title": "超链接",
         "docPath": "built-in/uniapp-uview2.x/u-link.json",
         "imgUrl": "built-in/uniapp-uview2.x/img/u-link.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-list",
+        "title": "列表",
+        "docPath": "built-in/uniapp-uview2.x/u-list.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-list.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-list-item",
+        "title": "列表项",
+        "docPath": "built-in/uniapp-uview2.x/u-list-item.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-list-item.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1067,6 +1195,22 @@
         "isBuiltIn": true
       },
       {
+        "name": "u-radio-group",
+        "title": "单选组",  
+        "docPath": "built-in/uniapp-uview2.x/u-radio-group.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-radio-group.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-radio",
+        "title": "单选框",  
+        "docPath": "built-in/uniapp-uview2.x/u-radio.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-radio.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "u-rate",
         "title": "评分", 
         "docPath": "built-in/uniapp-uview2.x/u-rate.json",
@@ -1087,6 +1231,14 @@
         "title": "横向滚动通知", 
         "docPath": "built-in/uniapp-uview2.x/u-row-notice.json",
         "imgUrl": "built-in/uniapp-uview2.x/img/u-notice-bar.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-row",
+        "title": "列", 
+        "docPath": "built-in/uniapp-uview2.x/u-row.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-row.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1139,6 +1291,22 @@
         "isBuiltIn": true
       },
       {
+        "name": "u-steps-item",
+        "title": "步骤项",   
+        "docPath": "built-in/uniapp-uview2.x/u-steps-item.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-steps-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-steps",
+        "title": "步骤条",   
+        "docPath": "built-in/uniapp-uview2.x/u-steps.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-steps.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "u-sticky",
         "title": "吸顶",  
         "docPath": "built-in/uniapp-uview2.x/u-sticky.json",
@@ -1155,9 +1323,32 @@
         "isBuiltIn": true
       },
       {
+        "name": "u-swipe-action-item",
+        "title": "滑动单元格项",   
+        "docPath": "built-in/uniapp-uview2.x/u-swipe-action-item.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-swipe-action-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-swipe-action",
+        "title": "滑动单元格",   
+        "docPath": "built-in/uniapp-uview2.x/u-swipe-action.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-swipe-action.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-swiper-indicator",
+        "title": "轮播图指示器",   
+        "docPath": "built-in/uniapp-uview2.x/u-swiper-indicator.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-swiper-indicator.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "u-swiper",
-        "title": "轮播图",
-      
+        "title": "轮播图",     
         "docPath": "built-in/uniapp-uview2.x/u-swiper.json",
         "imgUrl": "built-in/uniapp-uview2.x/img/u-swiper.png",
         "type": 0,
@@ -1168,6 +1359,22 @@
         "title": "开关",  
         "docPath": "built-in/uniapp-uview2.x/u-switch.json",
         "imgUrl": "built-in/uniapp-uview2.x/img/u-switch.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-tabbar-item",
+        "title": "导航项",  
+        "docPath": "built-in/uniapp-uview2.x/u-tabbar-item.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-tabbar-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "u-tabbar",
+        "title": "底部导航栏",  
+        "docPath": "built-in/uniapp-uview2.x/u-tabbar.json",
+        "imgUrl": "built-in/uniapp-uview2.x/img/u-tabbar.png",
         "type": 0,
         "isBuiltIn": true
       },

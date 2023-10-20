@@ -60,7 +60,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "数据",
       "keywords": [],
       "visibility": "public",
       "name": "model",
@@ -70,7 +70,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "规则",
       "keywords": [],
       "visibility": "public",
       "name": "rules",
@@ -80,7 +80,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "错误提示方式",
       "keywords": [],
       "visibility": "public",
       "name": "errorType",
@@ -90,7 +90,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "下划线边框",
       "keywords": [],
       "visibility": "public",
       "name": "borderBottom",
@@ -100,7 +100,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "提示文字位置",
       "keywords": [],
       "visibility": "public",
       "name": "labelPosition",
@@ -110,7 +110,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "提示文字宽度",
       "keywords": [],
       "visibility": "public",
       "name": "labelWidth",
@@ -120,7 +120,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "字体对齐方式",
       "keywords": [],
       "visibility": "public",
       "name": "labelAlign",
@@ -130,7 +130,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "对象形式",
       "keywords": [],
       "visibility": "public",
       "name": "labelStyle",

@@ -124,7 +124,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示`.`按键",
+      "description": "显示`.`按键",
       "keywords": [],
       "visibility": "public",
       "name": "dotDisabled",
@@ -224,7 +224,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示遮罩",
+      "description": "显示遮罩",
       "keywords": [],
       "visibility": "public",
       "name": "overlay",

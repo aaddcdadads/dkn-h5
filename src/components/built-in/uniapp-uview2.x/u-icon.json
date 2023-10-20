@@ -130,7 +130,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示粗体",
+      "description": "显示粗体",
       "keywords": [],
       "visibility": "public",
       "name": "bold",

@@ -179,7 +179,7 @@
     },
     {
       "kind": "prop",
-      "description": "可选最大时间",
+      "description": "最大时间",
       "keywords": [],
       "visibility": "public",
       "name": "maxDate",
@@ -189,7 +189,7 @@
     },
     {
       "kind": "prop",
-      "description": "可选的最小时间",
+      "description": "最小时间",
       "keywords": [],
       "visibility": "public",
       "name": "minDate",
@@ -199,7 +199,7 @@
     },
     {
       "kind": "prop",
-      "description": "可选最小小时",
+      "description": "最小小时",
       "keywords": [],
       "visibility": "public",
       "name": "minHour",
@@ -209,7 +209,7 @@
     },
     {
       "kind": "prop",
-      "description": "可选最大小时",
+      "description": "最大小时",
       "keywords": [],
       "visibility": "public",
       "name": "maxHour",
@@ -219,7 +219,7 @@
     },
     {
       "kind": "prop",
-      "description": "可选最小分钟",
+      "description": "最小分钟",
       "keywords": [],
       "visibility": "public",
       "name": "minMinute",
@@ -229,7 +229,7 @@
     },
     {
       "kind": "prop",
-      "description": "可选最大分钟",
+      "description": "最大分钟",
       "keywords": [],
       "visibility": "public",
       "name": "maxMinute",

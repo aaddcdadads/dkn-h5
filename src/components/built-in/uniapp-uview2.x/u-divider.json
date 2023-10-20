@@ -60,7 +60,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "是否虚线",
+      "description": "虚线",
       "keywords": [],
       "visibility": "public",
       "name": "dashed",
@@ -70,7 +70,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否细线",
+      "description": "细线",
       "keywords": [],
       "visibility": "public",
       "name": "hairline",

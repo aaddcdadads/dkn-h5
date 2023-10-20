@@ -122,7 +122,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否显示图标",
+      "description": "显示图标",
       "keywords": [],
       "visibility": "public",
       "name": "icon",
@@ -278,7 +278,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否虚线",
+      "description": "虚线",
       "keywords": [],
       "visibility": "public",
       "name": "dashed",

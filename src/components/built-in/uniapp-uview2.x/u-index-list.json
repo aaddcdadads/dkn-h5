@@ -50,7 +50,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "非激活时颜色",
       "keywords": [],
       "visibility": "public",
       "name": "inactiveColor",
@@ -60,7 +60,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "激活时的颜色",
       "keywords": [],
       "visibility": "public",
       "name": "activeColor",
@@ -70,7 +70,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "字符列表",
       "keywords": [],
       "visibility": "public",
       "name": "indexList",
@@ -80,7 +80,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "自动吸顶",
       "keywords": [],
       "visibility": "public",
       "name": "sticky",
@@ -90,7 +90,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "导航栏高度",
       "keywords": [],
       "visibility": "public",
       "name": "customNavHeight",

@@ -61,7 +61,7 @@
     },
     {
       "kind": "prop",
-      "description": "页面的滚动距离",
+      "description": "页面滚动距离",
       "keywords": [],
       "visibility": "public",
       "name": "scrollTop",
@@ -71,7 +71,7 @@
     },
     {
       "kind": "prop",
-      "description": "滑动距离显示组件",
+      "description": "滑动距离显示",
       "keywords": [],
       "visibility": "public",
       "name": "top",
