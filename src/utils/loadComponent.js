@@ -1,6 +1,6 @@
 import { defineAsyncComponent } from "vue";
 export const modules = import.meta.glob("../components/**/**.vue");
-export const uviewUiModules = import.meta.glob("../uni_modules/vk-uview-ui/components/**/**.vue");
+export const uviewUiModules = import.meta.glob("../uni_modules/uview-plus/components/**/**.vue");
 
 import { toCamelCase, upperFirst } from './util';
 
