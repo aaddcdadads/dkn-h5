@@ -51,7 +51,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "宫格name",
       "keywords": [],
       "visibility": "public",
       "name": "name",
@@ -61,7 +61,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "宫格背景颜色",
       "keywords": [],
       "visibility": "public",
       "name": "bgColor",

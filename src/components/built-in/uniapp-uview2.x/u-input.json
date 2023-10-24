@@ -182,7 +182,7 @@
       "description": "输入的值",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "String",
       "required": false,
       "describeModel": false
@@ -205,7 +205,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否禁用",
+      "description": "禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -265,7 +265,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "占位符样式类",
       "keywords": [],
       "visibility": "public",
       "name": "placeholderClass",
@@ -275,7 +275,7 @@
     },
     {
       "kind": "prop",
-      "description": "样式类名",
+      "description": "占位符样式",
       "keywords": [],
       "visibility": "public",
       "name": "placeholderStyle",
@@ -285,7 +285,7 @@
     },
     {
       "kind": "prop",
-      "description": "占位符样式",
+      "description": "字数统计",
       "keywords": [],
       "visibility": "public",
       "name": "showWordLimit",
@@ -295,7 +295,7 @@
     },
     {
       "kind": "prop",
-      "description": "按钮的文字",
+      "description": "按钮文字",
       "keywords": [],
       "visibility": "public",
       "name": "confirmType",
@@ -305,7 +305,7 @@
     },
     {
       "kind": "prop",
-      "description": "点击键盘按钮键盘不收起",
+      "description": "点击键盘不收起",
       "keywords": [],
       "visibility": "public",
       "name": "confirmHold",
@@ -395,7 +395,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否上推页面",
+      "description": "上推页面",
       "keywords": [],
       "visibility": "public",
       "name": "adjustPosition",
@@ -497,7 +497,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否只读",
+      "description": "只读",
       "keywords": [],
       "visibility": "public",
       "name": "readonly",

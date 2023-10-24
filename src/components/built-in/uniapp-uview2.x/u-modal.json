@@ -211,7 +211,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否开启缩放模式",
+      "description": "开启缩放模式",
       "keywords": [],
       "visibility": "public",
       "name": "zoom",
@@ -221,7 +221,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否异步关闭",
+      "description": "异步关闭",
       "keywords": [],
       "visibility": "public",
       "name": "asyncClose",
@@ -231,7 +231,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否允许点击遮罩关闭Modal",
+      "description": "允许点击遮罩关闭",
       "keywords": [],
       "visibility": "public",
       "name": "closeOnClickOverlay",

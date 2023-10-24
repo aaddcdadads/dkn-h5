@@ -155,7 +155,7 @@
       "description": "绑定的值",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "String",
       "required": false,
       "describeModel": false
@@ -202,7 +202,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否禁用操作",
+      "description": "禁用操作",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -212,7 +212,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否禁止输入框",
+      "description": "禁止输入框",
       "keywords": [],
       "visibility": "public",
       "name": "disabledInput",

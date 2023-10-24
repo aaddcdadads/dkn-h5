@@ -158,7 +158,7 @@
     },
     {
       "kind": "prop",
-      "description": "字体是否加粗",
+      "description": "字体加粗",
       "keywords": [],
       "visibility": "public",
       "name": "bold",

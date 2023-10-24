@@ -100,17 +100,17 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "绑定的值",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -120,7 +120,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "形状",
       "keywords": [],
       "visibility": "public",
       "name": "shape",
@@ -130,7 +130,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "选中状态颜色",
       "keywords": [],
       "visibility": "public",
       "name": "activeColor",
@@ -140,7 +140,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "未选中的颜色",
       "keywords": [],
       "visibility": "public",
       "name": "inactiveColor",
@@ -150,7 +150,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "标识符",
       "keywords": [],
       "visibility": "public",
       "name": "name",
@@ -160,7 +160,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "组件的尺寸",
       "keywords": [],
       "visibility": "public",
       "name": "size",
@@ -170,7 +170,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "布局方式",
       "keywords": [],
       "visibility": "public",
       "name": "placement",
@@ -180,7 +180,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "文本",
       "keywords": [],
       "visibility": "public",
       "name": "label",
@@ -190,7 +190,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "字体颜色",
       "keywords": [],
       "visibility": "public",
       "name": "labelColor",
@@ -200,7 +200,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "labelSize",
@@ -210,7 +210,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "禁止点击文本",
       "keywords": [],
       "visibility": "public",
       "name": "labelDisabled",
@@ -220,7 +220,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "图标颜色",
       "keywords": [],
       "visibility": "public",
       "name": "iconColor",
@@ -230,7 +230,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "图标大小",
       "keywords": [],
       "visibility": "public",
       "name": "iconSize",
@@ -240,7 +240,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "显示下划线",
       "keywords": [],
       "visibility": "public",
       "name": "borderBottom",
@@ -250,11 +250,17 @@
     },
     {
       "kind": "prop",
-      "description": "",
-      "keywords": [],
+      "description": "图标对齐方式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"left\", \"right\"]"
+        }
+      ],
       "visibility": "public",
       "name": "iconPlacement",
-      "type": "String",
+      "type": "Enum",
+      "default":"left",
       "required": false,
       "describeModel": false
     }

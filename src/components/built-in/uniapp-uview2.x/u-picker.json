@@ -37,7 +37,7 @@
     },
     {
       "kind": "prop",
-      "description": "每一列的数据",
+      "description": "每一列数据",
       "keywords": [],
       "visibility": "public",
       "name": "columns",

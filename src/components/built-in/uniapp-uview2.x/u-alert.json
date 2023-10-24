@@ -60,7 +60,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "显示的文字",
+      "description": "显示文字",
       "keywords": [],
       "visibility": "public",
       "name": "title",
@@ -120,7 +120,7 @@
     },
     {
       "kind": "prop",
-      "description": "文字是否居中",
+      "description": "文字居中",
       "keywords": [],
       "visibility": "public",
       "name": "center",

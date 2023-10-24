@@ -112,7 +112,7 @@
     },
     {
       "kind": "prop",
-      "description": "不可用",
+      "description": "禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
@@ -202,7 +202,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否填充背景色",
+      "description": "填充背景色",
       "keywords": [],
       "visibility": "public",
       "name": "plainFill",
@@ -212,7 +212,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否镂空",
+      "description": "镂空",
       "keywords": [],
       "visibility": "public",
       "name": "plain",
@@ -222,7 +222,7 @@
     },
     {
       "kind": "prop",
-      "description": "是否可关闭",
+      "description": "可关闭",
       "keywords": [],
       "visibility": "public",
       "name": "closable",

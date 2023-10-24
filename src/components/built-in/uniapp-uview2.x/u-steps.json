@@ -56,17 +56,23 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
-      "keywords": [],
+      "description": "方向",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"row\", \"column\"]"
+        }
+      ],
       "visibility": "public",
       "name": "direction",
-      "type": "String",
+      "type": "Enum",
+      "default":"row",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "第几步",
       "keywords": [],
       "visibility": "public",
       "name": "current",
@@ -76,7 +82,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "激活状态颜色",
       "keywords": [],
       "visibility": "public",
       "name": "activeColor",
@@ -86,7 +92,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "未激活状态颜色",
       "keywords": [],
       "visibility": "public",
       "name": "inactiveColor",
@@ -96,7 +102,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "激活状态的图标",
       "keywords": [],
       "visibility": "public",
       "name": "activeIcon",
@@ -106,7 +112,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "未激活状态图标",
       "keywords": [],
       "visibility": "public",
       "name": "inactiveIcon",
@@ -116,7 +122,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "显示点类型",
       "keywords": [],
       "visibility": "public",
       "name": "dot",

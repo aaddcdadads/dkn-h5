@@ -15,17 +15,17 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "匹配项name",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "保留安全距离",
       "keywords": [],
       "visibility": "public",
       "name": "safeAreaInsetBottom",
@@ -35,7 +35,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "显示上方边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",
@@ -45,7 +45,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "元素层级",
       "keywords": [],
       "visibility": "public",
       "name": "zIndex",
@@ -55,7 +55,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "选中标签颜色",
       "keywords": [],
       "visibility": "public",
       "name": "activeColor",
@@ -65,7 +65,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "未选中标签颜色",
       "keywords": [],
       "visibility": "public",
       "name": "inactiveColor",
@@ -75,7 +75,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "固定在底部",
       "keywords": [],
       "visibility": "public",
       "name": "fixed",
@@ -85,7 +85,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "防止塌陷",
       "keywords": [],
       "visibility": "public",
       "name": "placeholder",

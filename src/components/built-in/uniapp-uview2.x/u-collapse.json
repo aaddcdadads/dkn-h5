@@ -44,17 +44,17 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "展开面板name",
       "keywords": [],
       "visibility": "public",
-      "name": "value",
+      "name": "modelValue",
       "type": "String",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "手风琴模式",
       "keywords": [],
       "visibility": "public",
       "name": "accordion",
@@ -64,7 +64,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "显示外边框",
       "keywords": [],
       "visibility": "public",
       "name": "border",

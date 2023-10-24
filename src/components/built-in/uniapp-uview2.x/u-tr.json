@@ -22,7 +22,15 @@
       "name": "example"
     }
   ],
-  "slots": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
   "props": [],
   "data": [],
   "computed": [],

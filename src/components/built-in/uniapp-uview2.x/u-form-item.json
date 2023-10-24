@@ -82,7 +82,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "左侧提示文字",
       "keywords": [],
       "visibility": "public",
       "name": "label",
@@ -92,7 +92,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "属性名",
       "keywords": [],
       "visibility": "public",
       "name": "prop",
@@ -102,7 +102,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "显示下边框",
       "keywords": [],
       "visibility": "public",
       "name": "borderBottom",
@@ -112,7 +112,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "label位置",
       "keywords": [],
       "visibility": "public",
       "name": "labelPosition",
@@ -122,7 +122,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "文字宽度",
       "keywords": [],
       "visibility": "public",
       "name": "labelWidth",
@@ -132,7 +132,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "右侧字体图标",
       "keywords": [],
       "visibility": "public",
       "name": "rightIcon",
@@ -142,7 +142,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "左侧字体图标",
       "keywords": [],
       "visibility": "public",
       "name": "leftIcon",
@@ -152,7 +152,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "显示必填星号",
       "keywords": [],
       "visibility": "public",
       "name": "required",
@@ -162,7 +162,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "左侧图标的样式",
       "keywords": [],
       "visibility": "public",
       "name": "leftIconStyle",

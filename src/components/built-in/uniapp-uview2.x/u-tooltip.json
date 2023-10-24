@@ -67,7 +67,7 @@
     },
     {
       "kind": "prop",
-      "description": "z-index的值",
+      "description": "层级值",
       "keywords": [],
       "visibility": "public",
       "name": "zIndex",

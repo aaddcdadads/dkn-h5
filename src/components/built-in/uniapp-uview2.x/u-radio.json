@@ -91,7 +91,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "名称",
       "keywords": [],
       "visibility": "public",
       "name": "name",
@@ -101,37 +101,43 @@
     },
     {
       "kind": "prop",
-      "description": "",
-      "keywords": [],
+      "description": "形状",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"square\", \"circle\"]"
+        }
+      ],
       "visibility": "public",
       "name": "shape",
-      "type": "String",
+      "type": "Enum",
+      "default":"square",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "禁用",
       "keywords": [],
       "visibility": "public",
       "name": "disabled",
-      "type": "String",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "禁止点复选框",
       "keywords": [],
       "visibility": "public",
       "name": "labelDisabled",
-      "type": "String",
+      "type": "Boolean",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "选中状态颜色",
       "keywords": [],
       "visibility": "public",
       "name": "activeColor",
@@ -141,7 +147,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "未选中颜色",
       "keywords": [],
       "visibility": "public",
       "name": "inactiveColor",
@@ -151,7 +157,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "图标大小",
       "keywords": [],
       "visibility": "public",
       "name": "iconSize",
@@ -161,7 +167,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "字体大小",
       "keywords": [],
       "visibility": "public",
       "name": "labelSize",
@@ -171,7 +177,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "提示文字",
       "keywords": [],
       "visibility": "public",
       "name": "label",
@@ -181,7 +187,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "整体大小",
       "keywords": [],
       "visibility": "public",
       "name": "size",
@@ -191,17 +197,17 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "图标颜色",
       "keywords": [],
       "visibility": "public",
-      "name": "color",
+      "name": "iconColor",
       "type": "Color",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "label颜色",
       "keywords": [],
       "visibility": "public",
       "name": "labelColor",

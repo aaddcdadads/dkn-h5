@@ -22,7 +22,7 @@
   "props": [
     {
       "kind": "prop",
-      "description": "",
+      "description": "出现滚动条",
       "keywords": [],
       "visibility": "public",
       "name": "showScrollbar",
@@ -32,7 +32,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "距底部距离",
       "keywords": [],
       "visibility": "public",
       "name": "lowerThreshold",
@@ -42,7 +42,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "距顶部距离",
       "keywords": [],
       "visibility": "public",
       "name": "upperThreshold",
@@ -52,7 +52,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "滚动条位置",
       "keywords": [],
       "visibility": "public",
       "name": "scrollTop",
@@ -62,7 +62,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "触发频率",
       "keywords": [],
       "visibility": "public",
       "name": "offsetAccuracy",
@@ -72,7 +72,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "flex布局",
       "keywords": [],
       "visibility": "public",
       "name": "enableFlex",
@@ -82,7 +82,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "分页显示",
       "keywords": [],
       "visibility": "public",
       "name": "pagingEnabled",
@@ -92,7 +92,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "允许List滚动",
       "keywords": [],
       "visibility": "public",
       "name": "scrollable",
@@ -102,7 +102,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "元素id",
       "keywords": [],
       "visibility": "public",
       "name": "scrollIntoView",
@@ -112,7 +112,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "动画过渡",
       "keywords": [],
       "visibility": "public",
       "name": "scrollWithAnimation",
@@ -122,7 +122,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "顶部状态栏",
       "keywords": [],
       "visibility": "public",
       "name": "enableBackToTop",
@@ -132,7 +132,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "列表的高度",
       "keywords": [],
       "visibility": "public",
       "name": "height",
@@ -142,7 +142,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "列表宽度",
       "keywords": [],
       "visibility": "public",
       "name": "width",
@@ -152,7 +152,7 @@
     },
     {
       "kind": "prop",
-      "description": "",
+      "description": "屏数",
       "keywords": [],
       "visibility": "public",
       "name": "preLoadScreen",
