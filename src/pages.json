@@ -1,1321 +1,1079 @@
 {
-  "easycom": {
-    "autoscan": true,
-    "custom": {
-      "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
-      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    "easycom": {
+        "autoscan": true,
+        "custom": {
+            "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
+            "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+        }
+    },
+    "pages": [
+        {
+            "path": "pages/index/index",
+            "style": {
+                "navigationBarTitleText": "首页"
+            }
+        },
+        {
+            "path": "pages/1599675588405104642/page"
+        },
+        {
+            "path": "pages/test/HmImagesCrop"
+        },
+        {
+            "path": "pages/test/HmKspCroppers"
+        },
+        {
+            "path": "pages/test/HmKxjPreviewImages"
+        },
+        {
+            "path": "pages/test/TestHmActiveUsersCard"
+        },
+        {
+            "path": "pages/test/TestHmAudio"
+        },
+        {
+            "path": "pages/test/TestHmBackTop"
+        },
+        {
+            "path": "pages/test/TestHmButton"
+        },
+        {
+            "path": "pages/test/TestHmCallOptionCard"
+        },
+        {
+            "path": "pages/test/TestHmCamera"
+        },
+        {
+            "path": "pages/test/TestHmCheckList"
+        },
+        {
+            "path": "pages/test/TestHmColorPicker"
+        },
+        {
+            "path": "pages/test/TestHmCommentItemsCard"
+        },
+        {
+            "path": "pages/test/TestHmCommodityDisplayCard"
+        },
+        {
+            "path": "pages/test/TestHmCoverCard"
+        },
+        {
+            "path": "pages/test/TestHmCreditCard"
+        },
+        {
+            "path": "pages/test/TestHmDownloadsCard"
+        },
+        {
+            "path": "pages/test/TestHmDropDownSelect"
+        },
+        {
+            "path": "pages/test/TestHmDynamicDetailCard"
+        },
+        {
+            "path": "pages/test/TestHmEcharts"
+        },
+        {
+            "path": "pages/test/TestHmEmailCard"
+        },
+        {
+            "path": "pages/test/TestHmExam"
+        },
+        {
+            "path": "pages/test/TestHmFollowCard"
+        },
+        {
+            "path": "pages/test/TestHmFriendInformationCard"
+        },
+        {
+            "path": "pages/test/TestHmFriendsList"
+        },
+        {
+            "path": "pages/test/TestHmFriendsRequestsCard"
+        },
+        {
+            "path": "pages/test/TestHmGoodsCard"
+        },
+        {
+            "path": "pages/test/TestHmHeadPortraitCard"
+        },
+        {
+            "path": "pages/test/TestHmIcon"
+        },
+        {
+            "path": "pages/test/TestHmImage"
+        },
+        {
+            "path": "pages/test/TestHmImageCardList"
+        },
+        {
+            "path": "pages/test/TestHmImportPage"
+        },
+        {
+            "path": "pages/test/TestHmIndexLidex"
+        },
+        {
+            "path": "pages/test/TestHmInformationCard"
+        },
+        {
+            "path": "pages/test/TestHmInput"
+        },
+        {
+            "path": "pages/test/TestHmLabel"
+        },
+        {
+            "path": "pages/test/TestHmLabelCard"
+        },
+        {
+            "path": "pages/test/TestHmLimeSignature"
+        },
+        {
+            "path": "pages/test/TestHmLoop"
+        },
+        {
+            "path": "pages/test/TestHmMap"
+        },
+        {
+            "path": "pages/test/TestHmMumuPeview"
+        },
+        {
+            "path": "pages/test/TestHmNewsDetail"
+        },
+        {
+            "path": "pages/test/TestHmPhotoCard"
+        },
+        {
+            "path": "pages/test/TestHmProgress"
+        },
+        {
+            "path": "pages/test/TestHmQiunCharts"
+        },
+        {
+            "path": "pages/test/TestHmRequestCard"
+        },
+        {
+            "path": "pages/test/TestHmRichText"
+        },
+        {
+            "path": "pages/test/TestHmSimpleChatRoom"
+        },
+        {
+            "path": "pages/test/TestHmSlider"
+        },
+        {
+            "path": "pages/test/TestHmStoriesCard"
+        },
+        {
+            "path": "pages/test/TestHmSwipeList"
+        },
+        {
+            "path": "pages/test/TestHmSwitch"
+        },
+        {
+            "path": "pages/test/TestHmTalkCard"
+        },
+        {
+            "path": "pages/test/TestHmTaskCard"
+        },
+        {
+            "path": "pages/test/TestHmTaskListCard"
+        },
+        {
+            "path": "pages/test/TestHmText"
+        },
+        {
+            "path": "pages/test/TestHmTextarea"
+        },
+        {
+            "path": "pages/test/TestHmTuiTable"
+        },
+        {
+            "path": "pages/test/TestHmUniEleTable"
+        },
+        {
+            "path": "pages/test/TestHmUniTable"
+        },
+        {
+            "path": "pages/test/TestHmUniappRate"
+        },
+        {
+            "path": "pages/test/TestHmUviewActionSheet"
+        },
+        {
+            "path": "pages/test/TestHmUviewBadge"
+        },
+        {
+            "path": "pages/test/TestHmUviewBgCard"
+        },
+        {
+            "path": "pages/test/TestHmUviewButton"
+        },
+        {
+            "path": "pages/test/TestHmUviewCalendar"
+        },
+        {
+            "path": "pages/test/TestHmUviewCell"
+        },
+        {
+            "path": "pages/test/TestHmUviewCheckbox"
+        },
+        {
+            "path": "pages/test/TestHmUviewCollapse"
+        },
+        {
+            "path": "pages/test/TestHmUviewCountDown"
+        },
+        {
+            "path": "pages/test/TestHmUviewDivider"
+        },
+        {
+            "path": "pages/test/TestHmUviewEmpty"
+        },
+        {
+            "path": "pages/test/TestHmUviewFab"
+        },
+        {
+            "path": "pages/test/TestHmUviewField"
+        },
+        {
+            "path": "pages/test/TestHmUviewFilter"
+        },
+        {
+            "path": "pages/test/TestHmUviewFormily"
+        },
+        {
+            "path": "pages/test/TestHmUviewFormilyOld"
+        },
+        {
+            "path": "pages/test/TestHmUviewGrid"
+        },
+        {
+            "path": "pages/test/TestHmUviewIcon"
+        },
+        {
+            "path": "pages/test/TestHmUviewImage"
+        },
+        {
+            "path": "pages/test/TestHmUviewList"
+        },
+        {
+            "path": "pages/test/TestHmUviewLoading"
+        },
+        {
+            "path": "pages/test/TestHmUviewNavbar"
+        },
+        {
+            "path": "pages/test/TestHmUviewNoticeBar"
+        },
+        {
+            "path": "pages/test/TestHmUviewPanel"
+        },
+        {
+            "path": "pages/test/TestHmUviewParse"
+        },
+        {
+            "path": "pages/test/TestHmUviewPicker"
+        },
+        {
+            "path": "pages/test/TestHmUviewPopup"
+        },
+        {
+            "path": "pages/test/TestHmUviewRadio"
+        },
+        {
+            "path": "pages/test/TestHmUviewRate"
+        },
+        {
+            "path": "pages/test/TestHmUviewSearch"
+        },
+        {
+            "path": "pages/test/TestHmUviewSelect"
+        },
+        {
+            "path": "pages/test/TestHmUviewSlider"
+        },
+        {
+            "path": "pages/test/TestHmUviewSteps"
+        },
+        {
+            "path": "pages/test/TestHmUviewSticky"
+        },
+        {
+            "path": "pages/test/TestHmUviewSwipeAction"
+        },
+        {
+            "path": "pages/test/TestHmUviewSwiper"
+        },
+        {
+            "path": "pages/test/TestHmUviewSwitch"
+        },
+        {
+            "path": "pages/test/TestHmUviewTabbar"
+        },
+        {
+            "path": "pages/test/TestHmUviewTabs"
+        },
+        {
+            "path": "pages/test/TestHmUviewTag"
+        },
+        {
+            "path": "pages/test/TestHmUviewText"
+        },
+        {
+            "path": "pages/test/TestHmUviewToast"
+        },
+        {
+            "path": "pages/test/TestHmUviewUpload"
+        },
+        {
+            "path": "pages/test/TestHmVideo"
+        },
+        {
+            "path": "pages/test/TestHmVisitsCard"
+        },
+        {
+            "path": "pages/test/TestLiveSlotScope"
+        },
+        {
+            "path": "pages/test/TestSticky"
+        },
+        {
+            "path": "pages/test/Testtest"
+        },
+        {
+            "path": "pages/test/test"
+        },
+        {
+            "path": "pages/test/testHmCalendar"
+        },
+        {
+            "path": "pages/test/testHmCanvas"
+        },
+        {
+            "path": "pages/test/testHmUviewCountDownInput"
+        },
+        {
+            "path": "pages/test/tests"
+        },
+        {
+            "path": "pages/testImportPage/page"
+        },
+        {
+            "path": "components/HmBlock"
+        },
+        {
+            "path": "components/built-in/echarts-for-wx/HmEcharts"
+        },
+        {
+            "path": "components/built-in/qiun-data-charts/HmBarCharts"
+        },
+        {
+            "path": "components/built-in/qiun-data-charts/HmColumnCharts"
+        },
+        {
+            "path": "components/built-in/qiun-data-charts/HmMixCharts"
+        },
+        {
+            "path": "components/built-in/qiun-data-charts/HmPieCharts"
+        },
+        {
+            "path": "components/built-in/qiun-data-charts/HmQiunCharts"
+        },
+        {
+            "path": "components/built-in/qiun-data-charts/HmRingCharts"
+        },
+        {
+            "path": "components/built-in/third-party/HmExam/index"
+        },
+        {
+            "path": "components/built-in/third-party/HmImageCrop"
+        },
+        {
+            "path": "components/built-in/third-party/HmKspCropper"
+        },
+        {
+            "path": "components/built-in/third-party/HmKxjPreviewImage"
+        },
+        {
+            "path": "components/built-in/third-party/HmLimeSignature"
+        },
+        {
+            "path": "components/built-in/third-party/HmSearch"
+        },
+        {
+            "path": "components/built-in/third-party/HmUniEleTable/index"
+        },
+        {
+            "path": "components/built-in/third-party/HmUniEleTable/loading"
+        },
+        {
+            "path": "components/built-in/thorui-uni/HmTuiTable"
+        },
+        {
+            "path": "components/built-in/thorui-uni/tui-table/tui-table"
+        },
+        {
+            "path": "components/built-in/thorui-uni/tui-td/tui-td"
+        },
+        {
+            "path": "components/built-in/thorui-uni/tui-tr/tui-tr"
+        },
+        {
+            "path": "components/built-in/uni-ui/HmUniTable"
+        },
+        {
+            "path": "components/built-in/uniapp/HmAudio"
+        },
+        {
+            "path": "components/built-in/uniapp/HmBarcode"
+        },
+        {
+            "path": "components/built-in/uniapp/HmButton"
+        },
+        {
+            "path": "components/built-in/uniapp/HmCalendar"
+        },
+        {
+            "path": "components/built-in/uniapp/HmCamera"
+        },
+        {
+            "path": "components/built-in/uniapp/HmCanvas"
+        },
+        {
+            "path": "components/built-in/uniapp/HmCellList"
+        },
+        {
+            "path": "components/built-in/uniapp/HmCheckList"
+        },
+        {
+            "path": "components/built-in/uniapp/HmCheckbox"
+        },
+        {
+            "path": "components/built-in/uniapp/HmColorPicker"
+        },
+        {
+            "path": "components/built-in/uniapp/HmCoverImage"
+        },
+        {
+            "path": "components/built-in/uniapp/HmCoverView"
+        },
+        {
+            "path": "components/built-in/uniapp/HmDropDownBox"
+        },
+        {
+            "path": "components/built-in/uniapp/HmEditor"
+        },
+        {
+            "path": "components/built-in/uniapp/HmFrom"
+        },
+        {
+            "path": "components/built-in/uniapp/HmIDCard"
+        },
+        {
+            "path": "components/built-in/uniapp/HmIcon"
+        },
+        {
+            "path": "components/built-in/uniapp/HmImage"
+        },
+        {
+            "path": "components/built-in/uniapp/HmInput"
+        },
+        {
+            "path": "components/built-in/uniapp/HmLabel"
+        },
+        {
+            "path": "components/built-in/uniapp/HmLivePlayer"
+        },
+        {
+            "path": "components/built-in/uniapp/HmLivePusher"
+        },
+        {
+            "path": "components/built-in/uniapp/HmMap"
+        },
+        {
+            "path": "components/built-in/uniapp/HmMatchMedia"
+        },
+        {
+            "path": "components/built-in/uniapp/HmMovableArea"
+        },
+        {
+            "path": "components/built-in/uniapp/HmMovableView"
+        },
+        {
+            "path": "components/built-in/uniapp/HmMoveView"
+        },
+        {
+            "path": "components/built-in/uniapp/HmPicker"
+        },
+        {
+            "path": "components/built-in/uniapp/HmPickerView"
+        },
+        {
+            "path": "components/built-in/uniapp/HmProgress"
+        },
+        {
+            "path": "components/built-in/uniapp/HmRadio"
+        },
+        {
+            "path": "components/built-in/uniapp/HmRichText"
+        },
+        {
+            "path": "components/built-in/uniapp/HmScanCode"
+        },
+        {
+            "path": "components/built-in/uniapp/HmScrollView"
+        },
+        {
+            "path": "components/built-in/uniapp/HmSignature"
+        },
+        {
+            "path": "components/built-in/uniapp/HmSlider"
+        },
+        {
+            "path": "components/built-in/uniapp/HmSwiper"
+        },
+        {
+            "path": "components/built-in/uniapp/HmSwitch"
+        },
+        {
+            "path": "components/built-in/uniapp/HmText"
+        },
+        {
+            "path": "components/built-in/uniapp/HmTextarea"
+        },
+        {
+            "path": "components/built-in/uniapp/HmVideo"
+        },
+        {
+            "path": "components/built-in/uniapp/HmVideoList"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmActiveUsersCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmCalendarPro"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmCallOptionCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmCommentItemsCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmCommodityDisplayCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmCoverCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmCreditCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmDownloadsCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmDropDownSelect"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmDynamicDetailCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmEmailCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmFilter"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmFollowCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmFriendInformationCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmFriendsList"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmFriendsRequestsCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmGoodsCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmHeadPortraitCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmImageCardList"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmIndexList"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmInformationCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmLabelCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmLoop"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmMomentPictureWall"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmMomentVideo"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmMumuPeview"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmNewsCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmNewsDetail"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmPhotoCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmRequestCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmRowVideoCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmSimpleChatRoom"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmSmsListCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmStoriesCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmSwipeList"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmTalkCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmTaskCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmTaskListCard"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmThoruiTable"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmUniUpload"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmUniappRate"
+        },
+        {
+            "path": "components/built-in/uniapp-haomo/HmVisitsCard"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewAction"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewActionSheet"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewBackTop"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewBadge"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewBgCard"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewButton"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewCalendar"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewCellList"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewCheckbox"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewCollapse"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewCountDown"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewCountDownInput"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewDivider"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewEmpty"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewFab"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewField"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewFilter"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewFormily"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewFormilyArraySelect"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewFormilyCheckbox"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewFormilyOld"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewFormilyPicker"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewFormilyRadio"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewFormilySelect"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewFormilyUpload"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewGrid"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewIcon"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewImage"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewList"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewLoading"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewModal"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewNavbar"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewNoticeBar"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewPanel"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewParse"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewPicker"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewPopup"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewRadio"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewRate"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewSearch"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewSelect"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewSlider"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewSteps"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewSticky"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewSwipeAction"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewSwiper"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewSwitch"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewTabbar"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewTabs"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewTag"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewText"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewToast"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewUpload"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/HmUviewWebView"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/layout/HmBgCard"
+        },
+        {
+            "path": "components/built-in/uniapp-uview-vue3/layout/HmImportPage"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-badge/uni-badge"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-breadcrumb/uni-breadcrumb"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-breadcrumb-item/uni-breadcrumb-item"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-calendar/uni-calendar-item"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-calendar/uni-calendar"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-card/uni-card"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-col/uni-col"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-collapse/uni-collapse"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-collapse-item/uni-collapse-item"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-combox/uni-combox"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-countdown/uni-countdown"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-data-checkbox/uni-data-checkbox"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-data-picker/uni-data-picker"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-data-pickerview/uni-data-pickerview"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-data-select/uni-data-select"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-dateformat/uni-dateformat"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-datetime-picker/calendar-item"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-datetime-picker/calendar"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-datetime-picker/time-picker"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-datetime-picker/uni-datetime-picker"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-drawer/uni-drawer"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-easyinput/uni-easyinput"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-fab/uni-fab"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-fav/uni-fav"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-file-picker/uni-file-picker"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-file-picker/upload-file"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-file-picker/upload-image"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-forms/uni-forms"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-forms-item/uni-forms-item"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-goods-nav/uni-goods-nav"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-grid/uni-grid"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-grid-item/uni-grid-item"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-group/uni-group"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-icons/uni-icons"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-indexed-list/uni-indexed-list-item"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-indexed-list/uni-indexed-list"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-link/uni-link"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-list/uni-list"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-list/uni-refresh"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-list-ad/uni-list-ad"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-list-chat/uni-list-chat"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-list-item/uni-list-item"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-load-more/uni-load-more"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-nav-bar/uni-nav-bar"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-nav-bar/uni-status-bar"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-notice-bar/uni-notice-bar"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-number-box/uni-number-box"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-pagination/uni-pagination"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-popup/uni-popup"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-popup-dialog/uni-popup-dialog"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-popup-message/uni-popup-message"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-popup-share/uni-popup-share"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-rate/uni-rate"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-row/uni-row"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-search-bar/uni-search-bar"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-section/uni-section"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-segmented-control/uni-segmented-control"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-steps/uni-steps"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-swipe-action/uni-swipe-action"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-swipe-action-item/uni-swipe-action-item"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-swiper-dot/uni-swiper-dot"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-table/uni-table"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-tag/uni-tag"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-tbody/uni-tbody"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-td/uni-td"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-th/filter-dropdown"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-th/uni-th"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-thead/uni-thead"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-title/uni-title"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-tooltip/uni-tooltip"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-tr/table-checkbox"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-tr/uni-tr"
+        },
+        {
+            "path": "components/uni-ui/lib/uni-transition/uni-transition"
+        }
+    ],
+    "subPackages": [],
+    "globalStyle": {
+        "navigationStyle": "default",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "uni-app",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8",
+        "rpxCalcMaxDeviceWidth": "750",
+        "rpxCalcBaseDeviceWidth": "375",
+        "rpxCalcIncludeWidth": "375",
+        "dynamicRpx": true,
+        "usingComponents": {
+            "ec-charts": "/wxcomponents/ec-canvas/ec-canvas"
+        }
     }
-  },
-  "pages": [
-    {
-      "path": "pages/index/index",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    // #ifdef H5 | MP-WEIXIN
-    {
-      "path": "pages/test/TestHmUviewParse",
-      "style": {
-        "navigationBarTitleText": "TestHmUviewParse"
-      }
-    },
-    // #endif
-    {
-      "path": "pages/test/TestHmSwipeList",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "pages/test/TestHmImageCardList",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "pages/test/TestLiveSlotScope",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewButton",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmIndexList",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmImageCardList",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmDropDownSelect",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmCalendarPro",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmFriendsRequestsCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmNewsDetail",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmActiveUsersCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmHeadPortraitCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmInformationCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmCommodityDisplayCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmLabelCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmNewsCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmCoverCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmTaskListCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmTaskCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmDownloadsCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmFriendInformationCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmStoriesCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmFriendsList",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmRowVideoCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmSimpleChatRoom",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmCommentItemsCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmGoodsCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmPhotoCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmVisitsCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmCallOptionCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmTalkCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "pages/test/TestHmDropDownSelect",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmSwipeList",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmEmailCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "pages/test/TestHmExam",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmMomentPictureWall",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmFollowCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmRequestCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmSmsListCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmDynamicDetailCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-haomo/HmCreditCard",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmMap",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmCanvas",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewTabs",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/HmImagesCrop",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/HmKspCroppers",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/HmKxjPreviewImages",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmMoveView",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewFab",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmVideoList",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/Testtest",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/tests",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewButton",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewCheckbox",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewCheckbox",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewField",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewRadio",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewSlider",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewSearch",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewBadge",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewDivider",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewNoticeBar",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewSteps",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewSticky",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewIcon",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewIcon",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewImage",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewImage",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewCalendar",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewCalendar",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewParse",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/test",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewDivider",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewField",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewNoticeBar",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewRadio",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewSearch",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewSlider",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewSteps",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewSticky",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewCellList",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewCell",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewRate",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewRate",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewNavbar",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewNavbar",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewTabbar",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewTabbar",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewTag",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewTag",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewEmpty",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewEmpty",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewLoading",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewLoading",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/qiun-data-charts/HmQiunCharts",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/qiun-data-charts/HmMixCharts",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewCountDown",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewCountDown",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewPicker",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewPicker",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewSwitch",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewSwitch",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewPopup",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewPopup",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewBgCard",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/layout/HmBgCard",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewBgCard",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewGrid",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewGrid",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewFormily",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewActionSheet",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewActionSheet",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewSwiper",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewSwiper",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewList",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewList",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewText",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewText",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewSelect",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewSelect",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewTabs",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewPanel",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewPanel",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewUpload",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewUpload",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp-uview-vue3/HmUviewSwipeAction",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewSwipeAction",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmDropDownBox",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmIDCard",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmSignature",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmCellList",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmScanCode",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmBarcode",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmCheckList",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmMap",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmCheckbox",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmIcon",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmEditor",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmPickerView",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmVideo",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmVideo",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmText",
-      "style": {
-        "navigationBarTitleTgitext": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmLivePlayer",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmLivePusher",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmRadio",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmInput",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmPicker",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmScrollView",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmSwiper",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmMatchMedia",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmMovableArea",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmMovableView",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmCoverView",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/testHmCalendar",
-      "style": {
-        "navigationBarTitleText": "日历",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmCalendar",
-      "style": {
-        "navigationBarTitleText": "日历",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmCoverImage",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmRichText",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmProgress",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmButton",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmImage",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmLabel",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmSlider",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmSwitch",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmTextarea",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmAudio",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmCamera",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "components/built-in/uniapp/HmFrom",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmQiunCharts",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmRichText",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmColorPicker",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewToast",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewCollapse",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUniTable",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmTuiTable",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUniEleTable",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewFormily",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmUviewFormilyOld",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    // #ifdef H5
-    {
-      "path": "pages/test/TestHmImportPage",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    //#endif
-    {
-      "path": "pages/test/TestHmUviewFilter",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmLoop",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/test/TestHmMumuPeview",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/1599675588405104642/page",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    }
-  ],
-  "globalStyle": {
-    "navigationStyle": "default",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8",
-    "rpxCalcMaxDeviceWidth": "750",
-    "rpxCalcBaseDeviceWidth": "375",
-    "rpxCalcIncludeWidth": "375",
-    "dynamicRpx": true,
-    "usingComponents": {
-      // 引入全局echarts组件
-      "ec-charts": "/wxcomponents/ec-canvas/ec-canvas"
-    }
-  },
-  "condition": {
-    "current": 0,
-    "list": [
-      {
-        "name": "HmScanCode",
-        "path": "components/built-in/uniapp/HmScanCode",
-        "query": ""
-      },
-      {
-        "name": "HmBarcode",
-        "path": "components/built-in/uniapp-uview-vue3/HmBarcode",
-        "query": ""
-      },
-      {
-        "name": "TestHmMap",
-        "path": "pages/test/TestHmMap",
-        "query": ""
-      },
-      {
-        "name": "TestHmVideo",
-        "path": "pages/test/TestHmVideo",
-        "query": ""
-      },
-      {
-        "name": "TestHmQiunCharts",
-        "path": "pages/test/TestHmQiunCharts",
-        "query": ""
-      },
-      {
-        "name": "HmMap",
-        "path": "components/built-in/uniapp/HmMap",
-        "query": ""
-      },
-      {
-        "name": "TestHmColorPicker",
-        "path": "pages/test/TestHmColorPicker",
-        "query": ""
-      },
-      {
-        "name": "TestHmUviewFormily",
-        "path": "pages/test/TestHmUviewFormily",
-        "query": ""
-      }
-    ]
-  }
 }

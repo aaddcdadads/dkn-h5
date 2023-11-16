@@ -1,6 +1,7 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import uni from "@dcloudio/vite-plugin-uni";
+import MiVitePagesJson from './src/uni_modules/mi-vite-pages-json';
 
 const os = require("os");
 
@@ -41,7 +42,9 @@ export default defineConfig({
       },
     ],
   },
-  plugins: [uni()],
+  plugins: [uni(), MiVitePagesJson({
+    sourceDirs: ['pages', 'components'], // 页面目录, 默认['pages']
+  })],
   optimizeCacheDir: resolve(__dirname, "node_modules/.vite/"),
   optimizeDeps: {
     include: ["lodash", "moment"],
