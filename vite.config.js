@@ -1,6 +1,7 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import uni from "@dcloudio/vite-plugin-uni";
+// https://ext.dcloud.net.cn/plugin?id=11880
 import MiVitePagesJson from './src/uni_modules/mi-vite-pages-json';
 
 const os = require("os");
@@ -67,6 +68,7 @@ export default defineConfig({
         // 忽略生成的json文件
         "**/src/pages/**/config.json",
         "**/src/pages/**/page.json",
+        "**/src/pages/.*/*.*",
         // 忽略根目录下的文件
         "**/.babelrc",
         "**/.eslintrc.js",
