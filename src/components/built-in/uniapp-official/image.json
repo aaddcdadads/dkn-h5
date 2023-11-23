@@ -1,0 +1,124 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "图片地址",
+      "keywords": [],
+      "visibility": "public",
+      "name": "src",
+      "type": "String",
+      "default": "https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/shuijiao.jpg",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图片裁剪模式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"scaleToFill\", \"aspectFit\", \"aspectFill\",\"widthFix\",\"top\",\"bottom\",\"center\",\"left\",\"right\",\"top left\",\"top right\",\"bottom left\",\"bottom right\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "mode",
+      "type": "Enum",
+      "default": "scaleToFill",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图片懒加载",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lazy-load",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图片显示动画效果",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fade-show",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "启用webp",
+      "keywords": [],
+      "visibility": "public",
+      "name": "webp",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "识别小程序码菜单",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-menu-by-longpress",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "拖动图片",
+      "keywords": [],
+      "visibility": "public",
+      "name": "draggable",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "load",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [],
+  "name": "image",
+  "description": "图片组件"
+}

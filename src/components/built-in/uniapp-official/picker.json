@@ -1,0 +1,184 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "default": "",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"selector\", \"multiSelector\", \"time\",\"date\",\"region\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "mode",
+      "type": "Enum",
+      "default":"selector",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "数据",
+      "keywords": [],
+      "visibility": "public",
+      "name": "range",
+      "type": "Array",
+      "default":"[\n '中国', \n'美国',\n '巴西',\n '日本'\n]",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": " key的值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "range-key",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "modelValue",
+      "type": ["Number","String","Array"],
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "大屏时UI类型",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selector-type",
+      "type": "String",
+      "default": "auto",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "禁用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "时间范围开始",
+      "keywords": [],
+      "visibility": "public",
+      "name": "start",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "时间范围结束",
+      "keywords": [],
+      "visibility": "public",
+      "name": "end",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "有效值",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"year\", \"month\", \"day\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "fields",
+      "type": "Enum",
+      "default": "day",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自定义的项",
+      "keywords": [],
+      "visibility": "public",
+      "name": "custom-item",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cancel",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "columnchange",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [],
+  "name": "picker",
+  "description": "选择器"
+}

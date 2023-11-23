@@ -1,0 +1,301 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [
+        {
+            "kind": "slot",
+            "keywords": [],
+            "visibility": "public",
+            "name": "default",
+            "default": "",
+            "props": []
+          }
+    ],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "选中",
+        "keywords": [],
+        "visibility": "public",
+        "name": "indicator-dots",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "指示点颜色",
+        "keywords": [],
+        "visibility": "public",
+        "name": "indicator-color",
+        "type": "Color",
+        "default": "rgba(0, 0, 0, .3)",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "选中指示点颜色",
+        "keywords": [],
+        "visibility": "public",
+        "name": "indicator-active-color",
+        "type": "Color",
+        "default": "#000000",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "滑块项类",
+        "keywords": [],
+        "visibility": "public",
+        "name": "active-class",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "中间可见屏类",
+        "keywords": [],
+        "visibility": "public",
+        "name": "changing-class",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "自动切换",
+        "keywords": [],
+        "visibility": "public",
+        "name": "autoplay",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "当前滑块下标",
+        "keywords": [],
+        "visibility": "public",
+        "name": "current",
+        "type": "Number",
+        "default": 0,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "当前滑块item-id",
+        "keywords": [],
+        "visibility": "public",
+        "name": "current-item-id",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "切换时间间隔",
+        "keywords": [],
+        "visibility": "public",
+        "name": "interval",
+        "type": "Number",
+        "default": 5000,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "滑动动画时长",
+        "keywords": [],
+        "visibility": "public",
+        "name": "duration",
+        "type": "Number",
+        "default": 500,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "采用衔接滑动",
+        "keywords": [],
+        "visibility": "public",
+        "name": "circular",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "滑动方向是否为纵向",
+        "keywords": [],
+        "visibility": "public",
+        "name": "vertical",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "前边距",
+        "keywords": [],
+        "visibility": "public",
+        "name": "previous-margin",
+        "type": "String",
+        "default": "0px",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "后边距",
+        "keywords": [],
+        "visibility": "public",
+        "name": "next-margin",
+        "type": "String",
+        "default": "0px",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "连续滑动多屏",
+        "keywords": [],
+        "visibility": "public",
+        "name": "acceleration",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "禁用代码变动切换",
+        "keywords": [],
+        "visibility": "public",
+        "name": "disable-programmatic-animation",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "显示滑块数量",
+        "keywords": [],
+        "visibility": "public",
+        "name": "display-multiple-items",
+        "type": "Number",
+        "default": 1,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "跳过未显示滑块",
+        "keywords": [],
+        "visibility": "public",
+        "name": "skip-hidden-item-layout",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "禁止touch操作",
+        "keywords": [],
+        "visibility": "public",
+        "name": "disable-touch",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "监听触摸事件",
+        "keywords": [],
+        "visibility": "public",
+        "name": "touchable",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "动画类型",
+        "keywords": [
+            {
+               "name": "options",
+               "description": "[\"default\", \"linear\", \"easeInCubic\",\"easeOutCubic\",\"easeInOutCubic\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "easing-function",
+        "type": "String",
+        "default": "default",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "change",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "transition",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "animationfinish",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      }
+    ],
+    "methods": [],
+    "name": "swiper",
+    "description": "滑块视图容器"
+  }
+  

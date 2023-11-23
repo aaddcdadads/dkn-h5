@@ -1,0 +1,68 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "default": "",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "按下去样式类",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-class",
+      "type": "String",
+      "default": "none",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "阻止出现点击态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-stop-propagation",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "多久出现点击态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-start-time",
+      "type": "Number",
+      "default": 50,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击态保留时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-stay-time",
+      "type": "Number",
+      "default": 400,
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "name": "view",
+  "description": "视图容器"
+}

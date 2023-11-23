@@ -1,0 +1,60 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [
+    ],
+    "props": [
+        {
+            "kind": "prop",
+            "description": "标识",
+            "keywords": [],
+            "visibility": "public",
+            "name": "modelValue",
+            "type": "String",
+            "default": "",
+            "required": false,
+            "describeModel": false
+        },
+        {
+            "kind": "prop",
+            "description": "当前是否选中",
+            "keywords": [],
+            "visibility": "public",
+            "name": "checked",
+            "type": "Boolean",
+            "default": "false",
+            "required": false,
+            "describeModel": false
+        },
+        {
+            "kind": "prop",
+            "description": "是否禁用",
+            "keywords": [],
+            "visibility": "public",
+            "name": "disabled",
+            "type": "Boolean",
+            "default": "false",
+            "required": false,
+            "describeModel": false
+        },
+        {
+            "kind": "prop",
+            "description": "颜色",
+            "keywords": [],
+            "visibility": "public",
+            "name": "color",
+            "type": "Color",
+            "default": "",
+            "required": false,
+            "describeModel": false
+        }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [],
+    "methods": [],
+    "name": "radio",
+    "description": "单选项目"
+}

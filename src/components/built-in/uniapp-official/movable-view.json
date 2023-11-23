@@ -1,0 +1,199 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "default": "",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "移动方向",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"all\", \"vertical\", \"horizontal\",\"none\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "direction",
+      "type": "Enum",
+      "default": "none",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "带有惯性",
+      "keywords": [],
+      "visibility": "public",
+      "name": "inertia",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "可移动",
+      "keywords": [],
+      "visibility": "public",
+      "name": "out-of-bounds",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "x轴方向偏移",
+      "keywords": [],
+      "visibility": "public",
+      "name": "x",
+      "type": "Number",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "y轴方向偏移",
+      "keywords": [],
+      "visibility": "public",
+      "name": "y",
+      "type": "Number",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "阻尼系数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "damping",
+      "type": "Number",
+      "default": 20,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "摩擦系数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "friction",
+      "type": "Number",
+      "default": 2,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "禁用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "支持双指缩放",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scale",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "缩放倍数最小值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scale-min",
+      "type": "Number",
+      "default": 0.5,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "缩放倍数最大值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scale-max",
+      "type": "Number",
+      "default": 10,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "定义缩放倍数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scale-value",
+      "type": "Number",
+      "default": 1,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "使用动画",
+      "keywords": [],
+      "visibility": "public",
+      "name": "animation",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scale",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [],
+  "name": "movable-view",
+  "description": "可移动视图"
+}

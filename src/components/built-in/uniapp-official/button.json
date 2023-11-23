@@ -1,0 +1,503 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "default": "按钮",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "按钮大小",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"default\", \"mini\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "size",
+      "type": "Enum",
+      "default": "default",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "样式类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"primary\", \"default\",\"warn\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "type",
+      "type": "Enum",
+      "default": "default",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "按钮镂空",
+      "keywords": [],
+      "visibility": "public",
+      "name": "plain",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "禁用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "加载图标",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loading",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+        "kind": "prop",
+        "description": "点击触发事件",
+        "keywords": [
+            {
+              "name": "options",
+              "description": "[\"submit\", \"reset\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "form-type",
+        "type": "Enum",
+        "default":"",
+        "required": false,
+        "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "开放能力",
+      "keywords": [
+        {
+            "name": "options",
+            "description": "[\"feedback\", \"share\",\"getUserInfo\",\"contact\",\"getPhoneNumber\",\"launchApp\",\"openSetting\",\"chooseAvatar\",\"agreePrivacyAuthorization\",\"openSetting\",\"uploadDouyinVideo\",\"im\",\"getAuthorize\",\"lifestyle\",\"contactShare\",\"openGroupProfile\",\"openGuildProfile\",\"openPublicProfile\",\"shareMessageToFriend\",\"addFriend\",\"addColorSign\",\"addGroupApp\",\"addToFavorites\",\"chooseAddress\",\"chooseInvoiceTitle\",\"login\",\"subscribe\",\"favorite\",\"watchLater\",\"openProfile\"]"
+          }
+      ],
+      "visibility": "public",
+      "name": "open-type",
+      "type": "Enum",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "按下去样式类",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-class",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "多久出现点击态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-start-time",
+      "type": "Number",
+      "default": 20,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击态保留时间",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-stay-time",
+      "type": "Number",
+      "default": 70,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "向APP传递参数",
+      "keywords": [],
+      "visibility": "public",
+      "name": "app-parameter",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "阻止出现点击态",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hover-stop-propagation",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "返回信息语言",
+      "keywords": [],
+      "visibility": "public",
+      "name": "lang",
+      "type": "String",
+      "default": "en",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "会话来源",
+      "keywords": [],
+      "visibility": "public",
+      "name": "session-from",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "消息卡片标题",
+      "keywords": [],
+      "visibility": "public",
+      "name": "send-message-title",
+      "type": "String",
+      "default": "当前标题",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "跳转小程序路径",
+      "keywords": [],
+      "visibility": "public",
+      "name": "send-message-path",
+      "type": "String",
+      "default": "当前分享路径",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "卡片图片",
+      "keywords": [],
+      "visibility": "public",
+      "name": "send-message-img",
+      "type": "String",
+      "default": "截图",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示消息卡片",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-message-card",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "传递的群号",
+      "keywords": [],
+      "visibility": "public",
+      "name": "group-id",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "传递的频道号",
+      "keywords": [],
+      "visibility": "public",
+      "name": "guild-id",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "传递的号码",
+      "keywords": [],
+      "visibility": "public",
+      "name": "public-id",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "客服的抖音号",
+      "keywords": [],
+      "visibility": "public",
+      "name": "data-im-id",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "IM卡片类型",
+      "keywords": [],
+      "visibility": "public",
+      "name": "data-im-type",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "商品的id",
+      "keywords": [],
+      "visibility": "public",
+      "name": "data-goods-id",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "订单的id",
+      "keywords": [],
+      "visibility": "public",
+      "name": "data-order-id",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "商品类型",
+      "keywords": [],
+      "visibility": "public",
+      "name": "data-biz-line",
+      "type": "String",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getphonenumber",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getuserinfo",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "opensetting",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "launchapp",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "chooseavatar",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "contact",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "agreeprivacyauthorization",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "addgroupapp",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "chooseaddress",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "chooseinvoicetitle",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "subscribe",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "login",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "im",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      }
+  ],
+  "methods": [],
+  "name": "button",
+  "description": "按钮"
+}

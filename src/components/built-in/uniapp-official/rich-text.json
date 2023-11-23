@@ -1,0 +1,85 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "节点列表",
+        "keywords": [],
+        "visibility": "public",
+        "name": "nodes",
+        "type": "Array",
+        "default":"function(){\n return [{\n   name: 'div',\n  attrs: {\n  class: 'div-class',\n   style: 'line-height: 60px; color: red; text-align:center;'\n },\n  children: [{\n   type: 'text',\n text: 'Hello&nbsp;uni-app!'\n }]\n  }]\n}",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "显示连续空格",
+        "keywords": [],
+        "visibility": "public",
+        "name": "space",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "长按选中",
+        "keywords": [],
+        "visibility": "public",
+        "name": "selectable",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "阻止弹起菜单",
+        "keywords": [],
+        "visibility": "public",
+        "name": "image-menu-prevent",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "可点击预览",
+        "keywords": [],
+        "visibility": "public",
+        "name": "preview",
+        "type": "Boolean",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+        {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "itemclick",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          }
+    ],
+    "methods": [],
+    "name": "rich-text",
+    "description": "富文本"
+  }
+  

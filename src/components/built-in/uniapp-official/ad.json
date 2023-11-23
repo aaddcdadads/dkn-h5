@@ -1,0 +1,182 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "广告位",
+        "keywords": [],
+        "visibility": "public",
+        "name": "adpid",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "广告单元",
+        "keywords": [],
+        "visibility": "public",
+        "name": "unit-id",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "刷新间隔时间",
+        "keywords": [],
+        "visibility": "public",
+        "name": "ad-intervals",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "广告数据",
+        "keywords": [],
+        "visibility": "public",
+        "name": "data",
+        "type": "Object",
+        "default": "function(){\n return{\n}\n}",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "小程序应用ID",
+        "keywords": [],
+        "visibility": "public",
+        "name": "appid",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "小程序广告位ID",
+        "keywords": [],
+        "visibility": "public",
+        "name": "apid",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "左边距",
+        "keywords": [],
+        "visibility": "public",
+        "name": "ad-left",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "上边距",
+        "keywords": [],
+        "visibility": "public",
+        "name": "ad-top",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "广告宽度",
+        "keywords": [],
+        "visibility": "public",
+        "name": "ad-width",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "广告高度",
+        "keywords": [],
+        "visibility": "public",
+        "name": "ad-height",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "类型",
+        "keywords": [
+            {
+                "name": "options",
+                "description": "[\"banner\", \"feed\", \"reset\",\"video\",\"large\",\"lImg\",\"rImg\",\"swip\",\"card\",\"feeds\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "type",
+        "type": "Enum",
+        "default": "feed",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "load",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "error",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "close",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      }
+    ],
+    "methods": [],
+    "name": "ad",
+    "description": "广告组件"
+  }
+  

@@ -1,0 +1,152 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "最小值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "min",
+      "type": "Number",
+      "default": 0,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "最大值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "max",
+      "type": "Number",
+      "default": 100,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "步长",
+      "keywords": [],
+      "visibility": "public",
+      "name": "step",
+      "type": "Number",
+      "default": 1,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "禁用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "当前取值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "modelValue",
+      "type": "Number",
+      "default": 0,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "已选择线条颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "activeColor",
+      "type": "Color",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "背景条的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "backgroundColor",
+      "type": "Color",
+      "default": "#e9e9e9",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "滑块的大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "block-size",
+      "type": "Number",
+      "default": 28,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "滑块的颜色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "block-color",
+      "type": "Color",
+      "default": "#ffffff",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示当前",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-value",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "changing",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [],
+  "name": "slider",
+  "description": "滑动选择器"
+}

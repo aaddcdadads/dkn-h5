@@ -1,0 +1,38 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [
+        {
+            "kind": "slot",
+            "keywords": [],
+            "visibility": "public",
+            "name": "default",
+            "default": "",
+            "props": []
+          }
+    ],
+    "props": [],
+    "data": [],
+    "computed": [],
+    "events": [
+        {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "change",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          }
+    ],
+    "methods": [],
+    "name": "checkbox-group",
+    "description": "多项选择器"
+  }
+  

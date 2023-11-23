@@ -1,0 +1,357 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "输入框的内容",
+      "keywords": [],
+      "visibility": "public",
+      "name": "modelValue",
+      "type": "String",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "占位符",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "占位符样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder-style",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "样式类",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder-class",
+      "type": "String",
+      "default": "textarea-placeholder",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "禁用",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disabled",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "最大输入长度",
+      "keywords": [],
+      "visibility": "public",
+      "name": "maxlength",
+      "type": "Number",
+      "default": 140,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "获取焦点",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自动聚焦",
+      "keywords": [],
+      "visibility": "public",
+      "name": "auto-focus",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自动增高",
+      "keywords": [],
+      "visibility": "public",
+      "name": "auto-height",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "固定的定位",
+      "keywords": [],
+      "visibility": "public",
+      "name": "fixed",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "光标与键盘距离",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cursor-spacing",
+      "type": "Number",
+      "default": 0,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "光标位置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "cursor",
+      "type": "Number",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "按钮的文字",
+      "keywords": [
+        {
+            "name": "options",
+            "description": "[\"send\", \"search\", \"next\",\"go\",\"done\"]"     
+        }
+      ],
+      "visibility": "public",
+      "name": "confirm-type",
+      "type": "Enum",
+      "default": "done",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "键盘不收起",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm-hold",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示”完成“按钮",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-confirm-bar",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "光标起始位置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selection-start",
+      "type": "Number",
+      "default": -1,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "光标结束位置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selection-end",
+      "type": "Number",
+      "default": -1,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自动上推页面",
+      "keywords": [],
+      "visibility": "public",
+      "name": "adjust-position",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "去掉内边距",
+      "keywords": [],
+      "visibility": "public",
+      "name": "disable-default-padding",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击页面不收起键盘",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hold-keyboard",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自动失去焦点",
+      "keywords": [],
+      "visibility": "public",
+      "name": "auto-blur",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "忽略系统事件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "ignoreCompositionEvent",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "数据类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"none\", \"text\", \"decimal\", \"numeric\", \"tel\", \"search\", \"email\",\"url\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "inputmode",
+      "type": "Enum",
+      "default": "text",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blur",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "linechange",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "input",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirm",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "keyboardheightchange",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [],
+  "name": "textarea",
+  "description": "多行输入框"
+}

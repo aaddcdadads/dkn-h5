@@ -1,0 +1,109 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "网页的链接",
+        "keywords": [],
+        "visibility": "public",
+        "name": "src",
+        "type": "String",
+        "default": "https://uniapp.dcloud.io/static/web-view.html",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "唯一标识符",
+        "keywords": [],
+        "visibility": "public",
+        "name": "allow",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "禁止屏幕",
+        "keywords": [],
+        "visibility": "public",
+        "name": "sandbox",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "启用高清处理",
+        "keywords": [],
+        "visibility": "public",
+        "name": "fullscreen",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "启用高清处理",
+        "keywords": [],
+        "visibility": "public",
+        "name": "webview-styles",
+        "type": "Object",
+        "default": "function(){\n return{\nprogress: {\n  color: '#FF3333'\n }}\n}",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "更新页面标题",
+        "keywords": [],
+        "visibility": "public",
+        "name": "update-title",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "message",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "onPostMessage",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      }
+    ],
+    "methods": [],
+    "name": "web-view",
+    "description": "承载网页容器"
+  }
+  

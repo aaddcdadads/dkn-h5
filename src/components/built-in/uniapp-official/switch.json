@@ -1,0 +1,80 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "选中",
+        "keywords": [],
+        "visibility": "public",
+        "name": "checked",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "禁用",
+        "keywords": [],
+        "visibility": "public",
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "样式",
+        "keywords": [
+            {
+              "name": "options",
+              "description": "[\"switch\", \"checkbox\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "type",
+        "type": "Enum",
+        "default": "switch",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "颜色",
+        "keywords": [],
+        "visibility": "public",
+        "name": "color",
+        "type": "Color",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      }
+     
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "change",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      }
+    ],
+    "methods": [],
+    "name": "switch",
+    "description": "开关选择器"
+  }
+  

@@ -1,0 +1,409 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "中心经度",
+        "keywords": [],
+        "visibility": "public",
+        "name": "longitude",
+        "type": "Number",
+        "default": "116.39742",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "中心纬度",
+        "keywords": [],
+        "visibility": "public",
+        "name": "latitude",
+        "type": "Number",
+        "default": "39.909",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "缩放级别",
+        "keywords": [],
+        "visibility": "public",
+        "name": "scale",
+        "type": "Number",
+        "default": 16,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "主题",
+        "keywords": [],
+        "visibility": "public",
+        "name": "theme",
+        "type": "String",
+        "default": "normal",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "最小缩放级别",
+        "keywords": [],
+        "visibility": "public",
+        "name": "min-scale",
+        "type": "Number",
+        "default": 3,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "最大缩放级别",
+        "keywords": [],
+        "visibility": "public",
+        "name": "max-scale",
+        "type": "Number",
+        "default": 20,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "个性化地图",
+        "keywords": [],
+        "visibility": "public",
+        "name": "layer-style",
+        "type": "Number",
+        "default": 1,
+        "required": false,
+        "describeModel": false
+      },
+        {
+        "kind": "prop",
+        "description": "标记点",
+        "keywords": [],
+        "visibility": "public",
+        "name": "markers",
+        "type": "Array",
+        "default": "function(){\n return[\n{latitude: 39.909,\n longitude: 116.39742,\n iconPath: ''\n },\n {\n latitude: 39.90,\n longitude: 116.39,\n iconPath: ''\n }\n]\n}",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "路线",
+        "keywords": [],
+        "visibility": "public",
+        "name": "polyline",
+        "type": "Array",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "圆",
+        "keywords": [],
+        "visibility": "public",
+        "name": "circles",
+        "type": "Array",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "控件",
+        "keywords": [],
+        "visibility": "public",
+        "name": "controls",
+        "type": "Array",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "缩放视野包含坐标点",
+        "keywords": [],
+        "visibility": "public",
+        "name": "include-points",
+        "type": "Array",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "显示3D楼块",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-3D",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "显示指南针",
+        "keywords": [],
+        "visibility": "public",
+        "name": "show-compass",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "支持缩放",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-zoom",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "支持拖动",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-scroll",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "支持旋转",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-rotate",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "开启俯视",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-overlooking",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "开启卫星图",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-satellite",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "开启实时路况",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-traffic",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "展示POI点",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-poi",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "展示建筑物",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-building",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "当前定位点",
+        "keywords": [],
+        "visibility": "public",
+        "name": "show-location",
+        "type": "Boolean",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "多边形",
+        "keywords": [],
+        "visibility": "public",
+        "name": "polygons",
+        "type": "Boolean",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "展示室内地图",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-indoorMap",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "markertap",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "labeltap",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "callouttap",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "controltap",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "regionchange",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "tap",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "updated",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "anchorpointtap",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "poitap",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      }
+    ],
+    "methods": [],
+    "name": "map",
+    "description": "地图组件"
+  }
+  

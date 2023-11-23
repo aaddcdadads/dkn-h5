@@ -1,0 +1,35 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "default": "",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "绑定控件id",
+      "keywords": [],
+      "visibility": "public",
+      "name": "for",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "name": "label",
+  "description": ""
+}
