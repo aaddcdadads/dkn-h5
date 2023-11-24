@@ -21,7 +21,7 @@
       "name": "model-value",
       "type": "String",
       "required": false,
-      "describeModel": false
+      "describeModel": true
     },
     {
       "kind": "prop",
