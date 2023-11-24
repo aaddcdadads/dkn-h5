@@ -203,7 +203,7 @@
       ],
       "default": "\"\"",
       "required": false,
-      "describeModel": false
+      "describeModel": true
     },
     {
       "kind": "prop",
