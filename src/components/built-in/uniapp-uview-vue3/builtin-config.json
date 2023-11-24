@@ -781,8 +781,8 @@
       {
         "name": "uni-breadcrumb",
         "title": "面包屑",
-        "docPath": "built-in/uni-ui/uni-breadcrumb-item.json",
-        "imgUrl": "built-in/uni-ui/img/uni-breadcrumb-item.png",
+        "docPath": "built-in/uni-ui/uni-breadcrumb.json",
+        "imgUrl": "built-in/uni-ui/img/uni-breadcrumb.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -790,7 +790,7 @@
         "name": "uni-calendar",
         "title": "日历",
         "docPath": "built-in/uni-ui/uni-calendar.json",
-        "imgUrl": "built-in/uni-uil/img/uni-calender.png",
+        "imgUrl": "built-in/uni-uil/img/uni-calendar.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -917,8 +917,8 @@
       {
         "name": "uni-forms",
         "title": "表单",
-        "docPath": "built-in/uni-ui/uni-froms.json",
-        "imgUrl": "built-in/uni-ui/img/uni-from.png",
+        "docPath": "built-in/uni-ui/uni-forms.json",
+        "imgUrl": "built-in/uni-ui/img/uni-forms.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -926,7 +926,7 @@
         "name": "uni-forms-item",
         "title": "表单项",
         "docPath": "built-in/uni-ui/uni-forms-item.json",
-        "imgUrl": "built-in/uni-ui/img/uni-froms-item.png",
+        "imgUrl": "built-in/uni-ui/img/uni-forms-item.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -937,20 +937,20 @@
         "imgUrl": "built-in/uni-ui/img/uni-goods-nav.png",
         "type": 0,
         "isBuiltIn": true
-      },
+      }, 
       {
-        "name": "uni-grid-item",
-        "title": "商品导航",
-        "docPath": "built-in/uni-ui/uni-goods-nav.json",
-        "imgUrl": "built-in/uni-ui/img/uni-goods-nav.png",
+        "name": "uni-grid",
+        "title": "宫格",
+        "docPath": "built-in/uni-ui/uni-grid.json",
+        "imgUrl": "built-in/uni-ui/img/uni-grid.png",
         "type": 0,
         "isBuiltIn": true
       },
       {
-        "name": "uni-grid",
-        "title": "商品导航",
-        "docPath": "built-in/uni-ui/uni-goods-nav.json",
-        "imgUrl": "built-in/uni-ui/img/uni-goods-nav.png",
+        "name": "uni-grid-item",
+        "title": "宫格项",
+        "docPath": "built-in/uni-ui/uni-grid-item.json",
+        "imgUrl": "built-in/uni-ui/img/uni-grid-item.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -988,17 +988,17 @@
       },
       {
         "name": "uni-list-ad",
-        "title": "超链接",
-        "docPath": "built-in/uni-ui/uni-link.json",
-        "imgUrl": "built-in/uni-ui/img/uni-link.png",
+        "title": "列表",
+        "docPath": "built-in/uni-ui/uni-list-ad.json",
+        "imgUrl": "built-in/uni-ui/img/uni-list-ad.png",
         "type": 0,
         "isBuiltIn": true
       },
       {
         "name": "uni-list-chat",
         "title": "聊天列表",
-        "docPath": "built-in/uni-ui/uni-link.json",
-        "imgUrl": "built-in/uni-ui/img/uni-link.png",
+        "docPath": "built-in/uni-ui/uni-list-chat.json",
+        "imgUrl": "built-in/uni-ui/img/uni-list-chat.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -1068,7 +1068,7 @@
       },
       {
         "name": "uni-popup-message",
-        "title": "提示信息",
+        "title": "提示信息弹窗",
         "docPath": "built-in/uni-ui/uni-popup-message.json",
         "imgUrl": "built-in/uni-ui/img/uni-popup-message.png",
         "type": 0,
@@ -1172,7 +1172,7 @@
       },
       {
         "name": "uni-tbody",
-        "title": "表格",
+        "title": "表格主体",
         "docPath": "built-in/uni-ui/uni-tbody.json",
         "imgUrl": "built-in/uni-ui/img/uni-tbody.png",
         "type": 0,
@@ -1180,7 +1180,7 @@
       },
       {
         "name": "uni-td",
-        "title": "表格",
+        "title": "单元格",
         "docPath": "built-in/uni-ui/uni-td.json",
         "imgUrl": "built-in/uni-ui/img/uni-td.png",
         "type": 0,
@@ -1188,7 +1188,7 @@
       },
       {
         "name": "uni-th",
-        "title": "表格",
+        "title": "表头单元格",
         "docPath": "built-in/uni-ui/uni-th.json",
         "imgUrl": "built-in/uni-ui/img/uni-th.png",
         "type": 0,
@@ -1196,7 +1196,7 @@
       },
       {
         "name": "uni-tr",
-        "title": "表格",
+        "title": "表格行",
         "docPath": "built-in/uni-ui/uni-tr.json",
         "imgUrl": "built-in/uni-ui/img/uni-tr.png",
         "type": 0,
@@ -1204,7 +1204,7 @@
       },
       {
         "name": "uni-thead",
-        "title": "表格",
+        "title": "表头",
         "docPath": "built-in/uni-ui/uni-thead.json",
         "imgUrl": "built-in/uni-ui/img/uni-thead.png",
         "type": 0,
