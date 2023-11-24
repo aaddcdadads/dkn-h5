@@ -1,0 +1,173 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "应用模式",
+        "keywords": [],
+        "visibility": "public",
+        "name": "mode",
+        "type": "String",
+        "default": "normal",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "分辨率",
+        "keywords": [
+          {
+            "name":"options",
+            "description":"[\"low\",\"medium\",\"high\"]"
+          }
+        ],
+        "visibility": "public",
+        "name": "resolution",
+        "type": "Enum",
+        "default": "medium",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "前后置摄像头",
+        "keywords": [
+            {
+                "name": "options",
+               "description": "[\"front\", \"back\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "device-position",
+        "type": "Enum",
+        "default": "back",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "闪光灯",
+        "keywords": [
+            {
+              "name": "options",
+              "description": "[\"auto\", \"on\", \"off\",\"torch\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "flash",
+        "type": "Enum",
+        "default": "auto",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "数据尺寸",
+        "keywords": [
+             {
+                "name": "options",
+                "description": "[\"small\", \"medium\", \"large\"]"
+             }
+        ],
+        "visibility": "public",
+        "name": "frame-size",
+        "type": "Enum",
+        "default": "medium",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "相机拍照",
+        "keywords": [
+            {
+                "name": "options",
+                "description": "[\"360P\", \"540P\", \"720P\",\"1080P\",\"max\"]"
+             }
+        ],
+        "visibility": "public",
+        "name": "output-dimension",
+        "type": "Enum",
+        "default": "720P",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "error",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "stop",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "initdone",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "ready",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "scancode",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      }
+    ],
+    "methods": [],
+    "name": "camera",
+    "description": "相机组件"
+  }
+  

@@ -1,0 +1,74 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [
+      {
+        "kind": "slot",
+        "keywords": [],
+        "visibility": "public",
+        "name": "default",
+        "default": "文本",
+        "props": []
+      }
+    ],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "文本可选",
+        "keywords": [],
+        "visibility": "public",
+        "name": "selectable",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "文本可选",
+        "keywords": [],
+        "visibility": "public",
+        "name": "user-select",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "显示连续空格",
+        "keywords": [
+            {
+                "name": "options",
+                "description": "[\"ensp\", \"emsp\", \"nbsp\"]"      
+            }
+        ],
+        "visibility": "public",
+        "name": "space",
+        "type": "Enum",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "解码",
+        "keywords": [],
+        "visibility": "public",
+        "name": "decode",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [],
+    "methods": [],
+    "name": "text",
+    "description": "文本组件"
+  }
+  

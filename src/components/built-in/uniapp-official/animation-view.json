@@ -1,0 +1,90 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "资源地址",
+        "keywords": [],
+        "visibility": "public",
+        "name": "path",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "循环播放",
+        "keywords": [],
+        "visibility": "public",
+        "name": "loop",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "自动播放",
+        "keywords": [],
+        "visibility": "public",
+        "name": "autoplay",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "动画操作",
+        "keywords": [
+            {
+                "name": "options",
+                "description": "[\"play\", \"pause\", \"stop\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "action",
+        "type": "Enum",
+        "default": "play",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "隐藏动画",
+        "keywords": [],
+        "visibility": "public",
+        "name": "hidden",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+        {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "bindended",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          }
+    ],
+    "methods": [],
+    "name": "animation-view",
+    "description": "动画组件"
+  }
+  

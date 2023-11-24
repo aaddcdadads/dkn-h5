@@ -1,0 +1,158 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "唯一标识符",
+      "keywords": [],
+      "visibility": "public",
+      "name": "id",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "资源地址",
+      "keywords": [],
+      "visibility": "public",
+      "name": "src",
+      "type": "String",
+      "default": "https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-hello-uniapp/2cc220e0-c27a-11ea-9dfb-6da8e309e0d8.mp3",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "循环播放",
+      "keywords": [],
+      "visibility": "public",
+      "name": "loop",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示默认控件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "controls",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图片资源地址",
+      "keywords": [],
+      "visibility": "public",
+      "name": "poster",
+      "type": "String",
+      "default": "https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/music-a.png",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "音频名字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "name",
+      "type": "String",
+      "default": "致爱丽丝",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "作者名字",
+      "keywords": [],
+      "visibility": "public",
+      "name": "author",
+      "type": "String",
+      "default": "暂无",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "play",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pause",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "timeupdate",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "ended",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [],
+  "name": "audio",
+  "description": "音频"
+}

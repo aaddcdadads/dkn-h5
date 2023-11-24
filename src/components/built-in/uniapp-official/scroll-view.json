@@ -1,0 +1,309 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [
+      {
+        "kind": "slot",
+        "keywords": [],
+        "visibility": "public",
+        "name": "default",
+        "default": "",
+        "props": []
+      }
+    ],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "允许横向滚动",
+        "keywords": [],
+        "visibility": "public",
+        "name": "scroll-x",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "允许纵向滚动",
+        "keywords": [],
+        "visibility": "public",
+        "name": "scroll-y",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "距顶部/左边位置",
+        "keywords": [],
+        "visibility": "public",
+        "name": "upper-threshold",
+        "type": "String",
+        "default": "50",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "距底部/右边位置",
+        "keywords": [],
+        "visibility": "public",
+        "name": "lower-threshold",
+        "type": "String",
+        "default": "50",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "竖向滚动条位置",
+        "keywords": [],
+        "visibility": "public",
+        "name": "scroll-top",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "横向滚动条位置",
+        "keywords": [],
+        "visibility": "public",
+        "name": "scroll-left",
+        "type": "String",
+        "default": "50",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "某子元素id",
+        "keywords": [],
+        "visibility": "public",
+        "name": "scroll-into-view",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "动画过渡",
+        "keywords": [],
+        "visibility": "public",
+        "name": "scroll-with-animation",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "返回顶部",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-back-to-top",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "展示滚动条",
+        "keywords": [],
+        "visibility": "public",
+        "name": "show-scrollbar",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "下拉刷新",
+        "keywords": [],
+        "visibility": "public",
+        "name": "refresher-enabled",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "下拉刷新阈值",
+        "keywords": [],
+        "visibility": "public",
+        "name": "refresher-threshold",
+        "type": "Number",
+        "default": 45,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "下拉刷新样式",
+        "keywords": [
+            {
+                "name": "options",
+                "description": "[\"black\", \"white\", \"none\"]"
+              }      
+        ],
+        "visibility": "public",
+        "name": "refresher-default-style",
+        "type": "Enum",
+        "default": "black",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "刷新背景颜色",
+        "keywords": [],
+        "visibility": "public",
+        "name": "refresher-background",
+        "type": "String",
+        "default": "#FFF",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "下拉刷新状态",
+        "keywords": [],
+        "visibility": "public",
+        "name": "refresher-triggered",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "启用flexbox布局",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-flex",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "抖动滚动位置",
+        "keywords": [],
+        "visibility": "public",
+        "name": "scroll-anchoring",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+        {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "scrolltoupper",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          },
+          {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "scrolltolower",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          },
+          {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "scroll",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          },
+          {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "refresherpulling",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          },
+          {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "refresherrefresh",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          },
+          {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "refresherrestore",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          },
+          {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "refresherabort",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          }
+    ],
+    "methods": [],
+    "name": "scroll-view",
+    "description": "滚动视图"
+  }
+  

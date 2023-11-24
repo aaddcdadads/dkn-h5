@@ -1,0 +1,140 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "节点列表",
+        "keywords": [],
+        "visibility": "public",
+        "name": "percent",
+        "type": "Number",
+        "default":"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "显示百分比",
+        "keywords": [],
+        "visibility": "public",
+        "name": "show-info",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "圆角大小",
+        "keywords": [],
+        "visibility": "public",
+        "name": "border-radius",
+        "type": "Number",
+        "default": 0,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "字体大小",
+        "keywords": [],
+        "visibility": "public",
+        "name": "font-size",
+        "type": "Number",
+        "default": 16,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "进度条线的宽度",
+        "keywords": [],
+        "visibility": "public",
+        "name": "stroke-width",
+        "type": "Number",
+        "default": 6,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "已选择颜色",
+        "keywords": [],
+        "visibility": "public",
+        "name": "activeColor",
+        "type": "Color",
+        "default":"#09BB07",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "未选择颜色",
+        "keywords": [],
+        "visibility": "public",
+        "name": "backgroundColor",
+        "type": "Color",
+        "default":"#EBEBEB",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "进度条动画",
+        "keywords": [],
+        "visibility": "public",
+        "name": "active",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "进度条动画",
+        "keywords": [],
+        "visibility": "public",
+        "name": "active-mode",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "增加1%毫秒数",
+        "keywords": [],
+        "visibility": "public",
+        "name": "duration",
+        "type": "Number",
+        "default": 30,
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+        {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "activeend",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          }
+    ],
+    "methods": [],
+    "name": "progress",
+    "description": "进度条"
+  }
+  

@@ -1,0 +1,24 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [
+      {
+        "kind": "slot",
+        "keywords": [],
+        "visibility": "public",
+        "name": "default",
+        "default": "",
+        "props": []
+      }
+    ],
+    "props": [],
+    "data": [],
+    "computed": [],
+    "events": [],
+    "methods": [],
+    "name": "picker-view-column",
+    "description": "滚动选择器子组件"
+  }
+  

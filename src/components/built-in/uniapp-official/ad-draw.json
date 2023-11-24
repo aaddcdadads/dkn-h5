@@ -1,0 +1,65 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "广告位",
+        "keywords": [],
+        "visibility": "public",
+        "name": "adpid",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "广告数据",
+        "keywords": [],
+        "visibility": "public",
+        "name": "data",
+        "type": "Object",
+        "default": "function(){\n return{\n}\n}",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "load",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "error",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      }
+    ],
+    "methods": [],
+    "name": "ad-draw",
+    "description": "沉浸视频流广告"
+  }
+  

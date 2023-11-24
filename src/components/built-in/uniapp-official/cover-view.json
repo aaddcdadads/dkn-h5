@@ -1,0 +1,36 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [
+      {
+        "kind": "slot",
+        "keywords": [],
+        "visibility": "public",
+        "name": "default",
+        "default": "",
+        "props": []
+      }
+    ],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "顶部滚动",
+        "keywords": [],
+        "visibility": "public",
+        "name": "scroll-top",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [],
+    "methods": [],
+    "name": "cover-view",
+    "description": "覆盖在原生组件上的文本视图"
+  }
+  

@@ -1,0 +1,37 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "default": "",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "name": "radio-group",
+  "description": "单项选择器"
+}

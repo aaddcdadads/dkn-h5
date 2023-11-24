@@ -1,0 +1,136 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "只读",
+      "keywords": [],
+      "visibility": "public",
+      "name": "read-only",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "提示信息",
+      "keywords": [],
+      "visibility": "public",
+      "name": "placeholder",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图片大小控件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-img-size",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示工具栏控件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-img-toolbar",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "修改尺寸控件",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show-img-resize",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "ready",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blur",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "statuschange",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [],
+  "name": "editor",
+  "description": "富文本编辑器"
+}
