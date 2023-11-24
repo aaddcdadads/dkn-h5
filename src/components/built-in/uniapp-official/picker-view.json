@@ -1,0 +1,154 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [
+      {
+        "kind": "slot",
+        "keywords": [],
+        "visibility": "public",
+        "name": "default",
+        "default": "",
+        "props": []
+      }
+    ],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "选择项",
+        "keywords": [],
+        "visibility": "public",
+        "name": "modelValue",
+        "type": "Array",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "选中框的样式",
+        "keywords": [],
+        "visibility": "public",
+        "name": "indicator-style",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "选中框的类名",
+        "keywords": [],
+        "visibility": "public",
+        "name": "indicator-class",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "设置蒙层的样式",
+        "keywords": [],
+        "visibility": "public",
+        "name": "mask-style",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "上半部分样式",
+        "keywords": [],
+        "visibility": "public",
+        "name": "mask-top-style",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "下半部分样式",
+        "keywords": [],
+        "visibility": "public",
+        "name": "mask-bottom-style",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "设置蒙层的类名",
+        "keywords": [],
+        "visibility": "public",
+        "name": "mask-class",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "触发change事件",
+        "keywords": [],
+        "visibility": "public",
+        "name": "immediate-change",
+        "type": "Boolean",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      }
+
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+        {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "change",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+        },
+          {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "change",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          },
+          {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "change",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          }
+    ],
+    "methods": [],
+    "name": "picker-view",
+    "description": "滚动选择器"
+  }
+  

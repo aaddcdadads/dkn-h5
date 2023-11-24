@@ -1,0 +1,600 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "资源地址",
+        "keywords": [],
+        "visibility": "public",
+        "name": "src",
+        "type": "String",
+        "default": "https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/2minute-demo.mp4",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "自动播放",
+        "keywords": [],
+        "visibility": "public",
+        "name": "autoplay",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "循环播放",
+        "keywords": [],
+        "visibility": "public",
+        "name": "loop",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "静音播放",
+        "keywords": [],
+        "visibility": "public",
+        "name": "muted",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "初始播放位置",
+        "keywords": [],
+        "visibility": "public",
+        "name": "initial-time",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "指定视频时长",
+        "keywords": [],
+        "visibility": "public",
+        "name": "duration",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "显示默认播放控件",
+        "keywords": [],
+        "visibility": "public",
+        "name": "controls",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "弹幕列表",
+        "keywords": [],
+        "visibility": "public",
+        "name": "danmu-list",
+        "type": "Array",
+        "default": "function(){\n return[\n{\n text: '第 1s 出现的弹幕',\ncolor: '#ff0000',\n  time: 1 \n},\n{\n text: '第 3s 出现的弹幕',\ncolor: '#ff00ff',\n time: 3  \n }\n]\n}",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "指定视频时长",
+        "keywords": [],
+        "visibility": "public",
+        "name": "danmu-btn",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "展示弹幕",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-danmu",
+        "type": "Boolean",
+        "default": "false", 
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "开启调节手势",
+        "keywords": [],
+        "visibility": "public",
+        "name": "page-gesture",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "视频方向",
+        "keywords": [],
+        "visibility": "public",
+        "name": "direction",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "宽度大于240显示",
+        "keywords": [],
+        "visibility": "public",
+        "name": "show-progress",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "显示全屏按钮",
+        "keywords": [],
+        "visibility": "public",
+        "name": "show-fullscreen-btn",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "底部播放按钮",
+        "keywords": [],
+        "visibility": "public",
+        "name": "show-play-btn",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "中间播放按钮",
+        "keywords": [],
+        "visibility": "public",
+        "name": "show-center-play-btn",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "显示加载控件",
+        "keywords": [],
+        "visibility": "public",
+        "name": "show-loading",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "控制进度手势",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-progress-gesture",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "视频表现形式",
+        "keywords": [
+          {
+            "name":"options",
+            "description":"[\"contain\",\"fill\",\"cover\"]"
+          }
+        ],
+        "visibility": "public",
+        "name": "object-fit",
+        "type": "Enum",
+        "default": "contain",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "视频封面图片",
+        "keywords": [],
+        "visibility": "public",
+        "name": "poster",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "显示静音按钮",
+        "keywords": [],
+        "visibility": "public",
+        "name": "show-mute-btn",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "视频的标题",
+        "keywords": [],
+        "visibility": "public",
+        "name": "title",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "播放按钮位置",
+        "keywords": [],
+        "visibility": "public",
+        "name": "play-btn-position",
+        "type": "String",
+        "default": "bottom",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "播放按钮位置",
+        "keywords": [],
+        "visibility": "public",
+        "name": "mobilenet-hint-type",
+        "type": "Number",
+        "default": 1,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "播放按钮位置",
+        "keywords": [],
+        "visibility": "public",
+        "name": "enable-play-gesture",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "自动暂停",
+        "keywords": [],
+        "visibility": "public",
+        "name": "auto-pause-if-navigate",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "暂停本页面视频",
+        "keywords": [],
+        "visibility": "public",
+        "name": "auto-pause-if-open-native",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "非全屏开启亮度音量调节",
+        "keywords": [],
+        "visibility": "public",
+        "name": "vslide-gesture",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "全屏开启亮度音量调节",
+        "keywords": [],
+        "visibility": "public",
+        "name": "vslide-gesture-in-fullscreen",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "广告单元ID",
+        "keywords": [],
+        "visibility": "public",
+        "name": "ad-unit-id",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "视频封面展示",
+        "keywords": [],
+        "visibility": "public",
+        "name": "poster-for-crawler",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "解码器选择",
+        "keywords": [],
+        "visibility": "public",
+        "name": "codec",
+        "type": "String",
+        "default": "hardware",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "开启本地缓存",
+        "keywords": [],
+        "visibility": "public",
+        "name": "http-cache",
+        "type": "Boolean",
+        "default": "true",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "播放策略",
+        "keywords": [],
+        "visibility": "public",
+        "name": "play-strategy",
+        "type": "Number",
+        "default": 0,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "请求头部",
+        "keywords": [],
+        "visibility": "public",
+        "name": "header",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "直播源",
+        "keywords": [],
+        "visibility": "public",
+        "name": "is-live",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "play",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "pause",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "ended",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "timeupdate",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "fullscreenchange",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "waiting",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "error",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "progress",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "loadeddata",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "seeked",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "seeking",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "loadedmetadata",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "fullscreenclick",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "controlstoggle",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      }
+    ],
+    "methods": [],
+    "name": "video",
+    "description": "直播拉流"
+  }
+  

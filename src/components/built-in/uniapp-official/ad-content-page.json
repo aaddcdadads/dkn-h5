@@ -1,0 +1,106 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "广告位",
+        "keywords": [],
+        "visibility": "public",
+        "name": "adpid",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "load",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "error",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "start",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "pause",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "resume",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "complete",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      }
+    ],
+    "methods": [],
+    "name": "ad-content-page",
+    "description": "短视频内容联盟组件"
+  }
+  

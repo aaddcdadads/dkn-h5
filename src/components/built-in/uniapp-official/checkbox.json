@@ -1,0 +1,59 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "多选值",
+        "keywords": [],
+        "visibility": "public",
+        "name": "modelValue",
+        "type": "String",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "禁用",
+        "keywords": [],
+        "visibility": "public",
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "当前选中",
+        "keywords": [],
+        "visibility": "public",
+        "name": "checked",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "颜色",
+        "keywords": [],
+        "visibility": "public",
+        "name": "color",
+        "type": "Color",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [],
+    "methods": [],
+    "name": "checkout",
+    "description": "多选项"
+  }
+  

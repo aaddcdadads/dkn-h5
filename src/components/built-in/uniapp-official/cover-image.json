@@ -1,0 +1,63 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [
+      {
+        "kind": "slot",
+        "keywords": [],
+        "visibility": "public",
+        "name": "default",
+        "default": "",
+        "props": []
+      }
+    ],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "图标路径",
+        "keywords": [],
+        "visibility": "public",
+        "name": "src",
+        "type": "String",
+        "default": "https://hellouniapp.dcloud.net.cn/static/uni.png",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+        {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "load",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          },
+          {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "error",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          }
+    ],
+    "methods": [],
+    "name": "cover-image",
+    "description": "覆盖在原生组件上的图片视图"
+  }
+  

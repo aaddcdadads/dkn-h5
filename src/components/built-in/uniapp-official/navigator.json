@@ -1,0 +1,140 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [
+      {
+        "kind": "slot",
+        "keywords": [],
+        "visibility": "public",
+        "name": "default",
+        "default": "",
+        "props": []
+      }
+    ],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "跳转路径",
+        "keywords": [],
+        "visibility": "public",
+        "name": "url",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "跳转方式",
+        "keywords": [
+            {
+              "name": "options",
+              "description": "[\"navigate\", \"redirect\", \"switchTab\",\"reLaunch\",\"navigateBack\",\"exit\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "open-type",
+        "type": "Enum",
+        "default": "navigate",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "回退的层数",
+        "keywords": [],
+        "visibility": "public",
+        "name": "delta",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "动画效果",
+        "keywords": [],
+        "visibility": "public",
+        "name": "animation-type",
+        "type": "String",
+        "default": "pop-in",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "动画持续时间",
+        "keywords": [],
+        "visibility": "public",
+        "name": "animation-duration",
+        "type": "Number",
+        "default": 300,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "点击时样式类",
+        "keywords": [],
+        "visibility": "public",
+        "name": "hover-class",
+        "type": "String",
+        "default": "navigator-hover",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "阻止出现点击态",
+        "keywords": [],
+        "visibility": "public",
+        "name": "hover-stop-propagation",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "点击态触发时间",
+        "keywords": [],
+        "visibility": "public",
+        "name": "hover-start-time",
+        "type": "Number",
+        "default": 50,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "点击态保留时间",
+        "keywords": [],
+        "visibility": "public",
+        "name": "hover-stay-time",
+        "type": "Number",
+        "default": 600,
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "跳转目标",
+        "keywords": [],
+        "visibility": "public",
+        "name": "target",
+        "type": "String",
+        "default": "self",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [],
+    "methods": [],
+    "name": "navigator",
+    "description": "跳转组件"
+  }
+  

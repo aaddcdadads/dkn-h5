@@ -1913,5 +1913,363 @@
         "isBuiltIn": true
       }
     ]
+  },
+  {
+    "id":12,
+    "name":"uniapp组件",
+    "componentList":[
+      {
+        "name": "view",
+        "title": "试图容器",
+        "docPath": "built-in/uniapp-official/view.json",
+        "imgUrl": "built-in/uniapp-official/img/view.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "scroll-view",
+        "title": "滚动视图容器",
+        "docPath": "built-in/uniapp-official/scroll-view.json",
+        "imgUrl": "built-in/uniapp-official/img/scroll-view.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "swiper",
+        "title": "滑块视图容器",
+        "docPath": "built-in/uniapp-official/swiper.json",
+        "imgUrl": "built-in/uniapp-official/img/swiper.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "match-media",
+        "title": "匹配检测节点",
+        "docPath": "built-in/uniapp-official/match-media.json",
+        "imgUrl": "built-in/uniapp-official/img/match-media.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "movable-area",
+        "title": "可拖动区域",
+        "docPath": "built-in/uniapp-official/movable-area.json",
+        "imgUrl": "built-in/uniapp-official/img/movable-area.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "movable-view",
+        "title": "可移动视图容器",
+        "docPath": "built-in/uniapp-official/movable-view.json",
+        "imgUrl": "built-in/uniapp-official/img/movable-view.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "cover-view",
+        "title": "文本视图",
+        "docPath": "built-in/uniapp-official/cover-view.json",
+        "imgUrl": "built-in/uniapp-official/img/cover-view.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "cover-image",
+        "title": "图片视图",
+        "docPath": "built-in/uniapp-official/cover-image.json",
+        "imgUrl": "built-in/uniapp-official/img/cover-image.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "icon",
+        "title": "图标",
+        "docPath": "built-in/uniapp-official/icon.json",
+        "imgUrl": "built-in/uniapp-official/img/icon.png",
+        "type": 0,
+        "isBuiltIn": true
+      }, 
+      {
+        "name": "text",
+        "title": "文本组件",
+        "docPath": "built-in/uniapp-official/text.json",
+        "imgUrl": "built-in/uniapp-official/img/text.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "rich-text",
+        "title": "富文本",
+        "docPath": "built-in/uniapp-official/rich-text.json",
+        "imgUrl": "built-in/uniapp-official/img/rich-text.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "progress",
+        "title": "进度条",
+        "docPath": "built-in/uniapp-official/progress.json",
+        "imgUrl": "built-in/uniapp-official/img/progress.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "button",
+        "title": "按钮",
+        "docPath": "built-in/uniapp-official/button.json",
+        "imgUrl": "built-in/uniapp-official/img/button.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "checkbox-group",
+        "title": "多项选择器",
+        "docPath": "built-in/uniapp-official/checkbox-group.json",
+        "imgUrl": "built-in/uniapp-official/img/checkbox-group.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "checkbox",
+        "title": "多选项目",
+        "docPath": "built-in/uniapp-official/checkbox.json",
+        "imgUrl": "built-in/uniapp-official/img/checkbox.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "editor",
+        "title": "富文本编辑器",
+        "docPath": "built-in/uniapp-official/editor.json",
+        "imgUrl": "built-in/uniapp-official/img/editor.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "form",
+        "title": "表单",
+        "docPath": "built-in/uniapp-official/form.json",
+        "imgUrl": "built-in/uniapp-official/img/form.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "input",
+        "title": "单行输入框",
+        "docPath": "built-in/uniapp-official/input.json",
+        "imgUrl": "built-in/uniapp-official/img/input.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "label",
+        "title": "label",
+        "docPath": "built-in/uniapp-official/label.json",
+        "imgUrl": "built-in/uniapp-official/img/label.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "picker",
+        "title": "滚动选择器",
+        "docPath": "built-in/uniapp-official/picker.json",
+        "imgUrl": "built-in/uniapp-official/img/picker.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "picker-view",
+        "title": "嵌入页面滚动选择器",
+        "docPath": "built-in/uniapp-official/picker-view.json",
+        "imgUrl": "built-in/uniapp-official/img/picker-view.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "radio-group",
+        "title": "单项选择器",
+        "docPath": "built-in/uniapp-official/radio-group.json",
+        "imgUrl": "built-in/uniapp-official/img/radio-group.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "radio",
+        "title": "单选项目",
+        "docPath": "built-in/uniapp-official/radio.json",
+        "imgUrl": "built-in/uniapp-official/img/radio.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "slider",
+        "title": "滑动选择器",
+        "docPath": "built-in/uniapp-official/slider.json",
+        "imgUrl": "built-in/uniapp-official/img/slider.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "switch",
+        "title": "开关选择器",
+        "docPath": "built-in/uniapp-official/switch.json",
+        "imgUrl": "built-in/uniapp-official/img/switch.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "textarea",
+        "title": "多行输入框",
+        "docPath": "built-in/uniapp-official/textarea.json",
+        "imgUrl": "built-in/uniapp-official/img/textarea.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "navigator",
+        "title": "页面跳转",
+        "docPath": "built-in/uniapp-official/navigator.json",
+        "imgUrl": "built-in/uniapp-official/img/navigator.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "animation-view",
+        "title": "动画组件",
+        "docPath": "built-in/uniapp-official/animation-view.json",
+        "imgUrl": "built-in/uniapp-official/img/animation-view.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "audio",
+        "title": "音频",
+        "docPath": "built-in/uniapp-official/audio.json",
+        "imgUrl": "built-in/uniapp-official/img/audio.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "camera",
+        "title": "相机组件",
+        "docPath": "built-in/uniapp-official/camera.json",
+        "imgUrl": "built-in/uniapp-official/img/camera.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "image",
+        "title": "图片组件",
+        "docPath": "built-in/uniapp-official/image.json",
+        "imgUrl": "built-in/uniapp-official/img/image.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "video",
+        "title": "视频播放组件",
+        "docPath": "built-in/uniapp-official/video.json",
+        "imgUrl": "built-in/uniapp-official/img/video.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "live-player",
+        "title": "实时音视频播放",
+        "docPath": "built-in/uniapp-official/live-player.json",
+        "imgUrl": "built-in/uniapp-official/img/live-player.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "live-pusher",
+        "title": "音视频录制",
+        "docPath": "built-in/uniapp-official/live-pusher.json",
+        "imgUrl": "built-in/uniapp-official/img/live-pusher.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "map",
+        "title": "地图组件",
+        "docPath": "built-in/uniapp-official/map.json",
+        "imgUrl": "built-in/uniapp-official/img/map.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+       {
+        "name": "canvas",
+        "title": "画布",
+        "docPath": "built-in/uniapp-official/canvas.json",
+        "imgUrl": "built-in/uniapp-official/img/canvas.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "web-view",
+        "title": "承载网页容器",
+        "docPath": "built-in/uniapp-official/web-view.json",
+        "imgUrl": "built-in/uniapp-official/img/web-view.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ad",
+        "title": "信息流广告",
+        "docPath": "built-in/uniapp-official/ad.json",
+        "imgUrl": "built-in/uniapp-official/img/ad.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ad-rewarded-video",
+        "title": "激励视频广告",
+        "docPath": "built-in/uniapp-official/ad-rewarded-video.json",
+        "imgUrl": "built-in/uniapp-official/img/ad-rewarded-video.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ad-fullscreen-video",
+        "title": "全屏视频广告",
+        "docPath": "built-in/uniapp-official/ad-fullscreen-video.json",
+        "imgUrl": "built-in/uniapp-official/img/ad-fullscreen-video.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ad-interstitial",
+        "title": "插屏广告",
+        "docPath": "built-in/uniapp-official/ad-interstitial.json",
+        "imgUrl": "built-in/uniapp-official/img/ad-interstitial.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ad-draw",
+        "title": "Draw视频信息流广告",
+        "docPath": "built-in/uniapp-official/ad-draw.json",
+        "imgUrl": "built-in/uniapp-official/img/ad-draw.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ad-content-page",
+        "title": "短视频内容联盟组件",
+        "docPath": "built-in/uniapp-official/ad-content-page.json",
+        "imgUrl": "built-in/uniapp-official/img/ad-content-page.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ad-interactive",
+        "title": "互动广告",
+        "docPath": "built-in/uniapp-official/ad-interactive.json",
+        "imgUrl": "built-in/uniapp-official/img/ad-interactive.png",
+        "type": 0,
+        "isBuiltIn": true
+      }
+    ]
   }
 ]

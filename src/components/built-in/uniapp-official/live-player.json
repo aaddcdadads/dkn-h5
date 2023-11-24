@@ -1,0 +1,351 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "唯一标志符",
+        "keywords": [],
+        "visibility": "public",
+        "name": "id",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "音视频地址",
+        "keywords": [],
+        "visibility": "public",
+        "name": "src",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "循环播放",
+        "keywords": [
+            {
+                "name": "options",
+                "description": "[\"live\", \"RTC\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "mode",
+        "type": "Enum",
+        "default": "live",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "静音播放",
+        "keywords": [],
+        "visibility": "public",
+        "name": "autoplay",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "播放位置",
+        "keywords": [],
+        "visibility": "public",
+        "name": "muted",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "指定视频时长",
+        "keywords": [
+            {
+                "name": "options",
+                "description": "[\"vertical\", \"horizontal\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "orientation",
+        "type": "Enum",
+        "default": "vertical",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "显示播放控件",
+        "keywords": [
+            {
+                "name": "options",
+                "description": "[\"contain\", \"fillCrop\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "object-fit",
+        "type": "Enum",
+        "default": "contain",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "进入后台静音",
+        "keywords": [],
+        "visibility": "public",
+        "name": "background-mute",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "声音输出方式",
+        "keywords": [
+            {
+                "name": "options",
+                "description": "[\"speaker\", \"ear\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "sound-mode",
+        "type": "Enum",
+        "default": "speaker",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "最小缓冲区",
+        "keywords": [],
+        "visibility": "public",
+        "name": "min-cache",
+        "type": "Number",
+        "default": 1, 
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "最大缓冲区",
+        "keywords": [],
+        "visibility": "public",
+        "name": "max-cache",
+        "type": "Number",
+        "default": "3",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "设置小窗模式",
+        "keywords": [],
+        "visibility": "public",
+        "name": "picture-in-picture-mode",
+        "type": "String",
+        "default": "3",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "play",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "pause",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "ended",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "timeupdate",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "fullscreenchange",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "waiting",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "error",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "progress",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "loadeddata",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "seeked",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "seeking",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "loadedmetadata",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "fullscreenclick",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "controlstoggle",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      }
+    ],
+    "methods": [],
+    "name": "live-player",
+    "description": "实时音视频播放"
+  }
+  

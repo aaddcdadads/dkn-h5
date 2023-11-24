@@ -1,0 +1,74 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [
+        {
+            "kind": "slot",
+            "keywords": [],
+            "visibility": "public",
+            "name": "default",
+            "default": "",
+            "props": []
+          }
+    ],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "广告位",
+        "keywords": [],
+        "visibility": "public",
+        "name": "adpid",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "广告数据",
+        "keywords": [],
+        "visibility": "public",
+        "name": "open-page-path",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "load",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      },
+      {
+        "kind": "event",
+        "keywords": [],
+        "visibility": "public",
+        "name": "error",
+        "arguments": [
+          {
+            "name": "e",
+            "type": "any",
+            "rest": false
+          }
+        ]
+      }
+    ],
+    "methods": [],
+    "name": "ad-interactive",
+    "description": "互动广告"
+  }
+  

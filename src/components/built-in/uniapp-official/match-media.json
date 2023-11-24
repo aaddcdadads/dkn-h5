@@ -1,0 +1,102 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [
+      {
+        "kind": "slot",
+        "keywords": [],
+        "visibility": "public",
+        "name": "default",
+        "default": "",
+        "props": []
+      }
+    ],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "页面最小宽度",
+        "keywords": [],
+        "visibility": "public",
+        "name": "min-width",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "页面最大宽度",
+        "keywords": [],
+        "visibility": "public",
+        "name": "max-width",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "页面宽度",
+        "keywords": [],
+        "visibility": "public",
+        "name": "width",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "页面最小高度",
+        "keywords": [],
+        "visibility": "public",
+        "name": "min-height",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "页面最大高度",
+        "keywords": [],
+        "visibility": "public",
+        "name": "max-height",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "点击态保留时间",
+        "keywords": [],
+        "visibility": "public",
+        "name": "height",
+        "type": "Number",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "屏幕方向",
+        "keywords": [],
+        "visibility": "public",
+        "name": "orientation",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [],
+    "methods": [],
+    "name": "match-media",
+    "description": "视图组件"
+  }
+  

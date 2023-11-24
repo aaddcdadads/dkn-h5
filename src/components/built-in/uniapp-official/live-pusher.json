@@ -1,0 +1,399 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "推流地址",
+      "keywords": [],
+      "visibility": "public",
+      "name": "url",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "推流视频模式",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"SD\", \"HD\", \"FHD\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "mode",
+      "type": "Enum",
+      "default": "SD",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "视频宽高比例",
+      "keywords": [],
+      "visibility": "public",
+      "name": "aspect",
+      "type": "string",
+      "default": "3:2",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "静音",
+      "keywords": [],
+      "visibility": "public",
+      "name": "muted",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "开启摄像头",
+      "keywords": [],
+      "visibility": "public",
+      "name": "enable-camera",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自动聚集",
+      "keywords": [],
+      "visibility": "public",
+      "name": "auto-focus",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "美颜",
+      "keywords": [],
+      "visibility": "public",
+      "name": "beauty",
+      "type": "Number",
+      "default": 0,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "美白",
+      "keywords": [],
+      "visibility": "public",
+      "name": "whiteness",
+      "type": "Number",
+      "default": 0,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "画面方向",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"vertical\", \"horizontal\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "orientation",
+      "type": "Enum",
+      "default": "vertical",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "最小码率",
+      "keywords": [],
+      "visibility": "public",
+      "name": "min-bitrate",
+      "type": "Number",
+      "default": 200,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "最大码率",
+      "keywords": [],
+      "visibility": "public",
+      "name": "max-bitrate",
+      "type": "Number",
+      "default": 1000,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "等待画面",
+      "keywords": [],
+      "visibility": "public",
+      "name": "waiting-image",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "高低音质",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"high\", \"low\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "audio-quality",
+      "type": "String",
+      "default": "high",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "等待画面",
+      "keywords": [],
+      "visibility": "public",
+      "name": "waiting-image",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "等待资源MD5值",
+      "keywords": [],
+      "visibility": "public",
+      "name": "waiting-image-hash",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "调整焦距",
+      "keywords": [],
+      "visibility": "public",
+      "name": "zoom",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "前置或后置",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"front\", \"back\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "device-position",
+      "type": "String",
+      "default": "front",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "进入后台时静音",
+      "keywords": [],
+      "visibility": "public",
+      "name": "background-mute",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "推流画面镜像",
+      "keywords": [],
+      "visibility": "public",
+      "name": "remote-mirror",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "预览画面镜像",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"auto\", \"enable\", \"disable\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "local-mirror",
+      "type": "Enum",
+      "default": "auto",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "音频混响类型",
+      "keywords": [],
+      "visibility": "public",
+      "name": "audio-reverb-type",
+      "type": "Number",
+      "default": 0,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "麦克风",
+      "keywords": [],
+      "visibility": "public",
+      "name": "enable-mic",
+      "type": "Boolean",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "音频自动增益",
+      "keywords": [],
+      "visibility": "public",
+      "name": "enable-agc",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "音频噪声抑制",
+      "keywords": [],
+      "visibility": "public",
+      "name": "enable-ans",
+      "type": "Boolean",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "音量类型",
+      "keywords": [
+        {
+          "name": "options",
+          "description": "[\"voicecall\", \"media\"]"
+        }
+      ],
+      "visibility": "public",
+      "name": "audio-volume-type",
+      "type": "Enum",
+      "default": "voicecall",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "statechange",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "netstatus",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "error",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgmstart",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgmprogress",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bgmcomplete",
+      "arguments": [
+        {
+          "name": "e",
+          "type": "any",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [],
+  "name": "live-pusher",
+  "description": "实时音视频录制，也称直播推流"
+}
