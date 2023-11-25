@@ -41,10 +41,15 @@
     {
       "kind": "prop",
       "description":"排列方向",
-      "keywords": [],
+      "keywords": [
+        {
+          "name":"options",
+          "description":"[\"row\",\"column\"]"
+        }
+      ],
       "visibility": "public",
       "name": "direction",
-      "type": "String",
+      "type": "Enum",
       "default": "\"row\"",
       "required": false,
       "describeModel": false

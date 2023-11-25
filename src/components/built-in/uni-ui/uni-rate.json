@@ -78,7 +78,7 @@
       ],
       "default": "0",
       "required": false,
-      "describeModel": false
+      "describeModel": true
     },
     {
       "kind": "prop",

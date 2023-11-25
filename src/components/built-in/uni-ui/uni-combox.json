@@ -106,20 +106,6 @@
     },
     {
       "kind": "prop",
-      "description": "为定义vue3的值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "value",
-      "type": [
-        "String",
-        "Number"
-      ],
-      "default": "\"\"",
-      "required": false,
-      "describeModel": true
-    },
-    {
-      "kind": "prop",
       "description": "定义vue3的值",
       "keywords": [],
       "visibility": "public",
@@ -130,7 +116,7 @@
       ],
       "default": "\"\"",
       "required": false,
-      "describeModel": false
+      "describeModel": true
     }
   ],
   "data": [

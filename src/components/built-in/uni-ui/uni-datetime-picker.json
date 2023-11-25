@@ -43,7 +43,7 @@
       ],
       "default": "\"\"",
       "required": false,
-      "describeModel": false
+      "describeModel": true
     },
     {
       "kind": "prop",
@@ -52,8 +52,8 @@
       "visibility": "public",
       "name": "start",
       "type": [
-        "Number",
-        "String"
+        "String",
+        "Number"
       ],
       "default": "\"\"",
       "required": false,
@@ -66,8 +66,8 @@
       "visibility": "public",
       "name": "end",
       "type": [
-        "Number",
-        "String"
+        "String",
+        "Number"
       ],
       "default": "\"\"",
       "required": false,
