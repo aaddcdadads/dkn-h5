@@ -134,6 +134,9 @@
             "path": "pages/test/TestHmMap"
         },
         {
+            "path": "pages/test/TestHmMonacoEditor"
+        },
+        {
             "path": "pages/test/TestHmMumuPeview"
         },
         {
@@ -396,6 +399,9 @@
         },
         {
             "path": "components/built-in/third-party/HmLimeSignature"
+        },
+        {
+            "path": "components/built-in/third-party/HmMonacoEditor"
         },
         {
             "path": "components/built-in/third-party/HmSearch"

@@ -755,6 +755,14 @@
         "imgUrl": "built-in/uniapp-haomo/img/HmMumuPeview.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmMonacoEditor",
+        "title": "代码高亮",
+        "importPath": "built-in/third-party/HmMonacoEditor",
+        "imgUrl": "built-in/third-party/img/HmMonacoEditor.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },
@@ -804,7 +812,7 @@
       },
       {
         "name": "uni-col",
-        "title": "行",
+        "title": "列",
         "docPath": "built-in/uni-ui/uni-col.json",
         "imgUrl": "built-in/uni-ui/img/uni-col.png",
         "type": 0,
@@ -1100,7 +1108,7 @@
       },
       {
         "name": "uni-row",
-        "title": "列",
+        "title": "行",
         "docPath": "built-in/uni-ui/uni-row.json",
         "imgUrl": "built-in/uni-ui/img/uni-row.png",
         "type": 0,
