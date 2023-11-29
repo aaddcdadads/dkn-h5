@@ -54,7 +54,7 @@
       "description": "当前取值",
       "keywords": [],
       "visibility": "public",
-      "name": "modelValue",
+      "name": "value",
       "type": "Number",
       "default": 0,
       "required": false,
