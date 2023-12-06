@@ -16,37 +16,10 @@
   "props": [
     {
       "kind": "prop",
-      "description": "类型",
-      "keywords": [
-        {
-          "name": "options",
-          "description": "[\"selector\", \"multiSelector\", \"time\",\"date\",\"region\"]"
-        }
-      ],
-      "visibility": "public",
-      "name": "mode",
-      "type": "Enum",
-      "default":"selector",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "数据",
+      "description": "背景字体样式",
       "keywords": [],
       "visibility": "public",
-      "name": "range",
-      "type": "Array",
-      "default":"[\n '中国', \n'美国',\n '巴西',\n '日本'\n]",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": " key的值",
-      "keywords": [],
-      "visibility": "public",
-      "name": "range-key",
+      "name": "background-text-style",
       "type": "String",
       "default": "",
       "required": false,
@@ -54,82 +27,88 @@
     },
     {
       "kind": "prop",
-      "description": "值",
+      "description": "窗口的背景色",
       "keywords": [],
       "visibility": "public",
-      "name": "modelValue",
-      "type": ["Number","String","Array"],
-      "default": "0",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "大屏时UI类型",
-      "keywords": [],
-      "visibility": "public",
-      "name": "selector-type",
+      "name": "background-color",
       "type": "String",
-      "default": "\"auto\"",
+      "default": "",
       "required": false,
       "describeModel": false
     },
     {
       "kind": "prop",
-      "description": "禁用",
+      "description": "顶部窗口背景色",
       "keywords": [],
       "visibility": "public",
-      "name": "disabled",
+      "name": "background-color-top",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "底部窗口背景色",
+      "keywords": [],
+      "visibility": "public",
+      "name": "background-color-bottom",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "滚动位置",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scroll-top",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "滚动动画时长",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scroll-duration",
+      "type": "Number",
+      "default": 300,
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "根节点样式",
+      "keywords": [],
+      "visibility": "public",
+      "name": "page-style",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "根字体大小",
+      "keywords": [],
+      "visibility": "public",
+      "name": "root-font-size",
+      "type": "String",
+      "default": "",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "开启下拉刷新",
+      "keywords": [],
+      "visibility": "public",
+      "name": "enable-pull-down-refresh",
       "type": "Boolean",
-      "default": "false",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "时间范围开始",
-      "keywords": [],
-      "visibility": "public",
-      "name": "start",
-      "type": "String",
-      "default": "",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "时间范围结束",
-      "keywords": [],
-      "visibility": "public",
-      "name": "end",
-      "type": "String",
-      "default": "",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "有效值",
-      "keywords": [
-        {
-          "name": "options",
-          "description": "[\"year\", \"month\", \"day\"]"
-        }
-      ],
-      "visibility": "public",
-      "name": "fields",
-      "type": "Enum",
-      "default": "day",
-      "required": false,
-      "describeModel": false
-    },
-    {
-      "kind": "prop",
-      "description": "自定义的项",
-      "keywords": [],
-      "visibility": "public",
-      "name": "custom-item",
-      "type": "String",
       "default": "",
       "required": false,
       "describeModel": false
@@ -142,7 +121,7 @@
       "kind": "event",
       "keywords": [],
       "visibility": "public",
-      "name": "change",
+      "name": "resize",
       "arguments": [
         {
           "name": "e",
@@ -155,7 +134,7 @@
       "kind": "event",
       "keywords": [],
       "visibility": "public",
-      "name": "cancel",
+      "name": "scroll",
       "arguments": [
         {
           "name": "e",
@@ -168,7 +147,7 @@
       "kind": "event",
       "keywords": [],
       "visibility": "public",
-      "name": "columnchange",
+      "name": "scrolldone",
       "arguments": [
         {
           "name": "e",
@@ -179,6 +158,6 @@
     }
   ],
   "methods": [],
-  "name": "picker",
-  "description": "选择器"
+  "name": "page-meta",
+  "description": ""
 }

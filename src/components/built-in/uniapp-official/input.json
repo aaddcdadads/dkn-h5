@@ -60,7 +60,7 @@
         "visibility": "public",
         "name": "placeholder",
         "type": "String",
-        "default": "自动获得焦点",
+        "default": "\"自动获得焦点\"",
         "required": false,
         "describeModel": false
       },

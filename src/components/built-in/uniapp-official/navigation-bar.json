@@ -1,0 +1,202 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "导航条标题",
+        "keywords": [],
+        "visibility": "public",
+        "name": "title",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "标题图标",
+        "keywords": [],
+        "visibility": "public",
+        "name": "title-icon",
+        "type": "String",
+        "default": "",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "标题图标圆角",
+        "keywords": [],
+        "visibility": "public",
+        "name": "title-icon-radius",
+        "type": "String",
+        "default": "\"无圆角\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "副标题文字",
+        "keywords": [],
+        "visibility": "public",
+        "name": "subtitle-text",
+        "type": "String",
+        "default": "\"\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "副标题字体",
+        "keywords": [],
+        "visibility": "public",
+        "name": "subtitle-size",
+        "type": "String",
+        "default": "\"auto\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "副标题颜色",
+        "keywords": [],
+        "visibility": "public",
+        "name": "subtitle-color",
+        "type": "String",
+        "default": "\"\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "超出显示区域",
+        "keywords": [],
+        "visibility": "public",
+        "name": "subtitle-overflow",
+        "type": "String",
+        "default": "\"ellipsis\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "对齐方式",
+        "keywords": [
+            {
+                "name": "options",
+                "description": "[\"left\", \"center\",\"auto\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "title-align",
+        "type": "Enum",
+        "default": "\"auto\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "背景图",
+        "keywords": [],
+        "visibility": "public",
+        "name": "background-image",
+        "type": "String",
+        "default": "\"\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "背景图重复",
+        "keywords": [],
+        "visibility": "public",
+        "name": "background-repeat",
+        "type": "String",
+        "default": "\"\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "模糊显示",
+        "keywords": [],
+        "visibility": "public",
+        "name": "blur-effect",
+        "type": "String",
+        "default": "\"none\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "显示加载提示",
+        "keywords": [],
+        "visibility": "public",
+        "name": "loading",
+        "type": "Boolean",
+        "default": "false",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "导航条前景颜色",
+        "keywords": [],
+        "visibility": "public",
+        "name": "front-color",
+        "type": "String",
+        "default": "\"\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "导航条背景颜色",
+        "keywords": [],
+        "visibility": "public",
+        "name": "background-color",
+        "type": "String",
+        "default": "\"\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "动画时长",
+        "keywords": [],
+        "visibility": "public",
+        "name": "color-animation-duration",
+        "type": "Number",
+        "default": "\"0\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "动画方式",
+        "keywords": [
+            {
+                "name": "options",
+                "description": "[\"linear\", \"easeIn\",\"easeOut\",\"easeInOut\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "color-animation-duration",
+        "type": "Enum",
+        "default": "\"linear\"",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [],
+    "methods": [],
+    "name": "navigation-bar",
+    "description": ""
+  }
+  

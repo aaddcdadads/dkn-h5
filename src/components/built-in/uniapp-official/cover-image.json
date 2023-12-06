@@ -21,7 +21,7 @@
         "visibility": "public",
         "name": "src",
         "type": "String",
-        "default": "https://hellouniapp.dcloud.net.cn/static/uni.png",
+        "default": "\"https://hellouniapp.dcloud.net.cn/static/uni.png\"",
         "required": false,
         "describeModel": false
       }

@@ -1,0 +1,89 @@
+{
+    "inheritAttrs": true,
+    "errors": [],
+    "warnings": [],
+    "keywords": [],
+    "slots": [],
+    "props": [
+      {
+        "kind": "prop",
+        "description": "排列方向",
+        "keywords": [
+            {
+                "name": "options",
+                "description": "[\"horizontal\", \"vertical\"]"
+            }
+        ],
+        "visibility": "public",
+        "name": "direction",
+        "type": "Enum",
+        "default": "\"horizontal\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "显示icon",
+        "keywords": [],
+        "visibility": "public",
+        "name": "show-icon",
+        "type": "Boolean",
+        "default": "\"false\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "tabBar选项索引值",
+        "keywords": [],
+        "visibility": "public",
+        "name": "selected",
+        "type": "Number",
+        "default": "\"0\"",
+        "required": false,
+        "describeModel": false
+      },
+      {
+        "kind": "prop",
+        "description": "选项索引值",
+        "keywords": [],
+        "visibility": "public",
+        "name": "selected",
+        "type": "Number",
+        "default": "\"0\"",
+        "required": false,
+        "describeModel": false
+      }
+    ],
+    "data": [],
+    "computed": [],
+    "events": [
+        {
+            "kind": "event",
+            "keywords": [],
+            "visibility": "public",
+            "name": "onTabItemTap",
+            "arguments": [
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              },
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              },
+              {
+                "name": "e",
+                "type": "any",
+                "rest": false
+              }
+            ]
+          }
+    ],
+    "methods": [],
+    "name": "custom-tab-bar",
+    "description": ""
+  }
+  

@@ -13,7 +13,10 @@
       "props": []
     }
   ],
-  "props": [
+  "props": [],
+  "data": [],
+  "computed": [],
+  "events": [
     {
       "kind": "event",
       "keywords": [],
@@ -28,9 +31,6 @@
       ]
     }
   ],
-  "data": [],
-  "computed": [],
-  "events": [],
   "methods": [],
   "name": "radio-group",
   "description": "单项选择器"

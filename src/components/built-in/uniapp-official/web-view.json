@@ -40,7 +40,7 @@
       },
       {
         "kind": "prop",
-        "description": "启用高清处理",
+        "description": "全屏",
         "keywords": [],
         "visibility": "public",
         "name": "fullscreen",

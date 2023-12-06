@@ -164,7 +164,7 @@
         "visibility": "public",
         "name": "next-margin",
         "type": "String",
-        "default": "0px",
+        "default": "\"0px\"",
         "required": false,
         "describeModel": false
       },
@@ -245,8 +245,8 @@
         ],
         "visibility": "public",
         "name": "easing-function",
-        "type": "String",
-        "default": "default",
+        "type": "Enum",
+        "default": "\"default\"",
         "required": false,
         "describeModel": false
       }

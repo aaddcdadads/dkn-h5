@@ -12,7 +12,7 @@
         "visibility": "public",
         "name": "mode",
         "type": "String",
-        "default": "normal",
+        "default": "\"normal\"",
         "required": false,
         "describeModel": false
       },

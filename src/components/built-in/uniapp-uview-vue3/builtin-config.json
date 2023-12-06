@@ -1951,6 +1951,14 @@
         "isBuiltIn": true
       },
       {
+        "name": "swiper-item",
+        "title": "滑块视图项",
+        "docPath": "built-in/uniapp-official/swiper-item.json",
+        "imgUrl": "built-in/uniapp-official/img/swiper-item.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "match-media",
         "title": "匹配检测节点",
         "docPath": "built-in/uniapp-official/match-media.json",
@@ -2088,9 +2096,17 @@
       },
       {
         "name": "picker-view",
-        "title": "嵌入页面滚动选择器",
+        "title": "嵌入式滚动选择器",
         "docPath": "built-in/uniapp-official/picker-view.json",
         "imgUrl": "built-in/uniapp-official/img/picker-view.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "picker-view-column",
+        "title": "嵌入式滚动选择项",
+        "docPath": "built-in/uniapp-official/picker-view-column.json",
+        "imgUrl": "built-in/uniapp-official/img/picker-view-column.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -2275,6 +2291,30 @@
         "title": "互动广告",
         "docPath": "built-in/uniapp-official/ad-interactive.json",
         "imgUrl": "built-in/uniapp-official/img/ad-interactive.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "page-meta",
+        "title": "页面属性配置",
+        "docPath": "built-in/uniapp-official/page-meta.json",
+        "imgUrl": "built-in/uniapp-official/img/page-meta.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "navigation-bar",
+        "title": "页面导航条",
+        "docPath": "built-in/uniapp-official/navigation-bar.json",
+        "imgUrl": "built-in/uniapp-official/img/navigation-bar.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "custom-tab-bar",
+        "title": "自定义tabBar组件",
+        "docPath": "built-in/uniapp-official/custom-tab-bar.json",
+        "imgUrl": "built-in/uniapp-official/img/custom-tab-bar.png",
         "type": 0,
         "isBuiltIn": true
       }

@@ -29,7 +29,7 @@
       },
       {
         "kind": "prop",
-        "description": "禁止屏幕",
+        "description": "禁止滚动刷新",
         "keywords": [],
         "visibility": "public",
         "name": "disable-scroll",
