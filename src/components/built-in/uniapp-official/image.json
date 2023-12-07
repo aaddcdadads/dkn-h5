@@ -12,7 +12,7 @@
       "visibility": "public",
       "name": "src",
       "type": "String",
-      "default": "https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/shuijiao.jpg",
+      "default": "\"https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/shuijiao.jpg\"",
       "required": false,
       "describeModel": false
     },

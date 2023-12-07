@@ -43,7 +43,7 @@
         "visibility": "public",
         "name": "upper-threshold",
         "type": "String",
-        "default": "50",
+        "default": "\"50\"",
         "required": false,
         "describeModel": false
       },
@@ -54,7 +54,7 @@
         "visibility": "public",
         "name": "lower-threshold",
         "type": "String",
-        "default": "50",
+        "default": "\"50\"",
         "required": false,
         "describeModel": false
       },
@@ -76,7 +76,7 @@
         "visibility": "public",
         "name": "scroll-left",
         "type": "String",
-        "default": "50",
+        "default": "\"50\"",
         "required": false,
         "describeModel": false
       },
@@ -169,7 +169,7 @@
         "visibility": "public",
         "name": "refresher-background",
         "type": "String",
-        "default": "#FFF",
+        "default": "\"#FFF\"",
         "required": false,
         "describeModel": false
       },

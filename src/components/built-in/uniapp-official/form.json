@@ -20,8 +20,8 @@
       "keywords": [],
       "visibility": "public",
       "name": "report-submit",
-      "type": "String",
-      "default": "none",
+      "type": "Boolean",
+      "default": "",
       "required": false,
       "describeModel": false
     },

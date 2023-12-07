@@ -39,7 +39,7 @@
       "visibility": "public",
       "name": "aspect",
       "type": "string",
-      "default": "3:2",
+      "default": "\"3:2\"",
       "required": false,
       "describeModel": false
     },
@@ -158,7 +158,7 @@
       ],
       "visibility": "public",
       "name": "audio-quality",
-      "type": "String",
+      "type": "Enum",
       "default": "high",
       "required": false,
       "describeModel": false
@@ -208,7 +208,7 @@
       "visibility": "public",
       "name": "device-position",
       "type": "String",
-      "default": "front",
+      "default": "\"front\"",
       "required": false,
       "describeModel": false
     },

@@ -3,7 +3,16 @@
     "errors": [],
     "warnings": [],
     "keywords": [],
-    "slots": [],
+    "slots": [
+      {
+        "kind": "slot",
+        "keywords": [],
+        "visibility": "public",
+        "name": "default",
+        "default": "",
+        "props": []
+      }
+    ],
     "props": [
       {
         "kind": "prop",
@@ -45,7 +54,7 @@
         "visibility": "public",
         "name": "theme",
         "type": "String",
-        "default": "normal",
+        "default": "\"normal\"",
         "required": false,
         "describeModel": false
       },
@@ -100,7 +109,7 @@
         "visibility": "public",
         "name": "polyline",
         "type": "Array",
-        "default": "",
+        "default": "function(){return[]}",
         "required": false,
         "describeModel": false
       },
@@ -111,7 +120,7 @@
         "visibility": "public",
         "name": "circles",
         "type": "Array",
-        "default": "",
+        "default": "function(){return[]}",
         "required": false,
         "describeModel": false
       },
@@ -122,7 +131,7 @@
         "visibility": "public",
         "name": "controls",
         "type": "Array",
-        "default": "",
+        "default": "function(){return[]}",
         "required": false,
         "describeModel": false
       },
@@ -133,7 +142,7 @@
         "visibility": "public",
         "name": "include-points",
         "type": "Array",
-        "default": "",
+        "default": "function(){return[]}",
         "required": false,
         "describeModel": false
       },

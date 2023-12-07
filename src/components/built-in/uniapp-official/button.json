@@ -172,7 +172,7 @@
       "visibility": "public",
       "name": "lang",
       "type": "String",
-      "default": "en",
+      "default": "\"en\"",
       "required": false,
       "describeModel": false
     },
@@ -193,7 +193,7 @@
       "visibility": "public",
       "name": "send-message-title",
       "type": "String",
-      "default": "当前标题",
+      "default": "\"当前标题\"",
       "required": false,
       "describeModel": false
     },
@@ -204,7 +204,7 @@
       "visibility": "public",
       "name": "send-message-path",
       "type": "String",
-      "default": "当前分享路径",
+      "default": "\"当前分享路径\"",
       "required": false,
       "describeModel": false
     },
@@ -215,7 +215,7 @@
       "visibility": "public",
       "name": "send-message-img",
       "type": "String",
-      "default": "截图",
+      "default": "\"截图\"",
       "required": false,
       "describeModel": false
     },

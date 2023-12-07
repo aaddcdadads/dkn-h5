@@ -95,12 +95,12 @@
       },
       {
         "kind": "prop",
-        "description": "进度条动画",
+        "description": "动画模式",
         "keywords": [],
         "visibility": "public",
         "name": "active-mode",
-        "type": "Boolean",
-        "default": "false",
+        "type": "String",
+        "default": "\"backwards\"",
         "required": false,
         "describeModel": false
       },

@@ -3,7 +3,16 @@
     "errors": [],
     "warnings": [],
     "keywords": [],
-    "slots": [],
+    "slots": [
+      {
+        "kind": "slot",
+        "keywords": [],
+        "visibility": "public",
+        "name": "default",
+        "default": "",
+        "props": []
+      }
+    ],
     "props": [
       {
         "kind": "prop",
@@ -12,7 +21,7 @@
         "visibility": "public",
         "name": "src",
         "type": "String",
-        "default": "https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/2minute-demo.mp4",
+        "default": "\"https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/2minute-demo.mp4\"",
         "required": false,
         "describeModel": false
       },
@@ -95,7 +104,7 @@
       },
       {
         "kind": "prop",
-        "description": "指定视频时长",
+        "description": "显示弹幕按钮",
         "keywords": [],
         "visibility": "public",
         "name": "danmu-btn",
@@ -259,7 +268,7 @@
         "visibility": "public",
         "name": "play-btn-position",
         "type": "String",
-        "default": "bottom",
+        "default": "\"bottom\"",
         "required": false,
         "describeModel": false
       },
@@ -358,7 +367,7 @@
         "visibility": "public",
         "name": "codec",
         "type": "String",
-        "default": "hardware",
+        "default": "\"hardware\"",
         "required": false,
         "describeModel": false
       },

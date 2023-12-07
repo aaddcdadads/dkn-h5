@@ -23,7 +23,7 @@
       "visibility": "public",
       "name": "src",
       "type": "String",
-      "default": "https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-hello-uniapp/2cc220e0-c27a-11ea-9dfb-6da8e309e0d8.mp3",
+      "default": "\"https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-hello-uniapp/2cc220e0-c27a-11ea-9dfb-6da8e309e0d8.mp3\"",
       "required": false,
       "describeModel": false
     },
@@ -56,7 +56,7 @@
       "visibility": "public",
       "name": "poster",
       "type": "String",
-      "default": "https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/music-a.png",
+      "default": "\"https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/music-a.png\"",
       "required": false,
       "describeModel": false
     },
@@ -67,7 +67,7 @@
       "visibility": "public",
       "name": "name",
       "type": "String",
-      "default": "致爱丽丝",
+      "default": "\"致爱丽丝\"",
       "required": false,
       "describeModel": false
     },
@@ -78,7 +78,7 @@
       "visibility": "public",
       "name": "author",
       "type": "String",
-      "default": "暂无",
+      "default": "\"暂无\"",
       "required": false,
       "describeModel": false
     }

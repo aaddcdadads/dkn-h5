@@ -59,7 +59,7 @@
         "visibility": "public",
         "name": "animation-type",
         "type": "String",
-        "default": "pop-in",
+        "default": "\"pop-in\"",
         "required": false,
         "describeModel": false
       },
@@ -81,7 +81,7 @@
         "visibility": "public",
         "name": "hover-class",
         "type": "String",
-        "default": "navigator-hover",
+        "default": "\"navigator-hover\"",
         "required": false,
         "describeModel": false
       },
@@ -125,7 +125,7 @@
         "visibility": "public",
         "name": "target",
         "type": "String",
-        "default": "self",
+        "default": "\"self\"",
         "required": false,
         "describeModel": false
       }
