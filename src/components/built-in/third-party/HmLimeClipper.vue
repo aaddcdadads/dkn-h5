@@ -121,14 +121,14 @@ export default {
       default: 600,
     },
     /**
-     * 图片最小缩放比
+     * 最小缩放比
      */
     minRatio: {
       type: Number,
       default: 0.5,
     },
     /**
-     * 图片最大缩放比
+     * 最大缩放比
      */
     maxRatio: {
       type: Number,
@@ -142,77 +142,77 @@ export default {
       default: 90,
     },
     /**
-     * 生成图片相对于裁剪框比例
+     * 图片与裁剪框比例
      */
     scaleRatio: {
       type: Number,
       default: 1,
     },
     /**
-     * 是否锁定裁剪框宽度
+     * 锁定裁剪框宽
      */
     isLockWidth: {
       type: Boolean,
       default: false,
     },
     /**
-     * 是否锁定裁剪框高度上
+     * 锁定裁剪框高度
      */
     isLockHeight: {
       type: Boolean,
       default: false,
     },
     /**
-     * 是否锁定裁剪框比例
+     * 锁定裁剪框比例
      */
     isLockRatio: {
       type: Boolean,
       default: false,
     },
     /**
-     * 是否禁止缩放
+     * 禁止缩放
      */
     isDisableScale: {
       type: Boolean,
       default: false,
     },
     /**
-     * 是否禁止旋转
+     * 禁止旋转
      */
     isDisableRotate: {
       type: Boolean,
       default: false,
     },
     /**
-     * 是否限制移动范围
+     * 限制移动范围
      */
     isLimitMove: {
       type: Boolean,
       default: false,
     },
     /**
-     * 是否显示选择图片按钮
+     * 显示选择图片按钮
      */
     isShowPhotoBtn: {
       type: Boolean,
       default: true,
     },
     /**
-     * 是否显示转按钮
+     * 显示转按钮
      */
     isShowRotateBtn: {
       type: Boolean,
       default: true,
     },
     /**
-     * 是否显示确定按钮
+     * 显示确定按钮
      */
     isShowConfirmBtn: {
       type: Boolean,
       default: true,
     },
     /**
-     * 是否显示关闭按钮
+     * 显示关闭按钮
      */
     isShowCancelBtn: {
       type: Boolean,
