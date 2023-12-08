@@ -763,6 +763,14 @@
         "imgUrl": "built-in/third-party/img/HmMonacoEditor.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmLimeClipper",
+        "title": "图片裁剪",
+        "importPath": "built-in/third-party/HmLimeClipper",
+        "imgUrl": "built-in/third-party/img/HmLimeClipper.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },

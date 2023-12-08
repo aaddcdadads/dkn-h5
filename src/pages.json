@@ -125,6 +125,9 @@
             "path": "pages/test/TestHmLabelCard"
         },
         {
+            "path": "pages/test/TestHmLimeClipper"
+        },
+        {
             "path": "pages/test/TestHmLimeSignature"
         },
         {
@@ -398,6 +401,9 @@
             "path": "components/built-in/third-party/HmKxjPreviewImage"
         },
         {
+            "path": "components/built-in/third-party/HmLimeClipper"
+        },
+        {
             "path": "components/built-in/third-party/HmLimeSignature"
         },
         {
@@ -411,6 +417,9 @@
         },
         {
             "path": "components/built-in/third-party/HmUniEleTable/loading"
+        },
+        {
+            "path": "components/built-in/third-party/HmZebraSwiper"
         },
         {
             "path": "components/built-in/thorui-uni/HmTuiTable"
