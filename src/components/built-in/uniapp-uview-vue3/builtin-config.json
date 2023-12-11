@@ -771,6 +771,14 @@
         "imgUrl": "built-in/third-party/img/HmLimeClipper.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmZebraSwiper",
+        "title": "3D轮播",
+        "importPath": "built-in/third-party/HmZebraSwiper",
+        "imgUrl": "built-in/third-party/img/HmZebraSwiper.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },
