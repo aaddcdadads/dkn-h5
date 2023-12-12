@@ -338,6 +338,9 @@
             "path": "pages/test/TestHmVisitsCard"
         },
         {
+            "path": "pages/test/TestHmZebraSwiper"
+        },
+        {
             "path": "pages/test/TestLiveSlotScope"
         },
         {
