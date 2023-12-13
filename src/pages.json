@@ -140,6 +140,9 @@
             "path": "pages/test/TestHmMonacoEditor"
         },
         {
+            "path": "pages/test/TestHmMpHtml"
+        },
+        {
             "path": "pages/test/TestHmMumuPeview"
         },
         {
@@ -411,6 +414,12 @@
         },
         {
             "path": "components/built-in/third-party/HmMonacoEditor"
+        },
+        {
+            "path": "components/built-in/third-party/HmMpHtml"
+        },
+        {
+            "path": "components/built-in/third-party/HmNiceCropper"
         },
         {
             "path": "components/built-in/third-party/HmSearch"

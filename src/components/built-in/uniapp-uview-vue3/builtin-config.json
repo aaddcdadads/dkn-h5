@@ -779,6 +779,14 @@
         "imgUrl": "built-in/third-party/img/HmZebraSwiper.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmMpHtml",
+        "title": "富文本渲染",
+        "importPath": "built-in/third-party/HmMpHtml",
+        "imgUrl": "built-in/third-party/img/HmMpHtml.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },

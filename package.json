@@ -52,6 +52,7 @@
     "@formily/core": "^2.2.2",
     "@formily/vue": "^2.2.2",
     "@zebra-ui/swiper": "^2.2.7",
+    "mp-html":"^2.4.2",
     "dayjs": "^1.11.5",
     "dingtalk-jsapi": "^3.0.12",
     "jiff": "^0.7.3",
