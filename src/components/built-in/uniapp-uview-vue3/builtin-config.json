@@ -787,6 +787,14 @@
         "imgUrl": "built-in/third-party/img/HmMpHtml.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmNiceCropper",
+        "title": "图片裁剪",
+        "importPath": "built-in/third-party/HmNiceCropper",
+        "imgUrl": "built-in/third-party/img/HmNiceCropper.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },

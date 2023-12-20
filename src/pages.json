@@ -149,6 +149,9 @@
             "path": "pages/test/TestHmNewsDetail"
         },
         {
+            "path": "pages/test/TestHmNiceCropper"
+        },
+        {
             "path": "pages/test/TestHmPhotoCard"
         },
         {
@@ -429,6 +432,9 @@
         },
         {
             "path": "components/built-in/third-party/HmUniEleTable/loading"
+        },
+        {
+            "path": "components/built-in/third-party/HmYqAvatar"
         },
         {
             "path": "components/built-in/third-party/HmZebraSwiper"
