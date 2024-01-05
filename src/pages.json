@@ -347,6 +347,9 @@
             "path": "pages/test/TestHmZebraSwiper"
         },
         {
+            "path": "pages/test/TestHmYqAvatar"
+        },
+        {
             "path": "pages/test/TestLiveSlotScope"
         },
         {
@@ -414,6 +417,9 @@
         },
         {
             "path": "components/built-in/third-party/HmLimeSignature"
+        },
+        {
+            "path": "components/built-in/third-party/HmLottery"
         },
         {
             "path": "components/built-in/third-party/HmMonacoEditor"

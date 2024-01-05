@@ -795,7 +795,16 @@
         "imgUrl": "built-in/third-party/img/HmNiceCropper.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmYqAvatar",
+        "title": "头像美化",
+        "importPath": "built-in/third-party/HmYqAvatar",
+        "imgUrl": "built-in/third-party/img/HmYqAvatar.png",
+        "type": 0,
+        "isBuiltIn": true
       }
+
     ]
   },
   {
