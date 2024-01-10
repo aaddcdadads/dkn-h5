@@ -356,6 +356,9 @@
             "path": "pages/test/TestSticky"
         },
         {
+            "path": "pages/test/TestHmLottery"
+        },
+        {
             "path": "pages/test/Testtest"
         },
         {
