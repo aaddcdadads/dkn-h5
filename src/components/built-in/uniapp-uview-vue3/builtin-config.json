@@ -803,8 +803,15 @@
         "imgUrl": "built-in/third-party/img/HmYqAvatar.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmLottery",
+        "title": "抽奖转盘",
+        "importPath": "built-in/third-party/HmLottery",
+        "imgUrl": "built-in/third-party/img/HmLottery.png",
+        "type": 0,
+        "isBuiltIn": true
       }
-
     ]
   },
   {
