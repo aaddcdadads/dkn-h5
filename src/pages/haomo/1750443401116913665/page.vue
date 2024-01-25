@@ -110,7 +110,6 @@
                     <hm-uview-bg-card
                       width="100%"
                       height="40"
-                      :text-align="'center'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -120,6 +119,7 @@
                         class="ele-wrapper ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f"
                       >
                         <hm-uview-text
+                          text=" 姓名/昵称:"
                           font-size="13px"
                           class="ele-d166dfa0-a20d-4d76-a53e-7fffb0834c9f"
                         >
@@ -146,7 +146,6 @@
                     <hm-uview-bg-card
                       width="100%"
                       height="40"
-                      :text-align="'center'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -156,6 +155,7 @@
                         class="ele-wrapper ele-wrapper-37f7c953-8895-4c12-80d8-e4bbd27b84a2"
                       >
                         <hm-uview-text
+                          text=" 姓名/昵称:"
                           font-size="13px"
                           class="ele-37f7c953-8895-4c12-80d8-e4bbd27b84a2"
                         >
@@ -182,7 +182,6 @@
                     <hm-uview-bg-card
                       width="100%"
                       height="40"
-                      :text-align="'center'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -192,6 +191,7 @@
                         class="ele-wrapper ele-wrapper-3abd57d9-0713-43df-a2c8-ef7c647ae545"
                       >
                         <hm-uview-text
+                          text=" 姓名/昵称:"
                           font-size="13px"
                           class="ele-3abd57d9-0713-43df-a2c8-ef7c647ae545"
                         >
@@ -336,7 +336,7 @@ export default {
 }
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
-  width: 65%;
+  width: 68%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
@@ -352,11 +352,11 @@ export default {
 }
 
 .ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f {
-  width: 30%;
+  width: 25%;
 }
 
 .ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b {
-  width: 65%;
+  width: 68%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
@@ -372,11 +372,11 @@ export default {
 }
 
 .ele-wrapper-37f7c953-8895-4c12-80d8-e4bbd27b84a2 {
-  width: 20%;
+  width: 25%;
 }
 
 .ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025 {
-  width: 80%;
+  width: 68%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
@@ -392,11 +392,11 @@ export default {
 }
 
 .ele-wrapper-3abd57d9-0713-43df-a2c8-ef7c647ae545 {
-  width: 20%;
+  width: 25%;
 }
 
 .ele-wrapper-9a4984ec-97fb-465a-9b6b-8c645b5eab71 {
-  width: 80%;
+  width: 68%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
