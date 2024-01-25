@@ -197,5 +197,7 @@ export default {
 
 .ele-wrapper-6baa4ed6-ee36-4c8e-b20e-df2e7078c56c {
   width: 80%;
+  margin-top: 30%;
+  margin-bottom: 50px;
 }
 </style>
