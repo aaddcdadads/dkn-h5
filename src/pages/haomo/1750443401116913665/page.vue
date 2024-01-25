@@ -69,6 +69,11 @@
                   class="ele-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
                 >
                   <view
+                    class="ele-wrapper ele-wrapper-9cbda321-796b-46be-b933-404afb841cb9"
+                  >
+                    <hm-uview-text font-size="13px"> </hm-uview-text>
+                  </view>
+                  <view
                     class="ele-wrapper ele-wrapper-f78a6bed-db84-407e-ba11-7b846b6b7012"
                   >
                     <hm-uview-field
@@ -77,6 +82,7 @@
                       label-width="0"
                       icon=""
                       right-icon=""
+                      class="ele-f78a6bed-db84-407e-ba11-7b846b6b7012"
                     >
                     </hm-uview-field>
                   </view>
@@ -181,6 +187,10 @@ export default {
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
   width: 80%;
+}
+
+.ele-wrapper-f78a6bed-db84-407e-ba11-7b846b6b7012 {
+  width: 60%;
 }
 
 .ele-wrapper-5f9b085f-9eca-4f97-8d98-e3895c913b99 {
