@@ -340,8 +340,9 @@ export default {
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
-    border: 1px transparent;
+    border: 1px #000 !important;
   }
+  border: 1px #000 !important;
 }
 
 .ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9 {
