@@ -328,7 +328,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 5px 0px;
+  margin: 10px 0px;
 }
 
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
