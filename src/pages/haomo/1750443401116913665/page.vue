@@ -104,6 +104,14 @@
                 >
                 </hm-uview-text>
               </view>
+              <view
+                class="ele-wrapper ele-wrapper-6baa4ed6-ee36-4c8e-b20e-df2e7078c56c"
+              >
+                <hm-uview-button
+                  class="ele-6baa4ed6-ee36-4c8e-b20e-df2e7078c56c"
+                >
+                </hm-uview-button>
+              </view>
             </hm-uview-bg-card>
           </view>
         </hm-uview-bg-card>
@@ -117,6 +125,7 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmInput from "/@/components/built-in/uniapp/HmInput.vue";
+import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
   name: "EventRegistrationInformation",
@@ -124,6 +133,7 @@ export default {
     HmUviewBgCard,
     HmUviewText,
     HmInput,
+    HmUviewButton,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -182,6 +192,10 @@ export default {
 }
 
 .ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451 {
+  width: 80%;
+}
+
+.ele-wrapper-6baa4ed6-ee36-4c8e-b20e-df2e7078c56c {
   width: 80%;
 }
 </style>
