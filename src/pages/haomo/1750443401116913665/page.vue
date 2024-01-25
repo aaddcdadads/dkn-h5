@@ -119,7 +119,7 @@
                         class="ele-wrapper ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f"
                       >
                         <hm-uview-text
-                          text=" 姓名/昵称:"
+                          text=" 手机号码："
                           font-size="13px"
                           class="ele-d166dfa0-a20d-4d76-a53e-7fffb0834c9f"
                         >
@@ -155,7 +155,7 @@
                         class="ele-wrapper ele-wrapper-37f7c953-8895-4c12-80d8-e4bbd27b84a2"
                       >
                         <hm-uview-text
-                          text=" 姓名/昵称:"
+                          text=" 领奖门店："
                           font-size="13px"
                           class="ele-37f7c953-8895-4c12-80d8-e4bbd27b84a2"
                         >
@@ -191,7 +191,7 @@
                         class="ele-wrapper ele-wrapper-3abd57d9-0713-43df-a2c8-ef7c647ae545"
                       >
                         <hm-uview-text
-                          text=" 姓名/昵称:"
+                          text=" 报名时间："
                           font-size="13px"
                           class="ele-3abd57d9-0713-43df-a2c8-ef7c647ae545"
                         >
