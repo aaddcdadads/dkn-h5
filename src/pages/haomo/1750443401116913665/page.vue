@@ -83,6 +83,7 @@
                         class="ele-wrapper ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429"
                       >
                         <hm-uview-text
+                          text=" 姓名/昵称:"
                           font-size="13px"
                           class="ele-788913aa-482e-4c28-855d-fdb18b0c1429"
                         >
@@ -351,11 +352,11 @@ export default {
 }
 
 .ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f {
-  width: 20%;
+  width: 30%;
 }
 
 .ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b {
-  width: 80%;
+  width: 65%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
