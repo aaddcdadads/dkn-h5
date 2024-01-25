@@ -150,5 +150,6 @@ export default {
 
 .ele-wrapper-1834ad9d-20ec-47e9-aecf-bbac66366311 {
   background-color: rgb(240, 240, 240);
+  height: 35px;
 }
 </style>
