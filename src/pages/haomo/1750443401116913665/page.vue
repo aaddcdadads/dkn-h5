@@ -51,6 +51,7 @@
                 <hm-uview-text
                   text="订单编号："
                   font-size="lem"
+                  color="#999999"
                   padding="10"
                   class="ele-26f6f652-919b-4425-90f1-4ef8ee193d38"
                 >
