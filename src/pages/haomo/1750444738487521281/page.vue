@@ -21,6 +21,7 @@
               border-radius=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
+              class="ele-4277c03e-3f10-4ac4-a323-2987eeb1c6a9"
             >
               <view
                 class="ele-wrapper ele-wrapper-5dd2074f-29d9-44b9-a829-c6b997d9652b"
@@ -65,6 +66,10 @@ export default {
 }
 
 .ele-wrapper-ff006dbd-abf0-427a-9076-d34d31098de7 {
+  width: 100%;
+}
+
+.ele-wrapper-4277c03e-3f10-4ac4-a323-2987eeb1c6a9 {
   width: 100%;
 }
 </style>
