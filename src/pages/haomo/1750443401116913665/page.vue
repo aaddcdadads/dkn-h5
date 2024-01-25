@@ -69,17 +69,16 @@
                   class="ele-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
                 >
                   <view
-                    class="ele-wrapper ele-wrapper-1834ad9d-20ec-47e9-aecf-bbac66366311"
+                    class="ele-wrapper ele-wrapper-f78a6bed-db84-407e-ba11-7b846b6b7012"
                   >
-                    <hm-input
-                      value="默认初始值"
-                      :maxlength="140"
-                      :cursor="0"
-                      :safe-password-length="10"
-                      :safe-password-time-stamp="20"
-                      class="ele-1834ad9d-20ec-47e9-aecf-bbac66366311"
+                    <hm-uview-field
+                      value=""
+                      label=""
+                      label-width="0"
+                      icon=""
+                      right-icon=""
                     >
-                    </hm-input>
+                    </hm-uview-field>
                   </view>
                 </hm-uview-bg-card>
               </view>
@@ -127,7 +126,7 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
-import HmInput from "/@/components/built-in/uniapp/HmInput.vue";
+import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -135,15 +134,15 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewText,
-    HmInput,
+    HmUviewField,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
     return {
-      "1834ad9d-20ec-47e9-aecf-bbac66366311": {
-        value: "默认初始值",
+      "f78a6bed-db84-407e-ba11-7b846b6b7012": {
+        value: "",
       },
     };
   },
@@ -182,12 +181,6 @@ export default {
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
   width: 80%;
-}
-
-.ele-wrapper-1834ad9d-20ec-47e9-aecf-bbac66366311 {
-  background-color: rgb(240, 240, 240);
-  height: 35px;
-  align-items: 10px;
 }
 
 .ele-wrapper-5f9b085f-9eca-4f97-8d98-e3895c913b99 {
