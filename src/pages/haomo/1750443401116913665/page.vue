@@ -6,7 +6,7 @@
       >
         <hm-uview-bg-card
           width="100%"
-          height="100%"
+          height="50"
           class="ele-c57e9abe-e655-4515-acc3-575489ca1e33"
         >
           <view
