@@ -41,6 +41,7 @@
               box-shadow-v-shadow=""
               box-shadow-blur=""
               box-shadow-color="#F0F0F000"
+              background-color="#F0F0F0"
               class="ele-a4540298-8d72-4b6c-a4e3-fab8f56c0be2"
             >
               <view
