@@ -46,7 +46,11 @@
               <view
                 class="ele-wrapper ele-wrapper-26f6f652-919b-4425-90f1-4ef8ee193d38"
               >
-                <hm-uview-text class="ele-26f6f652-919b-4425-90f1-4ef8ee193d38">
+                <hm-uview-text
+                  text="订单编号："
+                  font-size="lem"
+                  class="ele-26f6f652-919b-4425-90f1-4ef8ee193d38"
+                >
                 </hm-uview-text>
               </view>
             </hm-uview-bg-card>
