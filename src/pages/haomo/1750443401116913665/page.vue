@@ -357,6 +357,11 @@ export default {
 
 .ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b {
   width: 80%;
+  /deep/.u-border-bottom {
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+    border: 1px;
+  }
 }
 
 .ele-wrapper-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0 {
@@ -372,6 +377,11 @@ export default {
 
 .ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025 {
   width: 80%;
+  /deep/.u-border-bottom {
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+    border: 1px;
+  }
 }
 
 .ele-wrapper-ec8bdb37-8258-4daf-b83b-30ebc2a70f11 {
@@ -387,6 +397,11 @@ export default {
 
 .ele-wrapper-9a4984ec-97fb-465a-9b6b-8c645b5eab71 {
   width: 80%;
+  /deep/.u-border-bottom {
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+    border: 1px;
+  }
 }
 
 .ele-wrapper-5f9b085f-9eca-4f97-8d98-e3895c913b99 {
