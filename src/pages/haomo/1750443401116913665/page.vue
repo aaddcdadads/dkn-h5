@@ -10,9 +10,18 @@
           class="ele-c57e9abe-e655-4515-acc3-575489ca1e33"
         >
           <view
-            class="ele-wrapper ele-wrapper-a3bb82dc-69fc-433d-bbb0-5ddb9964155e"
+            class="ele-wrapper ele-wrapper-4cc93495-0f38-4da7-898e-c8573db6c6a7"
           >
-            <hm-icon :size="20"> </hm-icon>
+            <hm-uview-icon
+              name="left"
+              class="ele-4cc93495-0f38-4da7-898e-c8573db6c6a7"
+            >
+            </hm-uview-icon>
+          </view>
+          <view
+            class="ele-wrapper ele-wrapper-815e922a-f221-499a-95b7-5efffa64730c"
+          >
+            <hm-uview-text> </hm-uview-text>
           </view>
         </hm-uview-bg-card>
       </view>
@@ -23,13 +32,15 @@
 <script>
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
-import HmIcon from "/@/components/built-in/uniapp/HmIcon.vue";
+import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
+import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 
 export default {
   name: "EventRegistrationInformation",
   components: {
     HmUviewBgCard,
-    HmIcon,
+    HmUviewIcon,
+    HmUviewText,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -48,5 +59,9 @@ export default {
 .ele-wrapper-c57e9abe-e655-4515-acc3-575489ca1e33 {
   width: 100%;
   height: 100%;
+}
+
+.ele-wrapper-4cc93495-0f38-4da7-898e-c8573db6c6a7 {
+  margin: center;
 }
 </style>
