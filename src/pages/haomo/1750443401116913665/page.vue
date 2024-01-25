@@ -99,6 +99,7 @@
               >
                 <hm-uview-text
                   text=" 返回活动详情页"
+                  font-size="1em"
                   class="ele-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
                 >
                 </hm-uview-text>
