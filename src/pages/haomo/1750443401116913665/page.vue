@@ -586,7 +586,7 @@ export default {
   width: 80%;
   margin-top: 30%;
   margin-bottom: 50px;
-  /deep/.Buttonwan {
+  /deep/.ele-Buttonwan {
     background-color: rgb(245, 108, 108);
   }
 }
