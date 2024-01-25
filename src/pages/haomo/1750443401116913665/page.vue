@@ -70,6 +70,7 @@
                   >
                     <hm-uview-field
                       value=""
+                      label-width="100"
                       maxlength="120"
                       icon=""
                       right-icon=""
