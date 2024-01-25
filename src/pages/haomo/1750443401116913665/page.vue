@@ -225,6 +225,45 @@
                   box-shadow-blur=""
                   class="ele-5f9b085f-9eca-4f97-8d98-e3895c913b99"
                 >
+                  <view
+                    class="ele-wrapper ele-wrapper-14c7e1a3-d5fb-4aae-baba-937bb025e4f4"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height="40"
+                      padding=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
+                      class="ele-14c7e1a3-d5fb-4aae-baba-937bb025e4f4"
+                    >
+                    </hm-uview-bg-card>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-3e27eb74-08c4-466c-97cb-eb8e19b2cc29"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height="40"
+                      padding=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
+                      class="ele-3e27eb74-08c4-466c-97cb-eb8e19b2cc29"
+                    >
+                    </hm-uview-bg-card>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-ae2abb77-b95c-4297-bb4d-03e1a1f508a1"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height="40"
+                      padding=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
+                      class="ele-ae2abb77-b95c-4297-bb4d-03e1a1f508a1"
+                    >
+                    </hm-uview-bg-card>
+                  </view>
                 </hm-uview-bg-card>
               </view>
               <view
@@ -340,9 +379,7 @@ export default {
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
-    border: 1px #000 !important;
   }
-  border: 1px #000 !important;
 }
 
 .ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9 {
@@ -407,6 +444,27 @@ export default {
 
 .ele-wrapper-5f9b085f-9eca-4f97-8d98-e3895c913b99 {
   width: 80%;
+}
+
+.ele-wrapper-14c7e1a3-d5fb-4aae-baba-937bb025e4f4 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+}
+
+.ele-wrapper-3e27eb74-08c4-466c-97cb-eb8e19b2cc29 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+}
+
+.ele-wrapper-ae2abb77-b95c-4297-bb4d-03e1a1f508a1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
 }
 
 .ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451 {
