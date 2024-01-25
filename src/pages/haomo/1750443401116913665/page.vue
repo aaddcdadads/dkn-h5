@@ -178,7 +178,6 @@ export default {
 .ele-wrapper-26f6f652-919b-4425-90f1-4ef8ee193d38 {
   width: 80%;
   text-align: left;
-  font-size: 13px;
 }
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
@@ -204,5 +203,6 @@ export default {
   width: 80%;
   margin-top: 30%;
   margin-bottom: 50px;
+  background-color: rgb(245, 108, 108);
 }
 </style>
