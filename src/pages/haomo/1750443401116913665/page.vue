@@ -75,6 +75,7 @@
                       width="100%"
                       height="40"
                       :text-align="'center'"
+                      padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
                       class="ele-3594e500-632d-42e8-b3b9-d485a0f784a5"
@@ -110,6 +111,7 @@
                       width="100%"
                       height="40"
                       :text-align="'center'"
+                      padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
                       class="ele-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9"
@@ -145,6 +147,7 @@
                       width="100%"
                       height="40"
                       :text-align="'center'"
+                      padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
                       class="ele-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0"
@@ -180,6 +183,7 @@
                       width="100%"
                       height="40"
                       :text-align="'center'"
+                      padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
                       class="ele-ec8bdb37-8258-4daf-b83b-30ebc2a70f11"
@@ -324,6 +328,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
+  margin: 5px 0px;
 }
 
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
@@ -338,6 +343,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
+  margin: 5px 0px;
 }
 
 .ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f {
@@ -352,6 +358,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
+  margin: 5px 0px;
 }
 
 .ele-wrapper-37f7c953-8895-4c12-80d8-e4bbd27b84a2 {
@@ -366,6 +373,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
+  margin: 5px 0px;
 }
 
 .ele-wrapper-3abd57d9-0713-43df-a2c8-ef7c647ae545 {
