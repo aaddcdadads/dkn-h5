@@ -71,26 +71,36 @@
                   <view
                     class="ele-wrapper ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5"
                   >
-                    <hm-uview-bg-card width="100%" height="50">
-                    </hm-uview-bg-card>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-9cbda321-796b-46be-b933-404afb841cb9"
-                  >
-                    <hm-uview-text font-size="13px"> </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-f78a6bed-db84-407e-ba11-7b846b6b7012"
-                  >
-                    <hm-uview-field
-                      value=""
-                      label=""
-                      label-width="0"
-                      icon=""
-                      right-icon=""
-                      class="ele-f78a6bed-db84-407e-ba11-7b846b6b7012"
+                    <hm-uview-bg-card
+                      width="100%"
+                      height="40"
+                      padding=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
+                      class="ele-3594e500-632d-42e8-b3b9-d485a0f784a5"
                     >
-                    </hm-uview-field>
+                      <view
+                        class="ele-wrapper ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429"
+                      >
+                        <hm-uview-text
+                          font-size="13px"
+                          class="ele-788913aa-482e-4c28-855d-fdb18b0c1429"
+                        >
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37"
+                      >
+                        <hm-uview-field
+                          value=""
+                          label=""
+                          label-width=""
+                          icon=""
+                          right-icon=""
+                        >
+                        </hm-uview-field>
+                      </view>
+                    </hm-uview-bg-card>
                   </view>
                 </hm-uview-bg-card>
               </view>
@@ -153,7 +163,7 @@ export default {
   data() {
     let self = this;
     return {
-      "f78a6bed-db84-407e-ba11-7b846b6b7012": {
+      "ea222d02-9ba2-44be-b94e-799272b9be37": {
         value: "",
       },
     };
@@ -195,8 +205,12 @@ export default {
   width: 80%;
 }
 
-.ele-wrapper-f78a6bed-db84-407e-ba11-7b846b6b7012 {
-  width: 60%;
+.ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5 {
+  width: 100%;
+}
+
+.ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
+  width: 20%;
 }
 
 .ele-wrapper-5f9b085f-9eca-4f97-8d98-e3895c913b99 {
