@@ -74,6 +74,7 @@
                     <hm-uview-bg-card
                       width="100%"
                       height="40"
+                      :text-align="'center'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -94,7 +95,7 @@
                         <hm-uview-field
                           value=""
                           label=""
-                          label-width=""
+                          label-width="0"
                           icon=""
                           right-icon=""
                           class="ele-ea222d02-9ba2-44be-b94e-799272b9be37"
@@ -208,6 +209,8 @@ export default {
 
 .ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5 {
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
