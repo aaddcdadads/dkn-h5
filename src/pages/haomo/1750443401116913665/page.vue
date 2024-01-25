@@ -336,7 +336,7 @@ export default {
 }
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
-  width: 68%;
+  width: 70%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
@@ -356,7 +356,7 @@ export default {
 }
 
 .ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b {
-  width: 68%;
+  width: 70%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
@@ -376,7 +376,7 @@ export default {
 }
 
 .ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025 {
-  width: 68%;
+  width: 70%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
@@ -396,7 +396,7 @@ export default {
 }
 
 .ele-wrapper-9a4984ec-97fb-465a-9b6b-8c645b5eab71 {
-  width: 68%;
+  width: 70%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
