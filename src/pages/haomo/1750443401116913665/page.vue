@@ -24,6 +24,7 @@
               >
                 <hm-uview-text
                   text="活动报名信息"
+                  :text-style="{}"
                   class="ele-51e40d97-b1a2-45a7-b1b6-7d182e2d5e68"
                 >
                 </hm-uview-text>
@@ -50,6 +51,7 @@
                 <hm-uview-text
                   text="订单编号："
                   font-size="lem"
+                  :text-style="{}"
                   class="ele-26f6f652-919b-4425-90f1-4ef8ee193d38"
                 >
                 </hm-uview-text>
@@ -64,7 +66,6 @@
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
                   box-shadow-color="#00000000"
-                  background-color="#FFFFFF00"
                   class="ele-653a4f54-6ca5-4603-bd16-2b9b5bd01744"
                 >
                 </hm-uview-bg-card>
