@@ -7,7 +7,6 @@
         <hm-uview-bg-card
           width="100%"
           height="50"
-          :text-align="'center'"
           class="ele-c57e9abe-e655-4515-acc3-575489ca1e33"
         >
           <view
@@ -23,7 +22,8 @@
           <view
             class="ele-wrapper ele-wrapper-815e922a-f221-499a-95b7-5efffa64730c"
           >
-            <hm-uview-text> </hm-uview-text>
+            <hm-uview-text class="ele-815e922a-f221-499a-95b7-5efffa64730c">
+            </hm-uview-text>
           </view>
         </hm-uview-bg-card>
       </view>
@@ -65,5 +65,9 @@ export default {
 
 .ele-wrapper-4cc93495-0f38-4da7-898e-c8573db6c6a7 {
   margin-left: 10px;
+}
+
+.ele-wrapper-815e922a-f221-499a-95b7-5efffa64730c {
+  margin-left: 100px;
 }
 </style>
