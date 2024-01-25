@@ -33,7 +33,7 @@
               <view
                 class="ele-wrapper ele-wrapper-37f4c2a6-8b23-4459-bbbe-1b24e423d813"
               >
-                <hm-uview-field value="" label="" label-width="">
+                <hm-uview-field value="" label="" label-width="0">
                 </hm-uview-field>
               </view>
             </hm-uview-bg-card>
