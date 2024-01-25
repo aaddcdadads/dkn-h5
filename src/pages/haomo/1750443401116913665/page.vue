@@ -340,7 +340,7 @@ export default {
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
-    border: 1px;
+    border: 1px transparent;
   }
 }
 
