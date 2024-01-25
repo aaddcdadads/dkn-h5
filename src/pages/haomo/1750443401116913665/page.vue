@@ -17,16 +17,27 @@
               height="50"
               class="ele-b70290a2-501d-46d6-a44e-63d06e016496"
             >
+              <view
+                class="ele-wrapper ele-wrapper-51e40d97-b1a2-45a7-b1b6-7d182e2d5e68"
+              >
+                <hm-uview-text
+                  text="活动报名信息"
+                  class="ele-51e40d97-b1a2-45a7-b1b6-7d182e2d5e68"
+                >
+                </hm-uview-text>
+              </view>
             </hm-uview-bg-card>
           </view>
           <view
-            class="ele-wrapper ele-wrapper-815e922a-f221-499a-95b7-5efffa64730c"
+            class="ele-wrapper ele-wrapper-a4540298-8d72-4b6c-a4e3-fab8f56c0be2"
           >
-            <hm-uview-text
-              text="活动报名信息"
-              class="ele-815e922a-f221-499a-95b7-5efffa64730c"
+            <hm-uview-bg-card
+              width="100%"
+              height="100%"
+              box-shadow-color="#F0F0F0"
+              class="ele-a4540298-8d72-4b6c-a4e3-fab8f56c0be2"
             >
-            </hm-uview-text>
+            </hm-uview-bg-card>
           </view>
         </hm-uview-bg-card>
       </view>
@@ -69,7 +80,12 @@ export default {
   height: 100%;
 }
 
-.ele-wrapper-815e922a-f221-499a-95b7-5efffa64730c {
+.ele-wrapper-51e40d97-b1a2-45a7-b1b6-7d182e2d5e68 {
   margin-left: 28%;
+}
+
+.ele-wrapper-a4540298-8d72-4b6c-a4e3-fab8f56c0be2 {
+  width: 100%;
+  height: 100%;
 }
 </style>
