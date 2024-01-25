@@ -67,16 +67,17 @@
                   class="ele-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
                 >
                   <view
-                    class="ele-wrapper ele-wrapper-d97674f9-d8f2-4894-9e97-b55d975ff4da"
+                    class="ele-wrapper ele-wrapper-1834ad9d-20ec-47e9-aecf-bbac66366311"
                   >
-                    <hm-uview-field
-                      value=""
-                      label-width="100"
-                      maxlength="120"
-                      icon=""
-                      right-icon=""
+                    <hm-input
+                      value="默认初始值"
+                      :maxlength="140"
+                      :cursor="0"
+                      :safe-password-length="10"
+                      :safe-password-time-stamp="20"
+                      class="ele-1834ad9d-20ec-47e9-aecf-bbac66366311"
                     >
-                    </hm-uview-field>
+                    </hm-input>
                   </view>
                 </hm-uview-bg-card>
               </view>
@@ -92,21 +93,21 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
-import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
+import HmInput from "/@/components/built-in/uniapp/HmInput.vue";
 
 export default {
   name: "EventRegistrationInformation",
   components: {
     HmUviewBgCard,
     HmUviewText,
-    HmUviewField,
+    HmInput,
   },
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
     return {
-      "d97674f9-d8f2-4894-9e97-b55d975ff4da": {
-        value: "",
+      "1834ad9d-20ec-47e9-aecf-bbac66366311": {
+        value: "默认初始值",
       },
     };
   },
@@ -145,5 +146,9 @@ export default {
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
   width: 80%;
+}
+
+.ele-wrapper-1834ad9d-20ec-47e9-aecf-bbac66366311 {
+  background-color: rog(240, 240, 240);
 }
 </style>
