@@ -22,7 +22,10 @@
           <view
             class="ele-wrapper ele-wrapper-815e922a-f221-499a-95b7-5efffa64730c"
           >
-            <hm-uview-text class="ele-815e922a-f221-499a-95b7-5efffa64730c">
+            <hm-uview-text
+              text="活动报名信息"
+              class="ele-815e922a-f221-499a-95b7-5efffa64730c"
+            >
             </hm-uview-text>
           </view>
         </hm-uview-bg-card>
