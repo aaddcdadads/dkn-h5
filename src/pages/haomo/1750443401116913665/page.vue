@@ -149,6 +149,6 @@ export default {
 }
 
 .ele-wrapper-1834ad9d-20ec-47e9-aecf-bbac66366311 {
-  background-color: rog(240, 240, 240);
+  background-color: rgb(240, 240, 240);
 }
 </style>
