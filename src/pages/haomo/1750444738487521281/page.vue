@@ -13,26 +13,10 @@
           class="ele-ff006dbd-abf0-427a-9076-d34d31098de7"
         >
           <view
-            class="ele-wrapper ele-wrapper-4277c03e-3f10-4ac4-a323-2987eeb1c6a9"
+            class="ele-wrapper ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b"
           >
-            <hm-uview-bg-card
-              width="100%"
-              height="100%"
-              border-radius=""
-              box-shadow-v-shadow=""
-              box-shadow-blur=""
-              class="ele-4277c03e-3f10-4ac4-a323-2987eeb1c6a9"
-            >
-              <view
-                class="ele-wrapper ele-wrapper-5dd2074f-29d9-44b9-a829-c6b997d9652b"
-              >
-                <hm-uview-text
-                  text="资料填写"
-                  :text-style="{ fontWeight: 700 }"
-                >
-                </hm-uview-text>
-              </view>
-            </hm-uview-bg-card>
+            <hm-uview-text text="资料填写" :text-style="{ fontWeight: 600 }">
+            </hm-uview-text>
           </view>
         </hm-uview-bg-card>
       </view>
@@ -66,10 +50,6 @@ export default {
 }
 
 .ele-wrapper-ff006dbd-abf0-427a-9076-d34d31098de7 {
-  width: 100%;
-}
-
-.ele-wrapper-4277c03e-3f10-4ac4-a323-2987eeb1c6a9 {
   width: 100%;
 }
 </style>
