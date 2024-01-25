@@ -15,6 +15,8 @@
             <hm-uview-bg-card
               width="100%"
               height="50"
+              box-shadow-blur=""
+              box-shadow-color="#00000000"
               class="ele-b70290a2-501d-46d6-a44e-63d06e016496"
             >
               <view
@@ -34,7 +36,10 @@
             <hm-uview-bg-card
               width="100%"
               height="100%"
-              box-shadow-color="#F0F0F0"
+              box-shadow-h-shadow=""
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+              box-shadow-color="#F0F0F000"
               class="ele-a4540298-8d72-4b6c-a4e3-fab8f56c0be2"
             >
             </hm-uview-bg-card>
