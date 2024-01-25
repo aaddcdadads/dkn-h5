@@ -69,6 +69,12 @@
                   class="ele-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
                 >
                   <view
+                    class="ele-wrapper ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5"
+                  >
+                    <hm-uview-bg-card width="100%" height="50">
+                    </hm-uview-bg-card>
+                  </view>
+                  <view
                     class="ele-wrapper ele-wrapper-9cbda321-796b-46be-b933-404afb841cb9"
                   >
                     <hm-uview-text font-size="13px"> </hm-uview-text>
