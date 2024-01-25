@@ -14,6 +14,7 @@
           >
             <hm-uview-icon
               name="left"
+              label=""
               class="ele-4cc93495-0f38-4da7-898e-c8573db6c6a7"
             >
             </hm-uview-icon>
