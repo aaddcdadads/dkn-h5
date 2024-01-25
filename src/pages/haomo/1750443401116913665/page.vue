@@ -7,6 +7,7 @@
         <hm-uview-bg-card
           width="100%"
           height="50"
+          :text-align="'center'"
           class="ele-c57e9abe-e655-4515-acc3-575489ca1e33"
         >
           <view
@@ -63,6 +64,6 @@ export default {
 }
 
 .ele-wrapper-4cc93495-0f38-4da7-898e-c8573db6c6a7 {
-  margin: center;
+  margin: left;
 }
 </style>
