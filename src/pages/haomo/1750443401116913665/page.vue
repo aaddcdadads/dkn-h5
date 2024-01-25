@@ -74,7 +74,6 @@
                     <hm-uview-bg-card
                       width="100%"
                       height="40"
-                      :text-align="'center'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -332,11 +331,11 @@ export default {
 }
 
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
-  width: 20%;
+  width: 30%;
 }
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
-  width: 80%;
+  width: 65%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
