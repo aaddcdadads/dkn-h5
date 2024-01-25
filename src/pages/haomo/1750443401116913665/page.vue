@@ -64,6 +64,7 @@
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
                   box-shadow-color="#00000000"
+                  background-color="#FFFFFF00"
                   class="ele-653a4f54-6ca5-4603-bd16-2b9b5bd01744"
                 >
                 </hm-uview-bg-card>
