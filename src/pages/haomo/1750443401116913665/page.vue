@@ -236,6 +236,29 @@
                       box-shadow-blur=""
                       class="ele-14c7e1a3-d5fb-4aae-baba-937bb025e4f4"
                     >
+                      <view
+                        class="ele-wrapper ele-wrapper-871e304d-82cd-4165-96f5-cd60704fac71"
+                      >
+                        <hm-uview-text
+                          text=" 姓名/昵称:"
+                          font-size="13px"
+                          class="ele-871e304d-82cd-4165-96f5-cd60704fac71"
+                        >
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-6bdb201e-d452-4e15-b72f-70c229fbd237"
+                      >
+                        <hm-uview-field
+                          value=""
+                          label=""
+                          label-width="0"
+                          icon=""
+                          right-icon=""
+                          class="ele-6bdb201e-d452-4e15-b72f-70c229fbd237"
+                        >
+                        </hm-uview-field>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -249,6 +272,29 @@
                       box-shadow-blur=""
                       class="ele-3e27eb74-08c4-466c-97cb-eb8e19b2cc29"
                     >
+                      <view
+                        class="ele-wrapper ele-wrapper-b6f23b24-c2be-4d98-9974-4d77dc23028b"
+                      >
+                        <hm-uview-text
+                          text=" 姓名/昵称:"
+                          font-size="13px"
+                          class="ele-b6f23b24-c2be-4d98-9974-4d77dc23028b"
+                        >
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea"
+                      >
+                        <hm-uview-field
+                          value=""
+                          label=""
+                          label-width="0"
+                          icon=""
+                          right-icon=""
+                          class="ele-8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea"
+                        >
+                        </hm-uview-field>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -262,6 +308,29 @@
                       box-shadow-blur=""
                       class="ele-ae2abb77-b95c-4297-bb4d-03e1a1f508a1"
                     >
+                      <view
+                        class="ele-wrapper ele-wrapper-4affc789-e268-4263-ac4f-4e8e3fd30c9b"
+                      >
+                        <hm-uview-text
+                          text=" 姓名/昵称:"
+                          font-size="13px"
+                          class="ele-4affc789-e268-4263-ac4f-4e8e3fd30c9b"
+                        >
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-95ec508c-0713-4dfb-b843-6e5c683fd4f6"
+                      >
+                        <hm-uview-field
+                          value=""
+                          label=""
+                          label-width="0"
+                          icon=""
+                          right-icon=""
+                          class="ele-95ec508c-0713-4dfb-b843-6e5c683fd4f6"
+                        >
+                        </hm-uview-field>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                 </hm-uview-bg-card>
@@ -322,6 +391,15 @@ export default {
         value: "",
       },
       "9a4984ec-97fb-465a-9b6b-8c645b5eab71": {
+        value: "",
+      },
+      "6bdb201e-d452-4e15-b72f-70c229fbd237": {
+        value: "",
+      },
+      "8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea": {
+        value: "",
+      },
+      "95ec508c-0713-4dfb-b843-6e5c683fd4f6": {
         value: "",
       },
     };
@@ -453,6 +531,18 @@ export default {
   margin: 15px 0px;
 }
 
+.ele-wrapper-871e304d-82cd-4165-96f5-cd60704fac71 {
+  width: 25%;
+}
+
+.ele-wrapper-6bdb201e-d452-4e15-b72f-70c229fbd237 {
+  width: 70%;
+  /deep/.u-border-bottom {
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+  }
+}
+
 .ele-wrapper-3e27eb74-08c4-466c-97cb-eb8e19b2cc29 {
   width: 100%;
   display: flex;
@@ -460,11 +550,35 @@ export default {
   margin: 15px 0px;
 }
 
+.ele-wrapper-b6f23b24-c2be-4d98-9974-4d77dc23028b {
+  width: 25%;
+}
+
+.ele-wrapper-8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea {
+  width: 70%;
+  /deep/.u-border-bottom {
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+  }
+}
+
 .ele-wrapper-ae2abb77-b95c-4297-bb4d-03e1a1f508a1 {
   width: 100%;
   display: flex;
   align-items: center;
   margin: 15px 0px;
+}
+
+.ele-wrapper-4affc789-e268-4263-ac4f-4e8e3fd30c9b {
+  width: 25%;
+}
+
+.ele-wrapper-95ec508c-0713-4dfb-b843-6e5c683fd4f6 {
+  width: 70%;
+  /deep/.u-border-bottom {
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+  }
 }
 
 .ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451 {
