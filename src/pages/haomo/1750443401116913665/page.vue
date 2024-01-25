@@ -64,6 +64,6 @@ export default {
 }
 
 .ele-wrapper-4cc93495-0f38-4da7-898e-c8573db6c6a7 {
-  margin: left;
+  margin-left: 10px;
 }
 </style>
