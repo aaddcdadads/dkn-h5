@@ -65,6 +65,17 @@
                   box-shadow-blur=""
                   class="ele-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
                 >
+                  <view
+                    class="ele-wrapper ele-wrapper-d97674f9-d8f2-4894-9e97-b55d975ff4da"
+                  >
+                    <hm-uview-field
+                      value=""
+                      maxlength="120"
+                      icon=""
+                      right-icon=""
+                    >
+                    </hm-uview-field>
+                  </view>
                 </hm-uview-bg-card>
               </view>
             </hm-uview-bg-card>
@@ -79,17 +90,23 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 
 export default {
   name: "EventRegistrationInformation",
   components: {
     HmUviewBgCard,
     HmUviewText,
+    HmUviewField,
   },
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
-    return {};
+    return {
+      "d97674f9-d8f2-4894-9e97-b55d975ff4da": {
+        value: "",
+      },
+    };
   },
   watch: {},
   methods: {},
