@@ -339,7 +339,7 @@ export default {
   width: 80%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px;
   }
 }
