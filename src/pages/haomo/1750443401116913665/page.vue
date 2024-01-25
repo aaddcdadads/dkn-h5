@@ -328,7 +328,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 10px 0px;
+  margin: 15px 0px;
 }
 
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
@@ -348,7 +348,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 5px 0px;
+  margin: 15px 0px;
 }
 
 .ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f {
@@ -368,7 +368,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 5px 0px;
+  margin: 15px 0px;
 }
 
 .ele-wrapper-37f7c953-8895-4c12-80d8-e4bbd27b84a2 {
@@ -388,7 +388,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 5px 0px;
+  margin: 15px 0px;
 }
 
 .ele-wrapper-3abd57d9-0713-43df-a2c8-ef7c647ae545 {
