@@ -97,7 +97,10 @@
               <view
                 class="ele-wrapper ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
               >
-                <hm-uview-text class="ele-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451">
+                <hm-uview-text
+                  text=" 返回活动详情页"
+                  class="ele-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
+                >
                 </hm-uview-text>
               </view>
             </hm-uview-bg-card>
