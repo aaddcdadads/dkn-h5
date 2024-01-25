@@ -191,7 +191,7 @@
                         class="ele-wrapper ele-wrapper-3abd57d9-0713-43df-a2c8-ef7c647ae545"
                       >
                         <hm-uview-text
-                          text=" 报名时间："
+                          text=" 报名时间:"
                           font-size="13px"
                           class="ele-3abd57d9-0713-43df-a2c8-ef7c647ae545"
                         >
