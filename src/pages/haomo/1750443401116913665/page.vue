@@ -337,7 +337,9 @@ export default {
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
   width: 80%;
-  background-color: rbg(245, 245, 245);
+  /deep/.u-border-bottom {
+    background-color: rgb(245, 245, 245);
+  }
 }
 
 .ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9 {
