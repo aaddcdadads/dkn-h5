@@ -36,6 +36,7 @@
               >
                 <information-input-box
                   value=""
+                  placeholder="* 请填写姓名/昵称"
                   class="ele-8b981cf2-ae14-4b8c-9f72-4cd6c41423a6"
                 >
                 </information-input-box>
@@ -49,7 +50,7 @@
                     'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji.png',
                   ]"
                   value=""
-                  placeholder="*请填写手机号码"
+                  placeholder="* 请填写手机号码"
                   class="ele-9662da08-d680-4c34-af33-b2ba9794437a"
                 >
                 </information-input-box>
@@ -64,7 +65,7 @@
                   ]"
                   value=""
                   :show-code="true"
-                  placeholder="*请填写短信验证码"
+                  placeholder="* 请填写短信验证码"
                   class="ele-5102357a-cd29-4bb3-9a1f-ab709e15c3a8"
                 >
                 </information-input-box>
@@ -79,7 +80,7 @@
                   ]"
                   value=""
                   :show-icon="true"
-                  placeholder="*请选择领奖门店"
+                  placeholder="* 请选择领奖门店"
                   class="ele-71e123e5-88a9-44c5-b029-f89fdaffa0d3"
                 >
                 </information-input-box>
