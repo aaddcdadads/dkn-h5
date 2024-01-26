@@ -174,6 +174,7 @@
                               :hour="15"
                               :minute="13"
                               :second="17"
+                              class="ele-0b526546-fffe-44d9-8fc9-6ed8ddc24c72"
                             >
                             </uni-countdown>
                           </view>
@@ -696,6 +697,12 @@ export default {
 
 .ele-wrapper-6ba2b397-6caf-44b2-8d16-4ad0c0eba375 {
   width: 100%;
+}
+
+.ele-wrapper-0b526546-fffe-44d9-8fc9-6ed8ddc24c72 {
+  /deep/.uni-countdown__splitor {
+    margin-top: 4rpx !important;
+  }
 }
 
 .ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39 {
