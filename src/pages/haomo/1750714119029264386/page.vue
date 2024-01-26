@@ -394,6 +394,28 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
+              <view
+                class="ele-wrapper ele-wrapper-8c006472-eabd-41ce-9098-c1e883253807"
+              >
+                <hm-uview-popup
+                  :show="true"
+                  :mode="'bottom'"
+                  width="100%"
+                  height="30%"
+                  :close-icon-pos="'top-left'"
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2"
+                  >
+                    <hm-uview-text> </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-82757320-2908-4ea4-a4a6-d6a672339dab"
+                  >
+                    <hm-uview-text> </hm-uview-text>
+                  </view>
+                </hm-uview-popup>
+              </view>
             </hm-uview-bg-card>
           </view>
         </hm-uview-bg-card>
@@ -410,6 +432,7 @@ import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewCellList from "/@/components/built-in/uniapp-uview-vue3/HmUviewCellList.vue";
 import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
+import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 
 export default {
   name: "ActivityRegistrationPage",
@@ -420,11 +443,16 @@ export default {
     HmUviewText,
     HmUviewCellList,
     HmCellList,
+    HmUviewPopup,
   },
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
-    return {};
+    return {
+      "8c006472-eabd-41ce-9098-c1e883253807": {
+        show: true,
+      },
+    };
   },
   watch: {},
   methods: {},
