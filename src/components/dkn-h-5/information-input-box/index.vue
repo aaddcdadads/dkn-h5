@@ -4,7 +4,7 @@
       <image :src="leftSrc[0]" class="image" v-show="!borderColor"></image>
       <image :src="leftSrc[1]" class="image" v-show="borderColor"></image>
     </view>
-    <input placeholder="*请填写姓名/昵称" class="data_input" v-model="value" @focus="onFocus" @blur="onBlur" />
+    <input :placeholder="placeholder" class="data_input" v-model="value" @focus="onFocus" @blur="onBlur" />
     <view v-show="showCode">
       <text @click="onCode" :class="showColor ? 'gcolor' : 'color'">{{ code }}</text>
     </view>
@@ -56,6 +56,13 @@ export default {
       type: Boolean,
       default: false,
     },
+    /**
+     * 输入框提示
+     */
+     placeholder:{
+      type:String,
+      default:"*请填写姓名/昵称",
+     },
   },
   data() {
     return {
