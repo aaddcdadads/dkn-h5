@@ -863,5 +863,9 @@ export default {
   /deep/.u-size-default {
     height: 120rpx !important;
   }
+  /deep/.u-btn--success {
+    background-color: rgb(36, 199, 137) !important;
+    border-color: rgb(36, 199, 137) !important;
+  }
 }
 </style>
