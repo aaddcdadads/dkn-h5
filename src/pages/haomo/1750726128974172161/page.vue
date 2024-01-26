@@ -51,6 +51,7 @@
               border-radius=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
+              class="ele-47e4d4a0-e917-4c71-ac7b-72efa70ed074"
             >
               <view
                 class="ele-wrapper ele-wrapper-fad33616-122b-49ed-9742-01503627aa8c"
@@ -146,5 +147,9 @@ export default {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.ele-wrapper-47e4d4a0-e917-4c71-ac7b-72efa70ed074 {
+  width: 100%;
 }
 </style>
