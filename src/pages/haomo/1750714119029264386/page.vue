@@ -185,6 +185,7 @@
                           height=""
                           border-radius="12"
                           padding="0"
+                          box-shadow-color="#00000000"
                           background-color="#F797BD00"
                           class="ele-db5afb3e-f8de-4171-94e9-286964bcb67c"
                         >
@@ -195,7 +196,7 @@
                               text="线上马拉松"
                               font-size="10px"
                               color="#FFFFFF"
-                              padding="0"
+                              padding="12"
                               class="ele-f0bdc2b0-8112-4546-8c75-84df79598453"
                             >
                             </hm-uview-text>
@@ -315,6 +316,6 @@ export default {
 
 .ele-wrapper-f0bdc2b0-8112-4546-8c75-84df79598453 {
   background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 12015px;
+  border-radius: 12px;
 }
 </style>
