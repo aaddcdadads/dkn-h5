@@ -411,27 +411,6 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-eb5dc617-266d-4627-8ae8-06394a0d2e04"
-              >
-                <hm-uview-bg-card
-                  width="100%"
-                  height=""
-                  border-radius="0"
-                  padding="0"
-                  box-shadow-color="#00000000"
-                  class="ele-eb5dc617-266d-4627-8ae8-06394a0d2e04"
-                >
-                  <view class="ele-wrapper ele-wrapper-registrationButton">
-                    <hm-uview-button
-                      ref="registrationButton"
-                      :type="registrationButton.type"
-                      class="ele-registrationButton"
-                    >
-                    </hm-uview-button>
-                  </view>
-                </hm-uview-bg-card>
-              </view>
               <view class="ele-wrapper ele-wrapper-regularPopup">
                 <hm-uview-popup
                   ref="regularPopup"
@@ -563,6 +542,26 @@
               </view>
             </hm-uview-bg-card>
           </view>
+          <view
+            class="ele-wrapper ele-wrapper-3a2803a6-a38e-495d-8113-b97276842fbb"
+          >
+            <hm-uview-bg-card
+              width="100%"
+              height=""
+              border-radius="0"
+              padding="0"
+              box-shadow-color="#00000000"
+              class="ele-3a2803a6-a38e-495d-8113-b97276842fbb"
+            >
+              <view class="ele-wrapper ele-wrapper-registrationButton">
+                <hm-uview-button
+                  ref="registrationButton"
+                  :type="registrationButton.type"
+                >
+                </hm-uview-button>
+              </view>
+            </hm-uview-bg-card>
+          </view>
         </hm-uview-bg-card>
       </view>
     </view>
@@ -577,8 +576,8 @@ import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewCellList from "/@/components/built-in/uniapp-uview-vue3/HmUviewCellList.vue";
 import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
-import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
+import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
   name: "ActivityRegistrationPage",
@@ -589,8 +588,8 @@ export default {
     HmUviewText,
     HmUviewCellList,
     HmCellList,
-    HmUviewButton,
     HmUviewPopup,
+    HmUviewButton,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -783,17 +782,6 @@ export default {
   }
 }
 
-.ele-wrapper-eb5dc617-266d-4627-8ae8-06394a0d2e04 {
-  width: 100%;
-}
-
-.ele-wrapper-registrationButton {
-  /deep/.ele-wrapper-registrationButton {
-    width: 100% !important;
-  }
-  width: 100%;
-}
-
 .ele-wrapper-regularPopup {
   /deep/.uni-scroll-view-content {
     margin-left: 4%;
@@ -844,6 +832,10 @@ export default {
 }
 
 .ele-wrapper-30657b3a-defb-4229-91e7-6326e04c3af2 {
+  width: 100%;
+}
+
+.ele-wrapper-3a2803a6-a38e-495d-8113-b97276842fbb {
   width: 100%;
 }
 </style>
