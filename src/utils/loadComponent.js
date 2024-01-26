@@ -1,6 +1,6 @@
 import { defineAsyncComponent } from "vue";
 export const modules = import.meta.glob("../components/**/**.vue");
-export const uviewUiModules = import.meta.glob("../uni_modules/vk-uview-ui/components/**/**.vue");
+// export const uviewUiModules = import.meta.glob("../uni_modules/vk-uview-ui/components/**/**.vue");
 
 import { toCamelCase, upperFirst } from './util';
 
@@ -17,20 +17,20 @@ export default {
     })
 
     // 加载uview的所有组件
-    Object.keys(uviewUiModules).forEach((key) => {
-      let module = modules[key];
-      let arr = key.split("/");
-      let lastName = arr[arr.length - 1];
-      let componentName = lastName == "index.vue" ? 
-        arr[arr.length - 2] : lastName.split(".vue")[0];
-      if (componentName.indexOf('u-') != 0) {
-        return;
-      }
-      try {
-        app.component(componentName, defineAsyncComponent(() => import(key)));
-      } catch (err) {
-        console.log(`component: `, err);
-      }
-    })
+    // Object.keys(uviewUiModules).forEach((key) => {
+    //   let module = modules[key];
+    //   let arr = key.split("/");
+    //   let lastName = arr[arr.length - 1];
+    //   let componentName = lastName == "index.vue" ? 
+    //     arr[arr.length - 2] : lastName.split(".vue")[0];
+    //   if (componentName.indexOf('u-') != 0) {
+    //     return;
+    //   }
+    //   try {
+    //     app.component(componentName, defineAsyncComponent(() => import(key)));
+    //   } catch (err) {
+    //     console.log(`component: `, err);
+    //   }
+    // })
   }
 }
