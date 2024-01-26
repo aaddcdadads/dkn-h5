@@ -55,7 +55,12 @@
               <view
                 class="ele-wrapper ele-wrapper-fad33616-122b-49ed-9742-01503627aa8c"
               >
-                <hm-uview-bg-card>
+                <hm-uview-bg-card
+                  width="100%"
+                  height="100%"
+                  box-shadow-v-shadow=""
+                  box-shadow-blur=""
+                >
                   <view
                     class="ele-wrapper ele-wrapper-79c85c41-77a4-4d5d-8011-bcb1450dd53e"
                   >
