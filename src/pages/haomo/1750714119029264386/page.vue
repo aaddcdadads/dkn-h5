@@ -230,6 +230,26 @@
                               label: '',
                               value: '',
                             },
+                            {
+                              key: 3,
+                              title: '如何玩转',
+                              icon: 'help-filled',
+                              required: false,
+                              borderTop: false,
+                              borderBottom: false,
+                              label: '',
+                              value: '',
+                            },
+                            {
+                              key: 4,
+                              title: '已报名4646人',
+                              icon: 'setting-fill',
+                              required: false,
+                              borderTop: false,
+                              borderBottom: false,
+                              label: '',
+                              value: '',
+                            },
                           ]"
                           :arrow="true"
                           :icon-style="{ color: '#fff' }"
