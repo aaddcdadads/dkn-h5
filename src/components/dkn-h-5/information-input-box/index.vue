@@ -21,7 +21,7 @@ export default {
      */
     leftSrc: {
       type: Array,
-       default: function () {
+      default: function () {
         return [
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang1.png",
@@ -110,6 +110,7 @@ export default {
   align-items: center;
   border: 1px solid #999999;
   height: 45px;
+  margin: 20px;
   border-radius: 5px;
 }
 
@@ -127,10 +128,12 @@ export default {
 
 .color {
   color: #409eff;
+  margin-right: 10px;
 }
 
 .gcolor {
   color: #999999;
+  margin-right: 10px;
 }
 
 .image {
@@ -141,4 +144,5 @@ export default {
 
 .data_input {
   flex: 1;
-}</style>
+}
+</style>
