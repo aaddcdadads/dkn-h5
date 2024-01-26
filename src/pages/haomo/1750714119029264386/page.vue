@@ -214,62 +214,65 @@ export default {
 
 <style lang="less" scoped>
 .page {
-
 }
 
 .ele-wrapper-outsideBg {
-  width:100%;
+  width: 100%;
 }
 
 .ele-wrapper-topBg {
-  width:100%;
+  width: 100%;
 }
 
 .ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe {
-  background: rgba(0,0,0,.16);
-    border-radius: 608rpx;
-float:right;    width: 160rpx;
-text-align:center;padding-top:8rpx;
-margin-right:24rpx;
+  background: rgba(0, 0, 0, 0.16);
+  border-radius: 608rpx;
+  float: right;
+  width: 160rpx;
+  text-align: center;
+  padding-top: 8rpx;
+  margin-right: 24rpx;
 }
 
 .ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2 {
-  width:100%;
+  width: 100%;
 }
 
 .ele-wrapper-7a2f13f4-3ba2-456e-a67a-c507181b2442 {
-  width:100%;height:500px;
+  width: 100%;
+  height: 500px;
 }
 
 .ele-wrapper-2966337e-38af-4573-a9c7-464b04d48566 {
-  width:100%;
+  width: 100%;
 }
 
 .ele-wrapper-c2db3fcd-05d0-472b-8e18-163c243cc425 {
-  width:100%;
+  width: 100%;
 }
 
 .ele-wrapper-6ba2b397-6caf-44b2-8d16-4ad0c0eba375 {
-  width:100%;
+  width: 100%;
 }
 
 .ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39 {
-  width:100%;    background-color: rgba(255, 255, 255, 0.15);
-}
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .ele-wrapper-4f1cb12e-36cb-4378-b823-05b5d45354ab {
-  width:10px;height:10px;
-border-radius:50%;
-float:left;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  float: left;
 }
 
 .ele-wrapper-ad039bb7-8f55-4ab8-98a8-54d1f73db365 {
-  float:left;
+  float: left;
 }
 
 .ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30 {
-  float:left;
-padding-top:6px;
+  float: left;
+  padding-top: 6px;
 }
 </style>
