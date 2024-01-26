@@ -244,10 +244,14 @@ export default {
 }
 
 .ele-wrapper-4f1cb12e-36cb-4378-b823-05b5d45354ab {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   float: left;
+  /deep/.u-image__image {
+    border-radius: 50% !important;
+    margin-top: 6px;
+  }
 }
 
 .ele-wrapper-ad039bb7-8f55-4ab8-98a8-54d1f73db365 {
