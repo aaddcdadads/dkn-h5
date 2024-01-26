@@ -240,7 +240,8 @@ export default {
 }
 
 .ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39 {
-  width: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 12015px;
 }
 
 .ele-wrapper-4f1cb12e-36cb-4378-b823-05b5d45354ab {
