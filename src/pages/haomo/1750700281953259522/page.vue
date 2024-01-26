@@ -373,7 +373,6 @@ export default {
   width: 30%;
   vertical-align: top;
   height: 45px;
-  padding: 16px 0px;
   text-align: center;
 }
 
