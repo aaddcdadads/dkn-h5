@@ -372,7 +372,6 @@ export default {
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
   width: 30%;
   vertical-align: top;
-  height: 45px;
   line-height: 45px;
   text-align: center;
 }
@@ -403,7 +402,7 @@ export default {
   width: 30%;
   vertical-align: top;
   height: 45px;
-  padding: 16px 0px;
+  line-height: 50px;
   text-align: center;
 }
 
@@ -433,7 +432,7 @@ export default {
   width: 30%;
   vertical-align: top;
   height: 45px;
-  padding: 16px 0px;
+  line-height: 50px;
   text-align: center;
 }
 
