@@ -74,7 +74,7 @@
                     class="ele-wrapper ele-wrapper-79c85c41-77a4-4d5d-8011-bcb1450dd53e"
                   >
                     <hm-uview-image
-                      src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/weixn.png"
+                      src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/weixin%20(2).png"
                       width="40px"
                       height="40px"
                     >
