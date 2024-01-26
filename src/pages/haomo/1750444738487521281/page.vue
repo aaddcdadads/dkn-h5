@@ -37,7 +37,10 @@
               <view
                 class="ele-wrapper ele-wrapper-a329af57-d60b-43c4-bcb7-d84cbd118a80"
               >
-                <event-registration-card> </event-registration-card>
+                <event-registration-card
+                  class="ele-a329af57-d60b-43c4-bcb7-d84cbd118a80"
+                >
+                </event-registration-card>
               </view>
             </hm-uview-bg-card>
           </view>
@@ -267,6 +270,10 @@ export default {
 }
 
 .ele-wrapper-74c8c2c3-d387-4029-8b68-8275204c2ed5 {
+  width: 100%;
+}
+
+.ele-wrapper-a329af57-d60b-43c4-bcb7-d84cbd118a80 {
   width: 100%;
 }
 
