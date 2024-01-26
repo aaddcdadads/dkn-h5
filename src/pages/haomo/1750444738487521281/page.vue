@@ -35,7 +35,7 @@
               class="ele-74c8c2c3-d387-4029-8b68-8275204c2ed5"
             >
               <view class="ele-wrapper ele-wrapper-eventCard">
-                <event-registration-card ref="eventCard">
+                <event-registration-card ref="eventCard" :list="eventCard.list">
                 </event-registration-card>
               </view>
             </hm-uview-bg-card>
@@ -207,6 +207,42 @@ export default {
     return {
       shopPop: {
         show: false,
+      },
+      eventCard: {
+        list: [
+          {
+            checked: false,
+            image:
+              "https://hm-static-img.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A4logo.png",
+            name: "活动名称",
+            description: "",
+            price: "0.0",
+          },
+          {
+            checked: false,
+            image:
+              "https://hm-static-img.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A4logo.png",
+            name: "活动名称",
+            description: "",
+            price: "0.0",
+          },
+          {
+            checked: false,
+            image:
+              "https://hm-static-img.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A4logo.png",
+            name: "活动名称",
+            description: "",
+            price: "0.0",
+          },
+          {
+            checked: false,
+            image:
+              "https://hm-static-img.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A4logo.png",
+            name: "活动名称",
+            description: "",
+            price: "0.0",
+          },
+        ],
       },
       "8b981cf2-ae14-4b8c-9f72-4cd6c41423a6": {
         value: "",
