@@ -383,5 +383,8 @@ export default {
   /deep/.u-cell-item-box {
     background: transparent !important;
   }
+  /deep/.u-iconfont {
+    color: #fff !important;
+  }
 }
 </style>
