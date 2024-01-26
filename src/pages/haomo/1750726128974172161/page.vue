@@ -42,6 +42,18 @@
               </view>
             </hm-uview-bg-card>
           </view>
+          <view
+            class="ele-wrapper ele-wrapper-47e4d4a0-e917-4c71-ac7b-72efa70ed074"
+          >
+            <hm-uview-bg-card
+              width="100%"
+              height="100%"
+              border-radius=""
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+            >
+            </hm-uview-bg-card>
+          </view>
         </hm-uview-bg-card>
       </view>
     </view>
