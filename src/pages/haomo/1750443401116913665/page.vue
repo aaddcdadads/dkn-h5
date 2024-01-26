@@ -42,6 +42,7 @@
                       text="订单编号："
                       font-size="13px"
                       padding="8"
+                      class="ele-bf22f4a1-bf87-45db-bf48-3cb458614952"
                     >
                     </hm-uview-text>
                   </view>
@@ -359,6 +360,10 @@ export default {
 .ele-wrapper-32e2869f-33e4-4a30-a8e3-3b0d31222093 {
   width: 100%;
   margin-bottom: 10px;
+}
+
+.ele-wrapper-bf22f4a1-bf87-45db-bf48-3cb458614952 {
+  margin-left: 5px;
 }
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
