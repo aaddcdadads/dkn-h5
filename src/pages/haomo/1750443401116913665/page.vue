@@ -202,21 +202,8 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                </hm-uview-bg-card>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-5f9b085f-9eca-4f97-8d98-e3895c913b99"
-              >
-                <hm-uview-bg-card
-                  width="100%"
-                  height="100%"
-                  :text-align="'center'"
-                  box-shadow-v-shadow=""
-                  box-shadow-blur=""
-                  class="ele-5f9b085f-9eca-4f97-8d98-e3895c913b99"
-                >
                   <view
-                    class="ele-wrapper ele-wrapper-14c7e1a3-d5fb-4aae-baba-937bb025e4f4"
+                    class="ele-wrapper ele-wrapper-1e638196-949e-4db0-8c6d-ffb770b0ac8a"
                   >
                     <hm-uview-bg-card
                       width="100%"
@@ -224,21 +211,21 @@
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
-                      class="ele-14c7e1a3-d5fb-4aae-baba-937bb025e4f4"
+                      class="ele-1e638196-949e-4db0-8c6d-ffb770b0ac8a"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-871e304d-82cd-4165-96f5-cd60704fac71"
+                        class="ele-wrapper ele-wrapper-a97ec100-68c6-48a3-9653-d8ac1bb8144c"
                       >
                         <hm-uview-text
                           text="活动名称:"
                           font-size="13px"
                           padding=""
-                          class="ele-871e304d-82cd-4165-96f5-cd60704fac71"
+                          class="ele-a97ec100-68c6-48a3-9653-d8ac1bb8144c"
                         >
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-6bdb201e-d452-4e15-b72f-70c229fbd237"
+                        class="ele-wrapper ele-wrapper-77bae9a8-6c80-4c4a-94fd-75350b1d7fb3"
                       >
                         <hm-uview-field
                           value=""
@@ -247,14 +234,14 @@
                           label-width="0"
                           icon=""
                           right-icon=""
-                          class="ele-6bdb201e-d452-4e15-b72f-70c229fbd237"
+                          class="ele-77bae9a8-6c80-4c4a-94fd-75350b1d7fb3"
                         >
                         </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
-                    class="ele-wrapper ele-wrapper-3e27eb74-08c4-466c-97cb-eb8e19b2cc29"
+                    class="ele-wrapper ele-wrapper-9047135a-0817-4297-9bc0-ba758bea8736"
                   >
                     <hm-uview-bg-card
                       width="100%"
@@ -262,37 +249,37 @@
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
-                      class="ele-3e27eb74-08c4-466c-97cb-eb8e19b2cc29"
+                      class="ele-9047135a-0817-4297-9bc0-ba758bea8736"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-b6f23b24-c2be-4d98-9974-4d77dc23028b"
+                        class="ele-wrapper ele-wrapper-6b36c1d4-56c4-4721-8c34-34581763902f"
                       >
                         <hm-uview-text
                           text=" 核销截止:"
                           font-size="13px"
                           padding=""
-                          class="ele-b6f23b24-c2be-4d98-9974-4d77dc23028b"
+                          class="ele-6b36c1d4-56c4-4721-8c34-34581763902f"
                         >
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea"
+                        class="ele-wrapper ele-wrapper-f2093ff0-31f8-4c8e-8715-756493dc516a"
                       >
                         <hm-uview-field
                           value=""
                           label=""
-                          placeholder="2024.02.18 23:59:59"
+                          placeholder="活动名称"
                           label-width="0"
                           icon=""
                           right-icon=""
-                          class="ele-8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea"
+                          class="ele-f2093ff0-31f8-4c8e-8715-756493dc516a"
                         >
                         </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
-                    class="ele-wrapper ele-wrapper-ae2abb77-b95c-4297-bb4d-03e1a1f508a1"
+                    class="ele-wrapper ele-wrapper-e4f5cc89-8551-4bdd-a6ee-b6edac67ce3c"
                   >
                     <hm-uview-bg-card
                       width="100%"
@@ -300,21 +287,21 @@
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
-                      class="ele-ae2abb77-b95c-4297-bb4d-03e1a1f508a1"
+                      class="ele-e4f5cc89-8551-4bdd-a6ee-b6edac67ce3c"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-4affc789-e268-4263-ac4f-4e8e3fd30c9b"
+                        class="ele-wrapper ele-wrapper-56c6f78a-53d5-494d-aeac-05f4c676547d"
                       >
                         <hm-uview-text
                           text="核销状态:"
                           font-size="13px"
                           padding=""
-                          class="ele-4affc789-e268-4263-ac4f-4e8e3fd30c9b"
+                          class="ele-56c6f78a-53d5-494d-aeac-05f4c676547d"
                         >
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-95ec508c-0713-4dfb-b843-6e5c683fd4f6"
+                        class="ele-wrapper ele-wrapper-825c7b35-6136-42aa-8176-48014a210261"
                       >
                         <hm-uview-field
                           value=""
@@ -323,7 +310,7 @@
                           label-width="0"
                           icon=""
                           right-icon=""
-                          class="ele-95ec508c-0713-4dfb-b843-6e5c683fd4f6"
+                          class="ele-825c7b35-6136-42aa-8176-48014a210261"
                         >
                         </hm-uview-field>
                       </view>
@@ -393,13 +380,13 @@ export default {
       "9a4984ec-97fb-465a-9b6b-8c645b5eab71": {
         value: "",
       },
-      "6bdb201e-d452-4e15-b72f-70c229fbd237": {
+      "77bae9a8-6c80-4c4a-94fd-75350b1d7fb3": {
         value: "",
       },
-      "8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea": {
+      "f2093ff0-31f8-4c8e-8715-756493dc516a": {
         value: "",
       },
-      "95ec508c-0713-4dfb-b843-6e5c683fd4f6": {
+      "825c7b35-6136-42aa-8176-48014a210261": {
         value: "",
       },
     };
@@ -562,25 +549,21 @@ export default {
   }
 }
 
-.ele-wrapper-5f9b085f-9eca-4f97-8d98-e3895c913b99 {
-  width: 100%;
-}
-
-.ele-wrapper-14c7e1a3-d5fb-4aae-baba-937bb025e4f4 {
+.ele-wrapper-1e638196-949e-4db0-8c6d-ffb770b0ac8a {
   width: 100%;
   display: flex;
   align-items: center;
   margin: 15px 0px;
 }
 
-.ele-wrapper-871e304d-82cd-4165-96f5-cd60704fac71 {
+.ele-wrapper-a97ec100-68c6-48a3-9653-d8ac1bb8144c {
   width: 30%;
   vertical-align: top;
   line-height: 45px;
   text-align: center;
 }
 
-.ele-wrapper-6bdb201e-d452-4e15-b72f-70c229fbd237 {
+.ele-wrapper-77bae9a8-6c80-4c4a-94fd-75350b1d7fb3 {
   width: 69%;
   height: 45px;
   /deep/.u-label-postion-left {
@@ -597,21 +580,21 @@ export default {
   }
 }
 
-.ele-wrapper-3e27eb74-08c4-466c-97cb-eb8e19b2cc29 {
+.ele-wrapper-9047135a-0817-4297-9bc0-ba758bea8736 {
   width: 100%;
   display: flex;
   align-items: center;
   margin: 15px 0px;
 }
 
-.ele-wrapper-b6f23b24-c2be-4d98-9974-4d77dc23028b {
+.ele-wrapper-6b36c1d4-56c4-4721-8c34-34581763902f {
   width: 30%;
   vertical-align: top;
   line-height: 45px;
   text-align: center;
 }
 
-.ele-wrapper-8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea {
+.ele-wrapper-f2093ff0-31f8-4c8e-8715-756493dc516a {
   width: 69%;
   height: 45px;
   /deep/.u-label-postion-left {
@@ -628,21 +611,21 @@ export default {
   }
 }
 
-.ele-wrapper-ae2abb77-b95c-4297-bb4d-03e1a1f508a1 {
+.ele-wrapper-e4f5cc89-8551-4bdd-a6ee-b6edac67ce3c {
   width: 100%;
   display: flex;
   align-items: center;
   margin: 15px 0px;
 }
 
-.ele-wrapper-4affc789-e268-4263-ac4f-4e8e3fd30c9b {
+.ele-wrapper-56c6f78a-53d5-494d-aeac-05f4c676547d {
   width: 30%;
   vertical-align: top;
   line-height: 45px;
   text-align: center;
 }
 
-.ele-wrapper-95ec508c-0713-4dfb-b843-6e5c683fd4f6 {
+.ele-wrapper-825c7b35-6136-42aa-8176-48014a210261 {
   width: 69%;
   height: 45px;
   /deep/.u-label-postion-left {

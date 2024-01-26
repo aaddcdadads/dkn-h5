@@ -752,6 +752,9 @@ export default {
   /deep/.u-border-bottom:after {
     border-bottom: 0px !important;
   }
+  /deep/.uicon-arrow-right {
+    color: #ffffff99 !important;
+  }
 }
 
 .ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5 {
