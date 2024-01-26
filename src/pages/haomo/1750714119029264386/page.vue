@@ -50,15 +50,6 @@
               class="ele-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"
             >
               <view
-                class="ele-wrapper ele-wrapper-7a2f13f4-3ba2-456e-a67a-c507181b2442"
-              >
-                <hm-video-list
-                  :num="1"
-                  class="ele-7a2f13f4-3ba2-456e-a67a-c507181b2442"
-                >
-                </hm-video-list>
-              </view>
-              <view
                 class="ele-wrapper ele-wrapper-2966337e-38af-4573-a9c7-464b04d48566"
               >
                 <hm-uview-bg-card
@@ -189,7 +180,6 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
-import HmVideoList from "/@/components/built-in/uniapp/HmVideoList.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 
@@ -198,7 +188,6 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewIcon,
-    HmVideoList,
     HmUviewText,
     HmUviewImage,
   },
@@ -236,11 +225,6 @@ export default {
 
 .ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2 {
   width: 100%;
-}
-
-.ele-wrapper-7a2f13f4-3ba2-456e-a67a-c507181b2442 {
-  width: 100%;
-  height: 500px;
 }
 
 .ele-wrapper-2966337e-38af-4573-a9c7-464b04d48566 {
