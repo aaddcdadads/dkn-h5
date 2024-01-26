@@ -363,6 +363,7 @@
                   text=" 返回活动详情页"
                   font-size="1em"
                   color="#409EFF"
+                  @onClick="onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick"
                   class="ele-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
                 >
                 </hm-uview-text>
@@ -429,7 +430,11 @@ export default {
     };
   },
   watch: {},
-  methods: {},
+  methods: {
+    onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
+      href = "1742836139565256705";
+    },
+  },
 };
 </script>
 
