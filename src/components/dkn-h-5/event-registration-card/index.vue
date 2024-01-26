@@ -114,6 +114,7 @@ export default {
   align-items: center;
   border: 1px solid #e4e4e4;
   border-radius: 6px;
+  width:100%;
   height: 108px;
   background-color: #ffffff;
   padding-right: 5px;
