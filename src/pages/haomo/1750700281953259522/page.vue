@@ -343,7 +343,7 @@ export default {
 }
 
 .ele-wrapper-51e40d97-b1a2-45a7-b1b6-7d182e2d5e68 {
-  width: 90%;
+  width: 85%;
 }
 
 .ele-wrapper-a4540298-8d72-4b6c-a4e3-fab8f56c0be2 {
