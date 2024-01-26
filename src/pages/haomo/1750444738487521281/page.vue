@@ -27,6 +27,11 @@
           >
             <hm-uview-bg-card>
               <view
+                class="ele-wrapper ele-wrapper-4c808836-746d-4256-8bf2-4da73ff22a97"
+              >
+                <u-radio> </u-radio>
+              </view>
+              <view
                 class="ele-wrapper ele-wrapper-45e52ea3-2cbb-4177-bef2-dfec30631a3b"
               >
                 <hm-uview-image> </hm-uview-image>
