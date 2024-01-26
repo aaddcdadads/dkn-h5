@@ -332,6 +332,7 @@ export default {
 
 .ele-wrapper-warning {
   border: 1px solid #ffebcc;
+  height: 40px;
   margin: 10px 0 5px;
   .ele-warning {
     border-radius: 5px;
