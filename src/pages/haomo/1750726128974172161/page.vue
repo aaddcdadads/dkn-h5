@@ -284,7 +284,7 @@ export default {
 .ele-wrapper-weixinpay {
   .hm-bg-card {
     display: flex;
-    lign-items: center;
+    align-items: center;
   }
 }
 
@@ -306,7 +306,7 @@ export default {
 .ele-wrapper-zhifubaopay {
   .hm-bg-card {
     display: flex;
-    lign-items: center;
+    align-items: center;
   }
 }
 
