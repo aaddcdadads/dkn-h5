@@ -25,7 +25,18 @@
           <view
             class="ele-wrapper ele-wrapper-f09bd67e-29e6-44fb-bfb7-2254ce5762cf"
           >
-            <hm-uview-bg-card> </hm-uview-bg-card>
+            <hm-uview-bg-card>
+              <view
+                class="ele-wrapper ele-wrapper-b6d2aa3e-512a-4db8-9279-635a0b0376b8"
+              >
+                <u-radio> </u-radio>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-45e52ea3-2cbb-4177-bef2-dfec30631a3b"
+              >
+                <hm-uview-image> </hm-uview-image>
+              </view>
+            </hm-uview-bg-card>
           </view>
           <view
             class="ele-wrapper ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b"
@@ -205,6 +216,7 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import StoreSelection from "/@/components/dkn-h-5/store-selection/index.vue";
@@ -215,6 +227,7 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewText,
+    HmUviewImage,
     InformationInputBox,
     HmUviewPopup,
     StoreSelection,
