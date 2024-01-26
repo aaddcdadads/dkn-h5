@@ -370,14 +370,14 @@ export default {
 }
 
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
-  width: 32%;
+  width: 30%;
   vertical-align: top;
   height: 45px;
   padding: 16px 0px;
 }
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
-  width: 67%;
+  width: 69%;
   height: 45px;
   /deep/.u-label-postion-left {
     position: absolute;
@@ -399,14 +399,14 @@ export default {
 }
 
 .ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f {
-  width: 32%;
+  width: 30%;
   vertical-align: top;
   height: 45px;
   padding: 16px 0px;
 }
 
 .ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b {
-  width: 67%;
+  width: 69%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
@@ -428,14 +428,14 @@ export default {
 }
 
 .ele-wrapper-37f7c953-8895-4c12-80d8-e4bbd27b84a2 {
-  width: 32%;
+  width: 30%;
   vertical-align: top;
   height: 45px;
   padding: 16px 0px;
 }
 
 .ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025 {
-  width: 67%;
+  width: 69%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
@@ -462,14 +462,14 @@ export default {
 }
 
 .ele-wrapper-871e304d-82cd-4165-96f5-cd60704fac71 {
-  width: 32%;
+  width: 30%;
   vertical-align: top;
   height: 45px;
   padding: 16px 0px;
 }
 
 .ele-wrapper-6bdb201e-d452-4e15-b72f-70c229fbd237 {
-  width: 67%;
+  width: 69%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
@@ -491,7 +491,7 @@ export default {
 }
 
 .ele-wrapper-b6f23b24-c2be-4d98-9974-4d77dc23028b {
-  width: 32%;
+  width: 30%;
   vertical-align: top;
   height: 45px;
   padding: 16px 0px;
