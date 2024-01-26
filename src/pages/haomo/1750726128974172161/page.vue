@@ -161,7 +161,11 @@
               <view
                 class="ele-wrapper ele-wrapper-1aaf7284-2fc1-4da2-9265-e885207e059f"
               >
-                <hm-uview-button :type="'error'" text="确认支付">
+                <hm-uview-button
+                  :type="'error'"
+                  text="确认支付"
+                  class="ele-1aaf7284-2fc1-4da2-9265-e885207e059f"
+                >
                 </hm-uview-button>
               </view>
             </hm-uview-bg-card>
@@ -272,6 +276,10 @@ export default {
 }
 
 .ele-wrapper-d699006e-fe43-4b8f-9729-1cd0bc37bd9f {
+  width: 100%;
+}
+
+.ele-wrapper-1aaf7284-2fc1-4da2-9265-e885207e059f {
   width: 100%;
 }
 </style>
