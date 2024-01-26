@@ -99,6 +99,15 @@
               :mode="'bottom'"
             >
               <view
+                class="ele-wrapper ele-wrapper-9fb51c90-145e-4b04-a74d-99794d96d8b3"
+              >
+                <hm-uview-text
+                  text="选择门店"
+                  class="ele-9fb51c90-145e-4b04-a74d-99794d96d8b3"
+                >
+                </hm-uview-text>
+              </view>
+              <view
                 class="ele-wrapper ele-wrapper-38ef40fd-ce54-482c-83b9-ef433f2f2aa3"
               >
                 <store-selection
@@ -271,6 +280,16 @@ export default {
 .ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3 {
   width: 100%;
   margin-top: 20px;
+}
+
+.ele-wrapper-9fb51c90-145e-4b04-a74d-99794d96d8b3 {
+  font-family: "PingFangSC-Semibold", "PingFang SC Semibold", "PingFang SC",
+    sans-serif;
+  font-weight: 650;
+  font-style: normal;
+  font-size: 16px;
+  color: #333333;
+  line-height: 20px;
 }
 
 .ele-wrapper-38ef40fd-ce54-482c-83b9-ef433f2f2aa3 {
