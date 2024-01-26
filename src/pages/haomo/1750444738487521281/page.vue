@@ -369,6 +369,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px 15px 40px;
   }
 }
 
