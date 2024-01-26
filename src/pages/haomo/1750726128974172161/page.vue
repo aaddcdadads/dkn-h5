@@ -74,7 +74,7 @@
                     class="ele-wrapper ele-wrapper-79c85c41-77a4-4d5d-8011-bcb1450dd53e"
                   >
                     <hm-uview-image
-                      src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/weixin.png"
+                      src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/weixn.png"
                       width="40px"
                       height="40px"
                     >
@@ -127,7 +127,7 @@
                     class="ele-wrapper ele-wrapper-a2688ccd-ff91-4fa6-a3fc-00dab047ad02"
                   >
                     <hm-uview-image
-                      src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/zhifubao_1.png"
+                      src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/zhifu.png"
                       width="40px"
                       height="40px"
                     >
