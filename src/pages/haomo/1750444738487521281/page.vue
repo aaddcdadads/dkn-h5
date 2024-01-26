@@ -334,7 +334,7 @@ export default {
 .ele-wrapper-37d3df1b-3224-4fbd-901e-b2a290a0ccb9 {
   border: 1px solid #ffebcc;
   border-radius: 5px;
-  margin: 10px 0;
+  margin: 10px 0 5px;
 }
 
 .ele-wrapper-e0671cfa-0c0d-4649-8682-46e9560f861e {
