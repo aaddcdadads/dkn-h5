@@ -53,7 +53,6 @@ export default {
 .texts {
   display: flex;
   flex-direction: column;
-  /* width: 200px */
   flex: 1;
   height: 100%;
   margin-left: 8px;
@@ -97,7 +96,6 @@ export default {
   border-radius: 6px;
   height: 108px;
   background-color: #ffffff;
-  margin: 20px;
   padding-right: 5px;
 }
 
