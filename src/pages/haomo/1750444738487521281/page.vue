@@ -118,6 +118,7 @@
                 <hm-uview-button
                   :type="'primary'"
                   :shape="'circle'"
+                  text="立即报名"
                   class="ele-acf99afa-7e7b-42dc-a52d-aa67ffc5af5b"
                 >
                 </hm-uview-button>
