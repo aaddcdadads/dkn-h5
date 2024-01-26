@@ -13,74 +13,6 @@
           class="ele-formbgCard"
         >
           <view
-            class="ele-wrapper ele-wrapper-8112165b-3b75-4517-b04e-a52c779f18ff"
-          >
-            <hm-uview-text
-              text="奖品选择"
-              font-size="16px"
-              class="ele-8112165b-3b75-4517-b04e-a52c779f18ff"
-            >
-            </hm-uview-text>
-          </view>
-          <view
-            class="ele-wrapper ele-wrapper-f09bd67e-29e6-44fb-bfb7-2254ce5762cf"
-          >
-            <hm-uview-bg-card
-              width="100%"
-              height="100%"
-              border-radius=""
-              box-shadow-v-shadow=""
-              box-shadow-blur=""
-            >
-              <view
-                class="ele-wrapper ele-wrapper-27e83dd7-fae3-46d6-a6e0-4999eb7e187d"
-              >
-                <hm-uview-radio
-                  value=""
-                  title=""
-                  :list="[{ name: 'orange', disabled: false }]"
-                  :shape="'square'"
-                >
-                </hm-uview-radio>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-45e52ea3-2cbb-4177-bef2-dfec30631a3b"
-              >
-                <hm-uview-image> </hm-uview-image>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-89a737ab-1240-47ed-b005-e1b3a5229f52"
-              >
-                <hm-uview-bg-card
-                  width="100%"
-                  height="100%"
-                  border-radius=""
-                  box-shadow-v-shadow=""
-                  box-shadow-blur=""
-                >
-                  <view
-                    class="ele-wrapper ele-wrapper-8cdb53e6-eccc-4ce7-bd86-ff1eaf822273"
-                  >
-                    <hm-uview-text text="活动项目名称" font-size="14px">
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-556e4dcf-8e40-4c3c-bd48-b3573cab3f88"
-                  >
-                    <hm-uview-text text="说明" font-size="14px">
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-a6525271-6699-4091-b104-ea6f7b22e1f5"
-                  >
-                    <hm-uview-text text="报名费:" font-size="14px">
-                    </hm-uview-text>
-                  </view>
-                </hm-uview-bg-card>
-              </view>
-            </hm-uview-bg-card>
-          </view>
-          <view
             class="ele-wrapper ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b"
           >
             <hm-uview-text
@@ -258,8 +190,6 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
-import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
-import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import StoreSelection from "/@/components/dkn-h-5/store-selection/index.vue";
@@ -270,8 +200,6 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewText,
-    HmUviewRadio,
-    HmUviewImage,
     InformationInputBox,
     HmUviewPopup,
     StoreSelection,
@@ -283,15 +211,6 @@ export default {
     return {
       shopPop: {
         show: false,
-      },
-      "27e83dd7-fae3-46d6-a6e0-4999eb7e187d": {
-        value: "",
-        list: [
-          {
-            name: "orange",
-            disabled: false,
-          },
-        ],
       },
       "8b981cf2-ae14-4b8c-9f72-4cd6c41423a6": {
         value: "",
@@ -341,12 +260,6 @@ export default {
     flex-direction: column;
     align-items: center;
   }
-}
-
-.ele-wrapper-8112165b-3b75-4517-b04e-a52c779f18ff {
-  font-family: "PingFangSC-Medium", "PingFang SC Medium", "PingFang SC",
-    sans-serif;
-  font-weight: 500;
 }
 
 .ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b {

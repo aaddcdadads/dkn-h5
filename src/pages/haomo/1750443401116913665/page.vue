@@ -515,6 +515,9 @@ export default {
     border-radius: 5px;
     height: 45px;
   }
+  /deep/.uni-input-input {
+    font-text: 13px;
+  }
 }
 
 .ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9 {
@@ -543,6 +546,9 @@ export default {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
+  }
+  /deep/.uni-input-input {
+    font-text: 13px;
   }
 }
 
@@ -573,6 +579,9 @@ export default {
     border-radius: 5px;
     height: 45px;
   }
+  /deep/.uni-input-input {
+    font-text: 13px;
+  }
 }
 
 .ele-wrapper-ec8bdb37-8258-4daf-b83b-30ebc2a70f11 {
@@ -601,6 +610,9 @@ export default {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
+  }
+  /deep/.uni-input-input {
+    font-text: 13px;
   }
 }
 
@@ -636,6 +648,9 @@ export default {
     border-radius: 5px;
     height: 45px;
   }
+  /deep/.uni-input-input {
+    font-text: 13px;
+  }
 }
 
 .ele-wrapper-3e27eb74-08c4-466c-97cb-eb8e19b2cc29 {
@@ -665,6 +680,9 @@ export default {
     border-radius: 5px;
     height: 45px;
   }
+  /deep/.uni-input-input {
+    font-text: 13px;
+  }
 }
 
 .ele-wrapper-ae2abb77-b95c-4297-bb4d-03e1a1f508a1 {
@@ -693,6 +711,9 @@ export default {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
+  }
+  /deep/.uni-input-input {
+    font-text: 13px;
   }
 }
 
