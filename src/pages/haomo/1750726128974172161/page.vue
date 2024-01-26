@@ -92,6 +92,50 @@
               </view>
             </hm-uview-bg-card>
           </view>
+          <view
+            class="ele-wrapper ele-wrapper-93b24983-ec82-4085-8b41-01add35ab335"
+          >
+            <hm-uview-bg-card>
+              <view
+                class="ele-wrapper ele-wrapper-fddf7820-c6ab-4f10-99a5-0a8b5d64f78d"
+              >
+                <hm-uview-bg-card
+                  width="100%"
+                  height="100%"
+                  border-radius=""
+                  box-shadow-v-shadow=""
+                  box-shadow-blur=""
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-a2688ccd-ff91-4fa6-a3fc-00dab047ad02"
+                  >
+                    <hm-uview-image
+                      src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/zhifu.png"
+                      width="40px"
+                      height="40px"
+                    >
+                    </hm-uview-image>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-c66fc368-41ad-4820-98ec-9bb74cb74ea3"
+                  >
+                    <hm-uview-text text="支付宝"> </hm-uview-text>
+                  </view>
+                </hm-uview-bg-card>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-8deedb81-a36f-4a24-978b-cae6f360c014"
+              >
+                <hm-uview-radio
+                  value=""
+                  title=""
+                  :list="[{ name: '', disabled: false }]"
+                  active-color="#F56C6C"
+                >
+                </hm-uview-radio>
+              </view>
+            </hm-uview-bg-card>
+          </view>
         </hm-uview-bg-card>
       </view>
     </view>
@@ -120,6 +164,15 @@ export default {
     let self = this;
     return {
       "37b1cd04-5fee-4df3-943a-43f69feeaf26": {
+        value: "",
+        list: [
+          {
+            name: "",
+            disabled: false,
+          },
+        ],
+      },
+      "8deedb81-a36f-4a24-978b-cae6f360c014": {
         value: "",
         list: [
           {
