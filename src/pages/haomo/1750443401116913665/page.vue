@@ -208,7 +208,7 @@
                           label=" 核销截止:"
                           placeholder=" 核销截止"
                           label-width="150"
-                          maxlength="150"
+                          maxlength=""
                           icon=""
                           right-icon=""
                           class="ele-f2093ff0-31f8-4c8e-8715-756493dc516a"
