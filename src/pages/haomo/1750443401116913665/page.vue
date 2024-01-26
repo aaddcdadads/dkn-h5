@@ -97,7 +97,7 @@
                           label=" 手机号码:"
                           placeholder="报名手机号码"
                           label-width="150"
-                          maxlength="150"
+                          maxlength=""
                           icon=""
                           right-icon=""
                           class="ele-c5bfde68-4a10-445e-b173-b62b3921231b"
@@ -125,6 +125,7 @@
                           label=" 领奖门店:"
                           placeholder="区域/门店名称"
                           label-width="150"
+                          maxlength=""
                           icon=""
                           right-icon=""
                           class="ele-e3774afb-14a0-4b23-adda-2624414eb025"
@@ -145,24 +146,13 @@
                       class="ele-ec8bdb37-8258-4daf-b83b-30ebc2a70f11"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-3abd57d9-0713-43df-a2c8-ef7c647ae545"
-                      >
-                        <hm-uview-text
-                          text=" 报名时间:"
-                          font-size="13px"
-                          padding=""
-                          class="ele-3abd57d9-0713-43df-a2c8-ef7c647ae545"
-                        >
-                        </hm-uview-text>
-                      </view>
-                      <view
                         class="ele-wrapper ele-wrapper-9a4984ec-97fb-465a-9b6b-8c645b5eab71"
                       >
                         <hm-uview-field
                           value=""
-                          label=""
+                          label=" 报名时间:"
                           placeholder="2024.02.10 15:46:39"
-                          label-width="0"
+                          label-width="150"
                           icon=""
                           right-icon=""
                           class="ele-9a4984ec-97fb-465a-9b6b-8c645b5eab71"
@@ -471,15 +461,8 @@ export default {
   margin: 15px 0px;
 }
 
-.ele-wrapper-3abd57d9-0713-43df-a2c8-ef7c647ae545 {
-  width: 30%;
-  vertical-align: top;
-  line-height: 45px;
-  text-align: center;
-}
-
 .ele-wrapper-9a4984ec-97fb-465a-9b6b-8c645b5eab71 {
-  width: 69%;
+  width: 100%;
   height: 45px;
   /deep/.u-label-postion-left {
     position: absolute;
