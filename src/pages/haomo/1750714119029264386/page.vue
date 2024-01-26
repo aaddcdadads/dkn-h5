@@ -330,6 +330,40 @@
                             class="ele-wrapper ele-wrapper-a2b2b5e9-de26-4cb6-bfdf-60722738d013"
                           >
                             <prize-list-component
+                              :func-list="[
+                                {
+                                  bgUrl:
+                                    'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                                  height1: 'auto',
+                                  scoretext: '实体',
+                                  display: 'block',
+                                  textbottom: '奖品',
+                                },
+                                {
+                                  bgUrl:
+                                    'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                                  height1: 'auto',
+                                  scoretext: '实体',
+                                  display: 'block',
+                                  textbottom: '奖品',
+                                },
+                                {
+                                  bgUrl:
+                                    'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                                  height1: 'auto',
+                                  scoretext: '实体',
+                                  display: 'block',
+                                  textbottom: '奖品',
+                                },
+                                {
+                                  bgUrl:
+                                    'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                                  height1: 'auto',
+                                  scoretext: '实体',
+                                  display: 'none',
+                                  textbottom: '奖品',
+                                },
+                              ]"
                               class="ele-a2b2b5e9-de26-4cb6-bfdf-60722738d013"
                             >
                             </prize-list-component>
