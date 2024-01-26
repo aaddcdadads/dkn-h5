@@ -31,7 +31,7 @@
               border-radius=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
-              background-color="#F0F2F6"
+              background-color="#FFF5E6"
             >
               <view
                 class="ele-wrapper ele-wrapper-e0671cfa-0c0d-4649-8682-46e9560f861e"
