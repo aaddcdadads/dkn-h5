@@ -99,13 +99,9 @@
               :mode="'bottom'"
             >
               <view
-                class="ele-wrapper ele-wrapper-e3d6ca36-1022-4549-9d35-3d0fa0a03f1b"
+                class="ele-wrapper ele-wrapper-38ef40fd-ce54-482c-83b9-ef433f2f2aa3"
               >
-                <hm-index-list
-                  :scroll-top="0"
-                  class="ele-e3d6ca36-1022-4549-9d35-3d0fa0a03f1b"
-                >
-                </hm-index-list>
+                <store-selection> </store-selection>
               </view>
             </hm-uview-popup>
           </view>
@@ -180,7 +176,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
-import HmIndexList from "/@/components/built-in/uniapp-haomo/HmIndexList.vue";
+import StoreSelection from "/@/components/dkn-h-5/store-selection/index.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -190,7 +186,7 @@ export default {
     HmUviewText,
     InformationInputBox,
     HmUviewPopup,
-    HmIndexList,
+    StoreSelection,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -272,11 +268,6 @@ export default {
 .ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3 {
   width: 100%;
   margin-top: 20px;
-}
-
-.ele-wrapper-e3d6ca36-1022-4549-9d35-3d0fa0a03f1b {
-  width: 100%;
-  margin-top: 30px;
 }
 
 .ele-wrapper-baoming {
