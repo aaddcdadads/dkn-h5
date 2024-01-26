@@ -1,17 +1,16 @@
 <template>
   <view class="page card">
     <view class="page-wrapper">
-      <view
-        class="ele-wrapper ele-wrapper-ff006dbd-abf0-427a-9076-d34d31098de7"
-      >
+      <view class="ele-wrapper ele-wrapper-formbgCard">
         <hm-uview-bg-card
+          ref="formbgCard"
           width="100%"
           height="100%"
           border-radius=""
           box-shadow-v-shadow=""
           box-shadow-blur=""
           background-color="#F2F2F2"
-          class="ele-ff006dbd-abf0-427a-9076-d34d31098de7"
+          class="ele-formbgCard"
         >
           <view
             class="ele-wrapper ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b"
@@ -145,7 +144,7 @@ export default {
 .page {
 }
 
-.ele-wrapper-ff006dbd-abf0-427a-9076-d34d31098de7 {
+.ele-wrapper-formbgCard {
   width: 100%;
   height: 100vh;
 }
