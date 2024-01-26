@@ -371,7 +371,6 @@ export default {
 
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
   width: 30%;
-  vertical-align: top;
   line-height: 45px;
   text-align: center;
 }
