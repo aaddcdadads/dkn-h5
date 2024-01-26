@@ -445,11 +445,11 @@ export default {
 .ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe {
   border-radius: 608rpx;
   float: right;
-  width: 160rpx;
   text-align: center;
   padding-top: 8rpx;
   margin-right: 24rpx;
   background: rgba(0, 0, 0, 0.16);
+  padding: 12px 12px;
 }
 
 .ele-wrapper-imageBg {
