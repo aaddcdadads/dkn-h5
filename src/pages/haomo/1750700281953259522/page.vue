@@ -333,6 +333,7 @@ export default {
 .ele-wrapper-b70290a2-501d-46d6-a44e-63d06e016496 {
   width: 100%;
   height: 100%;
+  vertical-align: top;
 }
 
 .ele-wrapper-b543d8d2-d56c-4de5-8cd7-27e80ca20850 {
