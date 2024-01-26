@@ -99,6 +99,7 @@
                         <hm-uview-text
                           text=" 姓名/昵称:"
                           font-size="13px"
+                          padding=""
                           class="ele-788913aa-482e-4c28-855d-fdb18b0c1429"
                         >
                         </hm-uview-text>
@@ -136,6 +137,7 @@
                         <hm-uview-text
                           text=" 手机号码:"
                           font-size="13px"
+                          padding=""
                           class="ele-d166dfa0-a20d-4d76-a53e-7fffb0834c9f"
                         >
                         </hm-uview-text>
@@ -173,6 +175,7 @@
                         <hm-uview-text
                           text=" 领奖门店:"
                           font-size="13px"
+                          padding=""
                           class="ele-37f7c953-8895-4c12-80d8-e4bbd27b84a2"
                         >
                         </hm-uview-text>
@@ -210,6 +213,7 @@
                         <hm-uview-text
                           text=" 报名时间:"
                           font-size="13px"
+                          padding=""
                           class="ele-3abd57d9-0713-43df-a2c8-ef7c647ae545"
                         >
                         </hm-uview-text>
@@ -260,6 +264,7 @@
                         <hm-uview-text
                           text="活动名称:"
                           font-size="13px"
+                          padding=""
                           class="ele-871e304d-82cd-4165-96f5-cd60704fac71"
                         >
                         </hm-uview-text>
@@ -297,6 +302,7 @@
                         <hm-uview-text
                           text=" 核销截止:"
                           font-size="13px"
+                          padding=""
                           class="ele-b6f23b24-c2be-4d98-9974-4d77dc23028b"
                         >
                         </hm-uview-text>
@@ -334,6 +340,7 @@
                         <hm-uview-text
                           text="核销状态:"
                           font-size="13px"
+                          padding=""
                           class="ele-4affc789-e268-4263-ac4f-4e8e3fd30c9b"
                         >
                         </hm-uview-text>
