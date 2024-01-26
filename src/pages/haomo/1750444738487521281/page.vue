@@ -85,20 +85,27 @@
                   value=""
                   :show-icon="true"
                   placeholder="* 请选择领奖门店"
+                  @rightIcon="onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon"
                   class="ele-71e123e5-88a9-44c5-b029-f89fdaffa0d3"
                 >
                 </information-input-box>
               </view>
             </hm-uview-bg-card>
           </view>
-          <view
-            class="ele-wrapper ele-wrapper-7dfb87d7-3ef1-4bf2-8a42-3275523f19d6"
-          >
-            <hm-uview-popup :show="true" :mode="'bottom'">
+          <view class="ele-wrapper ele-wrapper-shopPop">
+            <hm-uview-popup
+              ref="shopPop"
+              v-model:show="shopPop.show"
+              :mode="'bottom'"
+            >
               <view
                 class="ele-wrapper ele-wrapper-e3d6ca36-1022-4549-9d35-3d0fa0a03f1b"
               >
-                <hm-index-list :scroll-top="0"> </hm-index-list>
+                <hm-index-list
+                  :scroll-top="0"
+                  class="ele-e3d6ca36-1022-4549-9d35-3d0fa0a03f1b"
+                >
+                </hm-index-list>
               </view>
             </hm-uview-popup>
           </view>
@@ -190,8 +197,8 @@ export default {
   data() {
     let self = this;
     return {
-      "7dfb87d7-3ef1-4bf2-8a42-3275523f19d6": {
-        show: true,
+      shopPop: {
+        show: false,
       },
       "8b981cf2-ae14-4b8c-9f72-4cd6c41423a6": {
         value: "",
@@ -220,7 +227,11 @@ export default {
     };
   },
   watch: {},
-  methods: {},
+  methods: {
+    onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon() {
+      this.shopPop.show = true;
+    },
+  },
 };
 </script>
 
@@ -261,6 +272,11 @@ export default {
 .ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3 {
   width: 100%;
   margin-top: 20px;
+}
+
+.ele-wrapper-e3d6ca36-1022-4549-9d35-3d0fa0a03f1b {
+  width: 100%;
+  margin-top: 30px;
 }
 
 .ele-wrapper-baoming {
