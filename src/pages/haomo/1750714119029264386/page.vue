@@ -253,7 +253,7 @@ export default {
   /deep/.u-image__image {
     border-radius: 50% !important;
   }
-  margin: 8px 0 8px 8px;
+  margin: 8px 8px;
 }
 
 .ele-wrapper-ad039bb7-8f55-4ab8-98a8-54d1f73db365 {
@@ -263,6 +263,6 @@ export default {
 
 .ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30 {
   float: left;
-  margin: 8px 0;
+  margin: 8px 8px 8px 0px;
 }
 </style>
