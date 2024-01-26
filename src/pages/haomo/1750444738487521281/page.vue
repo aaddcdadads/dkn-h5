@@ -17,8 +17,10 @@
           >
             <hm-uview-text
               text="资料填写"
+              font-size="16px"
               color="#000000"
               :text-style="{ fontWeight: 700 }"
+              class="ele-e4e2b49b-b097-4a65-a356-d9d95daa618b"
             >
             </hm-uview-text>
           </view>
@@ -258,6 +260,12 @@ export default {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b {
+  font-family: "PingFangSC-Medium", "PingFang SC Medium", "PingFang SC",
+    sans-serif;
+  font-weight: 500;
 }
 
 .ele-wrapper-7927eb64-d6cf-4dda-8938-a15bb62187d2 {
