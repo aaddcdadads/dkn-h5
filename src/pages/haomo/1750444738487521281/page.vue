@@ -194,7 +194,7 @@ export default {
     let self = this;
     return {
       shopPop: {
-        show: false,
+        show: true,
       },
       "8b981cf2-ae14-4b8c-9f72-4cd6c41423a6": {
         value: "",
