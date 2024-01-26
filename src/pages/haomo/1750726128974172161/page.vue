@@ -26,12 +26,7 @@
               <view
                 class="ele-wrapper ele-wrapper-d5bbc53a-e10d-447f-ad1c-d820e1888444"
               >
-                <hm-uview-text
-                  text="¥499.00"
-                  color="#F56C6C"
-                  class="ele-d5bbc53a-e10d-447f-ad1c-d820e1888444"
-                >
-                </hm-uview-text>
+                <hm-uview-text text="¥499.00" color="#F56C6C"> </hm-uview-text>
               </view>
               <view
                 class="ele-wrapper ele-wrapper-25945a72-1ec0-4b4a-8f27-c9f47a3be2a6"
@@ -40,7 +35,6 @@
                   text=" 剩下时间 23:59:59"
                   font-size="12px"
                   color="#999999"
-                  class="ele-25945a72-1ec0-4b4a-8f27-c9f47a3be2a6"
                 >
                 </hm-uview-text>
               </view>
@@ -83,14 +77,6 @@ export default {
 }
 
 .ele-wrapper-7e13b692-9cc2-4862-bad0-cf3303afbbaa {
-  width: 100%;
-}
-
-.ele-wrapper-d5bbc53a-e10d-447f-ad1c-d820e1888444 {
-  width: 100%;
-}
-
-.ele-wrapper-25945a72-1ec0-4b4a-8f27-c9f47a3be2a6 {
   width: 100%;
 }
 </style>
