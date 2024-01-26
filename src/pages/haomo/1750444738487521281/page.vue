@@ -103,7 +103,14 @@
               <view
                 class="ele-wrapper ele-wrapper-4691aa84-ddc5-46bf-bd31-d46908cb517f"
               >
-                <hm-uview-text> </hm-uview-text>
+                <hm-uview-text text="报名费用" font-size="14px" color="#409EFF">
+                </hm-uview-text>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-c5aebda0-b42d-4d23-a10d-b223a5145510"
+              >
+                <hm-uview-text text="¥29.00" font-size="14px" color="#409EFF">
+                </hm-uview-text>
               </view>
               <view
                 class="ele-wrapper ele-wrapper-acf99afa-7e7b-42dc-a52d-aa67ffc5af5b"
