@@ -24,17 +24,6 @@
               class="ele-topBg"
             >
               <view
-                class="ele-wrapper ele-wrapper-0282e97e-ea2c-4315-bc0a-d39389246b17"
-              >
-                <u-switch
-                  :size="50"
-                  :modelValue="false"
-                  :active-value="-1"
-                  :inactive-value="-1"
-                >
-                </u-switch>
-              </view>
-              <view
                 class="ele-wrapper ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe"
               >
                 <hm-uview-icon
@@ -216,11 +205,7 @@ export default {
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
-    return {
-      "0282e97e-ea2c-4315-bc0a-d39389246b17": {
-        modelValue: false,
-      },
-    };
+    return {};
   },
   watch: {},
   methods: {},
