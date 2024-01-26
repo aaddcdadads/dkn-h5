@@ -27,6 +27,11 @@
           >
             <hm-uview-bg-card>
               <view
+                class="ele-wrapper ele-wrapper-27e83dd7-fae3-46d6-a6e0-4999eb7e187d"
+              >
+                <hm-uview-radio value="" title=""> </hm-uview-radio>
+              </view>
+              <view
                 class="ele-wrapper ele-wrapper-45e52ea3-2cbb-4177-bef2-dfec30631a3b"
               >
                 <hm-uview-image> </hm-uview-image>
@@ -211,6 +216,7 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
@@ -222,6 +228,7 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewText,
+    HmUviewRadio,
     HmUviewImage,
     InformationInputBox,
     HmUviewPopup,
@@ -234,6 +241,9 @@ export default {
     return {
       shopPop: {
         show: false,
+      },
+      "27e83dd7-fae3-46d6-a6e0-4999eb7e187d": {
+        value: "",
       },
       "8b981cf2-ae14-4b8c-9f72-4cd6c41423a6": {
         value: "",
