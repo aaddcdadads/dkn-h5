@@ -305,7 +305,7 @@ export default {
 
 .ele-wrapper-formbgCard {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
   .ele-formbgCard {
     display: flex;
