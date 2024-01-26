@@ -46,6 +46,7 @@
               >
                 <information-input-box
                   value=""
+                  placeholder="*请填写手机号码"
                   class="ele-9662da08-d680-4c34-af33-b2ba9794437a"
                 >
                 </information-input-box>
@@ -56,6 +57,7 @@
                 <information-input-box
                   value=""
                   :show-code="true"
+                  placeholder="*请填写短信验证码"
                   class="ele-5102357a-cd29-4bb3-9a1f-ab709e15c3a8"
                 >
                 </information-input-box>
@@ -65,6 +67,8 @@
               >
                 <information-input-box
                   value=""
+                  :show-icon="true"
+                  placeholder="*请选择领奖门店"
                   class="ele-71e123e5-88a9-44c5-b029-f89fdaffa0d3"
                 >
                 </information-input-box>
