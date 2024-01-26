@@ -445,5 +445,8 @@ export default {
     padding: 4px 12px;
     border: 1px solid hsla(0, 0%, 100%, 0.6);
   }
+  /deep/.right_bg {
+    padding-top: 24px;
+  }
 }
 </style>
