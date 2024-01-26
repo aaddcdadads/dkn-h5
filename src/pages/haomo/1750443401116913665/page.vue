@@ -515,7 +515,7 @@ export default {
     border-radius: 5px;
     height: 45px;
   }
-  /deep/.uni-input-placeholder {
+  /deep/.u-flex-1 {
     font-text: 13px;
   }
 }
