@@ -97,6 +97,7 @@
               ref="shopPop"
               v-model:show="shopPop.show"
               :mode="'bottom'"
+              class="ele-shopPop"
             >
               <view
                 class="ele-wrapper ele-wrapper-9fb51c90-145e-4b04-a74d-99794d96d8b3"
@@ -280,6 +281,14 @@ export default {
 .ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3 {
   width: 100%;
   margin-top: 20px;
+}
+
+.ele-wrapper-shopPop {
+  /deep/.uni-scroll-view-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .ele-wrapper-9fb51c90-145e-4b04-a74d-99794d96d8b3 {
