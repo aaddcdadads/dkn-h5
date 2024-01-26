@@ -77,5 +77,10 @@ export default {
 
 .ele-wrapper-titlePrice {
   width: 100%;
+  .ele-titlePrice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 </style>
