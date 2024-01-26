@@ -365,8 +365,10 @@ export default {
 .ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5 {
   width: 100%;
   margin: 15px 0px;
-  display: flex;
+  // display: flex;
   align-items: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
