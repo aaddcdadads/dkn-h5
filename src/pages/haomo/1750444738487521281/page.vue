@@ -338,7 +338,7 @@ export default {
 
 .ele-wrapper-e0671cfa-0c0d-4649-8682-46e9560f861e {
   font-family: "PingFangSC-Regular", "PingFang SC", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   color: #ff9900;
   text-align: left;
