@@ -196,7 +196,7 @@
                               text="线上马拉松"
                               font-size="10px"
                               color="#FFFFFF"
-                              padding="12"
+                              padding="4"
                               class="ele-f0bdc2b0-8112-4546-8c75-84df79598453"
                             >
                             </hm-uview-text>
