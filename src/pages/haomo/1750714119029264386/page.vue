@@ -730,7 +730,10 @@ export default {
 }
 
 .ele-wrapper-8c006472-eabd-41ce-9098-c1e883253807 {
-  padding: 0 12px;
+  /deep/.uni-scroll-view-content {
+    padding: 0 4% !impoprtant;
+    width: 92% !important;
+  }
 }
 
 .ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2 {
