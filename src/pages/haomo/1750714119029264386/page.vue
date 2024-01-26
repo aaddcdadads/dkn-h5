@@ -836,6 +836,9 @@ export default {
 
 .ele-wrapper-bb2067ec-1955-48be-b696-2b8ddf0ca01d {
   width: 100%;
+  position: fixed;
+  bottom: 24px;
+  z-index: 1000;
 }
 
 .ele-wrapper-14176f59-eadd-478d-b9a2-1e80a6793bfe {
