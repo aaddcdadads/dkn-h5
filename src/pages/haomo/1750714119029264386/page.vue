@@ -425,7 +425,7 @@
                   <view
                     class="ele-wrapper ele-wrapper-b6d9fc35-cf31-4da6-ac6d-4af925592418"
                   >
-                    <hm-uview-button> </hm-uview-button>
+                    <hm-uview-button :type="'success'"> </hm-uview-button>
                   </view>
                 </hm-uview-bg-card>
               </view>
