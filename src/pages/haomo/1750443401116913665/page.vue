@@ -432,8 +432,9 @@ export default {
   watch: {},
   methods: {
     onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
-      title: "图片编辑";
-      href: "https://hm-static-img.oss-cn-beijing.aliyuncs.com/L1VzZXJzL.png";
+      uni.$u.route(
+        "https://stage.block-design.cn/edit-page/?pageId=1750700281953259522"
+      );
     },
   },
 };
