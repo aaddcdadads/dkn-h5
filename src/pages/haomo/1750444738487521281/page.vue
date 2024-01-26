@@ -246,7 +246,7 @@ export default {
 }
 
 .ele-wrapper-baoming {
-  width: 80%;
+  width: 100%;
   position: absolute;
   bottom: 40px;
 }
