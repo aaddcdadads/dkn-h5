@@ -712,8 +712,8 @@ export default {
 }
 
 .ele-wrapper-4f1cb12e-36cb-4378-b823-05b5d45354ab {
-  width: 16px;
-  height: 16px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   float: left;
   /deep/.u-image__image {
