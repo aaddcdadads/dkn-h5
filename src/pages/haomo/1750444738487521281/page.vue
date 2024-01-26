@@ -34,10 +34,9 @@
               background-color="#F0F2F6"
               class="ele-74c8c2c3-d387-4029-8b68-8275204c2ed5"
             >
-              <view
-                class="ele-wrapper ele-wrapper-a329af57-d60b-43c4-bcb7-d84cbd118a80"
-              >
-                <event-registration-card> </event-registration-card>
+              <view class="ele-wrapper ele-wrapper-eventCard">
+                <event-registration-card ref="eventCard">
+                </event-registration-card>
               </view>
             </hm-uview-bg-card>
           </view>
