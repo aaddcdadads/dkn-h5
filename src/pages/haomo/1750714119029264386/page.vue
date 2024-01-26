@@ -261,6 +261,56 @@
                     </hm-uview-bg-card>
                   </view>
                   <view
+                    class="ele-wrapper ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius="12"
+                      padding="12"
+                      background-color="#F797BD"
+                      class="ele-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-67658805-d92e-4e1f-8067-6a180eca6391"
+                      >
+                        <hm-uview-bg-card
+                          width="100%"
+                          height=""
+                          border-radius="0"
+                          padding="0"
+                          box-shadow-color="#00000000"
+                          background-color="#FFFFFF00"
+                          class="ele-67658805-d92e-4e1f-8067-6a180eca6391"
+                        >
+                          <view
+                            class="ele-wrapper ele-wrapper-b5a81ba4-33af-478f-bd93-1199f013e523"
+                          >
+                            <hm-uview-text
+                              text="完赛奖品"
+                              font-size="12px"
+                              color="#FFFFFF"
+                              bg-color="#FFFFFF00"
+                              class="ele-b5a81ba4-33af-478f-bd93-1199f013e523"
+                            >
+                            </hm-uview-text>
+                          </view>
+                          <view
+                            class="ele-wrapper ele-wrapper-b5776b9e-5bb1-40f5-8854-f2b4dc696a41"
+                          >
+                            <hm-uview-text
+                              text="未完赛将无法获得奖品"
+                              font-size="8px"
+                              color="#FFFFFF99"
+                              class="ele-b5776b9e-5bb1-40f5-8854-f2b4dc696a41"
+                            >
+                            </hm-uview-text>
+                          </view>
+                        </hm-uview-bg-card>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
+                  <view
                     class="ele-wrapper ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550"
                   >
                     <hm-uview-bg-card
@@ -423,6 +473,23 @@ export default {
   /deep/.u-iconfont {
     color: #fff !important;
   }
+}
+
+.ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5 {
+  width: 100%;
+  margin-top: 24rpx;
+}
+
+.ele-wrapper-67658805-d92e-4e1f-8067-6a180eca6391 {
+  width: 100%;
+}
+
+.ele-wrapper-b5a81ba4-33af-478f-bd93-1199f013e523 {
+  float: left;
+}
+
+.ele-wrapper-b5776b9e-5bb1-40f5-8854-f2b4dc696a41 {
+  float: right;
 }
 
 .ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550 {
