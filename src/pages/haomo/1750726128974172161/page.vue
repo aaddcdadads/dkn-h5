@@ -42,10 +42,9 @@
               </view>
             </hm-uview-bg-card>
           </view>
-          <view
-            class="ele-wrapper ele-wrapper-47e4d4a0-e917-4c71-ac7b-72efa70ed074"
-          >
+          <view class="ele-wrapper ele-wrapper-weixin">
             <hm-uview-bg-card
+              ref="weixin"
               width="100%"
               height="100%"
               border-radius=""
@@ -54,7 +53,7 @@
               border-color="#F2F2F2"
               box-shadow-v-shadow=""
               box-shadow-blur=""
-              class="ele-47e4d4a0-e917-4c71-ac7b-72efa70ed074"
+              class="ele-weixin"
             >
               <view class="ele-wrapper ele-wrapper-weixinpay">
                 <hm-uview-bg-card
@@ -95,10 +94,9 @@
               </view>
             </hm-uview-bg-card>
           </view>
-          <view
-            class="ele-wrapper ele-wrapper-93b24983-ec82-4085-8b41-01add35ab335"
-          >
+          <view class="ele-wrapper ele-wrapper-zhifubao">
             <hm-uview-bg-card
+              ref="zhifubao"
               width="100%"
               height="100%"
               border-radius=""
@@ -107,7 +105,7 @@
               border-color="#F2F2F2"
               box-shadow-v-shadow=""
               box-shadow-blur=""
-              class="ele-93b24983-ec82-4085-8b41-01add35ab335"
+              class="ele-zhifubao"
             >
               <view class="ele-wrapper ele-wrapper-zhifubaopay">
                 <hm-uview-bg-card
@@ -219,7 +217,7 @@ export default {
   }
 }
 
-.ele-wrapper-47e4d4a0-e917-4c71-ac7b-72efa70ed074 {
+.ele-wrapper-weixin {
   width: 100%;
   height: 80px;
 }
@@ -230,7 +228,7 @@ export default {
   }
 }
 
-.ele-wrapper-93b24983-ec82-4085-8b41-01add35ab335 {
+.ele-wrapper-zhifubao {
   width: 100%;
   height: 80px;
 }
