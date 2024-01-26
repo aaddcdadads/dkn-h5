@@ -73,11 +73,6 @@
               background-color="#FFFFFF00"
               class="ele-videoBg"
             >
-              <view
-                class="ele-wrapper ele-wrapper-9b45add7-0d64-4ca1-a197-4da75185dc04"
-              >
-                <hm-video-list :num="1"> </hm-video-list>
-              </view>
             </hm-uview-bg-card>
           </view>
           <view
@@ -401,7 +396,6 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
-import HmVideoList from "/@/components/built-in/uniapp/HmVideoList.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewCellList from "/@/components/built-in/uniapp-uview-vue3/HmUviewCellList.vue";
 import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
@@ -412,7 +406,6 @@ export default {
     HmUviewBgCard,
     HmUviewIcon,
     HmUviewImage,
-    HmVideoList,
     HmUviewText,
     HmUviewCellList,
     HmCellList,
