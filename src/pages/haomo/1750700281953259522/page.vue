@@ -301,7 +301,7 @@ export default {
     let self = this;
     return {
       Buttonwan: {
-        text: "核销",
+        text: "确认核销",
       },
       "ea222d02-9ba2-44be-b94e-799272b9be37": {
         value: "",
@@ -367,6 +367,7 @@ export default {
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
   width: 70%;
+  height: 45px;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
