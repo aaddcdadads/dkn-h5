@@ -62,17 +62,6 @@
                       class="ele-3594e500-632d-42e8-b3b9-d485a0f784a5"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429"
-                      >
-                        <hm-uview-text
-                          text=" 姓名/昵称:"
-                          font-size="13px"
-                          padding=""
-                          class="ele-788913aa-482e-4c28-855d-fdb18b0c1429"
-                        >
-                        </hm-uview-text>
-                      </view>
-                      <view
                         class="ele-wrapper ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37"
                       >
                         <hm-uview-field
@@ -448,13 +437,6 @@ export default {
   margin: 15px 0px;
   display: flex;
   align-items: center;
-}
-
-.ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
-  width: 30%;
-  vertical-align: top;
-  line-height: 45px;
-  text-align: center;
 }
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
