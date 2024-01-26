@@ -58,20 +58,6 @@
                 >
                 </hm-video-list>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-2966337e-38af-4573-a9c7-464b04d48566"
-              >
-                <hm-uview-bg-card
-                  width="100%"
-                  height=""
-                  border-radius="0"
-                  padding="12"
-                  box-shadow-color="#00000000"
-                  background-color="#FFE8EC"
-                  class="ele-2966337e-38af-4573-a9c7-464b04d48566"
-                >
-                </hm-uview-bg-card>
-              </view>
             </hm-uview-bg-card>
           </view>
         </hm-uview-bg-card>
@@ -132,9 +118,5 @@ export default {
 .ele-wrapper-7a2f13f4-3ba2-456e-a67a-c507181b2442 {
   width: 100%;
   height: 500px;
-}
-
-.ele-wrapper-2966337e-38af-4573-a9c7-464b04d48566 {
-  width: 100%;
 }
 </style>
