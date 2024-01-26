@@ -449,7 +449,7 @@ export default {
   padding-top: 8rpx;
   margin-right: 24rpx;
   background: rgba(0, 0, 0, 0.16);
-  padding: 12px 12px;
+  padding: 8px 12px;
 }
 
 .ele-wrapper-imageBg {
