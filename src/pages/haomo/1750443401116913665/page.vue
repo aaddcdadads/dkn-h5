@@ -672,6 +672,7 @@ export default {
     font-weight: 400;
     background-color: rgb(89, 213, 165);
     color: rgb(255, 255, 255);
+    border-radius: 10px;
   }
 }
 </style>
