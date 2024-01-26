@@ -56,6 +56,7 @@
                 class="ele-wrapper ele-wrapper-f91b4645-a50f-4879-857d-46279f610ca8"
               >
                 <hm-uview-image
+                  src="https://static1.keepcdn.com/teyvat-cms/2023/10/24/1698136514335c25agsam_750x1000.jpg"
                   width="100%"
                   height="500px"
                   class="ele-f91b4645-a50f-4879-857d-46279f610ca8"
@@ -75,6 +76,7 @@
               box-shadow-blur="0"
               box-shadow-color="#00000000"
               background-color="#FFFFFF00"
+              :hidden="true"
               class="ele-videoBg"
             >
               <view
