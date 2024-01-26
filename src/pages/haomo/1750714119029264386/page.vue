@@ -34,6 +34,7 @@
                   size="20px"
                   label="规则"
                   label-color="#FFFFFF"
+                  @click="onEle0Abf487751Bc431D8F1A3C043Bc451FeClick"
                   class="ele-0abf4877-51bc-431d-8f1a-3c043bc451fe"
                 >
                 </hm-uview-icon>
@@ -394,16 +395,15 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-8c006472-eabd-41ce-9098-c1e883253807"
-              >
+              <view class="ele-wrapper ele-wrapper-regularPopup">
                 <hm-uview-popup
-                  :show="true"
+                  ref="regularPopup"
+                  v-model:show="regularPopup.show"
                   :mode="'bottom'"
                   width="100%"
                   height="30%"
                   :close-icon-pos="'top-left'"
-                  class="ele-8c006472-eabd-41ce-9098-c1e883253807"
+                  class="ele-regularPopup"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2"
@@ -557,13 +557,17 @@ export default {
   data() {
     let self = this;
     return {
-      "8c006472-eabd-41ce-9098-c1e883253807": {
-        show: true,
+      regularPopup: {
+        show: false,
       },
     };
   },
   watch: {},
-  methods: {},
+  methods: {
+    onEle0Abf487751Bc431D8F1A3C043Bc451FeClick() {
+      this.regularPopup = true;
+    },
+  },
 };
 </script>
 
@@ -729,7 +733,7 @@ export default {
   }
 }
 
-.ele-wrapper-8c006472-eabd-41ce-9098-c1e883253807 {
+.ele-wrapper-regularPopup {
   /deep/.uni-scroll-view-content {
     margin-left: 4%;
     width: 92% !important;
