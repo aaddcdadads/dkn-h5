@@ -45,6 +45,10 @@
                 class="ele-wrapper ele-wrapper-9662da08-d680-4c34-af33-b2ba9794437a"
               >
                 <information-input-box
+                  :left-src="[
+                    'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shoujis.png',
+                    'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji.png',
+                  ]"
                   value=""
                   placeholder="*请填写手机号码"
                   class="ele-9662da08-d680-4c34-af33-b2ba9794437a"
@@ -55,6 +59,10 @@
                 class="ele-wrapper ele-wrapper-5102357a-cd29-4bb3-9a1f-ab709e15c3a8"
               >
                 <information-input-box
+                  :left-src="[
+                    'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/xinxis.png',
+                    'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/xinxi.png',
+                  ]"
                   value=""
                   :show-code="true"
                   placeholder="*请填写短信验证码"
@@ -66,6 +74,10 @@
                 class="ele-wrapper ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3"
               >
                 <information-input-box
+                  :left-src="[
+                    'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendian.png',
+                    'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendians.png',
+                  ]"
                   value=""
                   :show-icon="true"
                   placeholder="*请选择领奖门店"
@@ -102,12 +114,24 @@ export default {
         value: "",
       },
       "9662da08-d680-4c34-af33-b2ba9794437a": {
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shoujis.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji.png",
+        ],
         value: "",
       },
       "5102357a-cd29-4bb3-9a1f-ab709e15c3a8": {
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/xinxis.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/xinxi.png",
+        ],
         value: "",
       },
       "71e123e5-88a9-44c5-b029-f89fdaffa0d3": {
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendian.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendians.png",
+        ],
         value: "",
       },
     };
