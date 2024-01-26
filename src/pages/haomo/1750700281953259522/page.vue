@@ -20,11 +20,15 @@
               class="ele-b70290a2-501d-46d6-a44e-63d06e016496"
             >
               <view
+                class="ele-wrapper ele-wrapper-b543d8d2-d56c-4de5-8cd7-27e80ca20850"
+              >
+                <hm-uview-text item="<" font-size="13px"> </hm-uview-text>
+              </view>
+              <view
                 class="ele-wrapper ele-wrapper-51e40d97-b1a2-45a7-b1b6-7d182e2d5e68"
               >
                 <hm-uview-text
                   text="活动报名信息"
-                  :text-style="{}"
                   class="ele-51e40d97-b1a2-45a7-b1b6-7d182e2d5e68"
                 >
                 </hm-uview-text>
