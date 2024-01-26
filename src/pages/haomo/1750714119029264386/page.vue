@@ -41,6 +41,22 @@
               </view>
             </hm-uview-bg-card>
           </view>
+          <view
+            class="ele-wrapper ele-wrapper-3de94d32-48f2-495a-b447-4ba9360a1ceb"
+          >
+            <hm-uview-bg-card
+              width="100%"
+              height=""
+              border-radius="0"
+              padding="12"
+              box-shadow-v-shadow="0"
+              box-shadow-blur="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
+              class="ele-3de94d32-48f2-495a-b447-4ba9360a1ceb"
+            >
+            </hm-uview-bg-card>
+          </view>
           <view class="ele-wrapper ele-wrapper-imageBg">
             <hm-uview-bg-card
               ref="imageBg"
@@ -395,6 +411,24 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
+              <view
+                class="ele-wrapper ele-wrapper-eb5dc617-266d-4627-8ae8-06394a0d2e04"
+              >
+                <hm-uview-bg-card
+                  width="100%"
+                  height=""
+                  border-radius="0"
+                  padding="0"
+                  box-shadow-color="#00000000"
+                  class="ele-eb5dc617-266d-4627-8ae8-06394a0d2e04"
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-b6d9fc35-cf31-4da6-ac6d-4af925592418"
+                  >
+                    <hm-uview-button> </hm-uview-button>
+                  </view>
+                </hm-uview-bg-card>
+              </view>
               <view class="ele-wrapper ele-wrapper-regularPopup">
                 <hm-uview-popup
                   ref="regularPopup"
@@ -540,6 +574,7 @@ import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewCellList from "/@/components/built-in/uniapp-uview-vue3/HmUviewCellList.vue";
 import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
+import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 
 export default {
@@ -551,6 +586,7 @@ export default {
     HmUviewText,
     HmUviewCellList,
     HmCellList,
+    HmUviewButton,
     HmUviewPopup,
   },
   options: { styleIsolation: "shared" },
@@ -595,6 +631,14 @@ export default {
   margin-right: 24rpx;
   background: rgba(0, 0, 0, 0.16);
   padding: 8px 12px;
+}
+
+.ele-wrapper-3de94d32-48f2-495a-b447-4ba9360a1ceb {
+  width: 100%;
+  position: fixed;
+  top: 24px;
+  top: 24px;
+  z-index: 1000;
 }
 
 .ele-wrapper-imageBg {
@@ -731,6 +775,10 @@ export default {
   /deep/.right_bg {
     padding-top: 24px;
   }
+}
+
+.ele-wrapper-eb5dc617-266d-4627-8ae8-06394a0d2e04 {
+  width: 100%;
 }
 
 .ele-wrapper-regularPopup {
