@@ -120,7 +120,7 @@
                           width="100%"
                           height=""
                           border-radius="0"
-                          padding="12"
+                          padding="0"
                           box-shadow-v-shadow="0"
                           box-shadow-blur="0"
                           box-shadow-color="#00000000"
@@ -253,13 +253,16 @@ export default {
   /deep/.u-image__image {
     border-radius: 50% !important;
   }
+  margin: 8px 0 8px 8px;
 }
 
 .ele-wrapper-ad039bb7-8f55-4ab8-98a8-54d1f73db365 {
   float: left;
+  margin: 8px 0;
 }
 
 .ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30 {
   float: left;
+  margin: 8px 0;
 }
 </style>
