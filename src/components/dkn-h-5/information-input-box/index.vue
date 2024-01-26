@@ -108,7 +108,7 @@ export default {
 .input {
   display: flex;
   align-items: center;
-  border: 1px solid #999999;
+  border: 1px solid #e5e5e5;
   height: 45px;
   border-radius: 5px;
    background-color: #fff;
