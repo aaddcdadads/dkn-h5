@@ -373,8 +373,6 @@ export default {
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
-  }
-  /deep/.u-border-bottom {
     height: 45px;
   }
 }
@@ -396,6 +394,7 @@ export default {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
     border: 1px;
+    height: 45px;
   }
 }
 
@@ -416,6 +415,7 @@ export default {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
     border: 1px;
+    height: 45px;
   }
 }
 
@@ -440,6 +440,7 @@ export default {
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
+    height: 45px;
   }
 }
 

@@ -48,6 +48,11 @@
               >
                 <hm-uview-image> </hm-uview-image>
               </view>
+              <view
+                class="ele-wrapper ele-wrapper-89a737ab-1240-47ed-b005-e1b3a5229f52"
+              >
+                <hm-uview-bg-card> </hm-uview-bg-card>
+              </view>
             </hm-uview-bg-card>
           </view>
           <view
