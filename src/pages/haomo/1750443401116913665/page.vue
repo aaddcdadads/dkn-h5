@@ -74,6 +74,9 @@
                     <hm-uview-bg-card
                       width="100%"
                       height="40"
+                      :border-style="'solid'"
+                      border-width="1"
+                      border-color="#B0B0B0"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
