@@ -16,6 +16,11 @@
       >
         <hm-uview-bg-card> </hm-uview-bg-card>
       </view>
+      <view
+        class="ele-wrapper ele-wrapper-fa443681-89f9-402f-b360-72d5f8de4c72"
+      >
+        <prize-list-component> </prize-list-component>
+      </view>
     </view>
   </view>
 </template>
@@ -23,11 +28,13 @@
 <script>
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
+import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index.vue";
 
 export default {
   name: "Test",
   components: {
     HmUviewBgCard,
+    PrizeListComponent,
   },
   options: { styleIsolation: "shared" },
   data() {
