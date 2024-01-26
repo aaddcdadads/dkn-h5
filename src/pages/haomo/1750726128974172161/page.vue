@@ -63,6 +63,7 @@
                   height="100%"
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
+                  class="ele-weixinpay"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-79c85c41-77a4-4d5d-8011-bcb1450dd53e"
@@ -220,6 +221,12 @@ export default {
 .ele-wrapper-47e4d4a0-e917-4c71-ac7b-72efa70ed074 {
   width: 100%;
   height: 80px;
+}
+
+.ele-wrapper-weixinpay {
+  .hm-bg-card {
+    display: flex;
+  }
 }
 
 .ele-wrapper-93b24983-ec82-4085-8b41-01add35ab335 {
