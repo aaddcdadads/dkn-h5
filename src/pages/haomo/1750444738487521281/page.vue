@@ -152,7 +152,7 @@
                   padding=""
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
-                  background-color="#F2F2F2"
+                  background-color="#EFF2F5"
                   class="ele-priceCard"
                 >
                   <view
