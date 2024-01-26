@@ -91,10 +91,12 @@
               </view>
             </hm-uview-bg-card>
           </view>
-          <view
-            class="ele-wrapper ele-wrapper-7dfb87d7-3ef1-4bf2-8a42-3275523f19d6"
-          >
-            <hm-uview-popup :show="true" :mode="'bottom'">
+          <view class="ele-wrapper ele-wrapper-shopPop">
+            <hm-uview-popup
+              ref="shopPop"
+              v-model:show="shopPop.show"
+              :mode="'bottom'"
+            >
               <view
                 class="ele-wrapper ele-wrapper-e3d6ca36-1022-4549-9d35-3d0fa0a03f1b"
               >
@@ -194,8 +196,8 @@ export default {
   data() {
     let self = this;
     return {
-      "7dfb87d7-3ef1-4bf2-8a42-3275523f19d6": {
-        show: true,
+      shopPop: {
+        show: false,
       },
       "8b981cf2-ae14-4b8c-9f72-4cd6c41423a6": {
         value: "",
