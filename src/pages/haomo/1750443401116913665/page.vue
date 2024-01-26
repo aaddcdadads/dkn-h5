@@ -524,7 +524,7 @@ export default {
   align-items: center;
   margin: 15px 0px;
   /deep/.ele-wrapper {
-    margin-bottom: 0px;
+    margin-bottom: 5px;
   }
 }
 
