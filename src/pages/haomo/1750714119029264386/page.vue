@@ -233,7 +233,7 @@
                             {
                               key: 3,
                               title: '如何玩转',
-                              icon: 'setting-fill',
+                              icon: 'question-circle',
                               required: false,
                               borderTop: false,
                               borderBottom: false,
