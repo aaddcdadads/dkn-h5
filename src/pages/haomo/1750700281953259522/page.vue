@@ -15,6 +15,7 @@
             <hm-uview-bg-card
               width="100%"
               height="50"
+              :text-align="'center'"
               box-shadow-blur=""
               box-shadow-color="#00000000"
               class="ele-b70290a2-501d-46d6-a44e-63d06e016496"
