@@ -105,21 +105,6 @@
                             >
                             </hm-uview-text>
                           </view>
-                          <view
-                            class="ele-wrapper ele-wrapper-0b526546-fffe-44d9-8fc9-6ed8ddc24c72"
-                          >
-                            <uni-countdown
-                              background-color="#00000000"
-                              color="#FFFFFF"
-                              :font-size="11"
-                              splitor-color="#FFFFFF"
-                              :day="19"
-                              :hour="15"
-                              :minute="13"
-                              :second="17"
-                            >
-                            </uni-countdown>
-                          </view>
                         </hm-uview-bg-card>
                       </view>
                     </hm-uview-bg-card>
