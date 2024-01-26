@@ -85,7 +85,7 @@
                 class="ele-wrapper ele-wrapper-37b1cd04-5fee-4df3-943a-43f69feeaf26"
               >
                 <hm-uview-radio
-                  value=""
+                  value="false"
                   title=""
                   :list="[{ name: '', disabled: false }]"
                   active-color="#F56C6C"
@@ -175,7 +175,7 @@ export default {
     let self = this;
     return {
       "37b1cd04-5fee-4df3-943a-43f69feeaf26": {
-        value: "",
+        value: "false",
         list: [
           {
             name: "",
