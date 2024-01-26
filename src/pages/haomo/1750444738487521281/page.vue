@@ -29,6 +29,7 @@
               box-shadow-v-shadow=""
               box-shadow-blur=""
               box-shadow-spread=""
+              background-color="#F2F2F2"
               class="ele-7927eb64-d6cf-4dda-8938-a15bb62187d2"
             >
               <view
