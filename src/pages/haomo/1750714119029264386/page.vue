@@ -73,6 +73,11 @@
               background-color="#FFFFFF00"
               class="ele-videoBg"
             >
+              <view
+                class="ele-wrapper ele-wrapper-438459e7-727d-4437-a364-b6eb07613382"
+              >
+                <video class="ele-438459e7-727d-4437-a364-b6eb07613382"></video>
+              </view>
             </hm-uview-bg-card>
           </view>
           <view
@@ -452,6 +457,15 @@ export default {
 
 .ele-wrapper-videoBg {
   width: 100%;
+}
+
+.ele-wrapper-438459e7-727d-4437-a364-b6eb07613382 {
+  width: 100%;
+  /deep/.hm-block {
+    > video {
+      width: 100%;
+    }
+  }
 }
 
 .ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2 {
