@@ -563,7 +563,7 @@ export default {
 }
 
 .ele-wrapper-5f9b085f-9eca-4f97-8d98-e3895c913b99 {
-  width: 85%;
+  width: 100%;
   margin-top: 20px;
 }
 
