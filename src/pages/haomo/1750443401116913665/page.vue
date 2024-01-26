@@ -371,7 +371,6 @@ export default {
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
   width: 100%;
-  padding-bottom: 5px;
 }
 
 .ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5 {
