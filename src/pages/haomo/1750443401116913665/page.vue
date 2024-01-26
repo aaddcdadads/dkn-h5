@@ -208,7 +208,7 @@
                           label=" 核销截止:"
                           placeholder=" 核销截止"
                           label-width="150"
-                          maxlength=""
+                          maxlength="200"
                           icon=""
                           right-icon=""
                           class="ele-f2093ff0-31f8-4c8e-8715-756493dc516a"
@@ -229,24 +229,13 @@
                       class="ele-e4f5cc89-8551-4bdd-a6ee-b6edac67ce3c"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-56c6f78a-53d5-494d-aeac-05f4c676547d"
-                      >
-                        <hm-uview-text
-                          text="核销状态:"
-                          font-size="13px"
-                          padding=""
-                          class="ele-56c6f78a-53d5-494d-aeac-05f4c676547d"
-                        >
-                        </hm-uview-text>
-                      </view>
-                      <view
                         class="ele-wrapper ele-wrapper-825c7b35-6136-42aa-8176-48014a210261"
                       >
                         <hm-uview-field
                           value=""
-                          label=""
+                          label="核销状态:"
                           placeholder="待核销/已核销"
-                          label-width="0"
+                          label-width="150"
                           icon=""
                           right-icon=""
                           class="ele-825c7b35-6136-42aa-8176-48014a210261"
@@ -533,15 +522,8 @@ export default {
   margin: 15px 0px;
 }
 
-.ele-wrapper-56c6f78a-53d5-494d-aeac-05f4c676547d {
-  width: 30%;
-  vertical-align: top;
-  line-height: 45px;
-  text-align: center;
-}
-
 .ele-wrapper-825c7b35-6136-42aa-8176-48014a210261 {
-  width: 69%;
+  width: 100%;
   height: 45px;
   /deep/.u-label-postion-left {
     position: absolute;
