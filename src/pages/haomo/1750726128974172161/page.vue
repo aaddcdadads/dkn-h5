@@ -127,7 +127,7 @@
                     class="ele-wrapper ele-wrapper-a2688ccd-ff91-4fa6-a3fc-00dab047ad02"
                   >
                     <hm-uview-image
-                      src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/zhifu.png"
+                      src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/zhifubao_1.png"
                       width="40px"
                       height="40px"
                     >
