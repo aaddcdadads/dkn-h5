@@ -87,6 +87,29 @@
               </view>
             </hm-uview-bg-card>
           </view>
+          <view
+            class="ele-wrapper ele-wrapper-12afd4d4-40cb-4c92-9871-dbe45f394ddf"
+          >
+            <hm-uview-bg-card
+              width="100%"
+              height="100%"
+              border-radius=""
+              padding=""
+              box-shadow-v-shadow=""
+              background-color="#F2F2F2"
+            >
+              <view
+                class="ele-wrapper ele-wrapper-4691aa84-ddc5-46bf-bd31-d46908cb517f"
+              >
+                <hm-uview-text> </hm-uview-text>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-acf99afa-7e7b-42dc-a52d-aa67ffc5af5b"
+              >
+                <hm-uview-button> </hm-uview-button>
+              </view>
+            </hm-uview-bg-card>
+          </view>
         </hm-uview-bg-card>
       </view>
     </view>
@@ -98,6 +121,7 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
+import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
   name: "RegistrationForm",
@@ -105,6 +129,7 @@ export default {
     HmUviewBgCard,
     HmUviewText,
     InformationInputBox,
+    HmUviewButton,
   },
   options: { styleIsolation: "shared" },
   data() {
