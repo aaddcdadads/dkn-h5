@@ -439,6 +439,7 @@ export default {
   position: fixed;
   top: 24px;
   top: 24px;
+  z-index: 1000;
 }
 
 .ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe {
