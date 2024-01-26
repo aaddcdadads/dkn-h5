@@ -670,7 +670,7 @@ export default {
   margin-bottom: 50px;
   /deep/.ele-Buttonwan {
     font-weight: 400;
-    background-color: rgb(245, 108, 108);
+    background-color: rgb(89, 213, 165);
     color: rgb(255, 255, 255);
   }
 }
