@@ -23,6 +23,24 @@
             </hm-uview-text>
           </view>
           <view
+            class="ele-wrapper ele-wrapper-37d3df1b-3224-4fbd-901e-b2a290a0ccb9"
+          >
+            <hm-uview-bg-card
+              width="100%"
+              height="100%"
+              border-radius=""
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+              background-color="#F0F2F6"
+            >
+              <view
+                class="ele-wrapper ele-wrapper-dd21567d-6b50-4f54-87d8-a804443a5f46"
+              >
+                <hm-uview-text> </hm-uview-text>
+              </view>
+            </hm-uview-bg-card>
+          </view>
+          <view
             class="ele-wrapper ele-wrapper-74c8c2c3-d387-4029-8b68-8275204c2ed5"
           >
             <hm-uview-bg-card
