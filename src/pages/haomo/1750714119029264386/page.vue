@@ -438,5 +438,12 @@ export default {
   /deep/.left_descrip {
     color: hsla(0, 0%, 100%, 0.6) !important;
   }
+  /deep/.left_date {
+    color: #fff !important;
+    border-radius: 1.435897435897436rem;
+    font-size: 12px;
+    padding: 4px 12px;
+    border: 1px solid hsla(0, 0%, 100%, 0.6);
+  }
 }
 </style>
