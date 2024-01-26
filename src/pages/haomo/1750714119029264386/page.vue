@@ -157,8 +157,8 @@
                           >
                             <hm-uview-text
                               text="报名仅剩"
-                              font-size="11px"
-                              color="#FFFFFF"
+                              font-size="12px"
+                              color="#FFFFFF99"
                             >
                             </hm-uview-text>
                           </view>
@@ -169,7 +169,7 @@
                               background-color="#00000000"
                               color="#FFFFFF"
                               :font-size="11"
-                              splitor-color="#FFFFFF"
+                              splitor-color="#FFFFFF99"
                               :day="19"
                               :hour="15"
                               :minute="13"
@@ -221,7 +221,7 @@
                           >
                             <hm-uview-icon
                               name="arrow-right"
-                              color="#FFFFFF"
+                              color="#FFFFFF99"
                               size="12px"
                               label=""
                               label-color="#FFFFFF"
@@ -260,7 +260,7 @@
                             <hm-uview-text
                               text="线上马拉松"
                               font-size="10px"
-                              color="#FFFFFF"
+                              color="#FFFFFF99"
                               padding="6"
                               class="ele-f0bdc2b0-8112-4546-8c75-84df79598453"
                             >
@@ -352,7 +352,7 @@
                           >
                             <hm-uview-text
                               text="完赛奖品"
-                              font-size="12px"
+                              font-size="16px"
                               color="#FFFFFF"
                               bg-color="#FFFFFF00"
                               class="ele-b5a81ba4-33af-478f-bd93-1199f013e523"
@@ -364,7 +364,7 @@
                           >
                             <hm-uview-text
                               text="未完赛将无法获得奖品"
-                              font-size="8px"
+                              font-size="12px"
                               color="#FFFFFF99"
                               class="ele-b5776b9e-5bb1-40f5-8854-f2b4dc696a41"
                             >
