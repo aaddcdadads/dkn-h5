@@ -94,7 +94,13 @@
           <view
             class="ele-wrapper ele-wrapper-7dfb87d7-3ef1-4bf2-8a42-3275523f19d6"
           >
-            <hm-uview-popup :show="true" :mode="'bottom'"> </hm-uview-popup>
+            <hm-uview-popup :show="true" :mode="'bottom'">
+              <view
+                class="ele-wrapper ele-wrapper-e3d6ca36-1022-4549-9d35-3d0fa0a03f1b"
+              >
+                <hm-index-list :scroll-top="0"> </hm-index-list>
+              </view>
+            </hm-uview-popup>
           </view>
           <view class="ele-wrapper ele-wrapper-baoming">
             <hm-uview-bg-card
@@ -167,6 +173,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
+import HmIndexList from "/@/components/built-in/uniapp-haomo/HmIndexList.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -176,6 +183,7 @@ export default {
     HmUviewText,
     InformationInputBox,
     HmUviewPopup,
+    HmIndexList,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
