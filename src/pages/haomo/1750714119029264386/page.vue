@@ -704,6 +704,9 @@ export default {
     margin-top: -2rpx !important;
     font-size: 12px !important;
   }
+  /deep/.uni-countdown__number {
+    background: hsla(0, 0%, 100%, 0.15) !important;
+  }
 }
 
 .ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39 {
