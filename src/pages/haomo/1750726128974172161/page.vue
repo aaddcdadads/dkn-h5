@@ -245,6 +245,7 @@ export default {
 .ele-wrapper-weixin {
   width: 100%;
   height: 80px;
+  margin-top: 300px;
   .ele-weixin {
     display: flex;
     align-items: center;
