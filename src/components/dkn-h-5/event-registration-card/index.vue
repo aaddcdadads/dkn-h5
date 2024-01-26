@@ -124,4 +124,5 @@ export default {
 .change {
   margin-right: 10px;
   margin-left: 10px;
+  transform:scale(0.7);
 }</style>
