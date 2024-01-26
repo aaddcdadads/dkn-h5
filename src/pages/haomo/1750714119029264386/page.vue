@@ -66,6 +66,7 @@
                   >
                     <hm-uview-bg-card
                       width="100%"
+                      height=""
                       border-radius="12"
                       padding="12"
                       background-color="#F797BD"
@@ -162,6 +163,42 @@
                               class="ele-f1b5f026-f12a-46a9-b78f-dea0efd75a30"
                             >
                             </hm-uview-icon>
+                          </view>
+                        </hm-uview-bg-card>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-68028b41-e565-41ca-94f3-03281e4d4c4f"
+                      >
+                        <hm-uview-text
+                          text="派对甜心｜HelloKitty生日主题线上跑"
+                          color="#FFFFFF"
+                          :text-align="'left'"
+                          class="ele-68028b41-e565-41ca-94f3-03281e4d4c4f"
+                        >
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-db5afb3e-f8de-4171-94e9-286964bcb67c"
+                      >
+                        <hm-uview-bg-card
+                          width="100%"
+                          height=""
+                          border-radius="12"
+                          padding="0"
+                          background-color="#F797BD00"
+                          class="ele-db5afb3e-f8de-4171-94e9-286964bcb67c"
+                        >
+                          <view
+                            class="ele-wrapper ele-wrapper-f0bdc2b0-8112-4546-8c75-84df79598453"
+                          >
+                            <hm-uview-text
+                              text="线上马拉松"
+                              font-size="10px"
+                              color="#FFFFFF"
+                              padding="0"
+                              class="ele-f0bdc2b0-8112-4546-8c75-84df79598453"
+                            >
+                            </hm-uview-text>
                           </view>
                         </hm-uview-bg-card>
                       </view>
@@ -264,5 +301,20 @@ export default {
 .ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30 {
   float: left;
   margin: 8px 8px 8px 4px;
+}
+
+.ele-wrapper-68028b41-e565-41ca-94f3-03281e4d4c4f {
+  width: 100%;
+  font-weight: 600;
+  font-size: 0.512820512820513rem;
+}
+
+.ele-wrapper-db5afb3e-f8de-4171-94e9-286964bcb67c {
+  width: 100%;
+}
+
+.ele-wrapper-f0bdc2b0-8112-4546-8c75-84df79598453 {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 12015px;
 }
 </style>
