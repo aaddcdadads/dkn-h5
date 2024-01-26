@@ -374,6 +374,7 @@ export default {
   vertical-align: top;
   height: 45px;
   padding: 16px 0px;
+  text-align: center;
 }
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
@@ -403,6 +404,7 @@ export default {
   vertical-align: top;
   height: 45px;
   padding: 16px 0px;
+  text-align: center;
 }
 
 .ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b {
@@ -432,6 +434,7 @@ export default {
   vertical-align: top;
   height: 45px;
   padding: 16px 0px;
+  text-align: center;
 }
 
 .ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025 {
@@ -466,6 +469,7 @@ export default {
   vertical-align: top;
   height: 45px;
   padding: 16px 0px;
+  text-align: center;
 }
 
 .ele-wrapper-6bdb201e-d452-4e15-b72f-70c229fbd237 {
@@ -495,6 +499,7 @@ export default {
   vertical-align: top;
   height: 45px;
   padding: 16px 0px;
+  text-align: center;
 }
 
 .ele-wrapper-Buttonwan {
