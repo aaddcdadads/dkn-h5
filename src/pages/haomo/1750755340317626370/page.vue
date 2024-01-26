@@ -95,16 +95,6 @@
                           background-color="#FFFFFF00"
                           class="ele-6ba2b397-6caf-44b2-8d16-4ad0c0eba375"
                         >
-                          <view
-                            class="ele-wrapper ele-wrapper-a45a5040-24f2-43f3-8f5a-6b9d497eb002"
-                          >
-                            <hm-uview-text
-                              text="报名仅剩"
-                              font-size="11px"
-                              color="#FFFFFF"
-                            >
-                            </hm-uview-text>
-                          </view>
                         </hm-uview-bg-card>
                       </view>
                     </hm-uview-bg-card>
@@ -124,7 +114,6 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import HmVideoList from "/@/components/built-in/uniapp/HmVideoList.vue";
-import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 
 export default {
   name: "AddlistSuggestions",
@@ -132,7 +121,6 @@ export default {
     HmUviewBgCard,
     HmUviewIcon,
     HmVideoList,
-    HmUviewText,
   },
   options: { styleIsolation: "shared" },
   data() {
