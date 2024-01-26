@@ -25,7 +25,13 @@
           <view
             class="ele-wrapper ele-wrapper-f09bd67e-29e6-44fb-bfb7-2254ce5762cf"
           >
-            <hm-uview-bg-card>
+            <hm-uview-bg-card
+              width="100%"
+              height="100%"
+              border-radius=""
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+            >
               <view
                 class="ele-wrapper ele-wrapper-27e83dd7-fae3-46d6-a6e0-4999eb7e187d"
               >
@@ -36,11 +42,6 @@
                   :shape="'square'"
                 >
                 </hm-uview-radio>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-b1062778-4679-47c7-b0d1-440d9ddf797e"
-              >
-                <checkbox> </checkbox>
               </view>
               <view
                 class="ele-wrapper ele-wrapper-45e52ea3-2cbb-4177-bef2-dfec30631a3b"
