@@ -21,10 +21,12 @@ export default {
      */
     leftSrc: {
       type: Array,
-      default: [
-        "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-        "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang1.png",
-      ]
+       default: function () {
+        return [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang1.png",
+        ]
+      }
     },
     /**
      * 值
