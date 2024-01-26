@@ -701,7 +701,6 @@ export default {
 
 .ele-wrapper-0b526546-fffe-44d9-8fc9-6ed8ddc24c72 {
   /deep/.uni-countdown__splitor {
-    margin-top: -2rpx !important;
     font-size: 12px !important;
   }
   /deep/.uni-countdown__number {
