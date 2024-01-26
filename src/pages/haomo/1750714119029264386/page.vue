@@ -720,7 +720,7 @@ export default {
 
 .ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30 {
   float: left;
-  margin: 6px 8px 8px 4px;
+  margin: 8px 8px 8px 4px;
 }
 
 .ele-wrapper-68028b41-e565-41ca-94f3-03281e4d4c4f {
