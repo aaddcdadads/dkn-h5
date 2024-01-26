@@ -181,43 +181,6 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-ec8bdb37-8258-4daf-b83b-30ebc2a70f11"
-                  >
-                    <hm-uview-bg-card
-                      width="100%"
-                      height="40"
-                      padding=""
-                      box-shadow-v-shadow=""
-                      box-shadow-blur=""
-                      class="ele-ec8bdb37-8258-4daf-b83b-30ebc2a70f11"
-                    >
-                      <view
-                        class="ele-wrapper ele-wrapper-3abd57d9-0713-43df-a2c8-ef7c647ae545"
-                      >
-                        <hm-uview-text
-                          text=" 报名时间:"
-                          font-size="13px"
-                          class="ele-3abd57d9-0713-43df-a2c8-ef7c647ae545"
-                        >
-                        </hm-uview-text>
-                      </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-9a4984ec-97fb-465a-9b6b-8c645b5eab71"
-                      >
-                        <hm-uview-field
-                          value=""
-                          label=""
-                          placeholder="2024.02.10 15:46:39"
-                          label-width="0"
-                          icon=""
-                          right-icon=""
-                          class="ele-9a4984ec-97fb-465a-9b6b-8c645b5eab71"
-                        >
-                        </hm-uview-field>
-                      </view>
-                    </hm-uview-bg-card>
-                  </view>
                 </hm-uview-bg-card>
               </view>
               <view
@@ -283,7 +246,7 @@
                         class="ele-wrapper ele-wrapper-b6f23b24-c2be-4d98-9974-4d77dc23028b"
                       >
                         <hm-uview-text
-                          text=" 核销截止:"
+                          text="活动奖品:"
                           font-size="13px"
                           class="ele-b6f23b24-c2be-4d98-9974-4d77dc23028b"
                         >
@@ -297,17 +260,6 @@
                     </hm-uview-bg-card>
                   </view>
                 </hm-uview-bg-card>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
-              >
-                <hm-uview-text
-                  text=" 返回活动详情页"
-                  font-size="1em"
-                  color="#409EFF"
-                  class="ele-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
-                >
-                </hm-uview-text>
               </view>
               <view class="ele-wrapper ele-wrapper-Buttonwan">
                 <hm-uview-button
@@ -356,9 +308,6 @@ export default {
         value: "",
       },
       "e3774afb-14a0-4b23-adda-2624414eb025": {
-        value: "",
-      },
-      "9a4984ec-97fb-465a-9b6b-8c645b5eab71": {
         value: "",
       },
       "6bdb201e-d452-4e15-b72f-70c229fbd237": {
@@ -462,26 +411,6 @@ export default {
   }
 }
 
-.ele-wrapper-ec8bdb37-8258-4daf-b83b-30ebc2a70f11 {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin: 15px 0px;
-}
-
-.ele-wrapper-3abd57d9-0713-43df-a2c8-ef7c647ae545 {
-  width: 25%;
-}
-
-.ele-wrapper-9a4984ec-97fb-465a-9b6b-8c645b5eab71 {
-  width: 70%;
-  /deep/.u-border-bottom {
-    background-color: rgb(240, 240, 240);
-    border-radius: 5px;
-    border: 1px;
-  }
-}
-
 .ele-wrapper-5f9b085f-9eca-4f97-8d98-e3895c913b99 {
   width: 80%;
   margin-top: 20px;
@@ -517,11 +446,6 @@ export default {
 .ele-wrapper-b6f23b24-c2be-4d98-9974-4d77dc23028b {
   width: 25%;
   vertical-align: top;
-}
-
-.ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451 {
-  width: 80%;
-  margin-top: 20px;
 }
 
 .ele-wrapper-Buttonwan {
