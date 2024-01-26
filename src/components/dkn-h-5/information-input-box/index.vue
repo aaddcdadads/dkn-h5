@@ -111,6 +111,7 @@ export default {
   border: 1px solid #999999;
   height: 45px;
   border-radius: 5px;
+   background-color: #fff;
 }
 
 .borderColor {
