@@ -7,6 +7,7 @@
         <hm-uview-bg-card
           width="100%"
           height="100%"
+          padding=""
           class="ele-c57e9abe-e655-4515-acc3-575489ca1e33"
         >
           <view
@@ -702,6 +703,7 @@ export default {
   width: 80%;
   margin-top: 30%;
   margin-bottom: 50px;
+  color: rgb(255, 255, 255);
   /deep/.ele-Buttonwan {
     background-color: rgb(245, 108, 108);
   }
