@@ -225,7 +225,6 @@ export default {
 }
 
 .ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe {
-  background: rgba(0, 0, 0, 0.16);
   border-radius: 608rpx;
   float: right;
   width: 160rpx;
