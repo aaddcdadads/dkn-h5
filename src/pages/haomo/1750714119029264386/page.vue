@@ -231,6 +231,7 @@ export default {
   text-align: center;
   padding-top: 8rpx;
   margin-right: 24rpx;
+  background: rgba(0, 0, 0, 0.16);
 }
 
 .ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2 {
@@ -256,7 +257,6 @@ export default {
 
 .ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39 {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .ele-wrapper-4f1cb12e-36cb-4378-b823-05b5d45354ab {
