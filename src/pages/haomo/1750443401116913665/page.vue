@@ -268,7 +268,7 @@
                         <hm-uview-field
                           value=""
                           label=""
-                          placeholder="活动名称"
+                          placeholder=" 核销截止"
                           label-width="0"
                           icon=""
                           right-icon=""
@@ -315,6 +315,15 @@
                         </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-6cb30155-1e93-4fb9-9071-e28214a28f94"
+                  >
+                    <hm-uview-field
+                      value=""
+                      class="ele-6cb30155-1e93-4fb9-9071-e28214a28f94"
+                    >
+                    </hm-uview-field>
                   </view>
                 </hm-uview-bg-card>
               </view>
@@ -367,6 +376,9 @@ export default {
     return {
       Buttonwan: {
         text: "核销",
+      },
+      "6cb30155-1e93-4fb9-9071-e28214a28f94": {
+        value: "",
       },
       "ea222d02-9ba2-44be-b94e-799272b9be37": {
         value: "",
@@ -640,6 +652,10 @@ export default {
   /deep/.uni-input-input {
     font-text: 13px;
   }
+}
+
+.ele-wrapper-6cb30155-1e93-4fb9-9071-e28214a28f94 {
+  width: 100%;
 }
 
 .ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451 {
