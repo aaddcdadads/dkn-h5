@@ -147,6 +147,18 @@
               </view>
             </hm-uview-bg-card>
           </view>
+          <view
+            class="ele-wrapper ele-wrapper-d699006e-fe43-4b8f-9729-1cd0bc37bd9f"
+          >
+            <hm-uview-bg-card>
+              <view
+                class="ele-wrapper ele-wrapper-1aaf7284-2fc1-4da2-9265-e885207e059f"
+              >
+                <hm-uview-button :type="'error'" text="确认支付">
+                </hm-uview-button>
+              </view>
+            </hm-uview-bg-card>
+          </view>
         </hm-uview-bg-card>
       </view>
     </view>
@@ -160,6 +172,7 @@ import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vu
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
+import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
   name: "PaymentOrder",
@@ -169,6 +182,7 @@ export default {
     HmUviewIcon,
     HmUviewImage,
     HmUviewRadio,
+    HmUviewButton,
   },
   options: { styleIsolation: "shared" },
   data() {
