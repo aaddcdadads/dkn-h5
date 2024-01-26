@@ -29,7 +29,18 @@
               <view
                 class="ele-wrapper ele-wrapper-27e83dd7-fae3-46d6-a6e0-4999eb7e187d"
               >
-                <hm-uview-radio value="" title=""> </hm-uview-radio>
+                <hm-uview-radio
+                  value=""
+                  title=""
+                  :list="[{ name: 'orange', disabled: false }]"
+                  :shape="'square'"
+                >
+                </hm-uview-radio>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-4ff122d6-05f8-4f96-bafc-fcfada7fd93f"
+              >
+                <radio> </radio>
               </view>
               <view
                 class="ele-wrapper ele-wrapper-45e52ea3-2cbb-4177-bef2-dfec30631a3b"
@@ -244,6 +255,12 @@ export default {
       },
       "27e83dd7-fae3-46d6-a6e0-4999eb7e187d": {
         value: "",
+        list: [
+          {
+            name: "orange",
+            disabled: false,
+          },
+        ],
       },
       "8b981cf2-ae14-4b8c-9f72-4cd6c41423a6": {
         value: "",
