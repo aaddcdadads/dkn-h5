@@ -270,58 +270,9 @@
                         </hm-uview-bg-card>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-785b238a-f724-409d-9297-30f00dff9cca"
+                        class="ele-wrapper ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609"
                       >
-                        <hm-uview-cell-list
-                          :list="[
-                            {
-                              key: 1,
-                              title:
-                                '活动时间 2023.11.01 00:00-2024.02.15 23:59',
-                              icon: 'calendar',
-                              required: false,
-                              borderTop: false,
-                              borderBottom: false,
-                              label: '',
-                              value: '',
-                            },
-                            {
-                              key: 2,
-                              title: '1.314km/5.20km/9.99km',
-                              icon: 'setting-fill',
-                              required: false,
-                              borderTop: false,
-                              borderBottom: false,
-                              label: '',
-                              value: '',
-                            },
-                            {
-                              key: 3,
-                              title: '如何玩转',
-                              icon: 'question-circle',
-                              required: false,
-                              borderTop: false,
-                              borderBottom: false,
-                              label: '',
-                              value: '',
-                            },
-                            {
-                              key: 4,
-                              title: '已报名4646人',
-                              icon: 'staff',
-                              required: false,
-                              borderTop: false,
-                              borderBottom: false,
-                              label: '',
-                              value: '',
-                            },
-                          ]"
-                          :arrow="true"
-                          :icon-style="{ color: '#fff' }"
-                          :title-style="{ color: '#fff' }"
-                          class="ele-785b238a-f724-409d-9297-30f00dff9cca"
-                        >
-                        </hm-uview-cell-list>
+                        <activity-list> </activity-list>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -586,7 +537,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
-import HmUviewCellList from "/@/components/built-in/uniapp-uview-vue3/HmUviewCellList.vue";
+import ActivityList from "/@/components/dkn-h-5/activity-list/index.vue";
 import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index.vue";
 import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
@@ -599,7 +550,7 @@ export default {
     HmUviewIcon,
     HmUviewImage,
     HmUviewText,
-    HmUviewCellList,
+    ActivityList,
     PrizeListComponent,
     HmCellList,
     HmUviewPopup,
@@ -750,22 +701,6 @@ export default {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 4px;
   margin-bottom: 24px;
-}
-
-.ele-wrapper-785b238a-f724-409d-9297-30f00dff9cca {
-  width: 100%;
-  /deep/.u-cell-item-box {
-    background: transparent !important;
-  }
-  /deep/.u-iconfont {
-    color: #fff !important;
-  }
-  /deep/.u-border-bottom:after {
-    border-bottom: 0px !important;
-  }
-  /deep/.uicon-arrow-right {
-    color: #ffffff99 !important;
-  }
 }
 
 .ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5 {
