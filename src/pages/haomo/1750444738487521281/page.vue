@@ -332,7 +332,7 @@ export default {
 
 .ele-wrapper-37d3df1b-3224-4fbd-901e-b2a290a0ccb9 {
   border: 1px solid #ffebcc;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .ele-wrapper-74c8c2c3-d387-4029-8b68-8275204c2ed5 {
