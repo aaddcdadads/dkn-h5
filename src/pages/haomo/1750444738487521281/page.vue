@@ -10,6 +10,7 @@
           border-radius=""
           box-shadow-v-shadow=""
           box-shadow-blur=""
+          background-color="#F2F2F2"
           class="ele-ff006dbd-abf0-427a-9076-d34d31098de7"
         >
           <view
