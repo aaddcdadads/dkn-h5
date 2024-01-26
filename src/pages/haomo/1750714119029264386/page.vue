@@ -466,11 +466,9 @@ export default {
       width: 100%;
     }
   }
-  /deep/.ele-wrapper-438459e7-727d-4437-a364-b6eb07613382 {
-    > uni-video {
-      width: 100% !important;
-      height: 500px !important;
-    }
+  /deep/.ele-438459e7-727d-4437-a364-b6eb07613382 {
+    width: 100% !important;
+    height: 500px !important;
   }
 }
 
