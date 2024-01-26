@@ -58,7 +58,7 @@ export default {
             checked: false,
             image: "https://hm-static-img.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A4logo.png",
             name: "活动名称",
-            description: "sdvsadknads时代看风使舵丰富的少年疯狂是否达到减肥的步伐简单方便的",
+            description: "时代看风使舵丰富的少年疯狂是否达到减肥的步伐简单方便的",
             price: "0.0",
             number: 0
           },
@@ -80,6 +80,7 @@ export default {
         this.data = val;
       },
       deep: true,
+      immediate:true,
     }
   },
   data() {
