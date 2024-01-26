@@ -95,6 +95,7 @@
                         <hm-uview-field
                           value=""
                           label=""
+                          placeholder="姓名/昵称"
                           label-width="0"
                           icon=""
                           right-icon=""
@@ -131,6 +132,7 @@
                         <hm-uview-field
                           value=""
                           label=""
+                          placeholder="报名手机号码"
                           label-width="0"
                           icon=""
                           right-icon=""
@@ -167,6 +169,7 @@
                         <hm-uview-field
                           value=""
                           label=""
+                          placeholder="区域/门店名称"
                           label-width="0"
                           icon=""
                           right-icon=""
@@ -203,6 +206,7 @@
                         <hm-uview-field
                           value=""
                           label=""
+                          placeholder="2024.02.10 15:46:39"
                           label-width="0"
                           icon=""
                           right-icon=""
@@ -240,7 +244,7 @@
                         class="ele-wrapper ele-wrapper-871e304d-82cd-4165-96f5-cd60704fac71"
                       >
                         <hm-uview-text
-                          text=" 姓名/昵称:"
+                          text="活动名称:"
                           font-size="13px"
                           class="ele-871e304d-82cd-4165-96f5-cd60704fac71"
                         >
@@ -252,6 +256,7 @@
                         <hm-uview-field
                           value=""
                           label=""
+                          placeholder="活动名称"
                           label-width="0"
                           icon=""
                           right-icon=""
@@ -276,7 +281,7 @@
                         class="ele-wrapper ele-wrapper-b6f23b24-c2be-4d98-9974-4d77dc23028b"
                       >
                         <hm-uview-text
-                          text=" 姓名/昵称:"
+                          text=" 核销截止:"
                           font-size="13px"
                           class="ele-b6f23b24-c2be-4d98-9974-4d77dc23028b"
                         >
@@ -288,6 +293,7 @@
                         <hm-uview-field
                           value=""
                           label=""
+                          placeholder="2024.02.18 23:59:59"
                           label-width="0"
                           icon=""
                           right-icon=""
@@ -312,7 +318,7 @@
                         class="ele-wrapper ele-wrapper-4affc789-e268-4263-ac4f-4e8e3fd30c9b"
                       >
                         <hm-uview-text
-                          text=" 姓名/昵称:"
+                          text="核销状态:"
                           font-size="13px"
                           class="ele-4affc789-e268-4263-ac4f-4e8e3fd30c9b"
                         >
@@ -324,6 +330,7 @@
                         <hm-uview-field
                           value=""
                           label=""
+                          placeholder="待核销/已核销"
                           label-width="0"
                           icon=""
                           right-icon=""
