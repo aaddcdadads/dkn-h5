@@ -289,7 +289,7 @@ export default {
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  padding-bottom: 70px;
+  padding-bottom: 170px;
   .ele-formbgCard {
     display: flex;
     flex-direction: column;
