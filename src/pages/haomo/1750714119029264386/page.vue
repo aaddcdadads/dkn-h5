@@ -17,36 +17,34 @@
               width="100%"
               height=""
               border-radius="0"
-              padding="0"
+              padding="12"
+              box-shadow-v-shadow="0"
+              box-shadow-blur="0"
               box-shadow-color="#00000000"
               class="ele-topBg"
             >
               <view
+                class="ele-wrapper ele-wrapper-0282e97e-ea2c-4315-bc0a-d39389246b17"
+              >
+                <u-switch :size="50" :modelValue="false"> </u-switch>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-21da4593-f584-4182-9c69-9e9024dab694"
+              >
+                <switch :type="'checkbox'"> </switch>
+              </view>
+              <view
                 class="ele-wrapper ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe"
               >
                 <hm-uview-icon
+                  name="question-circle"
                   color="#FFFFFF"
-                  size="24px"
+                  size="20px"
                   label="规则"
                   label-color="#FFFFFF"
                   class="ele-0abf4877-51bc-431d-8f1a-3c043bc451fe"
                 >
                 </hm-uview-icon>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-2c1dfe8c-9e2c-455e-855a-804561cd1c89"
-              >
-                <hm-icon :size="20"> </hm-icon>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-0a6ee755-e243-435b-8282-67789709dd73"
-              >
-                <icon> </icon>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-e9f3646c-2f2d-48f3-9ef8-b622bde1df67"
-              >
-                <uni-icons> </uni-icons>
               </view>
             </hm-uview-bg-card>
           </view>
@@ -60,19 +58,21 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
-import HmIcon from "/@/components/built-in/uniapp/HmIcon.vue";
 
 export default {
   name: "ActivityRegistrationPage",
   components: {
     HmUviewBgCard,
     HmUviewIcon,
-    HmIcon,
   },
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
-    return {};
+    return {
+      "0282e97e-ea2c-4315-bc0a-d39389246b17": {
+        modelValue: false,
+      },
+    };
   },
   watch: {},
   methods: {},
@@ -98,5 +98,6 @@ export default {
   width: 160rpx;
   text-align: center;
   padding-top: 8rpx;
+  margin-right: 24rpx;
 }
 </style>
