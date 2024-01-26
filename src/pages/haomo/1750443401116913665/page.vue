@@ -57,6 +57,7 @@
                   height="100%"
                   border-radius=""
                   :text-align="'center'"
+                  padding=""
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
                   class="ele-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
@@ -523,6 +524,9 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
+  /deep/.ele-wrapper {
+    margin-bottom: 0px;
+  }
 }
 
 .ele-wrapper-825c7b35-6136-42aa-8176-48014a210261 {
