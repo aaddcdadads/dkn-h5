@@ -145,6 +145,7 @@
                               text="Keep ·HelloKitty系列"
                               font-size="10px"
                               color="#FFFFFF"
+                              padding="0"
                               class="ele-ad039bb7-8f55-4ab8-98a8-54d1f73db365"
                             >
                             </hm-uview-text>
@@ -261,6 +262,5 @@ export default {
 
 .ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30 {
   float: left;
-  padding-top: 6px;
 }
 </style>
