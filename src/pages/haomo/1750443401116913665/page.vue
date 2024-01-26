@@ -90,24 +90,14 @@
                       class="ele-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f"
-                      >
-                        <hm-uview-text
-                          text=" 手机号码:"
-                          font-size="13px"
-                          padding=""
-                          class="ele-d166dfa0-a20d-4d76-a53e-7fffb0834c9f"
-                        >
-                        </hm-uview-text>
-                      </view>
-                      <view
                         class="ele-wrapper ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b"
                       >
                         <hm-uview-field
                           value=""
-                          label=""
+                          label=" 手机号码:"
                           placeholder="报名手机号码"
                           label-width="0"
+                          maxlength=""
                           icon=""
                           right-icon=""
                           class="ele-c5bfde68-4a10-445e-b173-b62b3921231b"
@@ -128,24 +118,13 @@
                       class="ele-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-37f7c953-8895-4c12-80d8-e4bbd27b84a2"
-                      >
-                        <hm-uview-text
-                          text=" 领奖门店:"
-                          font-size="13px"
-                          padding=""
-                          class="ele-37f7c953-8895-4c12-80d8-e4bbd27b84a2"
-                        >
-                        </hm-uview-text>
-                      </view>
-                      <view
                         class="ele-wrapper ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025"
                       >
                         <hm-uview-field
                           value=""
-                          label=""
+                          label=" 领奖门店:"
                           placeholder="区域/门店名称"
-                          label-width="0"
+                          label-width="150"
                           icon=""
                           right-icon=""
                           class="ele-e3774afb-14a0-4b23-adda-2624414eb025"
@@ -464,15 +443,8 @@ export default {
   margin: 15px 0px;
 }
 
-.ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f {
-  width: 30%;
-  vertical-align: top;
-  line-height: 45px;
-  text-align: center;
-}
-
 .ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b {
-  width: 69%;
+  width: 100%;
   height: 45px;
   /deep/.u-label-postion-left {
     position: absolute;
@@ -495,15 +467,8 @@ export default {
   margin: 15px 0px;
 }
 
-.ele-wrapper-37f7c953-8895-4c12-80d8-e4bbd27b84a2 {
-  width: 30%;
-  vertical-align: top;
-  line-height: 45px;
-  text-align: center;
-}
-
 .ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025 {
-  width: 69%;
+  width: 100%;
   height: 45px;
   /deep/.u-label-postion-left {
     position: absolute;
