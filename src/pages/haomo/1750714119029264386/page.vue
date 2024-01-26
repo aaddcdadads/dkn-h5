@@ -260,6 +260,40 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius="12"
+                      padding="12"
+                      background-color="#F797BD"
+                      class="ele-9bb5842b-b006-40fa-a5a0-9c71da20a550"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-5ffca98b-a826-46e6-a408-cf1165d243d2"
+                      >
+                        <hm-cell-list
+                          width="100%"
+                          height="60"
+                          :is-border="false"
+                          :list="[
+                            {
+                              id: '1',
+                              title: 'Keep 三丽鸥家族',
+                              descrip: '65484成员',
+                              date: '+ 加入',
+                              image:
+                                'https://img2.baidu.com/it/u=3886895525,3764775842&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+                            },
+                          ]"
+                          class="ele-5ffca98b-a826-46e6-a408-cf1165d243d2"
+                        >
+                        </hm-cell-list>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
                 </hm-uview-bg-card>
               </view>
             </hm-uview-bg-card>
@@ -277,6 +311,7 @@ import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vu
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import HmUviewCellList from "/@/components/built-in/uniapp-uview-vue3/HmUviewCellList.vue";
+import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
 
 export default {
   name: "ActivityRegistrationPage",
@@ -286,6 +321,7 @@ export default {
     HmUviewText,
     HmUviewImage,
     HmUviewCellList,
+    HmCellList,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -386,5 +422,14 @@ export default {
   /deep/.u-iconfont {
     color: #fff !important;
   }
+}
+
+.ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550 {
+  width: 100%;
+  margin-top: 24rpx;
+}
+
+.ele-wrapper-5ffca98b-a826-46e6-a408-cf1165d243d2 {
+  width: 100%;
 }
 </style>
