@@ -31,7 +31,8 @@
                 <hm-uview-text
                   text="订单编号："
                   font-size="13"
-                  color="#999999"
+                  color="#1B1B1B"
+                  bg-color="#FFFFFF00"
                   padding="10"
                   class="ele-26f6f652-919b-4425-90f1-4ef8ee193d38"
                 >
@@ -347,7 +348,7 @@ export default {
 }
 
 .ele-wrapper-26f6f652-919b-4425-90f1-4ef8ee193d38 {
-  width: 85%;
+  width: 100%;
   text-align: left;
 }
 
