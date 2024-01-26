@@ -470,12 +470,12 @@ export default {
 }
 
 .ele-wrapper-26f6f652-919b-4425-90f1-4ef8ee193d38 {
-  width: 80%;
+  width: 85%;
   text-align: left;
 }
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
-  width: 80%;
+  width: 85%;
 }
 
 .ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5 {
@@ -558,7 +558,7 @@ export default {
 }
 
 .ele-wrapper-5f9b085f-9eca-4f97-8d98-e3895c913b99 {
-  width: 80%;
+  width: 85%;
   margin-top: 20px;
 }
 
