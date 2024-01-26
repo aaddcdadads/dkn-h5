@@ -1,12 +1,12 @@
 <template>
-  <view v-for="item in list" class="goods">
+  <view v-for="(item, index) in data" class="goods" :key="index">
     <view class="change">
-      <checkbox :checked="item.checked" @click="onChecked" />
+      <checkbox :checked="item.checked" @click="onChecked(index)" />
     </view>
-    <view class="image"> 
-       <image :src="item.image" class="image"></image>
+    <view class="image">
+      <image :src="item.image" class="image"></image>
     </view>
-     
+
     <view class="texts">
       <text class="name">{{ item.name }}</text>
       <text class="description">说明:{{ item.description }}</text>
@@ -35,12 +35,29 @@ export default {
       }
     }
   },
+  watch: {
+    list: {
+      handler:function(val){
+        this.data = val;
+      },
+       deep:true,
+    }
+  },
+  data() {
+    return {
+      data: []
+    }
+  },
+  mounted() {
+    this.data = this.list;
+  },
   methods: {
-    onChecked() {
-
+    onChecked(e) {
+      this.$emit("checked");
+      this.data[e].checked = !this.data[e].checked;
+      console.log(this.data[e])
     }
   }
-
 }
 </script>
 
@@ -53,6 +70,7 @@ export default {
 .texts {
   display: flex;
   flex-direction: column;
+  /* width: 200px */
   flex: 1;
   height: 100%;
   margin-left: 8px;
@@ -64,6 +82,7 @@ export default {
 .price {
   font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC', sans-serif;
 }
+
 .name {
   font-weight: 650;
   font-style: normal;
@@ -76,12 +95,13 @@ export default {
   margin-top: 3px;
   height: 50px;
   width: 100%;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-	-webkit-box-orient: vertical; 
-	-webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
+
 .description,
 .price {
   font-size: 12px;
@@ -96,8 +116,8 @@ export default {
   border-radius: 6px;
   height: 108px;
   background-color: #ffffff;
+  margin: 20px;
   padding-right: 5px;
-  margin-bottom:8px;
 }
 
 .change {

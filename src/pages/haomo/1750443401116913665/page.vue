@@ -66,9 +66,10 @@
                       >
                         <hm-uview-field
                           value=""
-                          label=""
+                          label=" 姓名/昵称:"
                           placeholder="姓名/昵称"
-                          label-width="0"
+                          label-width="150"
+                          maxlength=""
                           icon=""
                           right-icon=""
                           class="ele-ea222d02-9ba2-44be-b94e-799272b9be37"
@@ -440,7 +441,7 @@ export default {
 }
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
-  width: 69%;
+  width: 100%;
   height: 45px;
   /deep/.u-label-postion-left {
     position: absolute;
