@@ -211,26 +211,29 @@
                           :list="[
                             {
                               key: 1,
-                              title: '左侧标题',
-                              icon: 'setting-fill',
-                              required: true,
+                              title:
+                                '活动时间 2023.11.01 00:00-2024.02.15 23:59',
+                              icon: 'calendar',
+                              required: false,
                               borderTop: false,
-                              borderBottom: true,
-                              label: '标题下方的描述信息',
+                              borderBottom: false,
+                              label: '',
                               value: '',
                             },
                             {
                               key: 2,
-                              title: '左侧标题',
+                              title: '1.314km/5.20km/9.99km',
                               icon: 'setting-fill',
                               required: false,
                               borderTop: false,
                               borderBottom: false,
                               label: '',
-                              value: '右侧内容',
+                              value: '',
                             },
                           ]"
                           :arrow="true"
+                          :icon-style="{ color: '#fff' }"
+                          :title-style="{ color: '#fff' }"
                           class="ele-785b238a-f724-409d-9297-30f00dff9cca"
                         >
                         </hm-uview-cell-list>
