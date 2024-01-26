@@ -13,6 +13,16 @@
           class="ele-formbgCard"
         >
           <view
+            class="ele-wrapper ele-wrapper-d2a1d00b-5944-454d-8524-4be2a05c3be8"
+          >
+            <hm-uview-text
+              text="奖品选择"
+              font-size="16px"
+              class="ele-d2a1d00b-5944-454d-8524-4be2a05c3be8"
+            >
+            </hm-uview-text>
+          </view>
+          <view
             class="ele-wrapper ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b"
           >
             <hm-uview-text
@@ -260,6 +270,12 @@ export default {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.ele-wrapper-d2a1d00b-5944-454d-8524-4be2a05c3be8 {
+  font-family: "PingFangSC-Medium", "PingFang SC Medium", "PingFang SC",
+    sans-serif;
+  font-weight: 500;
 }
 
 .ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b {
