@@ -511,11 +511,11 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
-  vertical-align: top;
 }
 
 .ele-wrapper-b6f23b24-c2be-4d98-9974-4d77dc23028b {
   width: 25%;
+  vertical-align: top;
 }
 
 .ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451 {
