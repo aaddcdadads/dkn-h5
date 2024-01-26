@@ -39,6 +39,47 @@
               </view>
             </hm-uview-bg-card>
           </view>
+          <view class="ele-wrapper ele-wrapper-imageBg">
+            <hm-uview-bg-card
+              ref="imageBg"
+              width="100%"
+              height=""
+              border-radius="0"
+              padding="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
+              class="ele-imageBg"
+            >
+              <view
+                class="ele-wrapper ele-wrapper-f91b4645-a50f-4879-857d-46279f610ca8"
+              >
+                <hm-uview-image
+                  width="100%"
+                  height="500px"
+                  class="ele-f91b4645-a50f-4879-857d-46279f610ca8"
+                >
+                </hm-uview-image>
+              </view>
+            </hm-uview-bg-card>
+          </view>
+          <view class="ele-wrapper ele-wrapper-videoBg">
+            <hm-uview-bg-card
+              ref="videoBg"
+              width="100%"
+              height=""
+              border-radius="0"
+              padding="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
+              class="ele-videoBg"
+            >
+              <view
+                class="ele-wrapper ele-wrapper-9b45add7-0d64-4ca1-a197-4da75185dc04"
+              >
+                <hm-video-list :num="1"> </hm-video-list>
+              </view>
+            </hm-uview-bg-card>
+          </view>
           <view
             class="ele-wrapper ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"
           >
@@ -359,8 +400,9 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
-import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
+import HmVideoList from "/@/components/built-in/uniapp/HmVideoList.vue";
+import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewCellList from "/@/components/built-in/uniapp-uview-vue3/HmUviewCellList.vue";
 import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
 
@@ -369,8 +411,9 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewIcon,
-    HmUviewText,
     HmUviewImage,
+    HmVideoList,
+    HmUviewText,
     HmUviewCellList,
     HmCellList,
   },
@@ -404,6 +447,18 @@ export default {
   padding-top: 8rpx;
   margin-right: 24rpx;
   background: rgba(0, 0, 0, 0.16);
+}
+
+.ele-wrapper-imageBg {
+  width: 100%;
+}
+
+.ele-wrapper-f91b4645-a50f-4879-857d-46279f610ca8 {
+  width: 100%;
+}
+
+.ele-wrapper-videoBg {
+  width: 100%;
 }
 
 .ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2 {
