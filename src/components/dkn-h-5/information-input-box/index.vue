@@ -110,7 +110,6 @@ export default {
   align-items: center;
   border: 1px solid #999999;
   height: 45px;
-  margin: 20px;
   border-radius: 5px;
 }
 
