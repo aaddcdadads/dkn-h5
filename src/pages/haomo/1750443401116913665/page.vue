@@ -501,9 +501,16 @@ export default {
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
   width: 69%;
+  height: 45px;
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
+    height: 45px;
   }
 }
 
@@ -523,10 +530,16 @@ export default {
 
 .ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b {
   width: 69%;
+  height: 45px;
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
-    border: 1px;
+    height: 45px;
   }
 }
 
@@ -546,10 +559,16 @@ export default {
 
 .ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025 {
   width: 69%;
+  height: 45px;
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
-    border: 1px;
+    height: 45px;
   }
 }
 
@@ -569,10 +588,16 @@ export default {
 
 .ele-wrapper-9a4984ec-97fb-465a-9b6b-8c645b5eab71 {
   width: 69%;
+  height: 45px;
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
-    border: 1px;
+    height: 45px;
   }
 }
 
@@ -597,9 +622,16 @@ export default {
 
 .ele-wrapper-6bdb201e-d452-4e15-b72f-70c229fbd237 {
   width: 69%;
+  height: 45px;
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
+    height: 45px;
   }
 }
 
@@ -619,9 +651,16 @@ export default {
 
 .ele-wrapper-8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea {
   width: 69%;
+  height: 45px;
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
+    height: 45px;
   }
 }
 
@@ -641,9 +680,16 @@ export default {
 
 .ele-wrapper-95ec508c-0713-4dfb-b843-6e5c683fd4f6 {
   width: 69%;
+  height: 45px;
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
+    height: 45px;
   }
 }
 
