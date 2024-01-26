@@ -33,7 +33,7 @@ export default {
      */
     value: {
       type: String,
-      default: "1212"
+      default: ""
     },
     /**
      * 右侧图标
