@@ -37,10 +37,7 @@
               <view
                 class="ele-wrapper ele-wrapper-a329af57-d60b-43c4-bcb7-d84cbd118a80"
               >
-                <event-registration-card
-                  class="ele-a329af57-d60b-43c4-bcb7-d84cbd118a80"
-                >
-                </event-registration-card>
+                <event-registration-card> </event-registration-card>
               </view>
             </hm-uview-bg-card>
           </view>
@@ -271,12 +268,6 @@ export default {
 
 .ele-wrapper-74c8c2c3-d387-4029-8b68-8275204c2ed5 {
   width: 100%;
-}
-
-.ele-wrapper-a329af57-d60b-43c4-bcb7-d84cbd118a80 {
-  .ele-wrapper-d2a1d00b-5944-454d-8524-4be2a05c3be8 {
-    width: 100%;
-  }
 }
 
 .ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b {
