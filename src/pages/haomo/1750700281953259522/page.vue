@@ -420,6 +420,7 @@ export default {
 
 .ele-wrapper-37f7c953-8895-4c12-80d8-e4bbd27b84a2 {
   width: 32%;
+  vertical-align: top;
 }
 
 .ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025 {
@@ -451,6 +452,7 @@ export default {
 
 .ele-wrapper-871e304d-82cd-4165-96f5-cd60704fac71 {
   width: 32%;
+  vertical-align: top;
 }
 
 .ele-wrapper-6bdb201e-d452-4e15-b72f-70c229fbd237 {
