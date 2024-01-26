@@ -121,7 +121,7 @@
                     class="ele-wrapper ele-wrapper-d65d48b8-e4a0-4bbf-bf01-446a7587fd7b"
                   >
                     <hm-uview-text
-                      text="报名费用"
+                      text="报名费用:"
                       font-size="14px"
                       color="#409EFF"
                     >
