@@ -370,6 +370,14 @@
                             >
                             </hm-uview-text>
                           </view>
+                          <view
+                            class="ele-wrapper ele-wrapper-a2b2b5e9-de26-4cb6-bfdf-60722738d013"
+                          >
+                            <prize-list-component
+                              class="ele-a2b2b5e9-de26-4cb6-bfdf-60722738d013"
+                            >
+                            </prize-list-component>
+                          </view>
                         </hm-uview-bg-card>
                       </view>
                     </hm-uview-bg-card>
@@ -578,6 +586,7 @@ import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vu
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewCellList from "/@/components/built-in/uniapp-uview-vue3/HmUviewCellList.vue";
+import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index.vue";
 import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
@@ -590,6 +599,7 @@ export default {
     HmUviewImage,
     HmUviewText,
     HmUviewCellList,
+    PrizeListComponent,
     HmCellList,
     HmUviewPopup,
     HmUviewButton,
@@ -755,6 +765,10 @@ export default {
 
 .ele-wrapper-b5776b9e-5bb1-40f5-8854-f2b4dc696a41 {
   float: right;
+}
+
+.ele-wrapper-a2b2b5e9-de26-4cb6-bfdf-60722738d013 {
+  width: 100%;
 }
 
 .ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550 {
