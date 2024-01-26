@@ -88,7 +88,7 @@
                         <hm-uview-text
                           text=" 姓名/昵称:"
                           font-size="13px"
-                          padding="16"
+                          padding=""
                           class="ele-788913aa-482e-4c28-855d-fdb18b0c1429"
                         >
                         </hm-uview-text>
@@ -372,6 +372,7 @@ export default {
   width: 32%;
   vertical-align: top;
   height: 45px;
+  padding: 16px 0px;
 }
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
