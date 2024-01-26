@@ -22,7 +22,7 @@
         <span>跑步</span>
       </view>
       <view class="content1"
-        >{{speed}}</view
+        >{{speed1}}</view
       >
       <view class="imgright"
         ><img
@@ -78,7 +78,7 @@ export default {
     /**
      * 速度
      */
-    speed: {
+    speed1: {
       type: String,
       default:"1.314km/5.20km/9.99km",
     },
