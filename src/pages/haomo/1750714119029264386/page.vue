@@ -272,7 +272,8 @@
                       <view
                         class="ele-wrapper ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609"
                       >
-                        <activity-list> </activity-list>
+                        <activity-list speed="1.314km5.20km9.99km">
+                        </activity-list>
                       </view>
                     </hm-uview-bg-card>
                   </view>
