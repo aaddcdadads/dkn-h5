@@ -34,6 +34,11 @@
               background-color="#F0F2F6"
               class="ele-74c8c2c3-d387-4029-8b68-8275204c2ed5"
             >
+              <view
+                class="ele-wrapper ele-wrapper-a329af57-d60b-43c4-bcb7-d84cbd118a80"
+              >
+                <event-registration-card> </event-registration-card>
+              </view>
             </hm-uview-bg-card>
           </view>
           <view
@@ -180,6 +185,7 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import EventRegistrationCard from "/@/components/dkn-h-5/event-registration-card/index.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import StoreSelection from "/@/components/dkn-h-5/store-selection/index.vue";
@@ -190,6 +196,7 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewText,
+    EventRegistrationCard,
     InformationInputBox,
     HmUviewPopup,
     StoreSelection,
