@@ -80,23 +80,6 @@
                       background-color="#F797BD"
                       class="ele-c2db3fcd-05d0-472b-8e18-163c243cc425"
                     >
-                      <view
-                        class="ele-wrapper ele-wrapper-6ba2b397-6caf-44b2-8d16-4ad0c0eba375"
-                      >
-                        <hm-uview-bg-card
-                          width="100%"
-                          height=""
-                          border-radius="0"
-                          :text-align="'right'"
-                          padding="0"
-                          box-shadow-v-shadow="0"
-                          box-shadow-blur="0"
-                          box-shadow-color="#00000000"
-                          background-color="#FFFFFF00"
-                          class="ele-6ba2b397-6caf-44b2-8d16-4ad0c0eba375"
-                        >
-                        </hm-uview-bg-card>
-                      </view>
                     </hm-uview-bg-card>
                   </view>
                 </hm-uview-bg-card>
@@ -168,10 +151,6 @@ export default {
 }
 
 .ele-wrapper-c2db3fcd-05d0-472b-8e18-163c243cc425 {
-  width: 100%;
-}
-
-.ele-wrapper-6ba2b397-6caf-44b2-8d16-4ad0c0eba375 {
   width: 100%;
 }
 </style>
