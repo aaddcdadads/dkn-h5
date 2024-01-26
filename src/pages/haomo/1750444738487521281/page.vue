@@ -85,6 +85,7 @@
                   value=""
                   :show-icon="true"
                   placeholder="* 请选择领奖门店"
+                  @rightIcon="onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon"
                   class="ele-71e123e5-88a9-44c5-b029-f89fdaffa0d3"
                 >
                 </information-input-box>
@@ -226,7 +227,11 @@ export default {
     };
   },
   watch: {},
-  methods: {},
+  methods: {
+    onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon() {
+      this.shopPop.show = true;
+    },
+  },
 };
 </script>
 
