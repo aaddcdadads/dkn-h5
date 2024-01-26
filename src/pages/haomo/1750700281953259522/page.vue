@@ -273,7 +273,7 @@
                   >
                     <hm-uview-bg-card
                       width="100%"
-                      height="40"
+                      height="100%"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -508,6 +508,7 @@ export default {
 
 .ele-wrapper-3e27eb74-08c4-466c-97cb-eb8e19b2cc29 {
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   margin: 15px 0px;
