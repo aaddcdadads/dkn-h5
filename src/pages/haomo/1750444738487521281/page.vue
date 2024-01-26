@@ -38,9 +38,9 @@
                 </hm-uview-radio>
               </view>
               <view
-                class="ele-wrapper ele-wrapper-4ff122d6-05f8-4f96-bafc-fcfada7fd93f"
+                class="ele-wrapper ele-wrapper-b1062778-4679-47c7-b0d1-440d9ddf797e"
               >
-                <radio> </radio>
+                <checkbox> </checkbox>
               </view>
               <view
                 class="ele-wrapper ele-wrapper-45e52ea3-2cbb-4177-bef2-dfec30631a3b"
