@@ -38,6 +38,24 @@
                 class="ele-wrapper ele-wrapper-37e71248-3add-4043-9e2f-8f3c1b71920b"
               >
                 <event-registration-card
+                  :list="[
+                    {
+                      checked: false,
+                      image:
+                        'https://hm-static-img.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A4logo.png',
+                      name: '活动名称',
+                      description: '',
+                      price: '0.0',
+                    },
+                    {
+                      checked: false,
+                      image:
+                        'https://hm-static-img.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A4logo.png',
+                      name: '活动名称',
+                      description: '',
+                      price: '0.0',
+                    },
+                  ]"
                   class="ele-37e71248-3add-4043-9e2f-8f3c1b71920b"
                 >
                 </event-registration-card>
