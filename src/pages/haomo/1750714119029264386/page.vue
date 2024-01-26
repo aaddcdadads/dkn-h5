@@ -22,6 +22,7 @@
               box-shadow-v-shadow="0"
               box-shadow-blur="0"
               box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
               class="ele-topBg"
             >
               <view
@@ -435,6 +436,8 @@ export default {
 
 .ele-wrapper-topBg {
   width: 100%;
+  display: fixed;
+  top: 24px;
 }
 
 .ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe {
