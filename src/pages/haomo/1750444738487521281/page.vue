@@ -199,40 +199,6 @@
               background-color="#F2F2F2"
               class="ele-baoming"
             >
-              <view class="ele-wrapper ele-wrapper-priceCard">
-                <hm-uview-bg-card
-                  ref="priceCard"
-                  width="100%"
-                  height="100%"
-                  border-radius=""
-                  padding=""
-                  box-shadow-v-shadow=""
-                  box-shadow-blur=""
-                  background-color="#F0F2F6"
-                  class="ele-priceCard"
-                >
-                  <view
-                    class="ele-wrapper ele-wrapper-d65d48b8-e4a0-4bbf-bf01-446a7587fd7b"
-                  >
-                    <hm-uview-text
-                      text="报名费用:"
-                      font-size="14px"
-                      color="#409EFF"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-09650009-608e-4d01-83af-eedcb5a2c7ad"
-                  >
-                    <hm-uview-text
-                      text="¥29.00"
-                      font-size="14px"
-                      color="#409EFF"
-                    >
-                    </hm-uview-text>
-                  </view>
-                </hm-uview-bg-card>
-              </view>
               <view
                 class="ele-wrapper ele-wrapper-acf99afa-7e7b-42dc-a52d-aa67ffc5af5b"
               >
@@ -399,19 +365,12 @@ export default {
 
 .ele-wrapper-baoming {
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 40px;
   .ele-baoming {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-}
-
-.ele-wrapper-priceCard {
-  width: 100%;
-  .ele-priceCard {
-    text-align: center;
   }
 }
 
