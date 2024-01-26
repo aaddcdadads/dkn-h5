@@ -54,6 +54,7 @@
               >
                 <information-input-box
                   value=""
+                  :show-code="true"
                   class="ele-5102357a-cd29-4bb3-9a1f-ab709e15c3a8"
                 >
                 </information-input-box>
