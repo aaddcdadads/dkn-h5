@@ -134,6 +134,12 @@ export default {
   text-align: left;
   line-height: 24px;
   margin-top: 3px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; 
+  width: 100%;
 }
 
 .description {
