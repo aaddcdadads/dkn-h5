@@ -48,6 +48,7 @@
             <hm-uview-bg-card
               width="100%"
               height="100%"
+              border-radius=""
               :text-align="'center'"
               box-shadow-h-shadow=""
               box-shadow-v-shadow=""
