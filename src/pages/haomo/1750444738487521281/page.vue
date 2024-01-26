@@ -9,7 +9,7 @@
           border-radius=""
           box-shadow-v-shadow=""
           box-shadow-blur=""
-          background-color="#EFF2F5"
+          background-color="#F0F2F6"
           class="ele-formbgCard"
         >
           <view
@@ -31,7 +31,7 @@
               border-radius=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
-              background-color="#EFF2F5"
+              background-color="#F0F2F6"
               class="ele-74c8c2c3-d387-4029-8b68-8275204c2ed5"
             >
               <view
@@ -66,7 +66,7 @@
               box-shadow-v-shadow=""
               box-shadow-blur=""
               box-shadow-spread=""
-              background-color="#EFF2F5"
+              background-color="#F0F2F6"
               class="ele-7927eb64-d6cf-4dda-8938-a15bb62187d2"
             >
               <view
@@ -174,7 +174,7 @@
                   padding=""
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
-                  background-color="#EFF2F5"
+                  background-color="#F0F2F6"
                   class="ele-priceCard"
                 >
                   <view
