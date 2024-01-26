@@ -629,6 +629,7 @@ export default {
 .ele-wrapper-outsideBg {
   width: 100%;
   position: relative;
+  padding-bottom: 120rpx;
 }
 
 .ele-wrapper-topBg {
