@@ -430,11 +430,6 @@
                     >
                     </hm-uview-button>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-7479520e-b10d-484b-be29-c17821ca95d4"
-                  >
-                    <hm-button :type="'success'"> </hm-button>
-                  </view>
                 </hm-uview-bg-card>
               </view>
               <view class="ele-wrapper ele-wrapper-regularPopup">
@@ -583,7 +578,6 @@ import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vu
 import HmUviewCellList from "/@/components/built-in/uniapp-uview-vue3/HmUviewCellList.vue";
 import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
-import HmButton from "/@/components/built-in/uniapp/HmButton.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 
 export default {
@@ -596,7 +590,6 @@ export default {
     HmUviewCellList,
     HmCellList,
     HmUviewButton,
-    HmButton,
     HmUviewPopup,
   },
   options: { styleIsolation: "shared" },
@@ -800,6 +793,7 @@ export default {
     ele-wrapper-registrationButton {
     width: 100% !important;
   }
+  width: 100%;
 }
 
 .ele-wrapper-regularPopup {
