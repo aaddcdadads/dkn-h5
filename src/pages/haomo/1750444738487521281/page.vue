@@ -213,6 +213,7 @@ export default {
 .ele-wrapper-formbgCard {
   width: 100%;
   height: 100vh;
+  position: relative;
   .ele-formbgCard {
     display: flex;
     flex-direction: column;
@@ -246,6 +247,8 @@ export default {
 
 .ele-wrapper-baoming {
   width: 100%;
+  position: absolute;
+  bottom: 40px;
 }
 
 .ele-wrapper-priceCard {
