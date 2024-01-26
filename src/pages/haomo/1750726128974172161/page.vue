@@ -117,6 +117,7 @@
                   border-radius=""
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
+                  class="ele-zhifubaopay"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-a2688ccd-ff91-4fa6-a3fc-00dab047ad02"
@@ -232,5 +233,11 @@ export default {
 .ele-wrapper-93b24983-ec82-4085-8b41-01add35ab335 {
   width: 100%;
   height: 80px;
+}
+
+.ele-wrapper-zhifubaopay {
+  .hm-bg-card {
+    display: flex;
+  }
 }
 </style>
