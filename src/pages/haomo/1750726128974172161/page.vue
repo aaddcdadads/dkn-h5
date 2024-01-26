@@ -15,7 +15,13 @@
           <view
             class="ele-wrapper ele-wrapper-7e13b692-9cc2-4862-bad0-cf3303afbbaa"
           >
-            <hm-uview-bg-card>
+            <hm-uview-bg-card
+              width="100%"
+              height="100%"
+              border-radius=""
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+            >
               <view
                 class="ele-wrapper ele-wrapper-d5bbc53a-e10d-447f-ad1c-d820e1888444"
               >
