@@ -10,7 +10,7 @@
       <text class="name">{{ item.name }}</text>
       <text class="description">说明:{{ item.description }}</text>
       <view class="activity">
-        <text class="price">报名费：{{ item.price }}元</text>
+        <text class="price">报名费: {{ item.price }}元</text>
         <view class="numberBox">
           <view class="reduce" @click="valChange(-1, index)">
             <svg t="1706272970101" v-if="!item.number" class="icon" viewBox="0 0 1024 1024" version="1.1"
