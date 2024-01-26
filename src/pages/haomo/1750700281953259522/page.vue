@@ -22,7 +22,12 @@
               <view
                 class="ele-wrapper ele-wrapper-b543d8d2-d56c-4de5-8cd7-27e80ca20850"
               >
-                <hm-uview-text text="<" font-size="16px" color="#409EFF">
+                <hm-uview-text
+                  text="<"
+                  font-size="16px"
+                  color="#409EFF"
+                  class="ele-b543d8d2-d56c-4de5-8cd7-27e80ca20850"
+                >
                 </hm-uview-text>
               </view>
               <view
@@ -339,6 +344,10 @@ export default {
 .ele-wrapper-b70290a2-501d-46d6-a44e-63d06e016496 {
   width: 100%;
   height: 100%;
+}
+
+.ele-wrapper-b543d8d2-d56c-4de5-8cd7-27e80ca20850 {
+  font-weight: 600;
 }
 
 .ele-wrapper-51e40d97-b1a2-45a7-b1b6-7d182e2d5e68 {
