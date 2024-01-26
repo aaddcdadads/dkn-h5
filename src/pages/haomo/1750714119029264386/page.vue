@@ -407,12 +407,17 @@
                   <view
                     class="ele-wrapper ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2"
                   >
-                    <hm-uview-text> </hm-uview-text>
+                    <hm-uview-text
+                      text="活动玩法"
+                      font-size="22px"
+                      class="ele-dc91ed40-34d2-458d-a7fb-c67671b736c2"
+                    >
+                    </hm-uview-text>
                   </view>
                   <view
                     class="ele-wrapper ele-wrapper-82757320-2908-4ea4-a4a6-d6a672339dab"
                   >
-                    <hm-uview-text> </hm-uview-text>
+                    <hm-uview-text text="玩法介绍"> </hm-uview-text>
                   </view>
                 </hm-uview-popup>
               </view>
@@ -619,5 +624,9 @@ export default {
   /deep/.right_bg {
     padding-top: 24px;
   }
+}
+
+.ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2 {
+  width: 100%;
 }
 </style>
