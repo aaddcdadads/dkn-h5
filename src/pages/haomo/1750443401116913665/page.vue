@@ -433,7 +433,7 @@ export default {
   methods: {
     onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
       title: "图片编辑";
-      src: "https://hm-static-img.oss-cn-beijing.aliyuncs.com/L1VzZXJzL.png";
+      href: "https://hm-static-img.oss-cn-beijing.aliyuncs.com/L1VzZXJzL.png";
     },
   },
 };
