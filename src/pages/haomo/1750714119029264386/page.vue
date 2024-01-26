@@ -731,7 +731,7 @@ export default {
 
 .ele-wrapper-8c006472-eabd-41ce-9098-c1e883253807 {
   /deep/.uni-scroll-view-content {
-    padding: 0 4% !impoprtant;
+    margin-left: 4%;
     width: 92% !important;
   }
 }
