@@ -369,7 +369,7 @@ export default {
 }
 
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
-  width: 32%;
+  width: 30%;
   vertical-align: top;
   height: 45px;
   padding: 16px 0px;
