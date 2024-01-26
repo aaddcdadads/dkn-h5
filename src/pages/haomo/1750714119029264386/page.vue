@@ -838,12 +838,15 @@ export default {
 
 .ele-wrapper-3a2803a6-a38e-495d-8113-b97276842fbb {
   width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 
 .ele-wrapper-registrationButton {
   /deep/.ele-wrapper {
     > .ele-wrapper-registrationButton {
       width: 100% !important;
+      border-radius: 0px !important;
     }
   }
   width: 100%;
