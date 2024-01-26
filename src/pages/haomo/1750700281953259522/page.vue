@@ -88,7 +88,7 @@
                         <hm-uview-text
                           text=" 姓名/昵称:"
                           font-size="13px"
-                          padding="10"
+                          padding="16"
                           class="ele-788913aa-482e-4c28-855d-fdb18b0c1429"
                         >
                         </hm-uview-text>
@@ -126,6 +126,7 @@
                         <hm-uview-text
                           text=" 手机号码:"
                           font-size="13px"
+                          padding="16"
                           class="ele-d166dfa0-a20d-4d76-a53e-7fffb0834c9f"
                         >
                         </hm-uview-text>
@@ -163,6 +164,7 @@
                         <hm-uview-text
                           text=" 领奖门店:"
                           font-size="13px"
+                          padding="16"
                           class="ele-37f7c953-8895-4c12-80d8-e4bbd27b84a2"
                         >
                         </hm-uview-text>
@@ -213,6 +215,7 @@
                         <hm-uview-text
                           text="活动名称:"
                           font-size="13px"
+                          padding="16"
                           class="ele-871e304d-82cd-4165-96f5-cd60704fac71"
                         >
                         </hm-uview-text>
@@ -250,6 +253,7 @@
                         <hm-uview-text
                           text="活动奖品:"
                           font-size="13px"
+                          padding="16"
                           class="ele-b6f23b24-c2be-4d98-9974-4d77dc23028b"
                         >
                         </hm-uview-text>
@@ -395,6 +399,7 @@ export default {
 .ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f {
   width: 32%;
   vertical-align: top;
+  height: 45px;
 }
 
 .ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b {
@@ -422,6 +427,7 @@ export default {
 .ele-wrapper-37f7c953-8895-4c12-80d8-e4bbd27b84a2 {
   width: 32%;
   vertical-align: top;
+  height: 45px;
 }
 
 .ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025 {
@@ -454,6 +460,7 @@ export default {
 .ele-wrapper-871e304d-82cd-4165-96f5-cd60704fac71 {
   width: 32%;
   vertical-align: top;
+  height: 45px;
 }
 
 .ele-wrapper-6bdb201e-d452-4e15-b72f-70c229fbd237 {
@@ -481,6 +488,7 @@ export default {
 .ele-wrapper-b6f23b24-c2be-4d98-9974-4d77dc23028b {
   width: 32%;
   vertical-align: top;
+  height: 45px;
 }
 
 .ele-wrapper-Buttonwan {
