@@ -38,6 +38,16 @@
               >
                 <hm-icon :size="20"> </hm-icon>
               </view>
+              <view
+                class="ele-wrapper ele-wrapper-0a6ee755-e243-435b-8282-67789709dd73"
+              >
+                <icon> </icon>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-e9f3646c-2f2d-48f3-9ef8-b622bde1df67"
+              >
+                <uni-icons> </uni-icons>
+              </view>
             </hm-uview-bg-card>
           </view>
         </hm-uview-bg-card>
