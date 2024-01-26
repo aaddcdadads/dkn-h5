@@ -789,7 +789,7 @@ export default {
 
 .ele-wrapper-registrationButton {
   /deep/.ele-wrapper-registrationButton {
-    width: 100%;
+    width: 100% !important;
     border-radius: 0px !important;
   }
 }
