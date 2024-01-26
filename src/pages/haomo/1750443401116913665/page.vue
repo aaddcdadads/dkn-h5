@@ -323,7 +323,7 @@
                       value=""
                       label=" 姓名/昵称:"
                       placeholder=" 姓名/昵称"
-                      label-width="70"
+                      label-width="150"
                       maxlength=""
                       icon=""
                       right-icon=""
