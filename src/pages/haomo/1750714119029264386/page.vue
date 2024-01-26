@@ -22,19 +22,21 @@
               class="ele-topBg"
             >
               <view
-                class="ele-wrapper ele-wrapper-85bcbbb6-3c95-4274-ba0b-9936996ea007"
+                class="ele-wrapper ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe"
               >
-                <hm-uview-switch> </hm-uview-switch>
+                <hm-uview-icon
+                  color="#FFFFFF"
+                  size="24px"
+                  label="规则"
+                  label-color="#FFFFFF"
+                  class="ele-0abf4877-51bc-431d-8f1a-3c043bc451fe"
+                >
+                </hm-uview-icon>
               </view>
               <view
-                class="ele-wrapper ele-wrapper-b2850fcb-943d-4aa4-8434-c88871b74e31"
+                class="ele-wrapper ele-wrapper-2c1dfe8c-9e2c-455e-855a-804561cd1c89"
               >
-                <hm-switch> </hm-switch>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-6bdaccb8-98b3-4ff2-9f34-e18ef1a89397"
-              >
-                <u-switch :size="50" :modelValue="false"> </u-switch>
+                <hm-icon :size="20"> </hm-icon>
               </view>
             </hm-uview-bg-card>
           </view>
@@ -47,24 +49,20 @@
 <script>
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
-import HmUviewSwitch from "/@/components/built-in/uniapp-uview-vue3/HmUviewSwitch.vue";
-import HmSwitch from "/@/components/built-in/uniapp/HmSwitch.vue";
+import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
+import HmIcon from "/@/components/built-in/uniapp/HmIcon.vue";
 
 export default {
   name: "ActivityRegistrationPage",
   components: {
     HmUviewBgCard,
-    HmUviewSwitch,
-    HmSwitch,
+    HmUviewIcon,
+    HmIcon,
   },
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
-    return {
-      "6bdaccb8-98b3-4ff2-9f34-e18ef1a89397": {
-        modelValue: false,
-      },
-    };
+    return {};
   },
   watch: {},
   methods: {},
@@ -81,5 +79,14 @@ export default {
 
 .ele-wrapper-topBg {
   width: 100%;
+}
+
+.ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe {
+  background: rgba(0, 0, 0, 0.16);
+  border-radius: 608rpx;
+  float: right;
+  width: 160rpx;
+  text-align: center;
+  padding-top: 8rpx;
 }
 </style>
