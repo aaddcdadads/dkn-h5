@@ -362,9 +362,6 @@ export default {
   margin: 15px 0px;
   display: flex;
   align-items: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
