@@ -147,9 +147,8 @@ export default {
 </script>
 <style lang="less" scoped>
 .container {
-  background: #f797bd;
+  background: transparent;
   width: 100%;
-  height: 100vh;
 }
 .div {
   position: relative;
