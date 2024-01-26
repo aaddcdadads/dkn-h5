@@ -22,7 +22,7 @@
               <view
                 class="ele-wrapper ele-wrapper-b543d8d2-d56c-4de5-8cd7-27e80ca20850"
               >
-                <hm-uview-text item="<" font-size="13px"> </hm-uview-text>
+                <hm-uview-text text="<" font-size="13px"> </hm-uview-text>
               </view>
               <view
                 class="ele-wrapper ele-wrapper-51e40d97-b1a2-45a7-b1b6-7d182e2d5e68"
