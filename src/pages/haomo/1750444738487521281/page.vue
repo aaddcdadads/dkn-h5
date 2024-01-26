@@ -15,7 +15,11 @@
           <view
             class="ele-wrapper ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b"
           >
-            <hm-uview-text text="资料填写" :text-style="{ fontWeight: 700 }">
+            <hm-uview-text
+              text="资料填写"
+              color="#409EFF"
+              :text-style="{ fontWeight: 700 }"
+            >
             </hm-uview-text>
           </view>
           <view
