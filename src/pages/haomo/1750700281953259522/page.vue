@@ -386,9 +386,9 @@ export default {
 
 .ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9 {
   width: 100%;
+  margin: 15px 0px;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
 }
 
 .ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f {
@@ -444,9 +444,9 @@ export default {
 
 .ele-wrapper-14c7e1a3-d5fb-4aae-baba-937bb025e4f4 {
   width: 100%;
+  margin: 15px 0px;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
 }
 
 .ele-wrapper-871e304d-82cd-4165-96f5-cd60704fac71 {
