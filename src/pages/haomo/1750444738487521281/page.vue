@@ -34,10 +34,6 @@
                 class="ele-wrapper ele-wrapper-8b981cf2-ae14-4b8c-9f72-4cd6c41423a6"
               >
                 <information-input-box
-                  :left-src="[
-                    '&quot;https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png&quot;',
-                    '&quot;https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang1.png&quot;',
-                  ]"
                   value=""
                   class="ele-8b981cf2-ae14-4b8c-9f72-4cd6c41423a6"
                 >
@@ -69,10 +65,6 @@ export default {
     let self = this;
     return {
       "8b981cf2-ae14-4b8c-9f72-4cd6c41423a6": {
-        leftSrc: [
-          '"https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png"',
-          '"https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang1.png"',
-        ],
         value: "",
       },
     };
