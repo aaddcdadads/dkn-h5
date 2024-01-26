@@ -22,21 +22,26 @@
               box-shadow-v-shadow=""
               box-shadow-blur=""
               box-shadow-color="#F0F0F000"
-              background-color="#FFFFFF"
+              background-color="#F0F0F0"
               class="ele-a4540298-8d72-4b6c-a4e3-fab8f56c0be2"
             >
               <view
-                class="ele-wrapper ele-wrapper-26f6f652-919b-4425-90f1-4ef8ee193d38"
+                class="ele-wrapper ele-wrapper-32e2869f-33e4-4a30-a8e3-3b0d31222093"
               >
-                <hm-uview-text
-                  text="订单编号："
-                  font-size="13"
-                  color="#1B1B1B"
-                  bg-color="#FFFFFF00"
-                  padding="10"
-                  class="ele-26f6f652-919b-4425-90f1-4ef8ee193d38"
+                <hm-uview-bg-card
+                  width="100%"
+                  height="100%"
+                  box-shadow-v-shadow=""
+                  box-shadow-blur=""
+                  class="ele-32e2869f-33e4-4a30-a8e3-3b0d31222093"
                 >
-                </hm-uview-text>
+                  <view
+                    class="ele-wrapper ele-wrapper-bf22f4a1-bf87-45db-bf48-3cb458614952"
+                  >
+                    <hm-uview-text text="订单编号：" font-size="13px">
+                    </hm-uview-text>
+                  </view>
+                </hm-uview-bg-card>
               </view>
               <view
                 class="ele-wrapper ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
@@ -347,9 +352,9 @@ export default {
   height: 100%;
 }
 
-.ele-wrapper-26f6f652-919b-4425-90f1-4ef8ee193d38 {
+.ele-wrapper-32e2869f-33e4-4a30-a8e3-3b0d31222093 {
   width: 100%;
-  text-align: left;
+  margin-bottom: 10px;
 }
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
