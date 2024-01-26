@@ -67,13 +67,13 @@
                   <view
                     class="ele-wrapper ele-wrapper-556e4dcf-8e40-4c3c-bd48-b3573cab3f88"
                   >
-                    <hm-uview-text text="活动项目名称" font-size="14px">
+                    <hm-uview-text text="说明" font-size="14px">
                     </hm-uview-text>
                   </view>
                   <view
                     class="ele-wrapper ele-wrapper-a6525271-6699-4091-b104-ea6f7b22e1f5"
                   >
-                    <hm-uview-text text="活动项目名称" font-size="14px">
+                    <hm-uview-text text="报名费:" font-size="14px">
                     </hm-uview-text>
                   </view>
                 </hm-uview-bg-card>
