@@ -156,7 +156,7 @@
                             <hm-uview-icon
                               name="arrow-right"
                               color="#FFFFFF"
-                              size="12px"
+                              size="10px"
                               label=""
                               label-color="#FFFFFF"
                               class="ele-f1b5f026-f12a-46a9-b78f-dea0efd75a30"
@@ -263,6 +263,6 @@ export default {
 
 .ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30 {
   float: left;
-  margin: 8px 8px 8px 0px;
+  margin: 8px 8px 8px 4px;
 }
 </style>
