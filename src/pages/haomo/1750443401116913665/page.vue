@@ -72,6 +72,7 @@
                           maxlength=""
                           icon=""
                           right-icon=""
+                          :disabled="true"
                           class="ele-ea222d02-9ba2-44be-b94e-799272b9be37"
                         >
                         </hm-uview-field>
