@@ -788,7 +788,7 @@ export default {
 }
 
 .ele-wrapper-registrationButton {
-  /deep/.hm-block {
+  /deep/.ele-wrapper-registrationButton {
     width: 100%;
     border-radius: 0px !important;
   }
