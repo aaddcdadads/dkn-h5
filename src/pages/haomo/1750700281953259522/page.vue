@@ -401,8 +401,7 @@ export default {
 .ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f {
   width: 30%;
   vertical-align: top;
-  height: 45px;
-  line-height: 50px;
+  line-height: 45px;
   text-align: center;
 }
 
@@ -431,8 +430,7 @@ export default {
 .ele-wrapper-37f7c953-8895-4c12-80d8-e4bbd27b84a2 {
   width: 30%;
   vertical-align: top;
-  height: 45px;
-  line-height: 50px;
+  line-height: 45px;
   text-align: center;
 }
 
@@ -466,8 +464,7 @@ export default {
 .ele-wrapper-871e304d-82cd-4165-96f5-cd60704fac71 {
   width: 30%;
   vertical-align: top;
-  height: 45px;
-  padding: 16px 0px;
+  line-height: 45px;
   text-align: center;
 }
 
@@ -496,8 +493,7 @@ export default {
 .ele-wrapper-b6f23b24-c2be-4d98-9974-4d77dc23028b {
   width: 30%;
   vertical-align: top;
-  height: 45px;
-  padding: 16px 0px;
+  line-height: 45px;
   text-align: center;
 }
 
