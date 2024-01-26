@@ -38,7 +38,11 @@
                   <view
                     class="ele-wrapper ele-wrapper-bf22f4a1-bf87-45db-bf48-3cb458614952"
                   >
-                    <hm-uview-text text="订单编号：" font-size="13px">
+                    <hm-uview-text
+                      text="订单编号："
+                      font-size="13px"
+                      padding="8"
+                    >
                     </hm-uview-text>
                   </view>
                 </hm-uview-bg-card>
@@ -366,6 +370,7 @@ export default {
   margin: 15px 0px;
   display: flex;
   align-items: center;
+  margin-top: -10px;
 }
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
