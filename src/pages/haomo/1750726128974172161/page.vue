@@ -12,16 +12,15 @@
           box-shadow-blur=""
           class="ele-cee9d9cc-cb1e-4b02-9600-85fa5cd8957a"
         >
-          <view
-            class="ele-wrapper ele-wrapper-7e13b692-9cc2-4862-bad0-cf3303afbbaa"
-          >
+          <view class="ele-wrapper ele-wrapper-titlePrice">
             <hm-uview-bg-card
+              ref="titlePrice"
               width="100%"
               height="100%"
               border-radius=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
-              class="ele-7e13b692-9cc2-4862-bad0-cf3303afbbaa"
+              class="ele-titlePrice"
             >
               <view
                 class="ele-wrapper ele-wrapper-d5bbc53a-e10d-447f-ad1c-d820e1888444"
@@ -76,7 +75,7 @@ export default {
   height: 100vh;
 }
 
-.ele-wrapper-7e13b692-9cc2-4862-bad0-cf3303afbbaa {
+.ele-wrapper-titlePrice {
   width: 100%;
 }
 </style>
