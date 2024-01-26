@@ -123,6 +123,7 @@ export default {
 
 .ele-wrapper-ff006dbd-abf0-427a-9076-d34d31098de7 {
   width: 100%;
+  height: 100vh;
 }
 
 .ele-wrapper-7927eb64-d6cf-4dda-8938-a15bb62187d2 {
