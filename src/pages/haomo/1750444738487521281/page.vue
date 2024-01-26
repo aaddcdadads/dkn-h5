@@ -333,7 +333,9 @@ export default {
 .ele-wrapper-warning {
   border: 1px solid #ffebcc;
   border-radius: 5px;
-  margin: 10px 0 5px;
+  .ele-warning {
+    margin: 10px 0 5px;
+  }
 }
 
 .ele-wrapper-e0671cfa-0c0d-4649-8682-46e9560f861e {
