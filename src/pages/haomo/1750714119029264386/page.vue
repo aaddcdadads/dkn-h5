@@ -203,6 +203,37 @@
                           </view>
                         </hm-uview-bg-card>
                       </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-785b238a-f724-409d-9297-30f00dff9cca"
+                      >
+                        <hm-uview-cell-list
+                          :list="[
+                            {
+                              key: 1,
+                              title: '左侧标题',
+                              icon: 'setting-fill',
+                              required: true,
+                              borderTop: false,
+                              borderBottom: true,
+                              label: '标题下方的描述信息',
+                              value: '',
+                            },
+                            {
+                              key: 2,
+                              title: '左侧标题',
+                              icon: 'setting-fill',
+                              required: false,
+                              borderTop: false,
+                              borderBottom: false,
+                              label: '',
+                              value: '右侧内容',
+                            },
+                          ]"
+                          :arrow="true"
+                          class="ele-785b238a-f724-409d-9297-30f00dff9cca"
+                        >
+                        </hm-uview-cell-list>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                 </hm-uview-bg-card>
@@ -221,6 +252,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
+import HmUviewCellList from "/@/components/built-in/uniapp-uview-vue3/HmUviewCellList.vue";
 
 export default {
   name: "ActivityRegistrationPage",
@@ -229,6 +261,7 @@ export default {
     HmUviewIcon,
     HmUviewText,
     HmUviewImage,
+    HmUviewCellList,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -319,5 +352,10 @@ export default {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 4px;
   margin-bottom: 24px;
+}
+
+.ele-wrapper-785b238a-f724-409d-9297-30f00dff9cca {
+  width: 100%;
+  background: #ffff00;
 }
 </style>
