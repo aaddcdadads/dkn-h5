@@ -317,5 +317,7 @@ export default {
 .ele-wrapper-f0bdc2b0-8112-4546-8c75-84df79598453 {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 4px;
+  margin-bottom: 24px;
+  border-bottom: 0.012820512820513rem solid hsla(0, 0%, 100%, 0.15);
 }
 </style>
