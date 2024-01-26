@@ -56,10 +56,9 @@
               box-shadow-blur=""
               class="ele-47e4d4a0-e917-4c71-ac7b-72efa70ed074"
             >
-              <view
-                class="ele-wrapper ele-wrapper-fad33616-122b-49ed-9742-01503627aa8c"
-              >
+              <view class="ele-wrapper ele-wrapper-weixinpay">
                 <hm-uview-bg-card
+                  ref="weixinpay"
                   width="100%"
                   height="100%"
                   box-shadow-v-shadow=""
@@ -109,10 +108,9 @@
               box-shadow-blur=""
               class="ele-93b24983-ec82-4085-8b41-01add35ab335"
             >
-              <view
-                class="ele-wrapper ele-wrapper-fddf7820-c6ab-4f10-99a5-0a8b5d64f78d"
-              >
+              <view class="ele-wrapper ele-wrapper-zhifubaopay">
                 <hm-uview-bg-card
+                  ref="zhifubaopay"
                   width="100%"
                   height="100%"
                   border-radius=""
