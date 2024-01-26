@@ -98,7 +98,11 @@
               <view
                 class="ele-wrapper ele-wrapper-e3d6ca36-1022-4549-9d35-3d0fa0a03f1b"
               >
-                <hm-index-list :scroll-top="0"> </hm-index-list>
+                <hm-index-list
+                  :scroll-top="0"
+                  class="ele-e3d6ca36-1022-4549-9d35-3d0fa0a03f1b"
+                >
+                </hm-index-list>
               </view>
             </hm-uview-popup>
           </view>
@@ -261,6 +265,11 @@ export default {
 .ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3 {
   width: 100%;
   margin-top: 20px;
+}
+
+.ele-wrapper-e3d6ca36-1022-4549-9d35-3d0fa0a03f1b {
+  width: 100%;
+  margin-top: 30px;
 }
 
 .ele-wrapper-baoming {
