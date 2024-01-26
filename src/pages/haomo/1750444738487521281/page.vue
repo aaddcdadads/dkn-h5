@@ -40,6 +40,33 @@
                 >
                 </information-input-box>
               </view>
+              <view
+                class="ele-wrapper ele-wrapper-9662da08-d680-4c34-af33-b2ba9794437a"
+              >
+                <information-input-box
+                  value="1212"
+                  class="ele-9662da08-d680-4c34-af33-b2ba9794437a"
+                >
+                </information-input-box>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-5102357a-cd29-4bb3-9a1f-ab709e15c3a8"
+              >
+                <information-input-box
+                  value="1212"
+                  class="ele-5102357a-cd29-4bb3-9a1f-ab709e15c3a8"
+                >
+                </information-input-box>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3"
+              >
+                <information-input-box
+                  value="1212"
+                  class="ele-71e123e5-88a9-44c5-b029-f89fdaffa0d3"
+                >
+                </information-input-box>
+              </view>
             </hm-uview-bg-card>
           </view>
         </hm-uview-bg-card>
@@ -68,6 +95,15 @@ export default {
       "8b981cf2-ae14-4b8c-9f72-4cd6c41423a6": {
         value: "",
       },
+      "9662da08-d680-4c34-af33-b2ba9794437a": {
+        value: "1212",
+      },
+      "5102357a-cd29-4bb3-9a1f-ab709e15c3a8": {
+        value: "1212",
+      },
+      "71e123e5-88a9-44c5-b029-f89fdaffa0d3": {
+        value: "1212",
+      },
     };
   },
   watch: {},
@@ -88,6 +124,18 @@ export default {
 }
 
 .ele-wrapper-8b981cf2-ae14-4b8c-9f72-4cd6c41423a6 {
+  width: 100%;
+}
+
+.ele-wrapper-9662da08-d680-4c34-af33-b2ba9794437a {
+  width: 100%;
+}
+
+.ele-wrapper-5102357a-cd29-4bb3-9a1f-ab709e15c3a8 {
+  width: 100%;
+}
+
+.ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3 {
   width: 100%;
 }
 </style>
