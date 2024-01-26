@@ -40,7 +40,7 @@
                 <hm-uview-icon
                   name="info-circle-fill"
                   color="#FF9900"
-                  size="20px"
+                  size="16px"
                   label="特别提醒：报名截止后逾期未核销者不支持退款"
                   label-size="12px"
                   label-color="#FF9900"
