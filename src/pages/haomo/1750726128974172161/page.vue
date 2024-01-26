@@ -65,7 +65,7 @@
                   <view
                     class="ele-wrapper ele-wrapper-50df9d0c-f26f-48c6-bd8f-be142b30a434"
                   >
-                    <hm-uview-text> </hm-uview-text>
+                    <hm-uview-text text="微信支付"> </hm-uview-text>
                   </view>
                 </hm-uview-bg-card>
               </view>
