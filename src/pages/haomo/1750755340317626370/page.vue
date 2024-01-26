@@ -147,17 +147,6 @@
                             >
                             </hm-uview-image>
                           </view>
-                          <view
-                            class="ele-wrapper ele-wrapper-ad039bb7-8f55-4ab8-98a8-54d1f73db365"
-                          >
-                            <hm-uview-text
-                              text="Keep ·HelloKitty系列"
-                              font-size="10px"
-                              color="#FFFFFF"
-                              class="ele-ad039bb7-8f55-4ab8-98a8-54d1f73db365"
-                            >
-                            </hm-uview-text>
-                          </view>
                         </hm-uview-bg-card>
                       </view>
                     </hm-uview-bg-card>
@@ -250,10 +239,6 @@ export default {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  float: left;
-}
-
-.ele-wrapper-ad039bb7-8f55-4ab8-98a8-54d1f73db365 {
   float: left;
 }
 </style>
