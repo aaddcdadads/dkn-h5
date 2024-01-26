@@ -10,4 +10,4 @@ rm -rf src/pages/test
 # rm -rf src/components/built-in/third-party/HmLottery.vue
 # rm -rf src/components/built-in/third-party/HmLimeSignature.vue
 npm run build:h5
-rsync -avz --delete --progress dist/* haomo@192.168.1.7:/var/www/html/dkn-h5
+rsync -avz --delete --progress dist/build/h5/* haomo@192.168.1.7:/var/www/html/dkn-h5
