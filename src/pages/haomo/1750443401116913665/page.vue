@@ -354,7 +354,11 @@
                 </hm-uview-text>
               </view>
               <view class="ele-wrapper ele-wrapper-Buttonwan">
-                <hm-uview-button ref="Buttonwan" class="ele-Buttonwan">
+                <hm-uview-button
+                  ref="Buttonwan"
+                  :text="Buttonwan.text"
+                  class="ele-Buttonwan"
+                >
                 </hm-uview-button>
               </view>
             </hm-uview-bg-card>
@@ -384,6 +388,9 @@ export default {
   data() {
     let self = this;
     return {
+      Buttonwan: {
+        text: "核销",
+      },
       "ea222d02-9ba2-44be-b94e-799272b9be37": {
         value: "",
       },
