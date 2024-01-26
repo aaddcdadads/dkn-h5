@@ -74,7 +74,6 @@
                     <hm-uview-bg-card
                       width="100%"
                       height="40"
-                      :border-style="'solid'"
                       border-width="1"
                       border-color="#B0B0B0"
                       padding=""
@@ -457,6 +456,8 @@ export default {
 .ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5 {
   width: 100%;
   margin: 15px 0px;
+  display: flex;
+  align-items: center;
 }
 
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
