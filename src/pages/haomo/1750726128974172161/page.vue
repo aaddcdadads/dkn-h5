@@ -236,6 +236,7 @@ export default {
 .ele-wrapper-zhifubao {
   width: 100%;
   height: 80px;
+  margin-top: 10px;
   .ele-zhifubao {
     display: flex;
     align-items: center;
