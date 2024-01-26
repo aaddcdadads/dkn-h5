@@ -83,7 +83,11 @@
                   <view
                     class="ele-wrapper ele-wrapper-50df9d0c-f26f-48c6-bd8f-be142b30a434"
                   >
-                    <hm-uview-text text="微信支付" font-size="16px">
+                    <hm-uview-text
+                      text="微信支付"
+                      font-size="16px"
+                      class="ele-50df9d0c-f26f-48c6-bd8f-be142b30a434"
+                    >
                     </hm-uview-text>
                   </view>
                 </hm-uview-bg-card>
@@ -137,7 +141,11 @@
                   <view
                     class="ele-wrapper ele-wrapper-c66fc368-41ad-4820-98ec-9bb74cb74ea3"
                   >
-                    <hm-uview-text text="支付宝" font-size="16px">
+                    <hm-uview-text
+                      text="支付宝"
+                      font-size="16px"
+                      class="ele-c66fc368-41ad-4820-98ec-9bb74cb74ea3"
+                    >
                     </hm-uview-text>
                   </view>
                 </hm-uview-bg-card>
@@ -279,6 +287,10 @@ export default {
   }
 }
 
+.ele-wrapper-50df9d0c-f26f-48c6-bd8f-be142b30a434 {
+  margin-left: 20px;
+}
+
 .ele-wrapper-zhifubao {
   width: 100%;
   height: 80px;
@@ -294,6 +306,10 @@ export default {
   .hm-bg-card {
     display: flex;
   }
+}
+
+.ele-wrapper-c66fc368-41ad-4820-98ec-9bb74cb74ea3 {
+  margin-left: 20px;
 }
 
 .ele-wrapper-d699006e-fe43-4b8f-9729-1cd0bc37bd9f {
