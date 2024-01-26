@@ -9,7 +9,7 @@
           border-radius="0"
           padding="0"
           box-shadow-color="#00000000"
-          background-color="#FFFFFF00"
+          background-color="#FFE8EC"
           class="ele-outsideBg"
         >
           <view class="ele-wrapper ele-wrapper-topBg">
@@ -72,6 +72,7 @@
               border-radius="0"
               padding="0"
               box-shadow-v-shadow="0"
+              box-shadow-blur="0"
               box-shadow-color="#00000000"
               background-color="#FFFFFF00"
               class="ele-videoBg"
