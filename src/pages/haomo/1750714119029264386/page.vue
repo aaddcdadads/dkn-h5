@@ -468,7 +468,7 @@ export default {
   }
   /deep/.uni-video {
     width: 100% !important;
-    height: 500px;
+    height: 500px !important;
   }
 }
 
