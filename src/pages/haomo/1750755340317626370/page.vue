@@ -136,17 +136,6 @@
                           background-color="#FFFFFF1F"
                           class="ele-951ec1d4-209a-48cc-a908-c78236487f39"
                         >
-                          <view
-                            class="ele-wrapper ele-wrapper-4f1cb12e-36cb-4378-b823-05b5d45354ab"
-                          >
-                            <hm-uview-image
-                              width="100%"
-                              height="100%"
-                              border-redius="50%"
-                              class="ele-4f1cb12e-36cb-4378-b823-05b5d45354ab"
-                            >
-                            </hm-uview-image>
-                          </view>
                         </hm-uview-bg-card>
                       </view>
                     </hm-uview-bg-card>
@@ -167,7 +156,6 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import HmVideoList from "/@/components/built-in/uniapp/HmVideoList.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
-import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 
 export default {
   name: "AddlistSuggestions",
@@ -176,7 +164,6 @@ export default {
     HmUviewIcon,
     HmVideoList,
     HmUviewText,
-    HmUviewImage,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -233,12 +220,5 @@ export default {
 
 .ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39 {
   width: 100%;
-}
-
-.ele-wrapper-4f1cb12e-36cb-4378-b823-05b5d45354ab {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  float: left;
 }
 </style>
