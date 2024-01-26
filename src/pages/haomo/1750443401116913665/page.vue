@@ -486,11 +486,11 @@ export default {
 }
 
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
-  width: 30%;
+  width: 31%;
 }
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
-  width: 70%;
+  width: 67%;
   /deep/.u-border-bottom {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
