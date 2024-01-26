@@ -557,6 +557,7 @@
                 <hm-uview-button
                   ref="registrationButton"
                   :type="registrationButton.type"
+                  class="ele-registrationButton"
                 >
                 </hm-uview-button>
               </view>
@@ -837,5 +838,11 @@ export default {
 
 .ele-wrapper-3a2803a6-a38e-495d-8113-b97276842fbb {
   width: 100%;
+}
+
+.ele-wrapper-registrationButton {
+  /deep/.ele-wrapper-registrationButton {
+    width: 100% !important;
+  }
 }
 </style>
