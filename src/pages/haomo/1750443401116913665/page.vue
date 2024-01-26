@@ -237,7 +237,7 @@
                           label="核销状态:"
                           placeholder="待核销/已核销"
                           label-width="150"
-                          maxlength="200"
+                          maxlength="100%"
                           icon=""
                           right-icon=""
                           class="ele-825c7b35-6136-42aa-8176-48014a210261"
