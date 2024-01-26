@@ -13,6 +13,21 @@
           class="ele-formbgCard"
         >
           <view
+            class="ele-wrapper ele-wrapper-8112165b-3b75-4517-b04e-a52c779f18ff"
+          >
+            <hm-uview-text
+              text="奖品选择"
+              font-size="16px"
+              class="ele-8112165b-3b75-4517-b04e-a52c779f18ff"
+            >
+            </hm-uview-text>
+          </view>
+          <view
+            class="ele-wrapper ele-wrapper-f09bd67e-29e6-44fb-bfb7-2254ce5762cf"
+          >
+            <hm-uview-bg-card> </hm-uview-bg-card>
+          </view>
+          <view
             class="ele-wrapper ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b"
           >
             <hm-uview-text
@@ -260,6 +275,12 @@ export default {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.ele-wrapper-8112165b-3b75-4517-b04e-a52c779f18ff {
+  font-family: "PingFangSC-Medium", "PingFang SC Medium", "PingFang SC",
+    sans-serif;
+  font-weight: 500;
 }
 
 .ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b {
