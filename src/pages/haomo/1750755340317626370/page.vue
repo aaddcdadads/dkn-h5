@@ -52,7 +52,7 @@
               <view
                 class="ele-wrapper ele-wrapper-7a2f13f4-3ba2-456e-a67a-c507181b2442"
               >
-                <hm-video-list :num="1" height="100"> </hm-video-list>
+                <hm-video-list :num="1" height=""> </hm-video-list>
               </view>
             </hm-uview-bg-card>
           </view>
