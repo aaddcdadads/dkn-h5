@@ -22,17 +22,16 @@
             >
             </hm-uview-text>
           </view>
-          <view
-            class="ele-wrapper ele-wrapper-37d3df1b-3224-4fbd-901e-b2a290a0ccb9"
-          >
+          <view class="ele-wrapper ele-wrapper-warning">
             <hm-uview-bg-card
+              ref="warning"
               width="100%"
               height="100%"
               border-radius=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
               background-color="#FFF5E6"
-              class="ele-37d3df1b-3224-4fbd-901e-b2a290a0ccb9"
+              class="ele-warning"
             >
               <view
                 class="ele-wrapper ele-wrapper-e0671cfa-0c0d-4649-8682-46e9560f861e"
@@ -331,7 +330,7 @@ export default {
   font-weight: 500;
 }
 
-.ele-wrapper-37d3df1b-3224-4fbd-901e-b2a290a0ccb9 {
+.ele-wrapper-warning {
   border: 1px solid #ffebcc;
   border-radius: 5px;
   margin: 10px 0 5px;
