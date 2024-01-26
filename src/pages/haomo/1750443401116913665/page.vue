@@ -20,11 +20,22 @@
               class="ele-b70290a2-501d-46d6-a44e-63d06e016496"
             >
               <view
+                class="ele-wrapper ele-wrapper-0e5daea1-8566-4e85-8f24-439e7d57a47a"
+              >
+                <hm-uview-text
+                  text="<"
+                  font-size="16px"
+                  color="#409EFF"
+                  class="ele-0e5daea1-8566-4e85-8f24-439e7d57a47a"
+                >
+                </hm-uview-text>
+              </view>
+              <view
                 class="ele-wrapper ele-wrapper-51e40d97-b1a2-45a7-b1b6-7d182e2d5e68"
               >
                 <hm-uview-text
                   text="活动报名信息"
-                  :text-style="{}"
+                  font-size="16px"
                   class="ele-51e40d97-b1a2-45a7-b1b6-7d182e2d5e68"
                 >
                 </hm-uview-text>
@@ -435,8 +446,14 @@ export default {
   height: 100%;
 }
 
+.ele-wrapper-0e5daea1-8566-4e85-8f24-439e7d57a47a {
+  font-weight: 600;
+  width: 10%;
+}
+
 .ele-wrapper-51e40d97-b1a2-45a7-b1b6-7d182e2d5e68 {
-  margin-left: 28%;
+  width: 85%;
+  text-align: center;
 }
 
 .ele-wrapper-a4540298-8d72-4b6c-a4e3-fab8f56c0be2 {
