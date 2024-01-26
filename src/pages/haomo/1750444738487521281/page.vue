@@ -44,6 +44,7 @@
                   label="特别提醒：报名截止后逾期未核销者不支持退款"
                   label-size="12px"
                   label-color="#FF9900"
+                  class="ele-e0671cfa-0c0d-4649-8682-46e9560f861e"
                 >
                 </hm-uview-icon>
               </view>
@@ -333,6 +334,15 @@ export default {
 .ele-wrapper-37d3df1b-3224-4fbd-901e-b2a290a0ccb9 {
   border: 1px solid #ffebcc;
   border-radius: 5px;
+}
+
+.ele-wrapper-e0671cfa-0c0d-4649-8682-46e9560f861e {
+  font-family: "PingFangSC-Regular", "PingFang SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ff9900;
+  text-align: left;
+  line-height: 20px;
 }
 
 .ele-wrapper-74c8c2c3-d387-4029-8b68-8275204c2ed5 {
