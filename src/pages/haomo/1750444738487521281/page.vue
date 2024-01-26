@@ -147,6 +147,11 @@ export default {
 .ele-wrapper-formbgCard {
   width: 100%;
   height: 100vh;
+  .ele-formbgCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .ele-wrapper-7927eb64-d6cf-4dda-8938-a15bb62187d2 {
