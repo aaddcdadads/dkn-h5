@@ -420,6 +420,7 @@
                   border-radius="0"
                   padding="0"
                   box-shadow-color="#00000000"
+                  class="ele-eb5dc617-266d-4627-8ae8-06394a0d2e04"
                 >
                   <view class="ele-wrapper ele-wrapper-registrationButton">
                     <hm-uview-button
@@ -780,6 +781,10 @@ export default {
   /deep/.right_bg {
     padding-top: 24px;
   }
+}
+
+.ele-wrapper-eb5dc617-266d-4627-8ae8-06394a0d2e04 {
+  width: 100%;
 }
 
 .ele-wrapper-registrationButton {
