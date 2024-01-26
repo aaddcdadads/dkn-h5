@@ -158,7 +158,7 @@
               padding=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
-              background-color="#F2F2F2"
+              background-color="#F0F2F6"
               class="ele-baoming"
             >
               <view
