@@ -183,24 +183,14 @@
                       class="ele-1e638196-949e-4db0-8c6d-ffb770b0ac8a"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-a97ec100-68c6-48a3-9653-d8ac1bb8144c"
-                      >
-                        <hm-uview-text
-                          text="活动名称:"
-                          font-size="13px"
-                          padding=""
-                          class="ele-a97ec100-68c6-48a3-9653-d8ac1bb8144c"
-                        >
-                        </hm-uview-text>
-                      </view>
-                      <view
                         class="ele-wrapper ele-wrapper-77bae9a8-6c80-4c4a-94fd-75350b1d7fb3"
                       >
                         <hm-uview-field
                           value=""
-                          label=""
+                          label="活动名称:"
                           placeholder="活动名称"
-                          label-width="0"
+                          label-width="150"
+                          maxlength="150"
                           icon=""
                           right-icon=""
                           class="ele-77bae9a8-6c80-4c4a-94fd-75350b1d7fb3"
@@ -221,24 +211,14 @@
                       class="ele-9047135a-0817-4297-9bc0-ba758bea8736"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-6b36c1d4-56c4-4721-8c34-34581763902f"
-                      >
-                        <hm-uview-text
-                          text=" 核销截止:"
-                          font-size="13px"
-                          padding=""
-                          class="ele-6b36c1d4-56c4-4721-8c34-34581763902f"
-                        >
-                        </hm-uview-text>
-                      </view>
-                      <view
                         class="ele-wrapper ele-wrapper-f2093ff0-31f8-4c8e-8715-756493dc516a"
                       >
                         <hm-uview-field
                           value=""
-                          label=""
+                          label=" 核销截止:"
                           placeholder=" 核销截止"
-                          label-width="0"
+                          label-width="150"
+                          maxlength="150"
                           icon=""
                           right-icon=""
                           class="ele-f2093ff0-31f8-4c8e-8715-756493dc516a"
@@ -522,15 +502,8 @@ export default {
   margin: 15px 0px;
 }
 
-.ele-wrapper-a97ec100-68c6-48a3-9653-d8ac1bb8144c {
-  width: 30%;
-  vertical-align: top;
-  line-height: 45px;
-  text-align: center;
-}
-
 .ele-wrapper-77bae9a8-6c80-4c4a-94fd-75350b1d7fb3 {
-  width: 69%;
+  width: 100%;
   height: 45px;
   /deep/.u-label-postion-left {
     position: absolute;
@@ -553,15 +526,8 @@ export default {
   margin: 15px 0px;
 }
 
-.ele-wrapper-6b36c1d4-56c4-4721-8c34-34581763902f {
-  width: 30%;
-  vertical-align: top;
-  line-height: 45px;
-  text-align: center;
-}
-
 .ele-wrapper-f2093ff0-31f8-4c8e-8715-756493dc516a {
-  width: 69%;
+  width: 100%;
   height: 45px;
   /deep/.u-label-postion-left {
     position: absolute;
