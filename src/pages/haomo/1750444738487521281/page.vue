@@ -167,7 +167,7 @@
                 <hm-uview-button
                   :type="'primary'"
                   :shape="'circle'"
-                  text="立即报名"
+                  text="总费用：¥29.0 立即报名"
                   class="ele-acf99afa-7e7b-42dc-a52d-aa67ffc5af5b"
                 >
                 </hm-uview-button>
@@ -375,5 +375,13 @@ export default {
 
 .ele-wrapper-acf99afa-7e7b-42dc-a52d-aa67ffc5af5b {
   width: 100%;
+  /deep/.u-btn {
+    font-family: "PingFangSC-Regular", "PingFang SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 20px;
+  }
 }
 </style>
