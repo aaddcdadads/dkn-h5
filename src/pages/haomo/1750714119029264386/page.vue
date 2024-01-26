@@ -9,6 +9,7 @@
           border-radius="0"
           padding="0"
           box-shadow-color="#00000000"
+          background-color="#FFFFFF00"
           class="ele-outsideBg"
         >
           <view class="ele-wrapper ele-wrapper-topBg">
@@ -357,7 +358,7 @@ export default {
 .ele-wrapper-785b238a-f724-409d-9297-30f00dff9cca {
   width: 100%;
   /deep/.u-cell-item-box {
-    background: #ffff00 !important;
+    background: transparent !important;
   }
 }
 </style>
