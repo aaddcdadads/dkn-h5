@@ -144,7 +144,7 @@
                           box-shadow-v-shadow="0"
                           box-shadow-blur="0"
                           box-shadow-color="#00000000"
-                          background-color="#FFFFFF00"
+                          background-color="#FFFFFF1F"
                           class="ele-951ec1d4-209a-48cc-a908-c78236487f39"
                         >
                           <view
@@ -159,19 +159,28 @@
                             </hm-uview-image>
                           </view>
                           <view
-                            class="ele-wrapper ele-wrapper-e94295df-44a3-4797-b497-2f032082b10a"
+                            class="ele-wrapper ele-wrapper-ad039bb7-8f55-4ab8-98a8-54d1f73db365"
                           >
                             <hm-uview-text
-                              font-size="12px"
+                              text="Keep ·HelloKitty系列"
+                              font-size="10px"
                               color="#FFFFFF"
-                              padding="0"
+                              class="ele-ad039bb7-8f55-4ab8-98a8-54d1f73db365"
                             >
                             </hm-uview-text>
                           </view>
                           <view
-                            class="ele-wrapper ele-wrapper-ef6876bd-53cd-494b-9a24-32e43053577b"
+                            class="ele-wrapper ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30"
                           >
-                            <hm-icon :size="20"> </hm-icon>
+                            <hm-uview-icon
+                              name="arrow-right"
+                              color="#FFFFFF"
+                              size="12px"
+                              label=""
+                              label-color="#FFFFFF"
+                              class="ele-f1b5f026-f12a-46a9-b78f-dea0efd75a30"
+                            >
+                            </hm-uview-icon>
                           </view>
                         </hm-uview-bg-card>
                       </view>
@@ -194,7 +203,6 @@ import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vu
 import HmVideoList from "/@/components/built-in/uniapp/HmVideoList.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
-import HmIcon from "/@/components/built-in/uniapp/HmIcon.vue";
 
 export default {
   name: "ActivityRegistrationPage",
@@ -204,7 +212,6 @@ export default {
     HmVideoList,
     HmUviewText,
     HmUviewImage,
-    HmIcon,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -222,54 +229,62 @@ export default {
 
 <style lang="less" scoped>
 .page {
+
 }
 
 .ele-wrapper-outsideBg {
-  width: 100%;
+  width:100%;
 }
 
 .ele-wrapper-topBg {
-  width: 100%;
+  width:100%;
 }
 
 .ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe {
-  background: rgba(0, 0, 0, 0.16);
-  border-radius: 608rpx;
-  float: right;
-  width: 160rpx;
-  text-align: center;
-  padding-top: 8rpx;
-  margin-right: 24rpx;
+  background: rgba(0,0,0,.16);
+    border-radius: 608rpx;
+float:right;    width: 160rpx;
+text-align:center;padding-top:8rpx;
+margin-right:24rpx;
 }
 
 .ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2 {
-  width: 100%;
+  width:100%;
 }
 
 .ele-wrapper-7a2f13f4-3ba2-456e-a67a-c507181b2442 {
-  width: 100%;
-  height: 500px;
+  width:100%;height:500px;
 }
 
 .ele-wrapper-2966337e-38af-4573-a9c7-464b04d48566 {
-  width: 100%;
+  width:100%;
 }
 
 .ele-wrapper-c2db3fcd-05d0-472b-8e18-163c243cc425 {
-  width: 100%;
+  width:100%;
 }
 
 .ele-wrapper-6ba2b397-6caf-44b2-8d16-4ad0c0eba375 {
-  width: 100%;
+  width:100%;
 }
 
 .ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39 {
-  width: 100%;
+  width:100%;    background-color: rgba(255, 255, 255, 0.15);
+}
 }
 
 .ele-wrapper-4f1cb12e-36cb-4378-b823-05b5d45354ab {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width:10px;height:10px;
+border-radius:50%;
+float:left;
+}
+
+.ele-wrapper-ad039bb7-8f55-4ab8-98a8-54d1f73db365 {
+  float:left;
+}
+
+.ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30 {
+  float:left;
+padding-top:6px;
 }
 </style>
