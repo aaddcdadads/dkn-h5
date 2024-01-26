@@ -523,9 +523,6 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
-  /deep/.ele-wrapper {
-    margin-bottom: 15px;
-  }
 }
 
 .ele-wrapper-825c7b35-6136-42aa-8176-48014a210261 {
