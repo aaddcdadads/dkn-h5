@@ -38,7 +38,7 @@
                 <hm-uview-icon
                   name="clock"
                   color="#999999"
-                  size="12px"
+                  size="14px"
                   label="剩下时间 23:59:59"
                   label-size="12px"
                   label-color="#999999"
