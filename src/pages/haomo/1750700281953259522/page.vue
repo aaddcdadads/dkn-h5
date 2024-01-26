@@ -393,6 +393,7 @@ export default {
 
 .ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f {
   width: 32%;
+  vertical-align: top;
 }
 
 .ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b {
@@ -402,6 +403,11 @@ export default {
     border-radius: 5px;
     border: 1px;
     height: 45px;
+  }
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -423,6 +429,11 @@ export default {
     border-radius: 5px;
     border: 1px;
     height: 45px;
+  }
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -448,6 +459,11 @@ export default {
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
+  }
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
