@@ -466,6 +466,10 @@ export default {
       width: 100%;
     }
   }
+  /deep/.uni-video {
+    width: 100% !important;
+    height: 500px;
+  }
 }
 
 .ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2 {
