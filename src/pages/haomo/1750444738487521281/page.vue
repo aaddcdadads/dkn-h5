@@ -96,7 +96,9 @@
               border-radius=""
               padding=""
               box-shadow-v-shadow=""
+              box-shadow-blur=""
               background-color="#F2F2F2"
+              class="ele-12afd4d4-40cb-4c92-9871-dbe45f394ddf"
             >
               <view
                 class="ele-wrapper ele-wrapper-4691aa84-ddc5-46bf-bd31-d46908cb517f"
@@ -202,5 +204,9 @@ export default {
 .ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3 {
   width: 100%;
   margin-top: 20px;
+}
+
+.ele-wrapper-12afd4d4-40cb-4c92-9871-dbe45f394ddf {
+  width: 100%;
 }
 </style>
