@@ -118,7 +118,7 @@ export default {
   height: 108px;
   background-color: #ffffff;
   padding-right: 5px;
-  margin-bottom:8px;
+  margin-bottom: 8px;
 }
 
 .change {
