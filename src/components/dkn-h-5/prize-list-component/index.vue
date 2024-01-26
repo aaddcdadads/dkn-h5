@@ -155,7 +155,7 @@ export default {
   -webkit-box-orient: vertical;
 
   > text {
-    font-size: 1rem;
+    font-size: 28rpx;
     font-family: Microsoft YaHei;
     font-weight: 400;
     color: #ffffff;
