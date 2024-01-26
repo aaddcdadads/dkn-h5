@@ -39,6 +39,7 @@
               height="100%"
               border-radius=""
               :text-align="'center'"
+              padding=""
               box-shadow-h-shadow=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
