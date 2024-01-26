@@ -272,7 +272,10 @@
                       <view
                         class="ele-wrapper ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609"
                       >
-                        <activity-list speed="1.314km5.20km9.99km">
+                        <activity-list
+                          speed="1.314km5.20km9.99km"
+                          class="ele-9243b683-57b5-45b7-8c57-56a5ffd4a609"
+                        >
                         </activity-list>
                       </view>
                     </hm-uview-bg-card>
@@ -701,7 +704,11 @@ export default {
 .ele-wrapper-f0bdc2b0-8112-4546-8c75-84df79598453 {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 4px;
-  margin-bottom: 24px;
+  margin-bottom: 40rpx;
+}
+
+.ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609 {
+  margin-top: 40rpx;
 }
 
 .ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5 {
