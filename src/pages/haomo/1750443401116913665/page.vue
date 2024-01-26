@@ -22,7 +22,7 @@
               box-shadow-v-shadow=""
               box-shadow-blur=""
               box-shadow-color="#F0F0F000"
-              background-color="#F0F0F0"
+              background-color="#FFFFFF"
               class="ele-a4540298-8d72-4b6c-a4e3-fab8f56c0be2"
             >
               <view
@@ -435,7 +435,7 @@ export default {
 }
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
-  width: 85%;
+  width: 100%;
 }
 
 .ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5 {

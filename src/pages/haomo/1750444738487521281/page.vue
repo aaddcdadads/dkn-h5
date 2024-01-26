@@ -32,6 +32,7 @@
               box-shadow-v-shadow=""
               box-shadow-blur=""
               background-color="#EFF2F5"
+              class="ele-74c8c2c3-d387-4029-8b68-8275204c2ed5"
             >
               <view
                 class="ele-wrapper ele-wrapper-37e71248-3add-4043-9e2f-8f3c1b71920b"
@@ -296,6 +297,10 @@ export default {
   font-family: "PingFangSC-Medium", "PingFang SC Medium", "PingFang SC",
     sans-serif;
   font-weight: 500;
+}
+
+.ele-wrapper-74c8c2c3-d387-4029-8b68-8275204c2ed5 {
+  width: 100%;
 }
 
 .ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b {
