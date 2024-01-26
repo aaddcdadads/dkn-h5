@@ -290,55 +290,9 @@
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea"
+                        class="ele-wrapper ele-wrapper-e54a675a-3913-44a6-b89d-1a0e63256249"
                       >
-                        <hm-uview-field
-                          value=""
-                          label=""
-                          placeholder="2024.02.18 23:59:59"
-                          label-width="0"
-                          icon=""
-                          right-icon=""
-                          class="ele-8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea"
-                        >
-                        </hm-uview-field>
-                      </view>
-                    </hm-uview-bg-card>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-ae2abb77-b95c-4297-bb4d-03e1a1f508a1"
-                  >
-                    <hm-uview-bg-card
-                      width="100%"
-                      height="40"
-                      padding=""
-                      box-shadow-v-shadow=""
-                      box-shadow-blur=""
-                      class="ele-ae2abb77-b95c-4297-bb4d-03e1a1f508a1"
-                    >
-                      <view
-                        class="ele-wrapper ele-wrapper-4affc789-e268-4263-ac4f-4e8e3fd30c9b"
-                      >
-                        <hm-uview-text
-                          text="核销状态:"
-                          font-size="13px"
-                          class="ele-4affc789-e268-4263-ac4f-4e8e3fd30c9b"
-                        >
-                        </hm-uview-text>
-                      </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-95ec508c-0713-4dfb-b843-6e5c683fd4f6"
-                      >
-                        <hm-uview-field
-                          value=""
-                          label=""
-                          placeholder="待核销/已核销"
-                          label-width="0"
-                          icon=""
-                          right-icon=""
-                          class="ele-95ec508c-0713-4dfb-b843-6e5c683fd4f6"
-                        >
-                        </hm-uview-field>
+                        <hm-uview-image> </hm-uview-image>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -376,6 +330,7 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
+import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -384,6 +339,7 @@ export default {
     HmUviewBgCard,
     HmUviewText,
     HmUviewField,
+    HmUviewImage,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -406,12 +362,6 @@ export default {
         value: "",
       },
       "6bdb201e-d452-4e15-b72f-70c229fbd237": {
-        value: "",
-      },
-      "8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea": {
-        value: "",
-      },
-      "95ec508c-0713-4dfb-b843-6e5c683fd4f6": {
         value: "",
       },
     };
@@ -561,37 +511,11 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
+  vertical-align: top;
 }
 
 .ele-wrapper-b6f23b24-c2be-4d98-9974-4d77dc23028b {
   width: 25%;
-}
-
-.ele-wrapper-8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea {
-  width: 70%;
-  /deep/.u-border-bottom {
-    background-color: rgb(240, 240, 240);
-    border-radius: 5px;
-  }
-}
-
-.ele-wrapper-ae2abb77-b95c-4297-bb4d-03e1a1f508a1 {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin: 15px 0px;
-}
-
-.ele-wrapper-4affc789-e268-4263-ac4f-4e8e3fd30c9b {
-  width: 25%;
-}
-
-.ele-wrapper-95ec508c-0713-4dfb-b843-6e5c683fd4f6 {
-  width: 70%;
-  /deep/.u-border-bottom {
-    background-color: rgb(240, 240, 240);
-    border-radius: 5px;
-  }
 }
 
 .ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451 {
