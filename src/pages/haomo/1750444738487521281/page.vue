@@ -267,6 +267,9 @@ export default {
 
 .ele-wrapper-74c8c2c3-d387-4029-8b68-8275204c2ed5 {
   width: 100%;
+  .ele-wrapper-eventCard {
+    width: 100%;
+  }
 }
 
 .ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b {
