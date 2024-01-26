@@ -98,6 +98,7 @@ export default {
 .container {
   background: transparent;
   border-radius: 15px;
+  position: relative;
 
 }
 
@@ -122,7 +123,7 @@ export default {
     text-align: center;
     position: relative;
     z-index: 999;
-    position: fixed;
+    position: absolute;
     top: 0;
     float: left;
     > span {
