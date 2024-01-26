@@ -44,7 +44,7 @@
                 class="ele-wrapper ele-wrapper-9662da08-d680-4c34-af33-b2ba9794437a"
               >
                 <information-input-box
-                  value="1212"
+                  value=""
                   class="ele-9662da08-d680-4c34-af33-b2ba9794437a"
                 >
                 </information-input-box>
@@ -53,7 +53,7 @@
                 class="ele-wrapper ele-wrapper-5102357a-cd29-4bb3-9a1f-ab709e15c3a8"
               >
                 <information-input-box
-                  value="1212"
+                  value=""
                   class="ele-5102357a-cd29-4bb3-9a1f-ab709e15c3a8"
                 >
                 </information-input-box>
@@ -62,7 +62,7 @@
                 class="ele-wrapper ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3"
               >
                 <information-input-box
-                  value="1212"
+                  value=""
                   class="ele-71e123e5-88a9-44c5-b029-f89fdaffa0d3"
                 >
                 </information-input-box>
@@ -96,13 +96,13 @@ export default {
         value: "",
       },
       "9662da08-d680-4c34-af33-b2ba9794437a": {
-        value: "1212",
+        value: "",
       },
       "5102357a-cd29-4bb3-9a1f-ab709e15c3a8": {
-        value: "1212",
+        value: "",
       },
       "71e123e5-88a9-44c5-b029-f89fdaffa0d3": {
-        value: "1212",
+        value: "",
       },
     };
   },
