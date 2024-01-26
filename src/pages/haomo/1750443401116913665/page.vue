@@ -486,7 +486,7 @@ export default {
 }
 
 .ele-wrapper-788913aa-482e-4c28-855d-fdb18b0c1429 {
-  width: 25%;
+  width: 27%;
 }
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
@@ -505,7 +505,7 @@ export default {
 }
 
 .ele-wrapper-d166dfa0-a20d-4d76-a53e-7fffb0834c9f {
-  width: 25%;
+  width: 27%;
 }
 
 .ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b {
@@ -525,7 +525,7 @@ export default {
 }
 
 .ele-wrapper-37f7c953-8895-4c12-80d8-e4bbd27b84a2 {
-  width: 25%;
+  width: 27%;
 }
 
 .ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025 {
@@ -545,7 +545,7 @@ export default {
 }
 
 .ele-wrapper-3abd57d9-0713-43df-a2c8-ef7c647ae545 {
-  width: 25%;
+  width: 27%;
 }
 
 .ele-wrapper-9a4984ec-97fb-465a-9b6b-8c645b5eab71 {
@@ -570,7 +570,7 @@ export default {
 }
 
 .ele-wrapper-871e304d-82cd-4165-96f5-cd60704fac71 {
-  width: 25%;
+  width: 27%;
 }
 
 .ele-wrapper-6bdb201e-d452-4e15-b72f-70c229fbd237 {
@@ -589,7 +589,7 @@ export default {
 }
 
 .ele-wrapper-b6f23b24-c2be-4d98-9974-4d77dc23028b {
-  width: 25%;
+  width: 27%;
 }
 
 .ele-wrapper-8fddb85c-846b-40f2-a1aa-fc0d3e0fcbea {
@@ -608,7 +608,7 @@ export default {
 }
 
 .ele-wrapper-4affc789-e268-4263-ac4f-4e8e3fd30c9b {
-  width: 25%;
+  width: 27%;
 }
 
 .ele-wrapper-95ec508c-0713-4dfb-b843-6e5c683fd4f6 {
