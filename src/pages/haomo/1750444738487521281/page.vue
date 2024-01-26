@@ -51,7 +51,32 @@
               <view
                 class="ele-wrapper ele-wrapper-89a737ab-1240-47ed-b005-e1b3a5229f52"
               >
-                <hm-uview-bg-card> </hm-uview-bg-card>
+                <hm-uview-bg-card
+                  width="100%"
+                  height="100%"
+                  border-radius=""
+                  box-shadow-v-shadow=""
+                  box-shadow-blur=""
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-8cdb53e6-eccc-4ce7-bd86-ff1eaf822273"
+                  >
+                    <hm-uview-text text="活动项目名称" font-size="14px">
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-556e4dcf-8e40-4c3c-bd48-b3573cab3f88"
+                  >
+                    <hm-uview-text text="活动项目名称" font-size="14px">
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-a6525271-6699-4091-b104-ea6f7b22e1f5"
+                  >
+                    <hm-uview-text text="活动项目名称" font-size="14px">
+                    </hm-uview-text>
+                  </view>
+                </hm-uview-bg-card>
               </view>
             </hm-uview-bg-card>
           </view>
