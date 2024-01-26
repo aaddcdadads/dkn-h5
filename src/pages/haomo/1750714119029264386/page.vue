@@ -209,7 +209,7 @@
                           >
                             <hm-uview-text
                               text="Keep ·HelloKitty系列"
-                              font-size="10px"
+                              font-size="12px"
                               color="#FFFFFF"
                               padding="0"
                               class="ele-ad039bb7-8f55-4ab8-98a8-54d1f73db365"
@@ -222,7 +222,7 @@
                             <hm-uview-icon
                               name="arrow-right"
                               color="#FFFFFF"
-                              size="10px"
+                              size="12px"
                               label=""
                               label-color="#FFFFFF"
                               class="ele-f1b5f026-f12a-46a9-b78f-dea0efd75a30"
@@ -720,7 +720,7 @@ export default {
 
 .ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30 {
   float: left;
-  margin: 8px 8px 8px 4px;
+  margin: 6px 8px 8px 4px;
 }
 
 .ele-wrapper-68028b41-e565-41ca-94f3-03281e4d4c4f {
