@@ -52,6 +52,23 @@
               box-shadow-v-shadow=""
               box-shadow-blur=""
             >
+              <view
+                class="ele-wrapper ele-wrapper-fad33616-122b-49ed-9742-01503627aa8c"
+              >
+                <hm-uview-bg-card>
+                  <view
+                    class="ele-wrapper ele-wrapper-79c85c41-77a4-4d5d-8011-bcb1450dd53e"
+                  >
+                    <hm-uview-image width="40px" height="40px">
+                    </hm-uview-image>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-50df9d0c-f26f-48c6-bd8f-be142b30a434"
+                  >
+                    <hm-uview-text> </hm-uview-text>
+                  </view>
+                </hm-uview-bg-card>
+              </view>
             </hm-uview-bg-card>
           </view>
         </hm-uview-bg-card>
@@ -65,6 +82,7 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
+import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 
 export default {
   name: "PaymentOrder",
@@ -72,6 +90,7 @@ export default {
     HmUviewBgCard,
     HmUviewText,
     HmUviewIcon,
+    HmUviewImage,
   },
   options: { styleIsolation: "shared" },
   data() {
