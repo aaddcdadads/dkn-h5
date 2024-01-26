@@ -29,6 +29,7 @@
               >
                 <hm-uview-text
                   text="活动报名信息"
+                  font-size="16px"
                   class="ele-51e40d97-b1a2-45a7-b1b6-7d182e2d5e68"
                 >
                 </hm-uview-text>
