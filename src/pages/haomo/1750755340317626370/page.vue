@@ -158,19 +158,6 @@
                             >
                             </hm-uview-text>
                           </view>
-                          <view
-                            class="ele-wrapper ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30"
-                          >
-                            <hm-uview-icon
-                              name="arrow-right"
-                              color="#FFFFFF"
-                              size="12px"
-                              label=""
-                              label-color="#FFFFFF"
-                              class="ele-f1b5f026-f12a-46a9-b78f-dea0efd75a30"
-                            >
-                            </hm-uview-icon>
-                          </view>
                         </hm-uview-bg-card>
                       </view>
                     </hm-uview-bg-card>
@@ -268,10 +255,5 @@ export default {
 
 .ele-wrapper-ad039bb7-8f55-4ab8-98a8-54d1f73db365 {
   float: left;
-}
-
-.ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30 {
-  float: left;
-  padding-top: 6px;
 }
 </style>
