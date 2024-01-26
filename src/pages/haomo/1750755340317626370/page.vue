@@ -122,22 +122,6 @@
                           </view>
                         </hm-uview-bg-card>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39"
-                      >
-                        <hm-uview-bg-card
-                          width="100%"
-                          height=""
-                          border-radius="0"
-                          padding="0"
-                          box-shadow-v-shadow="0"
-                          box-shadow-blur="0"
-                          box-shadow-color="#00000000"
-                          background-color="#FFFFFF1F"
-                          class="ele-951ec1d4-209a-48cc-a908-c78236487f39"
-                        >
-                        </hm-uview-bg-card>
-                      </view>
                     </hm-uview-bg-card>
                   </view>
                 </hm-uview-bg-card>
@@ -215,10 +199,6 @@ export default {
 }
 
 .ele-wrapper-6ba2b397-6caf-44b2-8d16-4ad0c0eba375 {
-  width: 100%;
-}
-
-.ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39 {
   width: 100%;
 }
 </style>
