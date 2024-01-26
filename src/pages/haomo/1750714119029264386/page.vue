@@ -436,7 +436,8 @@ export default {
 
 .ele-wrapper-topBg {
   width: 100%;
-  display: fixed;
+  position: fixed;
+  top: 24px;
   top: 24px;
 }
 
