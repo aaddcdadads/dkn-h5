@@ -749,6 +749,9 @@ export default {
   /deep/.u-iconfont {
     color: #fff !important;
   }
+  /deep/.u-border-bottom:after {
+    border-bottom: 0px !important;
+  }
 }
 
 .ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5 {
