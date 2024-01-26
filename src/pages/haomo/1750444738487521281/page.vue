@@ -39,6 +39,7 @@
                     '&quot;https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang1.png&quot;',
                   ]"
                   value=""
+                  class="ele-8b981cf2-ae14-4b8c-9f72-4cd6c41423a6"
                 >
                 </information-input-box>
               </view>
@@ -90,6 +91,10 @@ export default {
 }
 
 .ele-wrapper-7927eb64-d6cf-4dda-8938-a15bb62187d2 {
+  width: 100%;
+}
+
+.ele-wrapper-8b981cf2-ae14-4b8c-9f72-4cd6c41423a6 {
   width: 100%;
 }
 </style>
