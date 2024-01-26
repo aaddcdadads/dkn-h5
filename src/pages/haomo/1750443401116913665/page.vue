@@ -321,6 +321,11 @@
                   >
                     <hm-uview-field
                       value=""
+                      label=" 姓名/昵称:"
+                      placeholder=" 姓名/昵称"
+                      label-width=""
+                      icon=""
+                      right-icon=""
                       class="ele-6cb30155-1e93-4fb9-9071-e28214a28f94"
                     >
                     </hm-uview-field>
