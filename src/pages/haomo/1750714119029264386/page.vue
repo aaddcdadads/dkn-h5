@@ -120,7 +120,7 @@
                           width="100%"
                           height=""
                           border-radius="0"
-                          padding="0"
+                          padding="12"
                           box-shadow-v-shadow="0"
                           box-shadow-blur="0"
                           box-shadow-color="#00000000"
@@ -252,7 +252,6 @@ export default {
   float: left;
   /deep/.u-image__image {
     border-radius: 50% !important;
-    margin-top: 6px;
   }
 }
 
