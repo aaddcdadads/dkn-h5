@@ -105,16 +105,39 @@
               class="ele-12afd4d4-40cb-4c92-9871-dbe45f394ddf"
             >
               <view
-                class="ele-wrapper ele-wrapper-4691aa84-ddc5-46bf-bd31-d46908cb517f"
+                class="ele-wrapper ele-wrapper-a24979dd-1063-40f2-8de5-134bcc14000b"
               >
-                <hm-uview-text text="报名费用" font-size="14px" color="#409EFF">
-                </hm-uview-text>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-c5aebda0-b42d-4d23-a10d-b223a5145510"
-              >
-                <hm-uview-text text="¥29.00" font-size="14px" color="#409EFF">
-                </hm-uview-text>
+                <hm-uview-bg-card
+                  width="100%"
+                  height="100%"
+                  border-radius=""
+                  padding=""
+                  box-shadow-v-shadow=""
+                  box-shadow-blur=""
+                  background-color="#F2F2F2"
+                  class="ele-a24979dd-1063-40f2-8de5-134bcc14000b"
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-d65d48b8-e4a0-4bbf-bf01-446a7587fd7b"
+                  >
+                    <hm-uview-text
+                      text="报名费用"
+                      font-size="14px"
+                      color="#409EFF"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-09650009-608e-4d01-83af-eedcb5a2c7ad"
+                  >
+                    <hm-uview-text
+                      text="¥29.00"
+                      font-size="14px"
+                      color="#409EFF"
+                    >
+                    </hm-uview-text>
+                  </view>
+                </hm-uview-bg-card>
               </view>
               <view
                 class="ele-wrapper ele-wrapper-acf99afa-7e7b-42dc-a52d-aa67ffc5af5b"
@@ -224,6 +247,10 @@ export default {
 }
 
 .ele-wrapper-12afd4d4-40cb-4c92-9871-dbe45f394ddf {
+  width: 100%;
+}
+
+.ele-wrapper-a24979dd-1063-40f2-8de5-134bcc14000b {
   width: 100%;
 }
 
