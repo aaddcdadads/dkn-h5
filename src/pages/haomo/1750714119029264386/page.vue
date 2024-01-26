@@ -243,7 +243,7 @@
                             {
                               key: 4,
                               title: '已报名4646人',
-                              icon: 'users',
+                              icon: 'peoples',
                               required: false,
                               borderTop: false,
                               borderBottom: false,
