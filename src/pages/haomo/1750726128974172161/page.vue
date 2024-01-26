@@ -28,14 +28,16 @@
                 <hm-uview-text text="¥499.00" color="#F56C6C"> </hm-uview-text>
               </view>
               <view
-                class="ele-wrapper ele-wrapper-25945a72-1ec0-4b4a-8f27-c9f47a3be2a6"
+                class="ele-wrapper ele-wrapper-9e72204c-af42-497a-9f74-447633df49ca"
               >
-                <hm-uview-text
-                  text=" 剩下时间 23:59:59"
-                  font-size="12px"
+                <hm-uview-icon
+                  name="clock"
                   color="#999999"
+                  size="15px"
+                  label="剩下时间 23:59:59"
+                  label-color="#999999"
                 >
-                </hm-uview-text>
+                </hm-uview-icon>
               </view>
             </hm-uview-bg-card>
           </view>
@@ -49,12 +51,14 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 
 export default {
   name: "PaymentOrder",
   components: {
     HmUviewBgCard,
     HmUviewText,
+    HmUviewIcon,
   },
   options: { styleIsolation: "shared" },
   data() {
