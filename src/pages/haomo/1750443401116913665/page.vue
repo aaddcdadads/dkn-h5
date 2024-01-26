@@ -492,7 +492,6 @@ export default {
     transform: translateY(-50%);
   }
   /deep/.u-border-bottom {
-    background-color: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
   }
@@ -524,7 +523,6 @@ export default {
     transform: translateY(-50%);
   }
   /deep/.u-border-bottom {
-    background-color: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
   }
@@ -556,7 +554,6 @@ export default {
     transform: translateY(-50%);
   }
   /deep/.u-border-bottom {
-    background-color: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
   }
@@ -593,7 +590,6 @@ export default {
     transform: translateY(-50%);
   }
   /deep/.u-border-bottom {
-    background-color: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
   }
@@ -625,7 +621,6 @@ export default {
     transform: translateY(-50%);
   }
   /deep/.u-border-bottom {
-    background-color: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
   }
@@ -657,7 +652,6 @@ export default {
     transform: translateY(-50%);
   }
   /deep/.u-border-bottom {
-    background-color: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
   }
