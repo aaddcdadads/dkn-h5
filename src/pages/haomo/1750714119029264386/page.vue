@@ -422,10 +422,12 @@
                   box-shadow-color="#00000000"
                   class="ele-eb5dc617-266d-4627-8ae8-06394a0d2e04"
                 >
-                  <view
-                    class="ele-wrapper ele-wrapper-b6d9fc35-cf31-4da6-ac6d-4af925592418"
-                  >
-                    <hm-uview-button :type="'success'"> </hm-uview-button>
+                  <view class="ele-wrapper ele-wrapper-registrationButton">
+                    <hm-uview-button
+                      ref="registrationButton"
+                      :type="registrationButton.type"
+                    >
+                    </hm-uview-button>
                   </view>
                 </hm-uview-bg-card>
               </view>
@@ -595,6 +597,9 @@ export default {
     return {
       regularPopup: {
         show: false,
+      },
+      registrationButton: {
+        type: "success",
       },
     };
   },
