@@ -101,7 +101,10 @@
               <view
                 class="ele-wrapper ele-wrapper-38ef40fd-ce54-482c-83b9-ef433f2f2aa3"
               >
-                <store-selection> </store-selection>
+                <store-selection
+                  class="ele-38ef40fd-ce54-482c-83b9-ef433f2f2aa3"
+                >
+                </store-selection>
               </view>
             </hm-uview-popup>
           </view>
@@ -268,6 +271,10 @@ export default {
 .ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3 {
   width: 100%;
   margin-top: 20px;
+}
+
+.ele-wrapper-38ef40fd-ce54-482c-83b9-ef433f2f2aa3 {
+  width: 100%;
 }
 
 .ele-wrapper-baoming {
