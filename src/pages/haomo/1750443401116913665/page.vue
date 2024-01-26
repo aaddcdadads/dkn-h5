@@ -42,6 +42,7 @@
                     <hm-uview-text
                       text="订单编号："
                       font-size="13px"
+                      color="#303133"
                       padding="8"
                       class="ele-bf22f4a1-bf87-45db-bf48-3cb458614952"
                     >
