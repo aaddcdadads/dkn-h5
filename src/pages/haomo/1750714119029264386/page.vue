@@ -784,7 +784,9 @@ export default {
 }
 
 .ele-wrapper-eb5dc617-266d-4627-8ae8-06394a0d2e04 {
-  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  z-index: 1000;
 }
 
 .ele-wrapper-registrationButton {
