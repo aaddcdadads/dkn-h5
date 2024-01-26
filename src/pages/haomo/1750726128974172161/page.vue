@@ -95,7 +95,14 @@
           <view
             class="ele-wrapper ele-wrapper-93b24983-ec82-4085-8b41-01add35ab335"
           >
-            <hm-uview-bg-card>
+            <hm-uview-bg-card
+              width="100%"
+              height="100%"
+              border-radius=""
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+              class="ele-93b24983-ec82-4085-8b41-01add35ab335"
+            >
               <view
                 class="ele-wrapper ele-wrapper-fddf7820-c6ab-4f10-99a5-0a8b5d64f78d"
               >
@@ -208,5 +215,11 @@ export default {
 
 .ele-wrapper-47e4d4a0-e917-4c71-ac7b-72efa70ed074 {
   width: 100%;
+  height: 80px;
+}
+
+.ele-wrapper-93b24983-ec82-4085-8b41-01add35ab335 {
+  width: 100%;
+  height: 80px;
 }
 </style>
