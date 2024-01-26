@@ -788,12 +788,10 @@ export default {
 }
 
 .ele-wrapper-registrationButton {
-  /deep/.ele-wrapper-registrationButton {
+  /deep/.ele-wrapper
+    .ele-wrapper-registrationButtonele-wrapper
+    ele-wrapper-registrationButton {
     width: 100% !important;
-    border-radius: 0px !important;
-  }
-  /deep/.ele-wrapper-registrationButton {
-    width: 100%;
   }
 }
 
