@@ -509,7 +509,7 @@ export default {
   font-family: "微软雅黑", sans-serif;
   font-weight: 400;
   color: #999999;
-  . ele-countdown {
+  .ele-countdown {
     padding-bottom: 0 !important;
   }
 }
