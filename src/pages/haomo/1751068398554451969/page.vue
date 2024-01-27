@@ -283,7 +283,11 @@ export default {
 .ele-wrapper-a4540298-8d72-4b6c-a4e3-fab8f56c0be2 {
   width: 100%;
   height: 100%;
-  //position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
