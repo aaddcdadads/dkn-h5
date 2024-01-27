@@ -615,7 +615,7 @@ export default {
   font-size: 16px;
   color: #333333;
   line-height: 20px;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .ele-wrapper-38ef40fd-ce54-482c-83b9-ef433f2f2aa3 {
