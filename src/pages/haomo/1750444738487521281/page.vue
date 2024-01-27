@@ -232,10 +232,9 @@
                       box-shadow-blur=""
                       class="ele-weixin"
                     >
-                      <view
-                        class="ele-wrapper ele-wrapper-7ca56e5f-bb9e-4266-9609-974b238320e3"
-                      >
+                      <view class="ele-wrapper ele-wrapper-weixinbox">
                         <hm-uview-bg-card
+                          ref="weixinbox"
                           width="100%"
                           height="100%"
                           border-radius=""
