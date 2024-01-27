@@ -507,8 +507,6 @@ export default {
     },
     onWeixinRadioRadioChange(e) {
       this.zhifubaoRadio.value = "1";
-
-      console.log("微信", e);
     },
     onZhifubaoRadioRadioChange() {
       this.weixinRadio.value = "1";
