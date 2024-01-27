@@ -475,7 +475,7 @@ export default {
         text: "¥ 59.00",
       },
       weixinRadio: {
-        value: "",
+        value: '""',
         list: [
           {
             name: "",
@@ -484,7 +484,7 @@ export default {
         ],
       },
       zhifubaoRadio: {
-        value: "",
+        value: '""',
         list: [
           {
             name: "",
