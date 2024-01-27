@@ -255,7 +255,7 @@
                           <view
                             class="ele-wrapper ele-wrapper-62635a9e-6ebb-4a1d-ba42-c9d2cab1fb7a"
                           >
-                            <hm-uview-text text="微信支付" font-size="14px">
+                            <hm-uview-text text="微信" font-size="14px">
                             </hm-uview-text>
                           </view>
                         </hm-uview-bg-card>
@@ -297,13 +297,17 @@
                           <view
                             class="ele-wrapper ele-wrapper-5c082d10-4929-407e-a187-f7ffc38593fb"
                           >
-                            <hm-uview-image width="20px" height="20px">
+                            <hm-uview-image
+                              src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/zhifubao.png"
+                              width="20px"
+                              height="20px"
+                            >
                             </hm-uview-image>
                           </view>
                           <view
                             class="ele-wrapper ele-wrapper-b35bc98b-a78b-4d94-a7ca-3a39c30ec0ff"
                           >
-                            <hm-uview-text text="支付宝支付" font-size="14px">
+                            <hm-uview-text text="支付宝" font-size="14px">
                             </hm-uview-text>
                           </view>
                         </hm-uview-bg-card>
