@@ -233,6 +233,28 @@
                       box-shadow-blur=""
                       class="ele-ef71f71b-27b7-4488-bae8-c3fcbc1cc539"
                     >
+                      <view
+                        class="ele-wrapper ele-wrapper-7ca56e5f-bb9e-4266-9609-974b238320e3"
+                      >
+                        <hm-uview-bg-card>
+                          <view
+                            class="ele-wrapper ele-wrapper-4ee8dfaa-e112-4f84-9bbf-49d007f38768"
+                          >
+                            <hm-uview-image
+                              src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/weixin.png"
+                              width="20px"
+                              height="20px"
+                            >
+                            </hm-uview-image>
+                          </view>
+                          <view
+                            class="ele-wrapper ele-wrapper-62635a9e-6ebb-4a1d-ba42-c9d2cab1fb7a"
+                          >
+                            <hm-uview-text text="微信支付" font-size="14px">
+                            </hm-uview-text>
+                          </view>
+                        </hm-uview-bg-card>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -292,6 +314,7 @@ import EventRegistrationCard from "/@/components/dkn-h-5/event-registration-card
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import StoreSelection from "/@/components/dkn-h-5/store-selection/index.vue";
+import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -304,6 +327,7 @@ export default {
     InformationInputBox,
     HmUviewPopup,
     StoreSelection,
+    HmUviewImage,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
