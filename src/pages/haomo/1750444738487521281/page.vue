@@ -207,7 +207,11 @@
               <view
                 class="ele-wrapper ele-wrapper-131486cf-0200-431b-ba59-f7a7ca878714"
               >
-                <hm-uview-text text="¥ 59.00"> </hm-uview-text>
+                <hm-uview-text
+                  text="¥ 59.00"
+                  class="ele-131486cf-0200-431b-ba59-f7a7ca878714"
+                >
+                </hm-uview-text>
               </view>
               <view
                 class="ele-wrapper ele-wrapper-909ed36a-3bd1-4c08-8479-95660a498ada"
@@ -499,6 +503,11 @@ export default {
   font-family: "微软雅黑", sans-serif;
   font-weight: 400;
   color: #999999;
+}
+
+.ele-wrapper-131486cf-0200-431b-ba59-f7a7ca878714 {
+  font-weight: 600;
+  font-family: sans-serif;
 }
 
 .ele-wrapper-909ed36a-3bd1-4c08-8479-95660a498ada {
