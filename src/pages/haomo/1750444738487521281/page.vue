@@ -177,7 +177,11 @@
             </hm-uview-popup>
           </view>
           <view class="ele-wrapper ele-wrapper-payPopup">
-            <hm-uview-popup ref="payPopup" v-model:show="payPopup.show">
+            <hm-uview-popup
+              ref="payPopup"
+              v-model:show="payPopup.show"
+              :mode="'bottom'"
+            >
             </hm-uview-popup>
           </view>
           <view class="ele-wrapper ele-wrapper-baoming">
@@ -242,7 +246,7 @@ export default {
         show: false,
       },
       payPopup: {
-        show: false,
+        show: true,
       },
       eventCard: {
         list: [
