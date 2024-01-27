@@ -509,6 +509,9 @@ export default {
   font-family: "微软雅黑", sans-serif;
   font-weight: 400;
   color: #999999;
+  . ele-countdown {
+    padding: 5px 5px 0 5px;
+  }
 }
 
 .ele-wrapper-prices {
