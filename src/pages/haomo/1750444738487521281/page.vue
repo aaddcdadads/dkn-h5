@@ -261,6 +261,17 @@
                           </view>
                         </hm-uview-bg-card>
                       </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-cc0f938d-1a42-4b7c-9491-b6564f6a5c1d"
+                      >
+                        <hm-uview-radio
+                          value=""
+                          title=""
+                          :list="[{ name: '', disabled: false }]"
+                          active-color="#22C386"
+                        >
+                        </hm-uview-radio>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -321,6 +332,7 @@ import InformationInputBox from "/@/components/dkn-h-5/information-input-box/ind
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import StoreSelection from "/@/components/dkn-h-5/store-selection/index.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
+import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -334,6 +346,7 @@ export default {
     HmUviewPopup,
     StoreSelection,
     HmUviewImage,
+    HmUviewRadio,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -399,6 +412,15 @@ export default {
       },
       prices: {
         text: "¥ 59.00",
+      },
+      "cc0f938d-1a42-4b7c-9491-b6564f6a5c1d": {
+        value: "",
+        list: [
+          {
+            name: "",
+            disabled: false,
+          },
+        ],
       },
       payButton: {
         type: "primary",
