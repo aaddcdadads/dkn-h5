@@ -83,7 +83,7 @@
                           value=""
                           label=" 姓名/昵称:"
                           placeholder="姓名/昵称"
-                          label-width="150"
+                          label-width="160"
                           maxlength="250"
                           icon=""
                           right-icon=""
