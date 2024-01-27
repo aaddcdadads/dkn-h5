@@ -488,6 +488,9 @@ export default {
     display: none;
   }
   width: 20%;
+  /deep/.uni-input-input {
+    font-size: 13px;
+  }
 }
 
 .ele-wrapper-Buttonwan {
