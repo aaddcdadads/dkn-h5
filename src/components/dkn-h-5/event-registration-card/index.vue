@@ -178,7 +178,7 @@ export default {
 .activity{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 3px;
 }
 .numberBox {
