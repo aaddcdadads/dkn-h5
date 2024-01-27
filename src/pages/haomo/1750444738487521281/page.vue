@@ -187,7 +187,7 @@
                 class="ele-wrapper ele-wrapper-c1e777b1-33b4-43de-8b09-b43843222e3f"
               >
                 <hm-uview-text
-                  text="活动名称"
+                  text="派对甜心奖牌趣味玩款5.2公里"
                   font-size="18px"
                   class="ele-c1e777b1-33b4-43de-8b09-b43843222e3f"
                 >
