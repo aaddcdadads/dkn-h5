@@ -487,6 +487,7 @@ export default {
   /deep/.uni-input-input {
     display: none;
   }
+  width: 20%;
 }
 
 .ele-wrapper-Buttonwan {
