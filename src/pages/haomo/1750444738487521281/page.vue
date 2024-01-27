@@ -274,7 +274,7 @@
                       <view
                         class="ele-wrapper ele-wrapper-5b970f5b-af2a-4578-ad89-79eae1626ccc"
                       >
-                        <u-radio> </u-radio>
+                        <u-radio :shape="'circle'"> </u-radio>
                       </view>
                     </hm-uview-bg-card>
                   </view>
