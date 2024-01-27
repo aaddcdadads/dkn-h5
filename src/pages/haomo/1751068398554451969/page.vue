@@ -139,6 +139,21 @@
                   box-shadow-blur=""
                   class="ele-41f7b43e-8542-4a04-ac12-f8bdeac98d58"
                 >
+                  <view
+                    class="ele-wrapper ele-wrapper-4431c017-f3ad-436a-81e2-1cb7e17f26de"
+                  >
+                    <hm-uview-field
+                      value=""
+                      label="活动名称:"
+                      placeholder="区域/门店名称"
+                      label-width="150"
+                      maxlength="200"
+                      icon=""
+                      right-icon=""
+                      class="ele-4431c017-f3ad-436a-81e2-1cb7e17f26de"
+                    >
+                    </hm-uview-field>
+                  </view>
                 </hm-uview-bg-card>
               </view>
               <view
@@ -198,6 +213,9 @@ export default {
         value: "",
       },
       "e3774afb-14a0-4b23-adda-2624414eb025": {
+        value: "",
+      },
+      "4431c017-f3ad-436a-81e2-1cb7e17f26de": {
         value: "",
       },
     };
@@ -346,6 +364,35 @@ export default {
 
 .ele-wrapper-41f7b43e-8542-4a04-ac12-f8bdeac98d58 {
   width: 100%;
+}
+
+.ele-wrapper-4431c017-f3ad-436a-81e2-1cb7e17f26de {
+  width: 100%;
+  height: 45px;
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  /deep/.u-border-bottom {
+    border-radius: 5px;
+    height: 45px;
+  }
+  /deep/.uni-input-input {
+    font-size: 13px;
+  }
+  /deep/.u-label-text {
+    font-size: 13px;
+  }
+  /deep/.u-label-text > span {
+    width: 100%;
+  }
+  /deep/.u-label {
+    max-width: 70px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
 }
 
 .ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451 {
