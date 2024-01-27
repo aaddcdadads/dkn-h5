@@ -510,6 +510,9 @@ export default {
 .ele-wrapper-prices {
   font-weight: 600;
   font-family: sans-serif;
+  .ele-prices {
+    padding: 0 !important;
+  }
 }
 
 .ele-wrapper-909ed36a-3bd1-4c08-8479-95660a498ada {
