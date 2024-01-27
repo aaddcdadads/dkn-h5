@@ -468,6 +468,9 @@ export default {
   /deep/.fild-body {
     display: none;
   }
+  /deep/uni-view {
+    width: 90px;
+  }
 }
 
 .ele-wrapper-57f09a13-8f55-4241-a6cc-270dd43ca1ba {
