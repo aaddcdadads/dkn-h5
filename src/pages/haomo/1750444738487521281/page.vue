@@ -510,7 +510,7 @@ export default {
   font-weight: 400;
   color: #999999;
   . ele-countdown {
-    padding: 5px 5px 0 5px;
+    padding-bottom: 0 !important;
   }
 }
 
