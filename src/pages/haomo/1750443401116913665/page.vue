@@ -259,6 +259,12 @@
                         >
                         </hm-uview-field>
                       </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-f85e21b2-2085-497a-bd00-7d1ee3157635"
+                      >
+                        <hm-uview-picker :start-year="1950" :end-year="2050">
+                        </hm-uview-picker>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                 </hm-uview-bg-card>
@@ -296,6 +302,7 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
+import HmUviewPicker from "/@/components/built-in/uniapp-uview-vue3/HmUviewPicker.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -304,6 +311,7 @@ export default {
     HmUviewBgCard,
     HmUviewText,
     HmUviewField,
+    HmUviewPicker,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
