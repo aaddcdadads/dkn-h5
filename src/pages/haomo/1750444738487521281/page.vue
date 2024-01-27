@@ -267,7 +267,6 @@
                           v-model:value="weixinRadio.value"
                           title=""
                           :list="weixinRadio.list"
-                          :text-location="true"
                           active-color="#22C386"
                         >
                         </hm-uview-radio>
