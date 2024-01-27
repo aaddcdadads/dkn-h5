@@ -181,7 +181,13 @@
                       <view
                         class="ele-wrapper ele-wrapper-a9f7917c-a6b2-456e-b630-a16fbcb30331"
                       >
-                        <hm-uview-text font-size="13px"> </hm-uview-text>
+                        <hm-uview-text text="活动奖品" font-size="13px">
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-671b3aa7-c14a-4147-84c1-7a42d62edf5c"
+                      >
+                        <hm-uview-image> </hm-uview-image>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -220,6 +226,7 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -228,6 +235,7 @@ export default {
     HmUviewBgCard,
     HmUviewField,
     HmUviewText,
+    HmUviewImage,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
