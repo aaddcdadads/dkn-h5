@@ -240,6 +240,7 @@
                           border-radius=""
                           box-shadow-v-shadow=""
                           box-shadow-blur=""
+                          class="ele-weixinbox"
                         >
                           <view
                             class="ele-wrapper ele-wrapper-4ee8dfaa-e112-4f84-9bbf-49d007f38768"
@@ -628,6 +629,14 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+.ele-wrapper-weixinbox {
+  .hm-bg-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
