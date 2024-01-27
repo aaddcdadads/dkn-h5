@@ -478,7 +478,7 @@ export default {
 }
 
 .ele-wrapper-payPopup {
-  .uni-scroll-view-content {
+  /deep/.uni-scroll-view-content {
     display: flex;
     flex-direction: column;
     align-items: center;
