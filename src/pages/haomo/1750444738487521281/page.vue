@@ -236,7 +236,13 @@
                       <view
                         class="ele-wrapper ele-wrapper-7ca56e5f-bb9e-4266-9609-974b238320e3"
                       >
-                        <hm-uview-bg-card>
+                        <hm-uview-bg-card
+                          width="100%"
+                          height="100%"
+                          border-radius=""
+                          box-shadow-v-shadow=""
+                          box-shadow-blur=""
+                        >
                           <view
                             class="ele-wrapper ele-wrapper-4ee8dfaa-e112-4f84-9bbf-49d007f38768"
                           >
