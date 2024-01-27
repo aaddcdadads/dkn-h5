@@ -498,6 +498,7 @@ export default {
     height: 40px;
     border: 0px;
     font-size: 16px;
+    vertical-align: bottom;
   }
 }
 </style>
