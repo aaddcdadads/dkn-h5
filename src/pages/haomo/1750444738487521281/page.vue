@@ -176,6 +176,10 @@
               </view>
             </hm-uview-popup>
           </view>
+          <view class="ele-wrapper ele-wrapper-payPopup">
+            <hm-uview-popup ref="payPopup" v-model:show="payPopup.show">
+            </hm-uview-popup>
+          </view>
           <view class="ele-wrapper ele-wrapper-baoming">
             <hm-uview-bg-card
               ref="baoming"
@@ -235,6 +239,9 @@ export default {
     return {
       shopPop: {
         show: false,
+      },
+      payPopup: {
+        show: true,
       },
       eventCard: {
         list: [
