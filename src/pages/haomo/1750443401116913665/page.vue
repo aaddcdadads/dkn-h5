@@ -410,6 +410,9 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
+  /deep/.uni-input-input {
+    font-size: 13px;
+  }
 }
 
 .ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9 {
@@ -432,7 +435,7 @@ export default {
     height: 45px;
   }
   /deep/.uni-input-input {
-    font-text: 13px;
+    font-size: 13px;
   }
   /deep/.u-label-text {
     font-size: 13px;
