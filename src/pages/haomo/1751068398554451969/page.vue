@@ -460,6 +460,7 @@ export default {
   /deep/.fild-body {
     width: 0px;
   }
+  padding-right: 0px;
 }
 
 .ele-wrapper-Buttonwan {
