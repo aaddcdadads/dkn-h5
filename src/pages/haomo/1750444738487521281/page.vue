@@ -188,14 +188,13 @@
               background-color="#F0F2F6"
               class="ele-baoming"
             >
-              <view
-                class="ele-wrapper ele-wrapper-acf99afa-7e7b-42dc-a52d-aa67ffc5af5b"
-              >
+              <view class="ele-wrapper ele-wrapper-payButton">
                 <hm-uview-button
-                  :type="'primary'"
-                  :shape="'circle'"
-                  text="总费用：¥29.0 立即报名"
-                  class="ele-acf99afa-7e7b-42dc-a52d-aa67ffc5af5b"
+                  ref="payButton"
+                  :type="payButton.type"
+                  :shape="payButton.shape"
+                  :text="payButton.text"
+                  class="ele-payButton"
                 >
                 </hm-uview-button>
               </view>
@@ -282,6 +281,11 @@ export default {
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendians.png",
         ],
         value: "",
+      },
+      payButton: {
+        type: "primary",
+        shape: "circle",
+        text: "总费用：¥29.0 立即报名",
       },
     };
   },
@@ -410,7 +414,7 @@ export default {
   }
 }
 
-.ele-wrapper-acf99afa-7e7b-42dc-a52d-aa67ffc5af5b {
+.ele-wrapper-payButton {
   width: 100%;
   /deep/.u-btn {
     font-family: "PingFangSC-Regular", "PingFang SC", sans-serif;
