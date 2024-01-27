@@ -410,6 +410,9 @@ export default {
   /deep/.u-label {
     max-width: 70px;
   }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
 }
 
 .ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9 {
