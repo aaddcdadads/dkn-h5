@@ -204,12 +204,11 @@
                 >
                 </hm-uview-text>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-131486cf-0200-431b-ba59-f7a7ca878714"
-              >
+              <view class="ele-wrapper ele-wrapper-prices">
                 <hm-uview-text
-                  text="¥ 59.00"
-                  class="ele-131486cf-0200-431b-ba59-f7a7ca878714"
+                  ref="prices"
+                  :text="prices.text"
+                  class="ele-prices"
                 >
                 </hm-uview-text>
               </view>
@@ -362,6 +361,9 @@ export default {
         ],
         value: "",
       },
+      prices: {
+        text: "¥ 59.00",
+      },
       payButton: {
         type: "primary",
         shape: "circle",
@@ -505,7 +507,7 @@ export default {
   color: #999999;
 }
 
-.ele-wrapper-131486cf-0200-431b-ba59-f7a7ca878714 {
+.ele-wrapper-prices {
   font-weight: 600;
   font-family: sans-serif;
 }
