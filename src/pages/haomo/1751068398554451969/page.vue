@@ -454,6 +454,7 @@ export default {
   /deep/.u-label-text {
     font-size: 13px;
   }
+  vertical-align: top;
 }
 
 .ele-wrapper-Buttonwan {
