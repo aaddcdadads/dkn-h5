@@ -222,16 +222,15 @@
                   box-shadow-blur=""
                   class="ele-909ed36a-3bd1-4c08-8479-95660a498ada"
                 >
-                  <view
-                    class="ele-wrapper ele-wrapper-ef71f71b-27b7-4488-bae8-c3fcbc1cc539"
-                  >
+                  <view class="ele-wrapper ele-wrapper-weixin">
                     <hm-uview-bg-card
+                      ref="weixin"
                       width="100%"
                       height="100%"
                       border-radius=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
-                      class="ele-ef71f71b-27b7-4488-bae8-c3fcbc1cc539"
+                      class="ele-weixin"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-7ca56e5f-bb9e-4266-9609-974b238320e3"
@@ -285,6 +284,30 @@
                       box-shadow-blur=""
                       class="ele-ec374c25-1ad9-4842-8619-fd4e6a1bf1a2"
                     >
+                      <view
+                        class="ele-wrapper ele-wrapper-4a7ff4e7-a4da-4899-9ab7-ac456e2dc851"
+                      >
+                        <hm-uview-bg-card
+                          width="100%"
+                          height="100%"
+                          border-radius=""
+                          box-shadow-v-shadow=""
+                          box-shadow-blur=""
+                        >
+                          <view
+                            class="ele-wrapper ele-wrapper-5c082d10-4929-407e-a187-f7ffc38593fb"
+                          >
+                            <hm-uview-image width="20px" height="20px">
+                            </hm-uview-image>
+                          </view>
+                          <view
+                            class="ele-wrapper ele-wrapper-b35bc98b-a78b-4d94-a7ca-3a39c30ec0ff"
+                          >
+                            <hm-uview-text text="支付宝支付" font-size="14px">
+                            </hm-uview-text>
+                          </view>
+                        </hm-uview-bg-card>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                 </hm-uview-bg-card>
@@ -580,7 +603,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-ef71f71b-27b7-4488-bae8-c3fcbc1cc539 {
+.ele-wrapper-weixin {
   width: 100%;
 }
 
