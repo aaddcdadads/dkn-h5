@@ -181,6 +181,7 @@
               ref="payPopup"
               v-model:show="payPopup.show"
               :mode="'bottom'"
+              class="ele-payPopup"
             >
               <view
                 class="ele-wrapper ele-wrapper-c1e777b1-33b4-43de-8b09-b43843222e3f"
@@ -474,6 +475,14 @@ export default {
 
 .ele-wrapper-38ef40fd-ce54-482c-83b9-ef433f2f2aa3 {
   width: 100%;
+}
+
+.ele-wrapper-payPopup {
+  .uni-scroll-view-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .ele-wrapper-8ce1ac9e-4608-48c5-9cd4-9f0a72761dc3 {
