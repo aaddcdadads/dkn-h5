@@ -456,7 +456,7 @@ export default {
 
 .ele-wrapper-a9f7917c-a6b2-456e-b630-a16fbcb30331 {
   vertical-align: top;
-  margin-left: 5px;
+  margin-left: 3px;
 }
 
 .ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451 {
