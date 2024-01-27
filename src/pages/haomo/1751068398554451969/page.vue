@@ -477,6 +477,7 @@ export default {
     border-radius: 20px;
     height: 40px;
     border: 0px;
+    font-size: 16px;
   }
 }
 </style>
