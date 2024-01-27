@@ -267,9 +267,15 @@
                           v-model:value="weixinRadio.value"
                           title=""
                           :list="weixinRadio.list"
+                          :text-location="true"
                           active-color="#22C386"
                         >
                         </hm-uview-radio>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-5b970f5b-af2a-4578-ad89-79eae1626ccc"
+                      >
+                        <u-radio> </u-radio>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -477,7 +483,7 @@ export default {
         value: "",
         list: [
           {
-            name: "weixin",
+            name: "",
             disabled: false,
           },
         ],
