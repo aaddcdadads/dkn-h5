@@ -186,7 +186,11 @@
               <view
                 class="ele-wrapper ele-wrapper-c1e777b1-33b4-43de-8b09-b43843222e3f"
               >
-                <hm-uview-text text="活动名称" font-size="16px">
+                <hm-uview-text
+                  text="活动名称"
+                  font-size="18px"
+                  class="ele-c1e777b1-33b4-43de-8b09-b43843222e3f"
+                >
                 </hm-uview-text>
               </view>
               <view
@@ -483,6 +487,11 @@ export default {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.ele-wrapper-c1e777b1-33b4-43de-8b09-b43843222e3f {
+  font-family: monospace;
+  font-weight: 600;
 }
 
 .ele-wrapper-8ce1ac9e-4608-48c5-9cd4-9f0a72761dc3 {
