@@ -402,7 +402,7 @@ export default {
     width: 100%;
   }
   /deep/.u-label {
-    max-width: 20%;
+    max-width: 18%;
   }
   /deep/.u-label-text > span {
     width: 100%;
