@@ -395,7 +395,7 @@ export default {
     height: 45px;
   }
   /deep/.u-flex-1 {
-    font-text: 13px;
+    font-size: 13px;
   }
   /deep/.u-label-text {
     font-size: 13px;
@@ -471,7 +471,7 @@ export default {
     height: 45px;
   }
   /deep/.uni-input-input {
-    font-text: 13px;
+    font-size: 13px;
   }
   /deep/.u-label-text {
     font-size: 13px;
@@ -507,7 +507,7 @@ export default {
     height: 45px;
   }
   /deep/.uni-input-input {
-    font-text: 13px;
+    font-size: 13px;
   }
   /deep/.u-label-text {
     font-size: 13px;
@@ -543,7 +543,7 @@ export default {
     height: 45px;
   }
   /deep/.uni-input-input {
-    font-text: 13px;
+    font-size: 13px;
   }
   /deep/.u-label-text {
     font-size: 13px;
@@ -579,7 +579,7 @@ export default {
     height: 45px;
   }
   /deep/.uni-input-input {
-    font-text: 13px;
+    font-size: 13px;
   }
   /deep/.u-label-text {
     font-size: 13px;
@@ -615,7 +615,7 @@ export default {
     height: 45px;
   }
   /deep/.uni-input-input {
-    font-text: 13px;
+    font-size: 13px;
   }
   /deep/.u-label-text {
     font-size: 13px;
