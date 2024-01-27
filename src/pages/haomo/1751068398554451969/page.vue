@@ -202,7 +202,10 @@
                       <view
                         class="ele-wrapper ele-wrapper-57f09a13-8f55-4241-a6cc-270dd43ca1ba"
                       >
-                        <hm-uview-image> </hm-uview-image>
+                        <hm-uview-image
+                          class="ele-57f09a13-8f55-4241-a6cc-270dd43ca1ba"
+                        >
+                        </hm-uview-image>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -462,6 +465,10 @@ export default {
   /deep/.u-field {
     padding-right: 0px;
   }
+}
+
+.ele-wrapper-57f09a13-8f55-4241-a6cc-270dd43ca1ba {
+  margin-left: 10px;
 }
 
 .ele-wrapper-Buttonwan {
