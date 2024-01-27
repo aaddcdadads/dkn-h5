@@ -121,7 +121,7 @@
               >
                 <information-input-box
                   :left-src="[
-                    'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/xinxis.png',
+                    'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/xinxi_1.png',
                     'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/xinxi.png',
                   ]"
                   value=""
@@ -473,7 +473,7 @@ export default {
       },
       "5102357a-cd29-4bb3-9a1f-ab709e15c3a8": {
         leftSrc: [
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/xinxis.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/xinxi_1.png",
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/xinxi.png",
         ],
         value: "",
