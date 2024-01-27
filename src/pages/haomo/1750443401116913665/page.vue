@@ -401,9 +401,6 @@ export default {
     font-size: 13px;
     width: 100%;
   }
-  // /deep/.u-label{
-  // max-width: 16%;
-  // }
   /deep/.u-label-text > span {
     width: 100%;
   }
@@ -440,6 +437,15 @@ export default {
   /deep/.u-label-text {
     font-size: 13px;
   }
+  /deep/.u-label-text > span {
+    width: 100%;
+  }
+  /deep/.u-label {
+    max-width: 70px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
 }
 
 .ele-wrapper-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0 {
@@ -465,6 +471,15 @@ export default {
     font-text: 13px;
   }
   /deep/.u-label-text {
+    font-size: 13px;
+  }
+  /deep/.u-label-text > span {
+    width: 100%;
+  }
+  /deep/.u-label {
+    max-width: 70px;
+  }
+  /deep/.input-placeholder {
     font-size: 13px;
   }
 }
@@ -494,6 +509,15 @@ export default {
   /deep/.u-label-text {
     font-size: 13px;
   }
+  /deep/.u-label-text > span {
+    width: 100%;
+  }
+  /deep/.u-label {
+    max-width: 70px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
 }
 
 .ele-wrapper-1e638196-949e-4db0-8c6d-ffb770b0ac8a {
@@ -519,6 +543,15 @@ export default {
     font-text: 13px;
   }
   /deep/.u-label-text {
+    font-size: 13px;
+  }
+  /deep/.u-label-text > span {
+    width: 100%;
+  }
+  /deep/.u-label {
+    max-width: 70px;
+  }
+  /deep/.input-placeholder {
     font-size: 13px;
   }
 }
@@ -548,6 +581,15 @@ export default {
   /deep/.u-label-text {
     font-size: 13px;
   }
+  /deep/.u-label-text > span {
+    width: 100%;
+  }
+  /deep/.u-label {
+    max-width: 70px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
 }
 
 .ele-wrapper-e4f5cc89-8551-4bdd-a6ee-b6edac67ce3c {
@@ -573,6 +615,15 @@ export default {
     font-text: 13px;
   }
   /deep/.u-label-text {
+    font-size: 13px;
+  }
+  /deep/.u-label-text > span {
+    width: 100%;
+  }
+  /deep/.u-label {
+    max-width: 70px;
+  }
+  /deep/.input-placeholder {
     font-size: 13px;
   }
 }
