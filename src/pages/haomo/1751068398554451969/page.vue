@@ -168,35 +168,6 @@
                     </hm-uview-bg-card>
                   </view>
                   <view
-                    class="ele-wrapper ele-wrapper-51d62b7e-f56f-47ea-a8d9-48ecf77448e8"
-                  >
-                    <hm-uview-bg-card
-                      width="100%"
-                      height="100%"
-                      padding=""
-                      box-shadow-v-shadow=""
-                      box-shadow-blur=""
-                      class="ele-51d62b7e-f56f-47ea-a8d9-48ecf77448e8"
-                    >
-                      <view
-                        class="ele-wrapper ele-wrapper-a9f7917c-a6b2-456e-b630-a16fbcb30331"
-                      >
-                        <hm-uview-text
-                          text="活动奖品:"
-                          font-size="13px"
-                          padding=""
-                          class="ele-a9f7917c-a6b2-456e-b630-a16fbcb30331"
-                        >
-                        </hm-uview-text>
-                      </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-671b3aa7-c14a-4147-84c1-7a42d62edf5c"
-                      >
-                        <hm-uview-image> </hm-uview-image>
-                      </view>
-                    </hm-uview-bg-card>
-                  </view>
-                  <view
                     class="ele-wrapper ele-wrapper-6c9ec785-f135-40cb-9d49-e774f8bd851e"
                   >
                     <hm-uview-bg-card
@@ -224,6 +195,11 @@
                           </view>
                         </hm-uview-field>
                       </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-57f09a13-8f55-4241-a6cc-270dd43ca1ba"
+                      >
+                        <hm-uview-image> </hm-uview-image>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                 </hm-uview-bg-card>
@@ -248,7 +224,6 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
-import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
@@ -257,7 +232,6 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewField,
-    HmUviewText,
     HmUviewImage,
     HmUviewButton,
   },
@@ -460,20 +434,6 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-}
-
-.ele-wrapper-51d62b7e-f56f-47ea-a8d9-48ecf77448e8 {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin: 15px 0px;
-}
-
-.ele-wrapper-a9f7917c-a6b2-456e-b630-a16fbcb30331 {
-  vertical-align: top;
-  margin-left: 3px;
-  font-family: serif;
-  padding: 0.625rem 0.875rem;
 }
 
 .ele-wrapper-6c9ec785-f135-40cb-9d49-e774f8bd851e {
