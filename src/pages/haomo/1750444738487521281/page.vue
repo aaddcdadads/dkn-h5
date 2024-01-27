@@ -362,7 +362,7 @@
               padding=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
-              background-color="#F0F2F6"
+              background-color="#F9F5F5"
               class="ele-baoming"
             >
               <view class="ele-wrapper ele-wrapper-payButton">
