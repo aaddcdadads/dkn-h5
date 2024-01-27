@@ -185,7 +185,7 @@
                         <hm-uview-field
                           value=""
                           label="活动奖品:"
-                          label-width=""
+                          label-width="150"
                           maxlength=""
                           icon=""
                           right-icon=""
@@ -448,7 +448,6 @@ export default {
 }
 
 .ele-wrapper-929420c8-3de3-499f-87e8-c054a0fa0583 {
-  width: 13%;
   vertical-align: top;
   /deep/.uni-input-input {
     display: none;
