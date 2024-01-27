@@ -196,6 +196,30 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-6c9ec785-f135-40cb-9d49-e774f8bd851e"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height="100%"
+                      padding=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
+                      class="ele-6c9ec785-f135-40cb-9d49-e774f8bd851e"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-929420c8-3de3-499f-87e8-c054a0fa0583"
+                      >
+                        <hm-uview-field
+                          value=""
+                          label-width=""
+                          icon=""
+                          right-icon=""
+                        >
+                        </hm-uview-field>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
                 </hm-uview-bg-card>
               </view>
               <view class="ele-wrapper ele-wrapper-Buttonwan">
@@ -248,6 +272,9 @@ export default {
         value: "",
       },
       "1f2e658a-de48-485a-b375-bcd45f6c965b": {
+        value: "",
+      },
+      "929420c8-3de3-499f-87e8-c054a0fa0583": {
         value: "",
       },
     };
@@ -441,6 +468,13 @@ export default {
   margin-left: 3px;
   font-family: serif;
   padding: 0.625rem 0.875rem;
+}
+
+.ele-wrapper-6c9ec785-f135-40cb-9d49-e774f8bd851e {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
 }
 
 .ele-wrapper-Buttonwan {
