@@ -215,6 +215,7 @@
                           label-width=""
                           icon=""
                           right-icon=""
+                          class="ele-929420c8-3de3-499f-87e8-c054a0fa0583"
                         >
                           <view
                             class="ele-wrapper ele-wrapper-ec485035-789b-4f3c-9dc5-4c4c7e4e5776"
@@ -480,6 +481,12 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
+}
+
+.ele-wrapper-929420c8-3de3-499f-87e8-c054a0fa0583 {
+  /deep/.uni-input-input {
+    display: none;
+  }
 }
 
 .ele-wrapper-Buttonwan {
