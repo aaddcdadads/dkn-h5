@@ -184,7 +184,7 @@
                         <hm-uview-text
                           text="活动奖品:"
                           font-size="13px"
-                          padding="10"
+                          padding=""
                           class="ele-a9f7917c-a6b2-456e-b630-a16fbcb30331"
                         >
                         </hm-uview-text>
