@@ -231,6 +231,7 @@
                       border-radius=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
+                      class="ele-ef71f71b-27b7-4488-bae8-c3fcbc1cc539"
                     >
                     </hm-uview-bg-card>
                   </view>
@@ -243,6 +244,7 @@
                       border-radius=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
+                      class="ele-ec374c25-1ad9-4842-8619-fd4e6a1bf1a2"
                     >
                     </hm-uview-bg-card>
                   </view>
@@ -523,6 +525,14 @@ export default {
 }
 
 .ele-wrapper-909ed36a-3bd1-4c08-8479-95660a498ada {
+  width: 100%;
+}
+
+.ele-wrapper-ef71f71b-27b7-4488-bae8-c3fcbc1cc539 {
+  width: 100%;
+}
+
+.ele-wrapper-ec374c25-1ad9-4842-8619-fd4e6a1bf1a2 {
   width: 100%;
 }
 
