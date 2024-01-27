@@ -340,7 +340,7 @@
                     class="ele-wrapper ele-wrapper-cc32d657-8fd9-4162-9086-b69b68cf0bdd"
                   >
                     <hm-uview-button
-                      :type="'success'"
+                      :type="'primary'"
                       text="确认支付"
                       class="ele-cc32d657-8fd9-4162-9086-b69b68cf0bdd"
                     >
