@@ -349,11 +349,12 @@ export default {
     border-radius: 5px;
     height: 45px;
   }
-  /deep/.uni-input-input {
+  /deep/.u-flex-1 {
     font-size: 13px;
   }
   /deep/.u-label-text {
     font-size: 13px;
+    width: 100%;
   }
   /deep/.u-label-text > span {
     width: 100%;
@@ -362,6 +363,9 @@ export default {
     max-width: 70px;
   }
   /deep/.input-placeholder {
+    font-size: 13px;
+  }
+  /deep/.uni-input-input {
     font-size: 13px;
   }
 }
