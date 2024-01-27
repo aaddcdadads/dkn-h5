@@ -198,6 +198,7 @@
                   :type="payButton.type"
                   :shape="payButton.shape"
                   :text="payButton.text"
+                  @click="onPayButtonClick"
                   class="ele-payButton"
                 >
                 </hm-uview-button>
@@ -241,7 +242,7 @@ export default {
         show: false,
       },
       payPopup: {
-        show: true,
+        show: false,
       },
       eventCard: {
         list: [
@@ -300,6 +301,9 @@ export default {
   methods: {
     onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon() {
       this.shopPop.show = true;
+    },
+    onPayButtonClick() {
+      this.payPopup.show = true;
     },
   },
 };
