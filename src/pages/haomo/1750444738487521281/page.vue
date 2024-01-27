@@ -1229,6 +1229,7 @@ export default {
 .ele-wrapper-69d470b9-0c45-46a6-92d6-89fc50270dd8 {
   width: 100%;
   height: 80%;
+  overflow: hidden;
 }
 
 .ele-wrapper-payPopup {
