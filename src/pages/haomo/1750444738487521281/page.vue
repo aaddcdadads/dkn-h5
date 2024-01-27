@@ -688,7 +688,7 @@ export default {
 
 .ele-wrapper-cc32d657-8fd9-4162-9086-b69b68cf0bdd {
   width: 100%;
-  background-color: "#22C386";
+  background-color: #22c386;
 }
 
 .ele-wrapper-baoming {
