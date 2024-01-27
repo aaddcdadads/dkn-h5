@@ -268,6 +268,7 @@
                           title=""
                           :list="weixinRadio.list"
                           active-color="#22C386"
+                          @radioChange="onWeixinRadioRadioChange"
                         >
                         </hm-uview-radio>
                       </view>
@@ -502,6 +503,9 @@ export default {
   methods: {
     onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon() {
       this.shopPop.show = true;
+    },
+    onWeixinRadioRadioChange(e) {
+      console.log("123", e);
     },
     onPayButtonClick() {
       this.payPopup.show = true;
