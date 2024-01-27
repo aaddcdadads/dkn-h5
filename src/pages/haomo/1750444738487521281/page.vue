@@ -437,7 +437,7 @@ export default {
         ],
       },
       payPopup: {
-        show: true,
+        show: false,
       },
       eventCard: {
         list: [
