@@ -184,6 +184,7 @@
                         <hm-uview-text
                           text="活动奖品:"
                           font-size="13px"
+                          padding="10"
                           class="ele-a9f7917c-a6b2-456e-b630-a16fbcb30331"
                         >
                         </hm-uview-text>
@@ -455,6 +456,7 @@ export default {
 
 .ele-wrapper-a9f7917c-a6b2-456e-b630-a16fbcb30331 {
   vertical-align: top;
+  margin-left: 10px;
 }
 
 .ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451 {
