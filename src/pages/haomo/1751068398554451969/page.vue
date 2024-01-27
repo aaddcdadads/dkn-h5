@@ -198,18 +198,6 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
-              >
-                <hm-uview-text
-                  text=" 返回活动详情页"
-                  font-size="1em"
-                  color="#409EFF"
-                  @onClick="onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick"
-                  class="ele-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
-                >
-                </hm-uview-text>
-              </view>
               <view class="ele-wrapper ele-wrapper-Buttonwan">
                 <hm-uview-button
                   ref="Buttonwan"
@@ -265,13 +253,7 @@ export default {
     };
   },
   watch: {},
-  methods: {
-    onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
-      uni.$u.route(
-        "https://stage.block-design.cn/edit-page/?pageId=1750700281953259522"
-      );
-    },
-  },
+  methods: {},
 };
 </script>
 
@@ -458,11 +440,6 @@ export default {
   vertical-align: top;
   margin-left: 3px;
   font-family: serif;
-}
-
-.ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451 {
-  width: 80%;
-  margin-top: 20px;
 }
 
 .ele-wrapper-Buttonwan {
