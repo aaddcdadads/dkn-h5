@@ -465,6 +465,9 @@ export default {
   /deep/.u-field {
     padding-right: 0px;
   }
+  /deep/.fild-body {
+    display: none;
+  }
 }
 
 .ele-wrapper-57f09a13-8f55-4241-a6cc-270dd43ca1ba {
