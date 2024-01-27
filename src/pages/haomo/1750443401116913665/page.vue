@@ -654,7 +654,5 @@ export default {
     height: 40px;
     border: 0px;
   }
-  position: absolute;
-  bottom: 20px;
 }
 </style>
