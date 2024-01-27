@@ -492,6 +492,7 @@ export default {
 .ele-wrapper-c1e777b1-33b4-43de-8b09-b43843222e3f {
   font-family: monospace;
   font-weight: 600;
+  margin-top: 12px;
 }
 
 .ele-wrapper-8ce1ac9e-4608-48c5-9cd4-9f0a72761dc3 {
