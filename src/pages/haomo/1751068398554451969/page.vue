@@ -216,6 +216,11 @@
                           icon=""
                           right-icon=""
                         >
+                          <view
+                            class="ele-wrapper ele-wrapper-ec485035-789b-4f3c-9dc5-4c4c7e4e5776"
+                          >
+                            <hm-uview-image> </hm-uview-image>
+                          </view>
                         </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
