@@ -404,6 +404,9 @@ export default {
   /deep/.u-label {
     max-width: 20%;
   }
+  /deep/.u-label-text > span {
+    width: 100%;
+  }
 }
 
 .ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9 {
