@@ -448,21 +448,19 @@ export default {
 }
 
 .ele-wrapper-929420c8-3de3-499f-87e8-c054a0fa0583 {
+  width: 13%;
+  vertical-align: top;
   /deep/.uni-input-input {
     display: none;
-  }
-  width: 13%;
-  /deep/.uni-input-input {
     font-size: 13px;
   }
   /deep/.u-label-text {
     font-size: 13px;
   }
-  vertical-align: top;
   /deep/.fild-body {
     width: 0px;
   }
-  /deep/.u-border-bottom {
+  /deep/.u-field {
     padding-right: 0px;
   }
 }
