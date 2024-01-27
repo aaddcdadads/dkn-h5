@@ -154,7 +154,7 @@
               ref="shopPop"
               v-model:show="shopPop.show"
               :mode="'bottom'"
-              height="45%"
+              height="50%"
               class="ele-shopPop"
             >
               <view
