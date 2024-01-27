@@ -273,7 +273,6 @@
                         class="ele-wrapper ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609"
                       >
                         <activity-list
-                          speed="1.314km5.20km9.99km"
                           class="ele-9243b683-57b5-45b7-8c57-56a5ffd4a609"
                         >
                         </activity-list>
