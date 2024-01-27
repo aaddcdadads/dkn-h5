@@ -505,7 +505,7 @@ export default {
       this.shopPop.show = true;
     },
     onWeixinRadioRadioChange(e) {
-      console.log("123", e);
+      console.log("123", this.$refs.weixinRadio.checked);
     },
     onPayButtonClick() {
       this.payPopup.show = true;
