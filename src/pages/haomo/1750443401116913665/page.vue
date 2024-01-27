@@ -399,7 +399,7 @@ export default {
   }
   /deep/.u-label-text {
     font-size: 13px;
-    //width: 100%;
+    width: 100%;
   }
   /deep/.u-label {
     max-width: 20%;
