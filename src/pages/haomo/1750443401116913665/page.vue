@@ -83,7 +83,7 @@
                           value=""
                           label=" 姓名/昵称:"
                           placeholder="姓名/昵称"
-                          label-width="160"
+                          label-width="150"
                           maxlength="250"
                           icon=""
                           right-icon=""
@@ -396,6 +396,9 @@ export default {
   }
   /deep/.u-flex-1 {
     font-text: 13px;
+  }
+  /deep/.u-label-text {
+    font-size: 13px;
   }
 }
 
