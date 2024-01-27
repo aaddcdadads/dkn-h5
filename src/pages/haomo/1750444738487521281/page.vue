@@ -296,6 +296,7 @@ export default {
 
 <style lang="less" scoped>
 .page {
+  background-color: #f0f2f6;
 }
 
 .ele-wrapper-formbgCard {
