@@ -26,31 +26,6 @@
               class="ele-a4540298-8d72-4b6c-a4e3-fab8f56c0be2"
             >
               <view
-                class="ele-wrapper ele-wrapper-32e2869f-33e4-4a30-a8e3-3b0d31222093"
-              >
-                <hm-uview-bg-card
-                  width="100%"
-                  height="100%"
-                  border-radius=""
-                  box-shadow-v-shadow=""
-                  box-shadow-blur=""
-                  class="ele-32e2869f-33e4-4a30-a8e3-3b0d31222093"
-                >
-                  <view
-                    class="ele-wrapper ele-wrapper-bf22f4a1-bf87-45db-bf48-3cb458614952"
-                  >
-                    <hm-uview-text
-                      text="订单编号："
-                      font-size="12px"
-                      color="#303133"
-                      padding="8"
-                      class="ele-bf22f4a1-bf87-45db-bf48-3cb458614952"
-                    >
-                    </hm-uview-text>
-                  </view>
-                </hm-uview-bg-card>
-              </view>
-              <view
                 class="ele-wrapper ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
               >
                 <hm-uview-bg-card
@@ -149,118 +124,21 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-ec8bdb37-8258-4daf-b83b-30ebc2a70f11"
-                  >
-                    <hm-uview-bg-card
-                      width="100%"
-                      height="40"
-                      padding=""
-                      box-shadow-v-shadow=""
-                      box-shadow-blur=""
-                      class="ele-ec8bdb37-8258-4daf-b83b-30ebc2a70f11"
-                    >
-                      <view
-                        class="ele-wrapper ele-wrapper-9a4984ec-97fb-465a-9b6b-8c645b5eab71"
-                      >
-                        <hm-uview-field
-                          value=""
-                          label=" 报名时间:"
-                          placeholder="2024.02.10 15:46:39"
-                          label-width="150"
-                          maxlength="200"
-                          icon=""
-                          right-icon=""
-                          class="ele-9a4984ec-97fb-465a-9b6b-8c645b5eab71"
-                        >
-                        </hm-uview-field>
-                      </view>
-                    </hm-uview-bg-card>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-1e638196-949e-4db0-8c6d-ffb770b0ac8a"
-                  >
-                    <hm-uview-bg-card
-                      width="100%"
-                      height="40"
-                      padding=""
-                      box-shadow-v-shadow=""
-                      box-shadow-blur=""
-                      class="ele-1e638196-949e-4db0-8c6d-ffb770b0ac8a"
-                    >
-                      <view
-                        class="ele-wrapper ele-wrapper-77bae9a8-6c80-4c4a-94fd-75350b1d7fb3"
-                      >
-                        <hm-uview-field
-                          value=""
-                          label="活动名称:"
-                          placeholder="活动名称"
-                          label-width="150"
-                          maxlength="200"
-                          icon=""
-                          right-icon=""
-                          class="ele-77bae9a8-6c80-4c4a-94fd-75350b1d7fb3"
-                        >
-                        </hm-uview-field>
-                      </view>
-                    </hm-uview-bg-card>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-9047135a-0817-4297-9bc0-ba758bea8736"
-                  >
-                    <hm-uview-bg-card
-                      width="100%"
-                      height="40"
-                      padding=""
-                      box-shadow-v-shadow=""
-                      box-shadow-blur=""
-                      class="ele-9047135a-0817-4297-9bc0-ba758bea8736"
-                    >
-                      <view
-                        class="ele-wrapper ele-wrapper-f2093ff0-31f8-4c8e-8715-756493dc516a"
-                      >
-                        <hm-uview-field
-                          value=""
-                          label=" 核销截止:"
-                          placeholder=" 核销截止"
-                          label-width="150"
-                          maxlength="200"
-                          icon=""
-                          right-icon=""
-                          class="ele-f2093ff0-31f8-4c8e-8715-756493dc516a"
-                        >
-                        </hm-uview-field>
-                      </view>
-                    </hm-uview-bg-card>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-e4f5cc89-8551-4bdd-a6ee-b6edac67ce3c"
-                  >
-                    <hm-uview-bg-card
-                      width="100%"
-                      height="40"
-                      padding=""
-                      box-shadow-v-shadow=""
-                      box-shadow-blur=""
-                      class="ele-e4f5cc89-8551-4bdd-a6ee-b6edac67ce3c"
-                    >
-                      <view
-                        class="ele-wrapper ele-wrapper-825c7b35-6136-42aa-8176-48014a210261"
-                      >
-                        <hm-uview-field
-                          value=""
-                          label="核销状态:"
-                          placeholder="待核销/已核销"
-                          label-width="150"
-                          maxlength="200"
-                          icon=""
-                          right-icon=""
-                          class="ele-825c7b35-6136-42aa-8176-48014a210261"
-                        >
-                        </hm-uview-field>
-                      </view>
-                    </hm-uview-bg-card>
-                  </view>
+                </hm-uview-bg-card>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-41f7b43e-8542-4a04-ac12-f8bdeac98d58"
+              >
+                <hm-uview-bg-card
+                  width="100%"
+                  height="100%"
+                  border-radius=""
+                  :text-align="'center'"
+                  padding=""
+                  box-shadow-v-shadow=""
+                  box-shadow-blur=""
+                  class="ele-41f7b43e-8542-4a04-ac12-f8bdeac98d58"
+                >
                 </hm-uview-bg-card>
               </view>
               <view
@@ -294,16 +172,16 @@
 <script>
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
-import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
+import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
   name: "VerificationConfirmation",
   components: {
     HmUviewBgCard,
-    HmUviewText,
     HmUviewField,
+    HmUviewText,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -320,18 +198,6 @@ export default {
         value: "",
       },
       "e3774afb-14a0-4b23-adda-2624414eb025": {
-        value: "",
-      },
-      "9a4984ec-97fb-465a-9b6b-8c645b5eab71": {
-        value: "",
-      },
-      "77bae9a8-6c80-4c4a-94fd-75350b1d7fb3": {
-        value: "",
-      },
-      "f2093ff0-31f8-4c8e-8715-756493dc516a": {
-        value: "",
-      },
-      "825c7b35-6136-42aa-8176-48014a210261": {
         value: "",
       },
     };
@@ -359,15 +225,6 @@ export default {
 .ele-wrapper-a4540298-8d72-4b6c-a4e3-fab8f56c0be2 {
   width: 100%;
   height: 100%;
-}
-
-.ele-wrapper-32e2869f-33e4-4a30-a8e3-3b0d31222093 {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.ele-wrapper-bf22f4a1-bf87-45db-bf48-3cb458614952 {
-  margin-left: 2px;
 }
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
@@ -487,148 +344,8 @@ export default {
   }
 }
 
-.ele-wrapper-ec8bdb37-8258-4daf-b83b-30ebc2a70f11 {
+.ele-wrapper-41f7b43e-8542-4a04-ac12-f8bdeac98d58 {
   width: 100%;
-  display: flex;
-  align-items: center;
-  margin: 15px 0px;
-}
-
-.ele-wrapper-9a4984ec-97fb-465a-9b6b-8c645b5eab71 {
-  width: 100%;
-  height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
-}
-
-.ele-wrapper-1e638196-949e-4db0-8c6d-ffb770b0ac8a {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin: 15px 0px;
-}
-
-.ele-wrapper-77bae9a8-6c80-4c4a-94fd-75350b1d7fb3 {
-  width: 100%;
-  height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
-}
-
-.ele-wrapper-9047135a-0817-4297-9bc0-ba758bea8736 {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin: 15px 0px;
-}
-
-.ele-wrapper-f2093ff0-31f8-4c8e-8715-756493dc516a {
-  width: 100%;
-  height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
-}
-
-.ele-wrapper-e4f5cc89-8551-4bdd-a6ee-b6edac67ce3c {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin: 15px 0px;
-}
-
-.ele-wrapper-825c7b35-6136-42aa-8176-48014a210261 {
-  width: 100%;
-  height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
 }
 
 .ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451 {
