@@ -185,7 +185,7 @@
                         <hm-uview-field
                           value=""
                           label="活动奖品:"
-                          label-width="160"
+                          label-width="150"
                           maxlength=""
                           icon=""
                           right-icon=""
