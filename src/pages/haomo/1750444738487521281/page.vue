@@ -260,13 +260,12 @@
                           </view>
                         </hm-uview-bg-card>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-cc0f938d-1a42-4b7c-9491-b6564f6a5c1d"
-                      >
+                      <view class="ele-wrapper ele-wrapper-weixinRadio">
                         <hm-uview-radio
-                          value=""
+                          ref="weixinRadio"
+                          v-model:value="weixinRadio.value"
                           title=""
-                          :list="[{ name: '', disabled: false }]"
+                          :list="weixinRadio.list"
                           active-color="#22C386"
                         >
                         </hm-uview-radio>
@@ -310,13 +309,12 @@
                           </view>
                         </hm-uview-bg-card>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-3d3fffe6-a475-4507-9dfc-3342b6a1dc5b"
-                      >
+                      <view class="ele-wrapper ele-wrapper-zhifubaoRadio">
                         <hm-uview-radio
-                          value=""
+                          ref="zhifubaoRadio"
+                          v-model:value="zhifubaoRadio.value"
                           title=""
-                          :list="[{ name: '', disabled: false }]"
+                          :list="zhifubaoRadio.list"
                           active-color="#22C386"
                         >
                         </hm-uview-radio>
@@ -449,7 +447,7 @@ export default {
       prices: {
         text: "¥ 59.00",
       },
-      "cc0f938d-1a42-4b7c-9491-b6564f6a5c1d": {
+      weixinRadio: {
         value: "",
         list: [
           {
@@ -458,7 +456,7 @@ export default {
           },
         ],
       },
-      "3d3fffe6-a475-4507-9dfc-3342b6a1dc5b": {
+      zhifubaoRadio: {
         value: "",
         list: [
           {
