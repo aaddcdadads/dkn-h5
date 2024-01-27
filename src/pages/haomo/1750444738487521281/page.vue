@@ -505,11 +505,10 @@ export default {
     onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon() {
       this.shopPop.show = true;
     },
-    onWeixinRadioRadioChange() {
+    onWeixinRadioRadioChange(e) {
       this.zhifubaoRadio.value = "1";
-      if (this.weixinRadio.value === "") {
-        console.log("微信");
-      }
+
+      console.log("微信", e);
     },
     onZhifubaoRadioRadioChange() {
       this.weixinRadio.value = "1";
