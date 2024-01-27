@@ -456,6 +456,9 @@ export default {
     font-size: 13px;
   }
   vertical-align: top;
+  /deep/.fild-body {
+    width: 0px;
+  }
 }
 
 .ele-wrapper-Buttonwan {
