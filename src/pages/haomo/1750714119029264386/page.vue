@@ -161,10 +161,9 @@
                             >
                             </hm-uview-text>
                           </view>
-                          <view
-                            class="ele-wrapper ele-wrapper-0b526546-fffe-44d9-8fc9-6ed8ddc24c72"
-                          >
+                          <view class="ele-wrapper ele-wrapper-closeTime">
                             <uni-countdown
+                              ref="closeTime"
                               background-color="#00000000"
                               color="#FFFFFF"
                               :font-size="11"
@@ -173,7 +172,7 @@
                               :hour="15"
                               :minute="13"
                               :second="17"
-                              class="ele-0b526546-fffe-44d9-8fc9-6ed8ddc24c72"
+                              class="ele-closeTime"
                             >
                             </uni-countdown>
                           </view>
@@ -686,7 +685,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-0b526546-fffe-44d9-8fc9-6ed8ddc24c72 {
+.ele-wrapper-closeTime {
   /deep/.uni-countdown__splitor {
     font-size: 12px !important;
   }
