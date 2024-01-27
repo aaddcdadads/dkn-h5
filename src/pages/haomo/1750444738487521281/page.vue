@@ -182,6 +182,58 @@
               v-model:show="payPopup.show"
               :mode="'bottom'"
             >
+              <view
+                class="ele-wrapper ele-wrapper-c1e777b1-33b4-43de-8b09-b43843222e3f"
+              >
+                <hm-uview-text text="活动名称" font-size="16px">
+                </hm-uview-text>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-8ce1ac9e-4608-48c5-9cd4-9f0a72761dc3"
+              >
+                <hm-uview-text> </hm-uview-text>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-131486cf-0200-431b-ba59-f7a7ca878714"
+              >
+                <hm-uview-text> </hm-uview-text>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-909ed36a-3bd1-4c08-8479-95660a498ada"
+              >
+                <hm-uview-bg-card
+                  width="100%"
+                  height="100%"
+                  border-radius=""
+                  box-shadow-v-shadow=""
+                  box-shadow-blur=""
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-ef71f71b-27b7-4488-bae8-c3fcbc1cc539"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height="100%"
+                      border-radius=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
+                    >
+                    </hm-uview-bg-card>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-ec374c25-1ad9-4842-8619-fd4e6a1bf1a2"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height="100%"
+                      border-radius=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
+                    >
+                    </hm-uview-bg-card>
+                  </view>
+                </hm-uview-bg-card>
+              </view>
             </hm-uview-popup>
           </view>
           <view class="ele-wrapper ele-wrapper-baoming">
@@ -246,7 +298,7 @@ export default {
         show: false,
       },
       payPopup: {
-        show: false,
+        show: true,
       },
       eventCard: {
         list: [
