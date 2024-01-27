@@ -491,6 +491,9 @@ export default {
   /deep/.uni-input-input {
     font-size: 13px;
   }
+  /deep/.u-label-text {
+    font-size: 13px;
+  }
 }
 
 .ele-wrapper-Buttonwan {
