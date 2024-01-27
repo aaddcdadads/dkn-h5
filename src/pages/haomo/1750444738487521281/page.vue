@@ -273,20 +273,19 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-ec374c25-1ad9-4842-8619-fd4e6a1bf1a2"
-                  >
+                  <view class="ele-wrapper ele-wrapper-zhifubao">
                     <hm-uview-bg-card
+                      ref="zhifubao"
                       width="100%"
                       height="100%"
                       border-radius=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
-                      class="ele-ec374c25-1ad9-4842-8619-fd4e6a1bf1a2"
+                      class="ele-zhifubao"
                     >
-                      <view class="ele-wrapper ele-wrapper-zhifubao">
+                      <view class="ele-wrapper ele-wrapper-zhifubaobox">
                         <hm-uview-bg-card
-                          ref="zhifubao"
+                          ref="zhifubaobox"
                           width="100%"
                           height="100%"
                           border-radius=""
@@ -628,10 +627,20 @@ export default {
 
 .ele-wrapper-weixin {
   width: 100%;
+  .ele-weixin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
-.ele-wrapper-ec374c25-1ad9-4842-8619-fd4e6a1bf1a2 {
+.ele-wrapper-zhifubao {
   width: 100%;
+  .ele-zhifubao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .ele-wrapper-baoming {
