@@ -193,14 +193,13 @@
                 >
                 </hm-uview-text>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-8ce1ac9e-4608-48c5-9cd4-9f0a72761dc3"
-              >
+              <view class="ele-wrapper ele-wrapper-countdown">
                 <hm-uview-text
-                  text="剩下时间 23:59:59"
-                  font-size="14px"
-                  color="#999999"
-                  class="ele-8ce1ac9e-4608-48c5-9cd4-9f0a72761dc3"
+                  ref="countdown"
+                  :text="countdown.text"
+                  :font-size="countdown.fontSize"
+                  :color="countdown.color"
+                  class="ele-countdown"
                 >
                 </hm-uview-text>
               </view>
@@ -361,6 +360,11 @@ export default {
         ],
         value: "",
       },
+      countdown: {
+        text: "剩下时间 23:59:59",
+        fontSize: "14px",
+        color: "#999999",
+      },
       prices: {
         text: "¥ 59.00",
       },
@@ -501,7 +505,7 @@ export default {
   margin-top: 12px;
 }
 
-.ele-wrapper-8ce1ac9e-4608-48c5-9cd4-9f0a72761dc3 {
+.ele-wrapper-countdown {
   font-family: "微软雅黑", sans-serif;
   font-weight: 400;
   color: #999999;
