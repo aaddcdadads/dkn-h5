@@ -177,6 +177,11 @@
                   box-shadow-blur=""
                   class="ele-69d470b9-0c45-46a6-92d6-89fc50270dd8"
                 >
+                  <view
+                    class="ele-wrapper ele-wrapper-82c0b630-61ea-4b55-b093-9bb236d70e69"
+                  >
+                    <store-selection> </store-selection>
+                  </view>
                 </hm-uview-bg-card>
               </view>
             </hm-uview-popup>
@@ -397,6 +402,7 @@ import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vu
 import EventRegistrationCard from "/@/components/dkn-h-5/event-registration-card/index.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
+import StoreSelection from "/@/components/dkn-h-5/store-selection/index.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
@@ -410,6 +416,7 @@ export default {
     EventRegistrationCard,
     InformationInputBox,
     HmUviewPopup,
+    StoreSelection,
     HmUviewImage,
     HmUviewRadio,
     HmUviewButton,
