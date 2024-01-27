@@ -401,12 +401,12 @@ export default {
     font-size: 13px;
     width: 100%;
   }
-  /deep/.u-label {
-    max-width: 16%;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
+  // /deep/.u-label{
+  // max-width: 16%;
+  // }
+  // /deep/.u-label-text>span{
+  // width: 100%;
+  // }
 }
 
 .ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9 {
