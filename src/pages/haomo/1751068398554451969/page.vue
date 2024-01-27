@@ -18,6 +18,7 @@
               height="100%"
               border-radius=""
               :text-align="'center'"
+              padding=""
               box-shadow-h-shadow=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
@@ -188,6 +189,7 @@
                           maxlength=""
                           icon=""
                           right-icon=""
+                          :border-bottom="false"
                           class="ele-929420c8-3de3-499f-87e8-c054a0fa0583"
                         >
                           <view
