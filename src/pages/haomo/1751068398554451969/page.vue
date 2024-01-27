@@ -172,7 +172,7 @@
                   >
                     <hm-uview-bg-card
                       width="100%"
-                      height="40"
+                      height="100%"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
