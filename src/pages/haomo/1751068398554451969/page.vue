@@ -448,7 +448,7 @@ export default {
   /deep/.uni-input-input {
     display: none;
   }
-  width: 15%;
+  width: 13%;
   /deep/.uni-input-input {
     font-size: 13px;
   }
