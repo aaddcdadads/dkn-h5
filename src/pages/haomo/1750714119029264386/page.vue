@@ -69,14 +69,13 @@
               background-color="#FFFFFF00"
               class="ele-imageBg"
             >
-              <view
-                class="ele-wrapper ele-wrapper-f91b4645-a50f-4879-857d-46279f610ca8"
-              >
+              <view class="ele-wrapper ele-wrapper-logoImg">
                 <hm-uview-image
+                  ref="logoImg"
                   src="https://static1.keepcdn.com/teyvat-cms/2023/10/24/1698136514335c25agsam_750x1000.jpg"
                   width="100%"
                   height="500px"
-                  class="ele-f91b4645-a50f-4879-857d-46279f610ca8"
+                  class="ele-logoImg"
                 >
                 </hm-uview-image>
               </view>
@@ -650,7 +649,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-f91b4645-a50f-4879-857d-46279f610ca8 {
+.ele-wrapper-logoImg {
   width: 100%;
 }
 
