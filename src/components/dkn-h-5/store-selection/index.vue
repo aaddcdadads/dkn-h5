@@ -20,7 +20,7 @@
       </view>
       <view class="anchorBox">
         <view v-for="item in data" class="itembox">
-          <a :href="anchor(item.anchor)" class="anchors">{{ item.anchor }}</a>
+          <a href="#a" class="anchors">{{ item.anchor }}</a>
         </view>
       </view>
     </view>
