@@ -184,6 +184,7 @@
                         <hm-uview-field
                           value=""
                           label-width=""
+                          maxlength="100%"
                           icon=""
                           right-icon=""
                           class="ele-929420c8-3de3-499f-87e8-c054a0fa0583"
