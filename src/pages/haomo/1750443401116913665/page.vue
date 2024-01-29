@@ -77,9 +77,32 @@
                       class="ele-3594e500-632d-42e8-b3b9-d485a0f784a5"
                     >
                       <view
+                        class="ele-wrapper ele-wrapper-4d559557-0403-4847-8886-a66b609a45ba"
+                      >
+                        <hm-uview-field
+                          value=""
+                          label=" 手机号码:"
+                          placeholder="报名手机号码"
+                          label-width="150"
+                          maxlength="200"
+                          icon=""
+                          right-icon=""
+                          class="ele-4d559557-0403-4847-8886-a66b609a45ba"
+                        >
+                        </hm-uview-field>
+                      </view>
+                      <view
                         class="ele-wrapper ele-wrapper-1a733f17-14f0-4007-80fe-e478cb9634cf"
                       >
-                        <hm-uview-bg-card> </hm-uview-bg-card>
+                        <hm-uview-bg-card
+                          width="100%"
+                          height="40"
+                          padding=""
+                          box-shadow-v-shadow=""
+                          box-shadow-blur=""
+                          class="ele-1a733f17-14f0-4007-80fe-e478cb9634cf"
+                        >
+                        </hm-uview-bg-card>
                       </view>
                       <view
                         class="ele-wrapper ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37"
@@ -318,6 +341,9 @@ export default {
       Buttonwan: {
         text: "核销",
       },
+      "4d559557-0403-4847-8886-a66b609a45ba": {
+        value: "",
+      },
       "ea222d02-9ba2-44be-b94e-799272b9be37": {
         value: "",
       },
@@ -390,6 +416,42 @@ export default {
   display: flex;
   align-items: center;
   margin-top: -5px;
+}
+
+.ele-wrapper-4d559557-0403-4847-8886-a66b609a45ba {
+  width: 100%;
+  height: 45px;
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  /deep/.u-border-bottom {
+    border-radius: 5px;
+    height: 45px;
+  }
+  /deep/.uni-input-input {
+    font-size: 13px;
+  }
+  /deep/.u-label-text {
+    font-size: 13px;
+  }
+  /deep/.u-label-text > span {
+    width: 100%;
+  }
+  /deep/.u-label {
+    max-width: 70px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
+}
+
+.ele-wrapper-1a733f17-14f0-4007-80fe-e478cb9634cf {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
 }
 
 .ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
