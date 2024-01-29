@@ -162,6 +162,7 @@ export default {
 
 .ele-wrapper-a62d48e7-e3f4-48b7-829c-4d072444f230 {
   width: 100%;
+  position: relative;
 }
 
 .ele-wrapper-a8421160-2261-4a40-ad96-c72052540372 {
@@ -203,6 +204,7 @@ export default {
 .ele-wrapper-ba846aea-fdb1-41b9-828d-bfa69c395b94 {
   width: calc(100% - 24px);
   margin-left: 24rpx;
-  margin-top: 16rpx;
+  position: absoult;
+  bottom: 12rpx;
 }
 </style>
