@@ -497,6 +497,7 @@ export default {
     margin-top: 15px !important;
   }
   display: flex;
+  justify-content: space-between;
 }
 
 .ele-wrapper-716406f0-2fda-4cc8-9dc0-457fbd1bcec2 {
