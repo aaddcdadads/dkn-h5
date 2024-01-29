@@ -973,6 +973,14 @@ export default {
   /deep/.image_box {
     display: none;
   }
+  /deep/.input-placeholder {
+    font-size: 12px !important;
+    color: #d6d6d6 !important;
+    margin-left: 4px !important;
+  }
+  /deep/.color {
+    font-size: 12px !important;
+  }
 }
 
 .ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611 {
