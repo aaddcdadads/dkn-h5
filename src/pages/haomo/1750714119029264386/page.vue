@@ -885,15 +885,15 @@ export default {
 }
 
 .ele-wrapper-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f {
-  height: 120rpx;
+  height: 80rpx;
   margin-left: 24rpx;
   width: calc(100% - 48rpx);
   /deep/.u-size-default {
     height: 120rpx !important;
   }
   /deep/.u-btn--success {
-    background-color: D6769C !important;
-    border-color: D6769C !important;
+    background-color: #d6769c !important;
+    border-color: #d6769c !important;
   }
 }
 </style>
