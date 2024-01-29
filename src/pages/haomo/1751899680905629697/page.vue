@@ -117,12 +117,12 @@ export default {
           },
           {
             key: 2,
-            name: "John Brown1",
+            name: "活动名称",
             checked: false,
           },
           {
             key: 3,
-            name: "John Brown1",
+            name: "活动名称",
             checked: false,
           },
         ],
