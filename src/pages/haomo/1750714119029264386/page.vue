@@ -557,7 +557,7 @@
                       >
                         <hm-uview-text
                           text="用户登录查看报名信息"
-                          font-size="14px"
+                          font-size="16px"
                           class="ele-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f"
                         >
                         </hm-uview-text>
@@ -969,6 +969,9 @@ export default {
 
 .ele-wrapper-viewPopup {
   padding: 24rpx 24rpx;
+  /deep/.u-mode-center-box {
+    border-radius: 8px;
+  }
 }
 
 .ele-wrapper-ea66b462-b5ce-4b41-8870-bb482768fef8 {
