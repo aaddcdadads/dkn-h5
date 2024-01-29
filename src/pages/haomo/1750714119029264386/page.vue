@@ -153,16 +153,15 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-c2db3fcd-05d0-472b-8e18-163c243cc425"
-                  >
+                  <view class="ele-wrapper ele-wrapper-activityBg">
                     <hm-uview-bg-card
+                      ref="activityBg"
                       width="100%"
                       height=""
                       border-radius=""
                       padding="12"
                       background-color="#FEEFF7"
-                      class="ele-c2db3fcd-05d0-472b-8e18-163c243cc425"
+                      class="ele-activityBg"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39"
@@ -662,9 +661,9 @@ export default {
   float: right;
 }
 
-.ele-wrapper-c2db3fcd-05d0-472b-8e18-163c243cc425 {
+.ele-wrapper-activityBg {
   width: 100%;
-  /deep/.hm-bg-card {
+  /deep/.ele-activityBg {
     border-radius: 12px;
   }
   border-radius: 12px;
