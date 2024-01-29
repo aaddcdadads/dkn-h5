@@ -88,17 +88,16 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-ded67b10-93fd-4c94-ada8-c1e9b48bf4d4"
-                      >
+                      <view class="ele-wrapper ele-wrapper-HmUviewField1">
                         <hm-uview-field
-                          value=""
+                          ref="HmUviewField1"
+                          v-model:value="HmUviewField1.value"
                           label=""
                           label-width="0"
                           icon=""
                           right-icon=""
                           :border-bottom="false"
-                          class="ele-ded67b10-93fd-4c94-ada8-c1e9b48bf4d4"
+                          class="ele-HmUviewField1"
                         >
                         </hm-uview-field>
                       </view>
@@ -393,7 +392,7 @@ export default {
         customStyle: {},
         text: "核销",
       },
-      "ded67b10-93fd-4c94-ada8-c1e9b48bf4d4": {
+      HmUviewField1: {
         value: "",
       },
       "ac724210-6593-4d1c-bc1c-9885bad6b588": {
@@ -484,7 +483,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-ded67b10-93fd-4c94-ada8-c1e9b48bf4d4 {
+.ele-wrapper-HmUviewField1 {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
