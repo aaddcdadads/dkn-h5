@@ -119,23 +119,6 @@
                       box-shadow-blur=""
                       class="ele-e7bdbfea-5564-4643-a5fe-7f5406777598"
                     >
-                      <view
-                        class="ele-wrapper ele-wrapper-8d972455-e530-4479-8ff5-8e619abb62a6"
-                      >
-                        <hm-uview-field
-                          value=""
-                          label=" 姓名/昵称:"
-                          placeholder="姓名/昵称"
-                          label-width="100%"
-                          maxlength="250"
-                          icon=""
-                          right-icon=""
-                          :focus="true"
-                          :disabled="true"
-                          class="ele-8d972455-e530-4479-8ff5-8e619abb62a6"
-                        >
-                        </hm-uview-field>
-                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -149,22 +132,6 @@
                       box-shadow-blur=""
                       class="ele-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9"
                     >
-                      <view
-                        class="ele-wrapper ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b"
-                      >
-                        <hm-uview-field
-                          value=""
-                          label=" 手机号码:"
-                          placeholder="报名手机号码"
-                          label-width="150"
-                          maxlength="200"
-                          icon=""
-                          right-icon=""
-                          :disabled="true"
-                          class="ele-c5bfde68-4a10-445e-b173-b62b3921231b"
-                        >
-                        </hm-uview-field>
-                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -178,22 +145,6 @@
                       box-shadow-blur=""
                       class="ele-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0"
                     >
-                      <view
-                        class="ele-wrapper ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025"
-                      >
-                        <hm-uview-field
-                          value=""
-                          label=" 领奖门店:"
-                          placeholder="区域/门店名称"
-                          label-width="150"
-                          maxlength="200"
-                          icon=""
-                          right-icon=""
-                          :disabled="true"
-                          class="ele-e3774afb-14a0-4b23-adda-2624414eb025"
-                        >
-                        </hm-uview-field>
-                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -207,22 +158,6 @@
                       box-shadow-blur=""
                       class="ele-ec8bdb37-8258-4daf-b83b-30ebc2a70f11"
                     >
-                      <view
-                        class="ele-wrapper ele-wrapper-9a4984ec-97fb-465a-9b6b-8c645b5eab71"
-                      >
-                        <hm-uview-field
-                          value=""
-                          label=" 报名时间:"
-                          placeholder="2024.02.10 15:46:39"
-                          label-width="150"
-                          maxlength="200"
-                          icon=""
-                          right-icon=""
-                          :disabled="true"
-                          class="ele-9a4984ec-97fb-465a-9b6b-8c645b5eab71"
-                        >
-                        </hm-uview-field>
-                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -370,18 +305,6 @@ export default {
       "a89083fd-72bd-468d-a1c4-41e4b0087eb0": {
         value: "",
       },
-      "8d972455-e530-4479-8ff5-8e619abb62a6": {
-        value: "",
-      },
-      "c5bfde68-4a10-445e-b173-b62b3921231b": {
-        value: "",
-      },
-      "e3774afb-14a0-4b23-adda-2624414eb025": {
-        value: "",
-      },
-      "9a4984ec-97fb-465a-9b6b-8c645b5eab71": {
-        value: "",
-      },
       "77bae9a8-6c80-4c4a-94fd-75350b1d7fb3": {
         value: "",
       },
@@ -466,25 +389,6 @@ export default {
     height: 45px;
     background: rgb(240, 240, 240);
   }
-  /deep/.u-flex-1 {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-    width: 100%;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
@@ -495,73 +399,11 @@ export default {
   margin-top: -5px;
 }
 
-.ele-wrapper-8d972455-e530-4479-8ff5-8e619abb62a6 {
-  width: 100%;
-  height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-  }
-  /deep/.u-flex-1 {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-    width: 100%;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-}
-
 .ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9 {
   width: 100%;
   display: flex;
   align-items: center;
   margin: 15px 0px;
-}
-
-.ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b {
-  width: 100%;
-  height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
 }
 
 .ele-wrapper-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0 {
@@ -571,69 +413,11 @@ export default {
   margin: 15px 0px;
 }
 
-.ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025 {
-  width: 100%;
-  height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
-}
-
 .ele-wrapper-ec8bdb37-8258-4daf-b83b-30ebc2a70f11 {
   width: 100%;
   display: flex;
   align-items: center;
   margin: 15px 0px;
-}
-
-.ele-wrapper-9a4984ec-97fb-465a-9b6b-8c645b5eab71 {
-  width: 100%;
-  height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
 }
 
 .ele-wrapper-1e638196-949e-4db0-8c6d-ffb770b0ac8a {
