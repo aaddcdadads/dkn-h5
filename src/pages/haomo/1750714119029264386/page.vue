@@ -532,7 +532,7 @@
           width="100%"
           height=""
           border-radius="0"
-          padding="24"
+          padding="12"
           box-shadow-color="#00000000"
           class="ele-2136b833-7f0e-4a8a-a081-36d9e275f611"
         >
@@ -866,6 +866,7 @@ export default {
   position: fixed;
   bottom: 0px;
   z-index: 1000;
+  padding: 12px 24px;
 }
 
 .ele-wrapper-d324407f-5ad0-412f-845c-f123803419fc {
