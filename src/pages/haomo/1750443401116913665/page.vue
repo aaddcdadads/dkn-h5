@@ -521,6 +521,7 @@ export default {
   /deep/.hm-bg-card {
     margin-top: 15px !important;
   }
+  display: flex;
 }
 
 .ele-wrapper-716406f0-2fda-4cc8-9dc0-457fbd1bcec2 {
