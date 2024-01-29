@@ -205,8 +205,5 @@ export default {
 .ele-wrapper-ba846aea-fdb1-41b9-828d-bfa69c395b94 {
   width: calc(100% - 24px);
   margin-left: 24rpx;
-  position: absolute;
-  bottom: 20%;
-  z-index: 1000;
 }
 </style>
