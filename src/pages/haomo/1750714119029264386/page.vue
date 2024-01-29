@@ -1013,6 +1013,7 @@ export default {
   /deep/.u-mode-center-box {
     border-radius: 8px;
   }
+  position: relative;
 }
 
 .ele-wrapper-ea66b462-b5ce-4b41-8870-bb482768fef8 {
@@ -1083,6 +1084,8 @@ export default {
 .ele-wrapper-c43ff619-898c-4446-a22f-6dc191e8ac6e {
   width: 100%;
   margin-top: 24rpx;
+  position: absolute;
+  bottom: 0;
 }
 
 .ele-wrapper-canelButton {
