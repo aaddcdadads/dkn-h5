@@ -165,7 +165,9 @@ export default {
   },
   watch: {},
   methods: {
-    onCanelButtonClick() {},
+    onCanelButtonClick() {
+      this.viewPopup.show = false;
+    },
     onSureButtonClick() {
       uni.$u.route(
         "https://stage.block-design.cn/edit-page/?pageId=1751899680905629697"
