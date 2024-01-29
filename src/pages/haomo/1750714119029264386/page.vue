@@ -251,7 +251,7 @@
                         class="ele-wrapper ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609"
                       >
                         <activity-list
-                          time="活动时间 2023.11.01 00:00-2024.02.15 23:50:00"
+                          time="2023.11.01-2024.02.15"
                           number=" 154,480 "
                           class="ele-9243b683-57b5-45b7-8c57-56a5ffd4a609"
                         >
@@ -770,6 +770,7 @@ export default {
 
 .ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609 {
   margin: 12px 0;
+  width: 100%;
 }
 
 .ele-wrapper-76b3694d-443e-4d62-8c58-80e0356f7fa4 {
@@ -797,6 +798,7 @@ export default {
   float: left;
   margin-top: 12px;
   font-weight: bolder;
+  margin-bottom: 12rpx;
 }
 
 .ele-wrapper-0d696b7e-8100-4e0a-a949-9e8788ae1cec {
