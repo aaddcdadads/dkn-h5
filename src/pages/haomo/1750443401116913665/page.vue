@@ -440,7 +440,7 @@ export default {
 }
 
 .ele-wrapper-a89083fd-72bd-468d-a1c4-41e4b0087eb0 {
-  width: 650%;
+  width: 65%;
   height: 45px;
   /deep/.u-label-postion-left {
     position: absolute;
