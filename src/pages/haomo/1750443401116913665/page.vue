@@ -487,6 +487,11 @@ export default {
 .ele-wrapper-ded67b10-93fd-4c94-ada8-c1e9b48bf4d4 {
   width: 65%;
   height: 45px;
+  /deep/.u-border-bottom {
+    display: flex;
+    align-items: center;
+    height: 45px;
+  }
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
