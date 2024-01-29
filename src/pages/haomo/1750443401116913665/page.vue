@@ -224,11 +224,11 @@
                     class="ele-wrapper ele-wrapper-ec8bdb37-8258-4daf-b83b-30ebc2a70f11"
                   >
                     <hm-uview-bg-card
-                      padding=""
-                      box-shadow-blur=""
-                      box-shadow-v-shadow=""
                       width="100%"
                       height="40"
+                      padding=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
                       class="ele-ec8bdb37-8258-4daf-b83b-30ebc2a70f11"
                     >
                       <view
@@ -247,6 +247,7 @@
                           ref="HmUviewField5"
                           v-model:value="HmUviewField5.value"
                           label=""
+                          placeholder="2024.02.10 15:46:39"
                           label-width="0"
                           icon=""
                           right-icon=""
@@ -272,23 +273,26 @@
                         class="ele-wrapper ele-wrapper-d300e2f4-3555-45fa-a67c-be25208705a0"
                       >
                         <hm-uview-text
-                          padding="0"
-                          font-size="13px"
                           text="活动名称:"
+                          font-size="13px"
+                          padding="0"
                           class="ele-d300e2f4-3555-45fa-a67c-be25208705a0"
                         >
                         </hm-uview-text>
                       </view>
                       <view class="ele-wrapper ele-wrapper-HmUviewField6">
-                        <information-input-box
+                        <hm-uview-field
                           ref="HmUviewField6"
                           v-model:value="HmUviewField6.value"
-                          right-src=""
-                          :show-code="false"
-                          placeholder="请输入"
+                          label=""
+                          placeholder="区域/门店名称"
+                          label-width="0"
+                          icon=""
+                          right-icon=""
+                          :border-bottom="false"
                           class="ele-HmUviewField6"
                         >
-                        </information-input-box>
+                        </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -296,11 +300,11 @@
                     class="ele-wrapper ele-wrapper-9047135a-0817-4297-9bc0-ba758bea8736"
                   >
                     <hm-uview-bg-card
-                      padding=""
-                      box-shadow-blur=""
-                      box-shadow-v-shadow=""
                       width="100%"
                       height="40"
+                      padding=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
                       class="ele-9047135a-0817-4297-9bc0-ba758bea8736"
                     >
                       <view
@@ -402,7 +406,6 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
-import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -411,7 +414,6 @@ export default {
     HmUviewBgCard,
     HmUviewText,
     HmUviewField,
-    InformationInputBox,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -686,7 +688,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField6 {
+  /deep/.ele-HmUviewField4 {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
