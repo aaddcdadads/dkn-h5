@@ -442,6 +442,9 @@ export default {
   align-items: center;
   margin-top: -5px;
   margin-bottom: 15px;
+  /deep/.hm-bg-card {
+    margin-top: 15px !important;
+  }
 }
 
 .ele-wrapper-716406f0-2fda-4cc8-9dc0-457fbd1bcec2 {
