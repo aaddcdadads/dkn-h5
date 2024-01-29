@@ -81,17 +81,17 @@
                         class="ele-wrapper ele-wrapper-716406f0-2fda-4cc8-9dc0-457fbd1bcec2"
                       >
                         <hm-uview-text
-                          padding="0"
-                          font-size="13px"
                           text="报名项目:"
+                          font-size="13px"
+                          padding="0"
                           class="ele-716406f0-2fda-4cc8-9dc0-457fbd1bcec2"
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-HmUviewField1">
+                      <view class="ele-wrapper ele-wrapper-PhoneNumber">
                         <hm-uview-field
-                          ref="HmUviewField1"
-                          v-model:value="HmUviewField1.value"
+                          ref="PhoneNumber"
+                          v-model:value="PhoneNumber.value"
                           label=""
                           placeholder="报名项目名称 x 数量"
                           label-width="0"
@@ -99,7 +99,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-HmUviewField1"
+                          class="ele-PhoneNumber"
                         >
                         </hm-uview-field>
                       </view>
@@ -434,7 +434,7 @@ export default {
         customStyle: {},
         text: "核销",
       },
-      HmUviewField1: {
+      PhoneNumber: {
         value: "",
       },
       HmUviewField2: {
@@ -521,7 +521,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-HmUviewField1 {
+.ele-wrapper-PhoneNumber {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
