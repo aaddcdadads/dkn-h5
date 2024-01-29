@@ -119,7 +119,7 @@
                         class="ele-wrapper ele-wrapper-a6b059cb-691d-4093-bede-453d1eaf7370"
                       >
                         <hm-uview-text
-                          text="项目名称:"
+                          text=" 姓名/昵称:"
                           font-size="13px"
                           padding="0"
                           class="ele-a6b059cb-691d-4093-bede-453d1eaf7370"
