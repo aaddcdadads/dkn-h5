@@ -150,6 +150,21 @@ export default {
             name: "活动名称",
             checked: false,
           },
+          {
+            key: 4,
+            name: "活动名称",
+            checked: false,
+          },
+          {
+            key: 5,
+            name: "活动名称",
+            checked: false,
+          },
+          {
+            key: 6,
+            name: "活动名称",
+            checked: false,
+          },
         ],
       },
     };
