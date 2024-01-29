@@ -535,6 +535,9 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px !important;
   }
+  /deep/.input {
+    background: rgb(240, 240, 240);
+  }
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
