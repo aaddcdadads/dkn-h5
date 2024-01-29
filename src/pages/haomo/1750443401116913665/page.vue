@@ -98,6 +98,7 @@
                           icon=""
                           right-icon=""
                           :border-bottom="false"
+                          :disabled="true"
                           class="ele-HmUviewField1"
                         >
                         </hm-uview-field>
@@ -138,6 +139,7 @@
                           icon=""
                           right-icon=""
                           :border-bottom="false"
+                          :disabled="true"
                           class="ele-HmUviewField2"
                         >
                         </hm-uview-field>
@@ -176,6 +178,7 @@
                           icon=""
                           right-icon=""
                           :border-bottom="false"
+                          :disabled="true"
                           class="ele-HmUviewField3"
                         >
                         </hm-uview-field>
@@ -214,6 +217,7 @@
                           icon=""
                           right-icon=""
                           :border-bottom="false"
+                          :disabled="true"
                           class="ele-HmUviewField4"
                         >
                         </hm-uview-field>
@@ -252,6 +256,7 @@
                           icon=""
                           right-icon=""
                           :border-bottom="false"
+                          :disabled="true"
                           class="ele-HmUviewField5"
                         >
                         </hm-uview-field>
@@ -290,6 +295,7 @@
                           icon=""
                           right-icon=""
                           :border-bottom="false"
+                          :disabled="true"
                           class="ele-HmUviewField6"
                         >
                         </hm-uview-field>
@@ -328,6 +334,7 @@
                           icon=""
                           right-icon=""
                           :border-bottom="false"
+                          :disabled="true"
                           class="ele-HmUviewField7"
                         >
                         </hm-uview-field>
@@ -366,6 +373,7 @@
                           icon=""
                           right-icon=""
                           :border-bottom="false"
+                          :disabled="true"
                           class="ele-HmUviewField8"
                         >
                         </hm-uview-field>
