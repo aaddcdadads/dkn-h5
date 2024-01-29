@@ -532,19 +532,32 @@
           width="100%"
           height=""
           border-radius="0"
-          padding="0"
+          padding="24"
           box-shadow-color="#00000000"
           class="ele-2136b833-7f0e-4a8a-a081-36d9e275f611"
         >
           <view
-            class="ele-wrapper ele-wrapper-82e92618-2ddf-422c-ac8d-ea357c4eb8ce"
+            class="ele-wrapper ele-wrapper-d324407f-5ad0-412f-845c-f123803419fc"
           >
-            <hm-uview-text> </hm-uview-text>
+            <hm-uview-radio
+              value=""
+              title=""
+              :list="[{ name: '我已阅读并同意', disabled: false }]"
+              class="ele-d324407f-5ad0-412f-845c-f123803419fc"
+            >
+            </hm-uview-radio>
           </view>
           <view
             class="ele-wrapper ele-wrapper-7a55d0c9-95ac-4729-befd-31f60ecf4707"
           >
-            <hm-uview-text> </hm-uview-text>
+            <hm-uview-text
+              text="《活动报名用户协议及承诺书》"
+              font-size="14px"
+              color="#D6769C"
+              :text-align="'left'"
+              padding="0"
+            >
+            </hm-uview-text>
           </view>
           <view
             class="ele-wrapper ele-wrapper-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f"
@@ -572,6 +585,7 @@ import ActivityList from "/@/components/dkn-h-5/activity-list/index.vue";
 import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index.vue";
 import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
+import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -585,6 +599,7 @@ export default {
     PrizeListComponent,
     HmCellList,
     HmUviewPopup,
+    HmUviewRadio,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -593,6 +608,15 @@ export default {
     return {
       regularPopup: {
         show: false,
+      },
+      "d324407f-5ad0-412f-845c-f123803419fc": {
+        value: "",
+        list: [
+          {
+            name: "我已阅读并同意",
+            disabled: false,
+          },
+        ],
       },
     };
   },
@@ -843,6 +867,10 @@ export default {
   z-index: 1000;
 }
 
+.ele-wrapper-d324407f-5ad0-412f-845c-f123803419fc {
+  float: left;
+}
+
 .ele-wrapper-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f {
   height: 120rpx;
   width: 100%;
@@ -850,8 +878,8 @@ export default {
     height: 120rpx !important;
   }
   /deep/.u-btn--success {
-    background-color: rgb(36, 199, 137) !important;
-    border-color: rgb(36, 199, 137) !important;
+    background-color: D6769C !important;
+    border-color: D6769C !important;
   }
 }
 </style>
