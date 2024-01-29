@@ -24,16 +24,15 @@
               :closeable="false"
               class="ele-8e5b00d7-8606-49be-8e41-bd21c1e35237"
             >
-              <view
-                class="ele-wrapper ele-wrapper-a62d48e7-e3f4-48b7-829c-4d072444f230"
-              >
+              <view class="ele-wrapper ele-wrapper-outsideBg">
                 <hm-uview-bg-card
+                  ref="outsideBg"
                   width="100%"
                   height=""
                   border-radius="0"
                   padding="0"
                   box-shadow-color="#00000000"
-                  class="ele-a62d48e7-e3f4-48b7-829c-4d072444f230"
+                  class="ele-outsideBg"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-a8421160-2261-4a40-ad96-c72052540372"
@@ -161,7 +160,7 @@ export default {
   }
 }
 
-.ele-wrapper-a62d48e7-e3f4-48b7-829c-4d072444f230 {
+.ele-wrapper-outsideBg {
   width: 100%;
   position: relative;
 }
