@@ -90,28 +90,25 @@
                           right-icon=""
                           class="ele-4d559557-0403-4847-8886-a66b609a45ba"
                         >
-                          <view
-                            class="ele-wrapper ele-wrapper-362c9914-e718-4981-a872-a752ee91fcd9"
-                          >
-                            <hm-uview-field value=""> </hm-uview-field>
-                          </view>
                         </hm-uview-field>
                       </view>
+                    </hm-uview-bg-card>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height="40"
+                      border-width="1"
+                      border-color="#B0B0B0"
+                      padding=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
+                      class="ele-e7bdbfea-5564-4643-a5fe-7f5406777598"
+                    >
                       <view
-                        class="ele-wrapper ele-wrapper-1a733f17-14f0-4007-80fe-e478cb9634cf"
-                      >
-                        <hm-uview-bg-card
-                          width="100%"
-                          height="40"
-                          padding=""
-                          box-shadow-v-shadow=""
-                          box-shadow-blur=""
-                          class="ele-1a733f17-14f0-4007-80fe-e478cb9634cf"
-                        >
-                        </hm-uview-bg-card>
-                      </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37"
+                        class="ele-wrapper ele-wrapper-8d972455-e530-4479-8ff5-8e619abb62a6"
                       >
                         <hm-uview-field
                           value=""
@@ -121,7 +118,7 @@
                           maxlength="250"
                           icon=""
                           right-icon=""
-                          class="ele-ea222d02-9ba2-44be-b94e-799272b9be37"
+                          class="ele-8d972455-e530-4479-8ff5-8e619abb62a6"
                         >
                         </hm-uview-field>
                       </view>
@@ -353,10 +350,7 @@ export default {
       "4d559557-0403-4847-8886-a66b609a45ba": {
         value: "",
       },
-      "ea222d02-9ba2-44be-b94e-799272b9be37": {
-        value: "",
-      },
-      "362c9914-e718-4981-a872-a752ee91fcd9": {
+      "8d972455-e530-4479-8ff5-8e619abb62a6": {
         value: "",
       },
       "c5bfde68-4a10-445e-b173-b62b3921231b": {
@@ -459,14 +453,15 @@ export default {
   }
 }
 
-.ele-wrapper-1a733f17-14f0-4007-80fe-e478cb9634cf {
+.ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
   width: 100%;
+  margin: 15px 0px;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin-top: -5px;
 }
 
-.ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
+.ele-wrapper-8d972455-e530-4479-8ff5-8e619abb62a6 {
   width: 100%;
   height: 45px;
   /deep/.u-label-postion-left {
