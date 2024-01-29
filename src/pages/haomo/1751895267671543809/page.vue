@@ -28,7 +28,7 @@
                   ref="viewPopup"
                   v-model:show="viewPopup.show"
                   width="80%"
-                  height="200px"
+                  height="220px"
                   border-radius="8px"
                   :closeable="false"
                   class="ele-viewPopup"
@@ -275,7 +275,7 @@ export default {
 
 .ele-wrapper-c43ff619-898c-4446-a22f-6dc191e8ac6e {
   width: 100%;
-  margin-top: 44rpx;
+  margin-top: 68rpx;
 }
 
 .ele-wrapper-canelButton {
