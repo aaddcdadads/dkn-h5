@@ -73,7 +73,7 @@
                   >
                     <hm-check-list
                       :data="[
-                        { key: 1, name: '活动名称', checked: true },
+                        { key: 1, name: '', checked: false },
                         { key: 2, name: 'John Brown1', checked: false },
                         { key: 3, name: 'John Brown1', checked: false },
                       ]"
