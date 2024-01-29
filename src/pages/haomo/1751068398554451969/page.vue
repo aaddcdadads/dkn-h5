@@ -400,7 +400,9 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  /deep/.hm-bg-card {
+    margin-bottom: 15px;
+  }
 }
 
 .ele-wrapper-fb3d49e3-aa6d-4761-8222-bc41e4395857 {
