@@ -155,7 +155,7 @@
                         class="ele-wrapper ele-wrapper-df0e3be8-5694-4de1-89ab-efc9e61b2384"
                       >
                         <hm-uview-text
-                          text="项目名称:"
+                          text=" 手机号码:"
                           font-size="13px"
                           padding="0"
                           class="ele-df0e3be8-5694-4de1-89ab-efc9e61b2384"
@@ -191,7 +191,7 @@
                         class="ele-wrapper ele-wrapper-da0d9595-55d9-48cf-b00a-082df56d4a58"
                       >
                         <hm-uview-text
-                          text="项目名称:"
+                          text="领奖门店:"
                           font-size="13px"
                           padding="0"
                           class="ele-da0d9595-55d9-48cf-b00a-082df56d4a58"
@@ -227,7 +227,7 @@
                         class="ele-wrapper ele-wrapper-1c6f3120-a3af-4da2-91cf-2a913f75e70f"
                       >
                         <hm-uview-text
-                          text="项目名称:"
+                          text="报名时间:"
                           font-size="13px"
                           padding="0"
                           class="ele-1c6f3120-a3af-4da2-91cf-2a913f75e70f"
@@ -263,7 +263,7 @@
                         class="ele-wrapper ele-wrapper-d300e2f4-3555-45fa-a67c-be25208705a0"
                       >
                         <hm-uview-text
-                          text="项目名称:"
+                          text="活动名称:"
                           font-size="13px"
                           padding="0"
                           class="ele-d300e2f4-3555-45fa-a67c-be25208705a0"
@@ -277,7 +277,7 @@
                           :left-src="[]"
                           value=""
                           right-src=""
-                          placeholder="姓名/昵称"
+                          placeholder="活动名称"
                           class="ele-46dda2c8-ba11-4dfd-b574-7f3a4b7046c0"
                         >
                         </information-input-box>
@@ -299,7 +299,7 @@
                         class="ele-wrapper ele-wrapper-3ea4931b-f9be-449b-adfa-85aec01fa006"
                       >
                         <hm-uview-text
-                          text="项目名称:"
+                          text="核销截止:"
                           font-size="13px"
                           padding="0"
                           class="ele-3ea4931b-f9be-449b-adfa-85aec01fa006"
@@ -313,7 +313,7 @@
                           :left-src="[]"
                           value=""
                           right-src=""
-                          placeholder="姓名/昵称"
+                          placeholder="2024.02.18 23:59:59"
                           class="ele-6dcc8dd0-70a0-4924-b4a4-781869efe80d"
                         >
                         </information-input-box>
@@ -335,7 +335,7 @@
                         class="ele-wrapper ele-wrapper-fba91c42-55e1-404b-97e8-0d6ca8b53ff5"
                       >
                         <hm-uview-text
-                          text="项目名称:"
+                          text="核销状态:"
                           font-size="13px"
                           padding="0"
                           class="ele-fba91c42-55e1-404b-97e8-0d6ca8b53ff5"
@@ -349,7 +349,7 @@
                           :left-src="[]"
                           value=""
                           right-src=""
-                          placeholder="姓名/昵称"
+                          placeholder="待核销/已核销"
                           class="ele-465887e1-2944-4140-bf66-fe7a5a155f13"
                         >
                         </information-input-box>
