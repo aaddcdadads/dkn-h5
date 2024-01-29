@@ -147,6 +147,7 @@
                           text="报名倒计时"
                           font-size="14px"
                           color="#666666"
+                          padding="0"
                           class="ele-6d62d75a-e400-40e6-a49e-015bd0115567"
                         >
                         </hm-uview-text>
@@ -705,6 +706,7 @@ export default {
 
 .ele-wrapper-6d62d75a-e400-40e6-a49e-015bd0115567 {
   float: right;
+  margin-right: 4rpx;
 }
 
 .ele-wrapper-activityBg {
