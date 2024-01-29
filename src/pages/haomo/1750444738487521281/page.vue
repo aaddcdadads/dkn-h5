@@ -1144,7 +1144,7 @@ export default {
   font-style: normal;
   color: #ff9900;
   text-align: left;
-  line-height: 20px;
+  line-height: 17px;
   padding: 0 8px;
   display: flex;
 }
