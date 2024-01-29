@@ -68,16 +68,11 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-a614f90f-fc08-4439-8a10-27bf935a054a"
-                  >
+                  <view class="ele-wrapper ele-wrapper-checkList">
                     <hm-check-list
-                      :data="[
-                        { key: 1, name: '', checked: false },
-                        { key: 2, name: 'John Brown1', checked: false },
-                        { key: 3, name: 'John Brown1', checked: false },
-                      ]"
-                      class="ele-a614f90f-fc08-4439-8a10-27bf935a054a"
+                      ref="checkList"
+                      :data="checkList.data"
+                      class="ele-checkList"
                     >
                     </hm-check-list>
                   </view>
@@ -112,6 +107,25 @@ export default {
     return {
       "8e5b00d7-8606-49be-8e41-bd21c1e35237": {
         show: true,
+      },
+      checkList: {
+        data: [
+          {
+            key: 1,
+            name: "",
+            checked: false,
+          },
+          {
+            key: 2,
+            name: "John Brown1",
+            checked: false,
+          },
+          {
+            key: 3,
+            name: "John Brown1",
+            checked: false,
+          },
+        ],
       },
     };
   },
@@ -152,7 +166,7 @@ export default {
   float: right;
 }
 
-.ele-wrapper-a614f90f-fc08-4439-8a10-27bf935a054a {
+.ele-wrapper-checkList {
   /deep/.check-list__item-checked {
     border-radius: 0 !important;
     width: 20px !important;
