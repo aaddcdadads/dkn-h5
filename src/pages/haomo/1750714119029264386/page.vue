@@ -101,7 +101,7 @@
                   border-radius="0"
                   padding="12"
                   box-shadow-color="#00000000"
-                  background-color="#FFE8EC"
+                  background-color="#F6D7E6"
                   class="ele-2966337e-38af-4573-a9c7-464b04d48566"
                 >
                   <view
@@ -643,6 +643,7 @@ export default {
   width: 100%;
   position: absolute;
   margin-top: -48rpx;
+  border-radius: 40px 40px 0px 0px;
 }
 
 .ele-wrapper-c2db3fcd-05d0-472b-8e18-163c243cc425 {
