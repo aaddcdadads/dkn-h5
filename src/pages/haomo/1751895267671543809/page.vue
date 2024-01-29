@@ -59,9 +59,9 @@
                       <view class="ele-wrapper ele-wrapper-phoneBox">
                         <information-input-box
                           ref="phoneBox"
-                          :left-src="phoneBox.leftSrc"
                           v-model:value="phoneBox.value"
                           right-src=""
+                          :show-code="false"
                           placeholder=" 请填写报名手机号码"
                           class="ele-phoneBox"
                         >
@@ -150,7 +150,6 @@ export default {
         show: true,
       },
       phoneBox: {
-        leftSrc: [],
         value: "",
       },
       viewInput: {
