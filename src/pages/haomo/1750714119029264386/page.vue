@@ -643,9 +643,9 @@ export default {
   width: 100%;
   position: absolute;
   margin-top: -48rpx;
-  border-radius: 40px 40px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
   /deep/.hm-bg-card {
-    border-radius: 40px 40px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
   }
 }
 
