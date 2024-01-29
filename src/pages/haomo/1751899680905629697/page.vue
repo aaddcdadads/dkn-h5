@@ -222,7 +222,7 @@ export default {
     margin: 0px 2px !important;
   }
   /dee/.check-list__item {
-    :last-child {
+    > :last-child {
       border-bottom: 1px solid #f5f5f5 !important;
     }
   }

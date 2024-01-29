@@ -97,6 +97,7 @@
                           label-width="0"
                           icon=""
                           right-icon=""
+                          class="ele-ded67b10-93fd-4c94-ada8-c1e9b48bf4d4"
                         >
                         </hm-uview-field>
                       </view>
@@ -481,6 +482,10 @@ export default {
   padding: 13px 7px;
   vertical-align: top;
   margin-left: 10px;
+}
+
+.ele-wrapper-ded67b10-93fd-4c94-ada8-c1e9b48bf4d4 {
+  width: 65%;
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
