@@ -119,6 +119,11 @@
                       box-shadow-blur=""
                       class="ele-e7bdbfea-5564-4643-a5fe-7f5406777598"
                     >
+                      <view
+                        class="ele-wrapper ele-wrapper-a6b059cb-691d-4093-bede-453d1eaf7370"
+                      >
+                        <hm-uview-text> </hm-uview-text>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -132,6 +137,11 @@
                       box-shadow-blur=""
                       class="ele-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9"
                     >
+                      <view
+                        class="ele-wrapper ele-wrapper-df0e3be8-5694-4de1-89ab-efc9e61b2384"
+                      >
+                        <hm-uview-text> </hm-uview-text>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -145,6 +155,11 @@
                       box-shadow-blur=""
                       class="ele-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0"
                     >
+                      <view
+                        class="ele-wrapper ele-wrapper-da0d9595-55d9-48cf-b00a-082df56d4a58"
+                      >
+                        <hm-uview-text> </hm-uview-text>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -158,6 +173,11 @@
                       box-shadow-blur=""
                       class="ele-ec8bdb37-8258-4daf-b83b-30ebc2a70f11"
                     >
+                      <view
+                        class="ele-wrapper ele-wrapper-1c6f3120-a3af-4da2-91cf-2a913f75e70f"
+                      >
+                        <hm-uview-text> </hm-uview-text>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -172,20 +192,9 @@
                       class="ele-1e638196-949e-4db0-8c6d-ffb770b0ac8a"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-77bae9a8-6c80-4c4a-94fd-75350b1d7fb3"
+                        class="ele-wrapper ele-wrapper-d300e2f4-3555-45fa-a67c-be25208705a0"
                       >
-                        <hm-uview-field
-                          value=""
-                          label="活动名称:"
-                          placeholder="活动名称"
-                          label-width="150"
-                          maxlength="200"
-                          icon=""
-                          right-icon=""
-                          :disabled="true"
-                          class="ele-77bae9a8-6c80-4c4a-94fd-75350b1d7fb3"
-                        >
-                        </hm-uview-field>
+                        <hm-uview-text> </hm-uview-text>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -201,20 +210,9 @@
                       class="ele-9047135a-0817-4297-9bc0-ba758bea8736"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-f2093ff0-31f8-4c8e-8715-756493dc516a"
+                        class="ele-wrapper ele-wrapper-3ea4931b-f9be-449b-adfa-85aec01fa006"
                       >
-                        <hm-uview-field
-                          value=""
-                          label=" 核销截止:"
-                          placeholder=" 核销截止"
-                          label-width="150"
-                          maxlength="200"
-                          icon=""
-                          right-icon=""
-                          :disabled="true"
-                          class="ele-f2093ff0-31f8-4c8e-8715-756493dc516a"
-                        >
-                        </hm-uview-field>
+                        <hm-uview-text> </hm-uview-text>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -229,22 +227,6 @@
                       box-shadow-blur=""
                       class="ele-e4f5cc89-8551-4bdd-a6ee-b6edac67ce3c"
                     >
-                      <view
-                        class="ele-wrapper ele-wrapper-825c7b35-6136-42aa-8176-48014a210261"
-                      >
-                        <hm-uview-field
-                          value=""
-                          label="核销状态:"
-                          placeholder="待核销/已核销"
-                          label-width="150"
-                          maxlength="200"
-                          icon=""
-                          right-icon=""
-                          :disabled="true"
-                          class="ele-825c7b35-6136-42aa-8176-48014a210261"
-                        >
-                        </hm-uview-field>
-                      </view>
                     </hm-uview-bg-card>
                   </view>
                 </hm-uview-bg-card>
@@ -303,15 +285,6 @@ export default {
         customStyle: {},
       },
       "a89083fd-72bd-468d-a1c4-41e4b0087eb0": {
-        value: "",
-      },
-      "77bae9a8-6c80-4c4a-94fd-75350b1d7fb3": {
-        value: "",
-      },
-      "f2093ff0-31f8-4c8e-8715-756493dc516a": {
-        value: "",
-      },
-      "825c7b35-6136-42aa-8176-48014a210261": {
         value: "",
       },
     };
@@ -426,35 +399,6 @@ export default {
   margin: 15px 0px;
 }
 
-.ele-wrapper-77bae9a8-6c80-4c4a-94fd-75350b1d7fb3 {
-  width: 100%;
-  height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
-}
-
 .ele-wrapper-9047135a-0817-4297-9bc0-ba758bea8736 {
   width: 100%;
   display: flex;
@@ -462,69 +406,11 @@ export default {
   margin: 15px 0px;
 }
 
-.ele-wrapper-f2093ff0-31f8-4c8e-8715-756493dc516a {
-  width: 100%;
-  height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
-}
-
 .ele-wrapper-e4f5cc89-8551-4bdd-a6ee-b6edac67ce3c {
   width: 100%;
   display: flex;
   align-items: center;
   margin: 15px 0px;
-}
-
-.ele-wrapper-825c7b35-6136-42aa-8176-48014a210261 {
-  width: 100%;
-  height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
 }
 
 .ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451 {
