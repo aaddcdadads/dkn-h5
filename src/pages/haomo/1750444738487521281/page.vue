@@ -10,7 +10,7 @@
           padding=""
           box-shadow-v-shadow=""
           box-shadow-blur=""
-          background-color="#F9F5F5"
+          background-color="#F8F8F8"
           class="ele-formbgCard"
         >
           <view
@@ -59,7 +59,7 @@
               border-radius=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
-              background-color="#F9F5F5"
+              background-color="#F8F8F8"
               class="ele-74c8c2c3-d387-4029-8b68-8275204c2ed5"
             >
               <view class="ele-wrapper ele-wrapper-eventCard">
@@ -91,7 +91,7 @@
               box-shadow-v-shadow=""
               box-shadow-blur=""
               box-shadow-spread=""
-              background-color="#F9F5F5"
+              background-color="#F8F8F8"
               class="ele-7927eb64-d6cf-4dda-8938-a15bb62187d2"
             >
               <view
@@ -960,7 +960,7 @@
               padding=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
-              background-color="#F9F5F5"
+              background-color="#F8F8F8"
               class="ele-baoming"
             >
               <view class="ele-wrapper ele-wrapper-payButton">
