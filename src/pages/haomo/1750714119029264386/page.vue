@@ -556,6 +556,7 @@
               color="#D6769C"
               :text-align="'left'"
               padding="0"
+              class="ele-7a55d0c9-95ac-4729-befd-31f60ecf4707"
             >
             </hm-uview-text>
           </view>
@@ -869,6 +870,17 @@ export default {
 
 .ele-wrapper-d324407f-5ad0-412f-845c-f123803419fc {
   float: left;
+  /deep/.u-radio__icon-wrap--circle {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  /deep/.u-radio__label {
+    font-size: 14px !important;
+  }
+}
+
+.ele-wrapper-7a55d0c9-95ac-4729-befd-31f60ecf4707 {
+  margin-left: -12px;
 }
 
 .ele-wrapper-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f {
