@@ -13,9 +13,14 @@
           class="ele-dbd7f3bd-da08-446b-beec-b1dc37f4621c"
         >
           <view
-            class="ele-wrapper ele-wrapper-84232644-133f-463c-b6ce-1d727f86aff6"
+            class="ele-wrapper ele-wrapper-bcbf7300-899f-4a1e-b7d6-6afbc073f0eb"
           >
-            <hm-uview-modal :visible="true"> </hm-uview-modal>
+            <hm-uview-action-sheet
+              :visible="true"
+              :border-radius="0"
+              :z-index="1075"
+            >
+            </hm-uview-action-sheet>
           </view>
         </hm-uview-bg-card>
       </view>
@@ -26,19 +31,19 @@
 <script>
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
-import HmUviewModal from "/@/components/built-in/uniapp-uview-vue3/HmUviewModal.vue";
+import HmUviewActionSheet from "/@/components/built-in/uniapp-uview-vue3/HmUviewActionSheet.vue";
 
 export default {
   name: "ActivetyView",
   components: {
     HmUviewBgCard,
-    HmUviewModal,
+    HmUviewActionSheet,
   },
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
     return {
-      "84232644-133f-463c-b6ce-1d727f86aff6": {
+      "bcbf7300-899f-4a1e-b7d6-6afbc073f0eb": {
         visible: true,
       },
     };
