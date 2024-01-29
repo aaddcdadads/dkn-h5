@@ -81,7 +81,7 @@
                         class="ele-wrapper ele-wrapper-716406f0-2fda-4cc8-9dc0-457fbd1bcec2"
                       >
                         <hm-uview-text
-                          text="项目名称:"
+                          text="报名项目:"
                           font-size="13px"
                           padding="0"
                           class="ele-716406f0-2fda-4cc8-9dc0-457fbd1bcec2"
