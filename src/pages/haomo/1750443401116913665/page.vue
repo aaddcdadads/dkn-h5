@@ -77,6 +77,12 @@
                       class="ele-3594e500-632d-42e8-b3b9-d485a0f784a5"
                     >
                       <view
+                        class="ele-wrapper ele-wrapper-2bc880af-61aa-4911-b1ac-eb457d6a075a"
+                      >
+                        <hm-uview-text text="项目名称" font-size="13px">
+                        </hm-uview-text>
+                      </view>
+                      <view
                         class="ele-wrapper ele-wrapper-4d559557-0403-4847-8886-a66b609a45ba"
                       >
                         <hm-uview-field
@@ -91,11 +97,6 @@
                           :disabled="true"
                           class="ele-4d559557-0403-4847-8886-a66b609a45ba"
                         >
-                          <view
-                            class="ele-wrapper ele-wrapper-20f021de-da22-4f3f-a799-b6459b5cc20f"
-                          >
-                            <hm-uview-text> </hm-uview-text>
-                          </view>
                         </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
