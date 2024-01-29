@@ -28,7 +28,7 @@
                   ref="viewPopup"
                   v-model:show="viewPopup.show"
                   width="80%"
-                  height="220px"
+                  height="200px"
                   border-radius="8px"
                   :closeable="false"
                   class="ele-viewPopup"
@@ -70,7 +70,9 @@
                       <view class="ele-wrapper ele-wrapper-viewInput">
                         <information-input-box
                           ref="viewInput"
+                          :left-src="viewInput.leftSrc"
                           v-model:value="viewInput.value"
+                          :show-code="true"
                           placeholder=" 请填写手机验证码"
                           class="ele-viewInput"
                         >
@@ -151,6 +153,7 @@ export default {
         value: "",
       },
       viewInput: {
+        leftSrc: [],
         value: "",
       },
       canelButton: {
@@ -165,9 +168,7 @@ export default {
   },
   watch: {},
   methods: {
-    onCanelButtonClick() {
-      this.viewPopup.show = false;
-    },
+    onCanelButtonClick() {},
     onSureButtonClick() {
       uni.$u.route(
         "https://stage.block-design.cn/edit-page/?pageId=1751899680905629697"
@@ -232,7 +233,6 @@ export default {
     font-size: 12px !important;
   }
   /deep/.input {
-    border: 1px solid;
     border-color: #f8f8f8 !important;
   }
   /deep/.ele-phoneBox {
@@ -264,7 +264,6 @@ export default {
     font-size: 12px !important;
   }
   /deep/.input {
-    border: 1px solid;
     border-color: #f8f8f8 !important;
   }
   /deep/.ele-viewInput {
@@ -275,7 +274,7 @@ export default {
 
 .ele-wrapper-c43ff619-898c-4446-a22f-6dc191e8ac6e {
   width: 100%;
-  margin-top: 80rpx;
+  margin-top: 44rpx;
 }
 
 .ele-wrapper-canelButton {
