@@ -159,7 +159,7 @@
                     <hm-uview-bg-card
                       width="100%"
                       height=""
-                      border-radius="12"
+                      border-radius=""
                       padding="12"
                       background-color="#FEEFF7"
                       class="ele-c2db3fcd-05d0-472b-8e18-163c243cc425"
@@ -246,6 +246,8 @@
                         class="ele-wrapper ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609"
                       >
                         <activity-list
+                          time="活动时间 2023.11.01 00:00-2024.02.15 23:50:00"
+                          number=" 154,480 "
                           class="ele-9243b683-57b5-45b7-8c57-56a5ffd4a609"
                         >
                         </activity-list>
@@ -662,6 +664,7 @@ export default {
 
 .ele-wrapper-c2db3fcd-05d0-472b-8e18-163c243cc425 {
   width: 100%;
+  border-radius: 12px;
 }
 
 .ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39 {
