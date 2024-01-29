@@ -100,7 +100,6 @@
                           icon=""
                           right-icon=""
                           :focus="true"
-                          :disabled="true"
                           class="ele-a89083fd-72bd-468d-a1c4-41e4b0087eb0"
                         >
                         </hm-uview-field>
