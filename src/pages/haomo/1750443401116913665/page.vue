@@ -92,13 +92,12 @@
                       >
                         <hm-uview-field
                           value=""
-                          label=""
+                          label=" 手机号码:"
                           placeholder="报名手机号码"
-                          label-width="0"
+                          label-width="150"
                           maxlength="200"
                           icon=""
                           right-icon=""
-                          :focus="true"
                           :disabled="true"
                           class="ele-4d559557-0403-4847-8886-a66b609a45ba"
                         >
@@ -453,7 +452,7 @@ export default {
 }
 
 .ele-wrapper-4d559557-0403-4847-8886-a66b609a45ba {
-  width: 70%;
+  width: 100%;
   height: 45px;
   /deep/.u-label-postion-left {
     position: absolute;
@@ -463,7 +462,6 @@ export default {
   /deep/.u-border-bottom {
     border-radius: 5px;
     height: 45px;
-    background: rgb(240, 240, 240);
   }
   /deep/.uni-input-input {
     font-size: 13px;
