@@ -85,7 +85,7 @@
                   >
                     <hm-uview-bg-card
                       width="100%"
-                      height="40"
+                      height=""
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -124,7 +124,7 @@
                   >
                     <hm-uview-bg-card
                       width="100%"
-                      height="40"
+                      height=""
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
