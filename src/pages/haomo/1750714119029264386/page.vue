@@ -529,6 +529,54 @@
                   </view>
                 </hm-uview-popup>
               </view>
+              <view class="ele-wrapper ele-wrapper-viewPopup">
+                <hm-uview-popup
+                  ref="viewPopup"
+                  v-model:show="viewPopup.show"
+                  width="80%"
+                  height="200px"
+                  border-radius="8px"
+                  :closeable="false"
+                  class="ele-viewPopup"
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-ea66b462-b5ce-4b41-8870-bb482768fef8"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius="0"
+                      padding="12"
+                      box-shadow-color="#00000000"
+                      background-color="#FFE8EC00"
+                      class="ele-ea66b462-b5ce-4b41-8870-bb482768fef8"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f"
+                      >
+                        <hm-uview-text
+                          text="用户登录查看报名信息"
+                          font-size="14px"
+                          class="ele-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f"
+                        >
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e"
+                      >
+                        <information-input-box
+                          :left-src="[]"
+                          value=""
+                          :show-code="true"
+                          placeholder=" 请填写手机验证码"
+                          class="ele-dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e"
+                        >
+                        </information-input-box>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
+                </hm-uview-popup>
+              </view>
             </hm-uview-bg-card>
           </view>
         </hm-uview-bg-card>
@@ -605,6 +653,7 @@ import ActivityList from "/@/components/dkn-h-5/activity-list/index.vue";
 import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index.vue";
 import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
+import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
@@ -619,6 +668,7 @@ export default {
     PrizeListComponent,
     HmCellList,
     HmUviewPopup,
+    InformationInputBox,
     HmUviewRadio,
     HmUviewButton,
   },
@@ -628,6 +678,13 @@ export default {
     return {
       regularPopup: {
         show: false,
+      },
+      viewPopup: {
+        show: true,
+      },
+      "dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e": {
+        leftSrc: [],
+        value: "",
       },
       "d324407f-5ad0-412f-845c-f123803419fc": {
         value: "",
@@ -893,6 +950,29 @@ export default {
 
 .ele-wrapper-30657b3a-defb-4229-91e7-6326e04c3af2 {
   width: 100%;
+}
+
+.ele-wrapper-viewPopup {
+  padding: 24rpx 24rpx;
+}
+
+.ele-wrapper-ea66b462-b5ce-4b41-8870-bb482768fef8 {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ele-wrapper-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f {
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.ele-wrapper-dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e {
+  width: 100%;
+  margin-top: 20px;
+  /deep/.image_box {
+    display: none;
+  }
 }
 
 .ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611 {
