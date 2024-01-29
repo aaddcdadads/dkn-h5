@@ -461,6 +461,7 @@ export default {
   /deep/.u-border-bottom {
     border-radius: 5px;
     height: 45px;
+    background: rgb(240, 240, 240);
   }
   /deep/.u-flex-1 {
     font-size: 13px;
