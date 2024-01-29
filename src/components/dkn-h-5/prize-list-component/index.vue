@@ -109,7 +109,7 @@ export default {
     width: 100%;
     height: 100%;
     position: relative;
-    border-radius: 15px;
+    border-radius: 8px;
 
     > img {
       height: auto;
