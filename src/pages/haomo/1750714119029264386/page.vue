@@ -644,6 +644,9 @@ export default {
   position: absolute;
   margin-top: -48rpx;
   border-radius: 40px 40px 0px 0px;
+  /deep/.hm-bg-card {
+    border-radius: 40px 40px 0px 0px;
+  }
 }
 
 .ele-wrapper-c2db3fcd-05d0-472b-8e18-163c243cc425 {
