@@ -688,7 +688,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField4 {
+  /deep/.ele-HmUviewField6 {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
