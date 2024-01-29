@@ -80,7 +80,8 @@
                       <view
                         class="ele-wrapper ele-wrapper-716406f0-2fda-4cc8-9dc0-457fbd1bcec2"
                       >
-                        <hm-uview-text> </hm-uview-text>
+                        <hm-uview-text item="项目名称：" font-size="13px">
+                        </hm-uview-text>
                       </view>
                       <view
                         class="ele-wrapper ele-wrapper-a89083fd-72bd-468d-a1c4-41e4b0087eb0"
