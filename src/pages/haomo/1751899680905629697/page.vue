@@ -154,5 +154,8 @@ export default {
     display: none !important;
   }
   width: 100%;
+  /deep/.check-list__item-name {
+    font-size: 28rpx !important;
+  }
 }
 </style>
