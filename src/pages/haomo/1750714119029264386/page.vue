@@ -576,9 +576,7 @@
                       <view class="ele-wrapper ele-wrapper-viewInput">
                         <information-input-box
                           ref="viewInput"
-                          :left-src="viewInput.leftSrc"
                           v-model:value="viewInput.value"
-                          :show-code="true"
                           placeholder=" 请填写手机验证码"
                           class="ele-viewInput"
                         >
@@ -733,7 +731,6 @@ export default {
         value: "",
       },
       viewInput: {
-        leftSrc: [],
         value: "",
       },
       canelButton: {
@@ -1092,6 +1089,7 @@ export default {
     font-size: 12px !important;
   }
   /deep/.input {
+    border: 1px solid;
     border-color: #f8f8f8 !important;
   }
   /deep/.ele-viewInput {
