@@ -102,11 +102,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-02a240cb-5f1d-4a8f-af87-69ee58d936b9"
-                      >
+                      <view class="ele-wrapper ele-wrapper-InputPhoneNumber">
                         <hm-uview-field
-                          value=""
+                          ref="InputPhoneNumber"
+                          v-model:value="InputPhoneNumber.value"
                           label=""
                           placeholder="报名项目名称 x 数量"
                           label-width="0"
@@ -114,7 +113,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-02a240cb-5f1d-4a8f-af87-69ee58d936b9"
+                          class="ele-InputPhoneNumber"
                         >
                         </hm-uview-field>
                       </view>
@@ -292,7 +291,7 @@ export default {
       InputMane: {
         value: "",
       },
-      "02a240cb-5f1d-4a8f-af87-69ee58d936b9": {
+      InputPhoneNumber: {
         value: "",
       },
       "da7c111b-9122-4667-9eb5-1d46bf867f3c": {
@@ -378,7 +377,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-02a240cb-5f1d-4a8f-af87-69ee58d936b9 {
+.ele-wrapper-InputPhoneNumber {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
