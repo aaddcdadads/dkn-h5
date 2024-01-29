@@ -115,7 +115,7 @@ export default {
 
 .ele-wrapper-8e5b00d7-8606-49be-8e41-bd21c1e35237 {
   /deep/.u-drawer-content-visible {
-    border-radius: 8px;
+    border-radius: 8px 8px 0px 0px;
   }
 }
 
