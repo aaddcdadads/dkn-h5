@@ -53,17 +53,29 @@
                       class="ele-3594e500-632d-42e8-b3b9-d485a0f784a5"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37"
+                        class="ele-wrapper ele-wrapper-c1321652-9bb5-410d-a15c-df20fe88d984"
+                      >
+                        <hm-uview-text
+                          text="报名项目:"
+                          font-size="13px"
+                          padding="0"
+                          class="ele-c1321652-9bb5-410d-a15c-df20fe88d984"
+                        >
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-30322db6-c364-4003-840d-23ff3184f8c3"
                       >
                         <hm-uview-field
                           value=""
-                          label=" 姓名/昵称:"
-                          placeholder="姓名/昵称"
-                          label-width="150"
-                          maxlength=""
+                          label=""
+                          placeholder="报名项目名称 x 数量"
+                          label-width="0"
                           icon=""
                           right-icon=""
-                          class="ele-ea222d02-9ba2-44be-b94e-799272b9be37"
+                          :border-bottom="false"
+                          :disabled="true"
+                          class="ele-30322db6-c364-4003-840d-23ff3184f8c3"
                         >
                         </hm-uview-field>
                       </view>
@@ -81,17 +93,29 @@
                       class="ele-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b"
+                        class="ele-wrapper ele-wrapper-f2027eca-bb01-45c1-99a4-55ff0de5ada0"
+                      >
+                        <hm-uview-text
+                          text="报名项目:"
+                          font-size="13px"
+                          padding="0"
+                          class="ele-f2027eca-bb01-45c1-99a4-55ff0de5ada0"
+                        >
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-02a240cb-5f1d-4a8f-af87-69ee58d936b9"
                       >
                         <hm-uview-field
                           value=""
-                          label=" 手机号码:"
-                          placeholder="报名手机号码"
-                          label-width="150"
-                          maxlength="200"
+                          label=""
+                          placeholder="报名项目名称 x 数量"
+                          label-width="0"
                           icon=""
                           right-icon=""
-                          class="ele-c5bfde68-4a10-445e-b173-b62b3921231b"
+                          :border-bottom="false"
+                          :disabled="true"
+                          class="ele-02a240cb-5f1d-4a8f-af87-69ee58d936b9"
                         >
                         </hm-uview-field>
                       </view>
@@ -109,17 +133,29 @@
                       class="ele-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025"
+                        class="ele-wrapper ele-wrapper-fb3d49e3-aa6d-4761-8222-bc41e4395857"
+                      >
+                        <hm-uview-text
+                          text="报名项目:"
+                          font-size="13px"
+                          padding="0"
+                          class="ele-fb3d49e3-aa6d-4761-8222-bc41e4395857"
+                        >
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-da7c111b-9122-4667-9eb5-1d46bf867f3c"
                       >
                         <hm-uview-field
                           value=""
-                          label=" 领奖门店:"
-                          placeholder="区域/门店名称"
-                          label-width="150"
-                          maxlength="200"
+                          label=""
+                          placeholder="报名项目名称 x 数量"
+                          label-width="0"
                           icon=""
                           right-icon=""
-                          class="ele-e3774afb-14a0-4b23-adda-2624414eb025"
+                          :border-bottom="false"
+                          :disabled="true"
+                          class="ele-da7c111b-9122-4667-9eb5-1d46bf867f3c"
                         >
                         </hm-uview-field>
                       </view>
@@ -152,17 +188,29 @@
                       class="ele-920b3665-1af5-40df-908e-748003d3af93"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-1f2e658a-de48-485a-b375-bcd45f6c965b"
+                        class="ele-wrapper ele-wrapper-2ecc38bd-15e4-4ee4-9c5f-50b3b6d0846c"
+                      >
+                        <hm-uview-text
+                          text="报名项目:"
+                          font-size="13px"
+                          padding="0"
+                          class="ele-2ecc38bd-15e4-4ee4-9c5f-50b3b6d0846c"
+                        >
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-d85c2ae9-62ab-4f2f-886b-747dc175f7fb"
                       >
                         <hm-uview-field
                           value=""
-                          label=" 领奖门店:"
-                          placeholder="区域/门店名称"
-                          label-width="150"
-                          maxlength="200"
+                          label=""
+                          placeholder="报名项目名称 x 数量"
+                          label-width="0"
                           icon=""
                           right-icon=""
-                          class="ele-1f2e658a-de48-485a-b375-bcd45f6c965b"
+                          :border-bottom="false"
+                          :disabled="true"
+                          class="ele-d85c2ae9-62ab-4f2f-886b-747dc175f7fb"
                         >
                         </hm-uview-field>
                       </view>
@@ -180,24 +228,15 @@
                       class="ele-6c9ec785-f135-40cb-9d49-e774f8bd851e"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-929420c8-3de3-499f-87e8-c054a0fa0583"
+                        class="ele-wrapper ele-wrapper-26f8e5b0-a98e-4879-9f6f-3f8f3819a511"
                       >
-                        <hm-uview-field
-                          value=""
-                          label="活动奖品:"
-                          label-width="150"
-                          maxlength=""
-                          icon=""
-                          right-icon=""
-                          :border-bottom="false"
-                          class="ele-929420c8-3de3-499f-87e8-c054a0fa0583"
+                        <hm-uview-text
+                          text="报名项目:"
+                          font-size="13px"
+                          padding="0"
+                          class="ele-26f8e5b0-a98e-4879-9f6f-3f8f3819a511"
                         >
-                          <view
-                            class="ele-wrapper ele-wrapper-ec485035-789b-4f3c-9dc5-4c4c7e4e5776"
-                          >
-                            <hm-uview-image> </hm-uview-image>
-                          </view>
-                        </hm-uview-field>
+                        </hm-uview-text>
                       </view>
                       <view
                         class="ele-wrapper ele-wrapper-57f09a13-8f55-4241-a6cc-270dd43ca1ba"
@@ -230,6 +269,7 @@
 <script>
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
+import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
@@ -238,6 +278,7 @@ export default {
   name: "VerificationConfirmation",
   components: {
     HmUviewBgCard,
+    HmUviewText,
     HmUviewField,
     HmUviewImage,
     HmUviewButton,
@@ -249,19 +290,16 @@ export default {
       Buttonwan: {
         text: "确认核销",
       },
-      "ea222d02-9ba2-44be-b94e-799272b9be37": {
+      "30322db6-c364-4003-840d-23ff3184f8c3": {
         value: "",
       },
-      "c5bfde68-4a10-445e-b173-b62b3921231b": {
+      "02a240cb-5f1d-4a8f-af87-69ee58d936b9": {
         value: "",
       },
-      "e3774afb-14a0-4b23-adda-2624414eb025": {
+      "da7c111b-9122-4667-9eb5-1d46bf867f3c": {
         value: "",
       },
-      "1f2e658a-de48-485a-b375-bcd45f6c965b": {
-        value: "",
-      },
-      "929420c8-3de3-499f-87e8-c054a0fa0583": {
+      "d85c2ae9-62ab-4f2f-886b-747dc175f7fb": {
         value: "",
       },
     };
@@ -302,36 +340,29 @@ export default {
   margin-top: -5px;
 }
 
-.ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
-  width: 100%;
+.ele-wrapper-c1321652-9bb5-410d-a15c-df20fe88d984 {
+  padding: 13px 7px;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.ele-wrapper-30322db6-c364-4003-840d-23ff3184f8c3 {
+  width: 65%;
   height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
   /deep/.u-border-bottom {
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
     height: 45px;
-  }
-  /deep/.u-flex-1 {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-    width: 100%;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
   }
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.uni-input-input {
-    font-size: 13px;
+  /deep/.ele-HmUviewField1 {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -342,36 +373,29 @@ export default {
   margin: 15px 0px;
 }
 
-.ele-wrapper-c5bfde68-4a10-445e-b173-b62b3921231b {
-  width: 100%;
+.ele-wrapper-f2027eca-bb01-45c1-99a4-55ff0de5ada0 {
+  padding: 13px 7px;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.ele-wrapper-02a240cb-5f1d-4a8f-af87-69ee58d936b9 {
+  width: 65%;
   height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
   /deep/.u-border-bottom {
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
     height: 45px;
-  }
-  /deep/.u-flex-1 {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-    width: 100%;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
   }
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.uni-input-input {
-    font-size: 13px;
+  /deep/.ele-HmUviewField1 {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -382,32 +406,29 @@ export default {
   margin: 15px 0px;
 }
 
-.ele-wrapper-e3774afb-14a0-4b23-adda-2624414eb025 {
-  width: 100%;
+.ele-wrapper-fb3d49e3-aa6d-4761-8222-bc41e4395857 {
+  padding: 13px 7px;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.ele-wrapper-da7c111b-9122-4667-9eb5-1d46bf867f3c {
+  width: 65%;
   height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
   /deep/.u-border-bottom {
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
     height: 45px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
   }
   /deep/.input-placeholder {
     font-size: 13px;
+  }
+  /deep/.ele-HmUviewField1 {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -422,32 +443,29 @@ export default {
   margin: 15px 0px;
 }
 
-.ele-wrapper-1f2e658a-de48-485a-b375-bcd45f6c965b {
-  width: 100%;
+.ele-wrapper-2ecc38bd-15e4-4ee4-9c5f-50b3b6d0846c {
+  padding: 13px 7px;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.ele-wrapper-d85c2ae9-62ab-4f2f-886b-747dc175f7fb {
+  width: 65%;
   height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
   /deep/.u-border-bottom {
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
     height: 45px;
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
   }
   /deep/.input-placeholder {
     font-size: 13px;
+  }
+  /deep/.ele-HmUviewField1 {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -458,27 +476,10 @@ export default {
   margin: 15px 0px;
 }
 
-.ele-wrapper-929420c8-3de3-499f-87e8-c054a0fa0583 {
+.ele-wrapper-26f8e5b0-a98e-4879-9f6f-3f8f3819a511 {
+  padding: 13px 7px;
   vertical-align: top;
-  /deep/.uni-input-input {
-    display: none;
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.fild-body {
-    width: 0px;
-  }
-  /deep/.u-field {
-    padding-right: 0px;
-  }
-  /deep/.fild-body {
-    display: none;
-  }
-  /deep/uni-view {
-    width: 90px;
-  }
+  margin-left: 10px;
 }
 
 .ele-wrapper-57f09a13-8f55-4241-a6cc-270dd43ca1ba {
