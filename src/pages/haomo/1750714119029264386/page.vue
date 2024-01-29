@@ -280,22 +280,11 @@
                             class="ele-wrapper ele-wrapper-b5a81ba4-33af-478f-bd93-1199f013e523"
                           >
                             <hm-uview-text
-                              text="完赛奖品"
+                              text="我的奖品"
                               font-size="16px"
                               color="#FFFFFF"
                               bg-color="#FFFFFF00"
                               class="ele-b5a81ba4-33af-478f-bd93-1199f013e523"
-                            >
-                            </hm-uview-text>
-                          </view>
-                          <view
-                            class="ele-wrapper ele-wrapper-b5776b9e-5bb1-40f5-8854-f2b4dc696a41"
-                          >
-                            <hm-uview-text
-                              text="未完赛将无法获得奖品"
-                              font-size="12px"
-                              color="#FFFFFF99"
-                              class="ele-b5776b9e-5bb1-40f5-8854-f2b4dc696a41"
                             >
                             </hm-uview-text>
                           </view>
@@ -726,14 +715,11 @@ export default {
   float: left;
 }
 
-.ele-wrapper-b5776b9e-5bb1-40f5-8854-f2b4dc696a41 {
-  float: right;
-}
-
 .ele-wrapper-a2b2b5e9-de26-4cb6-bfdf-60722738d013 {
   width: 100%;
   position: relative;
   margin-top: 12rpx;
+  background-color: #ffffff;
 }
 
 .ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550 {
