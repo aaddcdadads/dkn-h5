@@ -281,15 +281,15 @@
                           >
                             <hm-uview-text
                               text="我的奖品"
-                              font-size="16px"
-                              color="#FFFFFF"
+                              font-size="14px"
+                              color="#000000"
                               bg-color="#FFFFFF00"
                               class="ele-b5a81ba4-33af-478f-bd93-1199f013e523"
                             >
                             </hm-uview-text>
                           </view>
                           <view
-                            class="ele-wrapper ele-wrapper-a2b2b5e9-de26-4cb6-bfdf-60722738d013"
+                            class="ele-wrapper ele-wrapper-04b7a686-49e4-4376-b105-eec04bba2014"
                           >
                             <prize-list-component
                               :func-list="[
@@ -297,7 +297,7 @@
                                   bgUrl:
                                     'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
                                   height1: 'auto',
-                                  scoretext: '实体',
+                                  scoretext: '奖品',
                                   display: 'block',
                                   textbottom: '奖品',
                                 },
@@ -305,7 +305,7 @@
                                   bgUrl:
                                     'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
                                   height1: 'auto',
-                                  scoretext: '实体',
+                                  scoretext: '奖品',
                                   display: 'block',
                                   textbottom: '奖品',
                                 },
@@ -313,20 +313,12 @@
                                   bgUrl:
                                     'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
                                   height1: 'auto',
-                                  scoretext: '实体',
+                                  scoretext: '奖品',
                                   display: 'block',
-                                  textbottom: '奖品',
-                                },
-                                {
-                                  bgUrl:
-                                    'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
-                                  height1: 'auto',
-                                  scoretext: '实体',
-                                  display: 'none',
                                   textbottom: '奖品',
                                 },
                               ]"
-                              class="ele-a2b2b5e9-de26-4cb6-bfdf-60722738d013"
+                              class="ele-04b7a686-49e4-4376-b105-eec04bba2014"
                             >
                             </prize-list-component>
                           </view>
@@ -715,11 +707,10 @@ export default {
   float: left;
 }
 
-.ele-wrapper-a2b2b5e9-de26-4cb6-bfdf-60722738d013 {
-  width: 100%;
-  position: relative;
-  margin-top: 12rpx;
-  background-color: #ffffff;
+.ele-wrapper-04b7a686-49e4-4376-b105-eec04bba2014 {
+  background-color: #feeff7;
+  padding-top: 12px;
+  border-radius: 8px;
 }
 
 .ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550 {
