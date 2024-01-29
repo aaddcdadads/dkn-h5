@@ -96,6 +96,7 @@
                           value=""
                           right-src=""
                           placeholder="姓名/昵称"
+                          class="ele-4fcfeacf-caaa-4675-94b7-297827308bfc"
                         >
                         </information-input-box>
                       </view>
@@ -525,6 +526,18 @@ export default {
   padding: 13px 5px;
   vertical-align: top;
   margin-left: 10px;
+}
+
+.ele-wrapper-4fcfeacf-caaa-4675-94b7-297827308bfc {
+  /deep/.data_input {
+    padding: 0px 10px;
+  }
+  /deep/.image_box {
+    display: none;
+  }
+  /deep/.uni-input {
+    font-size: 13px;
+  }
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
