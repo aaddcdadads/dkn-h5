@@ -86,6 +86,7 @@
               width="100%"
               height="100%"
               border-radius=""
+              padding=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
               box-shadow-spread=""
