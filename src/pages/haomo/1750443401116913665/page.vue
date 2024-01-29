@@ -209,6 +209,7 @@
                           ref="HmUviewField4"
                           v-model:value="HmUviewField4.value"
                           label=""
+                          placeholder="区域/门店名称"
                           label-width="0"
                           icon=""
                           right-icon=""
