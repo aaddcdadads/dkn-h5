@@ -212,10 +212,8 @@ export default {
     margin: 0px 2px !important;
   }
   border-bottom: 1px solid #f5f5f5;
-  /deep/.ele-wrapper-checkList {
-    height: 300px;
-    overflow: scroll;
-  }
+  height: 300px;
+  overflow: scroll;
 }
 
 .ele-wrapper-5ceb1472-5f57-4275-9fb8-0975865d8443 {
