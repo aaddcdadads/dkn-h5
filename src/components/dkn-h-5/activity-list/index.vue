@@ -8,7 +8,18 @@
       /></view>
 
       <view class="content"
-        ><span>{{ time }}</span></view
+        ><span>活动报名时间：{{ time }}</span></view
+      >
+    </view>
+    <view class="div">
+      <view class="imgleft"
+        ><img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAP1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////9Du/pqAAAAFHRSTlMAgHPBHBWz8+/jzaiVW1RAOASvd1dRt0cAAAC+SURBVFjD7ddLDoMwDARQOwHK/9e5/1kruuiiAiZRoiJUv6UXIwuyGIsx5lJzi3amc654AHiUbM45bBybc4qNkjlRDE49Nl6/fOZuKISYPML4SU4sPcL1ixzqEKOTI0/EcbKvrBGnLk9eT46VPGJ52dUgViO7EO92QaueqwKDRmHGoKBVuCokSIXTbBv99BsBFftr932QFmRBFmRB1wall4j0WpNetPJWv/SVXOZ6nF7Ys50Q/Kgh3keNMf/gBY3fnCSsomBkAAAAAElFTkSuQmCC"
+          alt=""
+      /></view>
+
+      <view class="content"
+        ><span>报名截止时间：{{ time1 }}</span></view
       >
     </view>
 
@@ -21,14 +32,7 @@
       <view class="item-tag">
         <span>跑步</span>
       </view>
-      <view class="content1"
-        >{{speed1}}</view
-      >
-      <view class="imgright"
-        ><img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAAEjSURBVHic7duxTQNRFETRWSogdEBAQBH0BL1AAB1YohQSiAgogAIISJAIhoAIyYzHwdc39j0F7D5dyd5oJAAAAGCDZdSDbV9IupK0kvQk6X5Zls9R7/tXbF/a/vBvL7ZXs2/bC7YfvdkrkSTZ/vojEJEkyfZbCEQk29dbAhHJ9i2RtiBSgUgFIhWIVCBSgUgFIhWIVCBSgUgFIhWIVCBSgUgFIhWIVCBSYYdIp7NvnaaM9DD7zqmKSO8j3nsy4qGDePYBe8v2TfETW8++c4oyznH+Se8Q5/g+88QJiBMQJyBOQJyAOAFxAuIExAmIExAnIE5AnIA4AXEC4gTECcwUITNjlszMoTIzqMt8QJPMkaPec/2Mes8kPUu6Y9QLAACAg/EN1xkgFnijszwAAAAASUVORK5CYII="
-          alt=""
-      /></view>
+      <view class="content1">{{ speed1 }}</view>
     </view>
     <view class="div" @click="paly">
       <view class="imgleft"
@@ -37,14 +41,13 @@
           alt=""
       /></view>
 
-      <view class="content"
-        ><span>{{ text }}</span></view
-      >
-      <view class="imgright"
-        ><img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAAEjSURBVHic7duxTQNRFETRWSogdEBAQBH0BL1AAB1YohQSiAgogAIISJAIhoAIyYzHwdc39j0F7D5dyd5oJAAAAGCDZdSDbV9IupK0kvQk6X5Zls9R7/tXbF/a/vBvL7ZXs2/bC7YfvdkrkSTZ/vojEJEkyfZbCEQk29dbAhHJ9i2RtiBSgUgFIhWIVCBSgUgFIhWIVCBSgUgFIhWIVCBSgUgFIhWIVCBSYYdIp7NvnaaM9DD7zqmKSO8j3nsy4qGDePYBe8v2TfETW8++c4oyznH+Se8Q5/g+88QJiBMQJyBOQJyAOAFxAuIExAmIExAnIE5AnIA4AXEC4gTECcwUITNjlszMoTIzqMt8QJPMkaPec/2Mes8kPUu6Y9QLAACAg/EN1xkgFnijszwAAAAASUVORK5CYII="
-          alt=""
-      /></view>
+      <view class="content1" style="display: flex">
+        <view>活动报名费用：</view>
+        <view style=""
+          ><span style="width: 100%; display: block">{{ projectOne }}</span
+          ><span>{{ projectTwo }}</span></view
+        >
+      </view>
     </view>
     <view class="div">
       <view class="imgleft"
@@ -54,13 +57,8 @@
       /></view>
 
       <view class="content"
-        ><span>已报名{{ number }}人</span></view
+        ><span>已报名人数{{ number }}人</span></view
       >
-      <view class="imgright1">
-        <img :src="src" alt="" />
-        <img :src="src1" alt="" />
-        <img :src="src2" alt="" />
-      </view>
     </view>
   </view>
 </template>
@@ -73,53 +71,44 @@ export default {
      */
     time: {
       type: String,
-      default: "活动时间 2023.11.01 00:00-2024.02.15 23:50:00",
+      default: "2023.11.01 00:00-2024.02.15",
+    },
+    /**
+     * 截止时间
+     */
+    time1: {
+      type: String,
+      default: "2023.11.01 ",
     },
     /**
      * 速度
      */
     speed1: {
       type: String,
-      default:"1.314km/5.20km/9.99km",
+      default: "1.314km/5.20km/9.99km",
     },
     /**
-     * 内容
+     * 活动一
      */
-    text: {
+    projectOne: {
       type: String,
-      default: "如何玩转 👉",
+      default: "套餐项目一（￥0.0/人）",
+    },
+    /**
+     * 活动二
+     */
+    projectTwo: {
+      type: String,
+      default: "套餐项目一（￥0.0/人）",
     },
     /**
      * 人数
      */
     number: {
       type: String,
-      default: " 154,480 ",
+      default: " 19999",
     },
-    /**
-     * 头像
-     */
-    src: {
-      type: String,
-      default:
-        "https://static1.keepcdn.com/user-avatar/2024/01/26/17/64a6478409762200010b5a9a/eb8e36f18edc8afe8ed35ad48c0aaf08_900x900.jpg?imageMogr2/thumbnail/80x/quality/90",
-    },
-    /**
-     * 头像1
-     */
-    src1: {
-      type: String,
-      default:
-        "https://static1.keepcdn.com/user-avatar/2024/01/11/20/659d378a21b01a0001a1ce85/29813bbf0652b2c86ce101c20ad0db3d_1020x1020.jpg?imageMogr2/thumbnail/80x/quality/90",
-    },
-    /**
-     * 头像2
-     */
-    src2: {
-      type: String,
-      default:
-        "data:image/png;base64,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",
-    },
+  
   },
   data() {
     return {
@@ -137,7 +126,7 @@ export default {
     },
     speed() {
       this.$emit("speed");
-      console.log("first")
+      console.log("first");
     },
     paly() {
       this.$emit("play");
@@ -147,24 +136,19 @@ export default {
 </script>
 <style lang="less" scoped>
 .container {
-  background: transparent;
+  background: #feeff7;
+  // background: transparent;
   width: 100%;
 }
 .div {
   position: relative;
   width: 100%;
   display: flex;
-  color: #fff;
+  color: #d8477b;
   margin-bottom: 32rpx;
 }
 .imgleft {
-  position: absolute;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  line-height: 100%;
+  padding: 0 24rpx;
 
   > img {
     width: 40rpx;
@@ -172,12 +156,10 @@ export default {
   }
 }
 .content {
-  margin-left: 64rpx;
   line-height: 40rpx;
   font-weight: 500;
 }
 .content1 {
-  line-height: 40rpx;
   font-weight: 500;
 }
 .imgright {
@@ -191,24 +173,8 @@ export default {
     margin-top: 8rpx;
   }
 }
-.imgright1 {
-  position: absolute;
-  right: 0;
-  float: right;
-  top: -12rpx;
-  display: flex;
-  > img {
-    border-radius: 50%;
-    display: block;
-    height: 60rpx;
-    margin-left: -0.256410256410256rem;
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 60rpx;
-  }
-}
+
 .item-tag {
-  margin-left: 64rpx;
   background: #fff;
   border-radius: 8rpx;
   box-sizing: border-box;
