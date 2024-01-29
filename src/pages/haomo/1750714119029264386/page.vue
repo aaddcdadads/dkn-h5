@@ -578,6 +578,17 @@
             >
             </hm-uview-button>
           </view>
+          <view
+            class="ele-wrapper ele-wrapper-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9"
+          >
+            <hm-uview-text
+              text="已报名，查看我的报名信息"
+              font-size="14px"
+              color="#D6769C"
+              class="ele-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9"
+            >
+            </hm-uview-text>
+          </view>
         </hm-uview-bg-card>
       </view>
     </view>
@@ -919,5 +930,10 @@ export default {
     background-color: #e18eb3 !important;
     border-color: #e18eb3 !important;
   }
+}
+
+.ele-wrapper-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9 {
+  width: 100%;
+  text-align: center;
 }
 </style>
