@@ -259,7 +259,7 @@
                       width="100%"
                       height=""
                       border-radius="12"
-                      padding="12"
+                      padding="0"
                       background-color="#F797BD00"
                       class="ele-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5"
                     >
