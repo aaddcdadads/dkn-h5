@@ -866,7 +866,6 @@ export default {
   position: fixed;
   bottom: 0px;
   z-index: 1000;
-  padding: 12px 24px;
 }
 
 .ele-wrapper-d324407f-5ad0-412f-845c-f123803419fc {
@@ -878,6 +877,7 @@ export default {
   /deep/.u-radio__label {
     font-size: 14px !important;
   }
+  margin-left: 24rpx;
 }
 
 .ele-wrapper-7a55d0c9-95ac-4729-befd-31f60ecf4707 {
@@ -886,7 +886,8 @@ export default {
 
 .ele-wrapper-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f {
   height: 120rpx;
-  width: 100%;
+  margin-left: 24rpx;
+  width: calc(100% - 48rpx);
   /deep/.u-size-default {
     height: 120rpx !important;
   }
