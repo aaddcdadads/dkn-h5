@@ -8,10 +8,7 @@
     },
     "pages": [
         {
-            "path": "pages/index/index",
-            "style": {
-                "navigationBarTitleText": "首页"
-            }
+        "path": "pages/haomo/1750714119029264386/page"
         },
         {
             "path": "pages/1599675588405104642/page"
@@ -24,9 +21,6 @@
         },
         {
             "path": "pages/haomo/1750700281953259522/page"
-        },
-        {
-            "path": "pages/haomo/1750714119029264386/page"
         },
         {
             "path": "pages/haomo/1750726128974172161/page"
