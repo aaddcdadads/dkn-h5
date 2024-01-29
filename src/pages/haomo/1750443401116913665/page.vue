@@ -127,17 +127,16 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-d9e102fa-f16c-49e6-9815-2c4c81772e19"
-                      >
+                      <view class="ele-wrapper ele-wrapper-HmUviewField2">
                         <hm-uview-field
-                          value=""
+                          ref="HmUviewField2"
+                          v-model:value="HmUviewField2.value"
                           label=""
                           label-width="0"
                           icon=""
                           right-icon=""
                           :border-bottom="false"
-                          class="ele-d9e102fa-f16c-49e6-9815-2c4c81772e19"
+                          class="ele-HmUviewField2"
                         >
                         </hm-uview-field>
                       </view>
@@ -165,17 +164,16 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-d8186875-9ad9-4d3d-919e-3fdcc81cd7e1"
-                      >
+                      <view class="ele-wrapper ele-wrapper-HmUviewField3">
                         <hm-uview-field
-                          value=""
+                          ref="HmUviewField3"
+                          v-model:value="HmUviewField3.value"
                           label=""
                           label-width="0"
                           icon=""
                           right-icon=""
                           :border-bottom="false"
-                          class="ele-d8186875-9ad9-4d3d-919e-3fdcc81cd7e1"
+                          class="ele-HmUviewField3"
                         >
                         </hm-uview-field>
                       </view>
@@ -203,17 +201,16 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-31aa3781-c4eb-43bd-a2fd-e2b37a76405f"
-                      >
+                      <view class="ele-wrapper ele-wrapper-HmUviewField4">
                         <hm-uview-field
-                          value=""
+                          ref="HmUviewField4"
+                          v-model:value="HmUviewField4.value"
                           label=""
                           label-width="0"
                           icon=""
                           right-icon=""
                           :border-bottom="false"
-                          class="ele-31aa3781-c4eb-43bd-a2fd-e2b37a76405f"
+                          class="ele-HmUviewField4"
                         >
                         </hm-uview-field>
                       </view>
@@ -241,17 +238,16 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-f4bbe819-7547-4757-be5a-c4df522ecc58"
-                      >
+                      <view class="ele-wrapper ele-wrapper-HmUviewField5">
                         <hm-uview-field
-                          value=""
+                          ref="HmUviewField5"
+                          v-model:value="HmUviewField5.value"
                           label=""
                           label-width="0"
                           icon=""
                           right-icon=""
                           :border-bottom="false"
-                          class="ele-f4bbe819-7547-4757-be5a-c4df522ecc58"
+                          class="ele-HmUviewField5"
                         >
                         </hm-uview-field>
                       </view>
@@ -279,15 +275,14 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-46dda2c8-ba11-4dfd-b574-7f3a4b7046c0"
-                      >
+                      <view class="ele-wrapper ele-wrapper-HmUviewField6">
                         <information-input-box
-                          value=""
+                          ref="HmUviewField6"
+                          v-model:value="HmUviewField6.value"
                           right-src=""
                           :show-code="false"
                           placeholder="请输入"
-                          class="ele-46dda2c8-ba11-4dfd-b574-7f3a4b7046c0"
+                          class="ele-HmUviewField6"
                         >
                         </information-input-box>
                       </view>
@@ -315,17 +310,16 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-257bd4de-1294-4e05-8229-a7126b4ae355"
-                      >
+                      <view class="ele-wrapper ele-wrapper-HmUviewField7">
                         <hm-uview-field
-                          value=""
+                          ref="HmUviewField7"
+                          v-model:value="HmUviewField7.value"
                           label=""
                           label-width="0"
                           icon=""
                           right-icon=""
                           :border-bottom="false"
-                          class="ele-257bd4de-1294-4e05-8229-a7126b4ae355"
+                          class="ele-HmUviewField7"
                         >
                         </hm-uview-field>
                       </view>
@@ -353,17 +347,16 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-db94f6e1-4976-4a1e-a64a-22b71db0a05d"
-                      >
+                      <view class="ele-wrapper ele-wrapper-HmUviewField8">
                         <hm-uview-field
-                          value=""
+                          ref="HmUviewField8"
+                          v-model:value="HmUviewField8.value"
                           label=""
                           label-width="0"
                           icon=""
                           right-icon=""
                           :border-bottom="false"
-                          class="ele-db94f6e1-4976-4a1e-a64a-22b71db0a05d"
+                          class="ele-HmUviewField8"
                         >
                         </hm-uview-field>
                       </view>
@@ -428,25 +421,25 @@ export default {
       HmUviewField1: {
         value: "",
       },
-      "d9e102fa-f16c-49e6-9815-2c4c81772e19": {
+      HmUviewField2: {
         value: "",
       },
-      "d8186875-9ad9-4d3d-919e-3fdcc81cd7e1": {
+      HmUviewField3: {
         value: "",
       },
-      "31aa3781-c4eb-43bd-a2fd-e2b37a76405f": {
+      HmUviewField4: {
         value: "",
       },
-      "f4bbe819-7547-4757-be5a-c4df522ecc58": {
+      HmUviewField5: {
         value: "",
       },
-      "46dda2c8-ba11-4dfd-b574-7f3a4b7046c0": {
+      HmUviewField6: {
         value: "",
       },
-      "257bd4de-1294-4e05-8229-a7126b4ae355": {
+      HmUviewField7: {
         value: "",
       },
-      "db94f6e1-4976-4a1e-a64a-22b71db0a05d": {
+      HmUviewField8: {
         value: "",
       },
     };
@@ -546,7 +539,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-d9e102fa-f16c-49e6-9815-2c4c81772e19 {
+.ele-wrapper-HmUviewField2 {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
@@ -579,7 +572,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-d8186875-9ad9-4d3d-919e-3fdcc81cd7e1 {
+.ele-wrapper-HmUviewField3 {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
@@ -612,7 +605,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-31aa3781-c4eb-43bd-a2fd-e2b37a76405f {
+.ele-wrapper-HmUviewField4 {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
@@ -645,7 +638,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-f4bbe819-7547-4757-be5a-c4df522ecc58 {
+.ele-wrapper-HmUviewField5 {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
@@ -678,7 +671,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-46dda2c8-ba11-4dfd-b574-7f3a4b7046c0 {
+.ele-wrapper-HmUviewField6 {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
@@ -711,7 +704,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-257bd4de-1294-4e05-8229-a7126b4ae355 {
+.ele-wrapper-HmUviewField7 {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
@@ -747,7 +740,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-db94f6e1-4976-4a1e-a64a-22b71db0a05d {
+.ele-wrapper-HmUviewField8 {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
