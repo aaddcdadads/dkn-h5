@@ -160,16 +160,6 @@ export default {
             name: "活动名称",
             checked: false,
           },
-          {
-            key: 6,
-            name: "活动名称",
-            checked: false,
-          },
-          {
-            key: 7,
-            name: "活动名称",
-            checked: false,
-          },
         ],
       },
     };
