@@ -55,13 +55,13 @@
                 class="ele-wrapper ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
               >
                 <hm-uview-bg-card
-                  padding=""
-                  box-shadow-blur=""
-                  box-shadow-v-shadow=""
-                  border-radius=""
                   width="100%"
                   height="100%"
+                  border-radius=""
                   :text-align="'center'"
+                  padding=""
+                  box-shadow-v-shadow=""
+                  box-shadow-blur=""
                   class="ele-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
                 >
                   <view
@@ -120,17 +120,26 @@
                         class="ele-wrapper ele-wrapper-a6b059cb-691d-4093-bede-453d1eaf7370"
                       >
                         <hm-uview-text
-                          padding="0"
-                          font-size="13px"
                           text=" 姓名/昵称:"
+                          font-size="13px"
+                          padding="0"
                           class="ele-a6b059cb-691d-4093-bede-453d1eaf7370"
                         >
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-ac724210-6593-4d1c-bc1c-9885bad6b588"
+                        class="ele-wrapper ele-wrapper-d9e102fa-f16c-49e6-9815-2c4c81772e19"
                       >
-                        <hm-uview-field value=""> </hm-uview-field>
+                        <hm-uview-field
+                          value=""
+                          label=""
+                          label-width="0"
+                          icon=""
+                          right-icon=""
+                          :border-bottom="false"
+                          class="ele-d9e102fa-f16c-49e6-9815-2c4c81772e19"
+                        >
+                        </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -149,15 +158,15 @@
                         class="ele-wrapper ele-wrapper-df0e3be8-5694-4de1-89ab-efc9e61b2384"
                       >
                         <hm-uview-text
-                          padding="0"
-                          font-size="13px"
                           text=" 手机号码:"
+                          font-size="13px"
+                          padding="0"
                           class="ele-df0e3be8-5694-4de1-89ab-efc9e61b2384"
                         >
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-e5983b33-d35e-4f1d-976e-bdb3eba45f09"
+                        class="ele-wrapper ele-wrapper-d8186875-9ad9-4d3d-919e-3fdcc81cd7e1"
                       >
                         <hm-uview-field value=""> </hm-uview-field>
                       </view>
@@ -188,7 +197,16 @@
                       <view
                         class="ele-wrapper ele-wrapper-31aa3781-c4eb-43bd-a2fd-e2b37a76405f"
                       >
-                        <hm-uview-field value=""> </hm-uview-field>
+                        <hm-uview-field
+                          value=""
+                          label=""
+                          label-width="0"
+                          icon=""
+                          right-icon=""
+                          :border-bottom="false"
+                          class="ele-31aa3781-c4eb-43bd-a2fd-e2b37a76405f"
+                        >
+                        </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -207,24 +225,26 @@
                         class="ele-wrapper ele-wrapper-1c6f3120-a3af-4da2-91cf-2a913f75e70f"
                       >
                         <hm-uview-text
-                          padding="0"
-                          font-size="13px"
                           text="报名时间:"
+                          font-size="13px"
+                          padding="0"
                           class="ele-1c6f3120-a3af-4da2-91cf-2a913f75e70f"
                         >
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-b7e0ad9d-47f6-4f70-8ab6-1f6e8914428e"
+                        class="ele-wrapper ele-wrapper-f4bbe819-7547-4757-be5a-c4df522ecc58"
                       >
-                        <information-input-box
-                          right-src=""
-                          :left-src="[]"
-                          placeholder="2024.02.10 15:46:39"
+                        <hm-uview-field
                           value=""
-                          class="ele-b7e0ad9d-47f6-4f70-8ab6-1f6e8914428e"
+                          label=""
+                          label-width="0"
+                          icon=""
+                          right-icon=""
+                          :border-bottom="false"
+                          class="ele-f4bbe819-7547-4757-be5a-c4df522ecc58"
                         >
-                        </information-input-box>
+                        </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -254,10 +274,10 @@
                         class="ele-wrapper ele-wrapper-46dda2c8-ba11-4dfd-b574-7f3a4b7046c0"
                       >
                         <information-input-box
-                          right-src=""
-                          :left-src="[]"
-                          placeholder="活动名称"
                           value=""
+                          right-src=""
+                          :show-code="false"
+                          placeholder="请输入"
                           class="ele-46dda2c8-ba11-4dfd-b574-7f3a4b7046c0"
                         >
                         </information-input-box>
@@ -279,24 +299,26 @@
                         class="ele-wrapper ele-wrapper-3ea4931b-f9be-449b-adfa-85aec01fa006"
                       >
                         <hm-uview-text
-                          padding="0"
-                          font-size="13px"
                           text="核销截止:"
+                          font-size="13px"
+                          padding="0"
                           class="ele-3ea4931b-f9be-449b-adfa-85aec01fa006"
                         >
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-6dcc8dd0-70a0-4924-b4a4-781869efe80d"
+                        class="ele-wrapper ele-wrapper-257bd4de-1294-4e05-8229-a7126b4ae355"
                       >
-                        <information-input-box
-                          right-src=""
-                          :left-src="[]"
-                          placeholder="2024.02.18 23:59:59"
+                        <hm-uview-field
                           value=""
-                          class="ele-6dcc8dd0-70a0-4924-b4a4-781869efe80d"
+                          label=""
+                          label-width="0"
+                          icon=""
+                          right-icon=""
+                          :border-bottom="false"
+                          class="ele-257bd4de-1294-4e05-8229-a7126b4ae355"
                         >
-                        </information-input-box>
+                        </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -315,24 +337,26 @@
                         class="ele-wrapper ele-wrapper-fba91c42-55e1-404b-97e8-0d6ca8b53ff5"
                       >
                         <hm-uview-text
-                          padding="0"
-                          font-size="13px"
                           text="核销状态:"
+                          font-size="13px"
+                          padding="0"
                           class="ele-fba91c42-55e1-404b-97e8-0d6ca8b53ff5"
                         >
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-465887e1-2944-4140-bf66-fe7a5a155f13"
+                        class="ele-wrapper ele-wrapper-db94f6e1-4976-4a1e-a64a-22b71db0a05d"
                       >
-                        <information-input-box
-                          right-src=""
-                          :left-src="[]"
-                          placeholder="待核销/已核销"
+                        <hm-uview-field
                           value=""
-                          class="ele-465887e1-2944-4140-bf66-fe7a5a155f13"
+                          label=""
+                          label-width="0"
+                          icon=""
+                          right-icon=""
+                          :border-bottom="false"
+                          class="ele-db94f6e1-4976-4a1e-a64a-22b71db0a05d"
                         >
-                        </information-input-box>
+                        </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -395,29 +419,25 @@ export default {
       HmUviewField1: {
         value: "",
       },
-      "ac724210-6593-4d1c-bc1c-9885bad6b588": {
+      "d9e102fa-f16c-49e6-9815-2c4c81772e19": {
         value: "",
       },
-      "e5983b33-d35e-4f1d-976e-bdb3eba45f09": {
+      "d8186875-9ad9-4d3d-919e-3fdcc81cd7e1": {
         value: "",
       },
       "31aa3781-c4eb-43bd-a2fd-e2b37a76405f": {
         value: "",
       },
-      "b7e0ad9d-47f6-4f70-8ab6-1f6e8914428e": {
-        leftSrc: [],
+      "f4bbe819-7547-4757-be5a-c4df522ecc58": {
         value: "",
       },
       "46dda2c8-ba11-4dfd-b574-7f3a4b7046c0": {
-        leftSrc: [],
         value: "",
       },
-      "6dcc8dd0-70a0-4924-b4a4-781869efe80d": {
-        leftSrc: [],
+      "257bd4de-1294-4e05-8229-a7126b4ae355": {
         value: "",
       },
-      "465887e1-2944-4140-bf66-fe7a5a155f13": {
-        leftSrc: [],
+      "db94f6e1-4976-4a1e-a64a-22b71db0a05d": {
         value: "",
       },
     };
@@ -517,6 +537,26 @@ export default {
   margin-left: 10px;
 }
 
+.ele-wrapper-d9e102fa-f16c-49e6-9815-2c4c81772e19 {
+  width: 65%;
+  height: 45px;
+  /deep/.u-border-bottom {
+    display: flex;
+    align-items: center;
+    height: 45px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
+  /deep/.ele-HmUviewField1 {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+  }
+}
+
 .ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9 {
   width: 100%;
   display: flex;
@@ -543,6 +583,26 @@ export default {
   margin-left: 10px;
 }
 
+.ele-wrapper-31aa3781-c4eb-43bd-a2fd-e2b37a76405f {
+  width: 65%;
+  height: 45px;
+  /deep/.u-border-bottom {
+    display: flex;
+    align-items: center;
+    height: 45px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
+  /deep/.ele-HmUviewField1 {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+  }
+}
+
 .ele-wrapper-ec8bdb37-8258-4daf-b83b-30ebc2a70f11 {
   width: 100%;
   display: flex;
@@ -556,18 +616,23 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-b7e0ad9d-47f6-4f70-8ab6-1f6e8914428e {
-  /deep/.data_input {
-    padding: 0px 10px;
-  }
-  /deep/.image_box {
-    display: none;
+.ele-wrapper-f4bbe819-7547-4757-be5a-c4df522ecc58 {
+  width: 65%;
+  height: 45px;
+  /deep/.u-border-bottom {
+    display: flex;
+    align-items: center;
+    height: 45px;
   }
   /deep/.input-placeholder {
-    font-size: 13px !important;
+    font-size: 13px;
   }
-  /deep/.input {
+  /deep/.ele-HmUviewField1 {
     background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -585,17 +650,22 @@ export default {
 }
 
 .ele-wrapper-46dda2c8-ba11-4dfd-b574-7f3a4b7046c0 {
-  /deep/.data_input {
-    padding: 0px 10px;
-  }
-  /deep/.image_box {
-    display: none;
+  width: 65%;
+  height: 45px;
+  /deep/.u-border-bottom {
+    display: flex;
+    align-items: center;
+    height: 45px;
   }
   /deep/.input-placeholder {
-    font-size: 13px !important;
+    font-size: 13px;
   }
-  /deep/.input {
+  /deep/.ele-HmUviewField1 {
     background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -612,18 +682,23 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-6dcc8dd0-70a0-4924-b4a4-781869efe80d {
-  /deep/.data_input {
-    padding: 0px 10px;
-  }
-  /deep/.image_box {
-    display: none;
+.ele-wrapper-257bd4de-1294-4e05-8229-a7126b4ae355 {
+  width: 65%;
+  height: 45px;
+  /deep/.u-border-bottom {
+    display: flex;
+    align-items: center;
+    height: 45px;
   }
   /deep/.input-placeholder {
-    font-size: 13px !important;
+    font-size: 13px;
   }
-  /deep/.input {
+  /deep/.ele-HmUviewField1 {
     background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -643,18 +718,23 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-465887e1-2944-4140-bf66-fe7a5a155f13 {
-  /deep/.data_input {
-    padding: 0px 10px;
-  }
-  /deep/.image_box {
-    display: none;
+.ele-wrapper-db94f6e1-4976-4a1e-a64a-22b71db0a05d {
+  width: 65%;
+  height: 45px;
+  /deep/.u-border-bottom {
+    display: flex;
+    align-items: center;
+    height: 45px;
   }
   /deep/.input-placeholder {
-    font-size: 13px !important;
+    font-size: 13px;
   }
-  /deep/.input {
+  /deep/.ele-HmUviewField1 {
     background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
   }
 }
 
