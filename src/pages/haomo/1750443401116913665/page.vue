@@ -163,20 +163,16 @@
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-3f7c3c3c-cb94-49b0-b764-9fb7a9b6a85b"
+                        class="ele-wrapper ele-wrapper-1c73bc0a-98ce-498e-9cbc-3246e577800c"
                       >
-                        <hm-uview-field
+                        <information-input-box
+                          :left-src="[]"
                           value=""
-                          label=""
+                          right-src=""
                           placeholder="姓名/昵称"
-                          label-width="0"
-                          maxlength="250"
-                          icon=""
-                          right-icon=""
-                          :focus="true"
-                          class="ele-3f7c3c3c-cb94-49b0-b764-9fb7a9b6a85b"
+                          class="ele-1c73bc0a-98ce-498e-9cbc-3246e577800c"
                         >
-                        </hm-uview-field>
+                        </information-input-box>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -203,20 +199,16 @@
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-79f1460e-92e6-4db1-b971-5f5f6d6a652e"
+                        class="ele-wrapper ele-wrapper-c5fbc40a-cb73-46bd-87cb-b8d61d44defd"
                       >
-                        <hm-uview-field
+                        <information-input-box
+                          :left-src="[]"
                           value=""
-                          label=""
+                          right-src=""
                           placeholder="姓名/昵称"
-                          label-width="0"
-                          maxlength="250"
-                          icon=""
-                          right-icon=""
-                          :focus="true"
-                          class="ele-79f1460e-92e6-4db1-b971-5f5f6d6a652e"
+                          class="ele-c5fbc40a-cb73-46bd-87cb-b8d61d44defd"
                         >
-                        </hm-uview-field>
+                        </information-input-box>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -243,20 +235,16 @@
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-24f297e2-0cec-4a99-b8b2-2b7bcd171554"
+                        class="ele-wrapper ele-wrapper-b7e0ad9d-47f6-4f70-8ab6-1f6e8914428e"
                       >
-                        <hm-uview-field
+                        <information-input-box
+                          :left-src="[]"
                           value=""
-                          label=""
+                          right-src=""
                           placeholder="姓名/昵称"
-                          label-width="0"
-                          maxlength="250"
-                          icon=""
-                          right-icon=""
-                          :focus="true"
-                          class="ele-24f297e2-0cec-4a99-b8b2-2b7bcd171554"
+                          class="ele-b7e0ad9d-47f6-4f70-8ab6-1f6e8914428e"
                         >
-                        </hm-uview-field>
+                        </information-input-box>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -283,20 +271,16 @@
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-94b759f6-ea20-4357-a76c-cc9c37138150"
+                        class="ele-wrapper ele-wrapper-46dda2c8-ba11-4dfd-b574-7f3a4b7046c0"
                       >
-                        <hm-uview-field
+                        <information-input-box
+                          :left-src="[]"
                           value=""
-                          label=""
+                          right-src=""
                           placeholder="姓名/昵称"
-                          label-width="0"
-                          maxlength="250"
-                          icon=""
-                          right-icon=""
-                          :focus="true"
-                          class="ele-94b759f6-ea20-4357-a76c-cc9c37138150"
+                          class="ele-46dda2c8-ba11-4dfd-b574-7f3a4b7046c0"
                         >
-                        </hm-uview-field>
+                        </information-input-box>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -323,20 +307,16 @@
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-e2431593-6b95-40d2-9dd5-6944d73488d4"
+                        class="ele-wrapper ele-wrapper-6dcc8dd0-70a0-4924-b4a4-781869efe80d"
                       >
-                        <hm-uview-field
+                        <information-input-box
+                          :left-src="[]"
                           value=""
-                          label=""
+                          right-src=""
                           placeholder="姓名/昵称"
-                          label-width="0"
-                          maxlength="250"
-                          icon=""
-                          right-icon=""
-                          :focus="true"
-                          class="ele-e2431593-6b95-40d2-9dd5-6944d73488d4"
+                          class="ele-6dcc8dd0-70a0-4924-b4a4-781869efe80d"
                         >
-                        </hm-uview-field>
+                        </information-input-box>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -363,20 +343,16 @@
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-2a38d196-0649-4330-bf84-e8a51ec63be9"
+                        class="ele-wrapper ele-wrapper-465887e1-2944-4140-bf66-fe7a5a155f13"
                       >
-                        <hm-uview-field
+                        <information-input-box
+                          :left-src="[]"
                           value=""
-                          label=""
+                          right-src=""
                           placeholder="姓名/昵称"
-                          label-width="0"
-                          maxlength="250"
-                          icon=""
-                          right-icon=""
-                          :focus="true"
-                          class="ele-2a38d196-0649-4330-bf84-e8a51ec63be9"
+                          class="ele-465887e1-2944-4140-bf66-fe7a5a155f13"
                         >
-                        </hm-uview-field>
+                        </information-input-box>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -417,7 +393,6 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
-import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -426,7 +401,6 @@ export default {
     HmUviewBgCard,
     HmUviewText,
     InformationInputBox,
-    HmUviewField,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -445,22 +419,28 @@ export default {
         leftSrc: [],
         value: "",
       },
-      "3f7c3c3c-cb94-49b0-b764-9fb7a9b6a85b": {
+      "1c73bc0a-98ce-498e-9cbc-3246e577800c": {
+        leftSrc: [],
         value: "",
       },
-      "79f1460e-92e6-4db1-b971-5f5f6d6a652e": {
+      "c5fbc40a-cb73-46bd-87cb-b8d61d44defd": {
+        leftSrc: [],
         value: "",
       },
-      "24f297e2-0cec-4a99-b8b2-2b7bcd171554": {
+      "b7e0ad9d-47f6-4f70-8ab6-1f6e8914428e": {
+        leftSrc: [],
         value: "",
       },
-      "94b759f6-ea20-4357-a76c-cc9c37138150": {
+      "46dda2c8-ba11-4dfd-b574-7f3a4b7046c0": {
+        leftSrc: [],
         value: "",
       },
-      "e2431593-6b95-40d2-9dd5-6944d73488d4": {
+      "6dcc8dd0-70a0-4924-b4a4-781869efe80d": {
+        leftSrc: [],
         value: "",
       },
-      "2a38d196-0649-4330-bf84-e8a51ec63be9": {
+      "465887e1-2944-4140-bf66-fe7a5a155f13": {
+        leftSrc: [],
         value: "",
       },
     };
@@ -582,16 +562,17 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-3f7c3c3c-cb94-49b0-b764-9fb7a9b6a85b {
-  width: 65%;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.ele-wrapper-1c73bc0a-98ce-498e-9cbc-3246e577800c {
+  /deep/.data_input {
+    padding: 0px 10px;
   }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
+  /deep/.image_box {
+    display: none;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px !important;
+  }
+  /deep/.input {
     background: rgb(240, 240, 240);
   }
 }
@@ -609,16 +590,17 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-79f1460e-92e6-4db1-b971-5f5f6d6a652e {
-  width: 65%;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.ele-wrapper-c5fbc40a-cb73-46bd-87cb-b8d61d44defd {
+  /deep/.data_input {
+    padding: 0px 10px;
   }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
+  /deep/.image_box {
+    display: none;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px !important;
+  }
+  /deep/.input {
     background: rgb(240, 240, 240);
   }
 }
@@ -636,16 +618,17 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-24f297e2-0cec-4a99-b8b2-2b7bcd171554 {
-  width: 65%;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.ele-wrapper-b7e0ad9d-47f6-4f70-8ab6-1f6e8914428e {
+  /deep/.data_input {
+    padding: 0px 10px;
   }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
+  /deep/.image_box {
+    display: none;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px !important;
+  }
+  /deep/.input {
     background: rgb(240, 240, 240);
   }
 }
@@ -663,16 +646,17 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-94b759f6-ea20-4357-a76c-cc9c37138150 {
-  width: 65%;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.ele-wrapper-46dda2c8-ba11-4dfd-b574-7f3a4b7046c0 {
+  /deep/.data_input {
+    padding: 0px 10px;
   }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
+  /deep/.image_box {
+    display: none;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px !important;
+  }
+  /deep/.input {
     background: rgb(240, 240, 240);
   }
 }
@@ -690,16 +674,17 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-e2431593-6b95-40d2-9dd5-6944d73488d4 {
-  width: 65%;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.ele-wrapper-6dcc8dd0-70a0-4924-b4a4-781869efe80d {
+  /deep/.data_input {
+    padding: 0px 10px;
   }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
+  /deep/.image_box {
+    display: none;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px !important;
+  }
+  /deep/.input {
     background: rgb(240, 240, 240);
   }
 }
@@ -720,16 +705,17 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-2a38d196-0649-4330-bf84-e8a51ec63be9 {
-  width: 65%;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.ele-wrapper-465887e1-2944-4140-bf66-fe7a5a155f13 {
+  /deep/.data_input {
+    padding: 0px 10px;
   }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
+  /deep/.image_box {
+    display: none;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px !important;
+  }
+  /deep/.input {
     background: rgb(240, 240, 240);
   }
 }
