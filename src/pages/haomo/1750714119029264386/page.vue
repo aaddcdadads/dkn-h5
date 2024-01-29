@@ -254,6 +254,18 @@
                     </hm-uview-bg-card>
                   </view>
                   <view
+                    class="ele-wrapper ele-wrapper-76b3694d-443e-4d62-8c58-80e0356f7fa4"
+                  >
+                    <hm-uview-text
+                      text="活动奖品"
+                      font-size="14px"
+                      color="#000000"
+                      bg-color="#FFFFFF00"
+                      class="ele-76b3694d-443e-4d62-8c58-80e0356f7fa4"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
                     class="ele-wrapper ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5"
                   >
                     <hm-uview-bg-card
@@ -278,18 +290,6 @@
                           background-color="#FFFFFF00"
                           class="ele-67658805-d92e-4e1f-8067-6a180eca6391"
                         >
-                          <view
-                            class="ele-wrapper ele-wrapper-b5a81ba4-33af-478f-bd93-1199f013e523"
-                          >
-                            <hm-uview-text
-                              text="活动奖品"
-                              font-size="14px"
-                              color="#000000"
-                              bg-color="#FFFFFF00"
-                              class="ele-b5a81ba4-33af-478f-bd93-1199f013e523"
-                            >
-                            </hm-uview-text>
-                          </view>
                           <view
                             class="ele-wrapper ele-wrapper-04b7a686-49e4-4376-b105-eec04bba2014"
                           >
@@ -759,17 +759,17 @@ export default {
   margin: 12px 0;
 }
 
+.ele-wrapper-76b3694d-443e-4d62-8c58-80e0356f7fa4 {
+  float: left;
+  margin-top: 24rpx;
+}
+
 .ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5 {
   width: 100%;
-  margin-top: 24rpx;
 }
 
 .ele-wrapper-67658805-d92e-4e1f-8067-6a180eca6391 {
   width: 100%;
-}
-
-.ele-wrapper-b5a81ba4-33af-478f-bd93-1199f013e523 {
-  float: left;
 }
 
 .ele-wrapper-04b7a686-49e4-4376-b105-eec04bba2014 {
