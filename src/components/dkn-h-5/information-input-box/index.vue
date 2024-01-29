@@ -83,7 +83,7 @@ export default {
       this.borderColor = false;
     },
     onCode() {
-      this.$emit("onCode");
+      this.$emit("getCode");
       let time = 60;
       this.showColor = true;
       this.code = `${time}秒后可重新获取`;
