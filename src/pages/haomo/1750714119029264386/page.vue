@@ -81,27 +81,6 @@
               </view>
             </hm-uview-bg-card>
           </view>
-          <view class="ele-wrapper ele-wrapper-videoBg">
-            <hm-uview-bg-card
-              ref="videoBg"
-              width="100%"
-              height=""
-              border-radius="0"
-              padding="0"
-              box-shadow-v-shadow="0"
-              box-shadow-blur="0"
-              box-shadow-color="#00000000"
-              background-color="#FFFFFF00"
-              :hidden="true"
-              class="ele-videoBg"
-            >
-              <view
-                class="ele-wrapper ele-wrapper-438459e7-727d-4437-a364-b6eb07613382"
-              >
-                <video class="ele-438459e7-727d-4437-a364-b6eb07613382"></video>
-              </view>
-            </hm-uview-bg-card>
-          </view>
           <view
             class="ele-wrapper ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"
           >
@@ -230,14 +209,13 @@
                           </view>
                         </hm-uview-bg-card>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-68028b41-e565-41ca-94f3-03281e4d4c4f"
-                      >
+                      <view class="ele-wrapper ele-wrapper-nameText">
                         <hm-uview-text
-                          text="派对甜心｜HelloKitty生日主题线上跑"
-                          color="#FFFFFF"
-                          :text-align="'left'"
-                          class="ele-68028b41-e565-41ca-94f3-03281e4d4c4f"
+                          ref="nameText"
+                          :text="nameText.text"
+                          :color="nameText.color"
+                          :text-align="nameText.textAlign"
+                          class="ele-nameText"
                         >
                         </hm-uview-text>
                       </view>
@@ -598,6 +576,11 @@ export default {
       regularPopup: {
         show: false,
       },
+      nameText: {
+        text: "派对甜心｜HelloKitty生日主题线上跑",
+        color: "#FFFFFF",
+        textAlign: "left",
+      },
     };
   },
   watch: {},
@@ -652,29 +635,14 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-videoBg {
-  width: 100%;
-}
-
-.ele-wrapper-438459e7-727d-4437-a364-b6eb07613382 {
-  width: 100%;
-  /deep/.hm-block {
-    > video {
-      width: 100%;
-    }
-  }
-  /deep/.ele-438459e7-727d-4437-a364-b6eb07613382 {
-    width: 100% !important;
-    height: 500px !important;
-  }
-}
-
 .ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2 {
   width: 100%;
 }
 
 .ele-wrapper-2966337e-38af-4573-a9c7-464b04d48566 {
   width: 100%;
+  position: absolute;
+  margin-top: -48rpx;
 }
 
 .ele-wrapper-c2db3fcd-05d0-472b-8e18-163c243cc425 {
@@ -721,7 +689,7 @@ export default {
   margin: 8px 8px 8px 4px;
 }
 
-.ele-wrapper-68028b41-e565-41ca-94f3-03281e4d4c4f {
+.ele-wrapper-nameText {
   width: 100%;
   font-weight: 600;
   font-size: 0.512820512820513rem;
