@@ -19,6 +19,8 @@
               :show="true"
               :mode="'bottom'"
               :mask-close-able="false"
+              border-radius="8px"
+              :closeable="false"
               class="ele-8e5b00d7-8606-49be-8e41-bd21c1e35237"
             >
               <view
