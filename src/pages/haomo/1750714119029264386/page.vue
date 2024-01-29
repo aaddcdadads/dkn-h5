@@ -247,7 +247,6 @@
                         <activity-list
                           time="活动时间 2023.11.01 00:00-2024.02.15 23:50:00"
                           number=" 154,480 "
-                          class="ele-9243b683-57b5-45b7-8c57-56a5ffd4a609"
                         >
                         </activity-list>
                       </view>
@@ -261,7 +260,7 @@
                       height=""
                       border-radius="12"
                       padding="12"
-                      background-color="#F797BD"
+                      background-color="#F797BD00"
                       class="ele-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5"
                     >
                       <view
@@ -280,7 +279,7 @@
                             class="ele-wrapper ele-wrapper-b5a81ba4-33af-478f-bd93-1199f013e523"
                           >
                             <hm-uview-text
-                              text="我的奖品"
+                              text="活动奖品"
                               font-size="14px"
                               color="#000000"
                               bg-color="#FFFFFF00"
@@ -688,10 +687,6 @@ export default {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 4px;
   margin-bottom: 40rpx;
-}
-
-.ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609 {
-  margin-top: 40rpx;
 }
 
 .ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5 {
