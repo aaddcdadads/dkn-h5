@@ -56,7 +56,7 @@
                         class="ele-wrapper ele-wrapper-c1321652-9bb5-410d-a15c-df20fe88d984"
                       >
                         <hm-uview-text
-                          text="报名项目:"
+                          text="姓名/昵称:"
                           font-size="13px"
                           padding="0"
                           class="ele-c1321652-9bb5-410d-a15c-df20fe88d984"
@@ -96,7 +96,7 @@
                         class="ele-wrapper ele-wrapper-f2027eca-bb01-45c1-99a4-55ff0de5ada0"
                       >
                         <hm-uview-text
-                          text="报名项目:"
+                          text="手机号码:"
                           font-size="13px"
                           padding="0"
                           class="ele-f2027eca-bb01-45c1-99a4-55ff0de5ada0"
@@ -136,7 +136,7 @@
                         class="ele-wrapper ele-wrapper-fb3d49e3-aa6d-4761-8222-bc41e4395857"
                       >
                         <hm-uview-text
-                          text="报名项目:"
+                          text="领奖门店:"
                           font-size="13px"
                           padding="0"
                           class="ele-fb3d49e3-aa6d-4761-8222-bc41e4395857"
@@ -191,7 +191,7 @@
                         class="ele-wrapper ele-wrapper-2ecc38bd-15e4-4ee4-9c5f-50b3b6d0846c"
                       >
                         <hm-uview-text
-                          text="报名项目:"
+                          text="活动名称:"
                           font-size="13px"
                           padding="0"
                           class="ele-2ecc38bd-15e4-4ee4-9c5f-50b3b6d0846c"
