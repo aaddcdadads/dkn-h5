@@ -13,14 +13,62 @@
           class="ele-dbd7f3bd-da08-446b-beec-b1dc37f4621c"
         >
           <view
-            class="ele-wrapper ele-wrapper-bcbf7300-899f-4a1e-b7d6-6afbc073f0eb"
+            class="ele-wrapper ele-wrapper-8e5b00d7-8606-49be-8e41-bd21c1e35237"
           >
-            <hm-uview-action-sheet
-              :visible="true"
-              :border-radius="0"
-              :z-index="1075"
+            <hm-uview-popup
+              :show="true"
+              :mode="'bottom'"
+              :mask-close-able="false"
+              class="ele-8e5b00d7-8606-49be-8e41-bd21c1e35237"
             >
-            </hm-uview-action-sheet>
+              <view
+                class="ele-wrapper ele-wrapper-a62d48e7-e3f4-48b7-829c-4d072444f230"
+              >
+                <hm-uview-bg-card
+                  width="100%"
+                  height=""
+                  border-radius="0"
+                  padding="0"
+                  box-shadow-color="#00000000"
+                  class="ele-a62d48e7-e3f4-48b7-829c-4d072444f230"
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-a8421160-2261-4a40-ad96-c72052540372"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius="0"
+                      padding="12"
+                      box-shadow-color="#00000000"
+                      class="ele-a8421160-2261-4a40-ad96-c72052540372"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-e5983f9a-4d28-4b8d-a5be-8026fae669f5"
+                      >
+                        <hm-uview-text
+                          text="选择您参与的活动"
+                          font-size="16px"
+                          class="ele-e5983f9a-4d28-4b8d-a5be-8026fae669f5"
+                        >
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-bf1a747a-2f34-4286-a58b-55db1afa6d9d"
+                      >
+                        <hm-uview-text
+                          text="取消"
+                          font-size="12px"
+                          color="#409EFF"
+                          class="ele-bf1a747a-2f34-4286-a58b-55db1afa6d9d"
+                        >
+                        </hm-uview-text>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
+                </hm-uview-bg-card>
+              </view>
+            </hm-uview-popup>
           </view>
         </hm-uview-bg-card>
       </view>
@@ -31,20 +79,22 @@
 <script>
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
-import HmUviewActionSheet from "/@/components/built-in/uniapp-uview-vue3/HmUviewActionSheet.vue";
+import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
+import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 
 export default {
   name: "ActivetyView",
   components: {
     HmUviewBgCard,
-    HmUviewActionSheet,
+    HmUviewPopup,
+    HmUviewText,
   },
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
     return {
-      "bcbf7300-899f-4a1e-b7d6-6afbc073f0eb": {
-        visible: true,
+      "8e5b00d7-8606-49be-8e41-bd21c1e35237": {
+        show: true,
       },
     };
   },
@@ -59,5 +109,28 @@ export default {
 
 .ele-wrapper-dbd7f3bd-da08-446b-beec-b1dc37f4621c {
   width: 100%;
+}
+
+.ele-wrapper-8e5b00d7-8606-49be-8e41-bd21c1e35237 {
+  /deep/.u-mode-center-box {
+    border-radius: 8px;
+  }
+}
+
+.ele-wrapper-a62d48e7-e3f4-48b7-829c-4d072444f230 {
+  width: 100%;
+}
+
+.ele-wrapper-a8421160-2261-4a40-ad96-c72052540372 {
+  width: 100%;
+}
+
+.ele-wrapper-e5983f9a-4d28-4b8d-a5be-8026fae669f5 {
+  float: left;
+  font-weight: bolder;
+}
+
+.ele-wrapper-bf1a747a-2f34-4286-a58b-55db1afa6d9d {
+  float: right;
 }
 </style>
