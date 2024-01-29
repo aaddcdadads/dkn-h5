@@ -677,6 +677,7 @@
               text="已报名，查看我的报名信息"
               font-size="14px"
               color="#D6769C"
+              @onClick="onEle4D8Eb71C153949848Ba0E2Dd0E6Ceeb9OnClick"
               class="ele-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9"
             >
             </hm-uview-text>
@@ -724,7 +725,7 @@ export default {
         show: false,
       },
       viewPopup: {
-        show: true,
+        show: false,
       },
       phoneBox: {
         leftSrc: [],
@@ -757,6 +758,9 @@ export default {
   methods: {
     onEle0Abf487751Bc431D8F1A3C043Bc451FeClick() {
       this.regularPopup.show = true;
+    },
+    onEle4D8Eb71C153949848Ba0E2Dd0E6Ceeb9OnClick() {
+      this.viewPopup.show = true;
     },
   },
 };
