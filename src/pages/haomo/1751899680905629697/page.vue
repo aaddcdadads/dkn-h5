@@ -76,6 +76,16 @@
                     >
                     </hm-check-list>
                   </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-ba846aea-fdb1-41b9-828d-bfa69c395b94"
+                  >
+                    <hm-uview-button
+                      :type="'primary'"
+                      text="确定"
+                      class="ele-ba846aea-fdb1-41b9-828d-bfa69c395b94"
+                    >
+                    </hm-uview-button>
+                  </view>
                 </hm-uview-bg-card>
               </view>
             </hm-uview-popup>
@@ -92,6 +102,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmCheckList from "/@/components/built-in/uniapp/HmCheckList.vue";
+import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
   name: "ActivetyView",
@@ -100,6 +111,7 @@ export default {
     HmUviewPopup,
     HmUviewText,
     HmCheckList,
+    HmUviewButton,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -186,5 +198,10 @@ export default {
     margin: 0px 2px !important;
   }
   border-bottom: 1px solid #f5f5f5;
+}
+
+.ele-wrapper-ba846aea-fdb1-41b9-828d-bfa69c395b94 {
+  width: calc(100% - 24px);
+  margin-left: 12px;
 }
 </style>
