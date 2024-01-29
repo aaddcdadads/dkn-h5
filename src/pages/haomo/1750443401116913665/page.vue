@@ -436,8 +436,6 @@ export default {
   display: flex;
   align-items: center;
   margin-top: -5px;
-  height: 50px;
-  line-height: 50px;
 }
 
 .ele-wrapper-4d559557-0403-4847-8886-a66b609a45ba {
