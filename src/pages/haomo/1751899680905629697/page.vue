@@ -150,6 +150,9 @@ export default {
   /deep/.check-list__item-checked {
     border-radius: 0 !important;
   }
+  /deep/.check-list__title {
+    display: none !important;
+  }
   width: 100%;
 }
 </style>
