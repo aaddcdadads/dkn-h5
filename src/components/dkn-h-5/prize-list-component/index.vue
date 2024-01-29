@@ -113,7 +113,7 @@ export default {
 
     > img {
       height: auto;
-      border-radius: 15px;
+      border-radius: 8px;
       width: 100% !important;
     }
   }
