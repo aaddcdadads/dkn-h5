@@ -127,20 +127,16 @@
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-f11d6d7f-84b5-44b9-a789-6438bce8600b"
+                        class="ele-wrapper ele-wrapper-95a101ca-3e04-441c-b7ea-920e2acd6fa9"
                       >
-                        <hm-uview-field
+                        <information-input-box
+                          :left-src="[]"
                           value=""
-                          label=""
+                          right-src=""
                           placeholder="姓名/昵称"
-                          label-width="0"
-                          maxlength="250"
-                          icon=""
-                          right-icon=""
-                          :focus="true"
-                          class="ele-f11d6d7f-84b5-44b9-a789-6438bce8600b"
+                          class="ele-95a101ca-3e04-441c-b7ea-920e2acd6fa9"
                         >
-                        </hm-uview-field>
+                        </information-input-box>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -445,7 +441,8 @@ export default {
         leftSrc: [],
         value: "",
       },
-      "f11d6d7f-84b5-44b9-a789-6438bce8600b": {
+      "95a101ca-3e04-441c-b7ea-920e2acd6fa9": {
+        leftSrc: [],
         value: "",
       },
       "3f7c3c3c-cb94-49b0-b764-9fb7a9b6a85b": {
@@ -554,7 +551,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-f11d6d7f-84b5-44b9-a789-6438bce8600b {
+.ele-wrapper-95a101ca-3e04-441c-b7ea-920e2acd6fa9 {
   /deep/.data_input {
     padding: 0px 10px;
   }
