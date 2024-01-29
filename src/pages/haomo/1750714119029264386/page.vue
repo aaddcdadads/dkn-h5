@@ -968,6 +968,7 @@ font-weight:bolder;
   font-size: 12px !important;
     color: #D6D6D6 !important;
     margin-left: 4px !important;
+}
 }/deep/.gcolor{
   font-size: 12px !important;}
 /deep/.color{
