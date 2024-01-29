@@ -50,7 +50,7 @@
                         class="ele-wrapper ele-wrapper-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f"
                       >
                         <hm-uview-text
-                          text="用户登录查看报名信息"
+                          text=" 用户登录"
                           font-size="16px"
                           class="ele-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f"
                         >
