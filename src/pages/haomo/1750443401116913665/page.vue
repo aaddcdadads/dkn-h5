@@ -494,6 +494,10 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
+  /deep/.HmUviewField1 {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+  }
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
