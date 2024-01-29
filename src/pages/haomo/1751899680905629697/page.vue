@@ -79,17 +79,25 @@
                   <view
                     class="ele-wrapper ele-wrapper-5ceb1472-5f57-4275-9fb8-0975865d8443"
                   >
-                    <hm-uview-bg-card> </hm-uview-bg-card>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-ba846aea-fdb1-41b9-828d-bfa69c395b94"
-                  >
-                    <hm-uview-button
-                      :type="'primary'"
-                      text="确定"
-                      class="ele-ba846aea-fdb1-41b9-828d-bfa69c395b94"
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius="0"
+                      padding="0"
+                      box-shadow-color="#00000000"
+                      class="ele-5ceb1472-5f57-4275-9fb8-0975865d8443"
                     >
-                    </hm-uview-button>
+                      <view
+                        class="ele-wrapper ele-wrapper-205a06f4-977c-4fe1-ac28-e46f34c84338"
+                      >
+                        <hm-uview-button
+                          :type="'primary'"
+                          text="确定"
+                          class="ele-205a06f4-977c-4fe1-ac28-e46f34c84338"
+                        >
+                        </hm-uview-button>
+                      </view>
+                    </hm-uview-bg-card>
                   </view>
                 </hm-uview-bg-card>
               </view>
@@ -206,7 +214,12 @@ export default {
   border-bottom: 1px solid #f5f5f5;
 }
 
-.ele-wrapper-ba846aea-fdb1-41b9-828d-bfa69c395b94 {
+.ele-wrapper-5ceb1472-5f57-4275-9fb8-0975865d8443 {
+  width: 100%;
+  position: relative;
+}
+
+.ele-wrapper-205a06f4-977c-4fe1-ac28-e46f34c84338 {
   width: calc(100% - 24px);
   margin-left: 24rpx;
 }
