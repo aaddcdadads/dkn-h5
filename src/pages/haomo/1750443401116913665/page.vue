@@ -555,16 +555,14 @@ export default {
 }
 
 .ele-wrapper-f11d6d7f-84b5-44b9-a789-6438bce8600b {
-  width: 65%;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  /deep/.data_input {
+    padding: 0px 10px;
   }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-    background: rgb(240, 240, 240);
+  /deep/.image_box {
+    display: none;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px !important;
   }
 }
 
