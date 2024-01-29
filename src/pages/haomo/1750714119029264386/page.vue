@@ -612,6 +612,7 @@
                         <hm-uview-button
                           ref="sureButton"
                           :type="sureButton.type"
+                          :text="sureButton.text"
                           class="ele-sureButton"
                         >
                         </hm-uview-button>
@@ -739,6 +740,7 @@ export default {
       },
       sureButton: {
         type: "info",
+        text: "确认",
       },
       "d324407f-5ad0-412f-845c-f123803419fc": {
         value: "",
@@ -1096,6 +1098,14 @@ export default {
 
 .ele-wrapper-sureButton {
   width: 50%;
+  /deep/.ele-sureButton {
+    background: transparent !important;
+    color: #409eff !important;
+    overflow: visible !important;
+    border-radius: 0px !important;
+    border-top: 1px solid #d6d6d6 !important;
+    border-left: 1px solid #d6d6d6 !important;
+  }
 }
 
 .ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611 {
