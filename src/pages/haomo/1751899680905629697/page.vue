@@ -159,5 +159,11 @@ export default {
   /deep/.check-list__item-name {
     font-size: 28rpx !important;
   }
+  /deep/.check-list__item-checked-icon {
+    width: 14px !important;
+    height: 14px !important;
+    color: #ffffff !important;
+    margin: 0px 2px !important;
+  }
 }
 </style>
