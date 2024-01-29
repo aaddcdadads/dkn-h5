@@ -28,7 +28,7 @@
                 <hm-uview-bg-card
                   ref="outsideBg"
                   width="100%"
-                  height=""
+                  height="100%"
                   border-radius="0"
                   padding="0"
                   box-shadow-color="#00000000"
@@ -216,7 +216,8 @@ export default {
 
 .ele-wrapper-5ceb1472-5f57-4275-9fb8-0975865d8443 {
   width: 100%;
-  position: relative;
+  position: absolute;
+  bottom: 24rpx;
 }
 
 .ele-wrapper-205a06f4-977c-4fe1-ac28-e46f34c84338 {
