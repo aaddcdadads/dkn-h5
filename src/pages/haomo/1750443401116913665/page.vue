@@ -93,6 +93,7 @@
                           ref="HmUviewField1"
                           v-model:value="HmUviewField1.value"
                           label=""
+                          placeholder="报名项目名称 x 数量"
                           label-width="0"
                           icon=""
                           right-icon=""
