@@ -992,6 +992,7 @@ export default {
     font-size: 12px !important;
     color: #d6d6d6 !important;
     margin-left: 4px !important;
+    text-align: left;
   }
   /deep/.gcolor {
     font-size: 12px !important;
