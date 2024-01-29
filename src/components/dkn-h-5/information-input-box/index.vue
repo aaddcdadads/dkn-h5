@@ -1,10 +1,6 @@
 <template>
-  <view class="input" :class="{ 'borderColor': borderColor }">
-    <view class="image_box">
-      <image :src="leftSrc[0]" class="image" v-show="!borderColor"></image>
-      <image :src="leftSrc[1]" class="image" v-show="borderColor"></image>
-    </view>
-    <input :placeholder="placeholder" class="data_input" v-model="value" @focus="onFocus" @blur="onBlur" />
+  <view class="input" style="padding: 5px;">
+    <input :placeholder="placeholder" class="data_input" v-model="value"/>
     <view v-show="showCode">
       <text @click="onCode" :class="showColor ? 'gcolor' : 'color'">{{ code }}</text>
     </view>
@@ -16,18 +12,6 @@
 <script>
 export default {
   props: {
-    /**
-     * 图标
-     */
-    leftSrc: {
-      type: Array,
-      default: function () {
-        return [
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang1.png",
-        ]
-      }
-    },
     /**
      * 值
      */
@@ -43,11 +27,11 @@ export default {
       default: 'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/jiantouyou.png'
     },
     /**
-     * 展示图片
+     * 显示获取验证码
      */
     showCode: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     /**
      * 展示右侧图标
@@ -61,29 +45,21 @@ export default {
      */
      placeholder:{
       type:String,
-      default:"*请填写姓名/昵称",
+      default:"姓名/昵称",
      },
   },
   data() {
     return {
       border: true,
       type: 'text',
-      borderColor: false,
+    
       code: "获取验证码",
       showColor: false,
     }
   },
   methods: {
-    onFocus() {
-      this.$emit("focus");
-      this.borderColor = true;
-    },
-    onBlur() {
-      this.$emit("blur");
-      this.borderColor = false;
-    },
     onCode() {
-      this.$emit("getCode");
+      this.$emit("onCode");
       let time = 60;
       this.showColor = true;
       this.code = `${time}秒后可重新获取`;
@@ -106,16 +82,12 @@ export default {
 </script>
 <style scoped>
 .input {
+  width: 100%;
   display: flex;
   align-items: center;
-  border: 1px solid #e5e5e5;
   height: 45px;
   border-radius: 5px;
-   background-color: #fff;
-}
-
-.borderColor {
-  border-color: #409eff;
+  background-color: #fff;
 }
 
 .image_box {
