@@ -105,6 +105,55 @@
                   class="ele-2966337e-38af-4573-a9c7-464b04d48566"
                 >
                   <view
+                    class="ele-wrapper ele-wrapper-d54b5914-a084-4a9e-9204-991bcc25ecf5"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius="0"
+                      padding="0"
+                      box-shadow-v-shadow="0"
+                      box-shadow-blur="0"
+                      box-shadow-color="#00000000"
+                      background-color="#FFFFFF00"
+                      class="ele-d54b5914-a084-4a9e-9204-991bcc25ecf5"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-89a1b8fd-c1ac-46be-b13d-592864374f64"
+                      >
+                        <hm-uview-text text="迪卡侬春节活动" font-size="14px">
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-4f853c6d-0b81-4d35-8ce5-ac7316260eae"
+                      >
+                        <uni-countdown
+                          background-color="#00000000"
+                          color="#FFFFFF"
+                          :font-size="11"
+                          splitor-color="#FFFFFF99"
+                          :day="19"
+                          :hour="15"
+                          :minute="13"
+                          :second="17"
+                          class="ele-4f853c6d-0b81-4d35-8ce5-ac7316260eae"
+                        >
+                        </uni-countdown>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-6d62d75a-e400-40e6-a49e-015bd0115567"
+                      >
+                        <hm-uview-text
+                          text="报名倒计时"
+                          font-size="12px"
+                          color="#666666"
+                          class="ele-6d62d75a-e400-40e6-a49e-015bd0115567"
+                        >
+                        </hm-uview-text>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
+                  <view
                     class="ele-wrapper ele-wrapper-c2db3fcd-05d0-472b-8e18-163c243cc425"
                   >
                     <hm-uview-bg-card
@@ -647,6 +696,25 @@ export default {
   /deep/.hm-bg-card {
     border-radius: 20px 20px 0px 0px;
   }
+}
+
+.ele-wrapper-d54b5914-a084-4a9e-9204-991bcc25ecf5 {
+  width: 100%;
+}
+
+.ele-wrapper-4f853c6d-0b81-4d35-8ce5-ac7316260eae {
+  /deep/.uni-countdown__splitor {
+    color: #666666;
+    font-size: 12px !important;
+  }
+  /deep/.uni-countdown__number {
+    background: #d8477b !important;
+  }
+  float: right;
+}
+
+.ele-wrapper-6d62d75a-e400-40e6-a49e-015bd0115567 {
+  float: right;
 }
 
 .ele-wrapper-c2db3fcd-05d0-472b-8e18-163c243cc425 {
