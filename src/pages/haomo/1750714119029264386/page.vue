@@ -159,7 +159,7 @@
                       width="100%"
                       height=""
                       border-radius=""
-                      padding="12"
+                      padding="0"
                       background-color="#FEEFF7"
                       class="ele-activityBg"
                     >
@@ -247,6 +247,7 @@
                         <activity-list
                           time="活动时间 2023.11.01 00:00-2024.02.15 23:50:00"
                           number=" 154,480 "
+                          class="ele-9243b683-57b5-45b7-8c57-56a5ffd4a609"
                         >
                         </activity-list>
                       </view>
@@ -752,6 +753,10 @@ export default {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 4px;
   margin-bottom: 40rpx;
+}
+
+.ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609 {
+  margin: 12px 0;
 }
 
 .ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5 {
