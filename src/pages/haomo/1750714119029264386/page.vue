@@ -604,6 +604,7 @@
                           ref="canelButton"
                           :type="canelButton.type"
                           :text="canelButton.text"
+                          @click="onCanelButtonClick"
                           class="ele-canelButton"
                         >
                         </hm-uview-button>
@@ -758,6 +759,9 @@ export default {
   methods: {
     onEle0Abf487751Bc431D8F1A3C043Bc451FeClick() {
       this.regularPopup.show = true;
+    },
+    onCanelButtonClick() {
+      this.viewPopup.show = false;
     },
     onEle4D8Eb71C153949848Ba0E2Dd0E6Ceeb9OnClick() {
       this.viewPopup.show = true;
