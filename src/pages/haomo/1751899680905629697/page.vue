@@ -207,5 +207,6 @@ export default {
   margin-left: 24rpx;
   position: absolute;
   bottom: 20%;
+  z-index: 1000;
 }
 </style>
