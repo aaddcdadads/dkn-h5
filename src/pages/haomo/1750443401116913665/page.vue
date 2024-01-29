@@ -536,7 +536,7 @@ export default {
     display: none;
   }
   /deep/.input-placeholder {
-    font-size: 13px !important;
+    font-size: 16px !important;
   }
 }
 
