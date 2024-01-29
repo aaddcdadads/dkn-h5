@@ -81,9 +81,9 @@
                       >
                         <hm-uview-field
                           value=""
-                          label="项目名称:"
+                          label=""
                           placeholder="报名手机号码"
-                          label-width="150"
+                          label-width="0"
                           maxlength="200"
                           icon=""
                           right-icon=""
