@@ -1,239 +1,650 @@
 <template>
   <view class="page card">
     <view class="page-wrapper">
-        <view class="ele-wrapper ele-wrapper-outsideBg">
-      <hm-uview-bg-card ref="outsideBg" width="100%" height="" border-radius="0" padding="0" box-shadow-color="#00000000" background-color="#FFE8EC" class="ele-outsideBg"> 
-            <view class="ele-wrapper ele-wrapper-topBg">
-      <hm-uview-bg-card ref="topBg" width="100%" height="" border-radius="0" padding="12" box-shadow-v-shadow="0" box-shadow-blur="0" box-shadow-color="#00000000" background-color="#FFFFFF00" class="ele-topBg"> 
-            <view class="ele-wrapper ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe">
-      <hm-uview-icon name="question-circle" color="#FFFFFF" size="20px" label="规则" label-color="#FFFFFF" @click="onEle0Abf487751Bc431D8F1A3C043Bc451FeClick" class="ele-0abf4877-51bc-431d-8f1a-3c043bc451fe"> 
-       
-    </hm-uview-icon>
-    </view> 
-    </hm-uview-bg-card>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-3de94d32-48f2-495a-b447-4ba9360a1ceb">
-      <hm-uview-bg-card width="100%" height="" border-radius="0" padding="12" box-shadow-v-shadow="0" box-shadow-blur="0" box-shadow-color="#00000000" background-color="#FFFFFF00" class="ele-3de94d32-48f2-495a-b447-4ba9360a1ceb"> 
-    </hm-uview-bg-card>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-imageBg">
-      <hm-uview-bg-card ref="imageBg" width="100%" height="" border-radius="0" padding="0" box-shadow-v-shadow="0" box-shadow-color="#00000000" background-color="#FFFFFF00" class="ele-imageBg"> 
-            <view class="ele-wrapper ele-wrapper-logoImg">
-      <hm-uview-image ref="logoImg" src="https://static1.keepcdn.com/teyvat-cms/2023/10/24/1698136514335c25agsam_750x1000.jpg" width="100%" height="500px" class="ele-logoImg"> 
-       
-    </hm-uview-image>
-    </view> 
-    </hm-uview-bg-card>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2">
-      <hm-uview-bg-card width="100%" height="" border-radius="0" padding="0" box-shadow-color="#00000000" class="ele-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"> 
-            <view class="ele-wrapper ele-wrapper-2966337e-38af-4573-a9c7-464b04d48566">
-      <hm-uview-bg-card width="100%" height="" border-radius="0" padding="12" box-shadow-color="#00000000" background-color="#F6D7E6" class="ele-2966337e-38af-4573-a9c7-464b04d48566"> 
-            <view class="ele-wrapper ele-wrapper-d54b5914-a084-4a9e-9204-991bcc25ecf5">
-      <hm-uview-bg-card width="100%" height="" border-radius="0" padding="0" box-shadow-v-shadow="0" box-shadow-blur="0" box-shadow-color="#00000000" background-color="#FFFFFF00" class="ele-d54b5914-a084-4a9e-9204-991bcc25ecf5"> 
-            <view class="ele-wrapper ele-wrapper-89a1b8fd-c1ac-46be-b13d-592864374f64">
-      <hm-uview-text text="迪卡侬春节活动" font-size="16px" padding="0" class="ele-89a1b8fd-c1ac-46be-b13d-592864374f64"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-4f853c6d-0b81-4d35-8ce5-ac7316260eae">
-      <uni-countdown background-color="#00000000" color="#FFFFFF" :font-size="11" splitor-color="#666666" :day="19" :hour="15" :minute="13" :second="17" class="ele-4f853c6d-0b81-4d35-8ce5-ac7316260eae"> 
-       
-    </uni-countdown>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-6d62d75a-e400-40e6-a49e-015bd0115567">
-      <hm-uview-text text="报名倒计时" font-size="14px" color="#666666" padding="0" class="ele-6d62d75a-e400-40e6-a49e-015bd0115567"> 
-       
-    </hm-uview-text>
-    </view> 
-    </hm-uview-bg-card>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-activityBg">
-      <hm-uview-bg-card ref="activityBg" width="100%" height="" border-radius="" padding="0" background-color="#FEEFF7" class="ele-activityBg"> 
-            <view class="ele-wrapper ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39">
-      <hm-uview-bg-card width="100%" height="" border-radius="0" padding="0" box-shadow-v-shadow="0" box-shadow-blur="0" box-shadow-color="#00000000" background-color="#FFFFFF1F" class="ele-951ec1d4-209a-48cc-a908-c78236487f39"> 
-            <view class="ele-wrapper ele-wrapper-4f1cb12e-36cb-4378-b823-05b5d45354ab">
-      <hm-uview-image width="100%" height="100%" border-redius="50%" class="ele-4f1cb12e-36cb-4378-b823-05b5d45354ab"> 
-       
-    </hm-uview-image>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-ad039bb7-8f55-4ab8-98a8-54d1f73db365">
-      <hm-uview-text text="Keep ·HelloKitty系列" font-size="12px" color="#FFFFFF" padding="0" class="ele-ad039bb7-8f55-4ab8-98a8-54d1f73db365"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30">
-      <hm-uview-icon name="arrow-right" color="#FFFFFF99" size="12px" label="" label-color="#FFFFFF" class="ele-f1b5f026-f12a-46a9-b78f-dea0efd75a30"> 
-       
-    </hm-uview-icon>
-    </view> 
-    </hm-uview-bg-card>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-db5afb3e-f8de-4171-94e9-286964bcb67c">
-      <hm-uview-bg-card width="100%" height="" border-radius="12" padding="0" box-shadow-color="#00000000" background-color="#F797BD00" class="ele-db5afb3e-f8de-4171-94e9-286964bcb67c"> 
-            <view class="ele-wrapper ele-wrapper-f0bdc2b0-8112-4546-8c75-84df79598453">
-      <hm-uview-text text="线上马拉松" font-size="10px" color="#FFFFFF99" padding="6" class="ele-f0bdc2b0-8112-4546-8c75-84df79598453"> 
-       
-    </hm-uview-text>
-    </view> 
-    </hm-uview-bg-card>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609">
-      <activity-list time="2023.11.01-2024.02.15" number=" 154,480 " class="ele-9243b683-57b5-45b7-8c57-56a5ffd4a609"> 
-       
-    </activity-list>
-    </view> 
-    </hm-uview-bg-card>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-76b3694d-443e-4d62-8c58-80e0356f7fa4">
-      <hm-uview-text text="活动奖品" font-size="16px" color="#000000" bg-color="#FFFFFF00" padding="0" class="ele-76b3694d-443e-4d62-8c58-80e0356f7fa4"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5">
-      <hm-uview-bg-card width="100%" height="" border-radius="12" padding="0" background-color="#F797BD00" class="ele-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5"> 
-            <view class="ele-wrapper ele-wrapper-67658805-d92e-4e1f-8067-6a180eca6391">
-      <hm-uview-bg-card width="100%" height="" border-radius="0" padding="0" box-shadow-v-shadow="0" box-shadow-blur="0" box-shadow-color="#00000000" background-color="#FFFFFF00" class="ele-67658805-d92e-4e1f-8067-6a180eca6391"> 
-            <view class="ele-wrapper ele-wrapper-04b7a686-49e4-4376-b105-eec04bba2014">
-      <prize-list-component :func-list='[{"bgUrl":"https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95","height1":"auto","scoretext":"奖品","display":"block","textbottom":"奖品"},{"bgUrl":"https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95","height1":"auto","scoretext":"奖品","display":"block","textbottom":"奖品"},{"bgUrl":"https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95","height1":"auto","scoretext":"奖品","display":"block","textbottom":"奖品"}]' class="ele-04b7a686-49e4-4376-b105-eec04bba2014"> 
-       
-    </prize-list-component>
-    </view> 
-    </hm-uview-bg-card>
-    </view> 
-    </hm-uview-bg-card>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-dacbdcbf-5aa6-416f-a334-d9098c8ccfda">
-      <hm-uview-text text="活动详情" font-size="16px" color="#000000" bg-color="#FFFFFF00" class="ele-dacbdcbf-5aa6-416f-a334-d9098c8ccfda"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-0d696b7e-8100-4e0a-a949-9e8788ae1cec">
-      <hm-uview-bg-card width="100%" height="400" border-radius="12" padding="0" box-shadow-v-shadow="0" box-shadow-blur="0" box-shadow-color="#00000000" background-color="#F797BD00" class="ele-0d696b7e-8100-4e0a-a949-9e8788ae1cec"> 
-    </hm-uview-bg-card>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550">
-      <hm-uview-bg-card width="100%" height="" border-radius="12" padding="12" background-color="#F797BD" class="ele-9bb5842b-b006-40fa-a5a0-9c71da20a550"> 
-            <view class="ele-wrapper ele-wrapper-5ffca98b-a826-46e6-a408-cf1165d243d2">
-      <hm-cell-list width="100%" height="60" :is-border="false" bg-color="#FFFFFF00" :list='[{"id":"1","title":"Keep 三丽鸥家族","descrip":"65484成员","date":"+ 加入","image":"https://img2.baidu.com/it/u=3886895525,3764775842&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"}]' class="ele-5ffca98b-a826-46e6-a408-cf1165d243d2"> 
-       
-    </hm-cell-list>
-    </view> 
-    </hm-uview-bg-card>
-    </view> 
-    </hm-uview-bg-card>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-regularPopup">
-      <hm-uview-popup ref="regularPopup" v-model:show="regularPopup.show" :mode="'bottom'" width="100%" height="50%" :close-icon-pos="'top-left'" class="ele-regularPopup"> 
-            <view class="ele-wrapper ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2">
-      <hm-uview-text text="活动玩法" font-size="16px" class="ele-dc91ed40-34d2-458d-a7fb-c67671b736c2"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-82757320-2908-4ea4-a4a6-d6a672339dab">
-      <hm-uview-text text="玩法介绍" font-size="12px" class="ele-82757320-2908-4ea4-a4a6-d6a672339dab"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-f8b609db-e332-45a3-8489-fba690b76d97">
-      <hm-uview-text text="第一步 报名" font-size="12px" class="ele-f8b609db-e332-45a3-8489-fba690b76d97"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-92d692d3-6c86-4408-8023-fbff541eef72">
-      <hm-uview-text text="点击页面下方的「马上报名」，选择自己要挑战的公里数。" font-size="12px" :text-align="'left'" class="ele-92d692d3-6c86-4408-8023-fbff541eef72"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-1bc765de-b93e-4b9b-9419-38462cabd3e8">
-      <hm-uview-text text="-- 选择公里数对应的奖牌套餐，提交订单支付并填写收件信息即可在完赛后获得奖牌/奖牌配件/周边。" font-size="12px" :text-align="'left'" class="ele-1bc765de-b93e-4b9b-9419-38462cabd3e8"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-6a8da34f-c177-4734-9296-60012cc53022">
-      <hm-uview-text text="第二步 比赛" font-size="12px" :text-align="'left'" class="ele-6a8da34f-c177-4734-9296-60012cc53022"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-7d3df9ae-0d2a-4b45-b228-d0b656c92814">
-      <hm-uview-text text="在比赛时间内，打开 Keep，一次性跑完您挑战的公里数即可。" font-size="12px" :text-align="'left'" class="ele-7d3df9ae-0d2a-4b45-b228-d0b656c92814"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-a4e33194-afbc-45e7-bcc8-ddbcf26c79ec">
-      <hm-uview-text text="-- 户外/跑步机皆可。" font-size="12px" :text-align="'left'" class="ele-a4e33194-afbc-45e7-bcc8-ddbcf26c79ec"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-31fd4b60-ff13-4aae-8696-7a49451ada65">
-      <hm-uview-text text="第三步 完赛" font-size="12px" class="ele-31fd4b60-ff13-4aae-8696-7a49451ada65"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-53f33209-47f4-4d7b-950c-d746bca5fc54">
-      <hm-uview-text text="奖牌及奖牌配件/周边将在完赛后 30 个工作日内发货；" font-size="12px" class="ele-53f33209-47f4-4d7b-950c-d746bca5fc54"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-30657b3a-defb-4229-91e7-6326e04c3af2">
-      <hm-uview-text text="请注意！！若未完赛，则奖牌将无法发出，但配件/周边仍可以在活动结束后发货；（30 个工作日从完赛后第一个工作日开始计算）" font-size="12px" color="#E60000" :text-align="'left'" class="ele-30657b3a-defb-4229-91e7-6326e04c3af2"> 
-       
-    </hm-uview-text>
-    </view> 
-    </hm-uview-popup>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-viewPopup">
-      <hm-uview-popup ref="viewPopup" v-model:show="viewPopup.show" width="80%" height="200px" border-radius="8px" :closeable="false" class="ele-viewPopup"> 
-            <view class="ele-wrapper ele-wrapper-ea66b462-b5ce-4b41-8870-bb482768fef8">
-      <hm-uview-bg-card width="100%" height="" border-radius="0" padding="12" box-shadow-color="#00000000" background-color="#FFE8EC00" class="ele-ea66b462-b5ce-4b41-8870-bb482768fef8"> 
-            <view class="ele-wrapper ele-wrapper-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f">
-      <hm-uview-text text="用户登录查看报名信息" font-size="14px" class="ele-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e">
-      <information-input-box :left-src='[]' value="" :show-code="true" placeholder=" 请填写手机验证码" class="ele-dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e"> 
-       
-    </information-input-box>
-    </view> 
-    </hm-uview-bg-card>
-    </view> 
-    </hm-uview-popup>
-    </view> 
-    </hm-uview-bg-card>
-    </view> 
-    </hm-uview-bg-card>
-    </view>
-        <view class="ele-wrapper ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611">
-      <hm-uview-bg-card width="100%" height="" border-radius="0" padding="12" box-shadow-color="#00000000" class="ele-2136b833-7f0e-4a8a-a081-36d9e275f611"> 
-            <view class="ele-wrapper ele-wrapper-d324407f-5ad0-412f-845c-f123803419fc">
-      <hm-uview-radio value="" title="" :list='[{"name":"我已阅读并同意","disabled":false}]' class="ele-d324407f-5ad0-412f-845c-f123803419fc"> 
-       
-    </hm-uview-radio>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-7a55d0c9-95ac-4729-befd-31f60ecf4707">
-      <hm-uview-text text="《活动报名用户协议及承诺书》" font-size="14px" color="#D6769C" :text-align="'left'" padding="0" class="ele-7a55d0c9-95ac-4729-befd-31f60ecf4707"> 
-       
-    </hm-uview-text>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f">
-      <hm-uview-button :type="'success'" text="马上报名" class="ele-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f"> 
-       
-    </hm-uview-button>
-    </view> 
-            <view class="ele-wrapper ele-wrapper-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9">
-      <hm-uview-text text="已报名，查看我的报名信息" font-size="14px" color="#D6769C" class="ele-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9"> 
-       
-    </hm-uview-text>
-    </view> 
-    </hm-uview-bg-card>
-    </view>
+      <view class="ele-wrapper ele-wrapper-outsideBg">
+        <hm-uview-bg-card
+          ref="outsideBg"
+          width="100%"
+          height=""
+          border-radius="0"
+          padding="0"
+          box-shadow-color="#00000000"
+          background-color="#FFE8EC"
+          class="ele-outsideBg"
+        >
+          <view class="ele-wrapper ele-wrapper-topBg">
+            <hm-uview-bg-card
+              ref="topBg"
+              width="100%"
+              height=""
+              border-radius="0"
+              padding="12"
+              box-shadow-v-shadow="0"
+              box-shadow-blur="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
+              class="ele-topBg"
+            >
+              <view
+                class="ele-wrapper ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe"
+              >
+                <hm-uview-icon
+                  name="question-circle"
+                  color="#FFFFFF"
+                  size="20px"
+                  label="规则"
+                  label-color="#FFFFFF"
+                  @click="onEle0Abf487751Bc431D8F1A3C043Bc451FeClick"
+                  class="ele-0abf4877-51bc-431d-8f1a-3c043bc451fe"
+                >
+                </hm-uview-icon>
+              </view>
+            </hm-uview-bg-card>
+          </view>
+          <view
+            class="ele-wrapper ele-wrapper-3de94d32-48f2-495a-b447-4ba9360a1ceb"
+          >
+            <hm-uview-bg-card
+              width="100%"
+              height=""
+              border-radius="0"
+              padding="12"
+              box-shadow-v-shadow="0"
+              box-shadow-blur="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
+              class="ele-3de94d32-48f2-495a-b447-4ba9360a1ceb"
+            >
+            </hm-uview-bg-card>
+          </view>
+          <view class="ele-wrapper ele-wrapper-imageBg">
+            <hm-uview-bg-card
+              ref="imageBg"
+              width="100%"
+              height=""
+              border-radius="0"
+              padding="0"
+              box-shadow-v-shadow="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
+              class="ele-imageBg"
+            >
+              <view class="ele-wrapper ele-wrapper-logoImg">
+                <hm-uview-image
+                  ref="logoImg"
+                  src="https://static1.keepcdn.com/teyvat-cms/2023/10/24/1698136514335c25agsam_750x1000.jpg"
+                  width="100%"
+                  height="500px"
+                  class="ele-logoImg"
+                >
+                </hm-uview-image>
+              </view>
+            </hm-uview-bg-card>
+          </view>
+          <view
+            class="ele-wrapper ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"
+          >
+            <hm-uview-bg-card
+              width="100%"
+              height=""
+              border-radius="0"
+              padding="0"
+              box-shadow-color="#00000000"
+              class="ele-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"
+            >
+              <view
+                class="ele-wrapper ele-wrapper-2966337e-38af-4573-a9c7-464b04d48566"
+              >
+                <hm-uview-bg-card
+                  width="100%"
+                  height=""
+                  border-radius="0"
+                  padding="12"
+                  box-shadow-color="#00000000"
+                  background-color="#F6D7E6"
+                  class="ele-2966337e-38af-4573-a9c7-464b04d48566"
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-d54b5914-a084-4a9e-9204-991bcc25ecf5"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius="0"
+                      padding="0"
+                      box-shadow-v-shadow="0"
+                      box-shadow-blur="0"
+                      box-shadow-color="#00000000"
+                      background-color="#FFFFFF00"
+                      class="ele-d54b5914-a084-4a9e-9204-991bcc25ecf5"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-89a1b8fd-c1ac-46be-b13d-592864374f64"
+                      >
+                        <hm-uview-text
+                          text="迪卡侬春节活动"
+                          font-size="16px"
+                          padding="0"
+                          class="ele-89a1b8fd-c1ac-46be-b13d-592864374f64"
+                        >
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-4f853c6d-0b81-4d35-8ce5-ac7316260eae"
+                      >
+                        <uni-countdown
+                          background-color="#00000000"
+                          color="#FFFFFF"
+                          :font-size="11"
+                          splitor-color="#666666"
+                          :day="19"
+                          :hour="15"
+                          :minute="13"
+                          :second="17"
+                          class="ele-4f853c6d-0b81-4d35-8ce5-ac7316260eae"
+                        >
+                        </uni-countdown>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-6d62d75a-e400-40e6-a49e-015bd0115567"
+                      >
+                        <hm-uview-text
+                          text="报名倒计时"
+                          font-size="14px"
+                          color="#666666"
+                          padding="0"
+                          class="ele-6d62d75a-e400-40e6-a49e-015bd0115567"
+                        >
+                        </hm-uview-text>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
+                  <view class="ele-wrapper ele-wrapper-activityBg">
+                    <hm-uview-bg-card
+                      ref="activityBg"
+                      width="100%"
+                      height=""
+                      border-radius=""
+                      padding="0"
+                      background-color="#FEEFF7"
+                      class="ele-activityBg"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39"
+                      >
+                        <hm-uview-bg-card
+                          width="100%"
+                          height=""
+                          border-radius="0"
+                          padding="0"
+                          box-shadow-v-shadow="0"
+                          box-shadow-blur="0"
+                          box-shadow-color="#00000000"
+                          background-color="#FFFFFF1F"
+                          class="ele-951ec1d4-209a-48cc-a908-c78236487f39"
+                        >
+                          <view
+                            class="ele-wrapper ele-wrapper-4f1cb12e-36cb-4378-b823-05b5d45354ab"
+                          >
+                            <hm-uview-image
+                              width="100%"
+                              height="100%"
+                              border-redius="50%"
+                              class="ele-4f1cb12e-36cb-4378-b823-05b5d45354ab"
+                            >
+                            </hm-uview-image>
+                          </view>
+                          <view
+                            class="ele-wrapper ele-wrapper-ad039bb7-8f55-4ab8-98a8-54d1f73db365"
+                          >
+                            <hm-uview-text
+                              text="Keep ·HelloKitty系列"
+                              font-size="12px"
+                              color="#FFFFFF"
+                              padding="0"
+                              class="ele-ad039bb7-8f55-4ab8-98a8-54d1f73db365"
+                            >
+                            </hm-uview-text>
+                          </view>
+                          <view
+                            class="ele-wrapper ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30"
+                          >
+                            <hm-uview-icon
+                              name="arrow-right"
+                              color="#FFFFFF99"
+                              size="12px"
+                              label=""
+                              label-color="#FFFFFF"
+                              class="ele-f1b5f026-f12a-46a9-b78f-dea0efd75a30"
+                            >
+                            </hm-uview-icon>
+                          </view>
+                        </hm-uview-bg-card>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-db5afb3e-f8de-4171-94e9-286964bcb67c"
+                      >
+                        <hm-uview-bg-card
+                          width="100%"
+                          height=""
+                          border-radius="12"
+                          padding="0"
+                          box-shadow-color="#00000000"
+                          background-color="#F797BD00"
+                          class="ele-db5afb3e-f8de-4171-94e9-286964bcb67c"
+                        >
+                          <view
+                            class="ele-wrapper ele-wrapper-f0bdc2b0-8112-4546-8c75-84df79598453"
+                          >
+                            <hm-uview-text
+                              text="线上马拉松"
+                              font-size="10px"
+                              color="#FFFFFF99"
+                              padding="6"
+                              class="ele-f0bdc2b0-8112-4546-8c75-84df79598453"
+                            >
+                            </hm-uview-text>
+                          </view>
+                        </hm-uview-bg-card>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609"
+                      >
+                        <activity-list
+                          time="2023.11.01-2024.02.15"
+                          number=" 154,480 "
+                          class="ele-9243b683-57b5-45b7-8c57-56a5ffd4a609"
+                        >
+                        </activity-list>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-76b3694d-443e-4d62-8c58-80e0356f7fa4"
+                  >
+                    <hm-uview-text
+                      text="活动奖品"
+                      font-size="16px"
+                      color="#000000"
+                      bg-color="#FFFFFF00"
+                      padding="0"
+                      class="ele-76b3694d-443e-4d62-8c58-80e0356f7fa4"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius="12"
+                      padding="0"
+                      background-color="#F797BD00"
+                      class="ele-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-67658805-d92e-4e1f-8067-6a180eca6391"
+                      >
+                        <hm-uview-bg-card
+                          width="100%"
+                          height=""
+                          border-radius="0"
+                          padding="0"
+                          box-shadow-v-shadow="0"
+                          box-shadow-blur="0"
+                          box-shadow-color="#00000000"
+                          background-color="#FFFFFF00"
+                          class="ele-67658805-d92e-4e1f-8067-6a180eca6391"
+                        >
+                          <view
+                            class="ele-wrapper ele-wrapper-04b7a686-49e4-4376-b105-eec04bba2014"
+                          >
+                            <prize-list-component
+                              :func-list="[
+                                {
+                                  bgUrl:
+                                    'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                                  height1: 'auto',
+                                  scoretext: '奖品',
+                                  display: 'block',
+                                  textbottom: '奖品',
+                                },
+                                {
+                                  bgUrl:
+                                    'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                                  height1: 'auto',
+                                  scoretext: '奖品',
+                                  display: 'block',
+                                  textbottom: '奖品',
+                                },
+                                {
+                                  bgUrl:
+                                    'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                                  height1: 'auto',
+                                  scoretext: '奖品',
+                                  display: 'block',
+                                  textbottom: '奖品',
+                                },
+                              ]"
+                              class="ele-04b7a686-49e4-4376-b105-eec04bba2014"
+                            >
+                            </prize-list-component>
+                          </view>
+                        </hm-uview-bg-card>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-dacbdcbf-5aa6-416f-a334-d9098c8ccfda"
+                  >
+                    <hm-uview-text
+                      text="活动详情"
+                      font-size="16px"
+                      color="#000000"
+                      bg-color="#FFFFFF00"
+                      class="ele-dacbdcbf-5aa6-416f-a334-d9098c8ccfda"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-0d696b7e-8100-4e0a-a949-9e8788ae1cec"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height="400"
+                      border-radius="12"
+                      padding="0"
+                      box-shadow-v-shadow="0"
+                      box-shadow-blur="0"
+                      box-shadow-color="#00000000"
+                      background-color="#F797BD00"
+                      class="ele-0d696b7e-8100-4e0a-a949-9e8788ae1cec"
+                    >
+                    </hm-uview-bg-card>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius="12"
+                      padding="12"
+                      background-color="#F797BD"
+                      class="ele-9bb5842b-b006-40fa-a5a0-9c71da20a550"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-5ffca98b-a826-46e6-a408-cf1165d243d2"
+                      >
+                        <hm-cell-list
+                          width="100%"
+                          height="60"
+                          :is-border="false"
+                          bg-color="#FFFFFF00"
+                          :list="[
+                            {
+                              id: '1',
+                              title: 'Keep 三丽鸥家族',
+                              descrip: '65484成员',
+                              date: '+ 加入',
+                              image:
+                                'https://img2.baidu.com/it/u=3886895525,3764775842&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+                            },
+                          ]"
+                          class="ele-5ffca98b-a826-46e6-a408-cf1165d243d2"
+                        >
+                        </hm-cell-list>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
+                </hm-uview-bg-card>
+              </view>
+              <view class="ele-wrapper ele-wrapper-regularPopup">
+                <hm-uview-popup
+                  ref="regularPopup"
+                  v-model:show="regularPopup.show"
+                  :mode="'bottom'"
+                  width="100%"
+                  height="50%"
+                  :close-icon-pos="'top-left'"
+                  class="ele-regularPopup"
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2"
+                  >
+                    <hm-uview-text
+                      text="活动玩法"
+                      font-size="16px"
+                      class="ele-dc91ed40-34d2-458d-a7fb-c67671b736c2"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-82757320-2908-4ea4-a4a6-d6a672339dab"
+                  >
+                    <hm-uview-text
+                      text="玩法介绍"
+                      font-size="12px"
+                      class="ele-82757320-2908-4ea4-a4a6-d6a672339dab"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-f8b609db-e332-45a3-8489-fba690b76d97"
+                  >
+                    <hm-uview-text
+                      text="第一步 报名"
+                      font-size="12px"
+                      class="ele-f8b609db-e332-45a3-8489-fba690b76d97"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-92d692d3-6c86-4408-8023-fbff541eef72"
+                  >
+                    <hm-uview-text
+                      text="点击页面下方的「马上报名」，选择自己要挑战的公里数。"
+                      font-size="12px"
+                      :text-align="'left'"
+                      class="ele-92d692d3-6c86-4408-8023-fbff541eef72"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-1bc765de-b93e-4b9b-9419-38462cabd3e8"
+                  >
+                    <hm-uview-text
+                      text="-- 选择公里数对应的奖牌套餐，提交订单支付并填写收件信息即可在完赛后获得奖牌/奖牌配件/周边。"
+                      font-size="12px"
+                      :text-align="'left'"
+                      class="ele-1bc765de-b93e-4b9b-9419-38462cabd3e8"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-6a8da34f-c177-4734-9296-60012cc53022"
+                  >
+                    <hm-uview-text
+                      text="第二步 比赛"
+                      font-size="12px"
+                      :text-align="'left'"
+                      class="ele-6a8da34f-c177-4734-9296-60012cc53022"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-7d3df9ae-0d2a-4b45-b228-d0b656c92814"
+                  >
+                    <hm-uview-text
+                      text="在比赛时间内，打开 Keep，一次性跑完您挑战的公里数即可。"
+                      font-size="12px"
+                      :text-align="'left'"
+                      class="ele-7d3df9ae-0d2a-4b45-b228-d0b656c92814"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-a4e33194-afbc-45e7-bcc8-ddbcf26c79ec"
+                  >
+                    <hm-uview-text
+                      text="-- 户外/跑步机皆可。"
+                      font-size="12px"
+                      :text-align="'left'"
+                      class="ele-a4e33194-afbc-45e7-bcc8-ddbcf26c79ec"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-31fd4b60-ff13-4aae-8696-7a49451ada65"
+                  >
+                    <hm-uview-text
+                      text="第三步 完赛"
+                      font-size="12px"
+                      class="ele-31fd4b60-ff13-4aae-8696-7a49451ada65"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-53f33209-47f4-4d7b-950c-d746bca5fc54"
+                  >
+                    <hm-uview-text
+                      text="奖牌及奖牌配件/周边将在完赛后 30 个工作日内发货；"
+                      font-size="12px"
+                      class="ele-53f33209-47f4-4d7b-950c-d746bca5fc54"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-30657b3a-defb-4229-91e7-6326e04c3af2"
+                  >
+                    <hm-uview-text
+                      text="请注意！！若未完赛，则奖牌将无法发出，但配件/周边仍可以在活动结束后发货；（30 个工作日从完赛后第一个工作日开始计算）"
+                      font-size="12px"
+                      color="#E60000"
+                      :text-align="'left'"
+                      class="ele-30657b3a-defb-4229-91e7-6326e04c3af2"
+                    >
+                    </hm-uview-text>
+                  </view>
+                </hm-uview-popup>
+              </view>
+              <view class="ele-wrapper ele-wrapper-viewPopup">
+                <hm-uview-popup
+                  ref="viewPopup"
+                  v-model:show="viewPopup.show"
+                  width="80%"
+                  height="200px"
+                  border-radius="8px"
+                  :closeable="false"
+                  class="ele-viewPopup"
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-ea66b462-b5ce-4b41-8870-bb482768fef8"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius="0"
+                      padding="12"
+                      box-shadow-color="#00000000"
+                      background-color="#FFE8EC00"
+                      class="ele-ea66b462-b5ce-4b41-8870-bb482768fef8"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f"
+                      >
+                        <hm-uview-text
+                          text="用户登录查看报名信息"
+                          font-size="14px"
+                          class="ele-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f"
+                        >
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e"
+                      >
+                        <information-input-box
+                          :left-src="[]"
+                          value=""
+                          :show-code="true"
+                          placeholder=" 请填写手机验证码"
+                          class="ele-dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e"
+                        >
+                        </information-input-box>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
+                </hm-uview-popup>
+              </view>
+            </hm-uview-bg-card>
+          </view>
+        </hm-uview-bg-card>
+      </view>
+      <view
+        class="ele-wrapper ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611"
+      >
+        <hm-uview-bg-card
+          width="100%"
+          height=""
+          border-radius="0"
+          padding="12"
+          box-shadow-color="#00000000"
+          class="ele-2136b833-7f0e-4a8a-a081-36d9e275f611"
+        >
+          <view
+            class="ele-wrapper ele-wrapper-d324407f-5ad0-412f-845c-f123803419fc"
+          >
+            <hm-uview-radio
+              value=""
+              title=""
+              :list="[{ name: '我已阅读并同意', disabled: false }]"
+              class="ele-d324407f-5ad0-412f-845c-f123803419fc"
+            >
+            </hm-uview-radio>
+          </view>
+          <view
+            class="ele-wrapper ele-wrapper-7a55d0c9-95ac-4729-befd-31f60ecf4707"
+          >
+            <hm-uview-text
+              text="《活动报名用户协议及承诺书》"
+              font-size="14px"
+              color="#D6769C"
+              :text-align="'left'"
+              padding="0"
+              class="ele-7a55d0c9-95ac-4729-befd-31f60ecf4707"
+            >
+            </hm-uview-text>
+          </view>
+          <view
+            class="ele-wrapper ele-wrapper-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f"
+          >
+            <hm-uview-button
+              :type="'success'"
+              text="马上报名"
+              class="ele-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f"
+            >
+            </hm-uview-button>
+          </view>
+          <view
+            class="ele-wrapper ele-wrapper-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9"
+          >
+            <hm-uview-text
+              text="已报名，查看我的报名信息"
+              font-size="14px"
+              color="#D6769C"
+              class="ele-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9"
+            >
+            </hm-uview-text>
+          </view>
+        </hm-uview-bg-card>
+      </view>
     </view>
   </view>
 </template>
 
 <script>
-import { h } from 'vue';
+import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
@@ -245,7 +656,6 @@ import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
-
 
 export default {
   name: "ActivityRegistrationPage",
@@ -266,41 +676,39 @@ export default {
   data() {
     let self = this;
     return {
-  "regularPopup": {
-    "show": false
+      regularPopup: {
+        show: false,
+      },
+      viewPopup: {
+        show: true,
+      },
+      "dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e": {
+        leftSrc: [],
+        value: "",
+      },
+      "d324407f-5ad0-412f-845c-f123803419fc": {
+        value: "",
+        list: [
+          {
+            name: "我已阅读并同意",
+            disabled: false,
+          },
+        ],
+      },
+    };
   },
-  "viewPopup": {
-    "show": true
+  watch: {},
+  methods: {
+    onEle0Abf487751Bc431D8F1A3C043Bc451FeClick() {
+      this.regularPopup.show = true;
+    },
   },
-  "dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e": {
-    "leftSrc": [],
-    "value": ""
-  },
-  "d324407f-5ad0-412f-845c-f123803419fc": {
-    "value": "",
-    "list": [
-      {
-        "name": "我已阅读并同意",
-        "disabled": false
-      }
-    ]
-  }
-};
-  },
-  watch: {
-  },
-  methods:{
-
-    onEle0Abf487751Bc431D8F1A3C043Bc451FeClick () {
-  this.regularPopup.show = true;
-}
-  }
 };
 </script>
 
 <style lang="less" scoped>
 .page {
-  
+
 }
 
 .ele-wrapper-outsideBg {
@@ -318,7 +726,7 @@ z-index:1000;
 
 .ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe {
   border-radius: 608rpx;
-float:right;   
+float:right;
 text-align:center;padding-top:8rpx;
 margin-right:24rpx;background: rgba(0,0,0,.16);
 padding:8px 12px;
@@ -611,5 +1019,4 @@ border-color:#E18EB3!important;
   width:100%;
 text-align:center;
 }
-
 </style>
