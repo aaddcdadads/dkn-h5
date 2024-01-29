@@ -149,6 +149,8 @@ export default {
 .ele-wrapper-a614f90f-fc08-4439-8a10-27bf935a054a {
   /deep/.check-list__item-checked {
     border-radius: 0 !important;
+    width: 20px !important;
+    height: 20px !important;
   }
   /deep/.check-list__title {
     display: none !important;
