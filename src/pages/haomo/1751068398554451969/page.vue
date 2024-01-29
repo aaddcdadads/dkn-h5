@@ -196,11 +196,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-d85c2ae9-62ab-4f2f-886b-747dc175f7fb"
-                      >
+                      <view class="ele-wrapper ele-wrapper-ActivityName">
                         <hm-uview-field
-                          value=""
+                          ref="ActivityName"
+                          v-model:value="ActivityName.value"
                           label=""
                           placeholder="报名项目名称 x 数量"
                           label-width="0"
@@ -208,7 +207,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-d85c2ae9-62ab-4f2f-886b-747dc175f7fb"
+                          class="ele-ActivityName"
                         >
                         </hm-uview-field>
                       </view>
@@ -297,7 +296,7 @@ export default {
       "da7c111b-9122-4667-9eb5-1d46bf867f3c": {
         value: "",
       },
-      "d85c2ae9-62ab-4f2f-886b-747dc175f7fb": {
+      ActivityName: {
         value: "",
       },
     };
@@ -447,7 +446,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-d85c2ae9-62ab-4f2f-886b-747dc175f7fb {
+.ele-wrapper-ActivityName {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
