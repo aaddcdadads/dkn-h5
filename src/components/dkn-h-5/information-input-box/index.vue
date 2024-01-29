@@ -86,7 +86,6 @@ export default {
   display: flex;
   align-items: center;
   height: 45px;
-  border-radius: 5px;
   background-color: #fff;
 }
 
