@@ -664,6 +664,9 @@ export default {
 
 .ele-wrapper-c2db3fcd-05d0-472b-8e18-163c243cc425 {
   width: 100%;
+  /deep/.hm-bg-card {
+    border-radius: 12px;
+  }
   border-radius: 12px;
 }
 
