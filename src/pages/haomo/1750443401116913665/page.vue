@@ -91,6 +91,11 @@
                           :disabled="true"
                           class="ele-4d559557-0403-4847-8886-a66b609a45ba"
                         >
+                          <view
+                            class="ele-wrapper ele-wrapper-20f021de-da22-4f3f-a799-b6459b5cc20f"
+                          >
+                            <hm-uview-text> </hm-uview-text>
+                          </view>
                         </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
@@ -433,7 +438,7 @@ export default {
 }
 
 .ele-wrapper-4d559557-0403-4847-8886-a66b609a45ba {
-  width: 100%;
+  width: 70%;
   height: 45px;
   /deep/.u-label-postion-left {
     position: absolute;
