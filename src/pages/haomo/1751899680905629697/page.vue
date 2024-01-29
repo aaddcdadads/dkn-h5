@@ -18,6 +18,7 @@
             <hm-uview-popup
               :show="true"
               :mode="'bottom'"
+              height="400px"
               :mask-close-able="false"
               border-radius="8px"
               :closeable="false"
@@ -204,5 +205,7 @@ export default {
 .ele-wrapper-ba846aea-fdb1-41b9-828d-bfa69c395b94 {
   width: calc(100% - 24px);
   margin-left: 24rpx;
+  position: absolute;
+  bottom: 20%;
 }
 </style>
