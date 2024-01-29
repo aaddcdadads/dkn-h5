@@ -89,20 +89,10 @@
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-a89083fd-72bd-468d-a1c4-41e4b0087eb0"
+                        class="ele-wrapper ele-wrapper-4fcfeacf-caaa-4675-94b7-297827308bfc"
                       >
-                        <hm-uview-field
-                          value=""
-                          label=""
-                          placeholder="姓名/昵称"
-                          label-width="0"
-                          maxlength="250"
-                          icon=""
-                          right-icon=""
-                          :focus="true"
-                          class="ele-a89083fd-72bd-468d-a1c4-41e4b0087eb0"
-                        >
-                        </hm-uview-field>
+                        <information-input-box :left-src="[]" value="">
+                        </information-input-box>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -424,6 +414,7 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
@@ -432,6 +423,7 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewText,
+    InformationInputBox,
     HmUviewField,
     HmUviewButton,
   },
@@ -443,7 +435,8 @@ export default {
         text: "核销",
         customStyle: {},
       },
-      "a89083fd-72bd-468d-a1c4-41e4b0087eb0": {
+      "4fcfeacf-caaa-4675-94b7-297827308bfc": {
+        leftSrc: [],
         value: "",
       },
       "f11d6d7f-84b5-44b9-a789-6438bce8600b": {
@@ -527,20 +520,6 @@ export default {
   padding: 13px 5px;
   vertical-align: top;
   margin-left: 10px;
-}
-
-.ele-wrapper-a89083fd-72bd-468d-a1c4-41e4b0087eb0 {
-  width: 65%;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-    background: rgb(240, 240, 240);
-  }
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
