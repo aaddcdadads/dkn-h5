@@ -562,6 +562,17 @@
                         >
                         </hm-uview-text>
                       </view>
+                      <view class="ele-wrapper ele-wrapper-phoneBox">
+                        <information-input-box
+                          ref="phoneBox"
+                          :left-src="phoneBox.leftSrc"
+                          v-model:value="phoneBox.value"
+                          right-src=""
+                          placeholder=" 请填写报名手机号码"
+                          class="ele-phoneBox"
+                        >
+                        </information-input-box>
+                      </view>
                       <view class="ele-wrapper ele-wrapper-viewInput">
                         <information-input-box
                           ref="viewInput"
@@ -681,6 +692,10 @@ export default {
       },
       viewPopup: {
         show: true,
+      },
+      phoneBox: {
+        leftSrc: [],
+        value: "",
       },
       viewInput: {
         leftSrc: [],
@@ -958,13 +973,39 @@ export default {
 
 .ele-wrapper-ea66b462-b5ce-4b41-8870-bb482768fef8 {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 24rpx;
 }
 
 .ele-wrapper-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f {
   width: 100%;
   text-align: center;
   font-weight: bolder;
+}
+
+.ele-wrapper-phoneBox {
+  width: 80%;
+  height: 72rpx;
+  /deep/.image_box {
+    display: none;
+  }
+  /deep/.input-placeholder {
+    font-size: 12px !important;
+    color: #d6d6d6 !important;
+    margin-left: 4px !important;
+  }
+  /deep/.gcolor {
+    font-size: 12px !important;
+  }
+  /deep/.color {
+    font-size: 12px !important;
+  }
+  /deep/.input {
+    border-color: #d6d6d6 !important;
+  }
+  /deep/.ele-phoneBox {
+    height: 72rpx;
+  }
+  margin-top: 24rpx;
 }
 
 .ele-wrapper-viewInput {
@@ -990,6 +1031,7 @@ export default {
   /deep/.ele-viewInput {
     height: 72rpx;
   }
+  margin-top: 24rpx;
 }
 
 .ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611 {
