@@ -79,7 +79,11 @@
                       <view
                         class="ele-wrapper ele-wrapper-2bc880af-61aa-4911-b1ac-eb457d6a075a"
                       >
-                        <hm-uview-text text="项目名称" font-size="13px">
+                        <hm-uview-text
+                          text="项目名称"
+                          font-size="13px"
+                          class="ele-2bc880af-61aa-4911-b1ac-eb457d6a075a"
+                        >
                         </hm-uview-text>
                       </view>
                       <view
@@ -436,6 +440,10 @@ export default {
   display: flex;
   align-items: center;
   margin-top: -5px;
+}
+
+.ele-wrapper-2bc880af-61aa-4911-b1ac-eb457d6a075a {
+  vertical-align: top;
 }
 
 .ele-wrapper-4d559557-0403-4847-8886-a66b609a45ba {
