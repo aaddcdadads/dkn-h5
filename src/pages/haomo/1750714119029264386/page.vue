@@ -561,15 +561,14 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e"
-                      >
+                      <view class="ele-wrapper ele-wrapper-viewInput">
                         <information-input-box
-                          :left-src="[]"
-                          value=""
+                          ref="viewInput"
+                          :left-src="viewInput.leftSrc"
+                          v-model:value="viewInput.value"
                           :show-code="true"
                           placeholder=" 请填写手机验证码"
-                          class="ele-dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e"
+                          class="ele-viewInput"
                         >
                         </information-input-box>
                       </view>
@@ -682,7 +681,7 @@ export default {
       viewPopup: {
         show: true,
       },
-      "dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e": {
+      viewInput: {
         leftSrc: [],
         value: "",
       },
@@ -967,7 +966,7 @@ export default {
   font-weight: bolder;
 }
 
-.ele-wrapper-dbc0c6e3-de28-47ad-aabf-d37b2d27ab8e {
+.ele-wrapper-viewInput {
   width: 100%;
   height: 72rpx;
   /deep/.image_box {
@@ -986,6 +985,9 @@ export default {
   }
   /deep/.input {
     border-color: #d6d6d6 !important;
+  }
+  /deep/.viewInput {
+    height: 72rpx;
   }
 }
 
