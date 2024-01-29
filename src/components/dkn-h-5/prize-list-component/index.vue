@@ -158,7 +158,7 @@ export default {
     font-size: 28rpx;
     font-family: Microsoft YaHei;
     font-weight: 400;
-    color: #ffffff;
+    color: #000000;
   }
 }
 </style>
