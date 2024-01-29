@@ -77,6 +77,11 @@
                     </hm-check-list>
                   </view>
                   <view
+                    class="ele-wrapper ele-wrapper-5ceb1472-5f57-4275-9fb8-0975865d8443"
+                  >
+                    <hm-uview-bg-card> </hm-uview-bg-card>
+                  </view>
+                  <view
                     class="ele-wrapper ele-wrapper-ba846aea-fdb1-41b9-828d-bfa69c395b94"
                   >
                     <hm-uview-button
