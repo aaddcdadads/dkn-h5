@@ -536,7 +536,7 @@ export default {
     display: none;
   }
   /deep/.uni-input {
-    font-size: 13px;
+    font-size: 13px !important;
   }
 }
 
