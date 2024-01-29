@@ -330,10 +330,12 @@ export default {
 
 .ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5 {
   width: 100%;
-  margin-top: 10px;
   display: flex;
   align-items: center;
   margin-top: -5px;
+  /deep/.hm-bg-card {
+    margin-top: 10px;
+  }
 }
 
 .ele-wrapper-c1321652-9bb5-410d-a15c-df20fe88d984 {
