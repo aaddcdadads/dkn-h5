@@ -986,7 +986,7 @@ export default {
   /deep/.input {
     border-color: #d6d6d6 !important;
   }
-  /deep/.viewInput {
+  /deep/.ele-viewInput {
     height: 72rpx;
   }
 }
