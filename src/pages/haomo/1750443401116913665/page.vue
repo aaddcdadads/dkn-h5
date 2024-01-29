@@ -122,7 +122,13 @@
                       <view
                         class="ele-wrapper ele-wrapper-a6b059cb-691d-4093-bede-453d1eaf7370"
                       >
-                        <hm-uview-text> </hm-uview-text>
+                        <hm-uview-text
+                          text="项目名称:"
+                          font-size="13px"
+                          padding="0"
+                          class="ele-a6b059cb-691d-4093-bede-453d1eaf7370"
+                        >
+                        </hm-uview-text>
                       </view>
                       <view
                         class="ele-wrapper ele-wrapper-f11d6d7f-84b5-44b9-a789-6438bce8600b"
@@ -156,7 +162,13 @@
                       <view
                         class="ele-wrapper ele-wrapper-df0e3be8-5694-4de1-89ab-efc9e61b2384"
                       >
-                        <hm-uview-text> </hm-uview-text>
+                        <hm-uview-text
+                          text="项目名称:"
+                          font-size="13px"
+                          padding="0"
+                          class="ele-df0e3be8-5694-4de1-89ab-efc9e61b2384"
+                        >
+                        </hm-uview-text>
                       </view>
                       <view
                         class="ele-wrapper ele-wrapper-3f7c3c3c-cb94-49b0-b764-9fb7a9b6a85b"
@@ -190,7 +202,13 @@
                       <view
                         class="ele-wrapper ele-wrapper-da0d9595-55d9-48cf-b00a-082df56d4a58"
                       >
-                        <hm-uview-text> </hm-uview-text>
+                        <hm-uview-text
+                          text="项目名称:"
+                          font-size="13px"
+                          padding="0"
+                          class="ele-da0d9595-55d9-48cf-b00a-082df56d4a58"
+                        >
+                        </hm-uview-text>
                       </view>
                       <view
                         class="ele-wrapper ele-wrapper-79f1460e-92e6-4db1-b971-5f5f6d6a652e"
@@ -224,7 +242,13 @@
                       <view
                         class="ele-wrapper ele-wrapper-1c6f3120-a3af-4da2-91cf-2a913f75e70f"
                       >
-                        <hm-uview-text> </hm-uview-text>
+                        <hm-uview-text
+                          text="项目名称:"
+                          font-size="13px"
+                          padding="0"
+                          class="ele-1c6f3120-a3af-4da2-91cf-2a913f75e70f"
+                        >
+                        </hm-uview-text>
                       </view>
                       <view
                         class="ele-wrapper ele-wrapper-24f297e2-0cec-4a99-b8b2-2b7bcd171554"
@@ -258,7 +282,13 @@
                       <view
                         class="ele-wrapper ele-wrapper-d300e2f4-3555-45fa-a67c-be25208705a0"
                       >
-                        <hm-uview-text> </hm-uview-text>
+                        <hm-uview-text
+                          text="项目名称:"
+                          font-size="13px"
+                          padding="0"
+                          class="ele-d300e2f4-3555-45fa-a67c-be25208705a0"
+                        >
+                        </hm-uview-text>
                       </view>
                       <view
                         class="ele-wrapper ele-wrapper-94b759f6-ea20-4357-a76c-cc9c37138150"
@@ -292,7 +322,13 @@
                       <view
                         class="ele-wrapper ele-wrapper-3ea4931b-f9be-449b-adfa-85aec01fa006"
                       >
-                        <hm-uview-text> </hm-uview-text>
+                        <hm-uview-text
+                          text="项目名称:"
+                          font-size="13px"
+                          padding="0"
+                          class="ele-3ea4931b-f9be-449b-adfa-85aec01fa006"
+                        >
+                        </hm-uview-text>
                       </view>
                       <view
                         class="ele-wrapper ele-wrapper-e2431593-6b95-40d2-9dd5-6944d73488d4"
@@ -326,7 +362,13 @@
                       <view
                         class="ele-wrapper ele-wrapper-fba91c42-55e1-404b-97e8-0d6ca8b53ff5"
                       >
-                        <hm-uview-text> </hm-uview-text>
+                        <hm-uview-text
+                          text="项目名称:"
+                          font-size="13px"
+                          padding="0"
+                          class="ele-fba91c42-55e1-404b-97e8-0d6ca8b53ff5"
+                        >
+                        </hm-uview-text>
                       </view>
                       <view
                         class="ele-wrapper ele-wrapper-2a38d196-0649-4330-bf84-e8a51ec63be9"
@@ -509,6 +551,12 @@ export default {
   margin-top: -5px;
 }
 
+.ele-wrapper-a6b059cb-691d-4093-bede-453d1eaf7370 {
+  padding: 13px 5px;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
 .ele-wrapper-f11d6d7f-84b5-44b9-a789-6438bce8600b {
   width: 65%;
   /deep/.u-label-postion-left {
@@ -528,6 +576,12 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
+}
+
+.ele-wrapper-df0e3be8-5694-4de1-89ab-efc9e61b2384 {
+  padding: 13px 5px;
+  vertical-align: top;
+  margin-left: 10px;
 }
 
 .ele-wrapper-3f7c3c3c-cb94-49b0-b764-9fb7a9b6a85b {
@@ -551,6 +605,12 @@ export default {
   margin: 15px 0px;
 }
 
+.ele-wrapper-da0d9595-55d9-48cf-b00a-082df56d4a58 {
+  padding: 13px 5px;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
 .ele-wrapper-79f1460e-92e6-4db1-b971-5f5f6d6a652e {
   width: 65%;
   /deep/.u-label-postion-left {
@@ -570,6 +630,12 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
+}
+
+.ele-wrapper-1c6f3120-a3af-4da2-91cf-2a913f75e70f {
+  padding: 13px 5px;
+  vertical-align: top;
+  margin-left: 10px;
 }
 
 .ele-wrapper-24f297e2-0cec-4a99-b8b2-2b7bcd171554 {
@@ -593,6 +659,12 @@ export default {
   margin: 15px 0px;
 }
 
+.ele-wrapper-d300e2f4-3555-45fa-a67c-be25208705a0 {
+  padding: 13px 5px;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
 .ele-wrapper-94b759f6-ea20-4357-a76c-cc9c37138150 {
   width: 65%;
   /deep/.u-label-postion-left {
@@ -614,6 +686,12 @@ export default {
   margin: 15px 0px;
 }
 
+.ele-wrapper-3ea4931b-f9be-449b-adfa-85aec01fa006 {
+  padding: 13px 5px;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
 .ele-wrapper-e2431593-6b95-40d2-9dd5-6944d73488d4 {
   width: 65%;
   /deep/.u-label-postion-left {
@@ -633,6 +711,12 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
+}
+
+.ele-wrapper-fba91c42-55e1-404b-97e8-0d6ca8b53ff5 {
+  padding: 13px 5px;
+  vertical-align: top;
+  margin-left: 10px;
 }
 
 .ele-wrapper-2a38d196-0649-4330-bf84-e8a51ec63be9 {
