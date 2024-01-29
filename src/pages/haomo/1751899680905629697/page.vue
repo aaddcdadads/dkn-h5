@@ -28,7 +28,7 @@
                 <hm-uview-bg-card
                   ref="outsideBg"
                   width="100%"
-                  height="100%"
+                  height="400px"
                   border-radius="0"
                   padding="0"
                   box-shadow-color="#00000000"
