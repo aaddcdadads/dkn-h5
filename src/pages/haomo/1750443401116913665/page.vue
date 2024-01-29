@@ -171,6 +171,7 @@
                           ref="HmUviewField3"
                           v-model:value="HmUviewField3.value"
                           label=""
+                          placeholder="报名手机号码"
                           label-width="0"
                           icon=""
                           right-icon=""
