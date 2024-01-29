@@ -145,7 +145,7 @@
                       >
                         <hm-uview-text
                           text="报名倒计时"
-                          font-size="12px"
+                          font-size="14px"
                           color="#666666"
                           class="ele-6d62d75a-e400-40e6-a49e-015bd0115567"
                         >
