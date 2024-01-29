@@ -84,27 +84,9 @@
                           text="项目名称"
                           font-size="13px"
                           padding=""
-                          :text-style="{}"
                           class="ele-2bc880af-61aa-4911-b1ac-eb457d6a075a"
                         >
                         </hm-uview-text>
-                      </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-4d559557-0403-4847-8886-a66b609a45ba"
-                      >
-                        <hm-uview-field
-                          value=""
-                          label=""
-                          placeholder="报名手机号码"
-                          label-width="0"
-                          maxlength="200"
-                          icon=""
-                          right-icon=""
-                          :focus="true"
-                          :disabled="true"
-                          class="ele-4d559557-0403-4847-8886-a66b609a45ba"
-                        >
-                        </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -369,9 +351,6 @@ export default {
         text: "核销",
         customStyle: {},
       },
-      "4d559557-0403-4847-8886-a66b609a45ba": {
-        value: "",
-      },
       "8d972455-e530-4479-8ff5-8e619abb62a6": {
         value: "",
       },
@@ -452,36 +431,6 @@ export default {
   padding: 13px 5px;
   /deep0/.hm-bg-text {
     padding: 0px;
-  }
-}
-
-.ele-wrapper-4d559557-0403-4847-8886-a66b609a45ba {
-  width: 70%;
-  height: 45px;
-  /deep/.u-label-postion-left {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /deep/.u-border-bottom {
-    border-radius: 5px;
-    height: 45px;
-    background: rgb(240, 240, 240);
-  }
-  /deep/.uni-input-input {
-    font-size: 13px;
-  }
-  /deep/.u-label-text {
-    font-size: 13px;
-  }
-  /deep/.u-label-text > span {
-    width: 100%;
-  }
-  /deep/.u-label {
-    max-width: 70px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
   }
 }
 
