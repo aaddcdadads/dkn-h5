@@ -44,7 +44,6 @@
                       font-size="12px"
                       color="#303133"
                       padding="8"
-                      :text-style="{}"
                       class="ele-bf22f4a1-bf87-45db-bf48-3cb458614952"
                     >
                     </hm-uview-text>
@@ -119,6 +118,7 @@
                           maxlength="250"
                           icon=""
                           right-icon=""
+                          :focus="true"
                           :disabled="true"
                           class="ele-8d972455-e530-4479-8ff5-8e619abb62a6"
                         >
@@ -309,7 +309,6 @@
                   text=" 返回活动详情页"
                   font-size="1em"
                   color="#409EFF"
-                  :text-style="{}"
                   @onClick="onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick"
                   class="ele-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
                 >
