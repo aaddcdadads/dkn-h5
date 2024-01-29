@@ -886,12 +886,13 @@ export default {
 
 .ele-wrapper-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f {
   height: 80rpx;
-  margin-left: 24rpx;
-  width: calc(100% - 48rpx);
+  margin-left: 60rpx;
+  width: calc(100% - 120rpx);
   /deep/.u-size-default {
     height: 80rpx !important;
   }
   /deep/.u-btn--success {
+    border-radius: 80px;
     background-color: #e18eb3 !important;
     border-color: #e18eb3 !important;
   }
