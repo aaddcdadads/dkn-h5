@@ -88,6 +88,7 @@
                           maxlength="200"
                           icon=""
                           right-icon=""
+                          :disabled="true"
                           class="ele-4d559557-0403-4847-8886-a66b609a45ba"
                         >
                         </hm-uview-field>
@@ -118,6 +119,7 @@
                           maxlength="250"
                           icon=""
                           right-icon=""
+                          :disabled="true"
                           class="ele-8d972455-e530-4479-8ff5-8e619abb62a6"
                         >
                         </hm-uview-field>
@@ -146,6 +148,7 @@
                           maxlength="200"
                           icon=""
                           right-icon=""
+                          :disabled="true"
                           class="ele-c5bfde68-4a10-445e-b173-b62b3921231b"
                         >
                         </hm-uview-field>
@@ -174,6 +177,7 @@
                           maxlength="200"
                           icon=""
                           right-icon=""
+                          :disabled="true"
                           class="ele-e3774afb-14a0-4b23-adda-2624414eb025"
                         >
                         </hm-uview-field>
@@ -202,6 +206,7 @@
                           maxlength="200"
                           icon=""
                           right-icon=""
+                          :disabled="true"
                           class="ele-9a4984ec-97fb-465a-9b6b-8c645b5eab71"
                         >
                         </hm-uview-field>
@@ -230,6 +235,7 @@
                           maxlength="200"
                           icon=""
                           right-icon=""
+                          :disabled="true"
                           class="ele-77bae9a8-6c80-4c4a-94fd-75350b1d7fb3"
                         >
                         </hm-uview-field>
@@ -258,6 +264,7 @@
                           maxlength="200"
                           icon=""
                           right-icon=""
+                          :disabled="true"
                           class="ele-f2093ff0-31f8-4c8e-8715-756493dc516a"
                         >
                         </hm-uview-field>
@@ -286,6 +293,7 @@
                           maxlength="200"
                           icon=""
                           right-icon=""
+                          :disabled="true"
                           class="ele-825c7b35-6136-42aa-8176-48014a210261"
                         >
                         </hm-uview-field>
