@@ -586,6 +586,35 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-c43ff619-898c-4446-a22f-6dc191e8ac6e"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius="0"
+                      :text-align="'center'"
+                      padding="0"
+                      box-shadow-color="#00000000"
+                      background-color="#FFE8EC00"
+                      class="ele-c43ff619-898c-4446-a22f-6dc191e8ac6e"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-93d185a1-2026-46e4-a382-c00e8048b0d3"
+                      >
+                        <hm-uview-button
+                          :type="'info'"
+                          class="ele-93d185a1-2026-46e4-a382-c00e8048b0d3"
+                        >
+                        </hm-uview-button>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-0c65cb7b-74a2-4e1f-ba24-0a344a397980"
+                      >
+                        <hm-uview-button> </hm-uview-button>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
                 </hm-uview-popup>
               </view>
             </hm-uview-bg-card>
@@ -665,8 +694,8 @@ import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index
 import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
-import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
+import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
 
 export default {
   name: "ActivityRegistrationPage",
@@ -680,8 +709,8 @@ export default {
     HmCellList,
     HmUviewPopup,
     InformationInputBox,
-    HmUviewRadio,
     HmUviewButton,
+    HmUviewRadio,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -1037,6 +1066,15 @@ export default {
     height: 72rpx;
   }
   margin-top: 24rpx;
+}
+
+.ele-wrapper-c43ff619-898c-4446-a22f-6dc191e8ac6e {
+  width: 100%;
+  margin-top: 24rpx;
+}
+
+.ele-wrapper-93d185a1-2026-46e4-a382-c00e8048b0d3 {
+  width: 50%;
 }
 
 .ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611 {
