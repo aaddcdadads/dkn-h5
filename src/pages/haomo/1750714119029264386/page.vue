@@ -533,7 +533,7 @@
                 <hm-uview-popup
                   ref="viewPopup"
                   v-model:show="viewPopup.show"
-                  width="80%"
+                  width="60%"
                   height="200px"
                   border-radius="8px"
                   :closeable="false"
@@ -546,7 +546,8 @@
                       width="100%"
                       height=""
                       border-radius="0"
-                      padding="12"
+                      :text-align="'center'"
+                      padding="0"
                       box-shadow-color="#00000000"
                       background-color="#FFE8EC00"
                       class="ele-ea66b462-b5ce-4b41-8870-bb482768fef8"
@@ -967,7 +968,7 @@ export default {
 }
 
 .ele-wrapper-viewInput {
-  width: 100%;
+  width: 80%;
   height: 72rpx;
   /deep/.image_box {
     display: none;
