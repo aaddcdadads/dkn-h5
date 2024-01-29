@@ -89,16 +89,16 @@
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-4fcfeacf-caaa-4675-94b7-297827308bfc"
+                        class="ele-wrapper ele-wrapper-ded67b10-93fd-4c94-ada8-c1e9b48bf4d4"
                       >
-                        <information-input-box
-                          :left-src="[]"
+                        <hm-uview-field
                           value=""
-                          right-src=""
-                          placeholder="报名项目名称 x 数量"
-                          class="ele-4fcfeacf-caaa-4675-94b7-297827308bfc"
+                          label=""
+                          label-width="0"
+                          icon=""
+                          right-icon=""
                         >
-                        </information-input-box>
+                        </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -127,16 +127,9 @@
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-95a101ca-3e04-441c-b7ea-920e2acd6fa9"
+                        class="ele-wrapper ele-wrapper-ac724210-6593-4d1c-bc1c-9885bad6b588"
                       >
-                        <information-input-box
-                          :left-src="[]"
-                          value=""
-                          right-src=""
-                          placeholder="姓名/昵称"
-                          class="ele-95a101ca-3e04-441c-b7ea-920e2acd6fa9"
-                        >
-                        </information-input-box>
+                        <hm-uview-field value=""> </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -163,16 +156,9 @@
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-1c73bc0a-98ce-498e-9cbc-3246e577800c"
+                        class="ele-wrapper ele-wrapper-e5983b33-d35e-4f1d-976e-bdb3eba45f09"
                       >
-                        <information-input-box
-                          :left-src="[]"
-                          value=""
-                          right-src=""
-                          placeholder="报名手机号码"
-                          class="ele-1c73bc0a-98ce-498e-9cbc-3246e577800c"
-                        >
-                        </information-input-box>
+                        <hm-uview-field value=""> </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -199,16 +185,9 @@
                         </hm-uview-text>
                       </view>
                       <view
-                        class="ele-wrapper ele-wrapper-c5fbc40a-cb73-46bd-87cb-b8d61d44defd"
+                        class="ele-wrapper ele-wrapper-31aa3781-c4eb-43bd-a2fd-e2b37a76405f"
                       >
-                        <information-input-box
-                          :left-src="[]"
-                          value=""
-                          right-src=""
-                          placeholder="区域/门店名称"
-                          class="ele-c5fbc40a-cb73-46bd-87cb-b8d61d44defd"
-                        >
-                        </information-input-box>
+                        <hm-uview-field value=""> </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -392,6 +371,7 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
@@ -400,6 +380,7 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewText,
+    HmUviewField,
     InformationInputBox,
     HmUviewButton,
   },
@@ -411,20 +392,16 @@ export default {
         text: "核销",
         customStyle: {},
       },
-      "4fcfeacf-caaa-4675-94b7-297827308bfc": {
-        leftSrc: [],
+      "ded67b10-93fd-4c94-ada8-c1e9b48bf4d4": {
         value: "",
       },
-      "95a101ca-3e04-441c-b7ea-920e2acd6fa9": {
-        leftSrc: [],
+      "ac724210-6593-4d1c-bc1c-9885bad6b588": {
         value: "",
       },
-      "1c73bc0a-98ce-498e-9cbc-3246e577800c": {
-        leftSrc: [],
+      "e5983b33-d35e-4f1d-976e-bdb3eba45f09": {
         value: "",
       },
-      "c5fbc40a-cb73-46bd-87cb-b8d61d44defd": {
-        leftSrc: [],
+      "31aa3781-c4eb-43bd-a2fd-e2b37a76405f": {
         value: "",
       },
       "b7e0ad9d-47f6-4f70-8ab6-1f6e8914428e": {
@@ -506,22 +483,6 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-4fcfeacf-caaa-4675-94b7-297827308bfc {
-  /deep/.data_input {
-    padding: 0px 10px;
-  }
-  /deep/.image_box {
-    display: none;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px !important;
-  }
-  /deep/.input {
-    background: rgb(240, 240, 240);
-  }
-  margin-right: 5%;
-}
-
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
   width: 100%;
   margin: 15px 0px;
@@ -534,21 +495,6 @@ export default {
   padding: 13px 7px;
   vertical-align: top;
   margin-left: 10px;
-}
-
-.ele-wrapper-95a101ca-3e04-441c-b7ea-920e2acd6fa9 {
-  /deep/.data_input {
-    padding: 0px 10px;
-  }
-  /deep/.image_box {
-    display: none;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px !important;
-  }
-  /deep/.input {
-    background: rgb(240, 240, 240);
-  }
 }
 
 .ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9 {
@@ -564,21 +510,6 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-1c73bc0a-98ce-498e-9cbc-3246e577800c {
-  /deep/.data_input {
-    padding: 0px 10px;
-  }
-  /deep/.image_box {
-    display: none;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px !important;
-  }
-  /deep/.input {
-    background: rgb(240, 240, 240);
-  }
-}
-
 .ele-wrapper-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0 {
   width: 100%;
   display: flex;
@@ -590,21 +521,6 @@ export default {
   padding: 13px 7px;
   vertical-align: top;
   margin-left: 10px;
-}
-
-.ele-wrapper-c5fbc40a-cb73-46bd-87cb-b8d61d44defd {
-  /deep/.data_input {
-    padding: 0px 10px;
-  }
-  /deep/.image_box {
-    display: none;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px !important;
-  }
-  /deep/.input {
-    background: rgb(240, 240, 240);
-  }
 }
 
 .ele-wrapper-ec8bdb37-8258-4daf-b83b-30ebc2a70f11 {

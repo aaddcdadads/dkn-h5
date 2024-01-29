@@ -221,8 +221,10 @@ export default {
     color: #ffffff !important;
     margin: 0px 2px !important;
   }
-  /dee/.check-list__item[data-v-3dfe1a7e]:last-child {
-    border-bottom: 1px solid #f5f5f5 !important;
+  /dee/.check-list__item {
+    :last-child {
+      border-bottom: 1px solid #f5f5f5 !important;
+    }
   }
   height: 300px;
   overflow: scroll;
