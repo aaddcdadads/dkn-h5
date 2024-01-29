@@ -378,6 +378,11 @@ export default {
 
 .ele-wrapper-a89083fd-72bd-468d-a1c4-41e4b0087eb0 {
   width: 65%;
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   /deep/.u-border-bottom {
     border-radius: 5px;
     height: 45px;
