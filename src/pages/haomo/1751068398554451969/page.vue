@@ -442,7 +442,7 @@ export default {
   align-items: center;
   margin: 15px 0px;
   /deep/.hm-bg-card {
-    margin: 15px 0px;
+    margin: 15px 0px 10px 0px;
   }
 }
 
