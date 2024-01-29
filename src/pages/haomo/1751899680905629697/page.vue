@@ -72,6 +72,11 @@
                     class="ele-wrapper ele-wrapper-a614f90f-fc08-4439-8a10-27bf935a054a"
                   >
                     <hm-check-list
+                      :data="[
+                        { key: 1, name: '活动名称', checked: true },
+                        { key: 2, name: '活动名称', checked: false },
+                        { key: 3, name: '活动名称', checked: false },
+                      ]"
                       class="ele-a614f90f-fc08-4439-8a10-27bf935a054a"
                     >
                     </hm-check-list>

@@ -535,7 +535,7 @@ export default {
   /deep/.image_box {
     display: none;
   }
-  /deep/.uni-input {
+  /deep/.input-placeholder {
     font-size: 16px !important;
   }
 }
