@@ -77,17 +77,6 @@
                       box-shadow-blur=""
                       class="ele-3594e500-632d-42e8-b3b9-d485a0f784a5"
                     >
-                      <view
-                        class="ele-wrapper ele-wrapper-2bc880af-61aa-4911-b1ac-eb457d6a075a"
-                      >
-                        <hm-uview-text
-                          text="项目名称"
-                          font-size="13px"
-                          padding=""
-                          class="ele-2bc880af-61aa-4911-b1ac-eb457d6a075a"
-                        >
-                        </hm-uview-text>
-                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -423,15 +412,6 @@ export default {
   display: flex;
   align-items: center;
   margin-top: -5px;
-}
-
-.ele-wrapper-2bc880af-61aa-4911-b1ac-eb457d6a075a {
-  height: 45px;
-  vertical-align: top;
-  padding: 13px 5px;
-  /deep0/.hm-bg-text {
-    padding: 0px;
-  }
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
