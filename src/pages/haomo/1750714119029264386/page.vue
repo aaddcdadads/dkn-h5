@@ -414,7 +414,7 @@
                     class="ele-wrapper ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2"
                   >
                     <hm-uview-text
-                      text="活动玩法"
+                      text="活动规则"
                       font-size="16px"
                       class="ele-dc91ed40-34d2-458d-a7fb-c67671b736c2"
                     >
@@ -1057,7 +1057,7 @@ export default {
     font-size: 12px !important;
   }
   /deep/.input {
-    border-color: #d6d6d6 !important;
+    border-color: #f8f8f8 !important;
   }
   /deep/.ele-phoneBox {
     height: 72rpx;
@@ -1084,7 +1084,7 @@ export default {
     font-size: 12px !important;
   }
   /deep/.input {
-    border-color: #d6d6d6 !important;
+    border-color: #f8f8f8 !important;
   }
   /deep/.ele-viewInput {
     height: 72rpx;
@@ -1104,7 +1104,7 @@ export default {
     color: #409eff !important;
     overflow: visible !important;
     border-radius: 0px !important;
-    border-top: 1px solid #d6d6d6 !important;
+    border-top: 1px solid #f8f8f8 !important;
   }
 }
 
@@ -1115,8 +1115,8 @@ export default {
     color: #409eff !important;
     overflow: visible !important;
     border-radius: 0px !important;
-    border-top: 1px solid #d6d6d6 !important;
-    border-left: 1px solid #d6d6d6 !important;
+    border-top: 1px solid #f8f8f8 !important;
+    border-left: 1px solid #f8f8f8 !important;
   }
 }
 
