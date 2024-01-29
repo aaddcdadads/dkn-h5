@@ -161,51 +161,9 @@
                       height=""
                       border-radius="12"
                       padding="12"
-                      background-color="#F797BD"
+                      background-color="#FEEFF7"
                       class="ele-c2db3fcd-05d0-472b-8e18-163c243cc425"
                     >
-                      <view
-                        class="ele-wrapper ele-wrapper-6ba2b397-6caf-44b2-8d16-4ad0c0eba375"
-                      >
-                        <hm-uview-bg-card
-                          width="100%"
-                          height=""
-                          border-radius="0"
-                          :text-align="'right'"
-                          padding="0"
-                          box-shadow-v-shadow="0"
-                          box-shadow-blur="0"
-                          box-shadow-color="#00000000"
-                          background-color="#FFFFFF00"
-                          class="ele-6ba2b397-6caf-44b2-8d16-4ad0c0eba375"
-                        >
-                          <view
-                            class="ele-wrapper ele-wrapper-a45a5040-24f2-43f3-8f5a-6b9d497eb002"
-                          >
-                            <hm-uview-text
-                              text="报名仅剩"
-                              font-size="12px"
-                              color="#FFFFFF99"
-                            >
-                            </hm-uview-text>
-                          </view>
-                          <view class="ele-wrapper ele-wrapper-closeTime">
-                            <uni-countdown
-                              ref="closeTime"
-                              background-color="#00000000"
-                              color="#FFFFFF"
-                              :font-size="11"
-                              splitor-color="#FFFFFF99"
-                              :day="19"
-                              :hour="15"
-                              :minute="13"
-                              :second="17"
-                              class="ele-closeTime"
-                            >
-                            </uni-countdown>
-                          </view>
-                        </hm-uview-bg-card>
-                      </view>
                       <view
                         class="ele-wrapper ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39"
                       >
@@ -257,16 +215,6 @@
                             </hm-uview-icon>
                           </view>
                         </hm-uview-bg-card>
-                      </view>
-                      <view class="ele-wrapper ele-wrapper-nameText">
-                        <hm-uview-text
-                          ref="nameText"
-                          :text="nameText.text"
-                          :color="nameText.color"
-                          :text-align="nameText.textAlign"
-                          class="ele-nameText"
-                        >
-                        </hm-uview-text>
                       </view>
                       <view
                         class="ele-wrapper ele-wrapper-db5afb3e-f8de-4171-94e9-286964bcb67c"
@@ -625,11 +573,6 @@ export default {
       regularPopup: {
         show: false,
       },
-      nameText: {
-        text: "派对甜心｜HelloKitty生日主题线上跑",
-        color: "#FFFFFF",
-        textAlign: "left",
-      },
     };
   },
   watch: {},
@@ -721,23 +664,11 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-6ba2b397-6caf-44b2-8d16-4ad0c0eba375 {
-  width: 100%;
-}
-
-.ele-wrapper-closeTime {
-  /deep/.uni-countdown__splitor {
-    font-size: 12px !important;
-  }
-  /deep/.uni-countdown__number {
-    background: hsla(0, 0%, 100%, 0.15) !important;
-  }
-}
-
 .ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39 {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 12015px;
   margin-top: 8rpx;
+  display: none;
 }
 
 .ele-wrapper-4f1cb12e-36cb-4378-b823-05b5d45354ab {
@@ -761,15 +692,10 @@ export default {
   margin: 8px 8px 8px 4px;
 }
 
-.ele-wrapper-nameText {
-  width: 100%;
-  font-weight: 600;
-  font-size: 0.512820512820513rem;
-}
-
 .ele-wrapper-db5afb3e-f8de-4171-94e9-286964bcb67c {
   width: 100%;
   border-bottom: 0.012820512820513rem solid hsla(0, 0%, 100%, 0.15);
+  display: none;
 }
 
 .ele-wrapper-f0bdc2b0-8112-4546-8c75-84df79598453 {
