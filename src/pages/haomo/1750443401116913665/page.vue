@@ -486,6 +486,7 @@ export default {
 .ele-wrapper-HmUviewField1 {
   width: 65%;
   height: 45px;
+  display: flex;
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;

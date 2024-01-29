@@ -1146,6 +1146,7 @@ export default {
   text-align: left;
   line-height: 20px;
   padding: 0 10px;
+  display: flex;
 }
 
 .ele-wrapper-74c8c2c3-d387-4029-8b68-8275204c2ed5 {
