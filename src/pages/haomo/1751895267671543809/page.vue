@@ -170,7 +170,11 @@ export default {
   watch: {},
   methods: {
     onCanelButtonClick() {},
-    onSureButtonClick() {},
+    onSureButtonClick() {
+      uni.$u.route(
+        "https://stage.block-design.cn/edit-page/?pageId=1751899680905629697"
+      );
+    },
   },
 };
 </script>
