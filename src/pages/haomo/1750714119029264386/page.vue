@@ -121,7 +121,11 @@
                       <view
                         class="ele-wrapper ele-wrapper-89a1b8fd-c1ac-46be-b13d-592864374f64"
                       >
-                        <hm-uview-text text="迪卡侬春节活动" font-size="14px">
+                        <hm-uview-text
+                          text="迪卡侬春节活动"
+                          font-size="14px"
+                          padding="0"
+                        >
                         </hm-uview-text>
                       </view>
                       <view
