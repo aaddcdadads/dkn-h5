@@ -4,7 +4,6 @@
       <view class="topbox">
         <view><img :src="item.bgUrl" /></view>
         <view :style="{ display: item.display }">
-          <span>{{ item.scoretext }}</span>
         </view>
       </view>
 
@@ -97,6 +96,7 @@ export default {
 <style lang="less" scoped>
 .container {
   background: transparent;
+
   border-radius: 15px;
   position: relative;
 
