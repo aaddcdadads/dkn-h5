@@ -77,6 +77,28 @@
                       box-shadow-blur=""
                       class="ele-3594e500-632d-42e8-b3b9-d485a0f784a5"
                     >
+                      <view
+                        class="ele-wrapper ele-wrapper-716406f0-2fda-4cc8-9dc0-457fbd1bcec2"
+                      >
+                        <hm-uview-text> </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-a89083fd-72bd-468d-a1c4-41e4b0087eb0"
+                      >
+                        <hm-uview-field
+                          value=""
+                          label=""
+                          placeholder="姓名/昵称"
+                          label-width="0"
+                          maxlength="250"
+                          icon=""
+                          right-icon=""
+                          :focus="true"
+                          :disabled="true"
+                          class="ele-a89083fd-72bd-468d-a1c4-41e4b0087eb0"
+                        >
+                        </hm-uview-field>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -340,6 +362,9 @@ export default {
         text: "核销",
         customStyle: {},
       },
+      "a89083fd-72bd-468d-a1c4-41e4b0087eb0": {
+        value: "",
+      },
       "8d972455-e530-4479-8ff5-8e619abb62a6": {
         value: "",
       },
@@ -412,6 +437,39 @@ export default {
   display: flex;
   align-items: center;
   margin-top: -5px;
+}
+
+.ele-wrapper-a89083fd-72bd-468d-a1c4-41e4b0087eb0 {
+  width: 650%;
+  height: 45px;
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  /deep/.u-border-bottom {
+    border-radius: 5px;
+    height: 45px;
+  }
+  /deep/.u-flex-1 {
+    font-size: 13px;
+  }
+  /deep/.u-label-text {
+    font-size: 13px;
+    width: 100%;
+  }
+  /deep/.u-label-text > span {
+    width: 100%;
+  }
+  /deep/.u-label {
+    max-width: 70px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
+  /deep/.uni-input-input {
+    font-size: 13px;
+  }
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
