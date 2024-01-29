@@ -441,6 +441,7 @@ export default {
   display: flex;
   align-items: center;
   margin-top: -5px;
+  margin-bottom: 15px;
 }
 
 .ele-wrapper-716406f0-2fda-4cc8-9dc0-457fbd1bcec2 {
