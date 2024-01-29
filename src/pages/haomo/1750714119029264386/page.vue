@@ -131,7 +131,7 @@
                           background-color="#00000000"
                           color="#FFFFFF"
                           :font-size="11"
-                          splitor-color="#FFFFFF99"
+                          splitor-color="#666666"
                           :day="19"
                           :hour="15"
                           :minute="13"
