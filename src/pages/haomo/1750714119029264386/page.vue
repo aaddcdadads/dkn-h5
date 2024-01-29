@@ -1081,6 +1081,13 @@ export default {
 
 .ele-wrapper-canelButton {
   width: 50%;
+  /deep/.ele-canelButton {
+    background: transparent !important;
+    color: #409eff !important;
+    overflow: visible !important;
+    border-radius: 0px !important;
+    border-top: 1px solid #d6d6d6 !important;
+  }
 }
 
 .ele-wrapper-0c65cb7b-74a2-4e1f-ba24-0a344a397980 {
