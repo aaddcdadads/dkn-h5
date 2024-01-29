@@ -328,6 +328,34 @@
                     </hm-uview-bg-card>
                   </view>
                   <view
+                    class="ele-wrapper ele-wrapper-dacbdcbf-5aa6-416f-a334-d9098c8ccfda"
+                  >
+                    <hm-uview-text
+                      text="活动详情"
+                      font-size="14px"
+                      color="#000000"
+                      bg-color="#FFFFFF00"
+                      class="ele-dacbdcbf-5aa6-416f-a334-d9098c8ccfda"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-0d696b7e-8100-4e0a-a949-9e8788ae1cec"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height="400"
+                      border-radius="12"
+                      padding="0"
+                      box-shadow-v-shadow="0"
+                      box-shadow-blur="0"
+                      box-shadow-color="#00000000"
+                      background-color="#F797BD00"
+                      class="ele-0d696b7e-8100-4e0a-a949-9e8788ae1cec"
+                    >
+                    </hm-uview-bg-card>
+                  </view>
+                  <view
                     class="ele-wrapper ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550"
                   >
                     <hm-uview-bg-card
@@ -508,6 +536,16 @@
           box-shadow-color="#00000000"
           class="ele-2136b833-7f0e-4a8a-a081-36d9e275f611"
         >
+          <view
+            class="ele-wrapper ele-wrapper-82e92618-2ddf-422c-ac8d-ea357c4eb8ce"
+          >
+            <hm-uview-text> </hm-uview-text>
+          </view>
+          <view
+            class="ele-wrapper ele-wrapper-7a55d0c9-95ac-4729-befd-31f60ecf4707"
+          >
+            <hm-uview-text> </hm-uview-text>
+          </view>
           <view
             class="ele-wrapper ele-wrapper-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f"
           >
@@ -710,9 +748,19 @@ export default {
   border-radius: 8px;
 }
 
+.ele-wrapper-dacbdcbf-5aa6-416f-a334-d9098c8ccfda {
+  float: left;
+  margin-top: 12px;
+}
+
+.ele-wrapper-0d696b7e-8100-4e0a-a949-9e8788ae1cec {
+  width: 100%;
+}
+
 .ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550 {
   width: 100%;
   margin-top: 24rpx;
+  display: none;
 }
 
 .ele-wrapper-5ffca98b-a826-46e6-a408-cf1165d243d2 {
