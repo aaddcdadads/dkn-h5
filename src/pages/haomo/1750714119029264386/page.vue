@@ -125,6 +125,7 @@
                           text="迪卡侬春节活动"
                           font-size="16px"
                           padding="0"
+                          class="ele-89a1b8fd-c1ac-46be-b13d-592864374f64"
                         >
                         </hm-uview-text>
                       </view>
@@ -263,9 +264,10 @@
                   >
                     <hm-uview-text
                       text="活动奖品"
-                      font-size="14px"
+                      font-size="16px"
                       color="#000000"
                       bg-color="#FFFFFF00"
+                      padding="0"
                       class="ele-76b3694d-443e-4d62-8c58-80e0356f7fa4"
                     >
                     </hm-uview-text>
@@ -697,6 +699,10 @@ export default {
   width: 100%;
 }
 
+.ele-wrapper-89a1b8fd-c1ac-46be-b13d-592864374f64 {
+  font-weight: bolder;
+}
+
 .ele-wrapper-4f853c6d-0b81-4d35-8ce5-ac7316260eae {
   /deep/.uni-countdown__splitor {
     color: #666666;
@@ -768,6 +774,7 @@ export default {
 .ele-wrapper-76b3694d-443e-4d62-8c58-80e0356f7fa4 {
   float: left;
   margin-top: 24rpx;
+  font-weight: bolder;
 }
 
 .ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5 {
@@ -787,6 +794,7 @@ export default {
 .ele-wrapper-dacbdcbf-5aa6-416f-a334-d9098c8ccfda {
   float: left;
   margin-top: 12px;
+  font-weight: bolder;
 }
 
 .ele-wrapper-0d696b7e-8100-4e0a-a949-9e8788ae1cec {
