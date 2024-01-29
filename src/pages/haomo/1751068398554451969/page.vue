@@ -438,7 +438,7 @@ export default {
   display: flex;
   align-items: center;
   /deep/.hm-bg-card {
-    margin: 15px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
   }
 }
 
