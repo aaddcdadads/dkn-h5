@@ -440,7 +440,7 @@ export default {
   margin: 15px 0px;
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: -5px;
 }
 
 .ele-wrapper-2bc880af-61aa-4911-b1ac-eb457d6a075a {
