@@ -68,6 +68,14 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-a614f90f-fc08-4439-8a10-27bf935a054a"
+                  >
+                    <hm-check-list
+                      class="ele-a614f90f-fc08-4439-8a10-27bf935a054a"
+                    >
+                    </hm-check-list>
+                  </view>
                 </hm-uview-bg-card>
               </view>
             </hm-uview-popup>
@@ -83,6 +91,7 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import HmCheckList from "/@/components/built-in/uniapp/HmCheckList.vue";
 
 export default {
   name: "ActivetyView",
@@ -90,6 +99,7 @@ export default {
     HmUviewBgCard,
     HmUviewPopup,
     HmUviewText,
+    HmCheckList,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -107,9 +117,6 @@ export default {
 
 <style lang="less" scoped>
 .page {
-  /deep/.check-list__item-checked {
-    border-radius: 0 !important;
-  }
 }
 
 .ele-wrapper-dbd7f3bd-da08-446b-beec-b1dc37f4621c {
@@ -137,5 +144,12 @@ export default {
 
 .ele-wrapper-bf1a747a-2f34-4286-a58b-55db1afa6d9d {
   float: right;
+}
+
+.ele-wrapper-a614f90f-fc08-4439-8a10-27bf935a054a {
+  /deep/.check-list__item-checked {
+    border-radius: 0 !important;
+  }
+  width: 100%;
 }
 </style>
