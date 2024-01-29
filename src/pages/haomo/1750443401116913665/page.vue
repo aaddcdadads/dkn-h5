@@ -168,7 +168,16 @@
                       <view
                         class="ele-wrapper ele-wrapper-d8186875-9ad9-4d3d-919e-3fdcc81cd7e1"
                       >
-                        <hm-uview-field value=""> </hm-uview-field>
+                        <hm-uview-field
+                          value=""
+                          label=""
+                          label-width="0"
+                          icon=""
+                          right-icon=""
+                          :border-bottom="false"
+                          class="ele-d8186875-9ad9-4d3d-919e-3fdcc81cd7e1"
+                        >
+                        </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -568,6 +577,26 @@ export default {
   padding: 13px 7px;
   vertical-align: top;
   margin-left: 10px;
+}
+
+.ele-wrapper-d8186875-9ad9-4d3d-919e-3fdcc81cd7e1 {
+  width: 65%;
+  height: 45px;
+  /deep/.u-border-bottom {
+    display: flex;
+    align-items: center;
+    height: 45px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
+  /deep/.ele-HmUviewField1 {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .ele-wrapper-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0 {
