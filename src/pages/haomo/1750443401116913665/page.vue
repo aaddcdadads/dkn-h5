@@ -241,7 +241,7 @@
                           :left-src="[]"
                           value=""
                           right-src=""
-                          placeholder="姓名/昵称"
+                          placeholder="2024.02.10 15:46:39"
                           class="ele-b7e0ad9d-47f6-4f70-8ab6-1f6e8914428e"
                         >
                         </information-input-box>
