@@ -1012,7 +1012,7 @@ export default {
     let self = this;
     return {
       shopPop: {
-        show: true,
+        show: false,
       },
       zhifubaoRadio: {
         value: '""',
