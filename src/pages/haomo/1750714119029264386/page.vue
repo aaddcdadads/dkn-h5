@@ -271,6 +271,7 @@
                           height=""
                           border-radius="0"
                           padding="0"
+                          box-shadow-v-shadow="0"
                           box-shadow-color="#00000000"
                           background-color="#FFFFFF00"
                           class="ele-67658805-d92e-4e1f-8067-6a180eca6391"
