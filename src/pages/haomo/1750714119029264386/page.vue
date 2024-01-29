@@ -1064,6 +1064,7 @@ export default {
   }
   /deep/.uni-input-input {
     text-align: left !important;
+    margin-left: 4px !important;
   }
   margin-top: 24rpx;
 }
@@ -1079,6 +1080,10 @@ export default {
     color: #d6d6d6 !important;
     margin-left: 4px !important;
     text-align: left;
+  }
+  /deep/.uni-input-input {
+    text-align: left !important;
+    margin-left: 4px !important;
   }
   /deep/.gcolor {
     font-size: 12px !important;
