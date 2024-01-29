@@ -447,6 +447,9 @@ export default {
   height: 45px;
   vertical-align: top;
   padding: 13px 5px;
+  /deep0/.hm-bg-text {
+    padding: 0px;
+  }
 }
 
 .ele-wrapper-4d559557-0403-4847-8886-a66b609a45ba {
