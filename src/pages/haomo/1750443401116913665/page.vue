@@ -83,7 +83,7 @@
                         <hm-uview-text
                           text="项目名称："
                           font-size="13px"
-                          padding=""
+                          padding="0"
                           class="ele-716406f0-2fda-4cc8-9dc0-457fbd1bcec2"
                         >
                         </hm-uview-text>
