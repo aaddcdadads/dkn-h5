@@ -95,7 +95,7 @@
                           :left-src="[]"
                           value=""
                           right-src=""
-                          placeholder="姓名/昵称"
+                          placeholder="报名项目名称 x 数量"
                           class="ele-4fcfeacf-caaa-4675-94b7-297827308bfc"
                         >
                         </information-input-box>

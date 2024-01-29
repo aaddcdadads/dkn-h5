@@ -205,6 +205,6 @@ export default {
   width: calc(100% - 24px);
   margin-left: 24rpx;
   position: absolute;
-  bottom: 12rpx;
+  bottom: 10px;
 }
 </style>
