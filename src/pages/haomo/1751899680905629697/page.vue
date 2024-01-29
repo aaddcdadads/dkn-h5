@@ -68,26 +68,6 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-a614f90f-fc08-4439-8a10-27bf935a054a"
-                  >
-                    <hm-check-list> </hm-check-list>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-6cc892ec-7a95-496e-8425-18ca419e74b8"
-                  >
-                    <hm-uview-checkbox> </hm-uview-checkbox>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-08e12eaa-8eb1-4569-bb6a-ee205459978e"
-                  >
-                    <checkbox> </checkbox>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-50a8ee4d-073e-4c66-87b6-74b12b540fb6"
-                  >
-                    <checkbox> </checkbox>
-                  </view>
                 </hm-uview-bg-card>
               </view>
             </hm-uview-popup>
@@ -103,8 +83,6 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
-import HmCheckList from "/@/components/built-in/uniapp/HmCheckList.vue";
-import HmUviewCheckbox from "/@/components/built-in/uniapp-uview-vue3/HmUviewCheckbox.vue";
 
 export default {
   name: "ActivetyView",
@@ -112,8 +90,6 @@ export default {
     HmUviewBgCard,
     HmUviewPopup,
     HmUviewText,
-    HmCheckList,
-    HmUviewCheckbox,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -131,6 +107,9 @@ export default {
 
 <style lang="less" scoped>
 .page {
+  /deep/.check-list__item-checked {
+    border-radius: 0 !important;
+  }
 }
 
 .ele-wrapper-dbd7f3bd-da08-446b-beec-b1dc37f4621c {
