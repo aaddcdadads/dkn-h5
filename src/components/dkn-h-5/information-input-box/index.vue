@@ -1,5 +1,5 @@
 <template>
-  <view class="input" style="padding: 5px;">
+  <view class="input" style="padding: 5px 5px 8px;">
     <input :placeholder="placeholder" class="data_input" v-model="value"/>
     <view v-show="showCode">
       <text @click="onCode" :class="showColor ? 'gcolor' : 'color'">{{ code }}</text>
