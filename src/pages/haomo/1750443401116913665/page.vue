@@ -133,6 +133,7 @@
                           ref="HmUviewField2"
                           v-model:value="HmUviewField2.value"
                           label=""
+                          placeholder="姓名/昵称"
                           label-width="0"
                           icon=""
                           right-icon=""
