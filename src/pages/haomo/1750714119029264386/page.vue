@@ -533,7 +533,7 @@
                 <hm-uview-popup
                   ref="viewPopup"
                   v-model:show="viewPopup.show"
-                  width="60%"
+                  width="80%"
                   height="200px"
                   border-radius="8px"
                   :closeable="false"
