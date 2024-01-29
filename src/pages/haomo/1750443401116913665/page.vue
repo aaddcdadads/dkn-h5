@@ -82,7 +82,7 @@
                         <hm-uview-text
                           text="项目名称"
                           font-size="13px"
-                          padding="13"
+                          padding=""
                           class="ele-2bc880af-61aa-4911-b1ac-eb457d6a075a"
                         >
                         </hm-uview-text>
@@ -446,6 +446,7 @@ export default {
 .ele-wrapper-2bc880af-61aa-4911-b1ac-eb457d6a075a {
   height: 45px;
   vertical-align: top;
+  padding: 13px 5px;
 }
 
 .ele-wrapper-4d559557-0403-4847-8886-a66b609a45ba {
