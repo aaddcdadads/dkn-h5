@@ -196,10 +196,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-ActivityName">
+                      <view class="ele-wrapper ele-wrapper-InputActivityName">
                         <hm-uview-field
-                          ref="ActivityName"
-                          v-model:value="ActivityName.value"
+                          ref="InputActivityName"
+                          v-model:value="InputActivityName.value"
                           label=""
                           placeholder="报名项目名称 x 数量"
                           label-width="0"
@@ -207,7 +207,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-ActivityName"
+                          class="ele-InputActivityName"
                         >
                         </hm-uview-field>
                       </view>
@@ -296,7 +296,7 @@ export default {
       "da7c111b-9122-4667-9eb5-1d46bf867f3c": {
         value: "",
       },
-      ActivityName: {
+      InputActivityName: {
         value: "",
       },
     };
@@ -446,7 +446,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-ActivityName {
+.ele-wrapper-InputActivityName {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
@@ -457,7 +457,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField1 {
+  /deep/.ele-InputActivityName {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
