@@ -91,7 +91,12 @@
                       <view
                         class="ele-wrapper ele-wrapper-4fcfeacf-caaa-4675-94b7-297827308bfc"
                       >
-                        <information-input-box :left-src="[]" value="">
+                        <information-input-box
+                          :left-src="[]"
+                          value=""
+                          right-src=""
+                          placeholder="姓名/昵称"
+                        >
                         </information-input-box>
                       </view>
                     </hm-uview-bg-card>
