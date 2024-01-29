@@ -112,7 +112,7 @@ export default {
         data: [
           {
             key: 1,
-            name: "",
+            name: "活动名称",
             checked: false,
           },
           {
