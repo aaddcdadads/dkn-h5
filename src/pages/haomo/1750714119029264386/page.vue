@@ -611,7 +611,11 @@
                       <view
                         class="ele-wrapper ele-wrapper-0c65cb7b-74a2-4e1f-ba24-0a344a397980"
                       >
-                        <hm-uview-button> </hm-uview-button>
+                        <hm-uview-button
+                          :type="'info'"
+                          class="ele-0c65cb7b-74a2-4e1f-ba24-0a344a397980"
+                        >
+                        </hm-uview-button>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -1074,6 +1078,10 @@ export default {
 }
 
 .ele-wrapper-93d185a1-2026-46e4-a382-c00e8048b0d3 {
+  width: 50%;
+}
+
+.ele-wrapper-0c65cb7b-74a2-4e1f-ba24-0a344a397980 {
   width: 50%;
 }
 
