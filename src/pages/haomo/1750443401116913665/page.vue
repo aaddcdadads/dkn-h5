@@ -516,8 +516,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin-top: -5px;
-  margin-bottom: 15px;
+  margin: 15px 0px;
   /deep/.hm-bg-card {
     margin-top: 15px !important;
   }
