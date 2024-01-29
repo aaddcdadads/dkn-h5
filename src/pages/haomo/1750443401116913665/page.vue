@@ -450,7 +450,7 @@ export default {
 .ele-wrapper-716406f0-2fda-4cc8-9dc0-457fbd1bcec2 {
   padding: 13px 5px;
   vertical-align: top;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .ele-wrapper-a89083fd-72bd-468d-a1c4-41e4b0087eb0 {
