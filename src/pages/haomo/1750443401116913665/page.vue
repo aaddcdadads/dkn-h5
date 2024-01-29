@@ -529,7 +529,7 @@ export default {
 }
 
 .ele-wrapper-a6b059cb-691d-4093-bede-453d1eaf7370 {
-  padding: 13px 5px;
+  padding: 13px 7px;
   vertical-align: top;
   margin-left: 10px;
 }
@@ -557,7 +557,7 @@ export default {
 }
 
 .ele-wrapper-df0e3be8-5694-4de1-89ab-efc9e61b2384 {
-  padding: 13px 5px;
+  padding: 13px 7px;
   vertical-align: top;
   margin-left: 10px;
 }
@@ -585,7 +585,7 @@ export default {
 }
 
 .ele-wrapper-da0d9595-55d9-48cf-b00a-082df56d4a58 {
-  padding: 13px 5px;
+  padding: 13px 7px;
   vertical-align: top;
   margin-left: 10px;
 }
@@ -613,7 +613,7 @@ export default {
 }
 
 .ele-wrapper-1c6f3120-a3af-4da2-91cf-2a913f75e70f {
-  padding: 13px 5px;
+  padding: 13px 7px;
   vertical-align: top;
   margin-left: 10px;
 }
@@ -641,7 +641,7 @@ export default {
 }
 
 .ele-wrapper-d300e2f4-3555-45fa-a67c-be25208705a0 {
-  padding: 13px 5px;
+  padding: 13px 7px;
   vertical-align: top;
   margin-left: 10px;
 }
@@ -669,7 +669,7 @@ export default {
 }
 
 .ele-wrapper-3ea4931b-f9be-449b-adfa-85aec01fa006 {
-  padding: 13px 5px;
+  padding: 13px 7px;
   vertical-align: top;
   margin-left: 10px;
 }
@@ -700,7 +700,7 @@ export default {
 }
 
 .ele-wrapper-fba91c42-55e1-404b-97e8-0d6ca8b53ff5 {
-  padding: 13px 5px;
+  padding: 13px 7px;
   vertical-align: top;
   margin-left: 10px;
 }
