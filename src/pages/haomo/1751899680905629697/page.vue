@@ -135,6 +135,7 @@ export default {
 
 .ele-wrapper-a8421160-2261-4a40-ad96-c72052540372 {
   width: 100%;
+  border-bottom: 1px solid #f5f5f5;
 }
 
 .ele-wrapper-e5983f9a-4d28-4b8d-a5be-8026fae669f5 {
@@ -165,5 +166,6 @@ export default {
     color: #ffffff !important;
     margin: 0px 2px !important;
   }
+  border-bottom: 1px solid #f5f5f5;
 }
 </style>
