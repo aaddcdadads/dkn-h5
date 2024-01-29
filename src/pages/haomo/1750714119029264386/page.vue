@@ -1062,6 +1062,9 @@ export default {
   /deep/.ele-phoneBox {
     height: 72rpx;
   }
+  /deep/.uni-input-input {
+    text-align: left !important;
+  }
   margin-top: 24rpx;
 }
 
