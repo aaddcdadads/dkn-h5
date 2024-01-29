@@ -141,11 +141,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-da7c111b-9122-4667-9eb5-1d46bf867f3c"
-                      >
+                      <view class="ele-wrapper ele-wrapper-InputClaimStore">
                         <hm-uview-field
-                          value=""
+                          ref="InputClaimStore"
+                          v-model:value="InputClaimStore.value"
                           label=""
                           placeholder="报名项目名称 x 数量"
                           label-width="0"
@@ -153,7 +152,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-da7c111b-9122-4667-9eb5-1d46bf867f3c"
+                          class="ele-InputClaimStore"
                         >
                         </hm-uview-field>
                       </view>
@@ -293,7 +292,7 @@ export default {
       InputPhoneNumber: {
         value: "",
       },
-      "da7c111b-9122-4667-9eb5-1d46bf867f3c": {
+      InputClaimStore: {
         value: "",
       },
       InputActivityName: {
@@ -409,7 +408,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-da7c111b-9122-4667-9eb5-1d46bf867f3c {
+.ele-wrapper-InputClaimStore {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
@@ -420,7 +419,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField1 {
+  /deep/.ele-InputClaimStore {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
