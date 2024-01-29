@@ -68,13 +68,13 @@
                     class="ele-wrapper ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5"
                   >
                     <hm-uview-bg-card
-                      padding=""
-                      box-shadow-blur=""
-                      border-color="#B0B0B0"
-                      box-shadow-v-shadow=""
                       width="100%"
-                      border-width="1"
                       height="40"
+                      border-width="1"
+                      border-color="#B0B0B0"
+                      padding=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
                       class="ele-3594e500-632d-42e8-b3b9-d485a0f784a5"
                     >
                       <view
@@ -486,7 +486,6 @@ export default {
 .ele-wrapper-HmUviewField1 {
   width: 65%;
   height: 45px;
-  display: flex;
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;
