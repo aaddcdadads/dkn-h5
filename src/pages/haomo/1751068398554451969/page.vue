@@ -476,7 +476,9 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  /deep/.hm-bg-card {
+    margin-bottom: 10px;
+  }
 }
 
 .ele-wrapper-26f8e5b0-a98e-4879-9f6f-3f8f3819a511 {
