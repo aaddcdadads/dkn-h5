@@ -169,12 +169,8 @@ export default {
   },
   watch: {},
   methods: {
-    onCanelButtonClick() {
-      this.viewPopup.show = false;
-    },
-    onSureButtonClick() {
-      this.viewPopup.show = false;
-    },
+    onCanelButtonClick() {},
+    onSureButtonClick() {},
   },
 };
 </script>
