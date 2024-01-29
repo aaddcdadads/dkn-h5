@@ -205,7 +205,7 @@
                           :left-src="[]"
                           value=""
                           right-src=""
-                          placeholder="姓名/昵称"
+                          placeholder="区域/门店名称"
                           class="ele-c5fbc40a-cb73-46bd-87cb-b8d61d44defd"
                         >
                         </information-input-box>
