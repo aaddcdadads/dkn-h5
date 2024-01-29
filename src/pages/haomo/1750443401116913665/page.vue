@@ -44,6 +44,7 @@
                       font-size="12px"
                       color="#303133"
                       padding="8"
+                      :text-style="{}"
                       class="ele-bf22f4a1-bf87-45db-bf48-3cb458614952"
                     >
                     </hm-uview-text>
@@ -94,6 +95,34 @@
                           >
                             <hm-uview-field value=""> </hm-uview-field>
                           </view>
+                        </hm-uview-field>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-1a733f17-14f0-4007-80fe-e478cb9634cf"
+                      >
+                        <hm-uview-bg-card
+                          width="100%"
+                          height="40"
+                          padding=""
+                          box-shadow-v-shadow=""
+                          box-shadow-blur=""
+                          class="ele-1a733f17-14f0-4007-80fe-e478cb9634cf"
+                        >
+                        </hm-uview-bg-card>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37"
+                      >
+                        <hm-uview-field
+                          value=""
+                          label=" 姓名/昵称:"
+                          placeholder="姓名/昵称"
+                          label-width="100%"
+                          maxlength="250"
+                          icon=""
+                          right-icon=""
+                          class="ele-ea222d02-9ba2-44be-b94e-799272b9be37"
+                        >
                         </hm-uview-field>
                       </view>
                     </hm-uview-bg-card>
@@ -275,6 +304,7 @@
                   text=" 返回活动详情页"
                   font-size="1em"
                   color="#409EFF"
+                  :text-style="{}"
                   @onClick="onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick"
                   class="ele-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
                 >
@@ -284,6 +314,7 @@
                 <hm-uview-button
                   ref="Buttonwan"
                   :text="Buttonwan.text"
+                  :custom-style="Buttonwan.customStyle"
                   class="ele-Buttonwan"
                 >
                 </hm-uview-button>
@@ -317,8 +348,12 @@ export default {
     return {
       Buttonwan: {
         text: "核销",
+        customStyle: {},
       },
       "4d559557-0403-4847-8886-a66b609a45ba": {
+        value: "",
+      },
+      "ea222d02-9ba2-44be-b94e-799272b9be37": {
         value: "",
       },
       "362c9914-e718-4981-a872-a752ee91fcd9": {
@@ -420,6 +455,46 @@ export default {
     max-width: 70px;
   }
   /deep/.input-placeholder {
+    font-size: 13px;
+  }
+}
+
+.ele-wrapper-1a733f17-14f0-4007-80fe-e478cb9634cf {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+}
+
+.ele-wrapper-ea222d02-9ba2-44be-b94e-799272b9be37 {
+  width: 100%;
+  height: 45px;
+  /deep/.u-label-postion-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  /deep/.u-border-bottom {
+    border-radius: 5px;
+    height: 45px;
+  }
+  /deep/.u-flex-1 {
+    font-size: 13px;
+  }
+  /deep/.u-label-text {
+    font-size: 13px;
+    width: 100%;
+  }
+  /deep/.u-label-text > span {
+    width: 100%;
+  }
+  /deep/.u-label {
+    max-width: 70px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
+  /deep/.uni-input-input {
     font-size: 13px;
   }
 }
