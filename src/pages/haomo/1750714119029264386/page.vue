@@ -534,7 +534,7 @@
                   ref="viewPopup"
                   v-model:show="viewPopup.show"
                   width="80%"
-                  height="200px"
+                  height="220px"
                   border-radius="8px"
                   :closeable="false"
                   class="ele-viewPopup"
