@@ -88,10 +88,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-PhoneNumber">
+                      <view class="ele-wrapper ele-wrapper-HmUviewField1">
                         <hm-uview-field
-                          ref="PhoneNumber"
-                          v-model:value="PhoneNumber.value"
+                          ref="HmUviewField1"
+                          v-model:value="HmUviewField1.value"
                           label=""
                           placeholder="报名项目名称 x 数量"
                           label-width="0"
@@ -99,7 +99,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-PhoneNumber"
+                          class="ele-HmUviewField1"
                         >
                         </hm-uview-field>
                       </view>
@@ -109,13 +109,13 @@
                     class="ele-wrapper ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598"
                   >
                     <hm-uview-bg-card
-                      padding=""
-                      box-shadow-blur=""
-                      border-color="#B0B0B0"
-                      box-shadow-v-shadow=""
                       width="100%"
-                      border-width="1"
                       height="40"
+                      border-width="1"
+                      border-color="#B0B0B0"
+                      padding=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
                       class="ele-e7bdbfea-5564-4643-a5fe-7f5406777598"
                     >
                       <view
@@ -434,7 +434,7 @@ export default {
         customStyle: {},
         text: "核销",
       },
-      PhoneNumber: {
+      HmUviewField1: {
         value: "",
       },
       HmUviewField2: {
@@ -521,7 +521,7 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-PhoneNumber {
+.ele-wrapper-HmUviewField1 {
   width: 65%;
   height: 45px;
   /deep/.u-border-bottom {
