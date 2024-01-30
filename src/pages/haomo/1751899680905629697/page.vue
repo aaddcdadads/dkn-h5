@@ -285,6 +285,7 @@ export default {
   /deep/.u-radio {
     width: 100% !important;
     position: relative;
+    border-bottom: 1px solid #f5f5f5 !important;
   }
   /deep/.u-clearfix {
     width: 100% !important;
