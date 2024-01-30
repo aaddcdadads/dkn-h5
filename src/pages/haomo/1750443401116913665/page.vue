@@ -387,9 +387,9 @@
                 class="ele-wrapper ele-wrapper-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
               >
                 <hm-uview-text
-                  color="#409EFF"
-                  font-size="1em"
                   text=" 返回活动详情页"
+                  font-size="1em"
+                  color="#409EFF"
                   @onClick="onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick"
                   class="ele-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
                 >
@@ -398,7 +398,6 @@
               <view class="ele-wrapper ele-wrapper-Buttonwan">
                 <hm-uview-button
                   ref="Buttonwan"
-                  :custom-style="Buttonwan.customStyle"
                   :text="Buttonwan.text"
                   class="ele-Buttonwan"
                 >
@@ -432,7 +431,6 @@ export default {
     let self = this;
     return {
       Buttonwan: {
-        customStyle: {},
         text: "核销",
       },
       HmUviewField1: {
@@ -786,8 +784,11 @@ export default {
   width: 80%;
   margin-top: 30%;
   height: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   /deep/.ele-Buttonwan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-weight: 400;
     background-color: rgb(89, 213, 165);
     color: rgb(255, 255, 255);
