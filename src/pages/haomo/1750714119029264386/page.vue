@@ -4,12 +4,12 @@
       <view class="ele-wrapper ele-wrapper-outsideBg">
         <hm-uview-bg-card
           ref="outsideBg"
-          padding="0"
-          box-shadow-color="#00000000"
-          border-radius="0"
-          background-color="#FFE8EC"
           width="100%"
           height=""
+          border-radius="0"
+          padding="0"
+          box-shadow-color="#00000000"
+          background-color="#FFE8EC"
           class="ele-outsideBg"
         >
           <view class="ele-wrapper ele-wrapper-topBg">
@@ -616,11 +616,11 @@
         class="ele-wrapper ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611"
       >
         <hm-uview-bg-card
-          padding="12"
-          box-shadow-color="#00000000"
-          border-radius="0"
           width="100%"
           height=""
+          border-radius="0"
+          padding="12"
+          box-shadow-color="#00000000"
           class="ele-2136b833-7f0e-4a8a-a081-36d9e275f611"
         >
           <view
@@ -1212,7 +1212,7 @@ export default {
 .ele-wrapper-outsideBg {
   width: 100%;
   position: relative;
-  padding-bottom: 120rpx;
+  padding-bottom: 180rpx;
 }
 
 .ele-wrapper-topBg {
