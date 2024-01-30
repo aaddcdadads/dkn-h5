@@ -52,10 +52,9 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
-              >
+              <view class="ele-wrapper ele-wrapper-HmUviewBgCard1">
                 <hm-uview-bg-card
+                  ref="HmUviewBgCard1"
                   width="100%"
                   height="100%"
                   border-radius=""
@@ -63,7 +62,7 @@
                   padding=""
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
-                  class="ele-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
+                  class="ele-HmUviewBgCard1"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5"
@@ -524,9 +523,11 @@ export default {
   margin-right: 75%;
 }
 
-.ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
+.ele-wrapper-HmUviewBgCard1 {
   width: 100%;
-  margin-top: 10px !important;
+  /deep/.HmUviewBgCard1 {
+    margin-top: 10px;
+  }
 }
 
 .ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5 {
