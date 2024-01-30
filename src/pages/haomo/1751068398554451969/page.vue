@@ -332,6 +332,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
+  margin-top: calc(39px + env(safe-area-inset-top));
   /deep/.hm-bg-card {
     margin-top: 15px;
   }
