@@ -505,7 +505,7 @@
                   ref="phonePopup"
                   v-model:show="phonePopup.show"
                   width="80%"
-                  height="170px"
+                  height="164px"
                   border-radius="8px"
                   :closeable="false"
                   class="ele-phonePopup"
@@ -1467,7 +1467,7 @@ export default {
 
 .ele-wrapper-6bf03fb4-83a2-441f-866a-b1bed62d2f12 {
   width: 100%;
-  margin-top: 68rpx;
+  margin-top: 48rpx;
 }
 
 .ele-wrapper-canelButton {
