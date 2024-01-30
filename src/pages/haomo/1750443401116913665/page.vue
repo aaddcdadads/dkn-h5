@@ -409,7 +409,6 @@
                   text=" 返回活动详情页"
                   font-size="1em"
                   color="#409EFF"
-                  :text-style="{}"
                   @onClick="onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick"
                   class="ele-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
                 >
@@ -527,6 +526,7 @@ export default {
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
   width: 100%;
+  margin-top: 10px !important;
 }
 
 .ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5 {
