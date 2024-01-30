@@ -15,14 +15,14 @@
           <view class="ele-wrapper ele-wrapper-topBg">
             <hm-uview-bg-card
               ref="topBg"
-              padding="12"
-              box-shadow-blur="0"
-              box-shadow-v-shadow="0"
-              box-shadow-color="#00000000"
-              border-radius="0"
-              background-color="#FFFFFF00"
               width="100%"
               height=""
+              border-radius="0"
+              padding="12"
+              box-shadow-v-shadow="0"
+              box-shadow-blur="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
               class="ele-topBg"
             >
               <view
@@ -493,8 +493,8 @@
                       <view class="ele-wrapper ele-wrapper-sureButton">
                         <hm-uview-button
                           ref="sureButton"
-                          :text="sureButton.text"
                           :type="sureButton.type"
+                          :text="sureButton.text"
                           @click="onSureButtonClick"
                           class="ele-sureButton"
                         >
@@ -504,16 +504,15 @@
                   </view>
                 </hm-uview-popup>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-b8768735-c882-456e-b133-f6da3a52f8f5"
-              >
+              <view class="ele-wrapper ele-wrapper-phonePopup">
                 <hm-uview-popup
-                  :show="true"
+                  ref="phonePopup"
+                  v-model:show="phonePopup.show"
                   width="80%"
                   height="180px"
                   border-radius="8px"
                   :closeable="false"
-                  class="ele-b8768735-c882-456e-b133-f6da3a52f8f5"
+                  class="ele-phonePopup"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-22dc02bc-b7b8-4d6b-83d6-6ee319d12809"
@@ -595,6 +594,22 @@
           box-shadow-color="#00000000"
           class="ele-2136b833-7f0e-4a8a-a081-36d9e275f611"
         >
+          <view
+            class="ele-wrapper ele-wrapper-a5b9bd79-5420-4a89-a71c-7e1c4870ca1a"
+          >
+            <hm-uview-bg-card
+              width="100%"
+              height=""
+              border-radius="0"
+              padding="12"
+              box-shadow-v-shadow="0"
+              box-shadow-blur="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
+              class="ele-a5b9bd79-5420-4a89-a71c-7e1c4870ca1a"
+            >
+            </hm-uview-bg-card>
+          </view>
           <view class="ele-wrapper ele-wrapper-isProtocol">
             <hm-uview-radio
               ref="isProtocol"
@@ -604,6 +619,12 @@
               class="ele-isProtocol"
             >
             </hm-uview-radio>
+          </view>
+          <view
+            class="ele-wrapper ele-wrapper-462dc544-17d1-4f62-a1be-f0d615856fde"
+          >
+            <hm-uview-bg-card class="ele-462dc544-17d1-4f62-a1be-f0d615856fde">
+            </hm-uview-bg-card>
           </view>
           <view
             class="ele-wrapper ele-wrapper-7a55d0c9-95ac-4729-befd-31f60ecf4707"
@@ -786,8 +807,8 @@ export default {
       phoneBox: {
         value: "",
       },
-      "b8768735-c882-456e-b133-f6da3a52f8f5": {
-        show: true,
+      phonePopup: {
+        show: false,
       },
       viewInput: {
         value: "",
@@ -797,8 +818,8 @@ export default {
         type: "info",
       },
       sureButton: {
-        text: "确认",
         type: "info",
+        text: "确认",
       },
     };
   },
@@ -1357,7 +1378,7 @@ export default {
   }
 }
 
-.ele-wrapper-b8768735-c882-456e-b133-f6da3a52f8f5 {
+.ele-wrapper-phonePopup {
   padding: 24rpx 24rpx;
   /deep/.u-mode-center-box {
     border-radius: 8px;
@@ -1409,6 +1430,13 @@ export default {
   z-index: 1000;
 }
 
+.ele-wrapper-a5b9bd79-5420-4a89-a71c-7e1c4870ca1a {
+  width: 100%;
+  position: fixed;
+  top: 24px;
+  z-index: 1000;
+}
+
 .ele-wrapper-isProtocol {
   float: left;
   /deep/.u-radio__icon-wrap--circle {
@@ -1419,6 +1447,10 @@ export default {
     font-size: 14px !important;
   }
   margin-left: 24rpx;
+}
+
+.ele-wrapper-462dc544-17d1-4f62-a1be-f0d615856fde {
+  width: 100%;
 }
 
 .ele-wrapper-7a55d0c9-95ac-4729-befd-31f60ecf4707 {
