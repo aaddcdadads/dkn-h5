@@ -29,11 +29,11 @@
                 class="ele-wrapper ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe"
               >
                 <hm-uview-icon
-                  label-color="#FFFFFF"
+                  name="question-circle"
                   color="#FFFFFF"
                   size="20px"
-                  name="question-circle"
                   label="规则"
+                  label-color="#FFFFFF"
                   @click="onEle0Abf487751Bc431D8F1A3C043Bc451FeClick"
                   class="ele-0abf4877-51bc-431d-8f1a-3c043bc451fe"
                 >
@@ -45,14 +45,14 @@
             class="ele-wrapper ele-wrapper-3de94d32-48f2-495a-b447-4ba9360a1ceb"
           >
             <hm-uview-bg-card
-              padding="12"
-              box-shadow-blur="0"
-              box-shadow-v-shadow="0"
-              box-shadow-color="#00000000"
-              border-radius="0"
-              background-color="#FFFFFF00"
               width="100%"
               height=""
+              border-radius="0"
+              padding="12"
+              box-shadow-v-shadow="0"
+              box-shadow-blur="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
               class="ele-3de94d32-48f2-495a-b447-4ba9360a1ceb"
             >
             </hm-uview-bg-card>
@@ -608,6 +608,19 @@
               background-color="#FFFFFF00"
               class="ele-a5b9bd79-5420-4a89-a71c-7e1c4870ca1a"
             >
+              <view
+                class="ele-wrapper ele-wrapper-8f33b075-7117-49ed-bd18-640aa28fa939"
+              >
+                <hm-uview-icon
+                  name="question-circle"
+                  color="#FFFFFF"
+                  size="20px"
+                  label="活动咨询"
+                  label-color="#FFFFFF"
+                  class="ele-8f33b075-7117-49ed-bd18-640aa28fa939"
+                >
+                </hm-uview-icon>
+              </view>
             </hm-uview-bg-card>
           </view>
           <view class="ele-wrapper ele-wrapper-isProtocol">
@@ -801,11 +814,11 @@ export default {
       phoneBox: {
         value: "",
       },
-      phonePopup: {
-        show: false,
-      },
       viewInput: {
         value: "",
+      },
+      phonePopup: {
+        show: false,
       },
       canelButton: {
         text: "取消",
@@ -1016,7 +1029,52 @@ export default {
         });
       };
       //登录验证
-      self.login = async function () {};
+      self.login = async function () {
+        if (!self.phoneBox.value) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: "手机号不能为空",
+            duration: 2000,
+          });
+          return;
+        }
+        if (!self.viewInput.value) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: "验证码不能为空",
+            duration: 2000,
+          });
+          return;
+        }
+        let url = "/api/sys/phoneLogin";
+        let params = {
+          mobile: self.phoneBox.value,
+          captcha: self.viewInput.value,
+        };
+        const res = await self.$postAction(url, params);
+        if (!res.success) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: res.message,
+            duration: 2000,
+          });
+          return;
+        }
+        uni.showToast({
+          icon: "success",
+          position: "top",
+          title: res.message,
+          duration: 2000,
+        });
+        uni.setStorageSync("token", res.token);
+        uni.setStorageSync("userInfo", res.userInfo);
+        uni.$u.route(
+          `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}`
+        );
+      };
     },
 
     onEle0Abf487751Bc431D8F1A3C043Bc451FeClick() {
@@ -1426,6 +1484,16 @@ export default {
 
 .ele-wrapper-a5b9bd79-5420-4a89-a71c-7e1c4870ca1a {
   width: 100%;
+}
+
+.ele-wrapper-8f33b075-7117-49ed-bd18-640aa28fa939 {
+  border-radius: 608rpx;
+  float: right;
+  text-align: center;
+  padding-top: 8rpx;
+  margin-right: 24rpx;
+  background: rgba(0, 0, 0, 0.16);
+  padding: 8px 12px;
 }
 
 .ele-wrapper-isProtocol {
