@@ -1,5 +1,5 @@
 <template>
-  <view style="display: flex;">
+  <view class="view" style="display: flex;">
     <view v-for="(item, index) in funcList" :key="index"  @click="onClick()" :style="style">
       <view class="topbox">
         <view><img :src="item.bgUrl" /></view>
@@ -74,6 +74,14 @@ export default {
         return [{ width: "100%", margin: "0 10px" }];
       },
     },
+    /**
+     * 背景色
+     * @type Color
+     */
+     backgroundColor: {
+      type: String,
+      default: '#feeff7'
+    },
   },
 
   data() {
@@ -94,6 +102,10 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.view{
+  background: v-bind(backgroundColor);
+  border-radius:8px;
+}
 .container {
   background: transparent;
 
