@@ -567,7 +567,6 @@ export default {
 .ele-wrapper-a6b059cb-691d-4093-bede-453d1eaf7370 {
   padding: 13px 7px;
   vertical-align: top;
-  margin-left: 10px;
 }
 
 .ele-wrapper-HmUviewField2 {
