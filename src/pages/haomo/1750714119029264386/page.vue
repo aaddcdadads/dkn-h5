@@ -72,9 +72,9 @@
               <view class="ele-wrapper ele-wrapper-logoImg">
                 <hm-uview-image
                   ref="logoImg"
-                  :src="logoImg.src"
-                  :width="logoImg.width"
-                  :height="logoImg.height"
+                  src="https://static1.keepcdn.com/teyvat-cms/2023/10/24/1698136514335c25agsam_750x1000.jpg"
+                  width="100%"
+                  height="500px"
                   class="ele-logoImg"
                 >
                 </hm-uview-image>
@@ -249,7 +249,6 @@
                       <view class="ele-wrapper ele-wrapper-activityList">
                         <activity-list
                           ref="activityList"
-                          :item="activityList.item"
                           class="ele-activityList"
                         >
                         </activity-list>
@@ -382,109 +381,17 @@
                   class="ele-regularPopup"
                 >
                   <view
-                    class="ele-wrapper ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2"
+                    class="ele-wrapper ele-wrapper-63de2731-6d75-42cd-bd28-d99b529b8759"
                   >
-                    <hm-uview-text
-                      text="活动规则"
-                      font-size="16px"
-                      class="ele-dc91ed40-34d2-458d-a7fb-c67671b736c2"
+                    <hm-uview-parse
+                      :data="{
+                        html:
+                          '<h2 style=&quot;text-align: center;&quot;>活动规则</h2><p style=&quot;text-align: left;&quot;>玩法介绍</p><p>第一步 报名</p><p> 点击页面下方的「马上报名」，选择自己要挑战的公里数。</p><p>-- 选择公里数对应的奖牌套餐，提交订单支付并填写收件信息即可在完赛后获得奖牌/奖牌配件/周边。</p><p>第二步 比赛</p><p>在比赛时间内，打开 Keep，一次性跑完您挑战的公里数即可。</p><p>-- 户外/跑步机皆可。</p><p>奖牌及奖牌配件/周边将在完赛后 30 个工作日内发货；</p><p style=&quot;color: red;&quot;>请注意！！若未完赛，则奖牌将无法发出，但配件/周边仍可以在活动结束后发货；（30 个工作日从完赛后第一个工作日开始计算）</p>',
+                      }"
+                      :show-height="0"
+                      class="ele-63de2731-6d75-42cd-bd28-d99b529b8759"
                     >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-82757320-2908-4ea4-a4a6-d6a672339dab"
-                  >
-                    <hm-uview-text
-                      text="玩法介绍"
-                      font-size="12px"
-                      class="ele-82757320-2908-4ea4-a4a6-d6a672339dab"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-f8b609db-e332-45a3-8489-fba690b76d97"
-                  >
-                    <hm-uview-text
-                      text="第一步 报名"
-                      font-size="12px"
-                      class="ele-f8b609db-e332-45a3-8489-fba690b76d97"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-92d692d3-6c86-4408-8023-fbff541eef72"
-                  >
-                    <hm-uview-text
-                      text="点击页面下方的「马上报名」，选择自己要挑战的公里数。"
-                      font-size="12px"
-                      :text-align="'left'"
-                      class="ele-92d692d3-6c86-4408-8023-fbff541eef72"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-1bc765de-b93e-4b9b-9419-38462cabd3e8"
-                  >
-                    <hm-uview-text
-                      text="-- 选择公里数对应的奖牌套餐，提交订单支付并填写收件信息即可在完赛后获得奖牌/奖牌配件/周边。"
-                      font-size="12px"
-                      :text-align="'left'"
-                      class="ele-1bc765de-b93e-4b9b-9419-38462cabd3e8"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-6a8da34f-c177-4734-9296-60012cc53022"
-                  >
-                    <hm-uview-text
-                      text="第二步 比赛"
-                      font-size="12px"
-                      :text-align="'left'"
-                      class="ele-6a8da34f-c177-4734-9296-60012cc53022"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-7d3df9ae-0d2a-4b45-b228-d0b656c92814"
-                  >
-                    <hm-uview-text
-                      text="在比赛时间内，打开 Keep，一次性跑完您挑战的公里数即可。"
-                      font-size="12px"
-                      :text-align="'left'"
-                      class="ele-7d3df9ae-0d2a-4b45-b228-d0b656c92814"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-a4e33194-afbc-45e7-bcc8-ddbcf26c79ec"
-                  >
-                    <hm-uview-text
-                      text="-- 户外/跑步机皆可。"
-                      font-size="12px"
-                      :text-align="'left'"
-                      class="ele-a4e33194-afbc-45e7-bcc8-ddbcf26c79ec"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-31fd4b60-ff13-4aae-8696-7a49451ada65"
-                  >
-                    <hm-uview-text
-                      text="第三步 完赛"
-                      font-size="12px"
-                      class="ele-31fd4b60-ff13-4aae-8696-7a49451ada65"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-53f33209-47f4-4d7b-950c-d746bca5fc54"
-                  >
-                    <hm-uview-text
-                      text="奖牌及奖牌配件/周边将在完赛后 30 个工作日内发货；"
-                      font-size="12px"
-                      class="ele-53f33209-47f4-4d7b-950c-d746bca5fc54"
-                    >
-                    </hm-uview-text>
+                    </hm-uview-parse>
                   </view>
                   <view
                     class="ele-wrapper ele-wrapper-30657b3a-defb-4229-91e7-6326e04c3af2"
@@ -669,6 +576,7 @@ import ActivityList from "/@/components/dkn-h-5/activity-list/index.vue";
 import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index.vue";
 import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
+import HmUviewParse from "/@/components/built-in/uniapp-uview-vue3/HmUviewParse.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
@@ -684,6 +592,7 @@ export default {
     PrizeListComponent,
     HmCellList,
     HmUviewPopup,
+    HmUviewParse,
     InformationInputBox,
     HmUviewButton,
     HmUviewRadio,
@@ -692,41 +601,16 @@ export default {
   data() {
     let self = this;
     return {
-      logoImg: {
-        src:
-          "https://static1.keepcdn.com/teyvat-cms/2023/10/24/1698136514335c25agsam_750x1000.jpg",
-        width: "100%",
-        height: "500px",
-      },
       regularPopup: {
-        show: false,
+        show: true,
       },
       viewPopup: {
         show: false,
       },
-      closeTime: {},
       nameText: {
         text: "迪卡侬春节活动",
         fontSize: "16px",
         padding: "0",
-      },
-      activityList: {
-        item: {
-          time: "2023.11.01-2024.02.15",
-          closeTime: "2023.11.01",
-          activityType: "跑步",
-          requirements: "1.314km/5.20km/9.99km",
-          projectList: [
-            {
-              name: "活动1",
-            },
-            {
-              name: "活动2",
-            },
-          ],
-          number: "12331",
-        },
-        closeTime: null,
       },
       activityImgList: {
         funcList: [
@@ -756,9 +640,6 @@ export default {
           },
         ],
       },
-      activityItem: {},
-      activityExtItem: {},
-      activityImgItem: {},
       phoneBox: {
         value: "",
       },
@@ -785,150 +666,10 @@ export default {
     };
   },
   watch: {},
-  async mounted(e) {
-    this.onMounted(e);
+  mounted(e) {
+    this, arguments;
   },
   methods: {
-    onMounted() {
-      let self = this;
-      //大图片
-      self.logoImg.src =
-        "https://static1.keepcdn.com/teyvat-cms/2023/10/24/1698136514335c25agsam_750x1000.jpg";
-      //倒计时
-      self.closeTime.day = "";
-      self.closeTime.hour = "";
-      self.closeTime.minute = "";
-      self.closeTime.second = "";
-
-      //名称
-      self.nameText.text = "";
-
-      //活动列表
-      self.activityList.item = "";
-      //活动图片
-      self.activityImgList.funcList = [];
-
-      //数据对象
-      self.activityItem = {};
-      self.activityExtItem = {};
-      self.activityImgItem = {};
-      self.activityProjectItem = {};
-      self.getActivity = async function (id) {
-        let url = "/api/dkn/activity/list";
-        const res = await self.$getAction(url, { id });
-        if (!res.success || !res.result.records.length > 0) {
-          return;
-        }
-        self.activityItem = res.result.records[0];
-      };
-      self.getActivityExt = async function (activityId) {
-        let url = "/api/dkn/activityExt/list";
-        const res = await self.$getAction(url, { activityId });
-        if (!res.success || !res.result.records.length > 0) {
-          return;
-        }
-        self.activityExtItem = res.result.records[0];
-      };
-      self.getActivityImg = async function (activityId) {
-        let url = "/api/dkn/activityImg/list";
-        const res = await self.$getAction(url, { activityId });
-        if (!res.success || !res.result.records.length > 0) {
-          return;
-        }
-        self.activityImgItem = res.result.records;
-      };
-      self.getActivityProject = async function (activityId) {
-        let url = "/api/dkn/activityProject/list";
-        const res = await self.$getAction(url, { activityId });
-        if (!res.success || !res.result.records.length > 0) {
-          return;
-        }
-        self.activityProjectItem = res.result.records;
-      };
-      self.setData = function () {
-        self.nameText.text = self.activityItem.name;
-        let number = self.activityItem.orders;
-        if (self.activityItem.unrealStatus === 0) {
-          number = self.activityItem.unrealCount + number;
-        }
-        self.activityList.item = {
-          time: `${self.activityItem.startTime}-${self.activityItem.endTime}`,
-          closeTime: self.activityItem.closeTime,
-          activityType: self.activityExtItem.activityType,
-          requirements: self.activityExtItem.requirements,
-          projectList: self.activityProjectItem,
-          number: number,
-        };
-        const time = self.getTimeDifference(
-          new Date(),
-          self.activityList.closeTime
-        );
-        self.closeTime.day = time.days;
-        self.closeTime.hour = time.hour;
-        self.closeTime.minute = time.minute;
-        self.closeTime.second = time.second;
-      };
-      self.setImg = function () {
-        let imgOne = [];
-        let imgTwo = [];
-        self.activityImgItem.forEach((e) => {
-          if (e.type === 0) {
-            imgOne.push(e);
-          } else if (e.type === 1) {
-            imgTwo.push(e);
-          }
-        });
-
-        self.activityImgList.funcList = imgOne.map((x) => {
-          return {
-            bgUrl: self.getImg(x.path),
-            height1: "auto",
-            scoretext: x.name,
-            display: "block",
-            textbottom: x.name,
-          };
-        });
-      };
-      self.getImg = function (url) {
-        if (url.substring(0, 4) === "http") {
-          return url;
-        }
-        return `/api/sys/common/static/${url}`;
-      };
-      self.getTimeDifference = function (startDate, endDate) {
-        // 计算时间差，单位为毫秒
-        const timeDiff = endDate.getTime() - startDate.getTime();
-        // 计算天数
-        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-        // 计算小时数
-        const hours = Math.floor(
-          (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        // 计算分钟数
-        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-        // 计算秒数
-        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-        return {
-          days,
-          hours,
-          minutes,
-          seconds,
-        };
-      };
-      self.getData = function () {
-        self.activityId = self.$route.query.activityId;
-        if (!self.activityId) {
-          return;
-        }
-        self.getActivity(self.activityId);
-        self.getActivityExt(self.activityId);
-        self.getActivityImg(self.activityId);
-        self.getActivityProject(self.activityId);
-        self.setData();
-      };
-      self.getData();
-    },
-
     onEle0Abf487751Bc431D8F1A3C043Bc451FeClick() {
       this.regularPopup.show = true;
     },
@@ -1145,45 +886,7 @@ export default {
   }
 }
 
-.ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2 {
-  width: 100%;
-  text-align: center;
-  margin-top: 24px;
-}
-
-.ele-wrapper-82757320-2908-4ea4-a4a6-d6a672339dab {
-  width: 100%;
-}
-
-.ele-wrapper-f8b609db-e332-45a3-8489-fba690b76d97 {
-  width: 100%;
-}
-
-.ele-wrapper-92d692d3-6c86-4408-8023-fbff541eef72 {
-  width: 100%;
-}
-
-.ele-wrapper-1bc765de-b93e-4b9b-9419-38462cabd3e8 {
-  width: 100%;
-}
-
-.ele-wrapper-6a8da34f-c177-4734-9296-60012cc53022 {
-  width: 100%;
-}
-
-.ele-wrapper-7d3df9ae-0d2a-4b45-b228-d0b656c92814 {
-  width: 100%;
-}
-
-.ele-wrapper-a4e33194-afbc-45e7-bcc8-ddbcf26c79ec {
-  width: 100%;
-}
-
-.ele-wrapper-31fd4b60-ff13-4aae-8696-7a49451ada65 {
-  width: 100%;
-}
-
-.ele-wrapper-53f33209-47f4-4d7b-950c-d746bca5fc54 {
+.ele-wrapper-63de2731-6d75-42cd-bd28-d99b529b8759 {
   width: 100%;
 }
 
