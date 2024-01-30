@@ -1376,7 +1376,7 @@ export default {
 
 .ele-wrapper-6bf03fb4-83a2-441f-866a-b1bed62d2f12 {
   width: 100%;
-  margin-top: 64rpx;
+  margin-top: 68rpx;
 }
 
 .ele-wrapper-canelButton {
