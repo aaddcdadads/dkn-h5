@@ -1045,7 +1045,12 @@ export default {
     onElee174C2E6A7994Ccf8Fa92A81Dc515A6FClick() {
       console.log(this.isProtocol.value);
       if (!this.isProtocol.value) {
-        this.$message.error("请选勾选已阅读并同意活动协议书");
+        uni.showToast({
+          icon: "error",
+          position: "top",
+          title: "请选勾选已阅读并同意活动协议书",
+          duration: 2000,
+        });
         return;
       }
       uni.$u.route(
