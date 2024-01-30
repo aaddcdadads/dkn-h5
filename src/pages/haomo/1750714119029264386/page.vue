@@ -15,25 +15,25 @@
           <view class="ele-wrapper ele-wrapper-topBg">
             <hm-uview-bg-card
               ref="topBg"
+              padding="12"
+              box-shadow-blur="0"
+              box-shadow-v-shadow="0"
+              box-shadow-color="#00000000"
+              border-radius="0"
+              background-color="#FFFFFF00"
               width="100%"
               height=""
-              border-radius="0"
-              padding="12"
-              box-shadow-v-shadow="0"
-              box-shadow-blur="0"
-              box-shadow-color="#00000000"
-              background-color="#FFFFFF00"
               class="ele-topBg"
             >
               <view
                 class="ele-wrapper ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe"
               >
                 <hm-uview-icon
-                  name="question-circle"
+                  label-color="#FFFFFF"
                   color="#FFFFFF"
                   size="20px"
+                  name="question-circle"
                   label="规则"
-                  label-color="#FFFFFF"
                   @click="onEle0Abf487751Bc431D8F1A3C043Bc451FeClick"
                   class="ele-0abf4877-51bc-431d-8f1a-3c043bc451fe"
                 >
@@ -45,14 +45,14 @@
             class="ele-wrapper ele-wrapper-3de94d32-48f2-495a-b447-4ba9360a1ceb"
           >
             <hm-uview-bg-card
+              padding="12"
+              box-shadow-blur="0"
+              box-shadow-v-shadow="0"
+              box-shadow-color="#00000000"
+              border-radius="0"
+              background-color="#FFFFFF00"
               width="100%"
               height=""
-              border-radius="0"
-              padding="12"
-              box-shadow-v-shadow="0"
-              box-shadow-blur="0"
-              box-shadow-color="#00000000"
-              background-color="#FFFFFF00"
               class="ele-3de94d32-48f2-495a-b447-4ba9360a1ceb"
             >
             </hm-uview-bg-card>
@@ -458,8 +458,8 @@
                       <view class="ele-wrapper ele-wrapper-viewInput">
                         <information-input-box
                           ref="viewInput"
-                          placeholder=" 请填写手机验证码"
                           v-model:value="viewInput.value"
+                          placeholder=" 请填写手机验证码"
                           @onCode="onViewInputOnCode"
                           class="ele-viewInput"
                         >
@@ -508,23 +508,23 @@
                 <hm-uview-popup
                   ref="phonePopup"
                   v-model:show="phonePopup.show"
-                  width="80%"
-                  height="180px"
                   border-radius="8px"
                   :closeable="false"
+                  width="80%"
+                  height="180px"
                   class="ele-phonePopup"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-22dc02bc-b7b8-4d6b-83d6-6ee319d12809"
                   >
                     <hm-uview-bg-card
-                      width="100%"
-                      height=""
-                      border-radius="0"
-                      :text-align="'center'"
                       padding="0"
                       box-shadow-color="#00000000"
+                      border-radius="0"
                       background-color="#FFE8EC00"
+                      width="100%"
+                      height=""
+                      :text-align="'center'"
                       class="ele-22dc02bc-b7b8-4d6b-83d6-6ee319d12809"
                     >
                       <view
@@ -548,13 +548,13 @@
                     class="ele-wrapper ele-wrapper-6bf03fb4-83a2-441f-866a-b1bed62d2f12"
                   >
                     <hm-uview-bg-card
-                      width="100%"
-                      height=""
-                      border-radius="0"
-                      :text-align="'center'"
                       padding="0"
                       box-shadow-color="#00000000"
+                      border-radius="0"
                       background-color="#FFE8EC00"
+                      width="100%"
+                      height=""
+                      :text-align="'center'"
                       class="ele-6bf03fb4-83a2-441f-866a-b1bed62d2f12"
                     >
                       <view class="ele-wrapper ele-wrapper-canelButton">
@@ -1090,7 +1090,6 @@ export default {
       this.viewPopup.show = false;
     },
     onSureButtonClick() {
-      this.viewPopup.show = false;
       this.login();
     },
     onElee174C2E6A7994Ccf8Fa92A81Dc515A6FClick() {
@@ -1492,10 +1491,9 @@ export default {
   border-radius: 608rpx;
   float: right;
   text-align: center;
-  padding-top: 8rpx;
   margin-right: 24rpx;
   background: rgba(0, 0, 0, 0.16);
-  padding: 8px 12px;
+  padding: 12rpx 8rpx;
 }
 
 .ele-wrapper-isProtocol {
