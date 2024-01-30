@@ -85,6 +85,7 @@
                           text="报名项目:"
                           font-size="13px"
                           padding="0"
+                          :text-style="{}"
                           class="ele-716406f0-2fda-4cc8-9dc0-457fbd1bcec2"
                         >
                         </hm-uview-text>
@@ -126,6 +127,7 @@
                           text=" 姓名/昵称:"
                           font-size="13px"
                           padding="0"
+                          :text-style="{}"
                           class="ele-a6b059cb-691d-4093-bede-453d1eaf7370"
                         >
                         </hm-uview-text>
@@ -165,6 +167,7 @@
                           text=" 手机号码:"
                           font-size="13px"
                           padding="0"
+                          :text-style="{}"
                           class="ele-df0e3be8-5694-4de1-89ab-efc9e61b2384"
                         >
                         </hm-uview-text>
@@ -204,6 +207,7 @@
                           padding="0"
                           font-size="13px"
                           text="领奖门店:"
+                          :text-style="{}"
                           class="ele-da0d9595-55d9-48cf-b00a-082df56d4a58"
                         >
                         </hm-uview-text>
@@ -243,6 +247,7 @@
                           text="报名时间:"
                           font-size="13px"
                           padding="0"
+                          :text-style="{}"
                           class="ele-1c6f3120-a3af-4da2-91cf-2a913f75e70f"
                         >
                         </hm-uview-text>
@@ -282,6 +287,7 @@
                           text="活动名称:"
                           font-size="13px"
                           padding="0"
+                          :text-style="{}"
                           class="ele-d300e2f4-3555-45fa-a67c-be25208705a0"
                         >
                         </hm-uview-text>
@@ -321,6 +327,7 @@
                           text="核销截止:"
                           font-size="13px"
                           padding="0"
+                          :text-style="{}"
                           class="ele-3ea4931b-f9be-449b-adfa-85aec01fa006"
                         >
                         </hm-uview-text>
@@ -360,6 +367,7 @@
                           text="核销状态:"
                           font-size="13px"
                           padding="0"
+                          :text-style="{}"
                           class="ele-fba91c42-55e1-404b-97e8-0d6ca8b53ff5"
                         >
                         </hm-uview-text>
@@ -390,6 +398,7 @@
                   text=" 返回活动详情页"
                   font-size="1em"
                   color="#409EFF"
+                  :text-style="{}"
                   @onClick="onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick"
                   class="ele-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
                 >
@@ -399,6 +408,7 @@
                 <hm-uview-button
                   ref="Buttonwan"
                   :text="Buttonwan.text"
+                  :custom-style="Buttonwan.customStyle"
                   class="ele-Buttonwan"
                 >
                 </hm-uview-button>
@@ -432,6 +442,7 @@ export default {
     return {
       Buttonwan: {
         text: "核销",
+        customStyle: {},
       },
       HmUviewField1: {
         value: "",
@@ -504,13 +515,14 @@ export default {
 
 .ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5 {
   width: 100%;
-  margin: 15px 0px;
   display: flex;
   align-items: center;
-  margin-top: -5px;
+  margin: 15px 0px;
   /deep/.hm-bg-card {
     margin-top: 15px !important;
   }
+  display: flex;
+  justify-content: space-between;
 }
 
 .ele-wrapper-716406f0-2fda-4cc8-9dc0-457fbd1bcec2 {

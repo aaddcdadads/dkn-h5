@@ -247,13 +247,12 @@
                           </view>
                         </hm-uview-bg-card>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609"
-                      >
+                      <view class="ele-wrapper ele-wrapper-activityList">
                         <activity-list
+                          ref="activityList"
                           time="2023.11.01-2024.02.15"
                           number=" 154,480 "
-                          class="ele-9243b683-57b5-45b7-8c57-56a5ffd4a609"
+                          class="ele-activityList"
                         >
                         </activity-list>
                       </view>
@@ -900,7 +899,7 @@ export default {
   margin-bottom: 40rpx;
 }
 
-.ele-wrapper-9243b683-57b5-45b7-8c57-56a5ffd4a609 {
+.ele-wrapper-activityList {
   margin: 12px 0;
   width: 100%;
 }
