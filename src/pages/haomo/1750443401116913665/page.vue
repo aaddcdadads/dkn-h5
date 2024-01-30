@@ -785,7 +785,6 @@ export default {
   margin-top: 30%;
   height: 50px;
   margin-bottom: 20px;
-  position: fixed;
   /deep/.ele-Buttonwan {
     font-weight: 400;
     background-color: rgb(89, 213, 165);
