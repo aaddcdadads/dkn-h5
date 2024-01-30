@@ -504,14 +504,13 @@ export default {
 
 .ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5 {
   width: 100%;
+  margin: 15px 0px;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin-top: -5px;
   /deep/.hm-bg-card {
     margin-top: 15px !important;
   }
-  display: flex;
-  justify-content: space-between;
 }
 
 .ele-wrapper-716406f0-2fda-4cc8-9dc0-457fbd1bcec2 {
