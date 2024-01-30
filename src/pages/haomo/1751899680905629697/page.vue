@@ -18,7 +18,7 @@
             <hm-uview-popup
               :show="true"
               :mode="'bottom'"
-              height="400px"
+              height="420px"
               :mask-close-able="false"
               border-radius="8px"
               :closeable="false"
@@ -76,9 +76,9 @@
                       title=""
                       :list="[
                         { name: '活动名称', disabled: false },
-                        { name: '活动名称', disabled: false },
-                        { name: '活动名称', disabled: false },
-                        { name: '活动名称', disabled: false },
+                        { name: '活动名称1', disabled: false },
+                        { name: '活动名称2', disabled: false },
+                        { name: '活动名称3', disabled: false },
                       ]"
                       class="ele-d6daa484-d6ce-4792-9194-97a076552b17"
                     >
@@ -150,15 +150,15 @@ export default {
             disabled: false,
           },
           {
-            name: "活动名称",
+            name: "活动名称1",
             disabled: false,
           },
           {
-            name: "活动名称",
+            name: "活动名称2",
             disabled: false,
           },
           {
-            name: "活动名称",
+            name: "活动名称3",
             disabled: false,
           },
         ],
