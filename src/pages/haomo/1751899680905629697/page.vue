@@ -285,10 +285,14 @@ export default {
   /deep/.u-radio {
     width: 100% !important;
     position: relative;
+    height: 72rpx;
     border-bottom: 1px solid #f5f5f5 !important;
   }
   /deep/.u-clearfix {
     width: 100% !important;
+  }
+  /deep/.u-radio__label {
+    font-size: 14px !important;
   }
   height: 300px;
   overflow: scroll;
