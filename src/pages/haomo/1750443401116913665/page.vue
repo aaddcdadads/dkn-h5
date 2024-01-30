@@ -98,7 +98,18 @@
                             <view
                               class="ele-wrapper ele-wrapper-b12fd4cd-2ab0-491d-9db5-2ba96dd31709"
                             >
-                              <hm-uview-field value=""> </hm-uview-field>
+                              <hm-uview-field
+                                value=""
+                                label=""
+                                placeholder="报名手机号码"
+                                label-width="0"
+                                icon=""
+                                right-icon=""
+                                :border-bottom="false"
+                                :disabled="true"
+                                class="ele-b12fd4cd-2ab0-491d-9db5-2ba96dd31709"
+                              >
+                              </hm-uview-field>
                             </view>
                           </template>
                         </hm-loop>
@@ -531,6 +542,27 @@ export default {
 .ele-wrapper-716406f0-2fda-4cc8-9dc0-457fbd1bcec2 {
   padding: 13px 7px;
   vertical-align: top;
+}
+
+.ele-wrapper-b12fd4cd-2ab0-491d-9db5-2ba96dd31709 {
+  width: 65%;
+  height: 45px;
+  margin-right: 10%;
+  /deep/.u-border-bottom {
+    display: flex;
+    align-items: center;
+    height: 45px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
+  /deep/.ele-HmUviewField3 {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
