@@ -85,36 +85,36 @@
             class="ele-wrapper ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"
           >
             <hm-uview-bg-card
-              width="100%"
-              height=""
-              border-radius="0"
               padding="0"
               box-shadow-color="#00000000"
+              border-radius="0"
+              width="100%"
+              height=""
               class="ele-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"
             >
               <view class="ele-wrapper ele-wrapper-colourCard">
                 <hm-uview-bg-card
                   ref="colourCard"
-                  :width="colourCard.width"
-                  :height="colourCard.height"
-                  :border-radius="colourCard.borderRadius"
                   :padding="colourCard.padding"
                   :box-shadow-color="colourCard.boxShadowColor"
+                  :border-radius="colourCard.borderRadius"
                   :background-color="colourCard.backgroundColor"
+                  :width="colourCard.width"
+                  :height="colourCard.height"
                   class="ele-colourCard"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-d54b5914-a084-4a9e-9204-991bcc25ecf5"
                   >
                     <hm-uview-bg-card
+                      padding="0"
+                      box-shadow-blur="0"
+                      box-shadow-v-shadow="0"
+                      box-shadow-color="#00000000"
+                      border-radius="0"
+                      background-color="#FFFFFF00"
                       width="100%"
                       height=""
-                      border-radius="0"
-                      padding="0"
-                      box-shadow-v-shadow="0"
-                      box-shadow-blur="0"
-                      box-shadow-color="#00000000"
-                      background-color="#FFFFFF00"
                       class="ele-d54b5914-a084-4a9e-9204-991bcc25ecf5"
                     >
                       <view class="ele-wrapper ele-wrapper-nameText">
@@ -133,10 +133,10 @@
                         <uni-countdown
                           background-color="#00000000"
                           color="#FFFFFF"
-                          :font-size="11"
-                          splitor-color="#666666"
-                          :day="19"
                           :hour="15"
+                          splitor-color="#666666"
+                          :font-size="11"
+                          :day="19"
                           :minute="13"
                           :second="17"
                           class="ele-4f853c6d-0b81-4d35-8ce5-ac7316260eae"
@@ -160,25 +160,25 @@
                   <view class="ele-wrapper ele-wrapper-activityBg">
                     <hm-uview-bg-card
                       ref="activityBg"
+                      :padding="activityBg.padding"
+                      :border-radius="activityBg.borderRadius"
+                      :background-color="activityBg.backgroundColor"
                       :width="activityBg.width"
                       :height="activityBg.height"
-                      :border-radius="activityBg.borderRadius"
-                      :padding="activityBg.padding"
-                      :background-color="activityBg.backgroundColor"
                       class="ele-activityBg"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-951ec1d4-209a-48cc-a908-c78236487f39"
                       >
                         <hm-uview-bg-card
+                          padding="0"
+                          box-shadow-blur="0"
+                          box-shadow-v-shadow="0"
+                          box-shadow-color="#00000000"
+                          border-radius="0"
+                          background-color="#FFFFFF1F"
                           width="100%"
                           height=""
-                          border-radius="0"
-                          padding="0"
-                          box-shadow-v-shadow="0"
-                          box-shadow-blur="0"
-                          box-shadow-color="#00000000"
-                          background-color="#FFFFFF1F"
                           class="ele-951ec1d4-209a-48cc-a908-c78236487f39"
                         >
                           <view
@@ -186,8 +186,8 @@
                           >
                             <hm-uview-image
                               width="100%"
-                              height="100%"
                               border-redius="50%"
+                              height="100%"
                               class="ele-4f1cb12e-36cb-4378-b823-05b5d45354ab"
                             >
                             </hm-uview-image>
@@ -196,10 +196,10 @@
                             class="ele-wrapper ele-wrapper-ad039bb7-8f55-4ab8-98a8-54d1f73db365"
                           >
                             <hm-uview-text
-                              text="Keep ·HelloKitty系列"
-                              font-size="12px"
-                              color="#FFFFFF"
                               padding="0"
+                              color="#FFFFFF"
+                              font-size="12px"
+                              text="Keep ·HelloKitty系列"
                               class="ele-ad039bb7-8f55-4ab8-98a8-54d1f73db365"
                             >
                             </hm-uview-text>
@@ -208,11 +208,11 @@
                             class="ele-wrapper ele-wrapper-f1b5f026-f12a-46a9-b78f-dea0efd75a30"
                           >
                             <hm-uview-icon
-                              name="arrow-right"
+                              label-color="#FFFFFF"
                               color="#FFFFFF99"
                               size="12px"
+                              name="arrow-right"
                               label=""
-                              label-color="#FFFFFF"
                               class="ele-f1b5f026-f12a-46a9-b78f-dea0efd75a30"
                             >
                             </hm-uview-icon>
@@ -223,12 +223,12 @@
                         class="ele-wrapper ele-wrapper-db5afb3e-f8de-4171-94e9-286964bcb67c"
                       >
                         <hm-uview-bg-card
-                          width="100%"
-                          height=""
-                          border-radius="12"
                           padding="0"
                           box-shadow-color="#00000000"
+                          border-radius="12"
                           background-color="#F797BD00"
+                          width="100%"
+                          height=""
                           class="ele-db5afb3e-f8de-4171-94e9-286964bcb67c"
                         >
                           <view
@@ -248,8 +248,8 @@
                       <view class="ele-wrapper ele-wrapper-activityList">
                         <activity-list
                           ref="activityList"
-                          :item="activityList.item"
                           :background-color="activityList.backgroundColor"
+                          :item="activityList.item"
                           :text-color="activityList.textColor"
                           class="ele-activityList"
                         >
@@ -261,11 +261,11 @@
                     class="ele-wrapper ele-wrapper-76b3694d-443e-4d62-8c58-80e0356f7fa4"
                   >
                     <hm-uview-text
-                      text="活动奖品"
-                      font-size="16px"
-                      color="#000000"
-                      bg-color="#FFFFFF00"
                       padding="0"
+                      color="#000000"
+                      font-size="16px"
+                      text="活动奖品"
+                      bg-color="#FFFFFF00"
                       class="ele-76b3694d-443e-4d62-8c58-80e0356f7fa4"
                     >
                     </hm-uview-text>
@@ -274,35 +274,35 @@
                     class="ele-wrapper ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5"
                   >
                     <hm-uview-bg-card
+                      padding="0"
+                      border-radius="12"
+                      background-color="#F797BD00"
                       width="100%"
                       height=""
-                      border-radius="12"
-                      padding="0"
-                      background-color="#F797BD00"
                       class="ele-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-67658805-d92e-4e1f-8067-6a180eca6391"
                       >
                         <hm-uview-bg-card
+                          padding="0"
+                          box-shadow-blur="0"
+                          box-shadow-v-shadow="0"
+                          box-shadow-color="#00000000"
+                          border-radius="0"
+                          background-color="#FFFFFF00"
                           width="100%"
                           height=""
-                          border-radius="0"
-                          padding="0"
-                          box-shadow-v-shadow="0"
-                          box-shadow-blur="0"
-                          box-shadow-color="#00000000"
-                          background-color="#FFFFFF00"
                           class="ele-67658805-d92e-4e1f-8067-6a180eca6391"
                         >
                           <view class="ele-wrapper ele-wrapper-activityImgList">
                             <prize-list-component
                               ref="activityImgList"
                               :func-list="activityImgList.funcList"
-                              :style="activityImgList.style"
                               :background-color="
                                 activityImgList.backgroundColor
                               "
+                              :style="activityImgList.style"
                               class="ele-activityImgList"
                             >
                             </prize-list-component>
@@ -327,14 +327,14 @@
                     class="ele-wrapper ele-wrapper-0d696b7e-8100-4e0a-a949-9e8788ae1cec"
                   >
                     <hm-uview-bg-card
+                      padding="0"
+                      box-shadow-blur="0"
+                      box-shadow-v-shadow="0"
+                      box-shadow-color="#00000000"
+                      border-radius="12"
+                      background-color="#F797BD00"
                       width="100%"
                       height="400"
-                      border-radius="12"
-                      padding="0"
-                      box-shadow-v-shadow="0"
-                      box-shadow-blur="0"
-                      box-shadow-color="#00000000"
-                      background-color="#F797BD00"
                       class="ele-0d696b7e-8100-4e0a-a949-9e8788ae1cec"
                     >
                     </hm-uview-bg-card>
@@ -343,11 +343,11 @@
                     class="ele-wrapper ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550"
                   >
                     <hm-uview-bg-card
+                      padding="12"
+                      border-radius="12"
+                      background-color="#F797BD"
                       width="100%"
                       height=""
-                      border-radius="12"
-                      padding="12"
-                      background-color="#F797BD"
                       class="ele-9bb5842b-b006-40fa-a5a0-9c71da20a550"
                     >
                       <view
@@ -381,9 +381,9 @@
                   ref="regularPopup"
                   v-model:show="regularPopup.show"
                   :mode="'bottom'"
+                  :close-icon-pos="'top-left'"
                   width="100%"
                   height="50%"
-                  :close-icon-pos="'top-left'"
                   class="ele-regularPopup"
                 >
                   <view
@@ -414,10 +414,10 @@
                 <hm-uview-popup
                   ref="viewPopup"
                   v-model:show="viewPopup.show"
-                  width="80%"
-                  height="220px"
                   border-radius="8px"
                   :closeable="false"
+                  width="80%"
+                  height="220px"
                   @open="onViewPopupOpen"
                   class="ele-viewPopup"
                 >
@@ -438,8 +438,8 @@
                         class="ele-wrapper ele-wrapper-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f"
                       >
                         <hm-uview-text
-                          text="用户登录查看报名信息"
                           font-size="16px"
+                          text="用户登录查看报名信息"
                           class="ele-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f"
                         >
                         </hm-uview-text>
@@ -447,10 +447,10 @@
                       <view class="ele-wrapper ele-wrapper-phoneBox">
                         <information-input-box
                           ref="phoneBox"
-                          v-model:value="phoneBox.value"
                           right-src=""
                           :show-code="false"
                           placeholder=" 请填写报名手机号码"
+                          v-model:value="phoneBox.value"
                           class="ele-phoneBox"
                         >
                         </information-input-box>
@@ -458,8 +458,8 @@
                       <view class="ele-wrapper ele-wrapper-viewInput">
                         <information-input-box
                           ref="viewInput"
-                          v-model:value="viewInput.value"
                           placeholder=" 请填写手机验证码"
+                          v-model:value="viewInput.value"
                           @onCode="onViewInputOnCode"
                           class="ele-viewInput"
                         >
@@ -471,20 +471,20 @@
                     class="ele-wrapper ele-wrapper-c43ff619-898c-4446-a22f-6dc191e8ac6e"
                   >
                     <hm-uview-bg-card
-                      width="100%"
-                      height=""
-                      border-radius="0"
-                      :text-align="'center'"
                       padding="0"
                       box-shadow-color="#00000000"
+                      border-radius="0"
                       background-color="#FFE8EC00"
+                      width="100%"
+                      height=""
+                      :text-align="'center'"
                       class="ele-c43ff619-898c-4446-a22f-6dc191e8ac6e"
                     >
                       <view class="ele-wrapper ele-wrapper-canelButton">
                         <hm-uview-button
                           ref="canelButton"
-                          :type="canelButton.type"
                           :text="canelButton.text"
+                          :type="canelButton.type"
                           @click="onCanelButtonClick"
                           class="ele-canelButton"
                         >
@@ -493,8 +493,8 @@
                       <view class="ele-wrapper ele-wrapper-sureButton">
                         <hm-uview-button
                           ref="sureButton"
-                          :type="sureButton.type"
                           :text="sureButton.text"
+                          :type="sureButton.type"
                           @click="onSureButtonClick"
                           class="ele-sureButton"
                         >
@@ -510,7 +510,7 @@
                 <hm-uview-popup
                   :show="true"
                   width="80%"
-                  height="220px"
+                  height="180px"
                   border-radius="8px"
                   :closeable="false"
                   class="ele-b8768735-c882-456e-b133-f6da3a52f8f5"
@@ -531,7 +531,7 @@
                       <view
                         class="ele-wrapper ele-wrapper-6102459c-f347-4922-ad1d-8cd25812aa57"
                       >
-                        <hm-uview-text text="活动咨询电话" font-size="16px">
+                        <hm-uview-text font-size="16px" text="活动咨询电话">
                         </hm-uview-text>
                       </view>
                       <view
@@ -562,8 +562,8 @@
                       <view class="ele-wrapper ele-wrapper-canelButton">
                         <hm-uview-button
                           ref="canelButton"
-                          :type="canelButton.type"
                           :text="canelButton.text"
+                          :type="canelButton.type"
                           class="ele-canelButton"
                         >
                         </hm-uview-button>
@@ -571,8 +571,8 @@
                       <view class="ele-wrapper ele-wrapper-sureButton">
                         <hm-uview-button
                           ref="sureButton"
-                          :type="sureButton.type"
                           :text="sureButton.text"
+                          :type="sureButton.type"
                           class="ele-sureButton"
                         >
                         </hm-uview-button>
@@ -767,18 +767,18 @@ export default {
       },
       colourCard: {
         backgroundColor: "#F6D7E6",
-        width: "100%",
-        height: "",
-        borderRadius: "0",
         padding: "12",
         boxShadowColor: "#00000000",
+        borderRadius: "0",
+        width: "100%",
+        height: "",
       },
       activityBg: {
         backgroundColor: "#FEEFF7",
+        padding: "0",
+        borderRadius: "",
         width: "100%",
         height: "",
-        borderRadius: "",
-        padding: "0",
       },
       activityItem: {},
       activityProjectItem: {},
@@ -794,12 +794,12 @@ export default {
         value: "",
       },
       canelButton: {
-        type: "info",
         text: "取消",
+        type: "info",
       },
       sureButton: {
-        type: "info",
         text: "确认",
+        type: "info",
       },
     };
   },
@@ -1367,12 +1367,12 @@ export default {
 
 .ele-wrapper-22dc02bc-b7b8-4d6b-83d6-6ee319d12809 {
   width: 100%;
-  margin-top: 64rpx;
+  margin-top: 32rpx;
 }
 
 .ele-wrapper-bff77688-bc73-4049-8b13-351754f30171 {
   width: 100%;
-  margin-top: 64rpx;
+  margin-top: 32rpx;
 }
 
 .ele-wrapper-6bf03fb4-83a2-441f-866a-b1bed62d2f12 {
