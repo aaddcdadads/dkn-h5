@@ -408,91 +408,6 @@
                     >
                     </hm-uview-parse>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-82757320-2908-4ea4-a4a6-d6a672339dab"
-                  >
-                    <hm-uview-text
-                      font-size="12px"
-                      text="玩法介绍"
-                      class="ele-82757320-2908-4ea4-a4a6-d6a672339dab"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-f8b609db-e332-45a3-8489-fba690b76d97"
-                  >
-                    <hm-uview-text
-                      font-size="12px"
-                      text="第一步 报名"
-                      class="ele-f8b609db-e332-45a3-8489-fba690b76d97"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-92d692d3-6c86-4408-8023-fbff541eef72"
-                  >
-                    <hm-uview-text
-                      font-size="12px"
-                      text="点击页面下方的「马上报名」，选择自己要挑战的公里数。"
-                      :text-align="'left'"
-                      class="ele-92d692d3-6c86-4408-8023-fbff541eef72"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-1bc765de-b93e-4b9b-9419-38462cabd3e8"
-                  >
-                    <hm-uview-text
-                      font-size="12px"
-                      text="-- 选择公里数对应的奖牌套餐，提交订单支付并填写收件信息即可在完赛后获得奖牌/奖牌配件/周边。"
-                      :text-align="'left'"
-                      class="ele-1bc765de-b93e-4b9b-9419-38462cabd3e8"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-6a8da34f-c177-4734-9296-60012cc53022"
-                  >
-                    <hm-uview-text
-                      text="第二步 比赛"
-                      font-size="12px"
-                      :text-align="'left'"
-                      class="ele-6a8da34f-c177-4734-9296-60012cc53022"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-7d3df9ae-0d2a-4b45-b228-d0b656c92814"
-                  >
-                    <hm-uview-text
-                      font-size="12px"
-                      text=""
-                      :text-align="'left'"
-                      class="ele-7d3df9ae-0d2a-4b45-b228-d0b656c92814"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-a4e33194-afbc-45e7-bcc8-ddbcf26c79ec"
-                  >
-                    <hm-uview-text
-                      font-size="12px"
-                      text="-- 户外/跑步机皆可。"
-                      :text-align="'left'"
-                      class="ele-a4e33194-afbc-45e7-bcc8-ddbcf26c79ec"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-31fd4b60-ff13-4aae-8696-7a49451ada65"
-                  >
-                    <hm-uview-text
-                      font-size="12px"
-                      text="第三步 完赛"
-                      class="ele-31fd4b60-ff13-4aae-8696-7a49451ada65"
-                    >
-                    </hm-uview-text>
-                  </view>
                 </hm-uview-popup>
               </view>
               <view class="ele-wrapper ele-wrapper-viewPopup">
@@ -1252,38 +1167,6 @@ export default {
   width: 100%;
   text-align: center;
   margin-top: 24px;
-}
-
-.ele-wrapper-82757320-2908-4ea4-a4a6-d6a672339dab {
-  width: 100%;
-}
-
-.ele-wrapper-f8b609db-e332-45a3-8489-fba690b76d97 {
-  width: 100%;
-}
-
-.ele-wrapper-92d692d3-6c86-4408-8023-fbff541eef72 {
-  width: 100%;
-}
-
-.ele-wrapper-1bc765de-b93e-4b9b-9419-38462cabd3e8 {
-  width: 100%;
-}
-
-.ele-wrapper-6a8da34f-c177-4734-9296-60012cc53022 {
-  width: 100%;
-}
-
-.ele-wrapper-7d3df9ae-0d2a-4b45-b228-d0b656c92814 {
-  width: 100%;
-}
-
-.ele-wrapper-a4e33194-afbc-45e7-bcc8-ddbcf26c79ec {
-  width: 100%;
-}
-
-.ele-wrapper-31fd4b60-ff13-4aae-8696-7a49451ada65 {
-  width: 100%;
 }
 
 .ele-wrapper-viewPopup {
