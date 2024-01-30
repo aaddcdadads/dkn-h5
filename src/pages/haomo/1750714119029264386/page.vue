@@ -458,8 +458,8 @@
                       <view class="ele-wrapper ele-wrapper-viewInput">
                         <information-input-box
                           ref="viewInput"
-                          v-model:value="viewInput.value"
                           placeholder=" 请填写手机验证码"
+                          v-model:value="viewInput.value"
                           @onCode="onViewInputOnCode"
                           class="ele-viewInput"
                         >
@@ -493,8 +493,8 @@
                       <view class="ele-wrapper ele-wrapper-sureButton">
                         <hm-uview-button
                           ref="sureButton"
-                          :type="sureButton.type"
                           :text="sureButton.text"
+                          :type="sureButton.type"
                           @click="onSureButtonClick"
                           class="ele-sureButton"
                         >
@@ -508,10 +508,10 @@
                 <hm-uview-popup
                   ref="phonePopup"
                   v-model:show="phonePopup.show"
-                  border-radius="8px"
-                  :closeable="false"
                   width="80%"
                   height="180px"
+                  border-radius="8px"
+                  :closeable="false"
                   class="ele-phonePopup"
                 >
                   <view
@@ -617,6 +617,7 @@
                   size="20px"
                   label="活动咨询"
                   label-color="#FFFFFF"
+                  @click="onEle8F33B075711749EdBd18640Aa28Fa939Click"
                   class="ele-8f33b075-7117-49ed-bd18-640aa28fa939"
                 >
                 </hm-uview-icon>
@@ -722,6 +723,9 @@ export default {
       viewPopup: {
         show: false,
       },
+      phonePopup: {
+        show: false,
+      },
       isProtocol: {
         value: "",
         list: [
@@ -817,16 +821,13 @@ export default {
       viewInput: {
         value: "",
       },
-      phonePopup: {
-        show: false,
-      },
       canelButton: {
         text: "取消",
         type: "info",
       },
       sureButton: {
-        type: "info",
         text: "确认",
+        type: "info",
       },
     };
   },
@@ -1091,6 +1092,9 @@ export default {
     },
     onSureButtonClick() {
       this.login();
+    },
+    onEle8F33B075711749EdBd18640Aa28Fa939Click() {
+      this.phonePopup.show = true;
     },
     onElee174C2E6A7994Ccf8Fa92A81Dc515A6FClick() {
       console.log(this.isProtocol.value);
