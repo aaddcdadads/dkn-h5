@@ -589,8 +589,8 @@
                         class="ele-wrapper ele-wrapper-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f"
                       >
                         <hm-uview-text
-                          font-size="16px"
                           text="用户登录查看报名信息"
+                          font-size="16px"
                           class="ele-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f"
                         >
                         </hm-uview-text>
@@ -598,10 +598,10 @@
                       <view class="ele-wrapper ele-wrapper-phoneBox">
                         <information-input-box
                           ref="phoneBox"
+                          v-model:value="phoneBox.value"
                           right-src=""
                           :show-code="false"
                           placeholder=" 请填写报名手机号码"
-                          v-model:value="phoneBox.value"
                           class="ele-phoneBox"
                         >
                         </information-input-box>
@@ -609,8 +609,9 @@
                       <view class="ele-wrapper ele-wrapper-viewInput">
                         <information-input-box
                           ref="viewInput"
-                          placeholder=" 请填写手机验证码"
                           v-model:value="viewInput.value"
+                          placeholder=" 请填写手机验证码"
+                          @onCode="onViewInputOnCode"
                           class="ele-viewInput"
                         >
                         </information-input-box>
@@ -621,20 +622,20 @@
                     class="ele-wrapper ele-wrapper-c43ff619-898c-4446-a22f-6dc191e8ac6e"
                   >
                     <hm-uview-bg-card
-                      padding="0"
-                      box-shadow-color="#00000000"
-                      border-radius="0"
-                      background-color="#FFE8EC00"
                       width="100%"
                       height=""
+                      border-radius="0"
                       :text-align="'center'"
+                      padding="0"
+                      box-shadow-color="#00000000"
+                      background-color="#FFE8EC00"
                       class="ele-c43ff619-898c-4446-a22f-6dc191e8ac6e"
                     >
                       <view class="ele-wrapper ele-wrapper-canelButton">
                         <hm-uview-button
                           ref="canelButton"
-                          :text="canelButton.text"
                           :type="canelButton.type"
+                          :text="canelButton.text"
                           @click="onCanelButtonClick"
                           class="ele-canelButton"
                         >
@@ -643,8 +644,8 @@
                       <view class="ele-wrapper ele-wrapper-sureButton">
                         <hm-uview-button
                           ref="sureButton"
-                          :text="sureButton.text"
                           :type="sureButton.type"
+                          :text="sureButton.text"
                           @click="onSureButtonClick"
                           class="ele-sureButton"
                         >
@@ -866,12 +867,12 @@ export default {
         value: "",
       },
       canelButton: {
-        text: "取消",
         type: "info",
+        text: "取消",
       },
       sureButton: {
-        text: "确认",
         type: "info",
+        text: "确认",
       },
     };
   },
@@ -1038,6 +1039,9 @@ export default {
       this.regularPopup.show = true;
     },
     onViewPopupOpen() {
+      console.log(1);
+    },
+    onViewInputOnCode() {
       console.log(1);
     },
     onCanelButtonClick() {
