@@ -95,13 +95,28 @@
                           ref="HmUviewField1"
                           v-model:value="HmUviewField1.value"
                           label=""
-                          placeholder="报名项目名称 x 数量"
+                          placeholder="报名手机号码"
                           label-width="0"
                           icon=""
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
                           class="ele-HmUviewField1"
+                        >
+                        </hm-uview-field>
+                      </view>
+                      <view class="ele-wrapper ele-wrapper-HmUviewField9">
+                        <hm-uview-field
+                          ref="HmUviewField9"
+                          v-model:value="HmUviewField9.value"
+                          label=""
+                          placeholder="报名手机号码"
+                          label-width="0"
+                          icon=""
+                          right-icon=""
+                          :border-bottom="false"
+                          :disabled="true"
+                          class="ele-HmUviewField9"
                         >
                         </hm-uview-field>
                       </view>
@@ -452,6 +467,9 @@ export default {
       HmUviewField1: {
         value: "",
       },
+      HmUviewField9: {
+        value: "",
+      },
       HmUviewField2: {
         value: "",
       },
@@ -548,7 +566,28 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField1 {
+  /deep/.ele-HmUviewField3 {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.ele-wrapper-HmUviewField9 {
+  width: 65%;
+  height: 45px;
+  margin-right: 10%;
+  /deep/.u-border-bottom {
+    display: flex;
+    align-items: center;
+    height: 45px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
+  /deep/.ele-HmUviewField9 {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
