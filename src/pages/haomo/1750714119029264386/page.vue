@@ -1345,7 +1345,7 @@ export default {
     background-color: #feeff700 !important;
   }
   /deep/.ele-activityList {
-    background: red !important;
+    background: #feeff700 !important;
   }
 }
 
