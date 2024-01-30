@@ -103,7 +103,7 @@
                                 ref="HmUviewField1"
                                 v-model:value="HmUviewField1.value"
                                 label=""
-                                placeholder="报名手机号码"
+                                placeholder="报名项目名称 x 数量"
                                 label-width="0"
                                 icon=""
                                 right-icon=""
@@ -584,6 +584,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
+  margin-top: 0px !important;
 }
 
 .ele-wrapper-a6b059cb-691d-4093-bede-453d1eaf7370 {
