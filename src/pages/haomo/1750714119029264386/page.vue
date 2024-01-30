@@ -300,6 +300,9 @@
                               ref="activityImgList"
                               :func-list="activityImgList.funcList"
                               :style="activityImgList.style"
+                              :background-color="
+                                activityImgList.backgroundColor
+                              "
                               class="ele-activityImgList"
                             >
                             </prize-list-component>
@@ -818,6 +821,8 @@ export default {
               "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
           },
         ],
+        backgroundColor: "#feeff7",
+        textColor: null,
         style: [
           {
             margin: "0 10px",
@@ -899,8 +904,10 @@ export default {
       //卡片背景色
       self.activityBg.backgroundColor = "#FEEFF7";
       self.activityList.backgroundColor = "#F6D7E6";
+      self.activityImgList.backgroundColor = "#FEEFF7";
       //文字颜色
       self.activityList.textColor = "#D8477B";
+      self.activityImgList.textColor = "#D8477B";
       //数据对象
       self.activityItem = {};
       self.activityExtItem = {};
@@ -923,7 +930,8 @@ export default {
         self.activityBg.backgroundColor = self.activityItem.colour;
         self.activityList.backgroundColor = self.activityItem.colour;
         self.activityList.textColor = self.activityItem.textColour;
-
+        self.activityImgList.backgroundColor = self.activityItem.colour;
+        self.activityImgList.textColor = self.activityItem.textColour;
         self.nameText.text = self.activityItem.name;
         let number = self.activityItem.orders;
         if (self.activityItem.unrealStatus === 0) {
