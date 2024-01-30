@@ -827,6 +827,40 @@ export default {
           },
         ],
       },
+      listCompanent: {
+        funcList: [
+          {
+            height1: "auto",
+            display: "block",
+            scoretext: "奖品",
+            textbottom: "奖品",
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+          },
+          {
+            height1: "auto",
+            display: "block",
+            scoretext: "奖品",
+            textbottom: "奖品",
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+          },
+          {
+            height1: "auto",
+            display: "block",
+            scoretext: "奖品",
+            textbottom: "奖品",
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+          },
+        ],
+        style: [
+          {
+            margin: "0 0",
+            width: "100%",
+          },
+        ],
+      },
       colourCard: {
         backgroundColor: "#F6D7E6",
         width: "100%",
@@ -862,40 +896,6 @@ export default {
       viewInput: {
         value: "",
       },
-      listCompanent: {
-        funcList: [
-          {
-            height1: "auto",
-            display: "block",
-            scoretext: "奖品",
-            textbottom: "奖品",
-            bgUrl:
-              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
-          },
-          {
-            height1: "auto",
-            display: "block",
-            scoretext: "奖品",
-            textbottom: "奖品",
-            bgUrl:
-              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
-          },
-          {
-            height1: "auto",
-            display: "block",
-            scoretext: "奖品",
-            textbottom: "奖品",
-            bgUrl:
-              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
-          },
-        ],
-        style: [
-          {
-            margin: "0 0",
-            width: "100%",
-          },
-        ],
-      },
       canelButton: {
         text: "取消",
         type: "info",
@@ -929,7 +929,7 @@ export default {
       self.activityList.item = "";
       //活动图片
       self.activityImgList.funcList = [];
-
+      self.listCompanent.funcList = [];
       //颜色
       //背景色
       self.colourCard.backgroundColor = "#F6D7E6";
@@ -1040,6 +1040,15 @@ export default {
         });
         imgOne = imgTwo.sort((a, b) => a.sortNo - b.sortNo);
         self.logoImg.src = self.getImg(imgOne[0].path);
+        self.listCompanent.funcList = imgOne.map((x) => {
+          return {
+            bgUrl: self.getImg(x.path),
+            height1: "auto",
+            scoretext: x.name,
+            display: "block",
+            textbottom: x.name,
+          };
+        });
       };
       self.getImg = function (url) {
         if (url.substring(0, 4) === "http") {
