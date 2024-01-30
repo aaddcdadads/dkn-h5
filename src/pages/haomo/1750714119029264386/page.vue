@@ -590,7 +590,7 @@ export default {
     let self = this;
     return {
       regularPopup: {
-        show: true,
+        show: false,
       },
       viewPopup: {
         show: false,
