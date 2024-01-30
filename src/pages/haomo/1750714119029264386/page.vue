@@ -1493,7 +1493,7 @@ export default {
   text-align: center;
   margin-right: 24rpx;
   background: rgba(0, 0, 0, 0.16);
-  padding: 12rpx 8rpx;
+  padding: 10rpx 10rpx;
 }
 
 .ele-wrapper-isProtocol {
