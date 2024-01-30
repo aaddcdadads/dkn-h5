@@ -515,6 +515,72 @@
                   :closeable="false"
                   class="ele-b8768735-c882-456e-b133-f6da3a52f8f5"
                 >
+                  <view
+                    class="ele-wrapper ele-wrapper-22dc02bc-b7b8-4d6b-83d6-6ee319d12809"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius="0"
+                      :text-align="'center'"
+                      padding="0"
+                      box-shadow-color="#00000000"
+                      background-color="#FFE8EC00"
+                      class="ele-22dc02bc-b7b8-4d6b-83d6-6ee319d12809"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-6102459c-f347-4922-ad1d-8cd25812aa57"
+                      >
+                        <hm-uview-text text="活动咨询电话" font-size="16px">
+                        </hm-uview-text>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-bff77688-bc73-4049-8b13-351754f30171"
+                      >
+                        <hm-uview-text
+                          text="400-888-88888"
+                          font-size="16px"
+                          class="ele-bff77688-bc73-4049-8b13-351754f30171"
+                        >
+                        </hm-uview-text>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-6bf03fb4-83a2-441f-866a-b1bed62d2f12"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius="0"
+                      :text-align="'center'"
+                      padding="0"
+                      box-shadow-color="#00000000"
+                      background-color="#FFE8EC00"
+                      class="ele-6bf03fb4-83a2-441f-866a-b1bed62d2f12"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-0013d4e1-b659-451e-ab89-589b52d1357a"
+                      >
+                        <hm-uview-button
+                          :type="'info'"
+                          text="取消"
+                          class="ele-0013d4e1-b659-451e-ab89-589b52d1357a"
+                        >
+                        </hm-uview-button>
+                      </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-83ea8c45-8f8b-4fb2-8880-039a4ca67cc9"
+                      >
+                        <hm-uview-button
+                          :type="'info'"
+                          text="确认"
+                          class="ele-83ea8c45-8f8b-4fb2-8880-039a4ca67cc9"
+                        >
+                        </hm-uview-button>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
                 </hm-uview-popup>
               </view>
             </hm-uview-bg-card>
@@ -931,9 +997,8 @@ export default {
         let params = {
           mobile: self.phoneBox.value,
         };
-        const res = self.$postAction(url, params);
+        const res = await self.$postAction(url, params);
         uni.showToast({
-          position: "top",
           title: res.message,
           duration: 2000,
         });
@@ -1299,6 +1364,43 @@ export default {
   padding: 24rpx 24rpx;
   /deep/.u-mode-center-box {
     border-radius: 8px;
+  }
+}
+
+.ele-wrapper-22dc02bc-b7b8-4d6b-83d6-6ee319d12809 {
+  width: 100%;
+  margin-top: 64rpx;
+}
+
+.ele-wrapper-bff77688-bc73-4049-8b13-351754f30171 {
+  width: 100%;
+}
+
+.ele-wrapper-6bf03fb4-83a2-441f-866a-b1bed62d2f12 {
+  width: 100%;
+  margin-top: 64rpx;
+}
+
+.ele-wrapper-0013d4e1-b659-451e-ab89-589b52d1357a {
+  width: 50%;
+  /deep/.ele-canelButton {
+    background: transparent !important;
+    color: #409eff !important;
+    overflow: visible !important;
+    border-radius: 0px !important;
+    border-top: 1px solid #f8f8f8 !important;
+  }
+}
+
+.ele-wrapper-83ea8c45-8f8b-4fb2-8880-039a4ca67cc9 {
+  width: 50%;
+  /deep/.ele-sureButton {
+    background: transparent !important;
+    color: #409eff !important;
+    overflow: visible !important;
+    border-radius: 0px !important;
+    border-top: 1px solid #f8f8f8 !important;
+    border-left: 1px solid #f8f8f8 !important;
   }
 }
 
