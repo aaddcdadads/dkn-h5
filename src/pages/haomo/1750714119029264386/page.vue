@@ -1379,6 +1379,7 @@ export default {
   width: 100%;
   /deep/.ele-listCompanent {
     display: block !important;
+    padding: 24rpx 24rpx;
   }
 }
 
