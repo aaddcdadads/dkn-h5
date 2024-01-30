@@ -272,6 +272,7 @@ export default {
       border-bottom: 1px solid #f5f5f5 !important;
     }
   }
+  display: none;
 }
 
 .ele-wrapper-d6daa484-d6ce-4792-9194-97a076552b17 {
