@@ -115,6 +115,7 @@
                       height="40"
                       border-width="1"
                       border-color="#B0B0B0"
+                      :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -155,6 +156,7 @@
                     <hm-uview-bg-card
                       width="100%"
                       height="40"
+                      :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -193,11 +195,12 @@
                     class="ele-wrapper ele-wrapper-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0"
                   >
                     <hm-uview-bg-card
-                      padding=""
-                      box-shadow-blur=""
-                      box-shadow-v-shadow=""
                       width="100%"
                       height="40"
+                      :text-align="'right'"
+                      padding=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
                       class="ele-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0"
                     >
                       <view
@@ -235,6 +238,7 @@
                     <hm-uview-bg-card
                       width="100%"
                       height="40"
+                      :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -273,11 +277,12 @@
                     class="ele-wrapper ele-wrapper-1e638196-949e-4db0-8c6d-ffb770b0ac8a"
                   >
                     <hm-uview-bg-card
-                      padding=""
-                      box-shadow-blur=""
-                      box-shadow-v-shadow=""
                       width="100%"
                       height="40"
+                      :text-align="'right'"
+                      padding=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
                       class="ele-1e638196-949e-4db0-8c6d-ffb770b0ac8a"
                     >
                       <view
@@ -315,6 +320,7 @@
                     <hm-uview-bg-card
                       width="100%"
                       height="40"
+                      :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -355,6 +361,7 @@
                     <hm-uview-bg-card
                       width="100%"
                       height="40"
+                      :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -518,6 +525,7 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
+  margin-right: 10%;
   /deep/.hm-bg-card {
     margin-top: 15px !important;
   }
@@ -556,6 +564,7 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
+  margin-right: 10%;
 }
 
 .ele-wrapper-a6b059cb-691d-4093-bede-453d1eaf7370 {
@@ -589,6 +598,7 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
+  margin-right: 10%;
 }
 
 .ele-wrapper-df0e3be8-5694-4de1-89ab-efc9e61b2384 {
@@ -622,6 +632,7 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
+  margin-right: 10%;
 }
 
 .ele-wrapper-da0d9595-55d9-48cf-b00a-082df56d4a58 {
@@ -655,6 +666,7 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
+  margin-right: 10%;
 }
 
 .ele-wrapper-1c6f3120-a3af-4da2-91cf-2a913f75e70f {
@@ -688,6 +700,7 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
+  margin-right: 10%;
 }
 
 .ele-wrapper-d300e2f4-3555-45fa-a67c-be25208705a0 {
