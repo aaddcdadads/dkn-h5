@@ -90,35 +90,18 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-HmUviewField1">
-                        <hm-uview-field
-                          ref="HmUviewField1"
-                          v-model:value="HmUviewField1.value"
-                          label=""
-                          placeholder="报名项目名称 x 数量"
-                          label-width="0"
-                          icon=""
-                          right-icon=""
-                          :border-bottom="false"
-                          :disabled="true"
-                          class="ele-HmUviewField1"
-                        >
-                        </hm-uview-field>
-                      </view>
-                      <view class="ele-wrapper ele-wrapper-HmUviewField9">
-                        <hm-uview-field
-                          ref="HmUviewField9"
-                          v-model:value="HmUviewField9.value"
-                          label=""
-                          placeholder="报名项目名称 x 数量"
-                          label-width="0"
-                          icon=""
-                          right-icon=""
-                          :border-bottom="false"
-                          :disabled="true"
-                          class="ele-HmUviewField9"
-                        >
-                        </hm-uview-field>
+                      <view
+                        class="ele-wrapper ele-wrapper-9756f966-bc8e-4002-afd1-bf38de80086e"
+                      >
+                        <hm-loop :value="[]">
+                          <template #default="{ item }">
+                            <view
+                              class="ele-wrapper ele-wrapper-b12fd4cd-2ab0-491d-9db5-2ba96dd31709"
+                            >
+                              <hm-uview-field value=""> </hm-uview-field>
+                            </view>
+                          </template>
+                        </hm-loop>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -440,6 +423,7 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
@@ -448,6 +432,7 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewText,
+    HmLoop,
     HmUviewField,
     HmUviewButton,
   },
@@ -459,10 +444,10 @@ export default {
         text: "核销",
         customStyle: {},
       },
-      HmUviewField1: {
-        value: "",
+      "9756f966-bc8e-4002-afd1-bf38de80086e": {
+        value: [],
       },
-      HmUviewField9: {
+      "b12fd4cd-2ab0-491d-9db5-2ba96dd31709": {
         value: "",
       },
       HmUviewField2: {
@@ -546,49 +531,6 @@ export default {
 .ele-wrapper-716406f0-2fda-4cc8-9dc0-457fbd1bcec2 {
   padding: 13px 7px;
   vertical-align: top;
-}
-
-.ele-wrapper-HmUviewField1 {
-  width: 65%;
-  height: 45px;
-  margin-right: 10%;
-  /deep/.u-border-bottom {
-    display: flex;
-    align-items: center;
-    height: 45px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
-  /deep/.ele-HmUviewField1 {
-    background: rgb(240, 240, 240);
-    border-radius: 5px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-  }
-}
-
-.ele-wrapper-HmUviewField9 {
-  width: 65%;
-  height: 45px;
-  margin-right: 10%;
-  margin-top: 15px;
-  /deep/.u-border-bottom {
-    display: flex;
-    align-items: center;
-    height: 45px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
-  /deep/.ele-HmUviewField9 {
-    background: rgb(240, 240, 240);
-    border-radius: 5px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-  }
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
