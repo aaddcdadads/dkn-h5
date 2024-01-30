@@ -84,7 +84,22 @@ export default {
         };
       },
     },
-  
+    /**
+     * 背景色
+     * @type Color
+     */
+     backgroundColor: {
+      type: String,
+      default: '#feeff7'
+    },
+    /**
+     * 文字色
+     * @type Color
+     */
+     textColor: {
+      type: String,
+      default: '#d8477b'
+    },
   },
   data() {
     return {
@@ -95,7 +110,9 @@ export default {
       isLikeDisabled: false,
     };
   },
-
+  watch: {
+   
+  },
   methods: {
     onClick() {
       this.$emit("onClick");
@@ -112,7 +129,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .container {
-  background: #feeff7;
+  background: v-bind(backgroundColor);
   // background: transparent;
   width: 100%;
 }
@@ -120,7 +137,7 @@ export default {
   position: relative;
   width: 100%;
   display: flex;
-  color: #d8477b;
+  color: v-bind(textColor);
   margin-bottom: 32rpx;
 }
 .imgleft {
@@ -162,7 +179,7 @@ export default {
   margin-right: 0.153846153846154rem;
   padding: 5px 6px;
   > span {
-    color: #f797bd;
+    color: v-bind(textColor);
     font-size: 10px;
     font-weight: 500;
   }
