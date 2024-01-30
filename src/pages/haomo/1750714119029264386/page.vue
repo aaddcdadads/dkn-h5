@@ -504,6 +504,19 @@
                   </view>
                 </hm-uview-popup>
               </view>
+              <view
+                class="ele-wrapper ele-wrapper-b8768735-c882-456e-b133-f6da3a52f8f5"
+              >
+                <hm-uview-popup
+                  :show="true"
+                  width="80%"
+                  height="220px"
+                  border-radius="8px"
+                  :closeable="false"
+                  class="ele-b8768735-c882-456e-b133-f6da3a52f8f5"
+                >
+                </hm-uview-popup>
+              </view>
             </hm-uview-bg-card>
           </view>
         </hm-uview-bg-card>
@@ -613,7 +626,7 @@ export default {
         height: "500px",
       },
       regularPopup: {
-        show: true,
+        show: false,
       },
       viewPopup: {
         show: false,
@@ -709,6 +722,9 @@ export default {
       activityImgItem: {},
       phoneBox: {
         value: "",
+      },
+      "b8768735-c882-456e-b133-f6da3a52f8f5": {
+        show: true,
       },
       viewInput: {
         value: "",
@@ -1276,6 +1292,13 @@ export default {
     border-radius: 0px !important;
     border-top: 1px solid #f8f8f8 !important;
     border-left: 1px solid #f8f8f8 !important;
+  }
+}
+
+.ele-wrapper-b8768735-c882-456e-b133-f6da3a52f8f5 {
+  padding: 24rpx 24rpx;
+  /deep/.u-mode-center-box {
+    border-radius: 8px;
   }
 }
 
