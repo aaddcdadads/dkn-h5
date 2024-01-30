@@ -33,6 +33,7 @@
                   width="100%"
                   height="100%"
                   border-radius=""
+                  :text-align="'right'"
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
                   class="ele-32e2869f-33e4-4a30-a8e3-3b0d31222093"
@@ -41,11 +42,10 @@
                     class="ele-wrapper ele-wrapper-bf22f4a1-bf87-45db-bf48-3cb458614952"
                   >
                     <hm-uview-text
-                      padding="8"
-                      color="#303133"
-                      font-size="12px"
                       text="订单编号："
-                      :text-style="{}"
+                      font-size="12px"
+                      color="#303133"
+                      padding="8"
                       class="ele-bf22f4a1-bf87-45db-bf48-3cb458614952"
                     >
                     </hm-uview-text>
@@ -511,7 +511,7 @@ export default {
 }
 
 .ele-wrapper-bf22f4a1-bf87-45db-bf48-3cb458614952 {
-  margin-left: 2px;
+  margin-right: 75%;
 }
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
