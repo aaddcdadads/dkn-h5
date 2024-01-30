@@ -8,7 +8,7 @@
       /></view>
 
       <view class="content"
-        ><span>活动报名时间：{{ time }}</span></view
+        ><span>活动报名时间：{{ item.time }}</span></view
       >
     </view>
     <view class="div">
@@ -19,7 +19,7 @@
       /></view>
 
       <view class="content"
-        ><span>报名截止时间：{{ time1 }}</span></view
+        ><span>报名截止时间：{{ item.closeTime }}</span></view
       >
     </view>
 
@@ -30,9 +30,9 @@
           alt=""
       /></view>
       <view class="item-tag">
-        <span>跑步</span>
+        <span>{{ item.activityType }}</span>
       </view>
-      <view class="content1">{{ speed1 }}</view>
+      <view class="content1">{{ item.requirements }}</view>
     </view>
     <view class="div" @click="paly">
       <view class="imgleft"
@@ -44,8 +44,10 @@
       <view class="content1" style="display: flex">
         <view>活动报名费用：</view>
         <view style=""
-          ><span style="width: 100%; display: block">{{ projectOne }}</span
-          ><span>{{ projectTwo }}</span></view
+          ><span v-for="(e, i) in item.projectList" :key="i" style="width: 100%; display: block ">{{ e.name }}</span
+          >
+          <!-- <span>{{ projectTwo }}</span> -->
+          </view
         >
       </view>
     </view>
@@ -57,7 +59,7 @@
       /></view>
 
       <view class="content"
-        ><span>已报名人数{{ number }}人</span></view
+        ><span>已报名人数{{ item.number }}人</span></view
       >
     </view>
   </view>
@@ -67,46 +69,20 @@
 export default {
   props: {
     /**
-     * 时间
+     * 数据
      */
-    time: {
-      type: String,
-      default: "2023.11.01 00:00-2024.02.15",
-    },
-    /**
-     * 截止时间
-     */
-    time1: {
-      type: String,
-      default: "2023.11.01 ",
-    },
-    /**
-     * 速度
-     */
-    speed1: {
-      type: String,
-      default: "1.314km/5.20km/9.99km",
-    },
-    /**
-     * 活动一
-     */
-    projectOne: {
-      type: String,
-      default: "套餐项目一（￥0.0/人）",
-    },
-    /**
-     * 活动二
-     */
-    projectTwo: {
-      type: String,
-      default: "套餐项目一（￥0.0/人）",
-    },
-    /**
-     * 人数
-     */
-    number: {
-      type: String,
-      default: " 19999",
+    item: {
+      type: Object,
+      default: function () {
+        return {
+          time: "2023.11.01-2024.02.15",
+          closeTime: "2023.11.01",
+          activityType: "跑步",
+          requirements: "1.314km/5.20km/9.99km",
+          projectList: [{ name: "活动1" }, { name: "活动2" }],
+          number:"12331"
+        };
+      },
     },
   
   },
