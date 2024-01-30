@@ -82,6 +82,7 @@
                     <hm-uview-radio
                       value=""
                       title=""
+                      :list="[{ name: 'apple', disabled: false }]"
                       class="ele-d6daa484-d6ce-4792-9194-97a076552b17"
                     >
                     </hm-uview-radio>
@@ -177,6 +178,12 @@ export default {
       },
       "d6daa484-d6ce-4792-9194-97a076552b17": {
         value: "",
+        list: [
+          {
+            name: "apple",
+            disabled: false,
+          },
+        ],
       },
     };
   },
@@ -254,6 +261,15 @@ export default {
 
 .ele-wrapper-d6daa484-d6ce-4792-9194-97a076552b17 {
   width: 100%;
+  /deep/.u-radio__icon-wrap--circle {
+    right: 0;
+    position: absolute;
+    border-radius: 0 !important;
+  }
+  /deep/.u-radio {
+    width: 100% !important;
+    position: relative;
+  }
 }
 
 .ele-wrapper-5ceb1472-5f57-4275-9fb8-0975865d8443 {
