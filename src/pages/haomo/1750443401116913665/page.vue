@@ -461,7 +461,7 @@ export default {
         value: [1],
       },
       HmUviewField1: {
-        value: "",
+        value: null,
       },
       HmUviewField2: {
         value: "",
