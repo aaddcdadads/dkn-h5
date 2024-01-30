@@ -270,6 +270,9 @@ export default {
     width: 100% !important;
     position: relative;
   }
+  /deep/.u-clearfix {
+    width: 100% !important;
+  }
 }
 
 .ele-wrapper-5ceb1472-5f57-4275-9fb8-0975865d8443 {
