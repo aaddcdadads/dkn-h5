@@ -153,11 +153,11 @@
                     class="ele-wrapper ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9"
                   >
                     <hm-uview-bg-card
-                      padding=""
-                      box-shadow-blur=""
-                      box-shadow-v-shadow=""
                       width="100%"
                       height="40"
+                      padding=""
+                      box-shadow-v-shadow=""
+                      box-shadow-blur=""
                       class="ele-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9"
                     >
                       <view
@@ -553,10 +553,9 @@ export default {
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
   width: 100%;
-  margin: 15px 0px;
   display: flex;
   align-items: center;
-  margin-top: -5px;
+  margin: 15px 0px;
 }
 
 .ele-wrapper-a6b059cb-691d-4093-bede-453d1eaf7370 {
