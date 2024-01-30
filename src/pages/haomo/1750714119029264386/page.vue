@@ -1069,8 +1069,8 @@ export default {
           title: res.message,
           duration: 2000,
         });
-        uni.setStorageSync("token", res.token);
-        uni.setStorageSync("userInfo", res.userInfo);
+        uni.setStorageSync("token", res.result.token);
+        uni.setStorageSync("userInfo", res.result.userInfo);
         uni.$u.route(
           `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}`
         );
