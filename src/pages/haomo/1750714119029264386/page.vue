@@ -569,6 +569,7 @@
                   height="220px"
                   border-radius="8px"
                   :closeable="false"
+                  @open="onViewPopupOpen"
                   class="ele-viewPopup"
                 >
                   <view
@@ -1035,6 +1036,9 @@ export default {
 
     onEle0Abf487751Bc431D8F1A3C043Bc451FeClick() {
       this.regularPopup.show = true;
+    },
+    onViewPopupOpen() {
+      console.log(1);
     },
     onCanelButtonClick() {
       this.viewPopup.show = false;
