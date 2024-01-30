@@ -59,7 +59,7 @@
                   width="100%"
                   height="100%"
                   border-radius=""
-                  :text-align="'center'"
+                  :text-align="'right'"
                   padding=""
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
@@ -85,7 +85,6 @@
                           text="报名项目:"
                           font-size="13px"
                           padding="0"
-                          :text-style="{}"
                           class="ele-716406f0-2fda-4cc8-9dc0-457fbd1bcec2"
                         >
                         </hm-uview-text>
