@@ -526,15 +526,14 @@
                       <view
                         class="ele-wrapper ele-wrapper-6102459c-f347-4922-ad1d-8cd25812aa57"
                       >
-                        <hm-uview-text font-size="16px" text="活动咨询电话">
+                        <hm-uview-text text="活动咨询电话" font-size="16px">
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-bff77688-bc73-4049-8b13-351754f30171"
-                      >
+                      <view class="ele-wrapper ele-wrapper-phoneText">
                         <hm-uview-text
-                          text="400-888-88888"
-                          class="ele-bff77688-bc73-4049-8b13-351754f30171"
+                          ref="phoneText"
+                          :text="phoneText.text"
+                          class="ele-phoneText"
                         >
                         </hm-uview-text>
                       </view>
@@ -608,11 +607,11 @@
                 class="ele-wrapper ele-wrapper-8f33b075-7117-49ed-bd18-640aa28fa939"
               >
                 <hm-uview-icon
-                  label-color="#FFFFFF"
+                  name="phone"
                   color="#FFFFFF"
                   size="20px"
-                  name="phone"
                   label="活动咨询"
+                  label-color="#FFFFFF"
                   @click="onEle8F33B075711749EdBd18640Aa28Fa939Click"
                   class="ele-8f33b075-7117-49ed-bd18-640aa28fa939"
                 >
@@ -831,6 +830,9 @@ export default {
       sureButton: {
         text: "确认",
         type: "info",
+      },
+      phoneText: {
+        text: "400-888-88888",
       },
     };
   },
@@ -1458,7 +1460,7 @@ export default {
   margin-top: 32rpx;
 }
 
-.ele-wrapper-bff77688-bc73-4049-8b13-351754f30171 {
+.ele-wrapper-phoneText {
   width: 100%;
   margin-top: 32rpx;
 }
