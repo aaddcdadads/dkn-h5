@@ -672,6 +672,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
+  margin-top: 10px;
 }
 
 .ele-wrapper-1c6f3120-a3af-4da2-91cf-2a913f75e70f {
@@ -704,6 +705,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
+  margin-top: 10px;
 }
 
 .ele-wrapper-d300e2f4-3555-45fa-a67c-be25208705a0 {
@@ -736,6 +738,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
+  margin-top: 10px;
 }
 
 .ele-wrapper-3ea4931b-f9be-449b-adfa-85aec01fa006 {
@@ -768,6 +771,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
+  margin-top: 10px;
   /deep/.hm-bg-card {
     margin-bottom: 20px;
   }
