@@ -68,6 +68,12 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-a95d95b5-379f-434a-b774-caeed60f6b05"
+                  >
+                    <u-radio-group value="" size="" icon-size="">
+                    </u-radio-group>
+                  </view>
                   <view class="ele-wrapper ele-wrapper-checkList">
                     <hm-check-list
                       ref="checkList"
@@ -75,6 +81,16 @@
                       class="ele-checkList"
                     >
                     </hm-check-list>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-d6daa484-d6ce-4792-9194-97a076552b17"
+                  >
+                    <hm-uview-radio value=""> </hm-uview-radio>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-c065cec0-1142-4764-8788-85959957de75"
+                  >
+                    <radio> </radio>
                   </view>
                   <view
                     class="ele-wrapper ele-wrapper-5ceb1472-5f57-4275-9fb8-0975865d8443"
@@ -116,6 +132,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmCheckList from "/@/components/built-in/uniapp/HmCheckList.vue";
+import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -125,6 +142,7 @@ export default {
     HmUviewPopup,
     HmUviewText,
     HmCheckList,
+    HmUviewRadio,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -133,6 +151,9 @@ export default {
     return {
       "8e5b00d7-8606-49be-8e41-bd21c1e35237": {
         show: true,
+      },
+      "a95d95b5-379f-434a-b774-caeed60f6b05": {
+        value: "",
       },
       checkList: {
         data: [
@@ -162,6 +183,9 @@ export default {
             checked: false,
           },
         ],
+      },
+      "d6daa484-d6ce-4792-9194-97a076552b17": {
+        value: "",
       },
     };
   },
