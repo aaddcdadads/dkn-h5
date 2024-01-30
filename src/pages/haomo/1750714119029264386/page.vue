@@ -539,7 +539,6 @@
                       >
                         <hm-uview-text
                           text="400-888-88888"
-                          font-size="16px"
                           class="ele-bff77688-bc73-4049-8b13-351754f30171"
                         >
                         </hm-uview-text>
