@@ -381,17 +381,17 @@
                   ref="regularPopup"
                   v-model:show="regularPopup.show"
                   :mode="'bottom'"
-                  :close-icon-pos="'top-left'"
                   width="100%"
                   height="50%"
+                  :close-icon-pos="'top-left'"
                   class="ele-regularPopup"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2"
                   >
                     <hm-uview-text
-                      font-size="16px"
                       text="活动规则"
+                      font-size="16px"
                       class="ele-dc91ed40-34d2-458d-a7fb-c67671b736c2"
                     >
                     </hm-uview-text>
@@ -410,10 +410,10 @@
                 <hm-uview-popup
                   ref="viewPopup"
                   v-model:show="viewPopup.show"
-                  border-radius="8px"
-                  :closeable="false"
                   width="80%"
                   height="220px"
+                  border-radius="8px"
+                  :closeable="false"
                   @open="onViewPopupOpen"
                   class="ele-viewPopup"
                 >
@@ -443,10 +443,10 @@
                       <view class="ele-wrapper ele-wrapper-phoneBox">
                         <information-input-box
                           ref="phoneBox"
+                          v-model:value="phoneBox.value"
                           right-src=""
                           :show-code="false"
                           placeholder=" 请填写报名手机号码"
-                          v-model:value="phoneBox.value"
                           class="ele-phoneBox"
                         >
                         </information-input-box>
@@ -713,7 +713,7 @@ export default {
         height: "500px",
       },
       regularPopup: {
-        show: false,
+        show: true,
       },
       viewPopup: {
         show: false,
