@@ -82,7 +82,12 @@
                     <hm-uview-radio
                       value=""
                       title=""
-                      :list="[{ name: 'apple', disabled: false }]"
+                      :list="[
+                        { name: '活动名称', disabled: false },
+                        { name: '活动名称', disabled: false },
+                        { name: '活动名称', disabled: false },
+                        { name: '活动名称', disabled: false },
+                      ]"
                       class="ele-d6daa484-d6ce-4792-9194-97a076552b17"
                     >
                     </hm-uview-radio>
@@ -180,7 +185,19 @@ export default {
         value: "",
         list: [
           {
-            name: "apple",
+            name: "活动名称",
+            disabled: false,
+          },
+          {
+            name: "活动名称",
+            disabled: false,
+          },
+          {
+            name: "活动名称",
+            disabled: false,
+          },
+          {
+            name: "活动名称",
             disabled: false,
           },
         ],
@@ -255,8 +272,6 @@ export default {
       border-bottom: 1px solid #f5f5f5 !important;
     }
   }
-  height: 300px;
-  overflow: scroll;
 }
 
 .ele-wrapper-d6daa484-d6ce-4792-9194-97a076552b17 {
@@ -274,6 +289,8 @@ export default {
   /deep/.u-clearfix {
     width: 100% !important;
   }
+  height: 300px;
+  overflow: scroll;
 }
 
 .ele-wrapper-5ceb1472-5f57-4275-9fb8-0975865d8443 {
