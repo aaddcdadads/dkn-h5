@@ -1086,7 +1086,7 @@ export default {
       console.log(1);
     },
     onViewInputOnCode() {
-      console.log(1);
+      this.getPhoneCode();
     },
     onCanelButtonClick() {
       this.viewPopup.show = false;
