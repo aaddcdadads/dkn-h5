@@ -576,7 +576,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin: 10px 0px;
 }
 
 .ele-wrapper-a6b059cb-691d-4093-bede-453d1eaf7370 {
