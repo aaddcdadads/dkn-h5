@@ -785,6 +785,7 @@ export default {
   margin-top: 30%;
   height: 50px;
   margin-bottom: 20px;
+  position: fixed;
   /deep/.ele-Buttonwan {
     display: flex;
     flex-direction: column;
