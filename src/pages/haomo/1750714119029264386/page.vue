@@ -294,37 +294,11 @@
                           background-color="#FFFFFF00"
                           class="ele-67658805-d92e-4e1f-8067-6a180eca6391"
                         >
-                          <view
-                            class="ele-wrapper ele-wrapper-04b7a686-49e4-4376-b105-eec04bba2014"
-                          >
+                          <view class="ele-wrapper ele-wrapper-activityImgList">
                             <prize-list-component
-                              :func-list="[
-                                {
-                                  bgUrl:
-                                    'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
-                                  height1: 'auto',
-                                  scoretext: '奖品',
-                                  display: 'block',
-                                  textbottom: '奖品',
-                                },
-                                {
-                                  bgUrl:
-                                    'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
-                                  height1: 'auto',
-                                  scoretext: '奖品',
-                                  display: 'block',
-                                  textbottom: '奖品',
-                                },
-                                {
-                                  bgUrl:
-                                    'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
-                                  height1: 'auto',
-                                  scoretext: '奖品',
-                                  display: 'block',
-                                  textbottom: '奖品',
-                                },
-                              ]"
-                              class="ele-04b7a686-49e4-4376-b105-eec04bba2014"
+                              ref="activityImgList"
+                              :func-list="activityImgList.funcList"
+                              class="ele-activityImgList"
                             >
                             </prize-list-component>
                           </view>
@@ -724,6 +698,34 @@ export default {
       viewPopup: {
         show: false,
       },
+      activityImgList: {
+        funcList: [
+          {
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+            height1: "auto",
+            scoretext: "奖品",
+            display: "block",
+            textbottom: "奖品",
+          },
+          {
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+            height1: "auto",
+            scoretext: "奖品",
+            display: "block",
+            textbottom: "奖品",
+          },
+          {
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+            height1: "auto",
+            scoretext: "奖品",
+            display: "block",
+            textbottom: "奖品",
+          },
+        ],
+      },
       phoneBox: {
         value: "",
       },
@@ -917,7 +919,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-04b7a686-49e4-4376-b105-eec04bba2014 {
+.ele-wrapper-activityImgList {
   background-color: #feeff7;
   padding-top: 12px;
   border-radius: 8px;
