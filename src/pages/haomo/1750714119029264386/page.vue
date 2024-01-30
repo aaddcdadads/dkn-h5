@@ -501,13 +501,13 @@
                     class="ele-wrapper ele-wrapper-c43ff619-898c-4446-a22f-6dc191e8ac6e"
                   >
                     <hm-uview-bg-card
-                      padding="0"
-                      box-shadow-color="#00000000"
-                      border-radius="0"
-                      background-color="#FFE8EC00"
                       width="100%"
                       height=""
+                      border-radius="0"
                       :text-align="'center'"
+                      padding="0"
+                      box-shadow-color="#00000000"
+                      background-color="#FFE8EC00"
                       class="ele-c43ff619-898c-4446-a22f-6dc191e8ac6e"
                     >
                       <view class="ele-wrapper ele-wrapper-canelButton">
@@ -752,7 +752,7 @@ export default {
         show: false,
       },
       viewPopup: {
-        show: false,
+        show: true,
       },
       phonePopup: {
         show: false,
@@ -1520,7 +1520,7 @@ export default {
 
 .ele-wrapper-c43ff619-898c-4446-a22f-6dc191e8ac6e {
   width: 100%;
-  margin-top: 64rpx;
+  margin-top: 48rpx;
 }
 
 .ele-wrapper-canelButton {
