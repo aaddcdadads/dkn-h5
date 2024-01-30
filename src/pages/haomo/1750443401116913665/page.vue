@@ -787,9 +787,6 @@ export default {
   margin-bottom: 20px;
   position: fixed;
   /deep/.ele-Buttonwan {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-weight: 400;
     background-color: rgb(89, 213, 165);
     color: rgb(255, 255, 255);
