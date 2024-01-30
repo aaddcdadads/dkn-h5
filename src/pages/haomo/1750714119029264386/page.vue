@@ -337,38 +337,12 @@
                       background-color="#F797BD00"
                       class="ele-0d696b7e-8100-4e0a-a949-9e8788ae1cec"
                     >
-                      <view
-                        class="ele-wrapper ele-wrapper-bc5fd9dd-31b8-4aeb-a1cc-11afd64cca28"
-                      >
+                      <view class="ele-wrapper ele-wrapper-listCompanent">
                         <prize-list-component
-                          :func-list="[
-                            {
-                              height1: 'auto',
-                              display: 'block',
-                              scoretext: '奖品',
-                              textbottom: '奖品',
-                              bgUrl:
-                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
-                            },
-                            {
-                              height1: 'auto',
-                              display: 'block',
-                              scoretext: '奖品',
-                              textbottom: '奖品',
-                              bgUrl:
-                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
-                            },
-                            {
-                              height1: 'auto',
-                              display: 'block',
-                              scoretext: '奖品',
-                              textbottom: '奖品',
-                              bgUrl:
-                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
-                            },
-                          ]"
-                          :style="[{ margin: '0 0', width: '100%' }]"
-                          class="ele-bc5fd9dd-31b8-4aeb-a1cc-11afd64cca28"
+                          ref="listCompanent"
+                          :func-list="listCompanent.funcList"
+                          :style="listCompanent.style"
+                          class="ele-listCompanent"
                         >
                         </prize-list-component>
                       </view>
@@ -888,6 +862,40 @@ export default {
       viewInput: {
         value: "",
       },
+      listCompanent: {
+        funcList: [
+          {
+            height1: "auto",
+            display: "block",
+            scoretext: "奖品",
+            textbottom: "奖品",
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+          },
+          {
+            height1: "auto",
+            display: "block",
+            scoretext: "奖品",
+            textbottom: "奖品",
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+          },
+          {
+            height1: "auto",
+            display: "block",
+            scoretext: "奖品",
+            textbottom: "奖品",
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+          },
+        ],
+        style: [
+          {
+            margin: "0 0",
+            width: "100%",
+          },
+        ],
+      },
       canelButton: {
         text: "取消",
         type: "info",
@@ -1364,13 +1372,13 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-bc5fd9dd-31b8-4aeb-a1cc-11afd64cca28 {
+.ele-wrapper-listCompanent {
   background-color: #feeff7;
   padding-top: 12px;
   border-radius: 8px;
   width: 100%;
-  /deep/.view {
-    display: blok !important;
+  /deep/.ele-listCompanent {
+    display: block !important;
   }
 }
 
