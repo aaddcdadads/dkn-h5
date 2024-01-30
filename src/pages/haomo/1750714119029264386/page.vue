@@ -939,7 +939,7 @@ export default {
         self.activityRulesText.data = {
           html: self.activityExtItem.activityRules,
         };
-        self.phoneText.text = customerService;
+        self.phoneText.text = self.activityExtItem.customerService;
       };
       self.getDateToFormat = function (date) {
         const dateTime = new Date(date);
