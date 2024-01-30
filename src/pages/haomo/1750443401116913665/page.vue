@@ -782,7 +782,7 @@ export default {
 
 .ele-wrapper-Buttonwan {
   width: 80%;
-  margin-top: 30%;
+  margin-top: 10%;
   height: 50px;
   margin-bottom: 10px;
   /deep/.ele-Buttonwan {
