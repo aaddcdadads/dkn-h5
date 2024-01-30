@@ -95,7 +95,7 @@
                           ref="HmUviewField1"
                           v-model:value="HmUviewField1.value"
                           label=""
-                          placeholder="报名手机号码"
+                          placeholder="报名项目名称 x 数量"
                           label-width="0"
                           icon=""
                           right-icon=""
@@ -110,7 +110,7 @@
                           ref="HmUviewField9"
                           v-model:value="HmUviewField9.value"
                           label=""
-                          placeholder="报名手机号码"
+                          placeholder="报名项目名称 x 数量"
                           label-width="0"
                           icon=""
                           right-icon=""
@@ -566,7 +566,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField3 {
+  /deep/.ele-HmUviewField1 {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
