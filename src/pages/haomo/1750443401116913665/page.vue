@@ -548,6 +548,7 @@ export default {
 
 .ele-wrapper-9756f966-bc8e-4002-afd1-bf38de80086e {
   width: 65%;
+  margin-right: 10%;
 }
 
 .ele-wrapper-HmUviewField1 {
