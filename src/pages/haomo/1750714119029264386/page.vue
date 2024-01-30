@@ -559,23 +559,21 @@
                       background-color="#FFE8EC00"
                       class="ele-6bf03fb4-83a2-441f-866a-b1bed62d2f12"
                     >
-                      <view
-                        class="ele-wrapper ele-wrapper-0013d4e1-b659-451e-ab89-589b52d1357a"
-                      >
+                      <view class="ele-wrapper ele-wrapper-canelButton">
                         <hm-uview-button
-                          :type="'info'"
-                          text="取消"
-                          class="ele-0013d4e1-b659-451e-ab89-589b52d1357a"
+                          ref="canelButton"
+                          :type="canelButton.type"
+                          :text="canelButton.text"
+                          class="ele-canelButton"
                         >
                         </hm-uview-button>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-83ea8c45-8f8b-4fb2-8880-039a4ca67cc9"
-                      >
+                      <view class="ele-wrapper ele-wrapper-sureButton">
                         <hm-uview-button
-                          :type="'info'"
-                          text="确认"
-                          class="ele-83ea8c45-8f8b-4fb2-8880-039a4ca67cc9"
+                          ref="sureButton"
+                          :type="sureButton.type"
+                          :text="sureButton.text"
+                          class="ele-sureButton"
                         >
                         </hm-uview-button>
                       </view>
@@ -1382,7 +1380,7 @@ export default {
   margin-top: 64rpx;
 }
 
-.ele-wrapper-0013d4e1-b659-451e-ab89-589b52d1357a {
+.ele-wrapper-canelButton {
   width: 50%;
   /deep/.ele-canelButton {
     background: transparent !important;
@@ -1393,7 +1391,7 @@ export default {
   }
 }
 
-.ele-wrapper-83ea8c45-8f8b-4fb2-8880-039a4ca67cc9 {
+.ele-wrapper-sureButton {
   width: 50%;
   /deep/.ele-sureButton {
     background: transparent !important;
