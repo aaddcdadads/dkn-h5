@@ -697,6 +697,7 @@
             <hm-uview-button
               :type="'success'"
               text="马上报名"
+              @click="onElee174C2E6A7994Ccf8Fa92A81Dc515A6FClick"
               class="ele-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f"
             >
             </hm-uview-button>
@@ -767,6 +768,15 @@ export default {
       },
       viewPopup: {
         show: false,
+      },
+      isProtocol: {
+        value: "",
+        list: [
+          {
+            name: "我已阅读并同意",
+            disabled: false,
+          },
+        ],
       },
       closeTime: {},
       nameText: {
@@ -861,15 +871,6 @@ export default {
       sureButton: {
         text: "确认",
         type: "info",
-      },
-      isProtocol: {
-        value: "",
-        list: [
-          {
-            name: "我已阅读并同意",
-            disabled: false,
-          },
-        ],
       },
     };
   },
@@ -1040,6 +1041,9 @@ export default {
     },
     onSureButtonClick() {
       this.viewPopup.show = false;
+    },
+    onElee174C2E6A7994Ccf8Fa92A81Dc515A6FClick() {
+      console.log(this.isProtocol.value);
     },
     onEle4D8Eb71C153949848Ba0E2Dd0E6Ceeb9OnClick() {
       this.viewPopup.show = true;
