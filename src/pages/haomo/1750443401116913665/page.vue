@@ -543,7 +543,7 @@ export default {
   display: flex;
   align-items: center;
   /deep/.hm-bg-card {
-    margin-top: 15px !important;
+    margin-top: 10px !important;
   }
   display: flex;
   justify-content: space-between;
