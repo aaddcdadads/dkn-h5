@@ -499,6 +499,15 @@ export default {
 
 <style lang="less" scoped>
 .page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+  /deep/.hm-bg-card {
+    margin-top: 15px !important;
+  }
+  display: flex;
+  justify-content: space-between;
 }
 
 .ele-wrapper-c57e9abe-e655-4515-acc3-575489ca1e33 {
