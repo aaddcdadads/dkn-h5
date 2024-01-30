@@ -541,6 +541,7 @@ export default {
 .ele-wrapper-HmUviewField1 {
   width: 65%;
   height: 45px;
+  margin-right: 10%;
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;
@@ -574,6 +575,7 @@ export default {
 .ele-wrapper-HmUviewField2 {
   width: 65%;
   height: 45px;
+  margin-right: 10%;
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;
@@ -608,6 +610,7 @@ export default {
 .ele-wrapper-HmUviewField3 {
   width: 65%;
   height: 45px;
+  margin-right: 10%;
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;
@@ -641,6 +644,7 @@ export default {
 .ele-wrapper-HmUviewField4 {
   width: 65%;
   height: 45px;
+  margin-right: 10%;
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;
@@ -674,6 +678,7 @@ export default {
 .ele-wrapper-HmUviewField5 {
   width: 65%;
   height: 45px;
+  margin-right: 10%;
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;
@@ -707,6 +712,7 @@ export default {
 .ele-wrapper-HmUviewField6 {
   width: 65%;
   height: 45px;
+  margin-right: 10%;
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;
@@ -740,6 +746,7 @@ export default {
 .ele-wrapper-HmUviewField7 {
   width: 65%;
   height: 45px;
+  margin-right: 10%;
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;
@@ -776,6 +783,7 @@ export default {
 .ele-wrapper-HmUviewField8 {
   width: 65%;
   height: 45px;
+  margin-right: 10%;
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;
