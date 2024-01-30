@@ -1338,8 +1338,8 @@ export default {
 .ele-wrapper-activityList {
   margin: 12px 0;
   width: 100%;
-  /deep/.ele-activityList {
-    backgroundcolor: #feeff700 !important;
+  /deep/..ele-wrapper-activityList .ele-activityList {
+    background-color: #feeff700 !important;
   }
 }
 
