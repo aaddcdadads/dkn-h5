@@ -621,12 +621,6 @@
             </hm-uview-radio>
           </view>
           <view
-            class="ele-wrapper ele-wrapper-462dc544-17d1-4f62-a1be-f0d615856fde"
-          >
-            <hm-uview-bg-card class="ele-462dc544-17d1-4f62-a1be-f0d615856fde">
-            </hm-uview-bg-card>
-          </view>
-          <view
             class="ele-wrapper ele-wrapper-7a55d0c9-95ac-4729-befd-31f60ecf4707"
           >
             <hm-uview-text
@@ -1432,9 +1426,6 @@ export default {
 
 .ele-wrapper-a5b9bd79-5420-4a89-a71c-7e1c4870ca1a {
   width: 100%;
-  position: fixed;
-  top: 24px;
-  z-index: 1000;
 }
 
 .ele-wrapper-isProtocol {
@@ -1447,10 +1438,6 @@ export default {
     font-size: 14px !important;
   }
   margin-left: 24rpx;
-}
-
-.ele-wrapper-462dc544-17d1-4f62-a1be-f0d615856fde {
-  width: 100%;
 }
 
 .ele-wrapper-7a55d0c9-95ac-4729-befd-31f60ecf4707 {
