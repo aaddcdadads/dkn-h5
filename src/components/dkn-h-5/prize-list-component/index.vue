@@ -105,6 +105,7 @@ export default {
 .view{
   background: v-bind(backgroundColor);
   border-radius:8px;
+  padding:24rpx 24rpx;
 }
 .container {
   background: transparent;
