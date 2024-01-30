@@ -417,6 +417,7 @@
                           ],
                         },
                       ]"
+                      class="ele-720c2355-c756-4d18-9400-34ab42449b92"
                     >
                     </hm-rich-text>
                   </view>
@@ -425,7 +426,6 @@
                       ref="activityRulesText"
                       :data="activityRulesText.data"
                       :show-height="activityRulesText.showHeight"
-                      class="ele-activityRulesText"
                     >
                     </hm-uview-parse>
                   </view>
@@ -1368,7 +1368,7 @@ export default {
   margin-top: 24px;
 }
 
-.ele-wrapper-activityRulesText {
+.ele-wrapper-720c2355-c756-4d18-9400-34ab42449b92 {
   display: none;
 }
 
