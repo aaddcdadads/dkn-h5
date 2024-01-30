@@ -68,14 +68,6 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                  <view class="ele-wrapper ele-wrapper-checkList">
-                    <hm-check-list
-                      ref="checkList"
-                      :data="checkList.data"
-                      class="ele-checkList"
-                    >
-                    </hm-check-list>
-                  </view>
                   <view
                     class="ele-wrapper ele-wrapper-d6daa484-d6ce-4792-9194-97a076552b17"
                   >
@@ -131,7 +123,6 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
-import HmCheckList from "/@/components/built-in/uniapp/HmCheckList.vue";
 import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
@@ -141,7 +132,6 @@ export default {
     HmUviewBgCard,
     HmUviewPopup,
     HmUviewText,
-    HmCheckList,
     HmUviewRadio,
     HmUviewButton,
   },
@@ -151,35 +141,6 @@ export default {
     return {
       "8e5b00d7-8606-49be-8e41-bd21c1e35237": {
         show: true,
-      },
-      checkList: {
-        data: [
-          {
-            key: 1,
-            name: "活动名称",
-            checked: false,
-          },
-          {
-            key: 2,
-            name: "活动名称",
-            checked: false,
-          },
-          {
-            key: 3,
-            name: "活动名称",
-            checked: false,
-          },
-          {
-            key: 4,
-            name: "活动名称",
-            checked: false,
-          },
-          {
-            key: 5,
-            name: "活动名称",
-            checked: false,
-          },
-        ],
       },
       "d6daa484-d6ce-4792-9194-97a076552b17": {
         value: "",
@@ -246,33 +207,6 @@ export default {
 
 .ele-wrapper-bf1a747a-2f34-4286-a58b-55db1afa6d9d {
   float: right;
-}
-
-.ele-wrapper-checkList {
-  /deep/.check-list__item-checked {
-    border-radius: 0 !important;
-    width: 20px !important;
-    height: 20px !important;
-  }
-  /deep/.check-list__title {
-    display: none !important;
-  }
-  width: 100%;
-  /deep/.check-list__item-name {
-    font-size: 28rpx !important;
-  }
-  /deep/.check-list__item-checked-icon {
-    width: 14px !important;
-    height: 14px !important;
-    color: #ffffff !important;
-    margin: 0px 2px !important;
-  }
-  /dee/.check-list__item {
-    > :last-child {
-      border-bottom: 1px solid #f5f5f5 !important;
-    }
-  }
-  display: none;
 }
 
 .ele-wrapper-d6daa484-d6ce-4792-9194-97a076552b17 {
