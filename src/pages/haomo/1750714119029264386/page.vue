@@ -930,8 +930,8 @@ export default {
         self.activityBg.backgroundColor = self.activityItem.colour;
         self.activityList.backgroundColor = self.activityItem.colour;
         self.activityList.textColor = self.activityItem.textColour;
-        self.activityImgList.backgroundColor = self.activityItem.colour;
-        self.activityImgList.textColor = self.activityItem.textColour;
+        // self.activityImgList.backgroundColor = self.activityItem.colour
+        // self.activityImgList.textColor = self.activityItem.textColour
         self.nameText.text = self.activityItem.name;
         let number = self.activityItem.orders;
         if (self.activityItem.unrealStatus === 0) {
