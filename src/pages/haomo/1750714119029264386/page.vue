@@ -1379,6 +1379,7 @@ export default {
 
 .ele-wrapper-0d696b7e-8100-4e0a-a949-9e8788ae1cec {
   width: 100%;
+  margin-bottom: 24rpx;
 }
 
 .ele-wrapper-listCompanent {
