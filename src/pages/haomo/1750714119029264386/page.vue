@@ -29,11 +29,11 @@
                 class="ele-wrapper ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe"
               >
                 <hm-uview-icon
-                  name="question-circle"
+                  label-color="#FFFFFF"
                   color="#FFFFFF"
                   size="20px"
+                  name="question-circle"
                   label="规则"
-                  label-color="#FFFFFF"
                   @click="onEle0Abf487751Bc431D8F1A3C043Bc451FeClick"
                   class="ele-0abf4877-51bc-431d-8f1a-3c043bc451fe"
                 >
@@ -390,8 +390,8 @@
                     class="ele-wrapper ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2"
                   >
                     <hm-uview-text
-                      text="活动规则"
                       font-size="16px"
+                      text="活动规则"
                       class="ele-dc91ed40-34d2-458d-a7fb-c67671b736c2"
                     >
                     </hm-uview-text>
@@ -504,29 +504,29 @@
                 <hm-uview-popup
                   ref="phonePopup"
                   v-model:show="phonePopup.show"
+                  width="80%"
+                  height="170px"
                   border-radius="8px"
                   :closeable="false"
-                  width="80%"
-                  height="180px"
                   class="ele-phonePopup"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-22dc02bc-b7b8-4d6b-83d6-6ee319d12809"
                   >
                     <hm-uview-bg-card
-                      padding="0"
-                      box-shadow-color="#00000000"
-                      border-radius="0"
-                      background-color="#FFE8EC00"
                       width="100%"
                       height=""
+                      border-radius="0"
                       :text-align="'center'"
+                      padding="0"
+                      box-shadow-color="#00000000"
+                      background-color="#FFE8EC00"
                       class="ele-22dc02bc-b7b8-4d6b-83d6-6ee319d12809"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-6102459c-f347-4922-ad1d-8cd25812aa57"
                       >
-                        <hm-uview-text text="活动咨询电话" font-size="16px">
+                        <hm-uview-text font-size="16px" text="活动咨询电话">
                         </hm-uview-text>
                       </view>
                       <view class="ele-wrapper ele-wrapper-phoneText">
@@ -543,13 +543,13 @@
                     class="ele-wrapper ele-wrapper-6bf03fb4-83a2-441f-866a-b1bed62d2f12"
                   >
                     <hm-uview-bg-card
-                      padding="0"
-                      box-shadow-color="#00000000"
-                      border-radius="0"
-                      background-color="#FFE8EC00"
                       width="100%"
                       height=""
+                      border-radius="0"
                       :text-align="'center'"
+                      padding="0"
+                      box-shadow-color="#00000000"
+                      background-color="#FFE8EC00"
                       class="ele-6bf03fb4-83a2-441f-866a-b1bed62d2f12"
                     >
                       <view class="ele-wrapper ele-wrapper-canelButton">
@@ -719,7 +719,7 @@ export default {
         show: false,
       },
       phonePopup: {
-        show: false,
+        show: true,
       },
       isProtocol: {
         value: "",
@@ -1457,12 +1457,12 @@ export default {
 
 .ele-wrapper-22dc02bc-b7b8-4d6b-83d6-6ee319d12809 {
   width: 100%;
-  margin-top: 32rpx;
+  margin-top: 24rpx;
 }
 
 .ele-wrapper-phoneText {
   width: 100%;
-  margin-top: 32rpx;
+  margin-top: 24rpx;
 }
 
 .ele-wrapper-6bf03fb4-83a2-441f-866a-b1bed62d2f12 {
