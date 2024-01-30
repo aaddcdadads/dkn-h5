@@ -5,9 +5,9 @@
         class="ele-wrapper ele-wrapper-c57e9abe-e655-4515-acc3-575489ca1e33"
       >
         <hm-uview-bg-card
-          padding=""
           width="100%"
           height="100%"
+          padding=""
           class="ele-c57e9abe-e655-4515-acc3-575489ca1e33"
         >
           <view
@@ -579,6 +579,7 @@ export default {
   width: 65%;
   height: 45px;
   margin-right: 10%;
+  margin-top: 15px;
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;
