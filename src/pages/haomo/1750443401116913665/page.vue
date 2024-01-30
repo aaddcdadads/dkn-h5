@@ -573,7 +573,6 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin-top: -10px !important;
   margin-top: 10px;
 }
 

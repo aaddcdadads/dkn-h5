@@ -1044,9 +1044,9 @@ export default {
           return {
             bgUrl: self.getImg(x.path),
             height1: "auto",
-            scoretext: x.name,
+            // scoretext: x.name,
             display: "block",
-            textbottom: x.name,
+            // textbottom: x.name
           };
         });
       };
