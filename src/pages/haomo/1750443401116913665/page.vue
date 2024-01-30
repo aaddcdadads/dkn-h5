@@ -98,11 +98,10 @@
                           class="ele-9756f966-bc8e-4002-afd1-bf38de80086e"
                         >
                           <template #default="{ item }">
-                            <view
-                              class="ele-wrapper ele-wrapper-b12fd4cd-2ab0-491d-9db5-2ba96dd31709"
-                            >
+                            <view class="ele-wrapper ele-wrapper-HmUviewField1">
                               <hm-uview-field
-                                value=""
+                                ref="HmUviewField1"
+                                v-model:value="HmUviewField1.value"
                                 label=""
                                 placeholder="报名手机号码"
                                 label-width="0"
@@ -110,7 +109,7 @@
                                 right-icon=""
                                 :border-bottom="false"
                                 :disabled="true"
-                                class="ele-b12fd4cd-2ab0-491d-9db5-2ba96dd31709"
+                                class="ele-HmUviewField1"
                               >
                               </hm-uview-field>
                             </view>
@@ -461,7 +460,7 @@ export default {
       "9756f966-bc8e-4002-afd1-bf38de80086e": {
         value: [1],
       },
-      "b12fd4cd-2ab0-491d-9db5-2ba96dd31709": {
+      HmUviewField1: {
         value: "",
       },
       HmUviewField2: {
@@ -551,7 +550,7 @@ export default {
   width: 65%;
 }
 
-.ele-wrapper-b12fd4cd-2ab0-491d-9db5-2ba96dd31709 {
+.ele-wrapper-HmUviewField1 {
   width: 100%;
   height: 45px;
   margin-right: 10%;
@@ -563,7 +562,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField3 {
+  /deep/.ele-HmUviewField1 {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
