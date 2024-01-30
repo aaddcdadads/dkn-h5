@@ -65,9 +65,6 @@ export default {
   methods: {
     onCode() {
       this.$emit("onCode");
-      if (!this.cValue) {
-        return
-      }
       let time = 60;
       this.showColor = true;
       this.code = `${time}秒后可重新获取`;

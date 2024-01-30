@@ -402,55 +402,11 @@
                     <hm-uview-parse
                       :data="{
                         html:
-                          '<h1 style=&quot;text-align: center;&quot;>新闻</h1><h2 style=&quot;text-align: center;&quot;>作者：胡小根</h2><p>这是正文。</p><p> 这是结尾。</p>',
+                          '<p style=&quot;text-align: left;&quot;>第一步 报名</p><p style=&quot;text-align: left;&quot;>点击页面下方的「马上报名」，选择自己要挑战的公里数。</h2><p>-- 选择公里数对应的奖牌套餐，提交订单支付并填写收件信息即可在完赛后获得奖牌/奖牌配件/周边。</p><p> 第二步 比赛</p><p>在比赛时间内，打开 Keep，一次性跑完您挑战的公里数即可。</p><p>-- 户外/跑步机皆可。</p><p>奖牌及奖牌配件/周边将在完赛后 30 个工作日内发货；</p><p  style=&quot;color: red;&quot;>请注意！！若未完赛，则奖牌将无法发出，但配件/周边仍可以在活动结束后发货；（30 个工作日从完赛后第一个工作日开始计算）</p>',
                       }"
                       :show-height="0"
                     >
                     </hm-uview-parse>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-534e6687-3b1f-438f-936b-40c32eed0534"
-                  >
-                    <hm-rich-text
-                      :nodes="[
-                        {
-                          children: [
-                            { text: '玩法介绍', type: 'text' },
-                            { text: '第一步 报名', type: 'text' },
-                            {
-                              text:
-                                '点击页面下方的「马上报名」，选择自己要挑战的公里数。',
-                              type: 'text',
-                            },
-                            {
-                              text:
-                                '-- 选择公里数对应的奖牌套餐，提交订单支付并填写收件信息即可在完赛后获得奖牌/奖牌配件/周边。',
-                              type: 'text',
-                            },
-                            { text: '第二步 比赛', type: 'text' },
-                            {
-                              text:
-                                '在比赛时间内，打开 Keep，一次性跑完您挑战的公里数即可。',
-                              type: 'text',
-                            },
-                            { text: '-- 户外/跑步机皆可。', type: 'text' },
-                            {
-                              text:
-                                '奖牌及奖牌配件/周边将在完赛后 30 个工作日内发货；',
-                              type: 'text',
-                            },
-                          ],
-                          name: 'div',
-                          attrs: {
-                            style:
-                              'line-height: 40px; color: #000000; text-align:left;',
-                            class: 'div-class',
-                          },
-                        },
-                      ]"
-                      class="ele-534e6687-3b1f-438f-936b-40c32eed0534"
-                    >
-                    </hm-rich-text>
                   </view>
                   <view
                     class="ele-wrapper ele-wrapper-82757320-2908-4ea4-a4a6-d6a672339dab"
@@ -498,8 +454,8 @@
                     class="ele-wrapper ele-wrapper-6a8da34f-c177-4734-9296-60012cc53022"
                   >
                     <hm-uview-text
-                      font-size="12px"
                       text="第二步 比赛"
+                      font-size="12px"
                       :text-align="'left'"
                       class="ele-6a8da34f-c177-4734-9296-60012cc53022"
                     >
@@ -534,28 +490,6 @@
                       font-size="12px"
                       text="第三步 完赛"
                       class="ele-31fd4b60-ff13-4aae-8696-7a49451ada65"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-53f33209-47f4-4d7b-950c-d746bca5fc54"
-                  >
-                    <hm-uview-text
-                      font-size="12px"
-                      text="奖牌及奖牌配件/周边将在完赛后 30 个工作日内发货；"
-                      class="ele-53f33209-47f4-4d7b-950c-d746bca5fc54"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-30657b3a-defb-4229-91e7-6326e04c3af2"
-                  >
-                    <hm-uview-text
-                      color="#E60000"
-                      font-size="12px"
-                      text="请注意！！若未完赛，则奖牌将无法发出，但配件/周边仍可以在活动结束后发货；（30 个工作日从完赛后第一个工作日开始计算）"
-                      :text-align="'left'"
-                      class="ele-30657b3a-defb-4229-91e7-6326e04c3af2"
                     >
                     </hm-uview-text>
                   </view>
@@ -733,7 +667,6 @@ import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index
 import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import HmUviewParse from "/@/components/built-in/uniapp-uview-vue3/HmUviewParse.vue";
-import HmRichText from "/@/components/built-in/uniapp/HmRichText.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 import HmUviewRadio from "/@/components/built-in/uniapp-uview-vue3/HmUviewRadio.vue";
@@ -750,7 +683,6 @@ export default {
     HmCellList,
     HmUviewPopup,
     HmUviewParse,
-    HmRichText,
     InformationInputBox,
     HmUviewButton,
     HmUviewRadio,
@@ -1322,10 +1254,6 @@ export default {
   margin-top: 24px;
 }
 
-.ele-wrapper-534e6687-3b1f-438f-936b-40c32eed0534 {
-  width: 100%;
-}
-
 .ele-wrapper-82757320-2908-4ea4-a4a6-d6a672339dab {
   width: 100%;
 }
@@ -1355,14 +1283,6 @@ export default {
 }
 
 .ele-wrapper-31fd4b60-ff13-4aae-8696-7a49451ada65 {
-  width: 100%;
-}
-
-.ele-wrapper-53f33209-47f4-4d7b-950c-d746bca5fc54 {
-  width: 100%;
-}
-
-.ele-wrapper-30657b3a-defb-4229-91e7-6326e04c3af2 {
   width: 100%;
 }
 
