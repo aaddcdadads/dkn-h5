@@ -598,7 +598,6 @@ export default {
   display: flex;
   align-items: center;
   margin: 15px 0px;
-  margin-right: 10%;
 }
 
 .ele-wrapper-df0e3be8-5694-4de1-89ab-efc9e61b2384 {
