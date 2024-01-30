@@ -1192,7 +1192,6 @@ export default {
 }
 
 .ele-wrapper-activityImgList {
-  background-color: #feeff7;
   padding-top: 12px;
   border-radius: 8px;
 }
