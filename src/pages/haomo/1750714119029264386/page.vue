@@ -118,14 +118,13 @@
                       background-color="#FFFFFF00"
                       class="ele-d54b5914-a084-4a9e-9204-991bcc25ecf5"
                     >
-                      <view
-                        class="ele-wrapper ele-wrapper-89a1b8fd-c1ac-46be-b13d-592864374f64"
-                      >
+                      <view class="ele-wrapper ele-wrapper-nameText">
                         <hm-uview-text
-                          text="迪卡侬春节活动"
-                          font-size="16px"
-                          padding="0"
-                          class="ele-89a1b8fd-c1ac-46be-b13d-592864374f64"
+                          ref="nameText"
+                          :text="nameText.text"
+                          :font-size="nameText.fontSize"
+                          :padding="nameText.padding"
+                          class="ele-nameText"
                         >
                         </hm-uview-text>
                       </view>
@@ -698,6 +697,11 @@ export default {
       viewPopup: {
         show: false,
       },
+      nameText: {
+        text: "迪卡侬春节活动",
+        fontSize: "16px",
+        padding: "0",
+      },
       activityImgList: {
         funcList: [
           {
@@ -831,7 +835,7 @@ export default {
   margin-bottom: 12rpx;
 }
 
-.ele-wrapper-89a1b8fd-c1ac-46be-b13d-592864374f64 {
+.ele-wrapper-nameText {
   font-weight: bolder;
 }
 
