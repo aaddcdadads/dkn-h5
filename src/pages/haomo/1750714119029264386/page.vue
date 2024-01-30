@@ -250,8 +250,6 @@
                       <view class="ele-wrapper ele-wrapper-activityList">
                         <activity-list
                           ref="activityList"
-                          time="2023.11.01-2024.02.15"
-                          number=" 154,480 "
                           class="ele-activityList"
                         >
                         </activity-list>
