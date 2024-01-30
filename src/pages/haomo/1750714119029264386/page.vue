@@ -668,14 +668,13 @@
           box-shadow-color="#00000000"
           class="ele-2136b833-7f0e-4a8a-a081-36d9e275f611"
         >
-          <view
-            class="ele-wrapper ele-wrapper-d324407f-5ad0-412f-845c-f123803419fc"
-          >
+          <view class="ele-wrapper ele-wrapper-isProtocol">
             <hm-uview-radio
-              value=""
+              ref="isProtocol"
+              v-model:value="isProtocol.value"
               title=""
-              :list="[{ name: '我已阅读并同意', disabled: false }]"
-              class="ele-d324407f-5ad0-412f-845c-f123803419fc"
+              :list="isProtocol.list"
+              class="ele-isProtocol"
             >
             </hm-uview-radio>
           </view>
@@ -863,7 +862,7 @@ export default {
         text: "确认",
         type: "info",
       },
-      "d324407f-5ad0-412f-845c-f123803419fc": {
+      isProtocol: {
         value: "",
         list: [
           {
@@ -1416,7 +1415,7 @@ export default {
   z-index: 1000;
 }
 
-.ele-wrapper-d324407f-5ad0-412f-845c-f123803419fc {
+.ele-wrapper-isProtocol {
   float: left;
   /deep/.u-radio__icon-wrap--circle {
     width: 14px !important;
