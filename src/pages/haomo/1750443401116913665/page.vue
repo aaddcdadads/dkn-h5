@@ -609,7 +609,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin: 10px 0px;
 }
 
 .ele-wrapper-df0e3be8-5694-4de1-89ab-efc9e61b2384 {
@@ -642,7 +642,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin: 10px 0px;
 }
 
 .ele-wrapper-da0d9595-55d9-48cf-b00a-082df56d4a58 {
@@ -675,7 +675,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin: 10px 0px;
 }
 
 .ele-wrapper-1c6f3120-a3af-4da2-91cf-2a913f75e70f {
@@ -708,7 +708,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin: 10px 0px;
 }
 
 .ele-wrapper-d300e2f4-3555-45fa-a67c-be25208705a0 {
@@ -741,7 +741,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin: 10px 0px;
 }
 
 .ele-wrapper-3ea4931b-f9be-449b-adfa-85aec01fa006 {
@@ -774,7 +774,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin: 10px 0px;
   /deep/.hm-bg-card {
     margin-bottom: 20px;
   }
