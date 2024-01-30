@@ -1341,6 +1341,12 @@ export default {
   /deep/.ele-wrapper-activityList .ele-activityList {
     background-color: #feeff700 !important;
   }
+  /deep/.container {
+    background-color: #feeff700 !important;
+  }
+  /deep/.ele-activityList {
+    background: red !important;
+  }
 }
 
 .ele-wrapper-76b3694d-443e-4d62-8c58-80e0356f7fa4 {
