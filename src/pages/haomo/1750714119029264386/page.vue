@@ -72,9 +72,9 @@
               <view class="ele-wrapper ele-wrapper-logoImg">
                 <hm-uview-image
                   ref="logoImg"
-                  src="https://static1.keepcdn.com/teyvat-cms/2023/10/24/1698136514335c25agsam_750x1000.jpg"
-                  width="100%"
-                  height="500px"
+                  :src="logoImg.src"
+                  :width="logoImg.width"
+                  :height="logoImg.height"
                   class="ele-logoImg"
                 >
                 </hm-uview-image>
@@ -95,12 +95,12 @@
               <view class="ele-wrapper ele-wrapper-colourCard">
                 <hm-uview-bg-card
                   ref="colourCard"
-                  width="100%"
-                  height=""
-                  border-radius="0"
-                  padding="12"
-                  box-shadow-color="#00000000"
-                  background-color="#F6D7E6"
+                  :width="colourCard.width"
+                  :height="colourCard.height"
+                  :border-radius="colourCard.borderRadius"
+                  :padding="colourCard.padding"
+                  :box-shadow-color="colourCard.boxShadowColor"
+                  :background-color="colourCard.backgroundColor"
                   class="ele-colourCard"
                 >
                   <view
@@ -160,11 +160,11 @@
                   <view class="ele-wrapper ele-wrapper-activityBg">
                     <hm-uview-bg-card
                       ref="activityBg"
-                      width="100%"
-                      height=""
-                      border-radius=""
-                      padding="0"
-                      background-color="#FEEFF7"
+                      :width="activityBg.width"
+                      :height="activityBg.height"
+                      :border-radius="activityBg.borderRadius"
+                      :padding="activityBg.padding"
+                      :background-color="activityBg.backgroundColor"
                       class="ele-activityBg"
                     >
                       <view
@@ -249,6 +249,8 @@
                         <activity-list
                           ref="activityList"
                           :item="activityList.item"
+                          :background-color="activityList.backgroundColor"
+                          :text-color="activityList.textColor"
                           class="ele-activityList"
                         >
                         </activity-list>
@@ -752,16 +754,23 @@ export default {
   data() {
     let self = this;
     return {
+      logoImg: {
+        src:
+          "https://static1.keepcdn.com/teyvat-cms/2023/10/24/1698136514335c25agsam_750x1000.jpg",
+        width: "100%",
+        height: "500px",
+      },
       regularPopup: {
         show: true,
       },
       viewPopup: {
         show: false,
       },
+      closeTime: {},
       nameText: {
+        text: "迪卡侬春节活动",
         padding: "0",
         fontSize: "16px",
-        text: "迪卡侬春节活动",
       },
       activityList: {
         item: {
@@ -779,6 +788,8 @@ export default {
           time: "2023.11.01-2024.02.15",
           activityType: "跑步",
         },
+        backgroundColor: "#feeff7",
+        textColor: "#d8477b",
       },
       activityImgList: {
         funcList: [
@@ -814,6 +825,25 @@ export default {
           },
         ],
       },
+      colourCard: {
+        backgroundColor: "#F6D7E6",
+        width: "100%",
+        height: "",
+        borderRadius: "0",
+        padding: "12",
+        boxShadowColor: "#00000000",
+      },
+      activityBg: {
+        backgroundColor: "#FEEFF7",
+        width: "100%",
+        height: "",
+        borderRadius: "",
+        padding: "0",
+      },
+      activityItem: {},
+      activityProjectItem: {},
+      activityExtItem: {},
+      activityImgItem: {},
       phoneBox: {
         value: "",
       },
@@ -840,10 +870,161 @@ export default {
     };
   },
   watch: {},
-  mounted(e) {
-    this, arguments;
+  async mounted(e) {
+    this.onMounted(e);
   },
   methods: {
+    onMounted() {
+      let self = this;
+      //大图片
+      self.logoImg.src =
+        "https://static1.keepcdn.com/teyvat-cms/2023/10/24/1698136514335c25agsam_750x1000.jpg";
+      //倒计时
+      self.closeTime.day = "";
+      self.closeTime.hour = "";
+      self.closeTime.minute = "";
+      self.closeTime.second = "";
+
+      //名称
+      self.nameText.text = "";
+
+      //活动列表
+      self.activityList.item = "";
+      //活动图片
+      self.activityImgList.funcList = [];
+
+      //颜色
+      //背景色
+      self.colourCard.backgroundColor = "#F6D7E6";
+      //卡片背景色
+      self.activityBg.backgroundColor = "#FEEFF7";
+      self.activityList.backgroundColor = "#F6D7E6";
+      //文字颜色
+      self.activityList.textColor = "#D8477B";
+      //数据对象
+      self.activityItem = {};
+      self.activityExtItem = {};
+      self.activityImgItem = {};
+      self.activityProjectItem = {};
+      self.getActivity = async function (id) {
+        let url = "/api/dkn/activity/queryByAll";
+        const res = await self.$getAction(url, { id });
+        if (!res.success || !res.result) {
+          return;
+        }
+        self.activityItem = res.result;
+        self.activityExtItem = self.activityItem.activityExts[0];
+        self.activityImgItem = self.activityItem.activityImgs;
+        self.activityProjectItem = self.activityItem.activityProjects;
+        self.setData();
+      };
+      self.setData = function () {
+        self.colourCard.backgroundColor = self.activityItem.bgColour;
+        self.activityBg.backgroundColor = self.activityItem.colour;
+        self.activityList.backgroundColor = self.activityItem.colour;
+        self.activityList.textColor = self.activityItem.textColour;
+
+        self.nameText.text = self.activityItem.name;
+        let number = self.activityItem.orders;
+        if (self.activityItem.unrealStatus === 0) {
+          number = self.activityItem.unrealCount + number;
+        }
+        let projectList = self.activityProjectItem.map((e) => {
+          let expense = e.free == 1 ? e.expense : 0;
+          return {
+            name: `${e.name}:￥${expense}/人`,
+          };
+        });
+        projectList = projectList.sort((a, b) => a.sortNo - b.sortNo);
+        self.activityList.item = {
+          time: `${self.getDateToFormat(
+            self.activityItem.startTime
+          )}-${self.getDateToFormat(self.activityItem.endTime)}`,
+          closeTime: self.activityItem.closeTime,
+          activityType: self.activityExtItem
+            ? self.activityExtItem.activityType
+            : "",
+          requirements: self.activityExtItem
+            ? self.activityExtItem.requirements
+            : "",
+          projectList: projectList,
+          number: number,
+        };
+        const time = self.getTimeDifference(
+          new Date(),
+          new Date(self.activityItem.closeTime)
+        );
+        self.closeTime.day = time.days;
+        self.closeTime.hour = time.hour;
+        self.closeTime.minute = time.minute;
+        self.closeTime.second = time.second;
+        self.setImg();
+      };
+      self.getDateToFormat = function (date) {
+        const dateTime = new Date(date);
+        const year = dateTime.getFullYear();
+        const month = dateTime.getMonth() + 1;
+        const day = dateTime.getDate();
+        return `${year}-${month}-${day}`;
+      };
+      self.setImg = function () {
+        let imgOne = [];
+        let imgTwo = [];
+        self.activityImgItem.forEach((e) => {
+          if (e.type === 0) {
+            imgOne.push(e);
+          } else if (e.type === 1) {
+            imgTwo.push(e);
+          }
+        });
+        imgTwo = imgTwo.sort((a, b) => a.sortNo - b.sortNo);
+        self.activityImgList.funcList = imgTwo.map((x) => {
+          return {
+            bgUrl: self.getImg(x.path),
+            height1: "auto",
+            scoretext: x.name,
+            display: "block",
+            textbottom: x.name,
+          };
+        });
+        imgOne = imgTwo.sort((a, b) => a.sortNo - b.sortNo);
+      };
+      self.getImg = function (url) {
+        if (url.substring(0, 4) === "http") {
+          return url;
+        }
+        return `/api/sys/common/static/${url}`;
+      };
+      self.getTimeDifference = function (startDate, endDate) {
+        // 计算时间差，单位为毫秒
+        const timeDiff = endDate.getTime() - startDate.getTime();
+        // 计算天数
+        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        // 计算小时数
+        const hours = Math.floor(
+          (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        // 计算分钟数
+        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        // 计算秒数
+        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+        return {
+          days,
+          hours,
+          minutes,
+          seconds,
+        };
+      };
+      self.getData = function () {
+        self.activityId = self.$route.query.activityId;
+        if (!self.activityId) {
+          return;
+        }
+        self.getActivity(self.activityId);
+      };
+      self.getData();
+    },
+
     onEle0Abf487751Bc431D8F1A3C043Bc451FeClick() {
       this.regularPopup.show = true;
     },
