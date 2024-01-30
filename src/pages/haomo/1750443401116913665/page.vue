@@ -93,7 +93,7 @@
                       <view
                         class="ele-wrapper ele-wrapper-9756f966-bc8e-4002-afd1-bf38de80086e"
                       >
-                        <hm-loop :value="[]">
+                        <hm-loop :value="[1]">
                           <template #default="{ item }">
                             <view
                               class="ele-wrapper ele-wrapper-b12fd4cd-2ab0-491d-9db5-2ba96dd31709"
@@ -456,7 +456,7 @@ export default {
         customStyle: {},
       },
       "9756f966-bc8e-4002-afd1-bf38de80086e": {
-        value: [],
+        value: [1],
       },
       "b12fd4cd-2ab0-491d-9db5-2ba96dd31709": {
         value: "",
