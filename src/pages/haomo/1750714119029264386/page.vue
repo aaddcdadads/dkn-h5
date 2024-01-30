@@ -998,6 +998,7 @@ export default {
           };
         });
         imgOne = imgTwo.sort((a, b) => a.sortNo - b.sortNo);
+        self.logoImg.src = self.getImg(imgOne[0].path);
       };
       self.getImg = function (url) {
         if (url.substring(0, 4) === "http") {
@@ -1033,6 +1034,49 @@ export default {
         self.getActivity(self.activityId);
       };
       self.getData();
+      //页面事件
+      //校验手机号
+      self.checkPhone = function () {
+        let mobile = self.phoneBox.value;
+        if (!mobile) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: "手机号不能为空",
+            duration: 2000,
+          });
+          return false;
+        }
+        const phoneRegex = /^1[3456789]\d{9}$/;
+        const status = phoneRegex.test(mobile);
+        if (!status) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: "手机号格式不正确",
+            duration: 2000,
+          });
+        }
+        return status;
+      };
+      //获取验证码
+      self.getPhoneCode = async function () {
+        if (!self.checkPhone()) {
+          return;
+        }
+        let url = "/api/sys/sms";
+        let params = {
+          mobile: self.phoneBox.value,
+        };
+        const res = self.$postAction(url, params);
+        uni.showToast({
+          position: "top",
+          title: res.message,
+          duration: 2000,
+        });
+      };
+      //登录验证
+      self.login = async function () {};
     },
 
     onEle0Abf487751Bc431D8F1A3C043Bc451FeClick() {
