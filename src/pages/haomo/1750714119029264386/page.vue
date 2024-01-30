@@ -299,10 +299,10 @@
                             <prize-list-component
                               ref="activityImgList"
                               :func-list="activityImgList.funcList"
+                              :style="activityImgList.style"
                               :background-color="
                                 activityImgList.backgroundColor
                               "
-                              :style="activityImgList.style"
                               class="ele-activityImgList"
                             >
                             </prize-list-component>
@@ -327,16 +327,51 @@
                     class="ele-wrapper ele-wrapper-0d696b7e-8100-4e0a-a949-9e8788ae1cec"
                   >
                     <hm-uview-bg-card
-                      padding="0"
-                      box-shadow-blur="0"
-                      box-shadow-v-shadow="0"
-                      box-shadow-color="#00000000"
-                      border-radius="12"
-                      background-color="#F797BD00"
                       width="100%"
                       height="400"
+                      border-radius="12"
+                      padding="0"
+                      box-shadow-v-shadow="0"
+                      box-shadow-blur="0"
+                      box-shadow-color="#00000000"
+                      background-color="#F797BD00"
                       class="ele-0d696b7e-8100-4e0a-a949-9e8788ae1cec"
                     >
+                      <view
+                        class="ele-wrapper ele-wrapper-bc5fd9dd-31b8-4aeb-a1cc-11afd64cca28"
+                      >
+                        <prize-list-component
+                          :func-list="[
+                            {
+                              height1: 'auto',
+                              display: 'block',
+                              scoretext: '奖品',
+                              textbottom: '奖品',
+                              bgUrl:
+                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                            },
+                            {
+                              height1: 'auto',
+                              display: 'block',
+                              scoretext: '奖品',
+                              textbottom: '奖品',
+                              bgUrl:
+                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                            },
+                            {
+                              height1: 'auto',
+                              display: 'block',
+                              scoretext: '奖品',
+                              textbottom: '奖品',
+                              bgUrl:
+                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                            },
+                          ]"
+                          :style="[{ margin: '0 0', width: '100%' }]"
+                          class="ele-bc5fd9dd-31b8-4aeb-a1cc-11afd64cca28"
+                        >
+                        </prize-list-component>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view
@@ -740,7 +775,7 @@ export default {
         height: "500px",
       },
       regularPopup: {
-        show: true,
+        show: false,
       },
       viewPopup: {
         show: false,
@@ -1327,6 +1362,16 @@ export default {
 
 .ele-wrapper-0d696b7e-8100-4e0a-a949-9e8788ae1cec {
   width: 100%;
+}
+
+.ele-wrapper-bc5fd9dd-31b8-4aeb-a1cc-11afd64cca28 {
+  background-color: #feeff7;
+  padding-top: 12px;
+  border-radius: 8px;
+  width: 100%;
+  /deep/.view {
+    display: blok !important;
+  }
 }
 
 .ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550 {
