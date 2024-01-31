@@ -252,7 +252,7 @@
                     <hm-uview-modal
                       ref="writeOffModal"
                       v-model:visible="writeOffModal.visible"
-                      title="核销"
+                      :title="writeOffModal.title"
                       height="100px"
                     >
                       <view
@@ -328,6 +328,7 @@ export default {
       },
       writeOffModal: {
         visible: false,
+        title: "核销",
       },
       writeOffText: {
         text: "确认核销？",
@@ -362,6 +363,7 @@ export default {
       this.inputActivityName.value;
       this.writeOffModal.visible;
       this.writeOffText.text;
+      this.writeOffModal.title;
     },
     onMounted() {
       console.log("获取数据---", this.orderId, this.storeId);
