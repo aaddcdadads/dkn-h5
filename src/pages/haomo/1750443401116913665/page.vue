@@ -527,16 +527,17 @@ export default {
         activityId: this.activityId,
       }).then((res) => {
         console.log("res--", res);
-        if (res.success && res.result.records.length > 0) {
+        if (!res.success || res.result.records.length <= 0) {
           uni.showToast({
             title: "请重新查看活动信息",
             icon: "error",
+            duration: 2000,
           });
           setTimeout(() => {
             uni.navigateTo({
               url: "/pages/haomo/1750714119029264386/page",
             });
-          }, 3000);
+          }, 2500);
           return;
         }
         let item = res.result.records[0];
