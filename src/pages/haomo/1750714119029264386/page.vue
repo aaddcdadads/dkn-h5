@@ -127,19 +127,18 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-4f853c6d-0b81-4d35-8ce5-ac7316260eae"
-                      >
+                      <view class="ele-wrapper ele-wrapper-closeTime">
                         <uni-countdown
-                          background-color="#00000000"
-                          color="#FFFFFF"
-                          :hour="15"
-                          splitor-color="#666666"
-                          :font-size="11"
-                          :day="19"
-                          :minute="13"
-                          :second="17"
-                          class="ele-4f853c6d-0b81-4d35-8ce5-ac7316260eae"
+                          ref="closeTime"
+                          :background-color="closeTime.backgroundColor"
+                          :color="closeTime.color"
+                          :font-size="closeTime.fontSize"
+                          :splitor-color="closeTime.splitorColor"
+                          :day="closeTime.day"
+                          :hour="closeTime.hour"
+                          :minute="closeTime.minute"
+                          :second="closeTime.second"
+                          class="ele-closeTime"
                         >
                         </uni-countdown>
                       </view>
@@ -768,7 +767,16 @@ export default {
           },
         ],
       },
-      closeTime: {},
+      closeTime: {
+        day: 19,
+        hour: 15,
+        minute: 13,
+        second: 17,
+        backgroundColor: "#00000000",
+        color: "#FFFFFF",
+        fontSize: 11,
+        splitorColor: "#666666",
+      },
       nameText: {
         text: "迪卡侬春节活动",
         padding: "0",
@@ -1290,7 +1298,7 @@ export default {
   font-weight: bolder;
 }
 
-.ele-wrapper-4f853c6d-0b81-4d35-8ce5-ac7316260eae {
+.ele-wrapper-closeTime {
   /deep/.uni-countdown__splitor {
     color: #666666;
     font-size: 12px !important;
