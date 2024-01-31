@@ -673,6 +673,7 @@
               color="#D6769C"
               :text-align="'left'"
               padding="0"
+              @onClick="onEle7A55D0C995Ac4729Befd31F60Ecf4707OnClick"
               class="ele-7a55d0c9-95ac-4729-befd-31f60ecf4707"
             >
             </hm-uview-text>
@@ -692,9 +693,9 @@
             class="ele-wrapper ele-wrapper-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9"
           >
             <hm-uview-text
-              color="#D6769C"
-              font-size="14px"
               text="已报名，查看我的报名信息"
+              font-size="14px"
+              color="#D6769C"
               @onClick="onEle4D8Eb71C153949848Ba0E2Dd0E6Ceeb9OnClick"
               class="ele-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9"
             >
@@ -891,7 +892,7 @@ export default {
       activityRulesText: {
         data: {
           html:
-            '<p style="text-align: left;">第一步 报名</p><p style="text-align: left;">点击页面下方的「马上报名」，选择自己要挑战的公里数。</h2><p>-- 选择公里数对应的奖牌套餐，提交订单支付并填写收件信息即可在完赛后获得奖牌/奖牌配件/周边。</p><p> 第二步 比赛</p><p>在比赛时间内，打开 Keep，一次性跑完您挑战的公里数即可。</p><p>-- 户外/跑步机皆可。</p><p>奖牌及奖牌配件/周边将在完赛后 30 个工作日内发货；</p><p  style="color: red;">请注意！！若未完赛，则奖牌将无法发出，但配件/周边仍可以在活动结束后发货；（30 个工作日从完赛后第一个工作日开始计算）</p>',
+            '<p style="text-align: left;">第一步 报名</p><p style="text-align: left;">点击页面下方的「马上报名」，选择自己要挑战的公里数。</p><p>-- 选择公里数对应的奖牌套餐，提交订单支付并填写收件信息即可在完赛后获得奖牌/奖牌配件/周边。</p><p> 第二步 比赛</p><p>在比赛时间内，打开 Keep，一次性跑完您挑战的公里数即可。</p><p>-- 户外/跑步机皆可。</p><p>奖牌及奖牌配件/周边将在完赛后 30 个工作日内发货；</p><p  style="color: red;">请注意！！若未完赛，则奖牌将无法发出，但配件/周边仍可以在活动结束后发货；（30 个工作日从完赛后第一个工作日开始计算）</p>',
         },
         showHeight: 0,
       },
@@ -963,7 +964,9 @@ export default {
       self.activityImgList.textColor = "#D8477B";
       self.listCompanent.textColor = "#D8477B";
       //富文本
-      self.activityRulesText.data = { html: "" };
+      self.activityRulesText.data = {
+        html: "",
+      };
 
       self.phoneText.text = "";
       //数据对象
@@ -973,7 +976,9 @@ export default {
       self.activityProjectItem = {};
       self.getActivity = async function (id) {
         let url = "/api/dkn/activity/queryByAll";
-        const res = await self.$getAction(url, { id });
+        const res = await self.$getAction(url, {
+          id,
+        });
         if (!res.success || !res.result) {
           return;
         }
@@ -1215,6 +1220,11 @@ export default {
     },
     onSure1ButtonClick() {
       this.login();
+    },
+    onEle7A55D0C995Ac4729Befd31F60Ecf4707OnClick() {
+      uni.$u.route(
+        "https://stage.block-design.cn/edit-page/?pageId=1752601339138936834"
+      );
     },
     onElee174C2E6A7994Ccf8Fa92A81Dc515A6FClick() {
       console.log(this.isProtocol.value);
