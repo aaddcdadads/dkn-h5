@@ -422,6 +422,7 @@
               <view class="ele-wrapper ele-wrapper-buttonwan">
                 <hm-uview-button
                   ref="buttonwan"
+                  :disabled="buttonwan.disabled"
                   :text="buttonwan.text"
                   @click="onButtonwanClick"
                   class="ele-buttonwan"
@@ -459,6 +460,7 @@ export default {
     return {
       buttonwan: {
         text: "核销",
+        disabled: false,
       },
       registrationProjectField: {
         value: "",
@@ -516,6 +518,7 @@ export default {
       this.activityNameField.value;
       this.verificationDeadlineField.value;
       this.writeStatusField.value;
+      this.buttonwan.disabled;
     },
     onMounted() {
       let params = {};
