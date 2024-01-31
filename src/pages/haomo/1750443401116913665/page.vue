@@ -496,7 +496,7 @@ export default {
       //手机号
       this.phone = "321";
       //活动id
-      this.activityId = "ff8080818d454675018d454f54cd0004";
+      this.activityId = "10c9031404ac1c64183d494478372b96";
     },
     onMounted() {
       this.phone;
