@@ -16,7 +16,7 @@
           <view class="ele-wrapper ele-wrapper-sharingImage">
             <hm-uview-icon
               ref="sharingImage"
-              name="/static/h5/home/mechanicsIcon.png"
+              name="/static/h5/home/share.png"
               size="100%"
               label=""
               class="ele-sharingImage"
