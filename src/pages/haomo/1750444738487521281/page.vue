@@ -1126,12 +1126,7 @@ export default {
             shop: x.store,
           };
         });
-        self.storeList.list = [
-          {
-            anchor: "b",
-            store,
-          },
-        ];
+        self.storeList.list = [{ anchor: "b", store }];
       };
       self.getImg = function (url) {
         if (url.substring(0, 4) === "http") {
@@ -1187,6 +1182,7 @@ export default {
         self.activityText.text = self.activityName;
         self.countdown.text = "";
         self.prices.text = `¥ ${self.money}`;
+        self.addOrder();
       };
       self.addOrder = async function () {
         let channel = 0;
@@ -1219,12 +1215,9 @@ export default {
         uni.showToast({
           icon: "success",
           position: "top",
-          title: "报名成功前往支付页",
+          title: "报名成功",
           duration: 2000,
         });
-        uni.$u.route(
-          `/pages/haomo/1750726128974172161/page?orderId=${res.message}&money=${self.money}`
-        );
       };
       self.getOrderProjects = function () {
         let list = [];
