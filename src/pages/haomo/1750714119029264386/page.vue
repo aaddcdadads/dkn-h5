@@ -1275,6 +1275,8 @@ export default {
 
 .ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2 {
   width: 100%;
+  position: absolute;
+  top: -48rpx;
 }
 
 .ele-wrapper-colourCard {
@@ -1476,6 +1478,7 @@ export default {
   /deep/.u-mode-center-box {
     border-radius: 8px;
   }
+  display: none;
 }
 
 .ele-wrapper-ea66b462-b5ce-4b41-8870-bb482768fef8 {
