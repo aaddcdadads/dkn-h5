@@ -342,6 +342,8 @@
                           ref="listCompanent"
                           :func-list="listCompanent.funcList"
                           :style="listCompanent.style"
+                          :background-color="listCompanent.backgroundColor"
+                          :text-color="listCompanent.textColor"
                           class="ele-listCompanent"
                         >
                         </prize-list-component>
@@ -643,22 +645,6 @@
         </hm-uview-bg-card>
       </view>
       <view
-        class="ele-wrapper ele-wrapper-a066e06b-03ae-443e-9c41-b0cd634fc748"
-      >
-        <hm-uview-bg-card
-          width="100%"
-          height=""
-          border-radius="0"
-          padding="0"
-          box-shadow-v-shadow="0"
-          box-shadow-blur="0"
-          box-shadow-color="#00000000"
-          background-color="#FFFFFF00"
-          class="ele-a066e06b-03ae-443e-9c41-b0cd634fc748"
-        >
-        </hm-uview-bg-card>
-      </view>
-      <view
         class="ele-wrapper ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611"
       >
         <hm-uview-bg-card
@@ -870,6 +856,8 @@ export default {
               "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
           },
         ],
+        backgroundColor: "#feeff7",
+        textColor: "#000000",
         style: [
           {
             margin: "0 0",
@@ -953,9 +941,11 @@ export default {
       self.activityBg.backgroundColor = "#FEEFF7";
       self.activityList.backgroundColor = "#F6D7E6";
       self.activityImgList.backgroundColor = "#FEEFF7";
+      self.listCompanent.backgroundColor = "#FEEFF7";
       //文字颜色
       self.activityList.textColor = "#D8477B";
       self.activityImgList.textColor = "#D8477B";
+      self.listCompanent.textColor = "#D8477B";
       //富文本
       self.activityRulesText.data = { html: "" };
 
@@ -982,8 +972,10 @@ export default {
         self.activityBg.backgroundColor = self.activityItem.colour;
         self.activityList.backgroundColor = self.activityItem.colour;
         self.activityList.textColor = self.activityItem.textColour;
-        // self.activityImgList.backgroundColor = self.activityItem.colour
-        // self.activityImgList.textColor = self.activityItem.textColour
+        self.activityImgList.backgroundColor = self.activityItem.colour;
+        self.activityImgList.textColor = self.activityItem.textColour;
+        self.listCompanent.backgroundColor = self.activityItem.colour;
+        self.listCompanent.textColor = self.activityItem.textColour;
         self.nameText.text = self.activityItem.name;
         let number = self.activityItem.orders;
         if (self.activityItem.unrealStatus === 0) {
@@ -1630,11 +1622,6 @@ export default {
     border-top: 1px solid #f8f8f8 !important;
     border-left: 1px solid #f8f8f8 !important;
   }
-}
-
-.ele-wrapper-a066e06b-03ae-443e-9c41-b0cd634fc748 {
-  width: 100%;
-  margin-bottom: 24rpx;
 }
 
 .ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611 {
