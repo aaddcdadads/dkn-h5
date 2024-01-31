@@ -418,7 +418,7 @@ export default {
     let self = this;
     return {
       shopPop: {
-        show: false,
+        show: true,
       },
       zhifubaoRadio: {
         value: '""',
