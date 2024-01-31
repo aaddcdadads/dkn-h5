@@ -1318,6 +1318,7 @@ export default {
   }
   /deep/.uni-countdown__number {
     background: #d8477b !important;
+    margin-top: 6rpx;
   }
   float: right;
 }
