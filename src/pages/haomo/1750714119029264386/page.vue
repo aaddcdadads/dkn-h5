@@ -396,9 +396,23 @@
                   box-shadow-v-shadow="0"
                   box-shadow-blur="0"
                   box-shadow-color="#00000000"
-                  background-color="#FFFFFF00"
+                  background-color="#FFFFFF"
                   class="ele-42a6a6e4-49e7-4fe8-95f2-c7e9fdda0729"
                 >
+                  <view
+                    class="ele-wrapper ele-wrapper-f16cae12-ff6f-4d64-ac60-014a613da044"
+                  >
+                    <hm-uview-icon
+                      name="phone"
+                      color="#FFFFFF"
+                      size="20px"
+                      label="活动咨询"
+                      label-color="#FFFFFF"
+                      @click="onElef16Cae12Ff6F4D64Ac60014A613Da044Click"
+                      class="ele-f16cae12-ff6f-4d64-ac60-014a613da044"
+                    >
+                    </hm-uview-icon>
+                  </view>
                 </hm-uview-bg-card>
               </view>
               <view class="ele-wrapper ele-wrapper-regularPopup">
@@ -783,10 +797,10 @@ export default {
       regularPopup: {
         show: false,
       },
-      viewPopup: {
+      phonePopup: {
         show: false,
       },
-      phonePopup: {
+      viewPopup: {
         show: false,
       },
       isProtocol: {
@@ -1209,6 +1223,9 @@ export default {
     onEle0Abf487751Bc431D8F1A3C043Bc451FeClick() {
       this.regularPopup.show = true;
     },
+    onElef16Cae12Ff6F4D64Ac60014A613Da044Click() {
+      this.phonePopup.show = true;
+    },
     onViewPopupOpen() {
       console.log(1);
     },
@@ -1458,6 +1475,15 @@ export default {
 .ele-wrapper-42a6a6e4-49e7-4fe8-95f2-c7e9fdda0729 {
   width: 100%;
   margin-bottom: 24rpx;
+}
+
+.ele-wrapper-f16cae12-ff6f-4d64-ac60-014a613da044 {
+  border-radius: 608rpx;
+  float: right;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.16);
+  padding: 10rpx 10rpx;
+  margin: 24rpx 24rpx;
 }
 
 .ele-wrapper-regularPopup {
