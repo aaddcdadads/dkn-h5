@@ -321,6 +321,19 @@ export default {
       console.log("获取数据---", this.orderId, this.storeId);
     },
     onOnLoad(options) {
+      if (!options.orderId || !options.storeId) {
+        uni.showToast({
+          title: "数据获取失败",
+          icon: "error",
+          duration: 2000,
+        });
+        setTimeout(() => {
+          uni.navigateTo({
+            url: "/pages/haomo/1750714119029264386/page",
+          });
+        }, 2500);
+        return;
+      }
       this.orderId = options.orderId;
       this.storeId = options.storeId;
     },
