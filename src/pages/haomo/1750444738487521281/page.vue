@@ -123,20 +123,20 @@
                   ref="smscodeIpnut"
                   v-model:value="smscodeIpnut.value"
                   placeholder="短信验证码"
+                  @onCode="onSmscodeIpnutOnCode"
                   class="ele-smscodeIpnut"
                 >
                 </information-input-box>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3"
-              >
+              <view class="ele-wrapper ele-wrapper-storeInput">
                 <information-input-box
-                  value=""
+                  ref="storeInput"
+                  v-model:value="storeInput.value"
                   :show-code="false"
                   :show-icon="true"
                   placeholder="领奖门店"
-                  @rightIcon="onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon"
-                  class="ele-71e123e5-88a9-44c5-b029-f89fdaffa0d3"
+                  @rightIcon="onStoreInputRightIcon"
+                  class="ele-storeInput"
                 >
                 </information-input-box>
               </view>
@@ -1075,7 +1075,7 @@ export default {
       smscodeIpnut: {
         value: "",
       },
-      "71e123e5-88a9-44c5-b029-f89fdaffa0d3": {
+      storeInput: {
         value: "",
       },
       countdown: {
@@ -1154,7 +1154,10 @@ export default {
     onEventCardChange(e) {
       this.checked();
     },
-    onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon() {
+    onSmscodeIpnutOnCode() {
+      this.getPhoneCode();
+    },
+    onStoreInputRightIcon() {
       this.shopPop.show = true;
     },
     onWeixinRadioRadioChange(e) {
@@ -1246,7 +1249,7 @@ export default {
   margin-top: 20px;
 }
 
-.ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3 {
+.ele-wrapper-storeInput {
   width: 100%;
   margin-top: 20px;
 }
