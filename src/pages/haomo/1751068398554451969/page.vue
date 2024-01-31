@@ -304,6 +304,9 @@ export default {
   created(e) {
     this.onCreated(e);
   },
+  mounted(e) {
+    this.onMounted(e);
+  },
   onLoad(e) {
     this.onOnLoad(e);
   },
@@ -313,6 +316,9 @@ export default {
       this.inputPhoneNumber.value;
       this.inputClaimStore.value;
       this.inputActivityName.value;
+    },
+    onMounted() {
+      console.log("获取数据---", this.orderId, this.storeId);
     },
     onOnLoad(options) {
       this.orderId = options.orderId;
