@@ -542,7 +542,7 @@ export default {
         let item = res.result.records[0];
         //保存订单id
         this.orderId = item.id;
-        this.registrationProjectField.value = item.activityId_dictText ?? "";
+        this.registrationProjectField.value = item.acName ?? "";
         this.userNameField.value = item.realname ?? "";
         this.phoneField.value = item.phone ?? "";
         this.storeNameField.value = item.originalPickUpName ?? "";
