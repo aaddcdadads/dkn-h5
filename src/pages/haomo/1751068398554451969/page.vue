@@ -473,7 +473,8 @@ export default {
         });
         setTimeout(() => {
           uni.navigateTo({
-            url: "/pages/haomo/1750443401116913665/page",
+            url:
+              "/pages/haomo/1750443401116913665/page?orderId=" + this.orderId,
           });
         }, 2500);
       });
