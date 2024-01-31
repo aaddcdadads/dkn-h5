@@ -488,12 +488,26 @@ export default {
   created(e) {
     this.onCreated(e);
   },
+  mounted(e) {
+    this.onMounted(e);
+  },
   methods: {
     onCreated() {
       //手机号
       this.phone = "321";
       //活动id
       this.activityId = "ff8080818d454675018d454f54cd0004";
+    },
+    onMounted() {
+      this.phone;
+      //活动id
+      this.activityId;
+
+      this.$getAction("/api/dkn/viewRegistrationOrders/list", {}).then(
+        (res) => {
+          console.log("res--", res);
+        }
+      );
     },
 
     onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
