@@ -1149,7 +1149,7 @@ export default {
     },
 
     onEventCardChecked(e) {
-      console.log("e", e);
+      this.checked();
     },
     onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon() {
       this.shopPop.show = true;
