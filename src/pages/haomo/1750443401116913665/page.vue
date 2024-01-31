@@ -637,7 +637,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-egistrationProjectField {
+  /deep/.ele-registrationProjectField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
