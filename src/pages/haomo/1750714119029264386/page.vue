@@ -669,36 +669,6 @@
           box-shadow-color="#00000000"
           class="ele-2136b833-7f0e-4a8a-a081-36d9e275f611"
         >
-          <view
-            class="ele-wrapper ele-wrapper-a5b9bd79-5420-4a89-a71c-7e1c4870ca1a"
-          >
-            <hm-uview-bg-card
-              width="100%"
-              height=""
-              border-radius="0"
-              padding="0"
-              box-shadow-v-shadow="0"
-              box-shadow-blur="0"
-              box-shadow-color="#00000000"
-              background-color="#FFFFFF00"
-              class="ele-a5b9bd79-5420-4a89-a71c-7e1c4870ca1a"
-            >
-              <view
-                class="ele-wrapper ele-wrapper-8f33b075-7117-49ed-bd18-640aa28fa939"
-              >
-                <hm-uview-icon
-                  name="phone"
-                  color="#FFFFFF"
-                  size="20px"
-                  label="活动咨询"
-                  label-color="#FFFFFF"
-                  @click="onEle8F33B075711749EdBd18640Aa28Fa939Click"
-                  class="ele-8f33b075-7117-49ed-bd18-640aa28fa939"
-                >
-                </hm-uview-icon>
-              </view>
-            </hm-uview-bg-card>
-          </view>
           <view class="ele-wrapper ele-wrapper-isProtocol">
             <hm-uview-radio
               ref="isProtocol"
@@ -1238,9 +1208,6 @@ export default {
     onSureButtonClick() {
       this.login();
     },
-    onEle8F33B075711749EdBd18640Aa28Fa939Click() {
-      this.phonePopup.show = true;
-    },
     onElee174C2E6A7994Ccf8Fa92A81Dc515A6FClick() {
       console.log(this.isProtocol.value);
       if (!this.isProtocol.value) {
@@ -1491,6 +1458,7 @@ export default {
     margin-left: 4%;
     width: 92% !important;
   }
+  display: none;
 }
 
 .ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2 {
@@ -1618,6 +1586,7 @@ export default {
   /deep/.u-mode-center-box {
     border-radius: 8px;
   }
+  display: none;
 }
 
 .ele-wrapper-22dc02bc-b7b8-4d6b-83d6-6ee319d12809 {
@@ -1668,20 +1637,6 @@ export default {
   position: fixed;
   bottom: 0px;
   z-index: 1000;
-}
-
-.ele-wrapper-a5b9bd79-5420-4a89-a71c-7e1c4870ca1a {
-  width: 100%;
-  margin-bottom: 24rpx;
-}
-
-.ele-wrapper-8f33b075-7117-49ed-bd18-640aa28fa939 {
-  border-radius: 608rpx;
-  float: right;
-  text-align: center;
-  margin-right: 24rpx;
-  background: rgba(0, 0, 0, 0.16);
-  padding: 10rpx 10rpx;
 }
 
 .ele-wrapper-isProtocol {
