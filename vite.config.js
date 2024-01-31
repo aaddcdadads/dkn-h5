@@ -96,7 +96,7 @@ export default defineConfig({
     },
     proxy: {
       '/api': {
-        target: 'http://dev.block-design.cn',
+        target: 'http://localhost:8083',
         changeOrigin: true,
       },
       '/project-api/api': {
