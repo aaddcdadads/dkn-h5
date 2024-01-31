@@ -1062,7 +1062,6 @@ export default {
       payPopup: {
         show: false,
       },
-      phoneBox: {},
       countdown: {
         text: "剩下时间 23:59:59",
         fontSize: "14px",
@@ -1245,7 +1244,7 @@ export default {
       };
       //校验手机号
       self.checkPhone = function () {
-        let mobile = self.phoneBox.value;
+        let mobile = self.phoneInput.value;
         if (!mobile) {
           uni.showToast({
             icon: "error",
