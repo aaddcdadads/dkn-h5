@@ -16,6 +16,12 @@ import {
   putAction,
 } from "../request/http";
 
+import {
+  pay,
+  aliH5Pay,
+  wxWebPay
+} from "../logics/pay";
+
 // #ifdef H5
 import loadComponent from './loadComponent';
 // #endif
@@ -37,6 +43,10 @@ export default {
     app.config.globalProperties.$filter = filter;
     app.config.globalProperties.$reduce = reduce;
     app.config.globalProperties.$array2tree = array2tree;
+
+    app.config.globalProperties.$pay = pay;
+    app.config.globalProperties.$aliH5Pay = aliH5Pay;
+    app.config.globalProperties.$wxWebPay = wxWebPay
 
     app.config.globalProperties.$getCssUnit = function (value) {
         if (isNaN(Number(value))) {

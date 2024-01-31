@@ -29,6 +29,27 @@
             }
         },
         {
+          "path": "pages/haomo/payTest/page",
+          "style": {
+              "navigationBarTitleText": "支付测试",
+              "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "pages/haomo/aliPay/page",
+          "style": {
+              "navigationBarTitleText": "支付宝支付",
+              "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "pages/haomo/wxPay/page",
+          "style": {
+              "navigationBarTitleText": "微信支付",
+              "enablePullDownRefresh": false
+          }
+        },
+        {
             "path": "pages/haomo/1750726128974172161/page",
             "style": {
                 "navigationBarTitleText": "支付订单",
