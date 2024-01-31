@@ -47,7 +47,7 @@
                       height=""
                       border-width="1"
                       border-color="#B0B0B0"
-                      :text-align="'center'"
+                      :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
