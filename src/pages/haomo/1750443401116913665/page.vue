@@ -558,6 +558,13 @@ export default {
         this.activityNameField.value = item.acName ?? "";
         this.verificationDeadlineField.value = item.acPickUpTime ?? "";
         this.writeStatusField.value = item.pickUpStatusText ?? "";
+        //如果已核销或者已经过了截止时间
+        if (
+          item.pickUpStatus == 0 ||
+          (item.acPickUpTime && new Date() > new Date(item.acPickUpTime))
+        ) {
+          this.buttonwan.disabled = false;
+        }
       });
     },
     onOnLoad(options) {
