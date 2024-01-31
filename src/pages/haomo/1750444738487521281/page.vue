@@ -185,13 +185,12 @@
               :mode="'bottom'"
               class="ele-payPopup"
             >
-              <view
-                class="ele-wrapper ele-wrapper-c1e777b1-33b4-43de-8b09-b43843222e3f"
-              >
+              <view class="ele-wrapper ele-wrapper-activityText">
                 <hm-uview-text
-                  text="派对甜心奖牌趣味玩款5.2公里"
-                  font-size="18px"
-                  class="ele-c1e777b1-33b4-43de-8b09-b43843222e3f"
+                  ref="activityText"
+                  :text="activityText.text"
+                  :font-size="activityText.fontSize"
+                  class="ele-activityText"
                 >
                 </hm-uview-text>
               </view>
@@ -1062,6 +1061,10 @@ export default {
       payPopup: {
         show: false,
       },
+      activityText: {
+        text: "派对甜心奖牌趣味玩款5.2公里",
+        fontSize: "18px",
+      },
       countdown: {
         text: "剩下时间 23:59:59",
         fontSize: "14px",
@@ -1410,7 +1413,7 @@ export default {
   }
 }
 
-.ele-wrapper-c1e777b1-33b4-43de-8b09-b43843222e3f {
+.ele-wrapper-activityText {
   font-family: sans-serif;
   font-weight: 600;
   margin-top: 8px;
