@@ -1113,7 +1113,12 @@ export default {
         if (!res.success || res.result.length === 0) {
           return;
         }
-        let store = res.result;
+        let store = res.result.map((x) => {
+          return {
+            city: x.key,
+            shop: x.store,
+          };
+        });
         self.storeList.list = [store];
       };
       self.getImg = function (url) {
