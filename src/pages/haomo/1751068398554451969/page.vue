@@ -365,6 +365,21 @@ export default {
       this.writeOffModal.visible;
       this.writeOffText.text;
       this.writeOffModal.title;
+
+      this.getTime = () => {
+        // 创建一个新的 Date 对象来获取当前时间
+        let currentTime = new Date();
+        // 自定义时间格式
+        let year = currentTime.getFullYear();
+        let month = String(currentTime.getMonth() + 1).padStart(2, "0"); // 月份需要加1，然后补零至两位
+        let day = String(currentTime.getDate()).padStart(2, "0"); // 日期补零至两位
+        let hours = String(currentTime.getHours()).padStart(2, "0"); // 小时补零至两位
+        let minutes = String(currentTime.getMinutes()).padStart(2, "0"); // 分钟补零至两位
+        let seconds = String(currentTime.getSeconds()).padStart(2, "0"); // 秒数补零至两位
+        // 创建一个包含格式化时间的数据对象
+        let formattedTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+        return formattedTime;
+      };
     },
     onMounted() {
       console.log("获取数据---", this.orderId, this.storeId);
@@ -436,11 +451,11 @@ export default {
 
     onWriteOffModalOnConfirm() {
       this.$postAction("/api/dkn/orderPickUp/add", {
-        orderId: 1,
-        activityId: 1,
+        orderId: this.orderId,
+        activityId: this.registrationOrdersData.activityId,
         storeId: this.storeId,
-        pickUpStatus: 1,
-        pickUpTime: 1,
+        pickUpStatus: 0,
+        pickUpTime: this.getTime(),
       }).then((res) => {
         console.log("res--", res);
         if (!res.success) {
