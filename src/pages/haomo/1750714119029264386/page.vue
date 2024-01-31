@@ -5,7 +5,7 @@
         <hm-uview-bg-card
           ref="outsideBg"
           width="100%"
-          height=""
+          height="100%"
           border-radius="0"
           padding="0"
           box-shadow-color="#00000000"
@@ -1251,6 +1251,7 @@ export default {
   width: 100%;
   position: relative;
   padding-bottom: 344rpx;
+  height: calc(100vh - 300px);
 }
 
 .ele-wrapper-topBg {
