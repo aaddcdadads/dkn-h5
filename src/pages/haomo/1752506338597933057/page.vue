@@ -103,8 +103,10 @@ export default {
       // 将 href 属性设置为图片的 URL
       link.href = this.sharingImage.name;
 
+      document.body.appendChild(link);
       // 触发链接的点击事件
       link.click();
+      document.body.removeChild(link);
     },
   },
 };
