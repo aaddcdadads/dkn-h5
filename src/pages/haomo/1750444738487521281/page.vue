@@ -1218,7 +1218,7 @@ export default {
           duration: 2000,
         });
         uni.$u.route(
-          `/pages/haomo/1750726128974172161/page?orderId=${res.message}`
+          `/pages/haomo/1750726128974172161/page?orderId=${res.message}&money=${self.money}`
         );
       };
       self.getOrderProjects = function () {
