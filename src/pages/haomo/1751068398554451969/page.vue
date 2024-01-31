@@ -437,7 +437,7 @@ export default {
         this.writeOffText.text =
           "当前门店与报名登记门店不一致，需要强制核销？核销后不可再次领取奖品！";
       }
-      this.writeOffModal.visible = false;
+      this.writeOffModal.visible = true;
     },
   },
 };
