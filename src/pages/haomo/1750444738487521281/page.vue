@@ -1136,15 +1136,108 @@ export default {
       self.getData();
 
       self.checked = function () {
-        let money = 0;
+        setTimeout(() => {
+          let money = 0;
+          self.eventCard.list.forEach((e) => {
+            if (e.checked) {
+              let expense = e.expense * e.number;
+              money += expense;
+            }
+          });
+          console.log("money", money);
+          self.payButton.text = `总费用：¥${money} 立即报名`;
+          self.money = money;
+        });
+      };
+      self.addOrder = async function () {
+        if (!self.nameInput.value) {
+          self.error("姓名/昵称不能为空");
+          return;
+        }
+        if (!self.phoneInput.value) {
+          self.error("手机号不能为空");
+          return;
+        }
+        if (!self.smscodeIpnut.value) {
+          self.error("验证码不能为空");
+          return;
+        }
+        if (!self.storeInput.value) {
+          self.error("领奖门店不能为空");
+          return;
+        }
+
+        const orderProjects = self.getOrderProjects();
+
+        if (orderProjects.length == 0) {
+          self.error("请至少选择一个活动项目");
+          return;
+        }
+        let url = "/api/dkn/registrationOrders/addOrder";
+        let params = {
+          activityId: self.activityId,
+          storeId: self.storeInput.value,
+          paymentStatus: 1,
+          phone: self.phoneInput.value,
+          name: self.nameInput.value,
+          smscode: self.smscodeIpnut.value,
+          money: self.money,
+          orderProjects,
+        };
+        const res = await self.$postAction(url, params);
+        if (!res.success) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: res.message,
+            duration: 2000,
+          });
+          return;
+        }
+        uni.showToast({
+          icon: "success",
+          position: "top",
+          title: "报名成功前往支付页",
+          duration: 2000,
+        });
+      };
+      self.getOrderProjects = function () {
+        let list = [];
         self.eventCard.list.forEach((e) => {
-          if (e.checked) {
-            let expense = e.expense * e.number;
-            money += expense;
+          if (e.checked && e.number) {
+            list.push(e);
           }
         });
-        self.payButton.text = `总费用：¥${money} 立即报名`;
-        self.money = money;
+        list = list.map((x) => {
+          return {
+            activityProjectId: e.id,
+            num: e.number,
+          };
+        });
+        return list;
+      };
+      self.error = function (text) {
+        uni.showToast({
+          icon: "error",
+          position: "top",
+          title: text,
+          duration: 2000,
+        });
+      };
+      //获取验证码
+      self.getPhoneCode = async function () {
+        if (!self.checkPhone()) {
+          return;
+        }
+        let url = "/api/sys/sms";
+        let params = {
+          mobile: self.phoneInput.value,
+        };
+        const res = await self.$postAction(url, params);
+        uni.showToast({
+          title: res.message,
+          duration: 2000,
+        });
       };
     },
 
