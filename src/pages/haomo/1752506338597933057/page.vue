@@ -31,6 +31,7 @@
               width="100%"
               height=""
               border-radius="0"
+              box-shadow-color="#0000000A"
               class="ele-084fc45c-3b7d-42af-9042-8c47c465787c"
             >
               <view
