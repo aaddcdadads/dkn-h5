@@ -1184,6 +1184,10 @@ export default {
         self.prices.text = `¥ ${self.money}`;
       };
       self.addOrder = async function () {
+        let channel = 0;
+        if (self.weixinRadio.value === 1) {
+          channel = 1;
+        }
         let url = "/api/dkn/registrationOrders/addOrder";
         const orderProjects = self.getOrderProjects();
         let params = {
@@ -1195,6 +1199,7 @@ export default {
           smscode: self.smscodeIpnut.value,
           money: self.money,
           orderProjects,
+          channel,
         };
         const res = await self.$postAction(url, params);
         if (!res.success) {
@@ -1212,6 +1217,9 @@ export default {
           title: "报名成功前往支付页",
           duration: 2000,
         });
+        uni.$u.route(
+          `/pages/haomo/1750726128974172161/page?orderId=${res.message}`
+        );
       };
       self.getOrderProjects = function () {
         let list = [];
