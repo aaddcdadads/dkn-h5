@@ -69,6 +69,7 @@ export default {
         }
         self.protocolText.text = res.result.records[0].protocol;
       };
+      self.getProtocolText();
     },
   },
 };
