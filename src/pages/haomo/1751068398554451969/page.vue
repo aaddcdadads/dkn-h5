@@ -248,11 +248,10 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-e63fb2bd-2975-4df6-a56a-150d6f13babf"
-                  >
+                  <view class="ele-wrapper ele-wrapper-writeOffModal">
                     <hm-uview-modal
-                      :visible="false"
+                      ref="writeOffModal"
+                      v-model:visible="writeOffModal.visible"
                       title="核销"
                       height="120px"
                     >
@@ -265,10 +264,12 @@
                           :text-align="'center'"
                           class="ele-fae45550-c6de-4f42-bab5-dcdccb9fdedf"
                         >
-                          <view
-                            class="ele-wrapper ele-wrapper-8c3240b4-5b77-418d-8aa1-50c6c694d07d"
-                          >
-                            <hm-uview-text text="确认核销？"> </hm-uview-text>
+                          <view class="ele-wrapper ele-wrapper-writeOffText">
+                            <hm-uview-text
+                              ref="writeOffText"
+                              :text="writeOffText.text"
+                            >
+                            </hm-uview-text>
                           </view>
                         </hm-uview-bg-card>
                       </view>
@@ -280,6 +281,7 @@
                 <hm-uview-button
                   ref="Buttonwan"
                   :text="Buttonwan.text"
+                  @click="onButtonwanClick"
                   class="ele-Buttonwan"
                 >
                 </hm-uview-button>
@@ -318,6 +320,10 @@ export default {
       Buttonwan: {
         text: "确认核销",
       },
+      writeOffModal: {
+        show: null,
+        visible: false,
+      },
       inputMane: {
         value: "",
       },
@@ -330,8 +336,8 @@ export default {
       inputActivityName: {
         value: "",
       },
-      "e63fb2bd-2975-4df6-a56a-150d6f13babf": {
-        visible: false,
+      writeOffText: {
+        text: "确认核销？",
       },
     };
   },
@@ -419,6 +425,10 @@ export default {
       }
       this.orderId = options.orderId;
       this.storeId = options.storeId;
+    },
+
+    onButtonwanClick() {
+      this.writeOffModal.show = true;
     },
   },
 };
