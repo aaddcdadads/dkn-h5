@@ -1211,8 +1211,9 @@ export default {
 .ele-wrapper-outsideBg {
   width: 100%;
   position: relative;
-  padding-bottom: 344rpx;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 120px);
+  overflow-y: scroll;
+  width: 100%;
 }
 
 .ele-wrapper-topBg {
