@@ -620,8 +620,8 @@
                       <view class="ele-wrapper ele-wrapper-canelButton">
                         <hm-uview-button
                           ref="canelButton"
-                          :text="canelButton.text"
                           :type="canelButton.type"
+                          :text="canelButton.text"
                           class="ele-canelButton"
                         >
                         </hm-uview-button>
@@ -629,8 +629,8 @@
                       <view class="ele-wrapper ele-wrapper-sureButton">
                         <hm-uview-button
                           ref="sureButton"
-                          :text="sureButton.text"
                           :type="sureButton.type"
+                          :text="sureButton.text"
                           class="ele-sureButton"
                         >
                         </hm-uview-button>
@@ -768,6 +768,7 @@ export default {
           },
         ],
       },
+      activityItem: {},
       closeTime: {
         day: 19,
         hour: 15,
@@ -899,7 +900,6 @@ export default {
       phoneText: {
         text: "400-888-88888",
       },
-      activityItem: {},
       activityProjectItem: {},
       activityExtItem: {},
       activityImgItem: {},
@@ -918,12 +918,12 @@ export default {
         text: "拨打",
       },
       canelButton: {
-        text: "取消",
         type: "info",
+        text: "取消",
       },
       sureButton: {
-        text: "确认",
         type: "info",
+        text: "确认",
       },
     };
   },
@@ -1233,7 +1233,7 @@ export default {
         return;
       }
       uni.$u.route(
-        `/pages/haomo/1750444738487521281/page?activityId=${this.activityId}`
+        `/pages/haomo/1750444738487521281/page?activityId=${this.activityId}&activityName=${this.activityItem.name}`
       );
     },
     onEle4D8Eb71C153949848Ba0E2Dd0E6Ceeb9OnClick() {
