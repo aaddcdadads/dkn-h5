@@ -1062,6 +1062,7 @@ export default {
       payPopup: {
         show: false,
       },
+      phoneBox: {},
       countdown: {
         text: "剩下时间 23:59:59",
         fontSize: "14px",
@@ -1241,6 +1242,30 @@ export default {
           title: res.message,
           duration: 2000,
         });
+      };
+      //校验手机号
+      self.checkPhone = function () {
+        let mobile = self.phoneBox.value;
+        if (!mobile) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: "手机号不能为空",
+            duration: 2000,
+          });
+          return false;
+        }
+        const phoneRegex = /^1[3456789]\d{9}$/;
+        const status = phoneRegex.test(mobile);
+        if (!status) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: "手机号格式不正确",
+            duration: 2000,
+          });
+        }
+        return status;
       };
     },
 
