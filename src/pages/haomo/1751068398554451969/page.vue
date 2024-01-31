@@ -47,6 +47,7 @@
                       height=""
                       border-width="1"
                       border-color="#B0B0B0"
+                      :text-align="'center'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -86,6 +87,7 @@
                     <hm-uview-bg-card
                       width="100%"
                       height=""
+                      :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -125,6 +127,7 @@
                     <hm-uview-bg-card
                       width="100%"
                       height=""
+                      :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -179,6 +182,7 @@
                     <hm-uview-bg-card
                       width="100%"
                       height=""
+                      :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -382,6 +386,7 @@ export default {
 
 .ele-wrapper-inputMane {
   width: 65%;
+  margin-right: 10%;
   height: 45px;
   /deep/.u-border-bottom {
     display: flex;
@@ -415,6 +420,7 @@ export default {
 
 .ele-wrapper-inputPhoneNumber {
   width: 65%;
+  margin-right: 10%;
   height: 45px;
   /deep/.u-border-bottom {
     display: flex;
@@ -448,6 +454,7 @@ export default {
 
 .ele-wrapper-inputClaimStore {
   width: 65%;
+  margin-right: 10%;
   height: 45px;
   /deep/.u-border-bottom {
     display: flex;
@@ -487,6 +494,7 @@ export default {
 
 .ele-wrapper-inputActivityName {
   width: 65%;
+  margin-right: 10%;
   height: 45px;
   /deep/.u-border-bottom {
     display: flex;
