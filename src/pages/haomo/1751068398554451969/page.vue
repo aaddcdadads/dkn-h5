@@ -5,61 +5,61 @@
         class="ele-wrapper ele-wrapper-c57e9abe-e655-4515-acc3-575489ca1e33"
       >
         <hm-uview-bg-card
+          padding=""
           width="100%"
           height="100%"
-          padding=""
           class="ele-c57e9abe-e655-4515-acc3-575489ca1e33"
         >
           <view
             class="ele-wrapper ele-wrapper-a4540298-8d72-4b6c-a4e3-fab8f56c0be2"
           >
             <hm-uview-bg-card
+              padding=""
+              box-shadow-blur=""
+              box-shadow-v-shadow=""
+              box-shadow-h-shadow=""
+              box-shadow-color="#F0F0F000"
+              border-radius=""
+              background-color="#F0F0F0"
               width="100%"
               height="100%"
-              border-radius=""
               :text-align="'center'"
-              padding=""
-              box-shadow-h-shadow=""
-              box-shadow-v-shadow=""
-              box-shadow-blur=""
-              box-shadow-color="#F0F0F000"
-              background-color="#F0F0F0"
               class="ele-a4540298-8d72-4b6c-a4e3-fab8f56c0be2"
             >
               <view
                 class="ele-wrapper ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
               >
                 <hm-uview-bg-card
+                  padding=""
+                  box-shadow-blur=""
+                  box-shadow-v-shadow=""
+                  border-radius=""
                   width="100%"
                   height="100%"
-                  border-radius=""
                   :text-align="'center'"
-                  padding=""
-                  box-shadow-v-shadow=""
-                  box-shadow-blur=""
                   class="ele-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5"
                   >
                     <hm-uview-bg-card
-                      width="100%"
-                      height=""
-                      border-width="1"
-                      border-color="#B0B0B0"
-                      :text-align="'right'"
                       padding=""
-                      box-shadow-v-shadow=""
                       box-shadow-blur=""
+                      border-color="#B0B0B0"
+                      box-shadow-v-shadow=""
+                      width="100%"
+                      border-width="1"
+                      height=""
+                      :text-align="'right'"
                       class="ele-3594e500-632d-42e8-b3b9-d485a0f784a5"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-c1321652-9bb5-410d-a15c-df20fe88d984"
                       >
                         <hm-uview-text
-                          text="姓名/昵称:"
-                          font-size="13px"
                           padding="0"
+                          font-size="13px"
+                          text="姓名/昵称:"
                           class="ele-c1321652-9bb5-410d-a15c-df20fe88d984"
                         >
                         </hm-uview-text>
@@ -67,14 +67,14 @@
                       <view class="ele-wrapper ele-wrapper-inputMane">
                         <hm-uview-field
                           ref="inputMane"
-                          v-model:value="inputMane.value"
-                          label=""
-                          placeholder="报名项目名称 x 数量"
-                          label-width="0"
                           icon=""
+                          label=""
+                          label-width="0"
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
+                          placeholder="报名项目名称 x 数量"
+                          v-model:value="inputMane.value"
                           class="ele-inputMane"
                         >
                         </hm-uview-field>
@@ -85,21 +85,21 @@
                     class="ele-wrapper ele-wrapper-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9"
                   >
                     <hm-uview-bg-card
+                      padding=""
+                      box-shadow-blur=""
+                      box-shadow-v-shadow=""
                       width="100%"
                       height=""
                       :text-align="'right'"
-                      padding=""
-                      box-shadow-v-shadow=""
-                      box-shadow-blur=""
                       class="ele-eab88e13-fecb-4ae5-b3c3-ac874b9d8cc9"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-f2027eca-bb01-45c1-99a4-55ff0de5ada0"
                       >
                         <hm-uview-text
-                          text="手机号码:"
-                          font-size="13px"
                           padding="0"
+                          font-size="13px"
+                          text="手机号码:"
                           class="ele-f2027eca-bb01-45c1-99a4-55ff0de5ada0"
                         >
                         </hm-uview-text>
@@ -107,14 +107,14 @@
                       <view class="ele-wrapper ele-wrapper-inputPhoneNumber">
                         <hm-uview-field
                           ref="inputPhoneNumber"
-                          v-model:value="inputPhoneNumber.value"
-                          label=""
-                          placeholder="报名手机号码"
-                          label-width="0"
                           icon=""
+                          label=""
+                          label-width="0"
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
+                          placeholder="报名手机号码"
+                          v-model:value="inputPhoneNumber.value"
                           class="ele-inputPhoneNumber"
                         >
                         </hm-uview-field>
@@ -125,21 +125,21 @@
                     class="ele-wrapper ele-wrapper-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0"
                   >
                     <hm-uview-bg-card
+                      padding=""
+                      box-shadow-blur=""
+                      box-shadow-v-shadow=""
                       width="100%"
                       height=""
                       :text-align="'right'"
-                      padding=""
-                      box-shadow-v-shadow=""
-                      box-shadow-blur=""
                       class="ele-15f1e19b-dbc6-4869-a68e-a5c9ae58fad0"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-fb3d49e3-aa6d-4761-8222-bc41e4395857"
                       >
                         <hm-uview-text
-                          text="领奖门店:"
-                          font-size="13px"
                           padding="0"
+                          font-size="13px"
+                          text="领奖门店:"
                           class="ele-fb3d49e3-aa6d-4761-8222-bc41e4395857"
                         >
                         </hm-uview-text>
@@ -147,14 +147,14 @@
                       <view class="ele-wrapper ele-wrapper-inputClaimStore">
                         <hm-uview-field
                           ref="inputClaimStore"
-                          v-model:value="inputClaimStore.value"
-                          label=""
-                          placeholder="区域/门店名称"
-                          label-width="0"
                           icon=""
+                          label=""
+                          label-width="0"
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
+                          placeholder="区域/门店名称"
+                          v-model:value="inputClaimStore.value"
                           class="ele-inputClaimStore"
                         >
                         </hm-uview-field>
@@ -167,34 +167,34 @@
                 class="ele-wrapper ele-wrapper-41f7b43e-8542-4a04-ac12-f8bdeac98d58"
               >
                 <hm-uview-bg-card
+                  padding=""
+                  box-shadow-blur=""
+                  box-shadow-v-shadow=""
+                  border-radius=""
                   width="100%"
                   height="100%"
-                  border-radius=""
                   :text-align="'center'"
-                  padding=""
-                  box-shadow-v-shadow=""
-                  box-shadow-blur=""
                   class="ele-41f7b43e-8542-4a04-ac12-f8bdeac98d58"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-920b3665-1af5-40df-908e-748003d3af93"
                   >
                     <hm-uview-bg-card
+                      padding=""
+                      box-shadow-blur=""
+                      box-shadow-v-shadow=""
                       width="100%"
                       height=""
                       :text-align="'right'"
-                      padding=""
-                      box-shadow-v-shadow=""
-                      box-shadow-blur=""
                       class="ele-920b3665-1af5-40df-908e-748003d3af93"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-2ecc38bd-15e4-4ee4-9c5f-50b3b6d0846c"
                       >
                         <hm-uview-text
-                          text="活动名称:"
-                          font-size="13px"
                           padding="0"
+                          font-size="13px"
+                          text="活动名称:"
                           class="ele-2ecc38bd-15e4-4ee4-9c5f-50b3b6d0846c"
                         >
                         </hm-uview-text>
@@ -202,14 +202,14 @@
                       <view class="ele-wrapper ele-wrapper-inputActivityName">
                         <hm-uview-field
                           ref="inputActivityName"
-                          v-model:value="inputActivityName.value"
-                          label=""
-                          placeholder="活动名称"
-                          label-width="0"
                           icon=""
+                          label=""
+                          label-width="0"
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
+                          placeholder="活动名称"
+                          v-model:value="inputActivityName.value"
                           class="ele-inputActivityName"
                         >
                         </hm-uview-field>
@@ -231,9 +231,9 @@
                         class="ele-wrapper ele-wrapper-26f8e5b0-a98e-4879-9f6f-3f8f3819a511"
                       >
                         <hm-uview-text
-                          text="活动奖品:"
-                          font-size="13px"
                           padding="0"
+                          font-size="13px"
+                          text="活动奖品:"
                           class="ele-26f8e5b0-a98e-4879-9f6f-3f8f3819a511"
                         >
                         </hm-uview-text>
@@ -323,6 +323,54 @@ export default {
     },
     onMounted() {
       console.log("获取数据---", this.orderId, this.storeId);
+      this.$getAction("/api/dkn/viewRegistrationOrders/list", {
+        pageNo: 1,
+        pageSize: 1,
+        id: this.orderId,
+      }).then((res) => {
+        console.log("res--", res);
+        if (!res.success || res.result.records.length <= 0) {
+          uni.showToast({
+            title: "请重新查看活动信息",
+            icon: "error",
+            duration: 2000,
+          });
+          setTimeout(() => {
+            uni.navigateTo({
+              url: "/pages/haomo/1750714119029264386/page",
+            });
+          }, 2500);
+          return;
+        }
+        let item = res.result.records[0];
+        //保存订单id
+        this.inputMane.value = item.realname ?? "";
+        this.inputPhoneNumber.value = item.phone ?? "";
+        this.inputClaimStore.value;
+        this.inputActivityName.value = item.acName ?? "";
+      });
+      this.$getAction("/api/dkn/store/list", {
+        pageNo: 1,
+        pageSize: 1,
+        id: this.storeId,
+      }).then((res) => {
+        console.log("res--", res);
+        if (!res.success || res.result.records.length <= 0) {
+          uni.showToast({
+            title: "请重新扫码",
+            icon: "error",
+            duration: 2000,
+          });
+          setTimeout(() => {
+            uni.navigateTo({
+              url: "/pages/haomo/1750443401116913665/page",
+            });
+          }, 2500);
+          return;
+        }
+        let item = res.result.records[0];
+        this.inputClaimStore.value = item.name ?? "";
+      });
     },
     onOnLoad(options) {
       if (!options.orderId || !options.storeId) {
