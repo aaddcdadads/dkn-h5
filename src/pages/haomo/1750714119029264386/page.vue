@@ -15,14 +15,14 @@
           <view class="ele-wrapper ele-wrapper-topBg">
             <hm-uview-bg-card
               ref="topBg"
-              padding="12"
-              box-shadow-blur="0"
-              box-shadow-v-shadow="0"
-              box-shadow-color="#00000000"
-              border-radius="0"
-              background-color="#FFFFFF00"
               width="100%"
               height=""
+              border-radius="0"
+              padding="12"
+              box-shadow-v-shadow="0"
+              box-shadow-blur="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
               class="ele-topBg"
             >
               <view
@@ -60,13 +60,13 @@
           <view class="ele-wrapper ele-wrapper-imageBg">
             <hm-uview-bg-card
               ref="imageBg"
+              width="100%"
+              height=""
+              border-radius="0"
               padding="0"
               box-shadow-v-shadow="0"
               box-shadow-color="#00000000"
-              border-radius="0"
               background-color="#FFFFFF00"
-              width="100%"
-              height=""
               class="ele-imageBg"
             >
               <view class="ele-wrapper ele-wrapper-logoImg">
@@ -1267,6 +1267,8 @@ export default {
 
 .ele-wrapper-imageBg {
   width: 100%;
+  position: absolute;
+  top: 0;
 }
 
 .ele-wrapper-logoImg {
@@ -1276,7 +1278,7 @@ export default {
 .ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2 {
   width: 100%;
   position: absolute;
-  top: -48rpx;
+  top: 400px;
 }
 
 .ele-wrapper-colourCard {
