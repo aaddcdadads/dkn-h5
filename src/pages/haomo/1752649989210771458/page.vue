@@ -28,7 +28,27 @@ export default {
     return {};
   },
   watch: {},
+  onLoad(e) {
+    this.onOnLoad(e);
+  },
   methods: {
+    onOnLoad(options) {
+      if (!options.orderId) {
+        uni.showToast({
+          title: "数据获取失败",
+          icon: "error",
+          duration: 1000,
+        });
+        setTimeout(() => {
+          uni.navigateTo({
+            url: "/pages/haomo/1750443401116913665/page",
+          });
+        }, 1500);
+        return;
+      }
+      this.orderId = options.orderId;
+    },
+
     onHmH5ScanCodeQrcodeSucess(data) {
       //如果选择签到的培训管理和扫描出来的不一致
       if (!data) {
