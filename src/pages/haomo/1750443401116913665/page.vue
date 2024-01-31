@@ -496,6 +496,9 @@ export default {
   mounted(e) {
     this.onMounted(e);
   },
+  onLoad(e) {
+    this.onOnLoad(e);
+  },
   methods: {
     onCreated() {
       //手机号
@@ -553,6 +556,11 @@ export default {
         this.verificationDeadlineField.value = item.acPickUpTime ?? "";
         this.writeStatusField.value = item.pickUpStatusText ?? "";
       });
+    },
+    onOnLoad(options) {
+      if (options.orderId) {
+        this.orderId = options.orderId;
+      }
     },
 
     onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
