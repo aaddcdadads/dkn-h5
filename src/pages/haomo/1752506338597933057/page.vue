@@ -136,7 +136,7 @@ export default {
 
 .ele-wrapper-0ed4308b-d32b-4f14-8401-ba9ad296dc56 {
   width: 40%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 65/63;
   /deep/ .u-icon {
     width: 100%;
   }
