@@ -1401,7 +1401,6 @@ export default {
 
 .ele-wrapper-phoneBg {
   width: 100%;
-  margin-bottom: 24rpx;
 }
 
 .ele-wrapper-f16cae12-ff6f-4d64-ac60-014a613da044 {
@@ -1410,7 +1409,7 @@ export default {
   text-align: center;
   background: rgba(0, 0, 0, 0.16);
   padding: 10rpx 10rpx;
-  margin: 24rpx 24rpx;
+  margin: 24rpx 24rpx 0 24rpx;
 }
 
 .ele-wrapper-regularPopup {
