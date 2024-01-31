@@ -751,7 +751,7 @@ export default {
         height: "500px",
       },
       regularPopup: {
-        show: false,
+        show: true,
       },
       phonePopup: {
         show: false,
