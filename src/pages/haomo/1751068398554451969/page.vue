@@ -320,8 +320,15 @@ export default {
       Buttonwan: {
         text: "确认核销",
       },
+      registrationOrdersData: {},
+      inputClaimStore: {
+        value: "",
+      },
       writeOffModal: {
         visible: false,
+      },
+      writeOffText: {
+        text: "确认核销？",
       },
       inputMane: {
         value: "",
@@ -329,16 +336,9 @@ export default {
       inputPhoneNumber: {
         value: "",
       },
-      inputClaimStore: {
-        value: "",
-      },
       inputActivityName: {
         value: "",
       },
-      writeOffText: {
-        text: "确认核销？",
-      },
-      registrationOrdersData: {},
     };
   },
   watch: {},
@@ -429,6 +429,14 @@ export default {
     },
 
     onButtonwanClick() {
+      if (
+        this.registrationOrdersData.originalPickUpName !=
+        this.inputClaimStore.value
+      ) {
+        this.writeOffModal.title = "强制核销";
+        this.writeOffText.text =
+          "当前门店与报名登记门店不一致，需要强制核销？核销后不可再次领取奖品！";
+      }
       this.writeOffModal.visible = false;
     },
   },
