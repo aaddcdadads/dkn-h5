@@ -133,6 +133,7 @@ export default {
   width: 100%;
   /deep/ .hm-bg-card {
     display: flex;
+    align-items: center;
   }
 }
 
