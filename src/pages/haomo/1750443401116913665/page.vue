@@ -485,7 +485,17 @@ export default {
     };
   },
   watch: {},
+  created(e) {
+    this.onCreated(e);
+  },
   methods: {
+    onCreated() {
+      //手机号
+      this.phone = "321";
+      //活动id
+      this.activityId = "ff8080818d454675018d454f54cd0004";
+    },
+
     onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
       uni.navigateTo({
         url: "/pages/haomo/1750714119029264386/page",
