@@ -85,11 +85,11 @@
             class="ele-wrapper ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"
           >
             <hm-uview-bg-card
-              padding="0"
-              box-shadow-color="#00000000"
-              border-radius="0"
               width="100%"
               height=""
+              border-radius="0"
+              padding="0"
+              box-shadow-color="#00000000"
               class="ele-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"
             >
               <view class="ele-wrapper ele-wrapper-colourCard">
@@ -385,6 +385,16 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
+              <view
+                class="ele-wrapper ele-wrapper-0a1015fb-699b-459d-85b4-fcabfbf09236"
+              >
+                <hm-uview-bg-card> </hm-uview-bg-card>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-4b9b5df4-b788-47f9-93ca-162d2f99c26f"
+              >
+                <hm-uview-bg-card> </hm-uview-bg-card>
+              </view>
               <view class="ele-wrapper ele-wrapper-regularPopup">
                 <hm-uview-popup
                   ref="regularPopup"
@@ -627,14 +637,14 @@
             class="ele-wrapper ele-wrapper-a5b9bd79-5420-4a89-a71c-7e1c4870ca1a"
           >
             <hm-uview-bg-card
-              padding="0"
-              box-shadow-blur="0"
-              box-shadow-v-shadow="0"
-              box-shadow-color="#00000000"
-              border-radius="0"
-              background-color="#FFFFFF00"
               width="100%"
               height=""
+              border-radius="0"
+              padding="0"
+              box-shadow-v-shadow="0"
+              box-shadow-blur="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
               class="ele-a5b9bd79-5420-4a89-a71c-7e1c4870ca1a"
             >
               <view

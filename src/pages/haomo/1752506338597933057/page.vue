@@ -130,8 +130,9 @@ export default {
   left: 0;
   bottom: 0;
   width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
+  /deep/ .hm-bg-card {
+    display: flex;
+  }
 }
 
 .ele-wrapper-0ed4308b-d32b-4f14-8401-ba9ad296dc56 {
