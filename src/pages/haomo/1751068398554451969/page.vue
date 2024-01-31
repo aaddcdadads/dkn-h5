@@ -262,6 +262,7 @@
                           width="100%"
                           height="100%"
                           :text-align="'center'"
+                          box-shadow-color="#00000000"
                           class="ele-fae45550-c6de-4f42-bab5-dcdccb9fdedf"
                         >
                           <view class="ele-wrapper ele-wrapper-writeOffText">
