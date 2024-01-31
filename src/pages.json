@@ -55,6 +55,13 @@
                 "navigationBarTitleText": "活动核销",
                 "enablePullDownRefresh": false
             }
+        },
+        {
+            "path": "pages/haomo/1752506338597933057/page",
+            "style": {
+                "navigationBarTitleText": "活动分享",
+                "enablePullDownRefresh": false
+            }
         }
     ],
     "subPackages": [],
