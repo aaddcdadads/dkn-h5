@@ -108,24 +108,22 @@
                 >
                 </information-input-box>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-9662da08-d680-4c34-af33-b2ba9794437a"
-              >
+              <view class="ele-wrapper ele-wrapper-phoneInput">
                 <information-input-box
-                  value=""
+                  ref="phoneInput"
+                  v-model:value="phoneInput.value"
                   :show-code="false"
                   placeholder="手机号码"
-                  class="ele-9662da08-d680-4c34-af33-b2ba9794437a"
+                  class="ele-phoneInput"
                 >
                 </information-input-box>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-5102357a-cd29-4bb3-9a1f-ab709e15c3a8"
-              >
+              <view class="ele-wrapper ele-wrapper-smscodeIpnut">
                 <information-input-box
-                  value=""
+                  ref="smscodeIpnut"
+                  v-model:value="smscodeIpnut.value"
                   placeholder="短信验证码"
-                  class="ele-5102357a-cd29-4bb3-9a1f-ab709e15c3a8"
+                  class="ele-smscodeIpnut"
                 >
                 </information-input-box>
               </view>
@@ -1071,10 +1069,10 @@ export default {
       nameInput: {
         value: "",
       },
-      "9662da08-d680-4c34-af33-b2ba9794437a": {
+      phoneInput: {
         value: "",
       },
-      "5102357a-cd29-4bb3-9a1f-ab709e15c3a8": {
+      smscodeIpnut: {
         value: "",
       },
       "71e123e5-88a9-44c5-b029-f89fdaffa0d3": {
@@ -1238,12 +1236,12 @@ export default {
   margin-top: 5px;
 }
 
-.ele-wrapper-9662da08-d680-4c34-af33-b2ba9794437a {
+.ele-wrapper-phoneInput {
   width: 100%;
   margin-top: 20px;
 }
 
-.ele-wrapper-5102357a-cd29-4bb3-9a1f-ab709e15c3a8 {
+.ele-wrapper-smscodeIpnut {
   width: 100%;
   margin-top: 20px;
 }
