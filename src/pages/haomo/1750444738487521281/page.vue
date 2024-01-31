@@ -1302,7 +1302,7 @@ export default {
       this.weixinRadio.value = "1";
     },
     onElecc32D6578Fd941629086B69B68Cf0BddClick() {
-      this.addOrder();
+      this.orderPayment();
     },
     onPayButtonClick() {
       this.checkOrder();
