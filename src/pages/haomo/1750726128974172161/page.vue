@@ -22,13 +22,12 @@
               box-shadow-blur=""
               class="ele-titlePrice"
             >
-              <view
-                class="ele-wrapper ele-wrapper-d5bbc53a-e10d-447f-ad1c-d820e1888444"
-              >
+              <view class="ele-wrapper ele-wrapper-moneyText">
                 <hm-uview-text
-                  text="¥ 499.00"
-                  color="#F56C6C"
-                  class="ele-d5bbc53a-e10d-447f-ad1c-d820e1888444"
+                  ref="moneyText"
+                  :text="moneyText.text"
+                  :color="moneyText.color"
+                  class="ele-moneyText"
                 >
                 </hm-uview-text>
               </view>
@@ -215,6 +214,10 @@ export default {
   data() {
     let self = this;
     return {
+      moneyText: {
+        text: "¥ 499.00",
+        color: "#F56C6C",
+      },
       "37b1cd04-5fee-4df3-943a-43f69feeaf26": {
         value: "false",
         list: [
@@ -258,7 +261,7 @@ export default {
   }
 }
 
-.ele-wrapper-d5bbc53a-e10d-447f-ad1c-d820e1888444 {
+.ele-wrapper-moneyText {
   font-family: "Montserrat Bold", "Montserrat", sans-serif;
   font-weight: 700;
   color: #f56c6c;

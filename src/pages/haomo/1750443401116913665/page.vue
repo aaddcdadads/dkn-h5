@@ -52,10 +52,9 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
-              >
+              <view class="ele-wrapper ele-wrapper-HmUviewBgCard1">
                 <hm-uview-bg-card
+                  ref="HmUviewBgCard1"
                   width="100%"
                   height="100%"
                   border-radius=""
@@ -63,7 +62,7 @@
                   padding=""
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
-                  class="ele-4884fdaf-fa9c-460e-95ad-de4f053bfbf5"
+                  class="ele-HmUviewBgCard1"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5"
@@ -90,35 +89,33 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-HmUviewField1">
-                        <hm-uview-field
-                          ref="HmUviewField1"
-                          v-model:value="HmUviewField1.value"
-                          label=""
-                          placeholder="报名项目名称 x 数量"
-                          label-width="0"
-                          icon=""
-                          right-icon=""
-                          :border-bottom="false"
-                          :disabled="true"
-                          class="ele-HmUviewField1"
+                      <view
+                        class="ele-wrapper ele-wrapper-9756f966-bc8e-4002-afd1-bf38de80086e"
+                      >
+                        <hm-loop
+                          :value="[1]"
+                          class="ele-9756f966-bc8e-4002-afd1-bf38de80086e"
                         >
-                        </hm-uview-field>
-                      </view>
-                      <view class="ele-wrapper ele-wrapper-HmUviewField9">
-                        <hm-uview-field
-                          ref="HmUviewField9"
-                          v-model:value="HmUviewField9.value"
-                          label=""
-                          placeholder="报名项目名称 x 数量"
-                          label-width="0"
-                          icon=""
-                          right-icon=""
-                          :border-bottom="false"
-                          :disabled="true"
-                          class="ele-HmUviewField9"
-                        >
-                        </hm-uview-field>
+                          <template #default="{ item }">
+                            <view
+                              class="ele-wrapper ele-wrapper-registrationProjectField"
+                            >
+                              <hm-uview-field
+                                ref="registrationProjectField"
+                                v-model:value="registrationProjectField.value"
+                                label=""
+                                placeholder="报名项目名称 x 数量"
+                                label-width="0"
+                                icon=""
+                                right-icon=""
+                                :border-bottom="false"
+                                :disabled="true"
+                                class="ele-registrationProjectField"
+                              >
+                              </hm-uview-field>
+                            </view>
+                          </template>
+                        </hm-loop>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -127,7 +124,7 @@
                   >
                     <hm-uview-bg-card
                       width="100%"
-                      height="40"
+                      height=""
                       border-width="1"
                       border-color="#B0B0B0"
                       :text-align="'right'"
@@ -147,10 +144,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-HmUviewField2">
+                      <view class="ele-wrapper ele-wrapper-userNameField">
                         <hm-uview-field
-                          ref="HmUviewField2"
-                          v-model:value="HmUviewField2.value"
+                          ref="userNameField"
+                          v-model:value="userNameField.value"
                           label=""
                           placeholder="姓名/昵称"
                           label-width="0"
@@ -158,7 +155,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-HmUviewField2"
+                          class="ele-userNameField"
                         >
                         </hm-uview-field>
                       </view>
@@ -169,7 +166,7 @@
                   >
                     <hm-uview-bg-card
                       width="100%"
-                      height="40"
+                      height=""
                       :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
@@ -187,10 +184,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-HmUviewField3">
+                      <view class="ele-wrapper ele-wrapper-phoneField">
                         <hm-uview-field
-                          ref="HmUviewField3"
-                          v-model:value="HmUviewField3.value"
+                          ref="phoneField"
+                          v-model:value="phoneField.value"
                           label=""
                           placeholder="报名手机号码"
                           label-width="0"
@@ -198,7 +195,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-HmUviewField3"
+                          class="ele-phoneField"
                         >
                         </hm-uview-field>
                       </view>
@@ -209,7 +206,7 @@
                   >
                     <hm-uview-bg-card
                       width="100%"
-                      height="40"
+                      height=""
                       :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
@@ -227,10 +224,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-HmUviewField4">
+                      <view class="ele-wrapper ele-wrapper-storeNameField">
                         <hm-uview-field
-                          ref="HmUviewField4"
-                          v-model:value="HmUviewField4.value"
+                          ref="storeNameField"
+                          v-model:value="storeNameField.value"
                           label=""
                           placeholder="区域/门店名称"
                           label-width="0"
@@ -238,7 +235,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-HmUviewField4"
+                          class="ele-storeNameField"
                         >
                         </hm-uview-field>
                       </view>
@@ -249,7 +246,7 @@
                   >
                     <hm-uview-bg-card
                       width="100%"
-                      height="40"
+                      height=""
                       :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
@@ -267,10 +264,12 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-HmUviewField5">
+                      <view
+                        class="ele-wrapper ele-wrapper-registrationTimeField"
+                      >
                         <hm-uview-field
-                          ref="HmUviewField5"
-                          v-model:value="HmUviewField5.value"
+                          ref="registrationTimeField"
+                          v-model:value="registrationTimeField.value"
                           label=""
                           placeholder="2024.02.10 15:46:39"
                           label-width="0"
@@ -278,7 +277,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-HmUviewField5"
+                          class="ele-registrationTimeField"
                         >
                         </hm-uview-field>
                       </view>
@@ -289,7 +288,7 @@
                   >
                     <hm-uview-bg-card
                       width="100%"
-                      height="40"
+                      height=""
                       :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
@@ -307,10 +306,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-HmUviewField6">
+                      <view class="ele-wrapper ele-wrapper-activityNameField">
                         <hm-uview-field
-                          ref="HmUviewField6"
-                          v-model:value="HmUviewField6.value"
+                          ref="activityNameField"
+                          v-model:value="activityNameField.value"
                           label=""
                           placeholder="区域/门店名称"
                           label-width="0"
@@ -318,7 +317,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-HmUviewField6"
+                          class="ele-activityNameField"
                         >
                         </hm-uview-field>
                       </view>
@@ -329,7 +328,7 @@
                   >
                     <hm-uview-bg-card
                       width="100%"
-                      height="40"
+                      height=""
                       :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
@@ -347,10 +346,12 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-HmUviewField7">
+                      <view
+                        class="ele-wrapper ele-wrapper-verificationDeadlineField"
+                      >
                         <hm-uview-field
-                          ref="HmUviewField7"
-                          v-model:value="HmUviewField7.value"
+                          ref="verificationDeadlineField"
+                          v-model:value="verificationDeadlineField.value"
                           label=""
                           placeholder="2024.02.18 23:59:59"
                           label-width="0"
@@ -358,7 +359,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-HmUviewField7"
+                          class="ele-verificationDeadlineField"
                         >
                         </hm-uview-field>
                       </view>
@@ -369,7 +370,7 @@
                   >
                     <hm-uview-bg-card
                       width="100%"
-                      height="40"
+                      height=""
                       :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
@@ -387,10 +388,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-HmUviewField8">
+                      <view class="ele-wrapper ele-wrapper-writeStatusField">
                         <hm-uview-field
-                          ref="HmUviewField8"
-                          v-model:value="HmUviewField8.value"
+                          ref="writeStatusField"
+                          v-model:value="writeStatusField.value"
                           label=""
                           placeholder="待核销/已核销"
                           label-width="0"
@@ -398,7 +399,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-HmUviewField8"
+                          class="ele-writeStatusField"
                         >
                         </hm-uview-field>
                       </view>
@@ -413,18 +414,17 @@
                   text=" 返回活动详情页"
                   font-size="1em"
                   color="#409EFF"
-                  :text-style="{}"
                   @onClick="onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick"
                   class="ele-ae2f68ea-d21d-4a62-8255-bc0fbe3dd451"
                 >
                 </hm-uview-text>
               </view>
-              <view class="ele-wrapper ele-wrapper-Buttonwan">
+              <view class="ele-wrapper ele-wrapper-buttonwan">
                 <hm-uview-button
-                  ref="Buttonwan"
-                  :text="Buttonwan.text"
-                  :custom-style="Buttonwan.customStyle"
-                  class="ele-Buttonwan"
+                  ref="buttonwan"
+                  :text="buttonwan.text"
+                  @click="onButtonwanClick"
+                  class="ele-buttonwan"
                 >
                 </hm-uview-button>
               </view>
@@ -440,6 +440,7 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
@@ -448,6 +449,7 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewText,
+    HmLoop,
     HmUviewField,
     HmUviewButton,
   },
@@ -455,45 +457,116 @@ export default {
   data() {
     let self = this;
     return {
-      Buttonwan: {
+      buttonwan: {
         text: "核销",
-        customStyle: {},
       },
-      HmUviewField1: {
+      registrationProjectField: {
         value: "",
       },
-      HmUviewField9: {
+      userNameField: {
         value: "",
       },
-      HmUviewField2: {
+      phoneField: {
         value: "",
       },
-      HmUviewField3: {
+      storeNameField: {
         value: "",
       },
-      HmUviewField4: {
+      registrationTimeField: {
         value: "",
       },
-      HmUviewField5: {
+      activityNameField: {
         value: "",
       },
-      HmUviewField6: {
+      verificationDeadlineField: {
         value: "",
       },
-      HmUviewField7: {
+      writeStatusField: {
         value: "",
       },
-      HmUviewField8: {
-        value: "",
+      "9756f966-bc8e-4002-afd1-bf38de80086e": {
+        value: [1],
       },
     };
   },
   watch: {},
+  created(e) {
+    this.onCreated(e);
+  },
+  mounted(e) {
+    this.onMounted(e);
+  },
   methods: {
+    onCreated() {
+      //手机号
+      this.phone = "321";
+      //活动id
+      this.activityId = "10c9031404ac1c64183d494478372b96";
+
+      //registrationProjectField userNameField  phoneField storeNameField
+      //registrationTimeField activityNameField verificationDeadlineField writeStatusField
+      this.registrationProjectField.value;
+      this.userNameField.value;
+      this.phoneField.value;
+      this.storeNameField.value;
+      this.registrationTimeField.value;
+      this.activityNameField.value;
+      this.verificationDeadlineField.value;
+      this.writeStatusField.value;
+    },
+    onMounted() {
+      this.phone;
+      //活动id
+      this.activityId;
+
+      this.$getAction("/api/dkn/viewRegistrationOrders/list", {
+        pageNo: 1,
+        pageSize: 1,
+        phone: this.phone,
+        activityId: this.activityId,
+      }).then((res) => {
+        console.log("res--", res);
+        if (!res.success || res.result.records.length <= 0) {
+          uni.showToast({
+            title: "请重新查看活动信息",
+            icon: "error",
+            duration: 2000,
+          });
+          setTimeout(() => {
+            uni.navigateTo({
+              url: "/pages/haomo/1750714119029264386/page",
+            });
+          }, 2500);
+          return;
+        }
+        let item = res.result.records[0];
+        //保存订单id
+        this.orderId = item.id;
+        this.registrationProjectField.value = item.activityId_dictText ?? "";
+        this.userNameField.value = item.realname ?? "";
+        this.phoneField.value = item.phone ?? "";
+        this.storeNameField.value = item.originalPickUpName ?? "";
+        this.registrationTimeField.value = item.paymentTime ?? "";
+        this.activityNameField.value = item.acName ?? "";
+        this.verificationDeadlineField.value = item.acPickUpTime ?? "";
+        this.writeStatusField.value = item.pickUpStatusText ?? "";
+      });
+    },
+
     onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
-      uni.$u.route(
-        "https://stage.block-design.cn/edit-page/?pageId=1750700281953259522"
-      );
+      uni.navigateTo({
+        url: "/pages/haomo/1750714119029264386/page",
+      });
+    },
+    onButtonwanClick() {
+      this.storeId = "ff8080818d5d6fdb018d5d7725c50001";
+      uni.navigateTo({
+        url:
+          "/pages/haomo/1751068398554451969/page?orderId=" +
+          this.orderId +
+          "&storeId=" +
+          this.storeId,
+      });
     },
   },
 };
@@ -527,18 +600,17 @@ export default {
   margin-right: 75%;
 }
 
-.ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
+.ele-wrapper-HmUviewBgCard1 {
   width: 100%;
+  /deep/.ele-3594e500-632d-42e8-b3b9-d485a0f784a5 {
+    margin-top: 15px;
+  }
 }
 
 .ele-wrapper-3594e500-632d-42e8-b3b9-d485a0f784a5 {
   width: 100%;
-  display: flex;
   align-items: center;
-  margin: 15px 0px;
-  /deep/.hm-bg-card {
-    margin-top: 15px !important;
-  }
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -548,8 +620,13 @@ export default {
   vertical-align: top;
 }
 
-.ele-wrapper-HmUviewField1 {
+.ele-wrapper-9756f966-bc8e-4002-afd1-bf38de80086e {
   width: 65%;
+  margin-right: 10%;
+}
+
+.ele-wrapper-registrationProjectField {
+  width: 100%;
   height: 45px;
   margin-right: 10%;
   /deep/.u-border-bottom {
@@ -569,33 +646,11 @@ export default {
   }
 }
 
-.ele-wrapper-HmUviewField9 {
-  width: 65%;
-  height: 45px;
-  margin-right: 10%;
-  margin-top: 15px;
-  /deep/.u-border-bottom {
-    display: flex;
-    align-items: center;
-    height: 45px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
-  /deep/.ele-HmUviewField9 {
-    background: rgb(240, 240, 240);
-    border-radius: 5px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-  }
-}
-
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin-top: 10px;
 }
 
 .ele-wrapper-a6b059cb-691d-4093-bede-453d1eaf7370 {
@@ -603,7 +658,7 @@ export default {
   vertical-align: top;
 }
 
-.ele-wrapper-HmUviewField2 {
+.ele-wrapper-userNameField {
   width: 65%;
   height: 45px;
   margin-right: 10%;
@@ -628,7 +683,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin-top: 10px;
 }
 
 .ele-wrapper-df0e3be8-5694-4de1-89ab-efc9e61b2384 {
@@ -636,7 +691,7 @@ export default {
   vertical-align: top;
 }
 
-.ele-wrapper-HmUviewField3 {
+.ele-wrapper-phoneField {
   width: 65%;
   height: 45px;
   margin-right: 10%;
@@ -661,7 +716,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin-top: 10px;
 }
 
 .ele-wrapper-da0d9595-55d9-48cf-b00a-082df56d4a58 {
@@ -669,7 +724,7 @@ export default {
   vertical-align: top;
 }
 
-.ele-wrapper-HmUviewField4 {
+.ele-wrapper-storeNameField {
   width: 65%;
   height: 45px;
   margin-right: 10%;
@@ -694,7 +749,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin-top: 10px;
 }
 
 .ele-wrapper-1c6f3120-a3af-4da2-91cf-2a913f75e70f {
@@ -702,7 +757,7 @@ export default {
   vertical-align: top;
 }
 
-.ele-wrapper-HmUviewField5 {
+.ele-wrapper-registrationTimeField {
   width: 65%;
   height: 45px;
   margin-right: 10%;
@@ -727,7 +782,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin-top: 10px;
 }
 
 .ele-wrapper-d300e2f4-3555-45fa-a67c-be25208705a0 {
@@ -735,7 +790,7 @@ export default {
   vertical-align: top;
 }
 
-.ele-wrapper-HmUviewField6 {
+.ele-wrapper-activityNameField {
   width: 65%;
   height: 45px;
   margin-right: 10%;
@@ -760,7 +815,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin-top: 10px;
 }
 
 .ele-wrapper-3ea4931b-f9be-449b-adfa-85aec01fa006 {
@@ -768,7 +823,7 @@ export default {
   vertical-align: top;
 }
 
-.ele-wrapper-HmUviewField7 {
+.ele-wrapper-verificationDeadlineField {
   width: 65%;
   height: 45px;
   margin-right: 10%;
@@ -793,7 +848,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 15px 0px;
+  margin-top: 10px;
   /deep/.hm-bg-card {
     margin-bottom: 20px;
   }
@@ -804,7 +859,7 @@ export default {
   vertical-align: top;
 }
 
-.ele-wrapper-HmUviewField8 {
+.ele-wrapper-writeStatusField {
   width: 65%;
   height: 45px;
   margin-right: 10%;
@@ -830,7 +885,7 @@ export default {
   margin-top: 20px;
 }
 
-.ele-wrapper-Buttonwan {
+.ele-wrapper-buttonwan {
   width: 80%;
   margin-top: 10%;
   height: 50px;

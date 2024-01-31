@@ -82,6 +82,14 @@ export default {
       type: String,
       default: '#feeff7'
     },
+    /**
+     * 文字色
+     * @type Color
+     */
+     textColor: {
+      type: String,
+      default: '#000000'
+    },
   },
 
   data() {
@@ -105,6 +113,7 @@ export default {
 .view{
   background: v-bind(backgroundColor);
   border-radius:8px;
+  padding:24rpx 24rpx;
 }
 .container {
   background: transparent;
@@ -170,7 +179,7 @@ export default {
     font-size: 28rpx;
     font-family: Microsoft YaHei;
     font-weight: 400;
-    color: #000000;
+    color:v-bind(textColor);
   }
 }
 </style>

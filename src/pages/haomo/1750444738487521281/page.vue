@@ -63,7 +63,12 @@
               class="ele-74c8c2c3-d387-4029-8b68-8275204c2ed5"
             >
               <view class="ele-wrapper ele-wrapper-eventCard">
-                <event-registration-card ref="eventCard" :list="eventCard.list">
+                <event-registration-card
+                  ref="eventCard"
+                  :list="eventCard.list"
+                  @checked="onEventCardChecked"
+                  @change="onEventCardChange"
+                >
                 </event-registration-card>
               </view>
             </hm-uview-bg-card>
@@ -94,47 +99,44 @@
               background-color="#F8F8F8"
               class="ele-7927eb64-d6cf-4dda-8938-a15bb62187d2"
             >
-              <view
-                class="ele-wrapper ele-wrapper-8b981cf2-ae14-4b8c-9f72-4cd6c41423a6"
-              >
+              <view class="ele-wrapper ele-wrapper-nameInput">
                 <information-input-box
-                  value=""
+                  ref="nameInput"
+                  v-model:value="nameInput.value"
                   :show-code="false"
-                  class="ele-8b981cf2-ae14-4b8c-9f72-4cd6c41423a6"
+                  class="ele-nameInput"
                 >
                 </information-input-box>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-9662da08-d680-4c34-af33-b2ba9794437a"
-              >
+              <view class="ele-wrapper ele-wrapper-phoneInput">
                 <information-input-box
-                  value=""
+                  ref="phoneInput"
+                  v-model:value="phoneInput.value"
                   :show-code="false"
                   placeholder="手机号码"
-                  class="ele-9662da08-d680-4c34-af33-b2ba9794437a"
+                  class="ele-phoneInput"
                 >
                 </information-input-box>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-5102357a-cd29-4bb3-9a1f-ab709e15c3a8"
-              >
+              <view class="ele-wrapper ele-wrapper-smscodeIpnut">
                 <information-input-box
-                  value=""
+                  ref="smscodeIpnut"
+                  v-model:value="smscodeIpnut.value"
                   placeholder="短信验证码"
-                  class="ele-5102357a-cd29-4bb3-9a1f-ab709e15c3a8"
+                  @onCode="onSmscodeIpnutOnCode"
+                  class="ele-smscodeIpnut"
                 >
                 </information-input-box>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3"
-              >
+              <view class="ele-wrapper ele-wrapper-storeInput">
                 <information-input-box
-                  value=""
+                  ref="storeInput"
+                  v-model:value="storeInput.value"
                   :show-code="false"
                   :show-icon="true"
                   placeholder="领奖门店"
-                  @rightIcon="onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon"
-                  class="ele-71e123e5-88a9-44c5-b029-f89fdaffa0d3"
+                  @rightIcon="onStoreInputRightIcon"
+                  class="ele-storeInput"
                 >
                 </information-input-box>
               </view>
@@ -168,606 +170,8 @@
                   box-shadow-blur=""
                   class="ele-69d470b9-0c45-46a6-92d6-89fc50270dd8"
                 >
-                  <view
-                    class="ele-wrapper ele-wrapper-82c0b630-61ea-4b55-b093-9bb236d70e69"
-                  >
-                    <store-selection
-                      :list="[
-                        {
-                          anchor: 'a',
-                          store: [
-                            {
-                              city: '安庆',
-                              shop: [
-                                {
-                                  name: '柳叶店',
-                                  address:
-                                    '常德市武陵区柳叶大道与皂果交汇处万达广场一楼',
-                                },
-                              ],
-                            },
-                            {
-                              city: '长沙',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                              ],
-                            },
-                            {
-                              city: '成都',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address:
-                                    '成都市郫都区德源镇红旗大道北段221号5号楼11楼',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店1',
-                                  address: '成都高新区仁和街39号6栋2层1号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店2',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店3',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店4',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号',
-                                  checked: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          anchor: 'b',
-                          store: [
-                            {
-                              city: '亳州',
-                              shop: [
-                                {
-                                  name: '柳叶店',
-                                  address:
-                                    '常德市武陵区柳叶大道与皂果交汇处万达广场一楼',
-                                },
-                              ],
-                            },
-                            {
-                              city: '长沙',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                              ],
-                            },
-                            {
-                              city: '成都',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address:
-                                    '成都市郫都区德源镇红旗大道北段221号5号楼11楼',
-                                },
-                                {
-                                  name: '洋湖店1',
-                                  address: '成都高新区仁和街39号6栋2层1号',
-                                },
-                                {
-                                  name: '洋湖店2',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号',
-                                },
-                                {
-                                  name: '洋湖店3',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号',
-                                },
-                                {
-                                  name: '洋湖店4',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号',
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          anchor: 'c',
-                          store: [
-                            {
-                              city: '常德',
-                              shop: [
-                                {
-                                  name: '柳叶店',
-                                  address:
-                                    '常德市武陵区柳叶大道与皂果交汇处万达广场一楼',
-                                },
-                              ],
-                            },
-                            {
-                              city: '长沙',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                              ],
-                            },
-                            {
-                              city: '成都',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address:
-                                    '成都市郫都区德源镇红旗大道北段221号5号楼11楼',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店1',
-                                  address: '成都高新区仁和街39号6栋2层1号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店2',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店3',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店4',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号',
-                                  checked: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          anchor: 'c',
-                          store: [
-                            {
-                              city: '常德',
-                              shop: [
-                                {
-                                  name: '柳叶店',
-                                  address:
-                                    '常德市武陵区柳叶大道与皂果交汇处万达广场一楼',
-                                },
-                              ],
-                            },
-                            {
-                              city: '长沙',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                              ],
-                            },
-                            {
-                              city: '成都',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address:
-                                    '成都市郫都区德源镇红旗大道北段221号5号楼11楼',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店1',
-                                  address: '成都高新区仁和街39号6栋2层1号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店2',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店3',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店4',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号',
-                                  checked: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          anchor: 'd',
-                          store: [
-                            {
-                              city: '常德',
-                              shop: [
-                                {
-                                  name: '柳叶店',
-                                  address:
-                                    '常德市武陵区柳叶大道与皂果交汇处万达广场一楼',
-                                },
-                              ],
-                            },
-                            {
-                              city: '长沙',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                              ],
-                            },
-                            {
-                              city: '成都',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address:
-                                    '成都市郫都区德源镇红旗大道北段221号5号楼11楼',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店1',
-                                  address: '成都高新区仁和街39号6栋2层1号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店2',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店3',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店4',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号',
-                                  checked: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          anchor: 'e',
-                          store: [
-                            {
-                              city: '常德',
-                              shop: [
-                                {
-                                  name: '柳叶店',
-                                  address:
-                                    '常德市武陵区柳叶大道与皂果交汇处万达广场一楼',
-                                },
-                              ],
-                            },
-                            {
-                              city: '长沙',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                              ],
-                            },
-                            {
-                              city: '成都',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address:
-                                    '成都市郫都区德源镇红旗大道北段221号5号楼11楼',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店1',
-                                  address: '成都高新区仁和街39号6栋2层1号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店2',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店3',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店4',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号',
-                                  checked: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          anchor: 'f',
-                          store: [
-                            {
-                              city: '常德',
-                              shop: [
-                                {
-                                  name: '柳叶店',
-                                  address:
-                                    '常德市武陵区柳叶大道与皂果交汇处万达广场一楼',
-                                },
-                              ],
-                            },
-                            {
-                              city: '长沙',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                              ],
-                            },
-                            {
-                              city: '成都',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address:
-                                    '成都市郫都区德源镇红旗大道北段221号5号楼11楼',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店1',
-                                  address: '成都高新区仁和街39号6栋2层1号',
-                                },
-                                {
-                                  name: '洋湖店2',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店3',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店4',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号fffff',
-                                  checked: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          anchor: 'g',
-                          store: [
-                            {
-                              city: '常德',
-                              shop: [
-                                {
-                                  name: '柳叶店',
-                                  address:
-                                    '常德市武陵区柳叶大道与皂果交汇处万达广场一楼',
-                                },
-                              ],
-                            },
-                            {
-                              city: '长沙',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                                {
-                                  name: '洋湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                },
-                              ],
-                            },
-                            {
-                              city: '成都',
-                              shop: [
-                                {
-                                  name: '梅溪湖店',
-                                  address: '湖南省长沙市丘林分三路1099号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '湘江店路',
-                                  address:
-                                    '成都市郫都区德源镇红旗大道北段221号5号楼11楼',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店1',
-                                  address: '成都高新区仁和街39号6栋2层1号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店2',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店3',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号',
-                                  checked: false,
-                                },
-                                {
-                                  name: '洋湖店4',
-                                  address:
-                                    '中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号ggggg',
-                                  checked: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ]"
-                    >
+                  <view class="ele-wrapper ele-wrapper-storeList">
+                    <store-selection ref="storeList" :list="storeList.list">
                     </store-selection>
                   </view>
                 </hm-uview-bg-card>
@@ -781,13 +185,12 @@
               :mode="'bottom'"
               class="ele-payPopup"
             >
-              <view
-                class="ele-wrapper ele-wrapper-c1e777b1-33b4-43de-8b09-b43843222e3f"
-              >
+              <view class="ele-wrapper ele-wrapper-activityText">
                 <hm-uview-text
-                  text="派对甜心奖牌趣味玩款5.2公里"
-                  font-size="18px"
-                  class="ele-c1e777b1-33b4-43de-8b09-b43843222e3f"
+                  ref="activityText"
+                  :text="activityText.text"
+                  :font-size="activityText.fontSize"
+                  class="ele-activityText"
                 >
                 </hm-uview-text>
               </view>
@@ -943,6 +346,7 @@
                       :type="'primary'"
                       :shape="'circle'"
                       text="确认支付"
+                      @click="onElecc32D6578Fd941629086B69B68Cf0BddClick"
                       class="ele-cc32d657-8fd9-4162-9086-b69b68cf0bdd"
                     >
                     </hm-uview-button>
@@ -1034,9 +438,6 @@ export default {
           },
         ],
       },
-      payPopup: {
-        show: false,
-      },
       eventCard: {
         list: [
           {
@@ -1059,17 +460,595 @@ export default {
           },
         ],
       },
-      "8b981cf2-ae14-4b8c-9f72-4cd6c41423a6": {
-        value: "",
+      storeList: {
+        list: [
+          {
+            anchor: "a",
+            store: [
+              {
+                city: "安庆",
+                shop: [
+                  {
+                    name: "柳叶店",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                  },
+                ],
+              },
+              {
+                city: "长沙",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
+              },
+              {
+                city: "成都",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                    checked: false,
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店1",
+                    address: "成都高新区仁和街39号6栋2层1号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店2",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店3",
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店4",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
+                    checked: false,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            anchor: "b",
+            store: [
+              {
+                city: "亳州",
+                shop: [
+                  {
+                    name: "柳叶店",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                  },
+                ],
+              },
+              {
+                city: "长沙",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
+              },
+              {
+                city: "成都",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
+                  },
+                  {
+                    name: "洋湖店1",
+                    address: "成都高新区仁和街39号6栋2层1号",
+                  },
+                  {
+                    name: "洋湖店2",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+                  },
+                  {
+                    name: "洋湖店3",
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+                  },
+                  {
+                    name: "洋湖店4",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            anchor: "c",
+            store: [
+              {
+                city: "常德",
+                shop: [
+                  {
+                    name: "柳叶店",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                  },
+                ],
+              },
+              {
+                city: "长沙",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
+              },
+              {
+                city: "成都",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                    checked: false,
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店1",
+                    address: "成都高新区仁和街39号6栋2层1号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店2",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店3",
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店4",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
+                    checked: false,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            anchor: "c",
+            store: [
+              {
+                city: "常德",
+                shop: [
+                  {
+                    name: "柳叶店",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                  },
+                ],
+              },
+              {
+                city: "长沙",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
+              },
+              {
+                city: "成都",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                    checked: false,
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店1",
+                    address: "成都高新区仁和街39号6栋2层1号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店2",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店3",
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店4",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
+                    checked: false,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            anchor: "d",
+            store: [
+              {
+                city: "常德",
+                shop: [
+                  {
+                    name: "柳叶店",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                  },
+                ],
+              },
+              {
+                city: "长沙",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
+              },
+              {
+                city: "成都",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                    checked: false,
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店1",
+                    address: "成都高新区仁和街39号6栋2层1号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店2",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店3",
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店4",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
+                    checked: false,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            anchor: "e",
+            store: [
+              {
+                city: "常德",
+                shop: [
+                  {
+                    name: "柳叶店",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                  },
+                ],
+              },
+              {
+                city: "长沙",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
+              },
+              {
+                city: "成都",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                    checked: false,
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店1",
+                    address: "成都高新区仁和街39号6栋2层1号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店2",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店3",
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店4",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
+                    checked: false,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            anchor: "f",
+            store: [
+              {
+                city: "常德",
+                shop: [
+                  {
+                    name: "柳叶店",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                  },
+                ],
+              },
+              {
+                city: "长沙",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
+              },
+              {
+                city: "成都",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                    checked: false,
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店1",
+                    address: "成都高新区仁和街39号6栋2层1号",
+                  },
+                  {
+                    name: "洋湖店2",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店3",
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店4",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号fffff",
+                    checked: false,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            anchor: "g",
+            store: [
+              {
+                city: "常德",
+                shop: [
+                  {
+                    name: "柳叶店",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                  },
+                ],
+              },
+              {
+                city: "长沙",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
+              },
+              {
+                city: "成都",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                    checked: false,
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店1",
+                    address: "成都高新区仁和街39号6栋2层1号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店2",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店3",
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+                    checked: false,
+                  },
+                  {
+                    name: "洋湖店4",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号ggggg",
+                    checked: false,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
-      "9662da08-d680-4c34-af33-b2ba9794437a": {
-        value: "",
+      payButton: {
+        text: "总费用：¥29.0 立即报名",
+        type: "primary",
+        shape: "circle",
       },
-      "5102357a-cd29-4bb3-9a1f-ab709e15c3a8": {
-        value: "",
-      },
-      "71e123e5-88a9-44c5-b029-f89fdaffa0d3": {
-        value: "",
+      activityText: {
+        text: "派对甜心奖牌趣味玩款5.2公里",
+        fontSize: "18px",
       },
       countdown: {
         text: "剩下时间 23:59:59",
@@ -1079,16 +1058,255 @@ export default {
       prices: {
         text: "¥ 59.00",
       },
-      payButton: {
-        type: "primary",
-        shape: "circle",
-        text: "总费用：¥29.0 立即报名",
+      nameInput: {
+        value: "",
+      },
+      phoneInput: {
+        value: "",
+      },
+      smscodeIpnut: {
+        value: "",
+      },
+      storeInput: {
+        value: "",
+      },
+      payPopup: {
+        show: false,
       },
     };
   },
   watch: {},
+  async mounted(e) {
+    this.onMounted(e);
+  },
   methods: {
-    onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon() {
+    onMounted() {
+      let self = this;
+      self.activityId = self.$route.query.activityId;
+      self.activityName = self.$route.query.activityName;
+      self.eventCard.list = [];
+      self.storeList.list = [];
+      self.payButton.text = `立即报名`;
+      self.money = 0;
+      self.activityText.text = "";
+      self.countdown.text = "";
+      self.prices.text = "";
+      self.getActivityProject = async function () {
+        let url = "/api/dkn/activityProject/list";
+        let params = {
+          activityId: self.activityId,
+          column: "sortNo",
+          order: "asc",
+        };
+        const res = await self.$getAction(url, params);
+        if (!res.success || res.result.records.length === 0) {
+          return;
+        }
+        self.eventCard.list = res.result.records.map((e) => {
+          return {
+            ...e,
+            checked: false,
+            image: self.getImg(e.imgPath),
+            name: e.name,
+            description: e.synopsis,
+            price: e.expense,
+            number: 0,
+          };
+        });
+      };
+      self.getStoreList = async function () {
+        let url = "/api/dkn/store/listOrder";
+        const res = await self.$getAction(url);
+        if (!res.success || res.result.length === 0) {
+          return;
+        }
+        let store = res.result.map((x) => {
+          return {
+            city: x.key,
+            shop: x.store,
+          };
+        });
+        self.storeList.list = [{ anchor: "b", store }];
+      };
+      self.getImg = function (url) {
+        if (url.substring(0, 4) === "http") {
+          return url;
+        }
+        return `/api/sys/common/static/${url}`;
+      };
+      self.getData = function () {
+        self.getActivityProject();
+        self.getStoreList();
+      };
+      self.getData();
+
+      self.checked = function () {
+        setTimeout(() => {
+          let money = 0;
+          self.eventCard.list.forEach((e) => {
+            if (e.checked) {
+              let expense = e.expense * e.number;
+              money += expense;
+            }
+          });
+          console.log("money", money);
+          self.payButton.text = `总费用：¥${money} 立即报名`;
+          self.money = money;
+        });
+      };
+      self.checkOrder = async function () {
+        if (!self.nameInput.value) {
+          self.error("姓名/昵称不能为空");
+          return;
+        }
+        if (!self.phoneInput.value) {
+          self.error("手机号不能为空");
+          return;
+        }
+        if (!self.smscodeIpnut.value) {
+          self.error("验证码不能为空");
+          return;
+        }
+        if (!self.storeInput.value) {
+          self.error("领奖门店不能为空");
+          return;
+        }
+
+        const orderProjects = self.getOrderProjects();
+
+        if (orderProjects.length == 0) {
+          self.error("请至少选择一个活动项目");
+          return;
+        }
+
+        self.addOrder();
+      };
+      self.addOrder = async function () {
+        let channel = 0;
+        if (self.weixinRadio.value === 1) {
+          channel = 1;
+        }
+        let url = "/api/dkn/registrationOrders/addOrder";
+        const orderProjects = self.getOrderProjects();
+        let params = {
+          activityId: self.activityId,
+          storeId: self.storeInput.value,
+          paymentStatus: 1,
+          phone: self.phoneInput.value,
+          name: self.nameInput.value,
+          smscode: self.smscodeIpnut.value,
+          money: self.money,
+          orderProjects,
+          channel,
+        };
+        const res = await self.$postAction(url, params);
+        if (!res.success) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: res.message,
+            duration: 2000,
+          });
+          return;
+        }
+        uni.showToast({
+          icon: "success",
+          position: "top",
+          title: "报名成功",
+          duration: 2000,
+        });
+        self.payPopup.show = true;
+        self.activityText.text = self.activityName;
+        self.countdown.text = "";
+        self.prices.text = `¥ ${self.money}`;
+        self.orderId = res.message;
+      };
+      self.getOrderProjects = function () {
+        let list = [];
+        self.eventCard.list.forEach((e) => {
+          if (e.checked && e.number) {
+            list.push(e);
+          }
+        });
+        list = list.map((x) => {
+          return {
+            activityProjectId: x.id,
+            num: x.number,
+          };
+        });
+        return list;
+      };
+      self.error = function (text) {
+        uni.showToast({
+          icon: "error",
+          position: "top",
+          title: text,
+          duration: 2000,
+        });
+      };
+      //获取验证码
+      self.getPhoneCode = async function () {
+        if (!self.checkPhone()) {
+          return;
+        }
+        let url = "/api/sys/sms";
+        let params = {
+          mobile: self.phoneInput.value,
+        };
+        const res = await self.$postAction(url, params);
+        uni.showToast({
+          title: res.message,
+          duration: 2000,
+        });
+      };
+      //校验手机号
+      self.checkPhone = function () {
+        let mobile = self.phoneInput.value;
+        if (!mobile) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: "手机号不能为空",
+            duration: 2000,
+          });
+          return false;
+        }
+        const phoneRegex = /^1[3456789]\d{9}$/;
+        const status = phoneRegex.test(mobile);
+        if (!status) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: "手机号格式不正确",
+            duration: 2000,
+          });
+        }
+        return status;
+      };
+
+      //支付
+      self.orderPayment = function () {
+        if (!self.orderId) {
+          return;
+        }
+        let channel = 0;
+        if (self.weixinRadio.value === 1) {
+          channel = 1;
+        }
+        self.$pay(self.orderId, channel);
+      };
+    },
+
+    onEventCardChecked(e) {
+      this.checked();
+    },
+    onEventCardChange(e) {
+      this.checked();
+    },
+    onSmscodeIpnutOnCode() {
+      this.getPhoneCode();
+    },
+    onStoreInputRightIcon() {
       this.shopPop.show = true;
     },
     onWeixinRadioRadioChange(e) {
@@ -1097,8 +1315,11 @@ export default {
     onZhifubaoRadioRadioChange() {
       this.weixinRadio.value = "1";
     },
+    onElecc32D6578Fd941629086B69B68Cf0BddClick() {
+      this.orderPayment();
+    },
     onPayButtonClick() {
-      this.payPopup.show = true;
+      this.checkOrder();
     },
   },
 };
@@ -1165,22 +1386,22 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-8b981cf2-ae14-4b8c-9f72-4cd6c41423a6 {
+.ele-wrapper-nameInput {
   width: 100%;
   margin-top: 5px;
 }
 
-.ele-wrapper-9662da08-d680-4c34-af33-b2ba9794437a {
+.ele-wrapper-phoneInput {
   width: 100%;
   margin-top: 20px;
 }
 
-.ele-wrapper-5102357a-cd29-4bb3-9a1f-ab709e15c3a8 {
+.ele-wrapper-smscodeIpnut {
   width: 100%;
   margin-top: 20px;
 }
 
-.ele-wrapper-71e123e5-88a9-44c5-b029-f89fdaffa0d3 {
+.ele-wrapper-storeInput {
   width: 100%;
   margin-top: 20px;
 }
@@ -1218,7 +1439,7 @@ export default {
   }
 }
 
-.ele-wrapper-c1e777b1-33b4-43de-8b09-b43843222e3f {
+.ele-wrapper-activityText {
   font-family: sans-serif;
   font-weight: 600;
   margin-top: 8px;

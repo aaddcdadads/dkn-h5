@@ -215,7 +215,6 @@ export default {
   /deep/.u-radio__icon-wrap--circle {
     right: 0;
     position: absolute;
-    border-radius: 0 !important;
   }
   /deep/.u-radio {
     width: 100% !important;

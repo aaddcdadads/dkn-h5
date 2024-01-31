@@ -1,30 +1,28 @@
 <template>
-  <view>
-    <view :style="{ height: height + 'px' }" style="position: relative;">
-      <view class="box" :style="{ height: height + 15 + 'px' }" style="overflow-y: auto;">
-        <u-radio-group v-model="name" @change="radioGroupChange">
-          <view v-for="(items, index) in data" :key="index" class="shop" :id="items.anchor">
-            <view v-for="item in items.store" class="store_list">
-              <view class="title">{{ item.city }}</view>
-              <view v-for="(itemlist, key) in item.shop" :key="key" class="shopItem">
-                <view class="name">
-                  <u-radio :name="itemlist.name"> {{ itemlist.name }}</u-radio>
-                </view>
-                <view class="address">
-                  <text> {{ itemlist.address }}</text>
+    <view :style="{ height: height + 'px' }" style="position: relative;overflow-y: auto;">
+      <scroll-view :scroll-y="true" :scroll-into-view="toView" :scroll-with-animation="true" :style="{ height: height + 'px' }">
+          <u-radio-group v-model="name" @change="radioGroupChange">
+            <view v-for="(items, index) in data" :key="index" class="shop" :id="items.anchor">
+              <view v-for="item in items.store" class="store_list">
+                <view class="title">{{ item.city }}</view>
+                <view v-for="(itemlist, key) in item.shop" :key="key" class="shopItem">
+                  <view class="name">
+                    <u-radio :name="itemlist.name"> {{ itemlist.name }}</u-radio>
+                  </view>
+                  <view class="address">
+                    <text> {{ itemlist.address }}</text>
+                  </view>
                 </view>
               </view>
             </view>
-          </view>
-        </u-radio-group>
-      </view>
+          </u-radio-group>
+      </scroll-view>
       <view class="anchorBox">
         <view v-for="item in data" class="itembox">
-          <a href="#a" class="anchors">{{ item.anchor }}</a>
+          <a class="anchors" @click="anchor(item.anchor)">{{ item.anchor }}</a>
         </view>
       </view>
     </view>
-  </view>
 </template>
 <script>
 export default {
@@ -55,65 +53,6 @@ export default {
                   },
                 ]
               },
-              {
-                city: "长沙",
-                shop: [
-                  {
-                    name: "梅溪湖店",
-                    address: "湖南省长沙市丘林分三路1099号",
-
-                  },
-                  {
-                    name: "湘江店路",
-                    address: "湖南省长沙市丘林分三路1099号",
-
-                  },
-                  {
-                    name: "洋湖店",
-                    address: "湖南省长沙市丘林分三路1099号",
-
-                  },
-                  {
-                    name: "洋湖店",
-                    address: "湖南省长沙市丘林分三路1099号",
-                  },
-                ]
-              },
-              {
-                city: "成都",
-                shop: [
-                  {
-                    name: "梅溪湖店",
-                    address: "湖南省长沙市丘林分三路1099号",
-                    checked: false,
-                  },
-                  {
-                    name: "湘江店路",
-                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
-                    checked: false,
-                  },
-                  {
-                    name: "洋湖店1",
-                    address: "成都高新区仁和街39号6栋2层1号",
-                    checked: false,
-                  },
-                  {
-                    name: "洋湖店2",
-                    address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
-                    checked: false,
-                  },
-                  {
-                    name: "洋湖店3",
-                    address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
-                    checked: false,
-                  },
-                  {
-                    name: "洋湖店4",
-                    address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
-                    checked: false,
-                  },
-                ]
-              }
             ]
           },
           {
@@ -201,7 +140,6 @@ export default {
                   {
                     name: "梅溪湖店",
                     address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "湘江店路",
@@ -225,32 +163,392 @@ export default {
                   {
                     name: "梅溪湖店",
                     address: "湖南省长沙市丘林分三路1099号",
-                    checked: false,
+
                   },
                   {
                     name: "湘江店路",
                     address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
-                    checked: false,
+
                   },
                   {
                     name: "洋湖店1",
                     address: "成都高新区仁和街39号6栋2层1号",
-                    checked: false,
+
                   },
                   {
                     name: "洋湖店2",
                     address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
-                    checked: false,
+
                   },
                   {
                     name: "洋湖店3",
                     address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
-                    checked: false,
+
                   },
                   {
                     name: "洋湖店4",
                     address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
-                    checked: false,
+
+                  },
+                ]
+              }
+            ]
+          },
+          {
+            anchor: "d",
+            store: [
+              {
+                city: "常德",
+                shop: [
+                  {
+                    name: "柳叶店",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                  },
+                ]
+              },
+              {
+                city: "长沙",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ]
+              },
+              {
+                city: "成都",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
+
+                  },
+                  {
+                    name: "洋湖店1",
+                    address: "成都高新区仁和街39号6栋2层1号",
+
+                  },
+                  {
+                    name: "洋湖店2",
+                    address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+
+                  },
+                  {
+                    name: "洋湖店3",
+                    address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+
+                  },
+                  {
+                    name: "洋湖店4",
+                    address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
+
+                  },
+                ]
+              }
+            ]
+          },
+          {
+            anchor: "e",
+            store: [
+              {
+                city: "常德",
+                shop: [
+                  {
+                    name: "柳叶店",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                  },
+                ]
+              },
+              {
+                city: "长沙",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ]
+              },
+              {
+                city: "成都",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
+
+                  },
+                  {
+                    name: "洋湖店1",
+                    address: "成都高新区仁和街39号6栋2层1号",
+
+                  },
+                  {
+                    name: "洋湖店2",
+                    address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+
+                  },
+                  {
+                    name: "洋湖店3",
+                    address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+
+                  },
+                  {
+                    name: "洋湖店4",
+                    address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
+
+                  },
+                ]
+              }
+            ]
+          },
+          {
+            anchor: "f",
+            store: [
+              {
+                city: "常德",
+                shop: [
+                  {
+                    name: "柳叶店",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                  },
+                ]
+              },
+              {
+                city: "长沙",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ]
+              },
+              {
+                city: "成都",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
+
+                  },
+                  {
+                    name: "洋湖店1",
+                    address: "成都高新区仁和街39号6栋2层1号",
+
+                  },
+                  {
+                    name: "洋湖店2",
+                    address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+
+                  },
+                  {
+                    name: "洋湖店3",
+                    address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+
+                  },
+                  {
+                    name: "洋湖店4",
+                    address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
+
+                  },
+                ]
+              }
+            ]
+          },
+          {
+            anchor: "g",
+            store: [
+              {
+                city: "常德",
+                shop: [
+                  {
+                    name: "柳叶店",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                  },
+                ]
+              },
+              {
+                city: "长沙",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ]
+              },
+              {
+                city: "成都",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
+
+                  },
+                  {
+                    name: "洋湖店1",
+                    address: "成都高新区仁和街39号6栋2层1号",
+
+                  },
+                  {
+                    name: "洋湖店2",
+                    address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+
+                  },
+                  {
+                    name: "洋湖店3",
+                    address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+
+                  },
+                  {
+                    name: "洋湖店4",
+                    address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
+
+                  },
+                ]
+              }
+            ]
+          },
+          {
+            anchor: "j",
+            store: [
+              {
+                city: "常德",
+                shop: [
+                  {
+                    name: "柳叶店",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                  },
+                ]
+              },
+              {
+                city: "长沙",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ]
+              },
+              {
+                city: "成都",
+                shop: [
+                  {
+                    name: "梅溪湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+
+                  },
+                  {
+                    name: "湘江店路",
+                    address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
+
+                  },
+                  {
+                    name: "洋湖店1",
+                    address: "成都高新区仁和街39号6栋2层1号",
+
+                  },
+                  {
+                    name: "洋湖店2",
+                    address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+
+                  },
+                  {
+                    name: "洋湖店3",
+                    address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+
+                  },
+                  {
+                    name: "洋湖店4",
+                    address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
+
                   },
                 ]
               }
@@ -273,6 +571,7 @@ export default {
       scrollTop: null,
       data: [],
       height: 0,
+      toView: ''
     }
   },
   mounted() {
@@ -296,9 +595,10 @@ export default {
       this.$emit("radioGroupChange");
     },
     anchor(e) {
-      return `#${e}`
+      this.toView = e
+
     },
-  }
+  },
 
 }
 </script>
@@ -332,7 +632,7 @@ export default {
   font-family: 'ArialMT', 'Arial', sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .anchorBox {

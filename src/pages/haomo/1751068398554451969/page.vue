@@ -47,6 +47,7 @@
                       height=""
                       border-width="1"
                       border-color="#B0B0B0"
+                      :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -63,10 +64,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-InputMane">
+                      <view class="ele-wrapper ele-wrapper-inputMane">
                         <hm-uview-field
-                          ref="InputMane"
-                          v-model:value="InputMane.value"
+                          ref="inputMane"
+                          v-model:value="inputMane.value"
                           label=""
                           placeholder="报名项目名称 x 数量"
                           label-width="0"
@@ -74,7 +75,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-InputMane"
+                          class="ele-inputMane"
                         >
                         </hm-uview-field>
                       </view>
@@ -86,6 +87,7 @@
                     <hm-uview-bg-card
                       width="100%"
                       height=""
+                      :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -102,10 +104,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-InputPhoneNumber">
+                      <view class="ele-wrapper ele-wrapper-inputPhoneNumber">
                         <hm-uview-field
-                          ref="InputPhoneNumber"
-                          v-model:value="InputPhoneNumber.value"
+                          ref="inputPhoneNumber"
+                          v-model:value="inputPhoneNumber.value"
                           label=""
                           placeholder="报名手机号码"
                           label-width="0"
@@ -113,7 +115,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-InputPhoneNumber"
+                          class="ele-inputPhoneNumber"
                         >
                         </hm-uview-field>
                       </view>
@@ -125,6 +127,7 @@
                     <hm-uview-bg-card
                       width="100%"
                       height=""
+                      :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -141,10 +144,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-InputClaimStore">
+                      <view class="ele-wrapper ele-wrapper-inputClaimStore">
                         <hm-uview-field
-                          ref="InputClaimStore"
-                          v-model:value="InputClaimStore.value"
+                          ref="inputClaimStore"
+                          v-model:value="inputClaimStore.value"
                           label=""
                           placeholder="区域/门店名称"
                           label-width="0"
@@ -152,7 +155,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-InputClaimStore"
+                          class="ele-inputClaimStore"
                         >
                         </hm-uview-field>
                       </view>
@@ -179,6 +182,7 @@
                     <hm-uview-bg-card
                       width="100%"
                       height=""
+                      :text-align="'right'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -195,10 +199,10 @@
                         >
                         </hm-uview-text>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-InputActivityName">
+                      <view class="ele-wrapper ele-wrapper-inputActivityName">
                         <hm-uview-field
-                          ref="InputActivityName"
-                          v-model:value="InputActivityName.value"
+                          ref="inputActivityName"
+                          v-model:value="inputActivityName.value"
                           label=""
                           placeholder="活动名称"
                           label-width="0"
@@ -206,7 +210,7 @@
                           right-icon=""
                           :border-bottom="false"
                           :disabled="true"
-                          class="ele-InputActivityName"
+                          class="ele-inputActivityName"
                         >
                         </hm-uview-field>
                       </view>
@@ -286,22 +290,58 @@ export default {
       Buttonwan: {
         text: "确认核销",
       },
-      InputMane: {
+      inputMane: {
         value: "",
       },
-      InputPhoneNumber: {
+      inputPhoneNumber: {
         value: "",
       },
-      InputClaimStore: {
+      inputClaimStore: {
         value: "",
       },
-      InputActivityName: {
+      inputActivityName: {
         value: "",
       },
     };
   },
   watch: {},
-  methods: {},
+  created(e) {
+    this.onCreated(e);
+  },
+  mounted(e) {
+    this.onMounted(e);
+  },
+  onLoad(e) {
+    this.onOnLoad(e);
+  },
+  methods: {
+    onCreated() {
+      this.inputMane.value;
+      this.inputPhoneNumber.value;
+      this.inputClaimStore.value;
+      this.inputActivityName.value;
+    },
+    onMounted() {
+      console.log("获取数据---", this.orderId, this.storeId);
+    },
+    onOnLoad(options) {
+      if (!options.orderId || !options.storeId) {
+        uni.showToast({
+          title: "数据获取失败",
+          icon: "error",
+          duration: 2000,
+        });
+        setTimeout(() => {
+          uni.navigateTo({
+            url: "/pages/haomo/1750714119029264386/page",
+          });
+        }, 2500);
+        return;
+      }
+      this.orderId = options.orderId;
+      this.storeId = options.storeId;
+    },
+  },
 };
 </script>
 
@@ -341,11 +381,11 @@ export default {
 .ele-wrapper-c1321652-9bb5-410d-a15c-df20fe88d984 {
   padding: 13px 7px;
   vertical-align: top;
-  margin-left: 10px;
 }
 
-.ele-wrapper-InputMane {
+.ele-wrapper-inputMane {
   width: 65%;
+  margin-right: 10%;
   height: 45px;
   /deep/.u-border-bottom {
     display: flex;
@@ -377,8 +417,9 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-InputPhoneNumber {
+.ele-wrapper-inputPhoneNumber {
   width: 65%;
+  margin-right: 10%;
   height: 45px;
   /deep/.u-border-bottom {
     display: flex;
@@ -410,8 +451,9 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-InputClaimStore {
+.ele-wrapper-inputClaimStore {
   width: 65%;
+  margin-right: 10%;
   height: 45px;
   /deep/.u-border-bottom {
     display: flex;
@@ -449,8 +491,9 @@ export default {
   margin-left: 10px;
 }
 
-.ele-wrapper-InputActivityName {
+.ele-wrapper-inputActivityName {
   width: 65%;
+  margin-right: 10%;
   height: 45px;
   /deep/.u-border-bottom {
     display: flex;

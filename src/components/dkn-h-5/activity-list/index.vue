@@ -59,7 +59,7 @@
       /></view>
 
       <view class="content"
-        ><span>已报名人数{{ item.number }}人</span></view
+        ><span>已报名人数：{{ item.number }}人</span></view
       >
     </view>
   </view>
