@@ -39,7 +39,12 @@
               <view
                 class="ele-wrapper ele-wrapper-b77e13cf-06a4-485e-b888-553da6af42bc"
               >
-                <hm-uview-bg-card width="100" height="100"> </hm-uview-bg-card>
+                <hm-uview-bg-card
+                  width="100"
+                  height="100"
+                  class="ele-b77e13cf-06a4-485e-b888-553da6af42bc"
+                >
+                </hm-uview-bg-card>
               </view>
             </hm-uview-bg-card>
           </view>
@@ -89,6 +94,10 @@ export default {
 }
 
 .ele-wrapper-33585d75-6c6b-4206-8dae-be7a7a85b0b5 {
+  flex-shrink: 0;
+}
+
+.ele-wrapper-b77e13cf-06a4-485e-b888-553da6af42bc {
   flex-shrink: 0;
 }
 </style>
