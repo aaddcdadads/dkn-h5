@@ -75,7 +75,7 @@ export default {
     let self = this;
     return {
       sharingImage: {
-        name: "/static/h5/home/share.png",
+        name: "/static/components/img/share.png",
         size: "100%",
         label: "",
       },
