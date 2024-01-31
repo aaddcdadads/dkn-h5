@@ -386,14 +386,20 @@
                 </hm-uview-bg-card>
               </view>
               <view
-                class="ele-wrapper ele-wrapper-0a1015fb-699b-459d-85b4-fcabfbf09236"
+                class="ele-wrapper ele-wrapper-42a6a6e4-49e7-4fe8-95f2-c7e9fdda0729"
               >
-                <hm-uview-bg-card> </hm-uview-bg-card>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-4b9b5df4-b788-47f9-93ca-162d2f99c26f"
-              >
-                <hm-uview-bg-card> </hm-uview-bg-card>
+                <hm-uview-bg-card
+                  width="100%"
+                  height=""
+                  border-radius="0"
+                  padding="0"
+                  box-shadow-v-shadow="0"
+                  box-shadow-blur="0"
+                  box-shadow-color="#00000000"
+                  background-color="#FFFFFF00"
+                  class="ele-42a6a6e4-49e7-4fe8-95f2-c7e9fdda0729"
+                >
+                </hm-uview-bg-card>
               </view>
               <view class="ele-wrapper ele-wrapper-regularPopup">
                 <hm-uview-popup
@@ -620,6 +626,22 @@
               </view>
             </hm-uview-bg-card>
           </view>
+        </hm-uview-bg-card>
+      </view>
+      <view
+        class="ele-wrapper ele-wrapper-a066e06b-03ae-443e-9c41-b0cd634fc748"
+      >
+        <hm-uview-bg-card
+          width="100%"
+          height=""
+          border-radius="0"
+          padding="0"
+          box-shadow-v-shadow="0"
+          box-shadow-blur="0"
+          box-shadow-color="#00000000"
+          background-color="#FFFFFF00"
+          class="ele-a066e06b-03ae-443e-9c41-b0cd634fc748"
+        >
         </hm-uview-bg-card>
       </view>
       <view
@@ -1273,8 +1295,6 @@ export default {
 
 .ele-wrapper-colourCard {
   width: 100%;
-  position: absolute;
-  margin-top: -48rpx;
   border-radius: 20px 20px 0px 0px;
   /deep/.hm-bg-card {
     border-radius: 20px 20px 0px 0px;
@@ -1433,6 +1453,11 @@ export default {
   /deep/.right_bg {
     padding-top: 24px;
   }
+}
+
+.ele-wrapper-42a6a6e4-49e7-4fe8-95f2-c7e9fdda0729 {
+  width: 100%;
+  margin-bottom: 24rpx;
 }
 
 .ele-wrapper-regularPopup {
@@ -1605,6 +1630,11 @@ export default {
     border-top: 1px solid #f8f8f8 !important;
     border-left: 1px solid #f8f8f8 !important;
   }
+}
+
+.ele-wrapper-a066e06b-03ae-443e-9c41-b0cd634fc748 {
+  width: 100%;
+  margin-bottom: 24rpx;
 }
 
 .ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611 {
