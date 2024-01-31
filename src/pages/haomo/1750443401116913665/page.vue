@@ -515,15 +515,17 @@ export default {
       this.writeStatusField.value;
     },
     onMounted() {
-      this.phone;
-      //活动id
-      this.activityId;
-
+      let params = {};
+      if (this.orderId) {
+        params.id = this.orderId;
+      } else {
+        params.phone = this.phone;
+        params.activityId = this.activityId;
+      }
       this.$getAction("/api/dkn/viewRegistrationOrders/list", {
         pageNo: 1,
         pageSize: 1,
-        phone: this.phone,
-        activityId: this.activityId,
+        ...params,
       }).then((res) => {
         console.log("res--", res);
         if (!res.success || res.result.records.length <= 0) {
