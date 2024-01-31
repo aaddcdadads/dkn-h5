@@ -487,9 +487,10 @@ export default {
   watch: {},
   methods: {
     onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
-      uni.$u.route(
-        "https://stage.block-design.cn/edit-page/?pageId=1750700281953259522"
-      );
+      //uni.$u.route('pages/haomo/1750714119029264386/page');
+      uni.navigateTo({
+        url: "pages/haomo/1750714119029264386/page",
+      });
     },
   },
 };
