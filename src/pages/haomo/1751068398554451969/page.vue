@@ -395,7 +395,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-InputMane {
+  /deep/.ele-inputMane {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -503,7 +503,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-InputActivityName {
+  /deep/.ele-inputActivityName {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
