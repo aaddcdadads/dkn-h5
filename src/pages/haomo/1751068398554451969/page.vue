@@ -167,13 +167,13 @@
                 class="ele-wrapper ele-wrapper-41f7b43e-8542-4a04-ac12-f8bdeac98d58"
               >
                 <hm-uview-bg-card
-                  padding=""
-                  box-shadow-blur=""
-                  box-shadow-v-shadow=""
-                  border-radius=""
                   width="100%"
                   height="100%"
+                  border-radius=""
                   :text-align="'center'"
+                  padding=""
+                  box-shadow-v-shadow=""
+                  box-shadow-blur=""
                   class="ele-41f7b43e-8542-4a04-ac12-f8bdeac98d58"
                 >
                   <view
@@ -248,6 +248,32 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-e63fb2bd-2975-4df6-a56a-150d6f13babf"
+                  >
+                    <hm-uview-modal
+                      :visible="false"
+                      title="核销"
+                      height="120px"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-fae45550-c6de-4f42-bab5-dcdccb9fdedf"
+                      >
+                        <hm-uview-bg-card
+                          width="100%"
+                          height="100%"
+                          :text-align="'center'"
+                          class="ele-fae45550-c6de-4f42-bab5-dcdccb9fdedf"
+                        >
+                          <view
+                            class="ele-wrapper ele-wrapper-8c3240b4-5b77-418d-8aa1-50c6c694d07d"
+                          >
+                            <hm-uview-text text="确认核销？"> </hm-uview-text>
+                          </view>
+                        </hm-uview-bg-card>
+                      </view>
+                    </hm-uview-modal>
+                  </view>
                 </hm-uview-bg-card>
               </view>
               <view class="ele-wrapper ele-wrapper-Buttonwan">
@@ -272,6 +298,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
+import HmUviewModal from "/@/components/built-in/uniapp-uview-vue3/HmUviewModal.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -281,6 +308,7 @@ export default {
     HmUviewText,
     HmUviewField,
     HmUviewImage,
+    HmUviewModal,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -301,6 +329,9 @@ export default {
       },
       inputActivityName: {
         value: "",
+      },
+      "e63fb2bd-2975-4df6-a56a-150d6f13babf": {
+        visible: false,
       },
     };
   },
@@ -577,6 +608,12 @@ export default {
 
 .ele-wrapper-57f09a13-8f55-4241-a6cc-270dd43ca1ba {
   margin-left: 2px;
+}
+
+.ele-wrapper-fae45550-c6de-4f42-bab5-dcdccb9fdedf {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
 }
 
 .ele-wrapper-Buttonwan {
