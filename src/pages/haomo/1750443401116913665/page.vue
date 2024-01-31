@@ -541,14 +541,14 @@ export default {
           return;
         }
         let item = res.result.records[0];
-        this.registrationProjectField.value = item.activityId_dictText ?? "";
-        this.userNameField.value = item.realname ?? "";
-        this.phoneField.value = item.phone ?? "";
-        this.storeNameField.value = item.originalPickUpName ?? "";
-        this.registrationTimeField.value = item.paymentTime ?? "";
-        this.activityNameField.value = item.acName ?? "";
-        this.verificationDeadlineField.value = item.acPickUpTime ?? "";
-        this.writeStatusField.value = item.pickUpStatusText ?? "";
+        /*this.registrationProjectField.value = item.activityId_dictText ?? "";
+    this.userNameField.value = item.realname ?? "";
+    this.phoneField.value = item.phone ?? "";
+    this.storeNameField.value = item.originalPickUpName ?? "";
+    this.registrationTimeField.value = item.paymentTime ?? "";
+    this.activityNameField.value = item.acName ?? "";
+    this.verificationDeadlineField.value = item.acPickUpTime ?? "";
+    this.writeStatusField.value = item.pickUpStatusText ?? "";*/
       });
     },
 
