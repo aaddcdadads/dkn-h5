@@ -559,7 +559,7 @@ export default {
       });
     },
     onButtonwanClick() {
-      this.storeId = "22";
+      this.storeId = "ff8080818d5d6fdb018d5d7725c50001";
       uni.navigateTo({
         url:
           "/pages/haomo/1751068398554451969/page?orderId=" +
