@@ -429,7 +429,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-InputPhoneNumber {
+  /deep/.ele-inputPhoneNumber {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -463,7 +463,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-InputClaimStore {
+  /deep/.ele-inputClaimStore {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
