@@ -1218,6 +1218,7 @@ export default {
           title: "报名成功",
           duration: 2000,
         });
+        self.orderId = res.message;
       };
       self.getOrderProjects = function () {
         let list = [];
@@ -1280,6 +1281,18 @@ export default {
           });
         }
         return status;
+      };
+
+      //支付
+      self.orderPayment = function () {
+        if (!self.orderId) {
+          return;
+        }
+        let channel = 0;
+        if (self.weixinRadio.value === 1) {
+          channel = 1;
+        }
+        self.$pay(self.orderId, channel);
       };
     },
 
