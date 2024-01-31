@@ -544,8 +544,8 @@
                       <view class="ele-wrapper ele-wrapper-canelButton">
                         <hm-uview-button
                           ref="canelButton"
-                          :text="canelButton.text"
                           :type="canelButton.type"
+                          :text="canelButton.text"
                           @click="onCanelButtonClick"
                           class="ele-canelButton"
                         >
@@ -554,8 +554,8 @@
                       <view class="ele-wrapper ele-wrapper-sureButton">
                         <hm-uview-button
                           ref="sureButton"
-                          :text="sureButton.text"
                           :type="sureButton.type"
+                          :text="sureButton.text"
                           @click="onSureButtonClick"
                           class="ele-sureButton"
                         >
@@ -681,8 +681,8 @@
             class="ele-wrapper ele-wrapper-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f"
           >
             <hm-uview-button
-              text="马上报名"
               :type="'success'"
+              text="马上报名"
               @click="onElee174C2E6A7994Ccf8Fa92A81Dc515A6FClick"
               class="ele-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f"
             >
@@ -909,12 +909,12 @@ export default {
         value: "",
       },
       canelButton: {
-        text: "取消",
         type: "info",
+        text: "取消",
       },
       sureButton: {
-        text: "确认",
         type: "info",
+        text: "确认",
       },
     };
   },
@@ -1220,7 +1220,7 @@ export default {
         return;
       }
       uni.$u.route(
-        `/pages/haomo/1750444738487521281/page?activityId=${self.activityId}`
+        `/pages/haomo/1750444738487521281/page?activityId=${this.activityId}`
       );
     },
     onEle4D8Eb71C153949848Ba0E2Dd0E6Ceeb9OnClick() {
