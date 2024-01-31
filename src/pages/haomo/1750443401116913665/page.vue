@@ -563,7 +563,7 @@ export default {
           item.pickUpStatus == 0 ||
           (item.acPickUpTime && new Date() > new Date(item.acPickUpTime))
         ) {
-          this.buttonwan.disabled = false;
+          this.buttonwan.disabled = true;
         }
       });
     },
