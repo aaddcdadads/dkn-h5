@@ -13,10 +13,15 @@
           background-color="#FFFFFF00"
           class="ele-e006ab79-f3a9-492b-8632-73042a091b41"
         >
-          <view
-            class="ele-wrapper ele-wrapper-7a7c276a-b44b-4a63-a217-cb223a5e0e12"
-          >
-            <hm-uview-bg-card> </hm-uview-bg-card>
+          <view class="ele-wrapper ele-wrapper-sharingImage">
+            <hm-uview-icon
+              ref="sharingImage"
+              name="/static/h5/home/mechanicsIcon.png"
+              size="100%"
+              label=""
+              class="ele-sharingImage"
+            >
+            </hm-uview-icon>
           </view>
           <view
             class="ele-wrapper ele-wrapper-084fc45c-3b7d-42af-9042-8c47c465787c"
@@ -57,12 +62,14 @@
 <script>
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
+import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 
 export default {
   name: "SharingPage",
   components: {
     HmUviewBgCard,
+    HmUviewIcon,
     HmUviewText,
   },
   options: { styleIsolation: "shared" },
@@ -82,6 +89,11 @@ export default {
 .ele-wrapper-e006ab79-f3a9-492b-8632-73042a091b41 {
   width: 100%;
   position: relative;
+}
+
+.ele-wrapper-sharingImage {
+  width: 100%;
+  aspect-ratio: 375/667;
 }
 
 .ele-wrapper-084fc45c-3b7d-42af-9042-8c47c465787c {
