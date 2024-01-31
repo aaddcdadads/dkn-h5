@@ -81,16 +81,15 @@
               </view>
             </hm-uview-bg-card>
           </view>
-          <view
-            class="ele-wrapper ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"
-          >
+          <view class="ele-wrapper ele-wrapper-containerBg">
             <hm-uview-bg-card
+              ref="containerBg"
               width="100%"
               height=""
               border-radius="0"
               padding="0"
               box-shadow-color="#00000000"
-              class="ele-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"
+              class="ele-containerBg"
             >
               <view class="ele-wrapper ele-wrapper-colourCard">
                 <hm-uview-bg-card
@@ -1289,7 +1288,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2 {
+.ele-wrapper-containerBg {
   width: 100%;
   margin-top: 490px;
   z-index: 1000;
