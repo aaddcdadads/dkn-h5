@@ -254,6 +254,7 @@
                       v-model:visible="writeOffModal.visible"
                       :title="writeOffModal.title"
                       height="100px"
+                      @onConfirm="onWriteOffModalOnConfirm"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-fae45550-c6de-4f42-bab5-dcdccb9fdedf"
@@ -433,6 +434,35 @@ export default {
       this.storeId = options.storeId;
     },
 
+    onWriteOffModalOnConfirm() {
+      this.$postAction("/api/dkn/orderPickUp/add", {
+        orderId: 1,
+        activityId: 1,
+        storeId: this.storeId,
+        pickUpStatus: 1,
+        pickUpTime: 1,
+      }).then((res) => {
+        console.log("res--", res);
+        if (!res.success) {
+          uni.showToast({
+            title: "核销失败",
+            icon: "error",
+            duration: 2000,
+          });
+          return;
+        }
+        uni.showToast({
+          title: "核销成功",
+          icon: "success",
+          duration: 2000,
+        });
+        setTimeout(() => {
+          uni.navigateTo({
+            url: "/pages/haomo/1750443401116913665/page",
+          });
+        }, 2500);
+      });
+    },
     onButtonwanClick() {
       if (
         this.registrationOrdersData.originalPickUpName !=
