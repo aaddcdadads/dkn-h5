@@ -1046,6 +1046,18 @@ export default {
         type: "primary",
         shape: "circle",
       },
+      activityText: {
+        text: "派对甜心奖牌趣味玩款5.2公里",
+        fontSize: "18px",
+      },
+      countdown: {
+        text: "剩下时间 23:59:59",
+        fontSize: "14px",
+        color: "#999999",
+      },
+      prices: {
+        text: "¥ 59.00",
+      },
       nameInput: {
         value: "",
       },
@@ -1061,18 +1073,6 @@ export default {
       payPopup: {
         show: false,
       },
-      activityText: {
-        text: "派对甜心奖牌趣味玩款5.2公里",
-        fontSize: "18px",
-      },
-      countdown: {
-        text: "剩下时间 23:59:59",
-        fontSize: "14px",
-        color: "#999999",
-      },
-      prices: {
-        text: "¥ 59.00",
-      },
     };
   },
   watch: {},
@@ -1083,11 +1083,14 @@ export default {
     onMounted() {
       let self = this;
       self.activityId = self.$route.query.activityId;
-
+      self.activityName = self.$route.query.activityName;
       self.eventCard.list = [];
       self.storeList.list = [];
       self.payButton.text = `立即报名`;
       self.money = 0;
+      self.activityText.text = "";
+      self.countdown.text = "";
+      self.prices.text = "";
       self.getActivityProject = async function () {
         let url = "/api/dkn/activityProject/list";
         let params = {
@@ -1176,6 +1179,9 @@ export default {
           return;
         }
         self.payPopup.show = true;
+        self.activityText.text = self.activityName;
+        self.countdown.text = "";
+        self.prices.text = self.money;
       };
       self.addOrder = async function () {
         let url = "/api/dkn/registrationOrders/addOrder";
