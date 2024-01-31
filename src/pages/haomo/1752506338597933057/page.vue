@@ -38,9 +38,12 @@
                 <hm-uview-text text="分享给好友"> </hm-uview-text>
               </view>
               <view
-                class="ele-wrapper ele-wrapper-b77e13cf-06a4-485e-b888-553da6af42bc"
+                class="ele-wrapper ele-wrapper-0ed4308b-d32b-4f14-8401-ba9ad296dc56"
               >
-                <hm-uview-bg-card width="100" height="100"> </hm-uview-bg-card>
+                <hm-uview-icon
+                  @click="onEle0Ed4308BD32B4F148401Ba9Ad296Dc56Click"
+                >
+                </hm-uview-icon>
               </view>
             </hm-uview-bg-card>
           </view>
@@ -69,7 +72,28 @@ export default {
     return {};
   },
   watch: {},
-  methods: {},
+  created(e) {
+    this.onCreated(e);
+  },
+  methods: {
+    onCreated() {
+      //注册
+      this.SharingImage.name;
+    },
+
+    onEle0Ed4308BD32B4F148401Ba9Ad296Dc56Click() {
+      const link = document.createElement("a");
+
+      // 将 download 属性设置为要保存的文件的名称
+      link.download = "image.png";
+
+      // 将 href 属性设置为图片的 URL
+      link.href = "https://example.com/image.png";
+
+      // 触发链接的点击事件
+      link.click();
+    },
+  },
 };
 </script>
 
