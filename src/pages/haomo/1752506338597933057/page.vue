@@ -88,7 +88,7 @@ export default {
       link.download = "image.png";
 
       // 将 href 属性设置为图片的 URL
-      link.href = "https://example.com/image.png";
+      link.href = this.SharingImage.name;
 
       // 触发链接的点击事件
       link.click();
