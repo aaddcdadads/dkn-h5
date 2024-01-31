@@ -36,7 +36,8 @@
               <view
                 class="ele-wrapper ele-wrapper-33585d75-6c6b-4206-8dae-be7a7a85b0b5"
               >
-                <hm-uview-text text="分享给好友"> </hm-uview-text>
+                <hm-uview-text text="分享给好友" font-size="18px">
+                </hm-uview-text>
               </view>
               <view
                 class="ele-wrapper ele-wrapper-0ed4308b-d32b-4f14-8401-ba9ad296dc56"
@@ -120,7 +121,7 @@ export default {
 .ele-wrapper-sharingImage {
   width: 100%;
   aspect-ratio: 375/667;
-  margin-bottom: 125px;
+  margin-bottom: 89px;
   /deep/ .u-icon {
     width: 100%;
   }
@@ -138,7 +139,9 @@ export default {
 }
 
 .ele-wrapper-0ed4308b-d32b-4f14-8401-ba9ad296dc56 {
-  width: 30%;
+  width: 18%;
+  margin-left: 18px;
+  margin-top: 8px;
   aspect-ratio: 65/63;
   /deep/ .u-icon {
     width: 100%;
