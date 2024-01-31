@@ -1147,7 +1147,7 @@ export default {
           self.money = money;
         });
       };
-      self.addOrder = async function () {
+      self.checkOrder = async function () {
         if (!self.nameInput.value) {
           self.error("姓名/昵称不能为空");
           return;
@@ -1171,7 +1171,10 @@ export default {
           self.error("请至少选择一个活动项目");
           return;
         }
+      };
+      self.addOrder = async function () {
         let url = "/api/dkn/registrationOrders/addOrder";
+        const orderProjects = self.getOrderProjects();
         let params = {
           activityId: self.activityId,
           storeId: self.storeInput.value,
