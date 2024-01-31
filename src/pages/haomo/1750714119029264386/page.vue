@@ -1671,8 +1671,8 @@ export default {
 
 .ele-wrapper-7a55d0c9-95ac-4729-befd-31f60ecf4707 {
   margin-left: -12px;
-  height: 50rpx;
-  line-height: 50rpx;
+  height: 48rpx;
+  line-height: 48rpx;
 }
 
 .ele-wrapper-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f {
