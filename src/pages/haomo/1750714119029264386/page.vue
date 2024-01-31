@@ -1218,7 +1218,7 @@ export default {
     },
     onEle7A55D0C995Ac4729Befd31F60Ecf4707OnClick() {
       uni.$u.route(
-        "https://stage.block-design.cn/edit-page/?pageId=1752601339138936834"
+        `/pages/haomo/1752601339138936834/page?activityId=${this.activityId}`
       );
     },
     onElee174C2E6A7994Ccf8Fa92A81Dc515A6FClick() {
