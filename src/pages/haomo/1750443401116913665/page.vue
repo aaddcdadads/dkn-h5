@@ -419,12 +419,11 @@
                 >
                 </hm-uview-text>
               </view>
-              <view class="ele-wrapper ele-wrapper-Buttonwan">
+              <view class="ele-wrapper ele-wrapper-buttonwan">
                 <hm-uview-button
-                  ref="Buttonwan"
-                  :text="Buttonwan.text"
-                  :custom-style="Buttonwan.customStyle"
-                  class="ele-Buttonwan"
+                  ref="buttonwan"
+                  :text="buttonwan.text"
+                  class="ele-buttonwan"
                 >
                 </hm-uview-button>
               </view>
@@ -457,9 +456,8 @@ export default {
   data() {
     let self = this;
     return {
-      Buttonwan: {
+      buttonwan: {
         text: "核销",
-        customStyle: {},
       },
       registrationProjectField: {
         value: "",
@@ -874,7 +872,7 @@ export default {
   margin-top: 20px;
 }
 
-.ele-wrapper-Buttonwan {
+.ele-wrapper-buttonwan {
   width: 80%;
   margin-top: 10%;
   height: 50px;
