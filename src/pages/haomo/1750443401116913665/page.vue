@@ -557,8 +557,14 @@ export default {
       });
     },
     onButtonwanClick() {
+      let orderId = "111";
+      let storeId = "22";
       uni.navigateTo({
-        url: "/pages/haomo/1751068398554451969/page",
+        url:
+          "/pages/haomo/1751068398554451969/page?orderId=" +
+          orderId +
+          "&storeId=" +
+          storeId,
       });
     },
   },
