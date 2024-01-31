@@ -120,6 +120,7 @@ export default {
 .ele-wrapper-sharingImage {
   width: 100%;
   aspect-ratio: 375/667;
+  margin-bottom: 125px;
   /deep/ .u-icon {
     width: 100%;
   }
