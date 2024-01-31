@@ -9,6 +9,7 @@
           height=""
           border-radius="0"
           border-color="#FFFFFF00"
+          padding="0"
           box-shadow-color="#00000000"
           background-color="#FFFFFF00"
           class="ele-e006ab79-f3a9-492b-8632-73042a091b41"
@@ -119,6 +120,9 @@ export default {
 .ele-wrapper-sharingImage {
   width: 100%;
   aspect-ratio: 375/667;
+  /deep/ .u-icon {
+    width: 100%;
+  }
 }
 
 .ele-wrapper-084fc45c-3b7d-42af-9042-8c47c465787c {
