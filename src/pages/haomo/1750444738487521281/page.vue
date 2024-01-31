@@ -63,7 +63,11 @@
               class="ele-74c8c2c3-d387-4029-8b68-8275204c2ed5"
             >
               <view class="ele-wrapper ele-wrapper-eventCard">
-                <event-registration-card ref="eventCard" :list="eventCard.list">
+                <event-registration-card
+                  ref="eventCard"
+                  :list="eventCard.list"
+                  @checked="onEventCardChecked"
+                >
                 </event-registration-card>
               </view>
             </hm-uview-bg-card>
@@ -1128,6 +1132,9 @@ export default {
       self.getData();
     },
 
+    onEventCardChecked(e) {
+      console.log("e", e);
+    },
     onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon() {
       this.shopPop.show = true;
     },
