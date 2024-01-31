@@ -572,7 +572,7 @@ export default {
       this.storeId = "ff8080818d5d6fdb018d5d7725c50001";
       uni.navigateTo({
         url:
-          "/pages/haomo/1751068398554451969/page?orderId=" +
+          "/pages/haomo/1752649989210771458/page?orderId=" +
           this.orderId +
           "&storeId=" +
           this.storeId,
