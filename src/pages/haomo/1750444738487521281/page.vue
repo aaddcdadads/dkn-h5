@@ -1213,8 +1213,8 @@ export default {
         });
         list = list.map((x) => {
           return {
-            activityProjectId: e.id,
-            num: e.number,
+            activityProjectId: x.id,
+            num: x.number,
           };
         });
         return list;
