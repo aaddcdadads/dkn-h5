@@ -964,9 +964,7 @@ export default {
       self.activityImgList.textColor = "#D8477B";
       self.listCompanent.textColor = "#D8477B";
       //富文本
-      self.activityRulesText.data = {
-        html: "",
-      };
+      self.activityRulesText.data = { html: "" };
 
       self.phoneText.text = "";
       //数据对象
@@ -976,9 +974,7 @@ export default {
       self.activityProjectItem = {};
       self.getActivity = async function (id) {
         let url = "/api/dkn/activity/queryByAll";
-        const res = await self.$getAction(url, {
-          id,
-        });
+        const res = await self.$getAction(url, { id });
         if (!res.success || !res.result) {
           return;
         }
@@ -1198,11 +1194,10 @@ export default {
         uni.setStorageSync("token", res.result.token);
         uni.setStorageSync("userInfo", res.result.userInfo);
         uni.$u.route(
-          `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}`
+          `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
         );
       };
     },
-
     onEle0Abf487751Bc431D8F1A3C043Bc451FeClick() {
       this.regularPopup.show = true;
     },
