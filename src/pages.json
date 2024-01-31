@@ -8,6 +8,13 @@
     },
     "pages": [
         {
+            "path": "pages/haomo/1752601339138936834/page",
+            "style": {
+                "navigationBarTitleText": "活动报名用户协议及承诺书",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "pages/haomo/1750443401116913665/page",
             "style": {
                 "navigationBarTitleText": "活动报名信息",
@@ -27,27 +34,6 @@
                 "navigationBarTitleText": "活动报名页",
                 "enablePullDownRefresh": false
             }
-        },
-        {
-          "path": "pages/haomo/payTest/page",
-          "style": {
-              "navigationBarTitleText": "支付测试",
-              "enablePullDownRefresh": false
-          }
-        },
-        {
-          "path": "pages/haomo/aliPay/page",
-          "style": {
-              "navigationBarTitleText": "支付宝支付",
-              "enablePullDownRefresh": false
-          }
-        },
-        {
-          "path": "pages/haomo/wxPay/page",
-          "style": {
-              "navigationBarTitleText": "微信支付",
-              "enablePullDownRefresh": false
-          }
         },
         {
             "path": "pages/haomo/1750726128974172161/page",
