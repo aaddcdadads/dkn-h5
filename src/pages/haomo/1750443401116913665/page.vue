@@ -637,7 +637,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField1 {
+  /deep/.ele-egistrationProjectField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
