@@ -381,7 +381,6 @@ export default {
 .ele-wrapper-c1321652-9bb5-410d-a15c-df20fe88d984 {
   padding: 13px 7px;
   vertical-align: top;
-  margin-left: 10px;
 }
 
 .ele-wrapper-inputMane {
