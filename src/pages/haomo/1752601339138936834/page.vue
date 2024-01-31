@@ -60,7 +60,7 @@ export default {
       self.activityId = self.$route.query.activityId;
       self.protocolText.data = { html: "" };
       self.getProtocolText = async function () {
-        let url = "/api/dkn/activityProject/list";
+        let url = "/api/dkn/activityExt/list";
         let params = { activityId: self.activityId };
         const res = await self.$getAction(url, params);
         if (!res.success || res.result.records.length === 0) {
