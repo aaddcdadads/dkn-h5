@@ -382,7 +382,7 @@
                       >
                         <hm-uview-text
                           text="核销状态:"
-                          font-size="13px"
+                          font-size="12px"
                           padding="0"
                           class="ele-fba91c42-55e1-404b-97e8-0d6ca8b53ff5"
                         >
