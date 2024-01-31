@@ -423,6 +423,7 @@
                 <hm-uview-button
                   ref="buttonwan"
                   :text="buttonwan.text"
+                  @click="onButtonwanClick"
                   class="ele-buttonwan"
                 >
                 </hm-uview-button>
@@ -553,6 +554,11 @@ export default {
     onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
       uni.navigateTo({
         url: "/pages/haomo/1750714119029264386/page",
+      });
+    },
+    onButtonwanClick() {
+      uni.navigateTo({
+        url: "/pages/haomo/1751068398554451969/page",
       });
     },
   },
