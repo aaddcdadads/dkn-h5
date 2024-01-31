@@ -269,6 +269,7 @@
                             <hm-uview-text
                               ref="writeOffText"
                               :text="writeOffText.text"
+                              :font-size="writeOffText.fontSize"
                             >
                             </hm-uview-text>
                           </view>
@@ -330,6 +331,7 @@ export default {
       },
       writeOffText: {
         text: "确认核销？",
+        fontSize: "16px",
       },
       inputMane: {
         value: "",
