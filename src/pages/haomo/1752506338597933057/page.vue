@@ -98,7 +98,7 @@ export default {
       const link = document.createElement("a");
 
       // 将 download 属性设置为要保存的文件的名称
-      link.download = "image.png";
+      link.download = "活动分享图片";
 
       // 将 href 属性设置为图片的 URL
       link.href = this.sharingImage.name;
