@@ -16,9 +16,9 @@
           <view class="ele-wrapper ele-wrapper-sharingImage">
             <hm-uview-icon
               ref="sharingImage"
-              name="/static/h5/home/share.png"
-              size="100%"
-              label=""
+              :name="sharingImage.name"
+              :size="sharingImage.size"
+              :label="sharingImage.label"
               class="ele-sharingImage"
             >
             </hm-uview-icon>
@@ -73,7 +73,13 @@ export default {
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
-    return {};
+    return {
+      sharingImage: {
+        name: "/static/h5/home/share.png",
+        size: "100%",
+        label: "",
+      },
+    };
   },
   watch: {},
   created(e) {
@@ -82,7 +88,7 @@ export default {
   methods: {
     onCreated() {
       //注册
-      this.SharingImage.name;
+      this.sharingImage.name;
     },
 
     onEle0Ed4308BD32B4F148401Ba9Ad296Dc56Click() {
@@ -92,7 +98,7 @@ export default {
       link.download = "image.png";
 
       // 将 href 属性设置为图片的 URL
-      link.href = this.SharingImage.name;
+      link.href = this.sharingImage.name;
 
       // 触发链接的点击事件
       link.click();
