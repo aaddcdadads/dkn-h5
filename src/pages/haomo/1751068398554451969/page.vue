@@ -304,12 +304,19 @@ export default {
   created(e) {
     this.onCreated(e);
   },
+  onLoad(e) {
+    this.onOnLoad(e);
+  },
   methods: {
     onCreated() {
       this.inputMane.value;
       this.inputPhoneNumber.value;
       this.inputClaimStore.value;
       this.inputActivityName.value;
+    },
+    onOnLoad(options) {
+      this.orderId = options.orderId;
+      this.storeId = options.storeId;
     },
   },
 };
