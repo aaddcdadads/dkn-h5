@@ -99,13 +99,12 @@
               background-color="#F8F8F8"
               class="ele-7927eb64-d6cf-4dda-8938-a15bb62187d2"
             >
-              <view
-                class="ele-wrapper ele-wrapper-8b981cf2-ae14-4b8c-9f72-4cd6c41423a6"
-              >
+              <view class="ele-wrapper ele-wrapper-nameInput">
                 <information-input-box
-                  value=""
+                  ref="nameInput"
+                  v-model:value="nameInput.value"
                   :show-code="false"
-                  class="ele-8b981cf2-ae14-4b8c-9f72-4cd6c41423a6"
+                  class="ele-nameInput"
                 >
                 </information-input-box>
               </view>
@@ -1069,7 +1068,7 @@ export default {
         type: "primary",
         shape: "circle",
       },
-      "8b981cf2-ae14-4b8c-9f72-4cd6c41423a6": {
+      nameInput: {
         value: "",
       },
       "9662da08-d680-4c34-af33-b2ba9794437a": {
@@ -1234,7 +1233,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-8b981cf2-ae14-4b8c-9f72-4cd6c41423a6 {
+.ele-wrapper-nameInput {
   width: 100%;
   margin-top: 5px;
 }
