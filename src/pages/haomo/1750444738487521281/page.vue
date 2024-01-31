@@ -1171,6 +1171,7 @@ export default {
           self.error("请至少选择一个活动项目");
           return;
         }
+        self.payPopup.show = true;
       };
       self.addOrder = async function () {
         let url = "/api/dkn/registrationOrders/addOrder";
