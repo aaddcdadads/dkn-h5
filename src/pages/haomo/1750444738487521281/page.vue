@@ -67,6 +67,7 @@
                   ref="eventCard"
                   :list="eventCard.list"
                   @checked="onEventCardChecked"
+                  @change="onEventCardChange"
                 >
                 </event-registration-card>
               </view>
@@ -1149,6 +1150,9 @@ export default {
     },
 
     onEventCardChecked(e) {
+      this.checked();
+    },
+    onEventCardChange(e) {
       this.checked();
     },
     onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon() {
