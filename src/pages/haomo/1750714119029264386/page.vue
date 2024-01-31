@@ -1291,7 +1291,7 @@ export default {
 
 .ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2 {
   width: 100%;
-  margin-top: 460px;
+  margin-top: 490px;
   z-index: 1000;
 }
 
