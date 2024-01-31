@@ -1063,6 +1063,11 @@ export default {
           },
         ],
       },
+      payButton: {
+        text: "总费用：¥29.0 立即报名",
+        type: "primary",
+        shape: "circle",
+      },
       "8b981cf2-ae14-4b8c-9f72-4cd6c41423a6": {
         value: "",
       },
@@ -1083,11 +1088,6 @@ export default {
       prices: {
         text: "¥ 59.00",
       },
-      payButton: {
-        type: "primary",
-        shape: "circle",
-        text: "总费用：¥29.0 立即报名",
-      },
     };
   },
   watch: {},
@@ -1100,9 +1100,15 @@ export default {
       self.activityId = self.$route.query.activityId;
 
       self.eventCard.list = [];
+      self.payButton.text = `立即报名`;
+      self.money = 0;
       self.getActivityProject = async function () {
         let url = "/api/dkn/activityProject/list";
-        let params = { activityId: self.activityId };
+        let params = {
+          activityId: self.activityId,
+          column: "sortNo",
+          order: "asc",
+        };
         const res = await self.$getAction(url, params);
         if (!res.success || res.result.records.length === 0) {
           return;
@@ -1130,6 +1136,16 @@ export default {
         self.getActivityProject();
       };
       self.getData();
+
+      self.checked = function () {
+        let money = 0;
+        self.eventCard.list.forEach((e) => {
+          let expense = e.expense * e.number;
+          money += expense;
+        });
+        self.payButton.text = `总费用：¥${money} 立即报名`;
+        self.money = money;
+      };
     },
 
     onEventCardChecked(e) {
