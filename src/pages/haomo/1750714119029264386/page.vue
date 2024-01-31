@@ -1476,7 +1476,6 @@ export default {
     margin-left: 4%;
     width: 92% !important;
   }
-  display: none;
 }
 
 .ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2 {
@@ -1494,7 +1493,6 @@ export default {
   /deep/.u-mode-center-box {
     border-radius: 8px;
   }
-  display: none;
 }
 
 .ele-wrapper-ea66b462-b5ce-4b41-8870-bb482768fef8 {
@@ -1605,7 +1603,6 @@ export default {
   /deep/.u-mode-center-box {
     border-radius: 8px;
   }
-  display: none;
 }
 
 .ele-wrapper-22dc02bc-b7b8-4d6b-83d6-6ee319d12809 {
