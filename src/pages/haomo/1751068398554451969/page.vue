@@ -321,7 +321,6 @@ export default {
         text: "确认核销",
       },
       writeOffModal: {
-        show: null,
         visible: false,
       },
       inputMane: {
@@ -339,6 +338,7 @@ export default {
       writeOffText: {
         text: "确认核销？",
       },
+      registrationOrdersData: {},
     };
   },
   watch: {},
@@ -357,6 +357,8 @@ export default {
       this.inputPhoneNumber.value;
       this.inputClaimStore.value;
       this.inputActivityName.value;
+      this.writeOffModal.visible;
+      this.writeOffText.text;
     },
     onMounted() {
       console.log("获取数据---", this.orderId, this.storeId);
@@ -379,12 +381,11 @@ export default {
           }, 2500);
           return;
         }
-        let item = res.result.records[0];
+        this.registrationOrdersData = res.result.records[0];
         //保存订单id
-        this.inputMane.value = item.realname ?? "";
-        this.inputPhoneNumber.value = item.phone ?? "";
-        this.inputClaimStore.value;
-        this.inputActivityName.value = item.acName ?? "";
+        this.inputMane.value = this.registrationOrdersData.realname ?? "";
+        this.inputPhoneNumber.value = this.registrationOrdersData.phone ?? "";
+        this.inputActivityName.value = this.registrationOrdersData.acName ?? "";
       });
       this.$getAction("/api/dkn/store/list", {
         pageNo: 1,
@@ -428,7 +429,7 @@ export default {
     },
 
     onButtonwanClick() {
-      this.writeOffModal.show = true;
+      this.writeOffModal.visible = false;
     },
   },
 };
