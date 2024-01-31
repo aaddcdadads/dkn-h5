@@ -1292,6 +1292,11 @@ export default {
   width: 100%;
   margin-top: 490px;
   z-index: 1000;
+  /deep/.containerBg {
+    background: transparent;
+  }
+
+  position: absolute;
 }
 
 .ele-wrapper-colourCard {
