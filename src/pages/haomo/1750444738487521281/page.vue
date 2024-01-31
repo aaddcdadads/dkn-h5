@@ -438,9 +438,6 @@ export default {
           },
         ],
       },
-      payPopup: {
-        show: false,
-      },
       eventCard: {
         list: [
           {
@@ -1061,6 +1058,9 @@ export default {
       storeInput: {
         value: "",
       },
+      payPopup: {
+        show: false,
+      },
       countdown: {
         text: "剩下时间 23:59:59",
         fontSize: "14px",
@@ -1261,7 +1261,7 @@ export default {
       this.weixinRadio.value = "1";
     },
     onPayButtonClick() {
-      this.payPopup.show = true;
+      this.checkOrder();
     },
   },
 };
