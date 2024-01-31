@@ -253,7 +253,7 @@
                       ref="writeOffModal"
                       v-model:visible="writeOffModal.visible"
                       title="核销"
-                      height="120px"
+                      height="100px"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-fae45550-c6de-4f42-bab5-dcdccb9fdedf"
