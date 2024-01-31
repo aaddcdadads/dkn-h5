@@ -1126,7 +1126,12 @@ export default {
             shop: x.store,
           };
         });
-        self.storeList.list = [{ anchor: "b", store }];
+        self.storeList.list = [
+          {
+            anchor: "b",
+            store,
+          },
+        ];
       };
       self.getImg = function (url) {
         if (url.substring(0, 4) === "http") {
