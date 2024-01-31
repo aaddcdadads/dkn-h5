@@ -541,23 +541,23 @@
                       background-color="#FFE8EC00"
                       class="ele-c43ff619-898c-4446-a22f-6dc191e8ac6e"
                     >
-                      <view class="ele-wrapper ele-wrapper-canelButton">
+                      <view class="ele-wrapper ele-wrapper-canel1Button">
                         <hm-uview-button
-                          ref="canelButton"
-                          :type="canelButton.type"
-                          :text="canelButton.text"
-                          @click="onCanelButtonClick"
-                          class="ele-canelButton"
+                          ref="canel1Button"
+                          :type="canel1Button.type"
+                          :text="canel1Button.text"
+                          @click="onCanel1ButtonClick"
+                          class="ele-canel1Button"
                         >
                         </hm-uview-button>
                       </view>
-                      <view class="ele-wrapper ele-wrapper-sureButton">
+                      <view class="ele-wrapper ele-wrapper-sure1Button">
                         <hm-uview-button
-                          ref="sureButton"
-                          :type="sureButton.type"
-                          :text="sureButton.text"
-                          @click="onSureButtonClick"
-                          class="ele-sureButton"
+                          ref="sure1Button"
+                          :type="sure1Button.type"
+                          :text="sure1Button.text"
+                          @click="onSure1ButtonClick"
+                          class="ele-sure1Button"
                         >
                         </hm-uview-button>
                       </view>
@@ -908,13 +908,21 @@ export default {
       viewInput: {
         value: "",
       },
-      canelButton: {
+      canel1Button: {
         type: "info",
         text: "取消",
       },
-      sureButton: {
+      sure1Button: {
         type: "info",
+        text: "拨打",
+      },
+      canelButton: {
+        text: "取消",
+        type: "info",
+      },
+      sureButton: {
         text: "确认",
+        type: "info",
       },
     };
   },
@@ -1202,10 +1210,10 @@ export default {
     onViewInputOnCode() {
       this.getPhoneCode();
     },
-    onCanelButtonClick() {
+    onCanel1ButtonClick() {
       this.viewPopup.show = false;
     },
-    onSureButtonClick() {
+    onSure1ButtonClick() {
       this.login();
     },
     onElee174C2E6A7994Ccf8Fa92A81Dc515A6FClick() {
@@ -1563,9 +1571,9 @@ export default {
   margin-top: 48rpx;
 }
 
-.ele-wrapper-canelButton {
+.ele-wrapper-canel1Button {
   width: 50%;
-  /deep/.ele-canelButton {
+  /deep/.ele-canel1Button {
     background: transparent !important;
     color: #409eff !important;
     overflow: visible !important;
@@ -1574,7 +1582,7 @@ export default {
   }
 }
 
-.ele-wrapper-sureButton {
+.ele-wrapper-sure1Button {
   width: 50%;
   /deep/.ele-sureButton {
     background: transparent !important;
