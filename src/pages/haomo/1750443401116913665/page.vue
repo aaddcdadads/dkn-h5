@@ -670,7 +670,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField2 {
+  /deep/.ele-userNameField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -703,7 +703,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField3 {
+  /deep/.ele-phoneField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -736,7 +736,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField4 {
+  /deep/.ele-storeNameField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -769,7 +769,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField5 {
+  /deep/.ele-registrationTimeField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -802,7 +802,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField6 {
+  /deep/.ele-activityNameField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -835,7 +835,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField7 {
+  /deep/.ele-verificationDeadlineField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -871,7 +871,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField8 {
+  /deep/.ele-writeStatusField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
