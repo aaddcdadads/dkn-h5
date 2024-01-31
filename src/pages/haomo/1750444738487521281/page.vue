@@ -1087,7 +1087,47 @@ export default {
     };
   },
   watch: {},
+  async mounted(e) {
+    this.onMounted(e);
+  },
   methods: {
+    onMounted() {
+      let self = this;
+      self.activityId = self.$route.query.activityId;
+
+      self.eventCard.list = [];
+      self.getActivityProject = async function () {
+        let url = "/api/dkn/activityProject/list";
+        let params = { activityId: self.activityId };
+        const res = await self.$getAction(url, params);
+        if (!res.success || res.result.records.length === 0) {
+          return;
+        }
+        self.eventCard.list = res.result.records.map((e) => {
+          return {
+            ...e,
+            checked: false,
+            image: self.getImg(e.imgPath),
+            name: e.name,
+            description: e.synopsis,
+            price: e.expense,
+            number: 0,
+          };
+        });
+      };
+      self.get;
+      self.getImg = function (url) {
+        if (url.substring(0, 4) === "http") {
+          return url;
+        }
+        return `/api/sys/common/static/${url}`;
+      };
+      self.getData = function () {
+        self.getActivityProject();
+      };
+      self.getData();
+    },
+
     onEle71E123E588A944C5B029F89Fdaffa0D3RightIcon() {
       this.shopPop.show = true;
     },
