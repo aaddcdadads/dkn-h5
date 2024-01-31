@@ -347,6 +347,7 @@
                       :type="'primary'"
                       :shape="'circle'"
                       text="确认支付"
+                      @click="onElecc32D6578Fd941629086B69B68Cf0BddClick"
                       class="ele-cc32d657-8fd9-4162-9086-b69b68cf0bdd"
                     >
                     </hm-uview-button>
@@ -1260,6 +1261,9 @@ export default {
     },
     onZhifubaoRadioRadioChange() {
       this.weixinRadio.value = "1";
+    },
+    onElecc32D6578Fd941629086B69B68Cf0BddClick() {
+      this.addOrder();
     },
     onPayButtonClick() {
       this.checkOrder();
