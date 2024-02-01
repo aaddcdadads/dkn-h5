@@ -1689,5 +1689,6 @@ export default {
   height: calc(100vh - 120px);
   overflow-y: scroll;
   width: 100%;
+  margin-top: 20%;
 }
 </style>
