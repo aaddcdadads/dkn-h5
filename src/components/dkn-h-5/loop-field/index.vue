@@ -43,7 +43,7 @@ export default {
      * item
      */
      item: {
-      type: String,
+      type: Object,
       default: function(){
         return {}
       },
