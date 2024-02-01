@@ -581,19 +581,19 @@ export default {
     onOnLoad(options) {
       console.log("onLoad");
       //活动id
-      if (!options.activityId) {
-        uni.showToast({
-          title: "数据获取失败",
-          icon: "error",
-          duration: 1000,
-        });
-        setTimeout(() => {
-          uni.navigateTo({
-            url: "/pages/haomo/1750714119029264386/page",
-          });
-        }, 1500);
-        return;
-      }
+      /*if (!options.activityId) {
+    uni.showToast({
+      title: "数据获取失败",
+      icon: "error",
+      duration: 1000
+    });
+    setTimeout(() => {
+      uni.navigateTo({
+        url: "/pages/haomo/1750714119029264386/page"
+      })
+    }, 1500);
+    return
+  }*/
       this.activityId = options.activityId;
     },
 
