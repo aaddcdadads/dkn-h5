@@ -507,7 +507,7 @@ export default {
       let userInfoString = localStorage.getItem("userInfo");
       let userInfo = userInfoString && JSON.parse(userInfoString);
       this.userId = userInfo.data.id || "";
-      if (!this.userId) {
+      if (!this.userId || !this.activityId) {
         uni.showToast({
           title: "数据获取失败",
           icon: "error",
