@@ -41,7 +41,7 @@ export function aliH5Pay(orderId) {
 
 function aliPayAlertPage(orderId) {
   uni.navigateTo({
-    url: "/pages/haomo/aliPay/page?orderId=" + orderId,
+    url: "/pages/pay/aliPay/page?orderId=" + orderId,
   });
 }
 
@@ -69,7 +69,7 @@ function wxCodePay(orderId){
     orderId,
   }).then(res => {
     uni.navigateTo({
-      url: `/pages/haomo/wxPay/page?url=${res.data}&orderId=${orderId}`
+      url: `/pages/pay/wxPay/page?url=${res.data}&orderId=${orderId}`
     })
   })
 }
