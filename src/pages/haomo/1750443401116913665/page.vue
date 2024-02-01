@@ -227,7 +227,7 @@ export default {
   },
   "loopField": {
     "item": {},
-    "value": ""
+    "value": "sa"
   }
 };
   },
