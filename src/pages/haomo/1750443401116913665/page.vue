@@ -122,10 +122,11 @@
                               >
                                 <template #default="{ item }">
                                   <view
-                                    class="ele-wrapper ele-wrapper-bfcac686-dac4-4bff-ad88-77ecdf9f947e"
+                                    class="ele-wrapper ele-wrapper-loopField"
                                   >
                                     <loop-field
-                                      :value="item.text"
+                                      ref="loopField"
+                                      v-model:value="loopField.value"
                                       label=""
                                       placeholder="报名项目名称 x 数量"
                                       label-width="0"
@@ -133,7 +134,7 @@
                                       right-icon=""
                                       :border-bottom="false"
                                       :disabled="true"
-                                      class="ele-bfcac686-dac4-4bff-ad88-77ecdf9f947e"
+                                      class="ele-loopField"
                                     >
                                     </loop-field>
                                   </view>
@@ -529,8 +530,8 @@ export default {
           },
         ],
       },
-      "bfcac686-dac4-4bff-ad88-77ecdf9f947e": {
-        value: "item.text",
+      loopField: {
+        value: "item.name",
       },
     };
   },
@@ -601,6 +602,16 @@ export default {
         ) {
           this.buttonwan.disabled = true;
         }
+        this.$getAction("/api/dkn/orderProject/list", {
+          pageNo: 1,
+          pageSize: 1,
+          orderId: item.id,
+        }).then((orderProjectRes) => {
+          if (orderProjectRes.code != 200 || res.result.records.length <= 0) {
+            return;
+          }
+          res.result.records;
+        });
       });
     },
     onOnLoad(options) {
@@ -741,7 +752,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-bfcac686-dac4-4bff-ad88-77ecdf9f947e {
+.ele-wrapper-loopField {
   width: 100%;
   height: 45px;
   margin-right: 10%;
