@@ -400,7 +400,8 @@ export default {
       };
     },
     onMounted() {
-      console.log("获取数据---", this.orderId, this.storeId);
+      console.log("获取数据---", this.activityId, this.storeId);
+      //查询订单信息
       this.$getAction("/api/dkn/viewRegistrationOrders/list", {
         pageNo: 1,
         pageSize: 1,
@@ -421,12 +422,14 @@ export default {
           }, 1500);
           return;
         }
+        //保存订单信息
         this.registrationOrdersData = res.result.records[0];
-        //保存订单id
+
         this.inputMane.value = this.registrationOrdersData.realname ?? "";
         this.inputPhoneNumber.value = this.registrationOrdersData.phone ?? "";
         this.inputActivityName.value = this.registrationOrdersData.acName ?? "";
       });
+      //查询扫码的门店信息
       this.$getAction("/api/dkn/store/list", {
         pageNo: 1,
         pageSize: 1,
@@ -472,8 +475,8 @@ export default {
 
     onWriteOffModalOnConfirm() {
       this.$postAction("/api/dkn/orderPickUp/add", {
-        orderId: this.orderId,
-        activityId: this.registrationOrdersData.activityId,
+        orderId: this.registrationOrdersData.id,
+        activityId: this.activityId,
         storeId: this.storeId,
         pickUpStatus: 0,
         pickUpTime: this.getTime(),
