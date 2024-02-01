@@ -1,89 +1,96 @@
 {
-    "easycom": {
-        "autoscan": true,
-        "custom": {
-            "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
-            "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
-        }
-    },
-    "pages": [
-        {
-            "path": "pages/haomo/1752601339138936834/page",
-            "style": {
-                "navigationBarTitleText": "活动报名用户协议及承诺书",
-                "enablePullDownRefresh": false
-            }
-        },
-        {
-            "path": "pages/haomo/1750443401116913665/page",
-            "style": {
-                "navigationBarTitleText": "活动报名信息",
-                "enablePullDownRefresh": false
-            }
-        },
-        {
-            "path": "pages/haomo/1750444738487521281/page",
-            "style": {
-                "navigationBarTitleText": "报名表单",
-                "enablePullDownRefresh": false
-            }
-        },
-        {
-            "path": "pages/haomo/1750714119029264386/page",
-            "style": {
-                "navigationBarTitleText": "活动报名页",
-                "enablePullDownRefresh": false
-            }
-        },
-        {
-            "path": "pages/haomo/1750726128974172161/page",
-            "style": {
-                "navigationBarTitleText": "支付订单",
-                "enablePullDownRefresh": false
-            }
-        },
-        {
-            "path": "pages/haomo/1751068398554451969/page",
-            "style": {
-                "navigationBarTitleText": "核销确认页",
-                "enablePullDownRefresh": false
-            }
-        },
-        {
-            "path": "pages/haomo/1751895267671543809/page",
-            "style": {
-                "navigationBarTitleText": "扫一扫登录页",
-                "enablePullDownRefresh": false
-            }
-        },
-        {
-            "path": "pages/haomo/1751899680905629697/page",
-            "style": {
-                "navigationBarTitleText": "活动核销",
-                "enablePullDownRefresh": false
-            }
-        },
-        {
-            "path": "pages/haomo/1752506338597933057/page",
-            "style": {
-                "navigationBarTitleText": "活动分享",
-                "enablePullDownRefresh": false
-            }
-        }
-    ],
-    "subPackages": [],
-    "globalStyle": {
-        "navigationStyle": "default",
-        "navigationBarTextStyle": "black",
-        "navigationBarTitleText": "uni-app",
-        "navigationBarBackgroundColor": "#F8F8F8",
-        "backgroundColor": "#F8F8F8",
-        "rpxCalcMaxDeviceWidth": "750",
-        "rpxCalcBaseDeviceWidth": "375",
-        "rpxCalcIncludeWidth": "375",
-        "dynamicRpx": true,
-        "usingComponents": {
-            "ec-charts": "/wxcomponents/ec-canvas/ec-canvas"
-        }
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
     }
+  },
+  "pages": [
+    {
+      "path": "pages/haomo/1752601339138936834/page",
+      "style": {
+        "navigationBarTitleText": "活动报名用户协议及承诺书",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/haomo/1750443401116913665/page",
+      "style": {
+        "navigationBarTitleText": "活动报名信息",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/haomo/1752649989210771458/page",
+      "style": {
+        "navigationBarTitleText": "核销扫码",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/haomo/1750444738487521281/page",
+      "style": {
+        "navigationBarTitleText": "报名表单",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/haomo/1750714119029264386/page",
+      "style": {
+        "navigationBarTitleText": "活动报名页",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/haomo/1750726128974172161/page",
+      "style": {
+        "navigationBarTitleText": "支付订单",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/haomo/1751068398554451969/page",
+      "style": {
+        "navigationBarTitleText": "核销确认页",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/haomo/1751895267671543809/page",
+      "style": {
+        "navigationBarTitleText": "扫一扫登录页",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/haomo/1751899680905629697/page",
+      "style": {
+        "navigationBarTitleText": "活动核销",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/haomo/1752506338597933057/page",
+      "style": {
+        "navigationBarTitleText": "活动分享",
+        "enablePullDownRefresh": false
+      }
+    }
+  ],
+  "subPackages": [],
+  "globalStyle": {
+    "navigationStyle": "default",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "rpxCalcMaxDeviceWidth": "750",
+    "rpxCalcBaseDeviceWidth": "375",
+    "rpxCalcIncludeWidth": "375",
+    "dynamicRpx": true,
+    "usingComponents": {
+      "ec-charts": "/wxcomponents/ec-canvas/ec-canvas"
+    }
+  }
 }
