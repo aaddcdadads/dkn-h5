@@ -122,20 +122,18 @@
                               >
                                 <template #default="{ item }">
                                   <view
-                                    class="ele-wrapper ele-wrapper-loopField"
+                                    class="ele-wrapper ele-wrapper-c4fb2d3c-5947-4afa-b727-efb506bc7858"
                                   >
                                     <loop-field
-                                      ref="loopField"
-                                      :item="item"
-                                      v-model:value="loopField.value"
+                                      value=""
                                       label=""
-                                      :placeholder="item.text"
+                                      placeholder="报名项目名称 x 数量"
                                       label-width="0"
                                       icon=""
                                       right-icon=""
                                       :border-bottom="false"
                                       :disabled="true"
-                                      class="ele-loopField"
+                                      class="ele-c4fb2d3c-5947-4afa-b727-efb506bc7858"
                                     >
                                     </loop-field>
                                   </view>
@@ -531,9 +529,8 @@ export default {
           },
         ],
       },
-      loopField: {
-        item: {},
-        value: "item.text",
+      "c4fb2d3c-5947-4afa-b727-efb506bc7858": {
+        value: "",
       },
     };
   },
@@ -744,7 +741,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-loopField {
+.ele-wrapper-c4fb2d3c-5947-4afa-b727-efb506bc7858 {
   width: 100%;
   height: 45px;
   margin-right: 10%;
