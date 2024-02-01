@@ -50,7 +50,6 @@ export default {
     },
     /**
      * 值
-     * @model
      */
     value: {
       type: String,
@@ -269,7 +268,6 @@ export default {
       console.log("onfocus", e);
     },
     onInput: function (e) {
-      this.$emit("update:value", e);
       this.$emit("after-input", e);
       //console.log("input: ", this.value, this.cValue);
     },
