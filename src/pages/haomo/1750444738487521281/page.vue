@@ -1208,7 +1208,7 @@ export default {
             title: res.message,
             duration: 2000,
           });
-          if (res.message === "当前活动已报名") {
+          if (res.message === "当前活动已经报名！") {
             uni.$u.route(
               `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
             );
@@ -1302,6 +1302,7 @@ export default {
         self.$pay(self.orderId, channel);
       };
     },
+
     onEventCardChecked(e) {
       this.checked();
     },
