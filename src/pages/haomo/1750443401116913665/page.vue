@@ -121,13 +121,6 @@
                                 :value="[{}, {}]"
                                 class="ele-02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759"
                               >
-                                <template #default="{ item }">
-                                  <view
-                                    class="ele-wrapper ele-wrapper-e7b06b2d-cd97-4cbf-a0be-a8c40f4122a5"
-                                  >
-                                    <hm-uview-field value=""> </hm-uview-field>
-                                  </view>
-                                </template>
                               </hm-loop>
                             </view>
                           </template>
@@ -507,9 +500,6 @@ export default {
       },
       "02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759": {
         value: [{}, {}],
-      },
-      "e7b06b2d-cd97-4cbf-a0be-a8c40f4122a5": {
-        value: "",
       },
     };
   },
