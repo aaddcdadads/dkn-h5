@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     onOnLoad(options) {
-      if (!options.orderId) {
+      if (!options.activityId) {
         uni.showToast({
           title: "数据获取失败",
           icon: "error",
@@ -46,7 +46,7 @@ export default {
         }, 1500);
         return;
       }
-      this.orderId = options.orderId;
+      this.activityId = options.activityId;
     },
 
     onHmH5ScanCodeQrcodeSucess(data) {
