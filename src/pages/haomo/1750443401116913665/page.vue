@@ -118,9 +118,28 @@
                               class="ele-wrapper ele-wrapper-02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759"
                             >
                               <hm-loop
-                                :value="[{}, {}]"
+                                :value="[{ text: 'ASDASD' }, {}]"
                                 class="ele-02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759"
                               >
+                                <template #default="{ item }">
+                                  <view
+                                    class="ele-wrapper ele-wrapper-06122af9-76f9-44cc-80c0-a6e54382f1f7"
+                                  >
+                                    <loop-field
+                                      :item="item"
+                                      :value="item.text"
+                                      label=""
+                                      placeholder="报名项目名称 x 数量"
+                                      label-width="0"
+                                      icon=""
+                                      right-icon=""
+                                      :border-bottom="false"
+                                      :disabled="true"
+                                      class="ele-06122af9-76f9-44cc-80c0-a6e54382f1f7"
+                                    >
+                                    </loop-field>
+                                  </view>
+                                </template>
                               </hm-loop>
                             </view>
                           </template>
@@ -452,6 +471,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
+import LoopField from "/@/components/dkn-h-5/loop-field/index.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -461,6 +481,7 @@ export default {
     HmUviewText,
     HmLoop,
     HmUviewField,
+    LoopField,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -499,7 +520,16 @@ export default {
         value: [1],
       },
       "02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759": {
-        value: [{}, {}],
+        value: [
+          {
+            text: "ASDASD",
+          },
+          {},
+        ],
+      },
+      "06122af9-76f9-44cc-80c0-a6e54382f1f7": {
+        item: {},
+        value: "item.text",
       },
     };
   },
@@ -708,6 +738,27 @@ export default {
 
 .ele-wrapper-02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759 {
   width: 100%;
+}
+
+.ele-wrapper-06122af9-76f9-44cc-80c0-a6e54382f1f7 {
+  width: 100%;
+  height: 45px;
+  margin-right: 10%;
+  /deep/.u-border-bottom {
+    display: flex;
+    align-items: center;
+    height: 45px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
+  /deep/.ele-registrationProjectField {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
