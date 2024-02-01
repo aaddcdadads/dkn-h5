@@ -533,7 +533,7 @@ export default {
       },
       loopField: {
         item: {},
-        value: "sa",
+        value: "item.text",
       },
     };
   },
