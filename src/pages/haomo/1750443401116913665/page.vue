@@ -120,6 +120,24 @@
                                 v-model:value="loopList.value"
                                 class="ele-loopList"
                               >
+                                <template #default="{ item }">
+                                  <view
+                                    class="ele-wrapper ele-wrapper-bfcac686-dac4-4bff-ad88-77ecdf9f947e"
+                                  >
+                                    <loop-field
+                                      value=""
+                                      label=""
+                                      placeholder="报名项目名称 x 数量"
+                                      label-width="0"
+                                      icon=""
+                                      right-icon=""
+                                      :border-bottom="false"
+                                      :disabled="true"
+                                      class="ele-bfcac686-dac4-4bff-ad88-77ecdf9f947e"
+                                    >
+                                    </loop-field>
+                                  </view>
+                                </template>
                               </hm-loop>
                             </view>
                           </template>
@@ -451,6 +469,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
+import LoopField from "/@/components/dkn-h-5/loop-field/index.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -460,6 +479,7 @@ export default {
     HmUviewText,
     HmLoop,
     HmUviewField,
+    LoopField,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -508,6 +528,9 @@ export default {
             text: "sdasdasd",
           },
         ],
+      },
+      "bfcac686-dac4-4bff-ad88-77ecdf9f947e": {
+        value: "",
       },
     };
   },
@@ -716,6 +739,27 @@ export default {
 
 .ele-wrapper-loopList {
   width: 100%;
+}
+
+.ele-wrapper-bfcac686-dac4-4bff-ad88-77ecdf9f947e {
+  width: 100%;
+  height: 45px;
+  margin-right: 10%;
+  /deep/.u-border-bottom {
+    display: flex;
+    align-items: center;
+    height: 45px;
+  }
+  /deep/.input-placeholder {
+    font-size: 13px;
+  }
+  /deep/.ele-registrationProjectField {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
