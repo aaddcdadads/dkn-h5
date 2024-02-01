@@ -754,7 +754,8 @@ export default {
 }
 
 .ele-wrapper-prizeListComponent {
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
 }
 
 .ele-wrapper-fae45550-c6de-4f42-bab5-dcdccb9fdedf {
