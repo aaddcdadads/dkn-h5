@@ -508,7 +508,7 @@ export default {
       let userInfoString = localStorage.getItem("userInfo");
       let userInfo = userInfoString && JSON.parse(userInfoString);
       this.userId = userInfo.data.id || "";
-      if (!this.userId || !this.activityId) {
+      if (!this.userId) {
         uni.showToast({
           title: "数据获取失败",
           icon: "error",
@@ -534,6 +534,7 @@ export default {
       this.buttonwan.disabled;
     },
     onMounted() {
+      console.log("mounted");
       let params = {
         userId: this.userId,
         activityId: this.activityId,
