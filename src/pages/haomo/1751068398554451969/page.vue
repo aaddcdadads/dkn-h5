@@ -366,6 +366,24 @@ export default {
       this.writeOffText.text;
       this.writeOffModal.title;
 
+      // 从本地缓存中获取userInfo
+      let userInfoString = localStorage.getItem("userInfo");
+      let userInfo = JSON.parse(userInfoString);
+      this.userId = userInfo.data.id || "";
+      if (!this.userId) {
+        uni.showToast({
+          title: "数据获取失败",
+          icon: "error",
+          duration: 1000,
+        });
+        setTimeout(() => {
+          uni.navigateTo({
+            url: "/pages/haomo/1750714119029264386/page",
+          });
+        }, 1500);
+        return;
+      }
+
       this.getTime = () => {
         // 创建一个新的 Date 对象来获取当前时间
         let currentTime = new Date();
@@ -386,7 +404,8 @@ export default {
       this.$getAction("/api/dkn/viewRegistrationOrders/list", {
         pageNo: 1,
         pageSize: 1,
-        id: this.orderId,
+        userId: this.userId,
+        activityId: this.activityId,
       }).then((res) => {
         console.log("res--", res);
         if (!res.success || res.result.records.length <= 0) {
@@ -432,7 +451,7 @@ export default {
       });
     },
     onOnLoad(options) {
-      if (!options.orderId || !options.storeId) {
+      if (!options.activityId || !options.storeId) {
         uni.showToast({
           title: "数据获取失败",
           icon: "error",
@@ -445,7 +464,7 @@ export default {
         }, 2500);
         return;
       }
-      this.orderId = options.orderId;
+      this.activityId = options.activityId;
       this.storeId = options.storeId;
     },
 
