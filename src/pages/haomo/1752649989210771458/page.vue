@@ -73,8 +73,9 @@ export default {
             uni.navigateBack({
               delta: 1,
             });
+            return;
           }
-          uni.navigateTo({
+          uni.redirectTo({
             url:
               "/pages/haomo/1751068398554451969/page?orderId=" +
               this.orderId +
