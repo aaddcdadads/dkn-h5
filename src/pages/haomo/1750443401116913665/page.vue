@@ -129,7 +129,7 @@
                                       :item="item"
                                       v-model:value="loopField.value"
                                       label=""
-                                      placeholder="报名项目名称 x 数量"
+                                      :placeholder="item.text"
                                       label-width="0"
                                       icon=""
                                       right-icon=""
