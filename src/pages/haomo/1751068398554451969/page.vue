@@ -222,6 +222,7 @@
                     <hm-uview-bg-card
                       width="100%"
                       height="100%"
+                      :text-align="'center'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -249,7 +250,10 @@
                       <view
                         class="ele-wrapper ele-wrapper-3c257881-12ab-454b-ad6d-bc7e8465525e"
                       >
-                        <prize-list-component> </prize-list-component>
+                        <prize-list-component
+                          class="ele-3c257881-12ab-454b-ad6d-bc7e8465525e"
+                        >
+                        </prize-list-component>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -458,6 +462,19 @@ export default {
           }, 1500);
           return;
         }
+        let item = res.result.records[0];
+        this.inputClaimStore.value = item.name ?? "";
+      });
+      //查询奖品图片
+      //查询扫码的门店信息
+      this.$getAction("/api/dkn/activityImg/list", {
+        pageNo: 1,
+        pageSize: -1,
+        id: this.activityId,
+      }).then((res) => {
+        console.log("res--", res);
+        if (res.code != 200 || res.result.records.length <= 0) return;
+
         let item = res.result.records[0];
         this.inputClaimStore.value = item.name ?? "";
       });
@@ -711,6 +728,10 @@ export default {
 
 .ele-wrapper-57f09a13-8f55-4241-a6cc-270dd43ca1ba {
   margin-left: 2px;
+}
+
+.ele-wrapper-3c257881-12ab-454b-ad6d-bc7e8465525e {
+  width: 80%;
 }
 
 .ele-wrapper-fae45550-c6de-4f42-bab5-dcdccb9fdedf {
