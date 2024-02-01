@@ -267,54 +267,6 @@
                               display: 'block',
                               textbottom: '奖品',
                             },
-                            {
-                              bgUrl:
-                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
-                              height1: 'auto',
-                              scoretext: '奖品',
-                              display: 'block',
-                              textbottom: '奖品',
-                            },
-                            {
-                              bgUrl:
-                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
-                              height1: 'auto',
-                              scoretext: '奖品',
-                              display: 'none',
-                              textbottom: '奖品',
-                            },
-                            {
-                              bgUrl:
-                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
-                              height1: 'auto',
-                              scoretext: '奖品',
-                              display: 'none',
-                              textbottom: '奖品',
-                            },
-                            {
-                              bgUrl:
-                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
-                              height1: 'auto',
-                              scoretext: '奖品',
-                              display: 'none',
-                              textbottom: '奖品',
-                            },
-                            {
-                              bgUrl:
-                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
-                              height1: 'auto',
-                              scoretext: '奖品',
-                              display: 'none',
-                              textbottom: '奖品',
-                            },
-                            {
-                              bgUrl:
-                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
-                              height1: 'auto',
-                              scoretext: '奖品',
-                              display: 'none',
-                              textbottom: '奖品',
-                            },
                           ]"
                           background-color="#FFFFFF"
                           class="ele-4a8a51cf-5c83-44d2-8167-c7934ed070f5"
