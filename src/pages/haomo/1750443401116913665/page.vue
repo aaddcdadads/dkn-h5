@@ -503,9 +503,23 @@ export default {
   },
   methods: {
     onCreated() {
-      //手机号
-      this.phone = "321";
-
+      // 从本地缓存中获取userInfo
+      let userInfoString = localStorage.getItem("userInfo");
+      let userInfo = userInfoString && JSON.parse(userInfoString);
+      let userId = userInfo.data.id || "";
+      if (!userId) {
+        uni.showToast({
+          title: "数据获取失败",
+          icon: "error",
+          duration: 1000,
+        });
+        setTimeout(() => {
+          uni.navigateTo({
+            url: "/pages/haomo/1750714119029264386/page",
+          });
+        }, 1500);
+        return;
+      }
       //registrationProjectField userNameField  phoneField storeNameField
       //registrationTimeField activityNameField verificationDeadlineField writeStatusField
       this.registrationProjectField.value;
