@@ -514,9 +514,6 @@ export default {
       writeStatusField: {
         value: "",
       },
-      "9756f966-bc8e-4002-afd1-bf38de80086e": {
-        value: [1],
-      },
       loopList: {
         value: [
           {
@@ -528,6 +525,9 @@ export default {
             text: "sdasdasd",
           },
         ],
+      },
+      "9756f966-bc8e-4002-afd1-bf38de80086e": {
+        value: [1],
       },
       "393dea9e-88aa-48f0-a020-693d27e68fea": {
         value: "item.activityProjectId_dictText",
@@ -601,6 +601,7 @@ export default {
         ) {
           this.buttonwan.disabled = true;
         }
+        //根据订单id查询项目
         this.$getAction("/api/dkn/orderProject/list", {
           pageNo: 1,
           pageSize: 1,
@@ -609,7 +610,7 @@ export default {
           if (orderProjectRes.code != 200 || res.result.records.length <= 0) {
             return;
           }
-          res.result.records;
+          this.loopList.value = res.result.records;
         });
       });
     },
