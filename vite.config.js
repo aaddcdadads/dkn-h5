@@ -96,7 +96,7 @@ export default defineConfig({
     },
     proxy: {
       '/api': {
-        target: 'http://localhost:8083',
+        target: 'http://dkn-h5.dev.haomo-tech.com:8000',
         changeOrigin: true,
       },
       '/project-api/api': {
