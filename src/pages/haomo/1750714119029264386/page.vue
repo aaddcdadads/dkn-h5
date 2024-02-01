@@ -1241,7 +1241,7 @@ export default {
     },
     onElee174C2E6A7994Ccf8Fa92A81Dc515A6FClick() {
       console.log(this.isProtocol.value);
-      let closeTime = new Date(this.activityItem).getTime();
+      let closeTime = new Date(this.activityItem.closeTime).getTime();
       let newDate = new Date().getTime();
       if (closeTime < newDate) {
         uni.showToast({
