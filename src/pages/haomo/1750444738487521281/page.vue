@@ -1109,7 +1109,7 @@ export default {
             image: self.getImg(e.imgPath),
             name: e.name,
             description: e.synopsis,
-            price: e.expense,
+            price: e.free === 0 ? 0 : e.expense,
             number: 0,
           };
         });
