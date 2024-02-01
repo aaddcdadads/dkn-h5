@@ -100,7 +100,6 @@ export default {
       console.log(this.data[e])
     },
     valChange(val, e) {
-      console.log(val, this.data[e])
       let item =this.data[e]
       if (item.multipleOrder===1 && item.number===1 && val ==1) {
         return
