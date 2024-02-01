@@ -246,6 +246,81 @@
                         >
                         </hm-uview-image>
                       </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-4a8a51cf-5c83-44d2-8167-c7934ed070f5"
+                      >
+                        <prize-list-component
+                          :func-list="[
+                            {
+                              bgUrl:
+                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                              height1: 'auto',
+                              scoretext: '奖品',
+                              display: 'block',
+                              textbottom: '奖品',
+                            },
+                            {
+                              bgUrl:
+                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                              height1: 'auto',
+                              scoretext: '奖品',
+                              display: 'block',
+                              textbottom: '奖品',
+                            },
+                            {
+                              bgUrl:
+                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                              height1: 'auto',
+                              scoretext: '奖品',
+                              display: 'block',
+                              textbottom: '奖品',
+                            },
+                            {
+                              bgUrl:
+                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                              height1: 'auto',
+                              scoretext: '奖品',
+                              display: 'none',
+                              textbottom: '奖品',
+                            },
+                            {
+                              bgUrl:
+                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                              height1: 'auto',
+                              scoretext: '奖品',
+                              display: 'none',
+                              textbottom: '奖品',
+                            },
+                            {
+                              bgUrl:
+                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                              height1: 'auto',
+                              scoretext: '奖品',
+                              display: 'none',
+                              textbottom: '奖品',
+                            },
+                            {
+                              bgUrl:
+                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                              height1: 'auto',
+                              scoretext: '奖品',
+                              display: 'none',
+                              textbottom: '奖品',
+                            },
+                            {
+                              bgUrl:
+                                'https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95',
+                              height1: 'auto',
+                              scoretext: '奖品',
+                              display: 'none',
+                              textbottom: '奖品',
+                            },
+                          ]"
+                          background-color="#FFFFFF"
+                          class="ele-4a8a51cf-5c83-44d2-8167-c7934ed070f5"
+                        >
+                        </prize-list-component>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view class="ele-wrapper ele-wrapper-writeOffModal">
@@ -303,6 +378,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
+import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index.vue";
 import HmUviewModal from "/@/components/built-in/uniapp-uview-vue3/HmUviewModal.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
@@ -313,6 +389,7 @@ export default {
     HmUviewText,
     HmUviewField,
     HmUviewImage,
+    PrizeListComponent,
     HmUviewModal,
     HmUviewButton,
   },
@@ -717,6 +794,11 @@ export default {
 
 .ele-wrapper-57f09a13-8f55-4241-a6cc-270dd43ca1ba {
   margin-left: 2px;
+  display: none;
+}
+
+.ele-wrapper-4a8a51cf-5c83-44d2-8167-c7934ed070f5 {
+  width: 50%;
 }
 
 .ele-wrapper-fae45550-c6de-4f42-bab5-dcdccb9fdedf {
