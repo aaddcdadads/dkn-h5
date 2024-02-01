@@ -60,7 +60,8 @@ export default {
             name: "活动名称",
             description: "时代看风使舵丰富的少年疯狂是否达到减肥的步伐简单方便的",
             price: "0.0",
-            number: 0
+            number: 0,
+            
           },
           {
             checked: false,
@@ -99,6 +100,11 @@ export default {
       console.log(this.data[e])
     },
     valChange(val, e) {
+      console.log(val, this.data[e])
+      let item =this.data[e]
+      if (item.multipleOrder===1 && item.number===1 && val ==1) {
+        return
+      }
       let n = this.data[e].number + val;
       this.data[e].number = n > 0 ? n : 0;
       this.$emit("change", n);
