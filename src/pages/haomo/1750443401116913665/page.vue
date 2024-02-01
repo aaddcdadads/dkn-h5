@@ -568,8 +568,9 @@ export default {
       });
     },
     onOnLoad(options) {
-      if (options.orderId) {
-        this.orderId = options.orderId;
+      //活动id
+      if (options.activityId) {
+        this.activityId = options.activityId;
       }
     },
 
