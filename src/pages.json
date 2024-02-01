@@ -22,21 +22,21 @@
       }
     },
     {
-      "path": "pages/haomo/payTest/page",
+      "path": "pages/pay/payTest/page",
       "style": {
           "navigationBarTitleText": "支付测试",
           "enablePullDownRefresh": false
       }
     },
     {
-      "path": "pages/haomo/aliPay/page",
+      "path": "pages/pay/aliPay/page",
       "style": {
           "navigationBarTitleText": "支付宝支付",
           "enablePullDownRefresh": false
       }
     },
     {
-      "path": "pages/haomo/wxPay/page",
+      "path": "pages/pay/wxPay/page",
       "style": {
           "navigationBarTitleText": "微信支付",
           "enablePullDownRefresh": false
