@@ -28,10 +28,24 @@ export default {
     return {};
   },
   watch: {},
+  mounted(e) {
+    this.onMounted(e);
+  },
   onLoad(e) {
     this.onOnLoad(e);
   },
   methods: {
+    onMounted() {
+      setTimeout(() => {
+        uni.redirectTo({
+          url:
+            "/pages/haomo/1751068398554451969/page?activityId=" +
+            this.activityId +
+            "&storeId=" +
+            "2e1dc2b5514216c2e8da190b17577d12",
+        });
+      }, 5000);
+    },
     onOnLoad(options) {
       if (!options.activityId) {
         uni.showToast({
@@ -64,7 +78,7 @@ export default {
         this.$getAction("/api/dkn/store/queryById", {
           id: data,
         }).then((res) => {
-          if (!res.success) {
+          if (res.code != 200) {
             uni.showToast({
               title: "请选择正确的二维码",
               icon: "none",
