@@ -666,17 +666,16 @@
           </view>
         </hm-uview-bg-card>
       </view>
-      <view
-        class="ele-wrapper ele-wrapper-65772eb5-e8bf-4abf-a411-9da6e48ab534"
-      >
+      <view class="ele-wrapper ele-wrapper-notActivity">
         <hm-uview-bg-card
+          ref="notActivity"
           width="100%"
           height="100%"
           border-radius="0"
           padding="0"
           box-shadow-color="#00000000"
           background-color="#FFE8EC"
-          class="ele-65772eb5-e8bf-4abf-a411-9da6e48ab534"
+          class="ele-notActivity"
         >
           <view
             class="ele-wrapper ele-wrapper-65e518bc-9c0c-4a0a-9379-8bee452aa38f"
@@ -1647,7 +1646,7 @@ export default {
   text-align: center;
 }
 
-.ele-wrapper-65772eb5-e8bf-4abf-a411-9da6e48ab534 {
+.ele-wrapper-notActivity {
   width: 100%;
   position: relative;
   height: calc(100vh - 120px);
