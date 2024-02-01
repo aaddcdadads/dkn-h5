@@ -412,13 +412,13 @@ export default {
           uni.showToast({
             title: "请重新查看活动信息",
             icon: "error",
-            duration: 2000,
+            duration: 1000,
           });
           setTimeout(() => {
             uni.navigateTo({
               url: "/pages/haomo/1750714119029264386/page",
             });
-          }, 2500);
+          }, 1500);
           return;
         }
         this.registrationOrdersData = res.result.records[0];
@@ -433,17 +433,19 @@ export default {
         id: this.storeId,
       }).then((res) => {
         console.log("res--", res);
-        if (!res.success || res.result.records.length <= 0) {
+        if (res.code != 200 || res.result.records.length <= 0) {
           uni.showToast({
             title: "请重新扫码",
             icon: "error",
-            duration: 2000,
+            duration: 1000,
           });
           setTimeout(() => {
             uni.navigateTo({
-              url: "/pages/haomo/1750443401116913665/page",
+              url:
+                "/pages/haomo/1752649989210771458/page?activityId=" +
+                this.activityId,
             });
-          }, 2500);
+          }, 1500);
           return;
         }
         let item = res.result.records[0];
@@ -481,21 +483,23 @@ export default {
           uni.showToast({
             title: "核销失败",
             icon: "error",
-            duration: 2000,
+            duration: 1000,
           });
           return;
+        } else {
+          uni.showToast({
+            title: "核销成功",
+            icon: "success",
+            duration: 1000,
+          });
         }
-        uni.showToast({
-          title: "核销成功",
-          icon: "success",
-          duration: 2000,
-        });
         setTimeout(() => {
           uni.navigateTo({
             url:
-              "/pages/haomo/1750443401116913665/page?orderId=" + this.orderId,
+              "/pages/haomo/1750443401116913665/page?activityId=" +
+              this.activityId,
           });
-        }, 2500);
+        }, 1500);
       });
     },
     onButtonwanClick() {
