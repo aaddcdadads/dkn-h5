@@ -723,21 +723,6 @@ export default {
   height: 45px;
   margin-right: 10%;
   display: none;
-  /deep/.u-border-bottom {
-    display: flex;
-    align-items: center;
-    height: 45px;
-  }
-  /deep/.input-placeholder {
-    font-size: 13px;
-  }
-  /deep/.ele-registrationProjectField {
-    background: rgb(240, 240, 240);
-    border-radius: 5px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-  }
 }
 
 .ele-wrapper-loopList {
