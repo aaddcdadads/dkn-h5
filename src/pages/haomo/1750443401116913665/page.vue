@@ -604,7 +604,8 @@ export default {
     },
     onButtonwanClick() {
       uni.navigateTo({
-        url: "/pages/haomo/1752649989210771458/page?orderId=" + this.orderId,
+        url:
+          "/pages/haomo/1752649989210771458/page?activityId=" + this.activityId,
       });
     },
   },
