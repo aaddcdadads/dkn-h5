@@ -545,7 +545,7 @@ export default {
         ...params,
       }).then((res) => {
         console.log("res--", res);
-        if (!res.success || res.result.records.length <= 0) {
+        if (res.success != 200 || res.result.records.length <= 0) {
           uni.showToast({
             title: "请重新查看活动信息",
             icon: "error",
