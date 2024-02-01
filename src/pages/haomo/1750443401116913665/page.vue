@@ -747,6 +747,11 @@ export default {
   margin-right: 10%;
   margin-top: 10px;
   background: rgb(240, 240, 240);
+  border-radius: 5px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;
