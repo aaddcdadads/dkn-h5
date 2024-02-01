@@ -506,7 +506,7 @@ export default {
       console.log("created");
       // 从本地缓存中获取userInfo
       let userInfoString = localStorage.getItem("userInfo");
-      let userInfo = userInfoString && JSON.parse(userInfoString);
+      let userInfo = JSON.parse(userInfoString);
       this.userId = userInfo.data.id || "";
       if (!this.userId) {
         uni.showToast({
