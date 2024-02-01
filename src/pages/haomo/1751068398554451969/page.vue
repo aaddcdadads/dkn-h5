@@ -222,7 +222,6 @@
                     <hm-uview-bg-card
                       width="100%"
                       height="100%"
-                      :text-align="'center'"
                       padding=""
                       box-shadow-v-shadow=""
                       box-shadow-blur=""
@@ -232,9 +231,9 @@
                         class="ele-wrapper ele-wrapper-26f8e5b0-a98e-4879-9f6f-3f8f3819a511"
                       >
                         <hm-uview-text
-                          padding="0"
-                          font-size="13px"
                           text="活动奖品:"
+                          font-size="13px"
+                          padding="0"
                           class="ele-26f8e5b0-a98e-4879-9f6f-3f8f3819a511"
                         >
                         </hm-uview-text>
@@ -732,6 +731,7 @@ export default {
 
 .ele-wrapper-3c257881-12ab-454b-ad6d-bc7e8465525e {
   width: 80%;
+  margin: auto;
 }
 
 .ele-wrapper-fae45550-c6de-4f42-bab5-dcdccb9fdedf {
