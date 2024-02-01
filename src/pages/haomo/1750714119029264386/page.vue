@@ -673,6 +673,7 @@
           :width="notActivity.width"
           :height="notActivity.height"
           :border-radius="notActivity.borderRadius"
+          :text-align="notActivity.textAlign"
           :padding="notActivity.padding"
           :box-shadow-color="notActivity.boxShadowColor"
           :background-color="notActivity.backgroundColor"
@@ -903,9 +904,10 @@ export default {
         width: "100%",
         height: "100%",
         borderRadius: "0",
+        textAlign: "center",
         padding: "0",
         boxShadowColor: "#00000000",
-        backgroundColor: "#FFE8EC",
+        backgroundColor: "#FFFFFF",
       },
       activityProjectItem: {},
       activityExtItem: {},
