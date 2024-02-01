@@ -122,11 +122,10 @@
                               >
                                 <template #default="{ item }">
                                   <view
-                                    class="ele-wrapper ele-wrapper-loopField"
+                                    class="ele-wrapper ele-wrapper-393dea9e-88aa-48f0-a020-693d27e68fea"
                                   >
                                     <loop-field
-                                      ref="loopField"
-                                      v-model:value="loopField.value"
+                                      :value="item.activityProjectId_dictText"
                                       label=""
                                       placeholder="报名项目名称 x 数量"
                                       label-width="0"
@@ -134,7 +133,7 @@
                                       right-icon=""
                                       :border-bottom="false"
                                       :disabled="true"
-                                      class="ele-loopField"
+                                      class="ele-393dea9e-88aa-48f0-a020-693d27e68fea"
                                     >
                                     </loop-field>
                                   </view>
@@ -530,8 +529,8 @@ export default {
           },
         ],
       },
-      loopField: {
-        value: "item.name",
+      "393dea9e-88aa-48f0-a020-693d27e68fea": {
+        value: "item.activityProjectId_dictText",
       },
     };
   },
@@ -752,7 +751,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-loopField {
+.ele-wrapper-393dea9e-88aa-48f0-a020-693d27e68fea {
   width: 100%;
   height: 45px;
   margin-right: 10%;
