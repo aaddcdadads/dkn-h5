@@ -504,23 +504,7 @@ export default {
   methods: {
     onCreated() {
       console.log("created");
-      // 从本地缓存中获取userInfo
-      let userInfoString = localStorage.getItem("userInfo");
-      let userInfo = JSON.parse(userInfoString);
-      this.userId = userInfo.data.id || "";
-      if (!this.userId) {
-        uni.showToast({
-          title: "数据获取失败",
-          icon: "error",
-          duration: 1000,
-        });
-        setTimeout(() => {
-          uni.navigateTo({
-            url: "/pages/haomo/1750714119029264386/page",
-          });
-        }, 1500);
-        return;
-      }
+
       //registrationProjectField userNameField  phoneField storeNameField
       //registrationTimeField activityNameField verificationDeadlineField writeStatusField
       this.registrationProjectField.value;
@@ -593,6 +577,26 @@ export default {
         return;
       }
       this.activityId = options.activityId;
+
+      // 从本地缓存中获取userInfo
+      let userInfoString = localStorage.getItem("userInfo");
+      let userInfo = JSON.parse(userInfoString);
+      this.userId = userInfo.data.id || "";
+      if (!this.userId) {
+        uni.showToast({
+          title: "数据获取失败",
+          icon: "error",
+          duration: 1000,
+        });
+        setTimeout(() => {
+          uni.navigateTo({
+            url:
+              "/pages/haomo/1750714119029264386/page?activityId=" +
+              this.activityId,
+          });
+        }, 1500);
+        return;
+      }
     },
 
     onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
