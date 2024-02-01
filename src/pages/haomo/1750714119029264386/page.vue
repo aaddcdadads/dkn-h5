@@ -1079,7 +1079,9 @@ export default {
           };
         });
         imgOne = imgTwo.sort((a, b) => a.sortNo - b.sortNo);
-        self.logoImg.src = self.getImg(imgOne[0].path);
+        if (imgOne.length > 0) {
+          self.logoImg.src = self.getImg(imgOne[0].path);
+        }
         self.listCompanent.funcList = imgOne.map((x) => {
           return {
             bgUrl: self.getImg(x.path),
