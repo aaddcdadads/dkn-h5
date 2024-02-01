@@ -246,6 +246,11 @@
                         >
                         </hm-uview-image>
                       </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-3c257881-12ab-454b-ad6d-bc7e8465525e"
+                      >
+                        <prize-list-component> </prize-list-component>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                   <view class="ele-wrapper ele-wrapper-writeOffModal">
@@ -303,6 +308,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
+import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index.vue";
 import HmUviewModal from "/@/components/built-in/uniapp-uview-vue3/HmUviewModal.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
@@ -313,6 +319,7 @@ export default {
     HmUviewText,
     HmUviewField,
     HmUviewImage,
+    PrizeListComponent,
     HmUviewModal,
     HmUviewButton,
   },
