@@ -678,6 +678,11 @@
           background-color="#FFE8EC"
           class="ele-65772eb5-e8bf-4abf-a411-9da6e48ab534"
         >
+          <view
+            class="ele-wrapper ele-wrapper-65e518bc-9c0c-4a0a-9379-8bee452aa38f"
+          >
+            <hm-uview-text> </hm-uview-text>
+          </view>
         </hm-uview-bg-card>
       </view>
     </view>
