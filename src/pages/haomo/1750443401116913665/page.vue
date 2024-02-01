@@ -114,6 +114,22 @@
                               >
                               </hm-uview-field>
                             </view>
+                            <view
+                              class="ele-wrapper ele-wrapper-02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759"
+                            >
+                              <hm-loop
+                                :value="[{}, {}]"
+                                class="ele-02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759"
+                              >
+                                <template #default="{ item }">
+                                  <view
+                                    class="ele-wrapper ele-wrapper-e7b06b2d-cd97-4cbf-a0be-a8c40f4122a5"
+                                  >
+                                    <hm-uview-field value=""> </hm-uview-field>
+                                  </view>
+                                </template>
+                              </hm-loop>
+                            </view>
                           </template>
                         </hm-loop>
                       </view>
@@ -489,6 +505,12 @@ export default {
       "9756f966-bc8e-4002-afd1-bf38de80086e": {
         value: [1],
       },
+      "02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759": {
+        value: [{}, {}],
+      },
+      "e7b06b2d-cd97-4cbf-a0be-a8c40f4122a5": {
+        value: "",
+      },
     };
   },
   watch: {},
@@ -692,6 +714,10 @@ export default {
     display: flex;
     align-items: center;
   }
+}
+
+.ele-wrapper-02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759 {
+  width: 100%;
 }
 
 .ele-wrapper-e7bdbfea-5564-4643-a5fe-7f5406777598 {
