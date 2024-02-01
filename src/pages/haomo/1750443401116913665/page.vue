@@ -118,7 +118,10 @@
                               class="ele-wrapper ele-wrapper-02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759"
                             >
                               <hm-loop
-                                :value="[{ text: 'ASDASD' }, {}]"
+                                :value="[
+                                  { text: 'ASDASD' },
+                                  { text: 'sdasdasd' },
+                                ]"
                                 class="ele-02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759"
                               >
                                 <template #default="{ item }">
@@ -525,7 +528,9 @@ export default {
           {
             text: "ASDASD",
           },
-          {},
+          {
+            text: "sdasdasd",
+          },
         ],
       },
       loopField: {
