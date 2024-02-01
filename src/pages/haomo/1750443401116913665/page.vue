@@ -745,6 +745,8 @@ export default {
   width: 100%;
   height: 45px;
   margin-right: 10%;
+  margin-top: 10px;
+  background: rgb(240, 240, 240);
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;
