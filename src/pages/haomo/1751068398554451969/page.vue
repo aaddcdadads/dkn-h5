@@ -192,9 +192,9 @@
                         class="ele-wrapper ele-wrapper-2ecc38bd-15e4-4ee4-9c5f-50b3b6d0846c"
                       >
                         <hm-uview-text
-                          padding="0"
-                          font-size="13px"
                           text="活动名称:"
+                          font-size="13px"
+                          padding="0"
                           class="ele-2ecc38bd-15e4-4ee4-9c5f-50b3b6d0846c"
                         >
                         </hm-uview-text>
@@ -712,7 +712,7 @@ export default {
 .ele-wrapper-26f8e5b0-a98e-4879-9f6f-3f8f3819a511 {
   padding: 13px 7px;
   vertical-align: top;
-  margin-left: 10px;
+  margin-left: 33px;
 }
 
 .ele-wrapper-57f09a13-8f55-4241-a6cc-270dd43ca1ba {
