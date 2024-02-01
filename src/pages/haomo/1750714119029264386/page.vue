@@ -606,16 +606,15 @@
           </view>
         </hm-uview-bg-card>
       </view>
-      <view
-        class="ele-wrapper ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611"
-      >
+      <view class="ele-wrapper ele-wrapper-addOrderCard">
         <hm-uview-bg-card
+          ref="addOrderCard"
           width="100%"
           height=""
           border-radius="0"
           padding="12"
           box-shadow-color="#00000000"
-          class="ele-2136b833-7f0e-4a8a-a081-36d9e275f611"
+          class="ele-addOrderCard"
         >
           <view class="ele-wrapper ele-wrapper-isProtocol">
             <hm-uview-radio
@@ -1602,7 +1601,7 @@ export default {
   }
 }
 
-.ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611 {
+.ele-wrapper-addOrderCard {
   width: 100%;
   position: fixed;
   bottom: 0px;
