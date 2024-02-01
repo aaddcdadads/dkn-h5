@@ -488,7 +488,7 @@ export default {
       this.$getAction("/api/dkn/activityImg/list", {
         pageNo: 1,
         pageSize: -1,
-        id: this.activityId,
+        activityId: this.activityId,
       }).then((res) => {
         console.log("res--", res);
         if (res.code != 200 || res.result.records.length <= 0) return;
