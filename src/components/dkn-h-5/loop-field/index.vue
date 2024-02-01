@@ -1,7 +1,7 @@
 <template>
   <view :class="{ uField: borderColor }" v-show="cShow">
     <u-field
-      v-model="cValue"
+      :value="cValue"
       :label="label"
       :label-width="labelWidth"
       :label-align="labelAlign"
