@@ -522,9 +522,11 @@ export default {
       loopList: {
         value: [
           {
+            id: 1,
             text: "ASDASD",
           },
           {
+            id: 2,
             text: "sdasdasd",
           },
         ],
