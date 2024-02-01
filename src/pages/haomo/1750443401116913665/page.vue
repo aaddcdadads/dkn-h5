@@ -114,15 +114,11 @@
                               >
                               </hm-uview-field>
                             </view>
-                            <view
-                              class="ele-wrapper ele-wrapper-02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759"
-                            >
+                            <view class="ele-wrapper ele-wrapper-loopList">
                               <hm-loop
-                                :value="[
-                                  { text: 'ASDASD' },
-                                  { text: 'sdasdasd' },
-                                ]"
-                                class="ele-02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759"
+                                ref="loopList"
+                                v-model:value="loopList.value"
+                                class="ele-loopList"
                               >
                                 <template #default="{ item }">
                                   <view
@@ -523,7 +519,7 @@ export default {
       "9756f966-bc8e-4002-afd1-bf38de80086e": {
         value: [1],
       },
-      "02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759": {
+      loopList: {
         value: [
           {
             text: "ASDASD",
@@ -742,7 +738,7 @@ export default {
   }
 }
 
-.ele-wrapper-02bb6fe1-b0e2-4aa6-8e0e-e77f924f3759 {
+.ele-wrapper-loopList {
   width: 100%;
 }
 
