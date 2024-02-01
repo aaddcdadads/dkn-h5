@@ -125,7 +125,7 @@
                                     class="ele-wrapper ele-wrapper-bfcac686-dac4-4bff-ad88-77ecdf9f947e"
                                   >
                                     <loop-field
-                                      value=""
+                                      :value="item.text"
                                       label=""
                                       placeholder="报名项目名称 x 数量"
                                       label-width="0"
@@ -530,7 +530,7 @@ export default {
         ],
       },
       "bfcac686-dac4-4bff-ad88-77ecdf9f947e": {
-        value: "",
+        value: "item.text",
       },
     };
   },
