@@ -1144,7 +1144,7 @@ export default {
         setTimeout(() => {
           let money = 0;
           self.eventCard.list.forEach((e) => {
-            if (e.checked && e.free === 0) {
+            if (e.checked && e.free !== 0) {
               let expense = e.expense * e.number;
               money += expense;
             }
