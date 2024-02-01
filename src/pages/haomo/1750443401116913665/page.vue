@@ -595,7 +595,7 @@ export default {
         //根据订单id查询项目
         this.$getAction("/api/dkn/orderProject/list", {
           pageNo: 1,
-          pageSize: 1,
+          pageSize: -1,
           orderId: item.id,
         }).then((orderProjectRes) => {
           if (orderProjectRes.code != 200 || res.result.records.length <= 0) {
