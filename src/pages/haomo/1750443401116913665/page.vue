@@ -382,7 +382,7 @@
                       >
                         <hm-uview-text
                           text="核销状态:"
-                          font-size="13px"
+                          font-size="12px"
                           padding="0"
                           class="ele-fba91c42-55e1-404b-97e8-0d6ca8b53ff5"
                         >
@@ -422,6 +422,7 @@
               <view class="ele-wrapper ele-wrapper-buttonwan">
                 <hm-uview-button
                   ref="buttonwan"
+                  :disabled="buttonwan.disabled"
                   :text="buttonwan.text"
                   @click="onButtonwanClick"
                   class="ele-buttonwan"
@@ -459,6 +460,7 @@ export default {
     return {
       buttonwan: {
         text: "核销",
+        disabled: false,
       },
       registrationProjectField: {
         value: "",
@@ -496,6 +498,9 @@ export default {
   mounted(e) {
     this.onMounted(e);
   },
+  onLoad(e) {
+    this.onOnLoad(e);
+  },
   methods: {
     onCreated() {
       //手机号
@@ -513,17 +518,20 @@ export default {
       this.activityNameField.value;
       this.verificationDeadlineField.value;
       this.writeStatusField.value;
+      this.buttonwan.disabled;
     },
     onMounted() {
-      this.phone;
-      //活动id
-      this.activityId;
-
+      let params = {};
+      if (this.orderId) {
+        params.id = this.orderId;
+      } else {
+        params.phone = this.phone;
+        params.activityId = this.activityId;
+      }
       this.$getAction("/api/dkn/viewRegistrationOrders/list", {
         pageNo: 1,
         pageSize: 1,
-        phone: this.phone,
-        activityId: this.activityId,
+        ...params,
       }).then((res) => {
         console.log("res--", res);
         if (!res.success || res.result.records.length <= 0) {
@@ -542,7 +550,7 @@ export default {
         let item = res.result.records[0];
         //保存订单id
         this.orderId = item.id;
-        this.registrationProjectField.value = item.activityId_dictText ?? "";
+        this.registrationProjectField.value = item.acName ?? "";
         this.userNameField.value = item.realname ?? "";
         this.phoneField.value = item.phone ?? "";
         this.storeNameField.value = item.originalPickUpName ?? "";
@@ -550,7 +558,19 @@ export default {
         this.activityNameField.value = item.acName ?? "";
         this.verificationDeadlineField.value = item.acPickUpTime ?? "";
         this.writeStatusField.value = item.pickUpStatusText ?? "";
+        //如果已核销或者已经过了截止时间
+        if (
+          item.pickUpStatus == 0 ||
+          (item.acPickUpTime && new Date() > new Date(item.acPickUpTime))
+        ) {
+          this.buttonwan.disabled = true;
+        }
       });
+    },
+    onOnLoad(options) {
+      if (options.orderId) {
+        this.orderId = options.orderId;
+      }
     },
 
     onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
@@ -559,13 +579,8 @@ export default {
       });
     },
     onButtonwanClick() {
-      this.storeId = "ff8080818d5d6fdb018d5d7725c50001";
       uni.navigateTo({
-        url:
-          "/pages/haomo/1751068398554451969/page?orderId=" +
-          this.orderId +
-          "&storeId=" +
-          this.storeId,
+        url: "/pages/haomo/1752649989210771458/page?orderId=" + this.orderId,
       });
     },
   },
@@ -637,7 +652,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField1 {
+  /deep/.ele-registrationProjectField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -670,7 +685,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField2 {
+  /deep/.ele-userNameField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -703,7 +718,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField3 {
+  /deep/.ele-phoneField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -736,7 +751,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField4 {
+  /deep/.ele-storeNameField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -769,7 +784,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField5 {
+  /deep/.ele-registrationTimeField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -802,7 +817,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField6 {
+  /deep/.ele-activityNameField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -835,7 +850,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField7 {
+  /deep/.ele-verificationDeadlineField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;
@@ -871,7 +886,7 @@ export default {
   /deep/.input-placeholder {
     font-size: 13px;
   }
-  /deep/.ele-HmUviewField8 {
+  /deep/.ele-writeStatusField {
     background: rgb(240, 240, 240);
     border-radius: 5px;
     height: 45px;

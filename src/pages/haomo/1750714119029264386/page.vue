@@ -5,7 +5,7 @@
         <hm-uview-bg-card
           ref="outsideBg"
           width="100%"
-          height=""
+          height="100%"
           border-radius="0"
           padding="0"
           box-shadow-color="#00000000"
@@ -81,16 +81,15 @@
               </view>
             </hm-uview-bg-card>
           </view>
-          <view
-            class="ele-wrapper ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"
-          >
+          <view class="ele-wrapper ele-wrapper-containerBg">
             <hm-uview-bg-card
+              ref="containerBg"
               width="100%"
               height=""
               border-radius="0"
               padding="0"
               box-shadow-color="#00000000"
-              class="ele-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2"
+              class="ele-containerBg"
             >
               <view class="ele-wrapper ele-wrapper-colourCard">
                 <hm-uview-bg-card
@@ -349,47 +348,11 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550"
-                  >
-                    <hm-uview-bg-card
-                      padding="12"
-                      border-radius="12"
-                      background-color="#F797BD"
-                      width="100%"
-                      height=""
-                      class="ele-9bb5842b-b006-40fa-a5a0-9c71da20a550"
-                    >
-                      <view
-                        class="ele-wrapper ele-wrapper-5ffca98b-a826-46e6-a408-cf1165d243d2"
-                      >
-                        <hm-cell-list
-                          :is-border="false"
-                          width="100%"
-                          :list="[
-                            {
-                              date: '+ 加入',
-                              image:
-                                'https://img2.baidu.com/it/u=3886895525,3764775842&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
-                              descrip: '65484成员',
-                              id: '1',
-                              title: 'Keep 三丽鸥家族',
-                            },
-                          ]"
-                          bg-color="#FFFFFF00"
-                          height="60"
-                          class="ele-5ffca98b-a826-46e6-a408-cf1165d243d2"
-                        >
-                        </hm-cell-list>
-                      </view>
-                    </hm-uview-bg-card>
-                  </view>
                 </hm-uview-bg-card>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-42a6a6e4-49e7-4fe8-95f2-c7e9fdda0729"
-              >
+              <view class="ele-wrapper ele-wrapper-phoneBg">
                 <hm-uview-bg-card
+                  ref="phoneBg"
                   width="100%"
                   height=""
                   border-radius="0"
@@ -398,7 +361,7 @@
                   box-shadow-blur="0"
                   box-shadow-color="#00000000"
                   background-color="#FFFFFF"
-                  class="ele-42a6a6e4-49e7-4fe8-95f2-c7e9fdda0729"
+                  class="ele-phoneBg"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-f16cae12-ff6f-4d64-ac60-014a613da044"
@@ -715,7 +678,6 @@ import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import ActivityList from "/@/components/dkn-h-5/activity-list/index.vue";
 import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index.vue";
-import HmCellList from "/@/components/built-in/uniapp/HmCellList.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import HmRichText from "/@/components/built-in/uniapp/HmRichText.vue";
 import HmUviewParse from "/@/components/built-in/uniapp-uview-vue3/HmUviewParse.vue";
@@ -732,7 +694,6 @@ export default {
     HmUviewText,
     ActivityList,
     PrizeListComponent,
-    HmCellList,
     HmUviewPopup,
     HmRichText,
     HmUviewParse,
@@ -1250,7 +1211,9 @@ export default {
 .ele-wrapper-outsideBg {
   width: 100%;
   position: relative;
-  padding-bottom: 344rpx;
+  height: calc(100vh - 120px);
+  overflow-y: scroll;
+  width: 100%;
 }
 
 .ele-wrapper-topBg {
@@ -1288,10 +1251,15 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-2bcd93f6-265c-4f8d-83ec-744c2f6d40e2 {
+.ele-wrapper-containerBg {
   width: 100%;
+  margin-top: 400px;
+  z-index: 1000;
+  /deep/.ele-containerBg {
+    background: transparent;
+  }
+
   position: absolute;
-  top: 400px;
 }
 
 .ele-wrapper-colourCard {
@@ -1431,35 +1399,8 @@ export default {
   }
 }
 
-.ele-wrapper-9bb5842b-b006-40fa-a5a0-9c71da20a550 {
+.ele-wrapper-phoneBg {
   width: 100%;
-  margin-top: 24rpx;
-  display: none;
-}
-
-.ele-wrapper-5ffca98b-a826-46e6-a408-cf1165d243d2 {
-  width: 100%;
-  /deep/.left_title {
-    color: #fff;
-  }
-  /deep/.left_descrip {
-    color: hsla(0, 0%, 100%, 0.6) !important;
-  }
-  /deep/.left_date {
-    color: #fff !important;
-    border-radius: 1.435897435897436rem;
-    font-size: 12px;
-    padding: 4px 12px;
-    border: 1px solid hsla(0, 0%, 100%, 0.6);
-  }
-  /deep/.right_bg {
-    padding-top: 24px;
-  }
-}
-
-.ele-wrapper-42a6a6e4-49e7-4fe8-95f2-c7e9fdda0729 {
-  width: 100%;
-  margin-bottom: 24rpx;
 }
 
 .ele-wrapper-f16cae12-ff6f-4d64-ac60-014a613da044 {
@@ -1468,7 +1409,7 @@ export default {
   text-align: center;
   background: rgba(0, 0, 0, 0.16);
   padding: 10rpx 10rpx;
-  margin: 24rpx 24rpx;
+  margin: 24rpx 24rpx 0 24rpx;
 }
 
 .ele-wrapper-regularPopup {
@@ -1476,7 +1417,6 @@ export default {
     margin-left: 4%;
     width: 92% !important;
   }
-  display: none;
 }
 
 .ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2 {
@@ -1494,7 +1434,6 @@ export default {
   /deep/.u-mode-center-box {
     border-radius: 8px;
   }
-  display: none;
 }
 
 .ele-wrapper-ea66b462-b5ce-4b41-8870-bb482768fef8 {
@@ -1605,7 +1544,6 @@ export default {
   /deep/.u-mode-center-box {
     border-radius: 8px;
   }
-  display: none;
 }
 
 .ele-wrapper-22dc02bc-b7b8-4d6b-83d6-6ee319d12809 {
