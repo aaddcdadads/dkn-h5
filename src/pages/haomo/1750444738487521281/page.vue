@@ -57,6 +57,7 @@
               width="100%"
               height="100%"
               border-radius=""
+              padding="18"
               box-shadow-v-shadow=""
               box-shadow-blur=""
               background-color="#F8F8F8"
