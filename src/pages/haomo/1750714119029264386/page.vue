@@ -587,6 +587,7 @@
                           ref="canelButton"
                           :type="canelButton.type"
                           :text="canelButton.text"
+                          @click="onCanelButtonClick"
                           class="ele-canelButton"
                         >
                         </hm-uview-button>
@@ -1236,6 +1237,9 @@ export default {
     },
     onSure1ButtonClick() {
       this.login();
+    },
+    onCanelButtonClick() {
+      this.phonePopup.show = false;
     },
     onSureButtonClick() {
       console.log(1);
