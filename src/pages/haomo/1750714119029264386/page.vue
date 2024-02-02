@@ -595,6 +595,7 @@
                           ref="sureButton"
                           :type="sureButton.type"
                           :text="sureButton.text"
+                          @click="onSureButtonClick"
                           class="ele-sureButton"
                         >
                         </hm-uview-button>
@@ -924,7 +925,7 @@ export default {
       },
       sure1Button: {
         type: "info",
-        text: "拨打",
+        text: "登陆",
       },
       canelButton: {
         type: "info",
@@ -932,7 +933,7 @@ export default {
       },
       sureButton: {
         type: "info",
-        text: "确认",
+        text: "`",
       },
     };
   },
@@ -1233,6 +1234,9 @@ export default {
     },
     onSure1ButtonClick() {
       this.login();
+    },
+    onSureButtonClick() {
+      console.log(1);
     },
     onEle7A55D0C995Ac4729Befd31F60Ecf4707OnClick() {
       uni.$u.route(
