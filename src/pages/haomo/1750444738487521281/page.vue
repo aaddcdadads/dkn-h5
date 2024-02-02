@@ -1389,8 +1389,6 @@ export default {
 }
 
 .ele-wrapper-9fb51c90-145e-4b04-a74d-99794d96d8b3 {
-  font-family: "PingFangSC-Semibold", "PingFang SC Semibold", "PingFang SC",
-    sans-serif;
   font-size: 16px;
   color: #333333;
   line-height: 20px;
