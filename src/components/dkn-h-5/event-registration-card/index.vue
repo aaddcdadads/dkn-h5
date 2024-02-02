@@ -182,10 +182,12 @@ export default {
 .texts {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   flex: 1;
   height: 100%;
   margin-left: 8px;
   margin-top: 6px;
+  padding: 5px;
 }
 
 .name {
@@ -223,7 +225,7 @@ export default {
   display: flex;
   align-items: center;
   border-radius: 6px;
-  height: 108px;
+  height: 125px;
   width: 100%;
   padding-right: 5px;
   margin-bottom: 8px;
@@ -238,6 +240,7 @@ export default {
 }
 
 .activity {
+  height: 27px;
   display: flex;
   align-items: center;
   justify-content: space-between;
