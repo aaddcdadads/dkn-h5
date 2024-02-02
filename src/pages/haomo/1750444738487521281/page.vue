@@ -128,6 +128,7 @@
               >
                 <hm-uview-text
                   text="选择门店"
+                  font-size="16px"
                   class="ele-9fb51c90-145e-4b04-a74d-99794d96d8b3"
                 >
                 </hm-uview-text>
