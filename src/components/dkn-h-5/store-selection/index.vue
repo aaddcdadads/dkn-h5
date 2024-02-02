@@ -49,7 +49,7 @@ export default {
                 shop: [
                   {
                     name: "柳叶店",
-                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼常德市武陵区柳叶大道与皂果交汇处万达广场一楼常德市武陵区柳叶大道与皂果交汇处万达广场一楼常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
                   },
                 ]
               },
@@ -611,7 +611,9 @@ export default {
 }
 
 .shopItem {
+  padding-top: 5px;
   margin-top: 10px;
+  border-top: 0.5px solid #FFDEDEDE;
 }
 
 .name {
@@ -627,12 +629,19 @@ export default {
 }
 
 .anchors {
-  color: #999999;
   text-decoration: none;
-  font-family: 'ArialMT', 'Arial', sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
+}
+.itembox:active{
+  background: #2979FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  margin: 2px 0;
+  border-radius:50%;
 }
 
 .anchorBox {
@@ -648,8 +657,8 @@ export default {
 }
 
 .itembox {
-  background-color: #f2f2f2;
-  padding: 5px 3px;
+  margin: 2px 0;
+  padding: 3px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -660,6 +669,6 @@ export default {
 .store_list {
   margin-top: 10px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #f8f9f9;
+  border-bottom: 0.5px solid #FFDEDEDE;
 }
 </style>
