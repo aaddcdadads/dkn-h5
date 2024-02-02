@@ -1225,7 +1225,7 @@ export default {
           title: "报名成功",
           duration: 2000,
         });
-        if (self.money) {
+        if (!self.money) {
           self.login();
           return;
         }
