@@ -1347,6 +1347,7 @@ export default {
   .ele-wrapper-eventCard {
     width: 100%;
   }
+  margin-top: 22px;
 }
 
 .ele-wrapper-a9b61974-4b4c-4f4b-bf36-c799e54a8505 {
