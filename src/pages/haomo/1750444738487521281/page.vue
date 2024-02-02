@@ -60,7 +60,7 @@
               padding="18"
               box-shadow-v-shadow=""
               box-shadow-blur=""
-              background-color="#F8F8F8"
+              background-color="#FFFFFF"
               class="ele-74c8c2c3-d387-4029-8b68-8275204c2ed5"
             >
               <view class="ele-wrapper ele-wrapper-eventCard">
