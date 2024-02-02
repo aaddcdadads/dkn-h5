@@ -23,7 +23,7 @@ function() {
                 image: self.getImg(e.imgPath),
                 name: e.name,
                 description: e.synopsis,
-                price: e.expense,
+                price: e.free === 0 ? 0 : e.expense,
                 number: 0
             }
         })
@@ -59,7 +59,7 @@ function() {
         setTimeout(() => {
             let money = 0;
             self.eventCard.list.forEach((e) => {
-                if (e.checked) {
+                if (e.checked && e.free !== 0) {
                     let expense = e.expense * e.number;
                     money += expense;
                 }
@@ -74,8 +74,7 @@ function() {
             self.error("姓名/昵称不能为空")
             return
         }
-        if (!self.phoneInput.value) {
-            self.error("手机号不能为空")
+        if (!self.checkPhone()) {
             return
         }
         if (!self.smscodeIpnut.value) {
@@ -93,7 +92,6 @@ function() {
             self.error("请至少选择一个活动项目")
             return
         }
-       
         self.addOrder();
     }
     self.addOrder = async function () {
@@ -116,12 +114,22 @@ function() {
         }
         const res = await self.$postAction(url, params)
         if (!res.success) {
-            uni.showToast({
-                icon: "error",
-                position: "top",
-                title: res.message,
-                duration: 2000,
-            });
+            if (res.message === '当前活动已经报名！') {
+                if (res.result.paymentStatus === 1) {
+                    self.error('当前活动已经报名未支付')
+                    self.payPopup.show = true;
+                    self.activityText.text = self.activityName
+                    self.countdown.text = ""
+                    self.prices.text = `¥ ${res.result.money}`
+                    self.orderId = res.result.money
+                } else {
+                    self.error(res.message)
+                    self.login()
+                    return
+                }
+            } else {
+                self.error(res.message)
+            }
             return
         }
         uni.showToast({
@@ -130,11 +138,32 @@ function() {
             title: "报名成功",
             duration: 2000,
         });
+        if (!self.money) {
+            self.login()
+            return
+        }
         self.payPopup.show = true;
         self.activityText.text = self.activityName
         self.countdown.text = ""
         self.prices.text = `¥ ${self.money}`
         self.orderId = res.message
+    }
+    //登录验证
+    self.login = async function () {
+        let url = '/api/sys/phoneLogin'
+        let params = {
+            mobile: self.phoneInput.value,
+            captcha: self.smscodeIpnut.value
+        }
+        const res = await self.$postAction(url, params)
+        if (!res.success) {
+            return
+        }
+        uni.setStorageSync("token", res.result.token)
+        uni.setStorageSync("userInfo", res.result.userInfo)
+        uni.$u.route(
+            `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+        );
     }
     self.getOrderProjects = function () {
         let list = []
@@ -204,10 +233,11 @@ function() {
         if (!self.orderId) {
             return
         }
-        let channel = 0
-        if (self.weixinRadio.value === 1) {
-            channel = 1
+        let channel = '0';
+        if (self.weixinRadio.value === '1') {
+            channel = '1';
         }
         self.$pay(self.orderId, channel)
     }
+
 }

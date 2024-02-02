@@ -27,7 +27,7 @@ import loadComponent from './loadComponent';
 // #endif
 
 import mqttTool from "./libs/mqttTool";
-
+// import { Linking } from 'react-native';
 /**
  * 注册设计云相关的组件
  */
