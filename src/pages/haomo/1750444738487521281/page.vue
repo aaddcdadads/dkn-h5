@@ -82,6 +82,7 @@
                 <information-input-box
                   ref="phoneInput"
                   v-model:value="phoneInput.value"
+                  left-src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji.png"
                   :show-code="false"
                   placeholder="手机号码"
                   class="ele-phoneInput"
