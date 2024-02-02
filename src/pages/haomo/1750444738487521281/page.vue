@@ -145,7 +145,11 @@
                   class="ele-69d470b9-0c45-46a6-92d6-89fc50270dd8"
                 >
                   <view class="ele-wrapper ele-wrapper-storeList">
-                    <store-selection ref="storeList" :list="storeList.list">
+                    <store-selection
+                      ref="storeList"
+                      :list="storeList.list"
+                      class="ele-storeList"
+                    >
                     </store-selection>
                   </view>
                 </hm-uview-bg-card>
@@ -1411,6 +1415,10 @@ export default {
   width: 100%;
   height: 80%;
   overflow: hidden;
+}
+
+.ele-wrapper-storeList {
+  width: 100%;
 }
 
 .ele-wrapper-payPopup {
