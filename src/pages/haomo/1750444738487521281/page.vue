@@ -66,7 +66,8 @@
               <view
                 class="ele-wrapper ele-wrapper-a9b61974-4b4c-4f4b-bf36-c799e54a8505"
               >
-                <hm-uview-text> </hm-uview-text>
+                <hm-uview-text text="选择奖品套餐" font-size="16px">
+                </hm-uview-text>
               </view>
               <view class="ele-wrapper ele-wrapper-eventCard">
                 <event-registration-card
