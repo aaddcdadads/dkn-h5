@@ -1010,7 +1010,7 @@ export default {
         ],
       },
       payButton: {
-        text: "总费用：¥29.0 立即报名",
+        text: "¥ 29.9 立即报名",
         shape: "circle",
       },
       activityText: {
