@@ -1202,14 +1202,30 @@ export default {
         };
         const res = await self.$postAction(url, params);
         if (!res.success) {
-          uni.showToast({
-            icon: "error",
-            position: "top",
-            title: res.message,
-            duration: 2000,
-          });
           if (res.message === "当前活动已经报名！") {
-            self.login();
+            if (!res.result) {
+              uni.showToast({
+                icon: "error",
+                position: "top",
+                title: res.message,
+                duration: 2000,
+              });
+              self.login();
+              return;
+            }
+            if (res.result.paymentStatus === 1) {
+              uni.showToast({
+                icon: "error",
+                position: "top",
+                title: "当前活动已经报名未支付",
+                duration: 2000,
+              });
+              self.payPopup.show = true;
+              self.activityText.text = self.activityName;
+              self.countdown.text = "";
+              self.prices.text = `¥ ${res.result.money}`;
+              self.orderId = res.result.money;
+            }
           }
           return;
         }
