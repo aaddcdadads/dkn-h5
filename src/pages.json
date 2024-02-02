@@ -8,6 +8,13 @@
   },
   "pages": [
     {
+      "path": "pages/haomo/1750714119029264386/page",
+      "style": {
+        "navigationBarTitleText": "活动报名页",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "pages/haomo/1752601339138936834/page",
       "style": {
         "navigationBarTitleText": "活动报名用户协议及承诺书",
@@ -53,13 +60,6 @@
       "path": "pages/haomo/1750444738487521281/page",
       "style": {
         "navigationBarTitleText": "报名表单",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/haomo/1750714119029264386/page",
-      "style": {
-        "navigationBarTitleText": "活动报名页",
         "enablePullDownRefresh": false
       }
     },
