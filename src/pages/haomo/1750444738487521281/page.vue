@@ -72,7 +72,6 @@
                 <information-input-box
                   ref="nameInput"
                   v-model:value="nameInput.value"
-                  left-src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png"
                   :show-code="false"
                   placeholder="* 姓名/昵称"
                   class="ele-nameInput"
