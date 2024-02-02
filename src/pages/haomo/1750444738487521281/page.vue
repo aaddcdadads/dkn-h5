@@ -426,6 +426,24 @@ export default {
             price: "0.0",
             number: 0,
           },
+          {
+            checked: false,
+            image:
+              "https://hm-static-img.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A4logo.png",
+            name: "活动名称活动名称活动名称活动名称活动名称",
+            description: "活动名称活动名称活动名称活动名称活动名称活动名称",
+            price: "0.0",
+            number: 0,
+          },
+          {
+            checked: false,
+            image:
+              "https://hm-static-img.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A4logo.png",
+            name: "活动名称",
+            description: "",
+            price: "0.0",
+            number: 0,
+          },
         ],
       },
       storeList: {
