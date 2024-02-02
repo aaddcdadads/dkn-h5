@@ -1,9 +1,10 @@
 <template>
-  <view class="inputBox">
+  <view :class="borderColor ? 'borderColor' : 'inputBox'" @click="borderColor = !borderColor">
     <view class="image_box1">
-      <image class="imageleft" :src="leftSrc"/>
+      <image class="imageleft" :src="leftSrc[0]" v-show="!borderColor"/>
+      <image class="imageleft" :src="leftSrc[1]" v-show="borderColor"/>
     </view>
-    <input :placeholder="placeholder" class="data_input" v-model:value="cValue" @input="input"/>
+    <input :placeholder="placeholder" class="data_input" v-model="value" @blur="borderColor = false"/>
     <view v-show="showCode">
       <text @click="onCode" :class="showColor ? 'gcolor' : 'color'">{{ code }}</text>
     </view>
@@ -27,7 +28,11 @@ export default {
      */
     leftSrc:{
       type:String,
-      default:"https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+      default:[
+         "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+         'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png'
+      ]
+       
     },
     /**
      * 右侧图标
@@ -64,13 +69,8 @@ export default {
       type: 'text',
       code: "获取验证码",
       showColor: false,
-      cValue: "",
+      borderColor:false,
     }
-  },
-  watch: {
-    value(value) {
-      this.cValue = value;
-    },
   },
   methods: {
     onCode() {
@@ -91,22 +91,17 @@ export default {
     },
     rightIcon() {
       this.$emit("rightIcon");
-    },
-    input(e) {
-      this.$emit("update:value", this.cValue);
-      this.$emit("input");
     }
   }
 }
 </script>
 <style scoped>
-.inputBox {
+.inputBox,.borderColor {
   width: 100%;
   display: flex;
   align-items: center;
   height: 45px;
   background-color: #fff;
-  border: 1px solid #CFCFCF;
   border-radius: 4px;
   padding: 8px 5px;
 }
@@ -149,5 +144,11 @@ export default {
   justify-content: center;
   /* margin-top: 5px; */
   width: 40px;
+}
+.inputBox{
+  border: 1px solid #CFCFCF;
+}
+.borderColor{
+  border: 1px solid #F32878; 
 }
 </style>
