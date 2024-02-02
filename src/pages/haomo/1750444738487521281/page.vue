@@ -1225,6 +1225,13 @@ export default {
               self.login();
               return;
             }
+          } else {
+            uni.showToast({
+              icon: "error",
+              position: "top",
+              title: res.message,
+              duration: 2000,
+            });
           }
           return;
         }
