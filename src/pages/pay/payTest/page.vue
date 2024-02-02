@@ -7,14 +7,20 @@ export default {
   components: {  },
   data() {
     return {
+      orderId: "test2"
     };
+  },
+  onLoad(option){
+    if(option.orderId){
+      this.orderId = option.orderId
+    }
   },
   methods: {
     wxpay(){
-      this.$pay("test1", "0")
+      this.$pay(this.orderId, "0")
     },
     alipay(){
-      this.$pay("test1", "1")
+      this.$pay(this.orderId, "1")
     }
   }
 }

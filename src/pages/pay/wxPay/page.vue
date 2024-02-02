@@ -11,7 +11,7 @@
         <div class="ico-scan"></div>
         <div class="tip-text">
             <p>打开微信扫一扫</p>
-            <p>手机使用相册扫</p>
+            <p>扫描二维码</p>
         </div>
     </div>
   </div>
