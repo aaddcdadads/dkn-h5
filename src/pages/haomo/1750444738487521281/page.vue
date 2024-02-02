@@ -1073,6 +1073,7 @@ export default {
       payPopup: {
         show: false,
       },
+      activityItem: {},
     };
   },
   watch: {},
@@ -1109,7 +1110,7 @@ export default {
             image: self.getImg(e.imgPath),
             name: e.name,
             description: e.synopsis,
-            price: e.expense,
+            price: e.free === 0 ? 0 : e.expense,
             number: 0,
           };
         });
@@ -1144,7 +1145,7 @@ export default {
         setTimeout(() => {
           let money = 0;
           self.eventCard.list.forEach((e) => {
-            if (e.checked) {
+            if (e.checked && e.free !== 0) {
               let expense = e.expense * e.number;
               money += expense;
             }
@@ -1207,6 +1208,9 @@ export default {
             title: res.message,
             duration: 2000,
           });
+          if (res.message === "当前活动已经报名！") {
+            self.login();
+          }
           return;
         }
         uni.showToast({
@@ -1220,6 +1224,23 @@ export default {
         self.countdown.text = "";
         self.prices.text = `¥ ${self.money}`;
         self.orderId = res.message;
+      };
+      //登录验证
+      self.login = async function () {
+        let url = "/api/sys/phoneLogin";
+        let params = {
+          mobile: self.phoneInput.value,
+          captcha: self.smscodeIpnut.value,
+        };
+        const res = await self.$postAction(url, params);
+        if (!res.success) {
+          return;
+        }
+        uni.setStorageSync("token", res.result.token);
+        uni.setStorageSync("userInfo", res.result.userInfo);
+        uni.$u.route(
+          `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+        );
       };
       self.getOrderProjects = function () {
         let list = [];
@@ -1296,7 +1317,6 @@ export default {
         self.$pay(self.orderId, channel);
       };
     },
-
     onEventCardChecked(e) {
       this.checked();
     },

@@ -114,6 +114,32 @@
                               >
                               </hm-uview-field>
                             </view>
+                            <view class="ele-wrapper ele-wrapper-loopList">
+                              <hm-loop
+                                ref="loopList"
+                                v-model:value="loopList.value"
+                                class="ele-loopList"
+                              >
+                                <template #default="{ item }">
+                                  <view
+                                    class="ele-wrapper ele-wrapper-393dea9e-88aa-48f0-a020-693d27e68fea"
+                                  >
+                                    <loop-field
+                                      :value="item.activityProjectId_dictText"
+                                      label=""
+                                      placeholder="报名项目名称 x 数量"
+                                      label-width="0"
+                                      icon=""
+                                      right-icon=""
+                                      :border-bottom="false"
+                                      :disabled="true"
+                                      class="ele-393dea9e-88aa-48f0-a020-693d27e68fea"
+                                    >
+                                    </loop-field>
+                                  </view>
+                                </template>
+                              </hm-loop>
+                            </view>
                           </template>
                         </hm-loop>
                       </view>
@@ -443,6 +469,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
+import LoopField from "/@/components/dkn-h-5/loop-field/index.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -452,6 +479,7 @@ export default {
     HmUviewText,
     HmLoop,
     HmUviewField,
+    LoopField,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -486,8 +514,14 @@ export default {
       writeStatusField: {
         value: "",
       },
+      loopList: {
+        value: [],
+      },
       "9756f966-bc8e-4002-afd1-bf38de80086e": {
         value: [1],
+      },
+      "393dea9e-88aa-48f0-a020-693d27e68fea": {
+        value: "item.activityProjectId_dictText",
       },
     };
   },
@@ -504,23 +538,7 @@ export default {
   methods: {
     onCreated() {
       console.log("created");
-      // 从本地缓存中获取userInfo
-      let userInfoString = localStorage.getItem("userInfo");
-      let userInfo = userInfoString && JSON.parse(userInfoString);
-      this.userId = userInfo.data.id || "";
-      if (!this.userId) {
-        uni.showToast({
-          title: "数据获取失败",
-          icon: "error",
-          duration: 1000,
-        });
-        setTimeout(() => {
-          uni.navigateTo({
-            url: "/pages/haomo/1750714119029264386/page",
-          });
-        }, 1500);
-        return;
-      }
+
       //registrationProjectField userNameField  phoneField storeNameField
       //registrationTimeField activityNameField verificationDeadlineField writeStatusField
       this.registrationProjectField.value;
@@ -535,17 +553,15 @@ export default {
     },
     onMounted() {
       console.log("mounted");
-      let params = {
-        userId: this.userId,
-        activityId: this.activityId,
-      };
+
       this.$getAction("/api/dkn/viewRegistrationOrders/list", {
         pageNo: 1,
         pageSize: 1,
-        ...params,
+        userId: this.userId,
+        activityId: this.activityId,
       }).then((res) => {
         console.log("res--", res);
-        if (!res.success || res.result.records.length <= 0) {
+        if (res.code != 200 || res.result.records.length <= 0) {
           uni.showToast({
             title: "请重新查看活动信息",
             icon: "error",
@@ -553,7 +569,9 @@ export default {
           });
           setTimeout(() => {
             uni.navigateTo({
-              url: "/pages/haomo/1750714119029264386/page",
+              url:
+                "/pages/haomo/1750714119029264386/page?activityId=" +
+                this.activityId,
             });
           }, 1500);
           return;
@@ -576,6 +594,17 @@ export default {
         ) {
           this.buttonwan.disabled = true;
         }
+        //根据订单id查询项目
+        this.$getAction("/api/dkn/orderProject/list", {
+          pageNo: 1,
+          pageSize: -1,
+          orderId: item.id,
+        }).then((orderProjectRes) => {
+          if (orderProjectRes.code != 200 || res.result.records.length <= 0) {
+            return;
+          }
+          this.loopList.value = orderProjectRes.result.records;
+        });
       });
     },
     onOnLoad(options) {
@@ -595,17 +624,45 @@ export default {
         return;
       }
       this.activityId = options.activityId;
+
+      // 从本地缓存中获取userInfo
+      let userInfoString = localStorage.getItem("userInfo");
+      let userInfo = JSON.parse(userInfoString);
+      this.userId = userInfo.data.id || "";
+      if (!this.userId) {
+        uni.showToast({
+          title: "数据获取失败",
+          icon: "error",
+          duration: 1000,
+        });
+        setTimeout(() => {
+          uni.navigateTo({
+            url:
+              "/pages/haomo/1750714119029264386/page?activityId=" +
+              this.activityId,
+          });
+        }, 1500);
+        return;
+      }
     },
 
     onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
       uni.navigateTo({
-        url: "/pages/haomo/1750714119029264386/page",
+        url:
+          "/pages/haomo/1750714119029264386/page?activityId=" + this.activityId,
       });
     },
     onButtonwanClick() {
       uni.navigateTo({
-        url: "/pages/haomo/1752649989210771458/page?orderId=" + this.orderId,
+        url:
+          "/pages/haomo/1752649989210771458/page?activityId=" + this.activityId,
       });
+
+      /*uni.navigateTo({
+    url: "/pages/haomo/1751068398554451969/page?activityId=" +
+      this.activityId +
+      "&storeId=2e1dc2b5514216c2e8da190b17577d12",
+  })*/
     },
   },
 };
@@ -613,6 +670,7 @@ export default {
 
 <style lang="less" scoped>
 .page {
+  background-color: #f0f0f0;
 }
 
 .ele-wrapper-c57e9abe-e655-4515-acc3-575489ca1e33 {
@@ -623,11 +681,6 @@ export default {
 .ele-wrapper-a4540298-8d72-4b6c-a4e3-fab8f56c0be2 {
   width: 100%;
   height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .ele-wrapper-32e2869f-33e4-4a30-a8e3-3b0d31222093 {
@@ -668,6 +721,24 @@ export default {
   width: 100%;
   height: 45px;
   margin-right: 10%;
+  display: none;
+}
+
+.ele-wrapper-loopList {
+  width: 100%;
+}
+
+.ele-wrapper-393dea9e-88aa-48f0-a020-693d27e68fea {
+  width: 100%;
+  height: 45px;
+  margin-right: 10%;
+  margin-top: 10px;
+  background: rgb(240, 240, 240);
+  border-radius: 5px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+
   /deep/.u-border-bottom {
     display: flex;
     align-items: center;

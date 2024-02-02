@@ -192,9 +192,9 @@
                         class="ele-wrapper ele-wrapper-2ecc38bd-15e4-4ee4-9c5f-50b3b6d0846c"
                       >
                         <hm-uview-text
-                          padding="0"
-                          font-size="13px"
                           text="活动名称:"
+                          font-size="13px"
+                          padding="0"
                           class="ele-2ecc38bd-15e4-4ee4-9c5f-50b3b6d0846c"
                         >
                         </hm-uview-text>
@@ -231,9 +231,9 @@
                         class="ele-wrapper ele-wrapper-26f8e5b0-a98e-4879-9f6f-3f8f3819a511"
                       >
                         <hm-uview-text
-                          padding="0"
-                          font-size="13px"
                           text="活动奖品:"
+                          font-size="13px"
+                          padding="0"
                           class="ele-26f8e5b0-a98e-4879-9f6f-3f8f3819a511"
                         >
                         </hm-uview-text>
@@ -245,6 +245,15 @@
                           class="ele-57f09a13-8f55-4241-a6cc-270dd43ca1ba"
                         >
                         </hm-uview-image>
+                      </view>
+                      <view class="ele-wrapper ele-wrapper-prizeListComponent">
+                        <prize-list-component
+                          ref="prizeListComponent"
+                          :func-list="prizeListComponent.funcList"
+                          :background-color="prizeListComponent.backgroundColor"
+                          class="ele-prizeListComponent"
+                        >
+                        </prize-list-component>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -303,6 +312,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
+import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index.vue";
 import HmUviewModal from "/@/components/built-in/uniapp-uview-vue3/HmUviewModal.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
@@ -313,6 +323,7 @@ export default {
     HmUviewText,
     HmUviewField,
     HmUviewImage,
+    PrizeListComponent,
     HmUviewModal,
     HmUviewButton,
   },
@@ -343,6 +354,24 @@ export default {
       },
       inputActivityName: {
         value: "",
+      },
+      prizeListComponent: {
+        funcList: [
+          {
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+            textbottom: "奖品2",
+          },
+          {
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+            height1: "auto",
+            scoretext: "奖品",
+            display: "block",
+            textbottom: "奖品",
+          },
+        ],
+        backgroundColor: "#FFFFFF",
       },
     };
   },
@@ -382,57 +411,82 @@ export default {
       };
     },
     onMounted() {
-      console.log("获取数据---", this.orderId, this.storeId);
+      console.log("获取数据---", this.activityId, this.storeId);
+      //查询订单信息
       this.$getAction("/api/dkn/viewRegistrationOrders/list", {
         pageNo: 1,
         pageSize: 1,
-        id: this.orderId,
+        userId: this.userId,
+        activityId: this.activityId,
       }).then((res) => {
         console.log("res--", res);
-        if (!res.success || res.result.records.length <= 0) {
+        if (res.code != 200 || res.result.records.length <= 0) {
           uni.showToast({
             title: "请重新查看活动信息",
             icon: "error",
-            duration: 2000,
+            duration: 1000,
           });
           setTimeout(() => {
             uni.navigateTo({
-              url: "/pages/haomo/1750714119029264386/page",
+              url:
+                "/pages/haomo/1750443401116913665/page?activityId=" +
+                this.activityId,
             });
-          }, 2500);
+          }, 1500);
           return;
         }
+        //保存订单信息
         this.registrationOrdersData = res.result.records[0];
-        //保存订单id
+
         this.inputMane.value = this.registrationOrdersData.realname ?? "";
         this.inputPhoneNumber.value = this.registrationOrdersData.phone ?? "";
         this.inputActivityName.value = this.registrationOrdersData.acName ?? "";
       });
+      //查询扫码的门店信息
       this.$getAction("/api/dkn/store/list", {
         pageNo: 1,
         pageSize: 1,
         id: this.storeId,
       }).then((res) => {
         console.log("res--", res);
-        if (!res.success || res.result.records.length <= 0) {
+        if (res.code != 200 || res.result.records.length <= 0) {
           uni.showToast({
             title: "请重新扫码",
             icon: "error",
-            duration: 2000,
+            duration: 1000,
           });
           setTimeout(() => {
             uni.navigateTo({
-              url: "/pages/haomo/1750443401116913665/page",
+              url:
+                "/pages/haomo/1752649989210771458/page?activityId=" +
+                this.activityId,
             });
-          }, 2500);
+          }, 1500);
           return;
         }
         let item = res.result.records[0];
         this.inputClaimStore.value = item.name ?? "";
       });
+      //查询奖品图片
+      //查询扫码的门店信息
+      this.$getAction("/api/dkn/activityImg/list", {
+        pageNo: 1,
+        pageSize: -1,
+        activityId: this.activityId,
+      }).then((res) => {
+        console.log("res--", res);
+        if (res.code != 200 || res.result.records.length <= 0) return;
+        this.prizeListComponent.funcList = res.result.records.map((item) => {
+          return {
+            ...item,
+            bgUrl: item.path,
+            textbottom: item.name,
+          };
+        });
+      });
     },
     onOnLoad(options) {
-      if (!options.orderId || !options.storeId) {
+      if (!options.activityId || !options.storeId) {
         uni.showToast({
           title: "数据获取失败",
           icon: "error",
@@ -445,14 +499,34 @@ export default {
         }, 2500);
         return;
       }
-      this.orderId = options.orderId;
+      this.activityId = options.activityId;
       this.storeId = options.storeId;
+
+      // 从本地缓存中获取userInfo
+      let userInfoString = localStorage.getItem("userInfo");
+      let userInfo = JSON.parse(userInfoString);
+      this.userId = userInfo.data.id || "";
+      if (!this.userId) {
+        uni.showToast({
+          title: "数据获取失败",
+          icon: "error",
+          duration: 1000,
+        });
+        setTimeout(() => {
+          uni.navigateTo({
+            url:
+              "/pages/haomo/1750714119029264386/page?activityId=" +
+              this.activityId,
+          });
+        }, 1500);
+        return;
+      }
     },
 
     onWriteOffModalOnConfirm() {
       this.$postAction("/api/dkn/orderPickUp/add", {
-        orderId: this.orderId,
-        activityId: this.registrationOrdersData.activityId,
+        orderId: this.registrationOrdersData.id,
+        activityId: this.activityId,
         storeId: this.storeId,
         pickUpStatus: 0,
         pickUpTime: this.getTime(),
@@ -462,21 +536,23 @@ export default {
           uni.showToast({
             title: "核销失败",
             icon: "error",
-            duration: 2000,
+            duration: 1000,
           });
           return;
+        } else {
+          uni.showToast({
+            title: "核销成功",
+            icon: "success",
+            duration: 1000,
+          });
         }
-        uni.showToast({
-          title: "核销成功",
-          icon: "success",
-          duration: 2000,
-        });
         setTimeout(() => {
           uni.navigateTo({
             url:
-              "/pages/haomo/1750443401116913665/page?orderId=" + this.orderId,
+              "/pages/haomo/1750443401116913665/page?activityId=" +
+              this.activityId,
           });
-        }, 2500);
+        }, 1500);
       });
     },
     onButtonwanClick() {
@@ -673,11 +749,17 @@ export default {
 .ele-wrapper-26f8e5b0-a98e-4879-9f6f-3f8f3819a511 {
   padding: 13px 7px;
   vertical-align: top;
-  margin-left: 10px;
+  margin-left: 33px;
 }
 
 .ele-wrapper-57f09a13-8f55-4241-a6cc-270dd43ca1ba {
   margin-left: 2px;
+  display: none;
+}
+
+.ele-wrapper-prizeListComponent {
+  width: 90%;
+  margin-left: 5%;
 }
 
 .ele-wrapper-fae45550-c6de-4f42-bab5-dcdccb9fdedf {

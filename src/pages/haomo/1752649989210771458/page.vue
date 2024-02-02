@@ -28,12 +28,16 @@ export default {
     return {};
   },
   watch: {},
+  mounted(e) {
+    this.onMounted(e);
+  },
   onLoad(e) {
     this.onOnLoad(e);
   },
   methods: {
+    onMounted() {},
     onOnLoad(options) {
-      if (!options.orderId) {
+      if (!options.activityId) {
         uni.showToast({
           title: "数据获取失败",
           icon: "error",
@@ -41,12 +45,12 @@ export default {
         });
         setTimeout(() => {
           uni.navigateTo({
-            url: "/pages/haomo/1750443401116913665/page",
+            url: "/pages/haomo/1750714119029264386/page",
           });
         }, 1500);
         return;
       }
-      this.orderId = options.orderId;
+      this.activityId = options.activityId;
     },
 
     onHmH5ScanCodeQrcodeSucess(data) {
@@ -57,28 +61,32 @@ export default {
           icon: "none",
           duration: 2500,
         });
-        uni.navigateBack({
-          delta: 1,
+        uni.redirectTo({
+          url:
+            "/pages/haomo/1750443401116913665/page?activityId=" +
+            this.activityId,
         });
       } else {
         this.$getAction("/api/dkn/store/queryById", {
           id: data,
         }).then((res) => {
-          if (!res.success) {
+          if (res.code != 200) {
             uni.showToast({
               title: "请选择正确的二维码",
               icon: "none",
               duration: 2500,
             });
-            uni.navigateBack({
-              delta: 1,
+            uni.redirectTo({
+              url:
+                "/pages/haomo/1750443401116913665/page?activityId=" +
+                this.activityId,
             });
             return;
           }
           uni.redirectTo({
             url:
-              "/pages/haomo/1751068398554451969/page?orderId=" +
-              this.orderId +
+              "/pages/haomo/1751068398554451969/page?activityId=" +
+              this.activityId +
               "&storeId=" +
               data,
           });
@@ -92,8 +100,9 @@ export default {
         duration: 2500,
       });
 
-      uni.navigateBack({
-        delta: 1,
+      uni.redirectTo({
+        url:
+          "/pages/haomo/1750714119029264386/page?activityId=" + this.activityId,
       });
     },
   },

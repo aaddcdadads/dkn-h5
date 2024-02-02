@@ -4,12 +4,13 @@
       <view class="ele-wrapper ele-wrapper-outsideBg">
         <hm-uview-bg-card
           ref="outsideBg"
-          width="100%"
-          height="100%"
-          border-radius="0"
-          padding="0"
-          box-shadow-color="#00000000"
-          background-color="#FFE8EC"
+          :width="outsideBg.width"
+          :height="outsideBg.height"
+          :border-radius="outsideBg.borderRadius"
+          :padding="outsideBg.padding"
+          :box-shadow-color="outsideBg.boxShadowColor"
+          :background-color="outsideBg.backgroundColor"
+          :hidden="outsideBg.hidden"
           class="ele-outsideBg"
         >
           <view class="ele-wrapper ele-wrapper-topBg">
@@ -606,16 +607,16 @@
           </view>
         </hm-uview-bg-card>
       </view>
-      <view
-        class="ele-wrapper ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611"
-      >
+      <view class="ele-wrapper ele-wrapper-addOrderCard">
         <hm-uview-bg-card
-          width="100%"
-          height=""
-          border-radius="0"
-          padding="12"
-          box-shadow-color="#00000000"
-          class="ele-2136b833-7f0e-4a8a-a081-36d9e275f611"
+          ref="addOrderCard"
+          :width="addOrderCard.width"
+          :height="addOrderCard.height"
+          :border-radius="addOrderCard.borderRadius"
+          :padding="addOrderCard.padding"
+          :box-shadow-color="addOrderCard.boxShadowColor"
+          :hidden="addOrderCard.hidden"
+          class="ele-addOrderCard"
         >
           <view class="ele-wrapper ele-wrapper-isProtocol">
             <hm-uview-radio
@@ -666,6 +667,26 @@
           </view>
         </hm-uview-bg-card>
       </view>
+      <view class="ele-wrapper ele-wrapper-notActivity">
+        <hm-uview-bg-card
+          ref="notActivity"
+          :width="notActivity.width"
+          :height="notActivity.height"
+          :border-radius="notActivity.borderRadius"
+          :text-align="notActivity.textAlign"
+          :padding="notActivity.padding"
+          :box-shadow-color="notActivity.boxShadowColor"
+          :background-color="notActivity.backgroundColor"
+          :hidden="notActivity.hidden"
+          class="ele-notActivity"
+        >
+          <view
+            class="ele-wrapper ele-wrapper-65e518bc-9c0c-4a0a-9379-8bee452aa38f"
+          >
+            <hm-uview-text text="当前活动已结束"> </hm-uview-text>
+          </view>
+        </hm-uview-bg-card>
+      </view>
     </view>
   </view>
 </template>
@@ -705,11 +726,14 @@ export default {
   data() {
     let self = this;
     return {
-      logoImg: {
-        src:
-          "https://static1.keepcdn.com/teyvat-cms/2023/10/24/1698136514335c25agsam_750x1000.jpg",
+      outsideBg: {
         width: "100%",
-        height: "500px",
+        height: "100%",
+        borderRadius: "0",
+        padding: "0",
+        boxShadowColor: "#00000000",
+        backgroundColor: "#FFE8EC",
+        hidden: false,
       },
       regularPopup: {
         show: false,
@@ -730,6 +754,12 @@ export default {
         ],
       },
       activityItem: {},
+      logoImg: {
+        src:
+          "https://static1.keepcdn.com/teyvat-cms/2023/10/24/1698136514335c25agsam_750x1000.jpg",
+        width: "100%",
+        height: "500px",
+      },
       closeTime: {
         day: 19,
         hour: 15,
@@ -861,6 +891,24 @@ export default {
       phoneText: {
         text: "400-888-88888",
       },
+      addOrderCard: {
+        hidden: false,
+        width: "100%",
+        height: "",
+        borderRadius: "0",
+        padding: "12",
+        boxShadowColor: "#00000000",
+      },
+      notActivity: {
+        hidden: false,
+        width: "100%",
+        height: "100%",
+        borderRadius: "0",
+        textAlign: "center",
+        padding: "0",
+        boxShadowColor: "#00000000",
+        backgroundColor: "#FFFFFF",
+      },
       activityProjectItem: {},
       activityExtItem: {},
       activityImgItem: {},
@@ -933,10 +981,16 @@ export default {
       self.activityExtItem = {};
       self.activityImgItem = {};
       self.activityProjectItem = {};
+      self.outsideBg.hidden = false;
+      self.addOrderCard.hidden = false;
+      self.notActivity.hidden = true;
       self.getActivity = async function (id) {
         let url = "/api/dkn/activity/queryByAll";
         const res = await self.$getAction(url, { id });
         if (!res.success || !res.result) {
+          self.outsideBg.hidden = true;
+          self.addOrderCard.hidden = true;
+          self.notActivity.hidden = false;
           return;
         }
         self.activityItem = res.result;
@@ -1025,7 +1079,9 @@ export default {
           };
         });
         imgOne = imgTwo.sort((a, b) => a.sortNo - b.sortNo);
-        self.logoImg.src = self.getImg(imgOne[0].path);
+        if (imgOne.length > 0) {
+          self.logoImg.src = self.getImg(imgOne[0].path);
+        }
         self.listCompanent.funcList = imgOne.map((x) => {
           return {
             bgUrl: self.getImg(x.path),
@@ -1159,6 +1215,7 @@ export default {
         );
       };
     },
+
     onEle0Abf487751Bc431D8F1A3C043Bc451FeClick() {
       this.regularPopup.show = true;
     },
@@ -1184,6 +1241,17 @@ export default {
     },
     onElee174C2E6A7994Ccf8Fa92A81Dc515A6FClick() {
       console.log(this.isProtocol.value);
+      let closeTime = new Date(this.activityItem.closeTime).getTime();
+      let newDate = new Date().getTime();
+      if (closeTime < newDate) {
+        uni.showToast({
+          icon: "error",
+          position: "top",
+          title: "报名活动已截止无法参与报名",
+          duration: 2000,
+        });
+        return;
+      }
       if (!this.isProtocol.value) {
         uni.showToast({
           icon: "error",
@@ -1584,7 +1652,7 @@ export default {
   }
 }
 
-.ele-wrapper-2136b833-7f0e-4a8a-a081-36d9e275f611 {
+.ele-wrapper-addOrderCard {
   width: 100%;
   position: fixed;
   bottom: 0px;
@@ -1626,5 +1694,14 @@ export default {
 .ele-wrapper-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9 {
   width: 100%;
   text-align: center;
+}
+
+.ele-wrapper-notActivity {
+  width: 100%;
+  position: relative;
+  height: calc(100vh - 120px);
+  overflow-y: scroll;
+  width: 100%;
+  margin-top: 20%;
 }
 </style>
