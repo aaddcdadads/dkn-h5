@@ -10,7 +10,7 @@
           padding=""
           box-shadow-v-shadow=""
           box-shadow-blur=""
-          background-color="#F8F8F8"
+          background-color="#FAFAFA"
           class="ele-formbgCard"
         >
           <view
