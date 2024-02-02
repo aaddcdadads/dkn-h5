@@ -395,24 +395,6 @@ export default {
       this.writeOffText.text;
       this.writeOffModal.title;
 
-      // 从本地缓存中获取userInfo
-      let userInfoString = localStorage.getItem("userInfo");
-      let userInfo = JSON.parse(userInfoString);
-      this.userId = userInfo.data.id || "";
-      if (!this.userId) {
-        uni.showToast({
-          title: "数据获取失败",
-          icon: "error",
-          duration: 1000,
-        });
-        setTimeout(() => {
-          uni.navigateTo({
-            url: "/pages/haomo/1750714119029264386/page",
-          });
-        }, 1500);
-        return;
-      }
-
       this.getTime = () => {
         // 创建一个新的 Date 对象来获取当前时间
         let currentTime = new Date();
@@ -446,7 +428,9 @@ export default {
           });
           setTimeout(() => {
             uni.navigateTo({
-              url: "/pages/haomo/1750714119029264386/page",
+              url:
+                "/pages/haomo/1750443401116913665/page?activityId=" +
+                this.activityId,
             });
           }, 1500);
           return;
@@ -517,6 +501,26 @@ export default {
       }
       this.activityId = options.activityId;
       this.storeId = options.storeId;
+
+      // 从本地缓存中获取userInfo
+      let userInfoString = localStorage.getItem("userInfo");
+      let userInfo = JSON.parse(userInfoString);
+      this.userId = userInfo.data.id || "";
+      if (!this.userId) {
+        uni.showToast({
+          title: "数据获取失败",
+          icon: "error",
+          duration: 1000,
+        });
+        setTimeout(() => {
+          uni.navigateTo({
+            url:
+              "/pages/haomo/1750714119029264386/page?activityId=" +
+              this.activityId,
+          });
+        }, 1500);
+        return;
+      }
     },
 
     onWriteOffModalOnConfirm() {
