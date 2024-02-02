@@ -4,7 +4,7 @@
       <image class="imageleft" :src="leftSrc[0]" v-show="!borderColor" />
       <image class="imageleft" :src="leftSrc[1]" v-show="borderColor" />
     </view>
-    <input :placeholder="placeholder" class="data_input" v-model="value" @blur="borderColor = false" />
+    <input :placeholder="placeholder" class="data_input" v-model:value="cValue" @input="input" @blur="borderColor = false" />
     <view v-show="showCode">
       <text @click="onCode" :class="showColor ? 'gcolor' : 'color'">{{ code }}</text>
     </view>
@@ -71,7 +71,13 @@ export default {
       code: "获取验证码",
       showColor: false,
       borderColor: false,
+      cValue: "",
     }
+  },
+  watch: {
+    value(value) {
+      this.cValue = value;
+    },
   },
   methods: {
     onCode() {
@@ -92,6 +98,10 @@ export default {
     },
     rightIcon() {
       this.$emit("rightIcon");
+    },
+    input(e) {
+      this.$emit("update:value", this.cValue);
+      this.$emit("input");
     }
   }
 }
