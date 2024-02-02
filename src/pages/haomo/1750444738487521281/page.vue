@@ -17,7 +17,7 @@
             class="ele-wrapper ele-wrapper-d2a1d00b-5944-454d-8524-4be2a05c3be8"
           >
             <hm-uview-text
-              text="奖品选择"
+              text="选择奖品套餐"
               font-size="16px"
               class="ele-d2a1d00b-5944-454d-8524-4be2a05c3be8"
             >
@@ -63,11 +63,15 @@
               background-color="#FFFFFF"
               class="ele-74c8c2c3-d387-4029-8b68-8275204c2ed5"
             >
+              <view
+                class="ele-wrapper ele-wrapper-a9b61974-4b4c-4f4b-bf36-c799e54a8505"
+              >
+                <hm-uview-text> </hm-uview-text>
+              </view>
               <view class="ele-wrapper ele-wrapper-eventCard">
                 <event-registration-card
                   ref="eventCard"
                   :list="eventCard.list"
-                  @checked="onEventCardChecked"
                   @change="onEventCardChange"
                 >
                 </event-registration-card>
@@ -1329,9 +1333,6 @@ export default {
       };
     },
 
-    onEventCardChecked(e) {
-      this.checked();
-    },
     onEventCardChange(e) {
       this.checked();
     },
