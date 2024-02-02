@@ -91,7 +91,7 @@
               width="100%"
               height="100%"
               border-radius=""
-              padding="8"
+              padding="18"
               box-shadow-v-shadow=""
               box-shadow-blur=""
               box-shadow-spread=""
