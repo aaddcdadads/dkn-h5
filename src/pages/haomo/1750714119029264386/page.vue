@@ -932,7 +932,7 @@ export default {
       },
       sureButton: {
         type: "info",
-        text: "确认",
+        text: "拨打",
       },
     };
   },
