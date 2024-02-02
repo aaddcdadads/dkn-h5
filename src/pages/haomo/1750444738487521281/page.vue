@@ -1204,34 +1204,18 @@ export default {
         if (!res.success) {
           if (res.message === "当前活动已经报名！") {
             if (res.result.paymentStatus === 1) {
-              uni.showToast({
-                icon: "error",
-                position: "top",
-                title: "当前活动已经报名未支付",
-                duration: 2000,
-              });
+              self.error("当前活动已经报名未支付");
               self.payPopup.show = true;
               self.activityText.text = self.activityName;
               self.countdown.text = "";
               self.prices.text = `¥ ${res.result.money}`;
               self.orderId = res.result.money;
             } else {
-              uni.showToast({
-                icon: "error",
-                position: "top",
-                title: res.message,
-                duration: 2000,
-              });
-              self.login();
+              self.error(res.message);
               return;
             }
           } else {
-            uni.showToast({
-              icon: "error",
-              position: "top",
-              title: res.message,
-              duration: 2000,
-            });
+            self.error(res.message);
           }
           return;
         }
@@ -1241,6 +1225,10 @@ export default {
           title: "报名成功",
           duration: 2000,
         });
+        if (self.money) {
+          self.login();
+          return;
+        }
         self.payPopup.show = true;
         self.activityText.text = self.activityName;
         self.countdown.text = "";
