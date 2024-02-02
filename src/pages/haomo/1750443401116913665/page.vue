@@ -680,11 +680,6 @@ export default {
 .ele-wrapper-a4540298-8d72-4b6c-a4e3-fab8f56c0be2 {
   width: 100%;
   height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .ele-wrapper-32e2869f-33e4-4a30-a8e3-3b0d31222093 {
