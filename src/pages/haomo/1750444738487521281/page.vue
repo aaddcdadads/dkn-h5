@@ -29,7 +29,11 @@
               <view
                 class="ele-wrapper ele-wrapper-a9b61974-4b4c-4f4b-bf36-c799e54a8505"
               >
-                <hm-uview-text text="选择奖品套餐" font-size="16px">
+                <hm-uview-text
+                  text="选择奖品套餐"
+                  font-size="16px"
+                  class="ele-a9b61974-4b4c-4f4b-bf36-c799e54a8505"
+                >
                 </hm-uview-text>
               </view>
               <view class="ele-wrapper ele-wrapper-eventCard">
@@ -1342,6 +1346,10 @@ export default {
   .ele-wrapper-eventCard {
     width: 100%;
   }
+}
+
+.ele-wrapper-a9b61974-4b4c-4f4b-bf36-c799e54a8505 {
+  margin-bottom: 12px;
 }
 
 .ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b {
