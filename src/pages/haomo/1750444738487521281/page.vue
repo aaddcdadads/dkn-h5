@@ -1030,13 +1030,13 @@ export default {
       nameInput: {
         value: "",
       },
-      phoneInput: {
-        value: "",
-      },
       smscodeIpnut: {
         value: "",
       },
       storeInput: {
+        value: "",
+      },
+      phoneInput: {
         value: "",
       },
       payPopup: {
@@ -1054,8 +1054,8 @@ export default {
       let self = this;
       self.activityId = self.$route.query.activityId;
       self.activityName = self.$route.query.activityName;
-      // self.eventCard.list = []
-      //self.storeList.list = []
+      self.eventCard.list = [];
+      self.storeList.list = [];
       self.payButton.text = `立即报名`;
       self.money = 0;
       self.activityText.text = "";
@@ -1096,12 +1096,7 @@ export default {
             shop: x.store,
           };
         });
-        self.storeList.list = [
-          {
-            anchor: "b",
-            store,
-          },
-        ];
+        self.storeList.list = [{ anchor: "b", store }];
       };
       self.getImg = function (url) {
         if (url.substring(0, 4) === "http") {
@@ -1134,8 +1129,7 @@ export default {
           self.error("姓名/昵称不能为空");
           return;
         }
-        if (!self.phoneInput.value) {
-          self.error("手机号不能为空");
+        if (!self.checkPhone()) {
           return;
         }
         if (!self.smscodeIpnut.value) {
@@ -1153,7 +1147,6 @@ export default {
           self.error("请至少选择一个活动项目");
           return;
         }
-
         self.addOrder();
       };
       self.addOrder = async function () {
