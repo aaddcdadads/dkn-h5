@@ -63,7 +63,11 @@
               <view
                 class="ele-wrapper ele-wrapper-41e260d8-66e3-4a5a-8600-e82cd01f5d1c"
               >
-                <hm-uview-text text="填写资料信息" font-size="16px">
+                <hm-uview-text
+                  text="填写资料信息"
+                  font-size="16px"
+                  class="ele-41e260d8-66e3-4a5a-8600-e82cd01f5d1c"
+                >
                 </hm-uview-text>
               </view>
               <view class="ele-wrapper ele-wrapper-nameInput">
@@ -1349,6 +1353,10 @@ export default {
 
 .ele-wrapper-7927eb64-d6cf-4dda-8938-a15bb62187d2 {
   width: 100%;
+}
+
+.ele-wrapper-41e260d8-66e3-4a5a-8600-e82cd01f5d1c {
+  margin-bottom: 13px;
 }
 
 .ele-wrapper-nameInput {
