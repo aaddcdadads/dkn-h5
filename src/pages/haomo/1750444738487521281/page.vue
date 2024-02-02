@@ -1042,6 +1042,7 @@ export default {
         value: "",
         leftSrc: [
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendianfuwu.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendianfuwu(1).png",
         ],
       },
       phoneInput: {
