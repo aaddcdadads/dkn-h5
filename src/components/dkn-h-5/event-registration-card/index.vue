@@ -224,13 +224,14 @@ export default {
 .borderColor {
   display: flex;
   align-items: center;
-  border-radius: 6px;
+  border-radius: 8px;
   height: 125px;
   width: 100%;
   padding-right: 5px;
   margin-bottom: 8px;
   background: #fafafa;
   position: relative;
+  overflow: hidden;
 }
 
 .change {
