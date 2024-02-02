@@ -61,8 +61,10 @@ export default {
           icon: "none",
           duration: 2500,
         });
-        uni.navigateBack({
-          delta: 1,
+        uni.redirectTo({
+          url:
+            "/pages/haomo/1750443401116913665/page?activityId=" +
+            this.activityId,
         });
       } else {
         this.$getAction("/api/dkn/store/queryById", {
@@ -74,8 +76,10 @@ export default {
               icon: "none",
               duration: 2500,
             });
-            uni.navigateBack({
-              delta: 1,
+            uni.redirectTo({
+              url:
+                "/pages/haomo/1750443401116913665/page?activityId=" +
+                this.activityId,
             });
             return;
           }
@@ -96,8 +100,9 @@ export default {
         duration: 2500,
       });
 
-      uni.navigateBack({
-        delta: 1,
+      uni.redirectTo({
+        url:
+          "/pages/haomo/1750714119029264386/page?activityId=" + this.activityId,
       });
     },
   },
