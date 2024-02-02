@@ -1048,7 +1048,7 @@ export default {
         value: "",
         leftSrc: [
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji.png",
-          "",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji(2).png",
         ],
       },
       payPopup: {
