@@ -82,7 +82,7 @@
                 <information-input-box
                   ref="phoneInput"
                   v-model:value="phoneInput.value"
-                  left-src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji.png"
+                  :left-src="phoneInput.leftSrc"
                   :show-code="false"
                   placeholder="* 请填写正确的手机号码"
                   class="ele-phoneInput"
@@ -93,7 +93,7 @@
                 <information-input-box
                   ref="smscodeIpnut"
                   v-model:value="smscodeIpnut.value"
-                  left-src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan1.png"
+                  :left-src="smscodeIpnut.leftSrc"
                   placeholder="* 请输入短信验证码"
                   @onCode="onSmscodeIpnutOnCode"
                   class="ele-smscodeIpnut"
@@ -104,7 +104,7 @@
                 <information-input-box
                   ref="storeInput"
                   v-model:value="storeInput.value"
-                  left-src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendian.png"
+                  :left-src="storeInput.leftSrc"
                   :show-code="false"
                   :show-icon="true"
                   placeholder="* 请选择领奖门店"
@@ -1033,12 +1033,23 @@ export default {
       },
       smscodeIpnut: {
         value: "",
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan1.png",
+          "",
+        ],
       },
       storeInput: {
         value: "",
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendianfuwu.png",
+        ],
       },
       phoneInput: {
         value: "",
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji.png",
+          "",
+        ],
       },
       payPopup: {
         show: false,
