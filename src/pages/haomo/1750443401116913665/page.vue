@@ -670,6 +670,7 @@ export default {
 
 <style lang="less" scoped>
 .page {
+  background-color: #f0f0f0;
 }
 
 .ele-wrapper-c57e9abe-e655-4515-acc3-575489ca1e33 {
