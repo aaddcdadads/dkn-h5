@@ -1052,7 +1052,7 @@ export default {
       let self = this;
       self.activityId = self.$route.query.activityId;
       self.activityName = self.$route.query.activityName;
-      self.eventCard.list = [];
+      // self.eventCard.list = []
       self.storeList.list = [];
       self.payButton.text = `立即报名`;
       self.money = 0;
@@ -1094,7 +1094,12 @@ export default {
             shop: x.store,
           };
         });
-        self.storeList.list = [{ anchor: "b", store }];
+        self.storeList.list = [
+          {
+            anchor: "b",
+            store,
+          },
+        ];
       };
       self.getImg = function (url) {
         if (url.substring(0, 4) === "http") {
