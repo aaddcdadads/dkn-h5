@@ -739,7 +739,7 @@ export default {
         hidden: false,
       },
       regularPopup: {
-        show: false,
+        show: true,
       },
       phonePopup: {
         show: false,
@@ -927,7 +927,7 @@ export default {
       },
       sure1Button: {
         type: "info",
-        text: "登陆",
+        text: "登录",
       },
       canelButton: {
         type: "info",
