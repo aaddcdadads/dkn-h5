@@ -341,7 +341,6 @@
               <view class="ele-wrapper ele-wrapper-payButton">
                 <hm-uview-button
                   ref="payButton"
-                  :type="payButton.type"
                   :shape="payButton.shape"
                   :text="payButton.text"
                   @click="onPayButtonClick"
@@ -1012,7 +1011,6 @@ export default {
       },
       payButton: {
         text: "总费用：¥29.0 立即报名",
-        type: "primary",
         shape: "circle",
       },
       activityText: {
@@ -1504,6 +1502,7 @@ export default {
     font-size: 16px;
     color: #ffffff;
     line-height: 20px;
+    background: linear-gradient(179.94deg, #ff9fc7 0%, #f32878 100%);
   }
 }
 </style>
