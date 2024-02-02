@@ -19,7 +19,6 @@
             <hm-uview-bg-card
               width="100%"
               height="100%"
-              border-radius=""
               padding="18"
               box-shadow-v-shadow=""
               box-shadow-blur=""
@@ -52,7 +51,6 @@
             <hm-uview-bg-card
               width="100%"
               height="100%"
-              border-radius=""
               padding="18"
               box-shadow-v-shadow=""
               box-shadow-blur=""
