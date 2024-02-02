@@ -302,6 +302,7 @@
                               :background-color="
                                 activityImgList.backgroundColor
                               "
+                              :text-color="activityImgList.textColor"
                               class="ele-activityImgList"
                             >
                             </prize-list-component>
@@ -823,7 +824,7 @@ export default {
           },
         ],
         backgroundColor: "#feeff7",
-        textColor: null,
+        textColor: "#000000",
         style: [
           {
             margin: "0 10px",
@@ -1079,10 +1080,11 @@ export default {
             textbottom: x.name,
           };
         });
-        imgOne = imgTwo.sort((a, b) => a.sortNo - b.sortNo);
+        imgOne = imgOne.sort((a, b) => a.sortNo - b.sortNo);
         if (imgOne.length > 0) {
           self.logoImg.src = self.getImg(imgOne[0].path);
         }
+        imgOne.splice(0, 1);
         self.listCompanent.funcList = imgOne.map((x) => {
           return {
             bgUrl: self.getImg(x.path),
