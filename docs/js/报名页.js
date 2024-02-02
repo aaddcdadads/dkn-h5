@@ -30,22 +30,28 @@ function() {
     self.listCompanent.textColor = '#D8477B'
     //富文本
     self.activityRulesText.data = { html: "" }
-    
-    self.phoneText.text=""
+
+    self.phoneText.text = ""
     //数据对象
     self.activityItem = {}
     self.activityExtItem = {}
     self.activityImgItem = {}
     self.activityProjectItem = {}
+    self.outsideBg.hidden = false
+    self.addOrderCard.hidden = false
+    self.notActivity.hidden = true
     self.getActivity = async function (id) {
         let url = "/api/dkn/activity/queryByAll"
         const res = await self.$getAction(url, { id })
         if (!res.success || !res.result) {
+            self.outsideBg.hidden = true
+            self.addOrderCard.hidden = true
+            self.notActivity.hidden = false
             return
         }
         self.activityItem = res.result
         self.activityExtItem = self.activityItem.activityExts[0]
-        self.activityImgItem =self.activityItem.activityImgs
+        self.activityImgItem = self.activityItem.activityImgs
         self.activityProjectItem = self.activityItem.activityProjects
         self.setData();
     }
@@ -63,18 +69,18 @@ function() {
         if (self.activityItem.unrealStatus === 0) {
             number = self.activityItem.unrealCount + number
         }
-        let projectList= self.activityProjectItem.map(e => { 
-            let expense = e.free==1?e.expense:0
+        let projectList = self.activityProjectItem.map(e => {
+            let expense = e.free == 1 ? e.expense : 0
             return {
-                name:`${e.name}:￥${expense}/人`
+                name: `${e.name}:￥${expense}/人`
             }
         })
-        projectList = projectList.sort((a,b) =>a.sortNo-b.sortNo )
+        projectList = projectList.sort((a, b) => a.sortNo - b.sortNo)
         self.activityList.item = {
             "time": `${self.getDateToFormat(self.activityItem.startTime)}-${self.getDateToFormat(self.activityItem.endTime)}`,
             "closeTime": self.activityItem.closeTime,
-            "activityType": self.activityExtItem?self.activityExtItem.activityType:"",
-            "requirements": self.activityExtItem?self.activityExtItem.requirements:"",
+            "activityType": self.activityExtItem ? self.activityExtItem.activityType : "",
+            "requirements": self.activityExtItem ? self.activityExtItem.requirements : "",
             "projectList": projectList,
             "number": number
         }
@@ -88,7 +94,7 @@ function() {
     }
     self.setTextArea = function () {
         self.activityRulesText.data = { html: self.activityExtItem.activityRules }
-        self.phoneText.text=self.activityExtItem.customerService
+        self.phoneText.text = self.activityExtItem.customerService
     }
     self.getDateToFormat = function (date) {
         const dateTime = new Date(date)
@@ -107,7 +113,7 @@ function() {
                 imgTwo.push(e)
             }
         });
-        imgTwo = imgTwo.sort((a,b) =>a.sortNo-b.sortNo )
+        imgTwo = imgTwo.sort((a, b) => a.sortNo - b.sortNo)
         self.activityImgList.funcList = imgTwo.map(x => {
             return {
                 bgUrl: self.getImg(x.path),
@@ -117,9 +123,12 @@ function() {
                 textbottom: x.name
             }
         })
-        imgOne = imgTwo.sort((a, b) => a.sortNo - b.sortNo)
-        self.logoImg.src = self.getImg(imgOne[0].path)
-        self.listCompanent.funcList =  imgOne.map(x => {
+        imgOne = imgOne.sort((a, b) => a.sortNo - b.sortNo)
+        if (imgOne.length > 0) {
+            self.logoImg.src = self.getImg(imgOne[0].path)
+        }
+        imgOne.splice(0,1)
+        self.listCompanent.funcList = imgOne.map(x => {
             return {
                 bgUrl: self.getImg(x.path),
                 height1: "auto",
@@ -164,7 +173,7 @@ function() {
     //页面事件
     //校验手机号
     self.checkPhone = function () {
-        let mobile=self.phoneBox.value
+        let mobile = self.phoneBox.value
         if (!mobile) {
             uni.showToast({
                 icon: "error",
@@ -193,9 +202,9 @@ function() {
         }
         let url = '/api/sys/sms'
         let params = {
-            mobile:self.phoneBox.value
+            mobile: self.phoneBox.value
         }
-        const res =await self.$postAction(url, params)
+        const res = await self.$postAction(url, params)
         uni.showToast({
             title: res.message,
             duration: 2000,
@@ -224,7 +233,7 @@ function() {
         let url = '/api/sys/phoneLogin'
         let params = {
             mobile: self.phoneBox.value,
-            captcha:self.viewInput.value
+            captcha: self.viewInput.value
         }
         const res = await self.$postAction(url, params)
         if (!res.success) {
@@ -247,6 +256,6 @@ function() {
         uni.setStorageSync("userInfo", res.result.userInfo)
         uni.$u.route(
             `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
-          );
+        );
     }
 }

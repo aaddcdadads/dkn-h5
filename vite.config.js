@@ -99,6 +99,10 @@ export default defineConfig({
         target: 'http://dkn-h5.dev.haomo-tech.com:8000',
         changeOrigin: true,
       },
+      '/files': {
+        target: 'http://dkn-h5.dev.haomo-tech.com:8000',
+        changeOrigin: true,
+      },
       '/project-api/api': {
         target: 'http://dev.block-design.cn',
         changeOrigin: true,
