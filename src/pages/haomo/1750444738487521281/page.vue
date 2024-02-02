@@ -93,6 +93,7 @@
                 <information-input-box
                   ref="smscodeIpnut"
                   v-model:value="smscodeIpnut.value"
+                  left-src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan.png"
                   placeholder="* 请输入短信验证码"
                   @onCode="onSmscodeIpnutOnCode"
                   class="ele-smscodeIpnut"
@@ -103,6 +104,7 @@
                 <information-input-box
                   ref="storeInput"
                   v-model:value="storeInput.value"
+                  left-src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendian.png"
                   :show-code="false"
                   :show-icon="true"
                   placeholder="* 请选择领奖门店"
