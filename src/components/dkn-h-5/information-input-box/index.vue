@@ -3,7 +3,7 @@
     <view class="image_box1">
       <image class="imageleft" :src="leftSrc"/>
     </view>
-    <input :placeholder="placeholder" class="data_input" v-model="value"/>
+    <input :placeholder="placeholder" class="data_input" v-model:value="cValue" @input="input"/>
     <view v-show="showCode">
       <text @click="onCode" :class="showColor ? 'gcolor' : 'color'">{{ code }}</text>
     </view>
@@ -64,7 +64,13 @@ export default {
       type: 'text',
       code: "获取验证码",
       showColor: false,
+      cValue: "",
     }
+  },
+  watch: {
+    value(value) {
+      this.cValue = value;
+    },
   },
   methods: {
     onCode() {
@@ -85,6 +91,10 @@ export default {
     },
     rightIcon() {
       this.$emit("rightIcon");
+    },
+    input(e) {
+      this.$emit("update:value", this.cValue);
+      this.$emit("input");
     }
   }
 }
