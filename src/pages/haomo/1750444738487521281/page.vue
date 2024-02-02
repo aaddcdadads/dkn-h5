@@ -14,43 +14,6 @@
           class="ele-formbgCard"
         >
           <view
-            class="ele-wrapper ele-wrapper-d2a1d00b-5944-454d-8524-4be2a05c3be8"
-          >
-            <hm-uview-text
-              text="选择奖品套餐"
-              font-size="16px"
-              class="ele-d2a1d00b-5944-454d-8524-4be2a05c3be8"
-            >
-            </hm-uview-text>
-          </view>
-          <view class="ele-wrapper ele-wrapper-warning">
-            <hm-uview-bg-card
-              ref="warning"
-              width="100%"
-              height="100%"
-              border-radius=""
-              box-shadow-v-shadow=""
-              box-shadow-blur=""
-              background-color="#FFF5E6"
-              class="ele-warning"
-            >
-              <view
-                class="ele-wrapper ele-wrapper-e0671cfa-0c0d-4649-8682-46e9560f861e"
-              >
-                <hm-uview-icon
-                  name="info-circle-fill"
-                  color="#FF9900"
-                  size="16px"
-                  label="特别提醒：报名截止后逾期未核销者不支持退款"
-                  label-size="12px"
-                  label-color="#FF9900"
-                  class="ele-e0671cfa-0c0d-4649-8682-46e9560f861e"
-                >
-                </hm-uview-icon>
-              </view>
-            </hm-uview-bg-card>
-          </view>
-          <view
             class="ele-wrapper ele-wrapper-74c8c2c3-d387-4029-8b68-8275204c2ed5"
           >
             <hm-uview-bg-card
@@ -396,7 +359,6 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
-import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import EventRegistrationCard from "/@/components/dkn-h-5/event-registration-card/index.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
@@ -410,7 +372,6 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewText,
-    HmUviewIcon,
     EventRegistrationCard,
     InformationInputBox,
     HmUviewPopup,
@@ -1374,33 +1335,6 @@ export default {
     align-items: center;
     padding-bottom: 140px;
   }
-}
-
-.ele-wrapper-d2a1d00b-5944-454d-8524-4be2a05c3be8 {
-  font-family: "PingFangSC-Medium", "PingFang SC Medium", "PingFang SC",
-    sans-serif;
-  font-weight: 500;
-}
-
-.ele-wrapper-warning {
-  border: 1px solid #ffebcc;
-  height: 40px;
-  margin: 10px 0 5px;
-  .ele-warning {
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-  }
-}
-
-.ele-wrapper-e0671cfa-0c0d-4649-8682-46e9560f861e {
-  font-family: "PingFangSC-Regular", "PingFang SC", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  color: #ff9900;
-  line-height: 17px;
-  padding: 0 8px;
-  display: flex;
 }
 
 .ele-wrapper-74c8c2c3-d387-4029-8b68-8275204c2ed5 {
