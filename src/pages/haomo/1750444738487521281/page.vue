@@ -93,7 +93,7 @@
                 <information-input-box
                   ref="smscodeIpnut"
                   v-model:value="smscodeIpnut.value"
-                  left-src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan.png"
+                  left-src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan1.png"
                   placeholder="* 请输入短信验证码"
                   @onCode="onSmscodeIpnutOnCode"
                   class="ele-smscodeIpnut"
