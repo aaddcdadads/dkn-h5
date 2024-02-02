@@ -47,18 +47,6 @@
             </hm-uview-bg-card>
           </view>
           <view
-            class="ele-wrapper ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b"
-          >
-            <hm-uview-text
-              text="资料填写"
-              font-size="16px"
-              color="#000000"
-              :text-style="{ fontWeight: 700 }"
-              class="ele-e4e2b49b-b097-4a65-a356-d9d95daa618b"
-            >
-            </hm-uview-text>
-          </view>
-          <view
             class="ele-wrapper ele-wrapper-7927eb64-d6cf-4dda-8938-a15bb62187d2"
           >
             <hm-uview-bg-card
@@ -72,11 +60,18 @@
               background-color="#FFFFFF"
               class="ele-7927eb64-d6cf-4dda-8938-a15bb62187d2"
             >
+              <view
+                class="ele-wrapper ele-wrapper-41e260d8-66e3-4a5a-8600-e82cd01f5d1c"
+              >
+                <hm-uview-text text="填写资料信息" font-size="16px">
+                </hm-uview-text>
+              </view>
               <view class="ele-wrapper ele-wrapper-nameInput">
                 <information-input-box
                   ref="nameInput"
                   v-model:value="nameInput.value"
                   :show-code="false"
+                  placeholder="姓名/昵称"
                   class="ele-nameInput"
                 >
                 </information-input-box>
@@ -1350,12 +1345,6 @@ export default {
 
 .ele-wrapper-a9b61974-4b4c-4f4b-bf36-c799e54a8505 {
   margin-bottom: 12px;
-}
-
-.ele-wrapper-e4e2b49b-b097-4a65-a356-d9d95daa618b {
-  font-family: "PingFangSC-Medium", "PingFang SC Medium", "PingFang SC",
-    sans-serif;
-  font-weight: 500;
 }
 
 .ele-wrapper-7927eb64-d6cf-4dda-8938-a15bb62187d2 {
