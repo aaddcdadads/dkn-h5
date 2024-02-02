@@ -155,6 +155,10 @@ export default {
   },
   methods: {
     valChange(val, e) {
+      let item =this.data[e]
+      if (item.multipleOrder===1 && item.number===1 && val ==1) {
+        return
+      }
       let n = this.data[e].number + val;
       this.data[e].number = n > 0 ? n : 0;
       this.$emit("change", n);
