@@ -1203,16 +1203,6 @@ export default {
         const res = await self.$postAction(url, params);
         if (!res.success) {
           if (res.message === "当前活动已经报名！") {
-            if (!res.result) {
-              uni.showToast({
-                icon: "error",
-                position: "top",
-                title: res.message,
-                duration: 2000,
-              });
-              self.login();
-              return;
-            }
             if (res.result.paymentStatus === 1) {
               uni.showToast({
                 icon: "error",
@@ -1225,6 +1215,15 @@ export default {
               self.countdown.text = "";
               self.prices.text = `¥ ${res.result.money}`;
               self.orderId = res.result.money;
+            } else {
+              uni.showToast({
+                icon: "error",
+                position: "top",
+                title: res.message,
+                duration: 2000,
+              });
+              self.login();
+              return;
             }
           }
           return;
