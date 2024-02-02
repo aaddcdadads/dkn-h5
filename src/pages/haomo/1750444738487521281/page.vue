@@ -1055,7 +1055,7 @@ export default {
       self.activityId = self.$route.query.activityId;
       self.activityName = self.$route.query.activityName;
       // self.eventCard.list = []
-      self.storeList.list = [];
+      //self.storeList.list = []
       self.payButton.text = `立即报名`;
       self.money = 0;
       self.activityText.text = "";
