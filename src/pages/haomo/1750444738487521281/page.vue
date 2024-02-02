@@ -1310,13 +1310,14 @@ export default {
         if (!self.orderId) {
           return;
         }
-        let channel = 0;
-        if (self.weixinRadio.value === 1) {
-          channel = 1;
+        let channel = "0";
+        if (self.weixinRadio.value === "1") {
+          channel = "1";
         }
         self.$pay(self.orderId, channel);
       };
     },
+
     onEventCardChecked(e) {
       this.checked();
     },
