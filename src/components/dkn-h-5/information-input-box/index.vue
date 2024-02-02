@@ -1,10 +1,10 @@
 <template>
   <view :class="borderColor ? 'borderColor' : 'inputBox'" @click="borderColor = !borderColor">
     <view class="image_box1">
-      <image class="imageleft" :src="leftSrc[0]" v-show="!borderColor"/>
-      <image class="imageleft" :src="leftSrc[1]" v-show="borderColor"/>
+      <image class="imageleft" :src="leftSrc[0]" v-show="!borderColor" />
+      <image class="imageleft" :src="leftSrc[1]" v-show="borderColor" />
     </view>
-    <input :placeholder="placeholder" class="data_input" v-model="value" @blur="borderColor = false"/>
+    <input :placeholder="placeholder" class="data_input" v-model="value" @blur="borderColor = false" />
     <view v-show="showCode">
       <text @click="onCode" :class="showColor ? 'gcolor' : 'color'">{{ code }}</text>
     </view>
@@ -26,13 +26,14 @@ export default {
     /**
      * 左侧图标
      */
-    leftSrc:{
-      type:String,
-      default:[
-         "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-         'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png'
-      ]
-       
+    leftSrc: {
+      type: Array,
+      default: function () {
+        return [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+          'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png'
+        ]
+      }
     },
     /**
      * 右侧图标
@@ -58,10 +59,10 @@ export default {
     /**
      * 输入框提示
      */
-     placeholder:{
-      type:String,
-      default:"* 请填写姓名/昵称",
-     },
+    placeholder: {
+      type: String,
+      default: "* 请填写姓名/昵称",
+    },
   },
   data() {
     return {
@@ -69,7 +70,7 @@ export default {
       type: 'text',
       code: "获取验证码",
       showColor: false,
-      borderColor:false,
+      borderColor: false,
     }
   },
   methods: {
@@ -96,7 +97,8 @@ export default {
 }
 </script>
 <style scoped>
-.inputBox,.borderColor {
+.inputBox,
+.borderColor {
   width: 100%;
   display: flex;
   align-items: center;
@@ -134,21 +136,24 @@ export default {
   flex: 1;
   font-size: 13px;
 }
-.imageleft{
+
+.imageleft {
   width: 25px;
   height: 25px;
 }
-.image_box1{
+
+.image_box1 {
   height: 100%;
   display: flex;
   justify-content: center;
   /* margin-top: 5px; */
   width: 40px;
 }
-.inputBox{
+
+.inputBox {
   border: 1px solid #CFCFCF;
 }
-.borderColor{
-  border: 1px solid #F32878; 
-}
-</style>
+
+.borderColor {
+  border: 1px solid #F32878;
+}</style>
