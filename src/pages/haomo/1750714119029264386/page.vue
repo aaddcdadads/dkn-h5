@@ -924,7 +924,7 @@ export default {
       },
       sure1Button: {
         type: "info",
-        text: "拨打",
+        text: "登陆",
       },
       canelButton: {
         type: "info",
