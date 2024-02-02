@@ -1179,6 +1179,7 @@ export default {
               self.orderId = res.result.money;
             } else {
               self.error(res.message);
+              self.login();
               return;
             }
           } else {
