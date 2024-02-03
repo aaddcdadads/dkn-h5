@@ -133,7 +133,7 @@ export default {
 
 .ele-wrapper-sharingImage {
   width: 100%;
-  /deep/.ele-mechanics {
+  /deep/.ele-sharingImage {
     background-size: cover !important;
     background-repeat: no-repeat;
     aspect-ratio: 375/667;
