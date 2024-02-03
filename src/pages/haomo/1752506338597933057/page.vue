@@ -15,14 +15,19 @@
           class="ele-e006ab79-f3a9-492b-8632-73042a091b41"
         >
           <view class="ele-wrapper ele-wrapper-sharingImage">
-            <hm-uview-icon
+            <hm-uview-bg-card
               ref="sharingImage"
-              :name="sharingImage.name"
-              :size="sharingImage.size"
-              :label="sharingImage.label"
+              :width="sharingImage.width"
+              :height="sharingImage.height"
+              :border-radius="sharingImage.borderRadius"
+              :padding="sharingImage.padding"
+              :box-shadow-v-shadow="sharingImage.boxShadowVShadow"
+              :box-shadow-blur="sharingImage.boxShadowBlur"
+              :box-shadow-color="sharingImage.boxShadowColor"
+              :background-image="sharingImage.backgroundImage"
               class="ele-sharingImage"
             >
-            </hm-uview-icon>
+            </hm-uview-bg-card>
           </view>
           <view
             class="ele-wrapper ele-wrapper-084fc45c-3b7d-42af-9042-8c47c465787c"
@@ -63,24 +68,29 @@
 <script>
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
-import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 
 export default {
   name: "SharingPage",
   components: {
     HmUviewBgCard,
-    HmUviewIcon,
     HmUviewText,
+    HmUviewIcon,
   },
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
     return {
       sharingImage: {
-        name: "/static/components/img/share.png",
-        size: "100%",
-        label: "",
+        width: "100%",
+        height: "100%",
+        borderRadius: "0",
+        padding: "0",
+        boxShadowVShadow: "0",
+        boxShadowBlur: "0",
+        boxShadowColor: "#00000000",
+        backgroundImage: "/static/components/img/share.png",
       },
     };
   },
@@ -91,7 +101,7 @@ export default {
   methods: {
     onCreated() {
       //注册
-      this.sharingImage.name;
+      this.sharingImage.backgroundImage;
     },
 
     onEle0Ed4308BD32B4F148401Ba9Ad296Dc56Click() {
@@ -101,7 +111,7 @@ export default {
       link.download = "活动分享图片";
 
       // 将 href 属性设置为图片的 URL
-      link.href = this.sharingImage.name;
+      link.href = this.sharingImage.backgroundImage;
 
       document.body.appendChild(link);
       // 触发链接的点击事件
@@ -123,11 +133,15 @@ export default {
 
 .ele-wrapper-sharingImage {
   width: 100%;
-  aspect-ratio: 375/667;
-  margin-bottom: 89px;
-  /deep/ .u-icon {
-    width: 100%;
+  /deep/.ele-mechanics {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    aspect-ratio: 375/667;
+    position: relative;
+    //height: 100%;
   }
+  display: block;
+  margin-bottom: 89px;
 }
 
 .ele-wrapper-084fc45c-3b7d-42af-9042-8c47c465787c {
