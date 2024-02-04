@@ -72,6 +72,7 @@
                   border-radius=""
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
+                  background-color="#FFFFFF00"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-3b0b65a9-03ab-4be8-89f2-1ace4afa48fd"
