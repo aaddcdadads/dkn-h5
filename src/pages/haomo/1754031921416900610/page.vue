@@ -58,6 +58,8 @@
               >
                 <hm-uview-field
                   value=""
+                  label="活动名称"
+                  placeholder="活动名称"
                   label-width="160"
                   :label-align="'center'"
                   icon=""
