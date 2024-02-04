@@ -324,8 +324,8 @@ export default {
   height: 121px;
   .ele-messageTitle {
     background: radial-gradient(
-      50% 144.19%,
-      #ffffff 0%,
+      50% 94.19%,
+      #ffffff -150%,
       #e1a4b9 7.58%,
       #c6537b 100%
     ) !important;
