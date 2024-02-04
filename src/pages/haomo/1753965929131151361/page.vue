@@ -168,11 +168,6 @@
                       placeholder: '2024-03-01 08:49:59',
                       value: '',
                     },
-                    {
-                      label: '订单编号',
-                      placeholder: '86973497296789259486',
-                      value: '',
-                    },
                   ]"
                   class="ele-3a72f42e-dc59-431b-9a12-5719c8248610"
                 >
@@ -246,11 +241,6 @@ export default {
           {
             label: "报名时间",
             placeholder: "2024-03-01 08:49:59",
-            value: "",
-          },
-          {
-            label: "订单编号",
-            placeholder: "86973497296789259486",
             value: "",
           },
         ],
