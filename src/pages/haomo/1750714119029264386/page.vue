@@ -1300,7 +1300,7 @@ export default {
       this.viewPopup.show = false;
     },
     onSure1ButtonClick() {
-      this.login();
+      this.checkOrder();
     },
     onCanelButtonClick() {
       this.phonePopup.show = false;
