@@ -92,6 +92,9 @@ export default {
   watch: {
     value(value) {
       this.cValue = value;
+      if(this.disabled && value !=="" ){
+      this.borderColor = false;
+    }
     },
   },
   mounted(){
