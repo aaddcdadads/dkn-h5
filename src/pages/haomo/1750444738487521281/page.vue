@@ -110,7 +110,6 @@
                   :show-code="false"
                   :show-icon="true"
                   placeholder="* 请选择领奖门店"
-                  @rightIcon="onStoreInputRightIcon"
                   @onClick="onStoreInputOnClick"
                   class="ele-storeInput"
                 >
@@ -1334,7 +1333,6 @@ export default {
     onSmscodeIpnutOnCode() {
       this.getPhoneCode();
     },
-    onStoreInputRightIcon() {},
     onStoreInputOnClick() {
       this.shopPop.show = true;
     },
