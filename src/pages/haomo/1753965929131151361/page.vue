@@ -205,16 +205,15 @@
                 >
                 </hm-uview-field>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-16100b5f-2e20-4801-9029-85d6dd862b1d"
-              >
+              <view class="ele-wrapper ele-wrapper-writeOffBtn">
                 <hm-uview-bg-card
+                  ref="writeOffBtn"
                   width="100%"
                   height="100%"
                   border-radius=""
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
-                  class="ele-16100b5f-2e20-4801-9029-85d6dd862b1d"
+                  class="ele-writeOffBtn"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-4427eec5-dbd4-4fcb-b750-b2bb21ee9f32"
@@ -363,7 +362,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-16100b5f-2e20-4801-9029-85d6dd862b1d {
+.ele-wrapper-writeOffBtn {
   width: 100%;
 }
 
