@@ -222,6 +222,7 @@
                       text="返回活动详情页"
                       font-size="15px"
                       color="#D8477B"
+                      padding="3"
                     >
                     </hm-uview-text>
                   </view>
