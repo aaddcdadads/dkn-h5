@@ -92,7 +92,7 @@ export default {
   watch: {
     value(value) {
       this.cValue = value;
-      if(this.disabled && this.cValue !==""){
+      if(this.disabled && value !==""){
       this.borderColor = false;
     }
     },
