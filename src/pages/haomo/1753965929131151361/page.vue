@@ -79,6 +79,8 @@
                   >
                     <hm-uview-image
                       src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/ScanCode.png"
+                      width="20px"
+                      height="20px"
                     >
                     </hm-uview-image>
                   </view>
