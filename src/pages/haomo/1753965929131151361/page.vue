@@ -103,6 +103,12 @@
               box-shadow-blur=""
               class="ele-2da4517d-7fb0-4bdc-825d-f295b2c74751"
             >
+              <view
+                class="ele-wrapper ele-wrapper-2060a060-910f-4964-925f-6601124d2f0d"
+              >
+                <event-registration-information-card>
+                </event-registration-information-card>
+              </view>
             </hm-uview-bg-card>
           </view>
         </hm-uview-bg-card>
@@ -116,6 +122,7 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
+import EventRegistrationInformationCard from "/@/components/dkn-h-5/event-registration-information-card/index.vue";
 
 export default {
   name: "NewActivityRegistrationInformation",
@@ -123,6 +130,7 @@ export default {
     HmUviewBgCard,
     HmUviewText,
     HmUviewImage,
+    EventRegistrationInformationCard,
   },
   options: { styleIsolation: "shared" },
   data() {
