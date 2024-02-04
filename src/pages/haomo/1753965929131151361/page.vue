@@ -145,6 +145,7 @@
               border-radius=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
+              background-color="#FAFAFA"
               class="ele-25fbac4b-fb00-45c5-9cf7-ed73dec88f58"
             >
               <view
