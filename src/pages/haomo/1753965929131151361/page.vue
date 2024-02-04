@@ -1,34 +1,26 @@
 <template>
   <view class="page card">
-    <view class="page-wrapper">
-    </view>
+    <view class="page-wrapper"> </view>
   </view>
 </template>
 
 <script>
-import { h } from 'vue';
-
+import { h } from "vue";
 
 export default {
   name: "NewActivityRegistrationInformation",
-  components: {
-  },
+  components: {},
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
     return {};
   },
-  watch: {
-  },
-  methods:{
-
-  }
+  watch: {},
+  methods: {},
 };
 </script>
 
 <style lang="less" scoped>
 .page {
-  
 }
-
 </style>
