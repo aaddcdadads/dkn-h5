@@ -79,6 +79,7 @@ export default {
       showColor: false,
       borderColor: false,
       cValue: "",
+      set:""
     }
   },
   watch: {
@@ -89,22 +90,25 @@ export default {
   methods: {
     onCode() {
       this.$emit("onCode");
-      if (!this.showStatus) {
-        return
-      }
       let time = 60;
       this.showColor = true;
       this.code = `${time}秒后可重新获取`;
-      var set = setInterval(() => {
+      this.set = setInterval(() => {
         if (time > 0) {
           time--;
           this.code = `${time}秒后可重新获取`;
         } else {
-          clearInterval(set);
+          clearInterval(this.set);
           this.code = '重新获取验证码';
           this.showColor = false;
         }
       }, 1000);
+    },
+    reset() {
+      this.code = '获取验证码';
+      this.showColor = false;
+      clearInterval(this.set);
+
     },
     rightIcon() {
       this.$emit("rightIcon");
