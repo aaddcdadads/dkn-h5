@@ -118,6 +118,28 @@
             </hm-uview-bg-card>
           </view>
           <view
+            class="ele-wrapper ele-wrapper-010f6de0-1635-4e55-81bb-8d3ff0846e27"
+          >
+            <hm-uview-bg-card
+              width="100%"
+              height="100%"
+              border-radius=""
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+            >
+              <view
+                class="ele-wrapper ele-wrapper-6f70c0fe-9613-40e4-b95a-888ee2363e0f"
+              >
+                <hm-uview-button
+                  :shape="'circle'"
+                  text="确认核销"
+                  class="ele-6f70c0fe-9613-40e4-b95a-888ee2363e0f"
+                >
+                </hm-uview-button>
+              </view>
+            </hm-uview-bg-card>
+          </view>
+          <view
             class="ele-wrapper ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3"
           >
             <hm-uview-button
@@ -246,6 +268,15 @@ export default {
 
 .ele-wrapper-fbf844c5-828e-4650-bab4-24aeaffae8ca {
   margin-right: 8px;
+}
+
+.ele-wrapper-6f70c0fe-9613-40e4-b95a-888ee2363e0f {
+  width: 95%;
+  margin-top: 30px;
+  /deep/.u-btn {
+    background: linear-gradient(179.94deg, #ff9fc7 0%, #f32878 100%);
+    color: #ffffff;
+  }
 }
 
 .ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3 {
