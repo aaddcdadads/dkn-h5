@@ -51,6 +51,7 @@
                       text="活动名称"
                       font-size="17px"
                       color="#FFFFFF"
+                      padding="3"
                     >
                     </hm-uview-text>
                   </view>
