@@ -118,19 +118,16 @@
                       <hm-uview-image> </hm-uview-image>
                     </view>
                     <view
-                      class="ele-wrapper ele-wrapper-806f7728-482d-49ab-860e-81f7a453b1e3"
+                      class="ele-wrapper ele-wrapper-0b172b2b-78ba-4393-9b3b-13e761226949"
                     >
-                      <hm-uview-text> </hm-uview-text>
-                    </view>
-                    <view
-                      class="ele-wrapper ele-wrapper-e1e3b028-0f2b-4856-96ad-58f8ec83a870"
-                    >
-                      <hm-uview-text> </hm-uview-text>
-                    </view>
-                    <view
-                      class="ele-wrapper ele-wrapper-608ba51b-f0fc-4e0d-8608-4ae6a31f7d91"
-                    >
-                      <hm-uview-text> </hm-uview-text>
+                      <hm-uview-bg-card
+                        width="100%"
+                        height="100%"
+                        border-radius=""
+                        box-shadow-v-shadow=""
+                        box-shadow-blur=""
+                      >
+                      </hm-uview-bg-card>
                     </view>
                   </hm-uview-bg-card>
                 </view>
