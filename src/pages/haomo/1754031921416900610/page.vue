@@ -62,6 +62,7 @@
                   :label-align="'center'"
                   icon=""
                   right-icon=""
+                  class="ele-8270ddf0-7ca3-412d-a1a2-6ede8337634c"
                 >
                 </hm-uview-field>
               </view>
@@ -158,6 +159,10 @@ export default {
 }
 
 .ele-wrapper-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c {
+  width: 100%;
+}
+
+.ele-wrapper-8270ddf0-7ca3-412d-a1a2-6ede8337634c {
   width: 100%;
 }
 
