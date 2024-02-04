@@ -115,6 +115,10 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
+              <view class="ele-wrapper ele-wrapper-kaohe">
+                <hm-uview-modal ref="kaohe" v-model:visible="kaohe.visible">
+                </hm-uview-modal>
+              </view>
             </hm-uview-bg-card>
           </view>
           <view
@@ -154,6 +158,7 @@ import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
+import HmUviewModal from "/@/components/built-in/uniapp-uview-vue3/HmUviewModal.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -164,6 +169,7 @@ export default {
     HmUviewField,
     HmUviewText,
     HmUviewImage,
+    HmUviewModal,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -191,6 +197,9 @@ export default {
       },
       "8270ddf0-7ca3-412d-a1a2-6ede8337634c": {
         value: "",
+      },
+      kaohe: {
+        visible: true,
       },
       "315c9068-5a40-4c3b-9b6d-3841b926c816": {
         value: [
