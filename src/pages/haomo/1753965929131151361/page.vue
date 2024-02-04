@@ -152,7 +152,7 @@
               >
                 <hm-loop
                   :value="[
-                    { label: '姓名/昵称', placeholder: '姓名/昵称' },
+                    { label: '姓名/昵称:', placeholder: '姓名/昵称' },
                     {},
                     {},
                     {},
@@ -211,7 +211,7 @@ export default {
       "3a72f42e-dc59-431b-9a12-5719c8248610": {
         value: [
           {
-            label: "姓名/昵称",
+            label: "姓名/昵称:",
             placeholder: "姓名/昵称",
           },
           {},
