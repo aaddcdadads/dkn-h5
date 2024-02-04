@@ -23,7 +23,11 @@
                 <view
                   class="ele-wrapper ele-wrapper-0ded82e1-3f32-400b-915d-b361c39f83db"
                 >
-                  <hm-uview-field value=""> </hm-uview-field>
+                  <hm-uview-field
+                    value=""
+                    class="ele-0ded82e1-3f32-400b-915d-b361c39f83db"
+                  >
+                  </hm-uview-field>
                 </view>
               </template>
             </hm-loop>
@@ -73,6 +77,10 @@ export default {
 }
 
 .ele-wrapper-3d5cca18-be80-4c03-83e5-d43ea90a2db3 {
+  width: 100%;
+}
+
+.ele-wrapper-0ded82e1-3f32-400b-915d-b361c39f83db {
   width: 100%;
 }
 </style>
