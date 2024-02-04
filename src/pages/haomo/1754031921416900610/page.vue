@@ -124,7 +124,12 @@
                   <view
                     class="ele-wrapper ele-wrapper-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a"
                   >
-                    <hm-uview-text> </hm-uview-text>
+                    <hm-uview-text
+                      text="当前门店与报名登记门店不一致，需要强制核销？核销后不可再次领取奖品！"
+                      font-size="14px"
+                      color="#6C6C6C"
+                    >
+                    </hm-uview-text>
                   </view>
                 </hm-uview-modal>
               </view>
