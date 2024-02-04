@@ -249,6 +249,9 @@ export default {
     display: flex;
     align-items: center;
   }
+  /deep/.u-label-text {
+    color: #999999;
+  }
 }
 
 .ele-wrapper-prizeImageBox {
