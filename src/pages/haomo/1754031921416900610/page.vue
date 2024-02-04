@@ -101,7 +101,8 @@
                         <view
                           class="ele-wrapper ele-wrapper-fbf844c5-828e-4650-bab4-24aeaffae8ca"
                         >
-                          <hm-uview-image> </hm-uview-image>
+                          <hm-uview-image width="80px" height="80px">
+                          </hm-uview-image>
                         </view>
                       </template>
                     </hm-loop>
