@@ -235,6 +235,7 @@
               >
                 <hm-uview-button
                   :shape="'circle'"
+                  text="核销"
                   class="ele-ab01174d-8269-443a-ab92-f2d42d6c66bb"
                 >
                 </hm-uview-button>
