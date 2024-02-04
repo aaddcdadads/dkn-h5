@@ -1266,7 +1266,7 @@ export default {
           phone: self.phoneBox.value,
           activityId: self.activityId,
         });
-        if (!resp.success && !resp.result) {
+        if (!resp.success || !resp.result) {
           uni.showToast({
             icon: "error",
             position: "top",
