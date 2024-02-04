@@ -593,8 +593,8 @@ export default {
     onChange(e, m) {
       this.$emit("change", e, m);
     },
-    radioGroupChange() {
-      this.$emit("radioGroupChange");
+    radioGroupChange(e) {
+      this.$emit("radioGroupChange",e);
     },
     anchor(e) {
       this.toView = e
