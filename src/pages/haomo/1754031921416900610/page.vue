@@ -19,6 +19,13 @@
               :value="[]"
               class="ele-3d5cca18-be80-4c03-83e5-d43ea90a2db3"
             >
+              <template #default="{ item }">
+                <view
+                  class="ele-wrapper ele-wrapper-0ded82e1-3f32-400b-915d-b361c39f83db"
+                >
+                  <hm-uview-field value=""> </hm-uview-field>
+                </view>
+              </template>
             </hm-loop>
           </view>
         </hm-uview-bg-card>
@@ -31,12 +38,14 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
+import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 
 export default {
   name: "NewVerificationConfirmation",
   components: {
     HmUviewBgCard,
     HmLoop,
+    HmUviewField,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -44,6 +53,9 @@ export default {
     return {
       "3d5cca18-be80-4c03-83e5-d43ea90a2db3": {
         value: [],
+      },
+      "0ded82e1-3f32-400b-915d-b361c39f83db": {
+        value: "",
       },
     };
   },
