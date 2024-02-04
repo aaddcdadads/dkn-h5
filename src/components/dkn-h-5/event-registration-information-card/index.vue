@@ -198,6 +198,7 @@ export default {
   margin-bottom: 8px;
   background: #fafafa;
   position: relative;
+  overflow: hidden;
 }
 
 .change {
