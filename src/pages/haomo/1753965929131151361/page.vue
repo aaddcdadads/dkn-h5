@@ -178,7 +178,7 @@
                       class="ele-wrapper ele-wrapper-21c5606d-d727-4143-a4ce-026bb85006c1"
                     >
                       <hm-uview-field
-                        value=""
+                        :value="item.value"
                         :label="item.label"
                         :placeholder="item.placeholder"
                         label-width="160"
@@ -301,7 +301,7 @@ export default {
         value: "",
       },
       "21c5606d-d727-4143-a4ce-026bb85006c1": {
-        value: "",
+        value: "item.value",
       },
     };
   },
