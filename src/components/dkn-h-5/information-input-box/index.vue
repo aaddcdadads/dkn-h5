@@ -92,14 +92,14 @@ export default {
   watch: {
     value(value) {
       this.cValue = value;
-      if(this.disabled && this.value !==""){
+      if(this.disabled && this.cValue !==""){
       this.borderColor = false;
     }
     },
   },
   mounted(){
     this.cValue = this.value;
-    if(this.disabled && this.value !==""){
+    if(this.disabled && this.cValue !==""){
       this.borderColor = false;
     }
   },
@@ -135,7 +135,6 @@ export default {
     },
     onClick(){
         this.$emit("onClick");
-        console.log("112")
         this.borderColor = true;
     },
     focus(){
