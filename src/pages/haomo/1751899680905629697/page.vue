@@ -100,6 +100,7 @@
                       >
                         <hm-uview-button
                           :type="'primary'"
+                          :shape="'circle'"
                           text="确定"
                           @click="onEle205A06F4977C4Fe1Ac28E46F34C84338Click"
                           class="ele-205a06f4-977c-4fe1-ac28-e46f34c84338"
