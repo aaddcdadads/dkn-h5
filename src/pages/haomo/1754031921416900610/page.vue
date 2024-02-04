@@ -313,7 +313,7 @@ export default {
 }
 
 .ele-wrapper-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a {
-  margin-top: 5px;
+  margin: 10px;
 }
 
 .ele-wrapper-010f6de0-1635-4e55-81bb-8d3ff0846e27 {
