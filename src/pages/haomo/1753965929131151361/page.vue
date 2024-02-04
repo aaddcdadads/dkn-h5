@@ -207,39 +207,36 @@
                 >
                 </hm-uview-field>
               </view>
-              <view class="ele-wrapper ele-wrapper-writeOffBtn">
-                <hm-uview-bg-card
-                  ref="writeOffBtn"
-                  width="100%"
-                  height="100%"
-                  border-radius=""
-                  box-shadow-v-shadow=""
-                  box-shadow-blur=""
-                  background-color="#FAFAFA"
-                  class="ele-writeOffBtn"
+            </hm-uview-bg-card>
+          </view>
+          <view class="ele-wrapper ele-wrapper-writeOffBtn">
+            <hm-uview-bg-card
+              ref="writeOffBtn"
+              width="100%"
+              height="100%"
+              border-radius=""
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+              background-color="#FAFAFA"
+              class="ele-writeOffBtn"
+            >
+              <view
+                class="ele-wrapper ele-wrapper-47b84e95-87e0-4feb-8373-dfa45ddaae2e"
+              >
+                <hm-uview-text
+                  text="返回活动详情页"
+                  font-size="15px"
+                  color="#D8477B"
                 >
-                  <view
-                    class="ele-wrapper ele-wrapper-4427eec5-dbd4-4fcb-b750-b2bb21ee9f32"
-                  >
-                    <hm-uview-text
-                      text="返回活动详情页"
-                      font-size="15px"
-                      color="#D8477B"
-                      padding="3"
-                    >
-                    </hm-uview-text>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-ffdada98-8084-40ca-accd-e7efb42bf9cf"
-                  >
-                    <hm-uview-button
-                      :shape="'circle'"
-                      text="核销"
-                      class="ele-ffdada98-8084-40ca-accd-e7efb42bf9cf"
-                    >
-                    </hm-uview-button>
-                  </view>
-                </hm-uview-bg-card>
+                </hm-uview-text>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-ab01174d-8269-443a-ab92-f2d42d6c66bb"
+              >
+                <hm-uview-button
+                  class="ele-ab01174d-8269-443a-ab92-f2d42d6c66bb"
+                >
+                </hm-uview-button>
               </view>
             </hm-uview-bg-card>
           </view>
@@ -371,15 +368,9 @@ export default {
 
 .ele-wrapper-writeOffBtn {
   width: 100%;
-  .ele-writeOffBtn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  margin-top: 40px;
 }
 
-.ele-wrapper-ffdada98-8084-40ca-accd-e7efb42bf9cf {
+.ele-wrapper-ab01174d-8269-443a-ab92-f2d42d6c66bb {
   width: 100%;
   /deep/.u-btn {
     color: #ffffff;
