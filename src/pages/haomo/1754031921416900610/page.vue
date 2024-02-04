@@ -214,67 +214,69 @@ export default {
 
 <style lang="less" scoped>
 .page {
+
 }
 
 .ele-wrapper-d2f3fb59-dd6f-46a0-9ab7-5a867871dbd7 {
-  width: 100%;
-  height: 100vh;
+  width:100%;
+height:100vh;
 }
 
 .ele-wrapper-3d5cca18-be80-4c03-83e5-d43ea90a2db3 {
-  width: 100%;
-  background-color: #ffffff;
+  width:100%;
+background-color:#ffffff;
 }
 
 .ele-wrapper-0ded82e1-3f32-400b-915d-b361c39f83db {
-  width: 100%;
+  width:100%;
 }
 
 .ele-wrapper-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c {
-  width: 100%;
+  width:100%;
 }
 
 .ele-wrapper-8270ddf0-7ca3-412d-a1a2-6ede8337634c {
-  width: 100%;
+  width:100%;
 }
 
 .ele-wrapper-prizeImageBox {
-  width: 100%;
-  .ele-prizeImageBox {
-    display: flex;
-  }
+  width:100%;
+.ele-prizeImageBox{
+display: flex;
+}
 }
 
 .ele-wrapper-a46c4597-9e01-4191-8f9e-fc2396ae8aea {
-  width: 83px;
+  width:83px
+text-align: right;
 }
 
 .ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816 {
   flex: 1;
-  margin-left: 12px;
-  /deep/.uni-scroll-view-content {
-    display: flex;
+margin-left:12px;
+/deep/.uni-scroll-view-content{
+display: flex;
     flex-wrap: wrap;
-  }
+}
 }
 
 .ele-wrapper-fbf844c5-828e-4650-bab4-24aeaffae8ca {
-  margin-right: 8px;
+  margin-right:8px;
 }
 
 .ele-wrapper-010f6de0-1635-4e55-81bb-8d3ff0846e27 {
-  width: 100%;
-  position: fixed;
-  bottom: 40px;
-  left: 0px;
+  width:100%;
+position: fixed;
+bottom: 40px;
+left: 0px;
 }
 
 .ele-wrapper-6f70c0fe-9613-40e4-b95a-888ee2363e0f {
-  width: 100%;
-  margin-top: 30px;
-  /deep/.u-btn {
-    background: linear-gradient(179.94deg, #ff9fc7 0%, #f32878 100%);
-    color: #ffffff;
-  }
+  width:100%;
+margin-top:30px;
+/deep/.u-btn{
+  background: linear-gradient(179.94deg, #FF9FC7 0%, #F32878 100%);
+color:#ffffff;
+}
 }
 </style>
