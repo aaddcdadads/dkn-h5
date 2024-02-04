@@ -120,6 +120,7 @@
                   ref="kaohe"
                   v-model:visible="kaohe.visible"
                   title="强制核销？"
+                  confirm-color="#2979FF"
                   height="80px"
                 >
                   <view
