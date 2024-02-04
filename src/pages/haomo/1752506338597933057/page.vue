@@ -160,7 +160,7 @@ export default {
   aspect-ratio: 1/1;
   width: 21%;
   left: 11.4%;
-  bottom: 2.3%;
+  bottom: 3%;
   border-radius: 10px;
   /deep/ .u-icon {
     width: 100%;
