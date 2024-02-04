@@ -109,6 +109,7 @@
                     border-radius=""
                     box-shadow-v-shadow=""
                     box-shadow-blur=""
+                    background-color="#FFFAFAFA"
                     class="ele-a4355e06-12c3-4507-8536-82e276518788"
                   >
                   </hm-uview-bg-card>
