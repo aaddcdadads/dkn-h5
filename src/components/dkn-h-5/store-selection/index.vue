@@ -1,7 +1,7 @@
 <template>
-    <view :style="{ height: height + 'px' }" style="position: relative;overflow-y: auto;">
+    <view style="display: flex;position: relative;">
       <scroll-view :scroll-y="true" :scroll-into-view="toView" :scroll-with-animation="true" :style="{ height: height + 'px' }">
-          <u-radio-group v-model="name" @change="radioGroupChange">
+          <u-radio-group v-model="name" @change="radioGroupChange" style="width: 100%;">
             <view v-for="(items, index) in data" :key="index" class="shop" :id="items.anchor">
               <view v-for="item in items.store" class="store_list">
                 <view class="title">{{ item.city }}</view>
@@ -18,8 +18,8 @@
           </u-radio-group>
       </scroll-view>
       <view class="anchorBox">
-        <view v-for="item in data" class="itembox">
-          <a class="anchors" @click="anchor(item.anchor)">{{ item.anchor }}</a>
+        <view v-for="item in anch" class="itembox">
+          <a class="anchors" @click="anchor(item)">{{ item }}</a>
         </view>
       </view>
     </view>
@@ -571,7 +571,9 @@ export default {
       scrollTop: null,
       data: [],
       height: 0,
-      toView: ''
+      toView: '',
+      anch:[`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `q`, `r`, `s`, `t`, `u`, `v`, `w`, `x`, `y`, `z`]
+
     }
   },
   mounted() {
@@ -639,26 +641,21 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3px;
-  margin: 2px 0;
+  padding: 1px;
   border-radius:50%;
 }
 
 .anchorBox {
-  position: absolute;
-  right: 5px;
-  top: 10px;
   width: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-height: 300px;
+
 }
 
 .itembox {
-  margin: 2px 0;
-  padding: 3px;
+  padding: 1px;
   width: 100%;
   display: flex;
   flex-direction: column;
