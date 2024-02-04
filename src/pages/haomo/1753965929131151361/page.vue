@@ -148,45 +148,20 @@
               class="ele-25fbac4b-fb00-45c5-9cf7-ed73dec88f58"
             >
               <view
-                class="ele-wrapper ele-wrapper-56227592-0e4c-421a-9289-8d03b31a9c1f"
+                class="ele-wrapper ele-wrapper-3a72f42e-dc59-431b-9a12-5719c8248610"
               >
-                <hm-uview-formily
-                  :schema="{
-                    type: 'object',
-                    properties: {
-                      form: {
-                        type: 'void',
-                        'x-component': 'Form',
-                        'x-component-props': {
-                          labelWidth: '10%',
-                          labelPosition: 'top',
-                        },
-                        properties: {
-                          input: {
-                            type: 'string',
-                            maxLength: 1,
-                            default: '输入框',
-                            'x-decorator': 'FormItem',
-                            'x-decorator-props': {
-                              label: '输入框',
-                              name: 'input',
-                              class: ['required'],
-                            },
-                            'x-component': 'Input',
-                            'x-component-props': { disabled: true },
-                          },
-                        },
-                      },
-                    },
-                  }"
-                  class="ele-56227592-0e4c-421a-9289-8d03b31a9c1f"
+                <hm-loop
+                  :value="[{}, {}, {}, {}, {}]"
+                  class="ele-3a72f42e-dc59-431b-9a12-5719c8248610"
                 >
-                </hm-uview-formily>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-d1a4f898-e88e-47ea-9244-33e01432ee19"
-              >
-                <loop-field value=""> </loop-field>
+                  <template #default="{ item }">
+                    <view
+                      class="ele-wrapper ele-wrapper-21c5606d-d727-4143-a4ce-026bb85006c1"
+                    >
+                      <hm-uview-field value=""> </hm-uview-field>
+                    </view>
+                  </template>
+                </hm-loop>
               </view>
             </hm-uview-bg-card>
           </view>
@@ -202,8 +177,8 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import EventRegistrationInformationCard from "/@/components/dkn-h-5/event-registration-information-card/index.vue";
-import HmUviewFormily from "/@/components/built-in/uniapp-uview-vue3/HmUviewFormily.vue";
-import LoopField from "/@/components/dkn-h-5/loop-field/index.vue";
+import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
+import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 
 export default {
   name: "NewActivityRegistrationInformation",
@@ -212,14 +187,17 @@ export default {
     HmUviewText,
     HmUviewImage,
     EventRegistrationInformationCard,
-    HmUviewFormily,
-    LoopField,
+    HmLoop,
+    HmUviewField,
   },
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
     return {
-      "d1a4f898-e88e-47ea-9244-33e01432ee19": {
+      "3a72f42e-dc59-431b-9a12-5719c8248610": {
+        value: [{}, {}, {}, {}, {}],
+      },
+      "21c5606d-d727-4143-a4ce-026bb85006c1": {
         value: "",
       },
     };
@@ -271,7 +249,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-56227592-0e4c-421a-9289-8d03b31a9c1f {
+.ele-wrapper-3a72f42e-dc59-431b-9a12-5719c8248610 {
   width: 100%;
 }
 </style>
