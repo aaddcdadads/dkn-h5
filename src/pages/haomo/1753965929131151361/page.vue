@@ -198,7 +198,7 @@
                   label="订单编号"
                   placeholder="86973497296789259486"
                   label-width="160"
-                  :label-align="'right'"
+                  :label-align="'center'"
                   icon=""
                   right-icon=""
                   class="ele-5cf9158e-7842-477f-90a4-f6351085e84f"
