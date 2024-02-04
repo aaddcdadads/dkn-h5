@@ -64,10 +64,9 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-ef6ee774-0cac-4faa-a869-797744530da5"
-              >
+              <view class="ele-wrapper ele-wrapper-messageCode">
                 <hm-uview-bg-card
+                  ref="messageCode"
                   width="100%"
                   height="100%"
                   border-radius=""
