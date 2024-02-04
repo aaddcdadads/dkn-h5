@@ -241,7 +241,7 @@ export default {
 }
 
 .ele-wrapper-fbf844c5-828e-4650-bab4-24aeaffae8ca {
-  margin: 8px;
+  margin-right: 8px;
 }
 
 .ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3 {
