@@ -13,7 +13,15 @@
           class="ele-aeb7bbd5-76d1-4b56-8fcf-4839bc19aa46"
         >
           <view class="ele-wrapper ele-wrapper-messageTitle">
-            <hm-uview-bg-card ref="messageTitle" class="ele-messageTitle">
+            <hm-uview-bg-card
+              ref="messageTitle"
+              width="100%"
+              height="100%"
+              border-radius=""
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+              class="ele-messageTitle"
+            >
               <view
                 class="ele-wrapper ele-wrapper-30d9aca9-d99f-43e8-a872-6af24ae1bf9c"
               >
