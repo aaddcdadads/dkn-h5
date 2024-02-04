@@ -234,7 +234,7 @@ export default {
 
 .ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816 {
   flex: 1;
-  margin-left: 8px;
+  margin-left: 12px;
   /deep/.uni-scroll-view-content {
     display: flex;
     flex-wrap: wrap;
