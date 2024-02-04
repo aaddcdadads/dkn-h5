@@ -225,6 +225,8 @@
                     class="ele-wrapper ele-wrapper-ffdada98-8084-40ca-accd-e7efb42bf9cf"
                   >
                     <hm-uview-button
+                      :shape="'circle'"
+                      text="核销"
                       class="ele-ffdada98-8084-40ca-accd-e7efb42bf9cf"
                     >
                     </hm-uview-button>
