@@ -8,7 +8,7 @@
           width="100%"
           height="100%"
           border-radius=""
-          padding="10"
+          padding="0"
           box-shadow-v-shadow=""
           box-shadow-blur=""
           background-color="#FAFAFA"
