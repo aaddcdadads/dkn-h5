@@ -590,9 +590,6 @@ export default {
     })
   },
   methods: {
-    onChange(e, m) {
-      this.$emit("change", e, m);
-    },
     radioGroupChange(e) {
       this.$emit("radioGroupChange",e);
     },
