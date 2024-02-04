@@ -22,10 +22,9 @@
               box-shadow-blur=""
               class="ele-messageTitle"
             >
-              <view
-                class="ele-wrapper ele-wrapper-cdaa82f9-4893-40c2-9636-b1e9da2ffd62"
-              >
+              <view class="ele-wrapper ele-wrapper-messageText">
                 <hm-uview-bg-card
+                  ref="messageText"
                   width="100%"
                   height="100%"
                   border-radius=""
