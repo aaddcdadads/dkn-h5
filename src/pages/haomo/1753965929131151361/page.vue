@@ -215,6 +215,7 @@
                   border-radius=""
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
+                  background-color="#FAFAFA"
                   class="ele-writeOffBtn"
                 >
                   <view
@@ -316,7 +317,7 @@ export default {
 
 .ele-wrapper-aeb7bbd5-76d1-4b56-8fcf-4839bc19aa46 {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .ele-wrapper-messageTitle {
