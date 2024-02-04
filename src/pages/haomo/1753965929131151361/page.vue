@@ -168,6 +168,7 @@
                         value=""
                         :label="item.label"
                         placeholder="请输入:"
+                        label-width="160"
                         :label-align="'right'"
                         icon=""
                         right-icon=""
