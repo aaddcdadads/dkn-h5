@@ -8,6 +8,7 @@
           width="100%"
           height="100%"
           border-radius=""
+          padding="10"
           box-shadow-v-shadow=""
           box-shadow-blur=""
           class="ele-d2f3fb59-dd6f-46a0-9ab7-5a867871dbd7"
