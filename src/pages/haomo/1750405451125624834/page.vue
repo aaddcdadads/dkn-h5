@@ -2,9 +2,15 @@
   <view class="page card">
     <view class="page-wrapper">
       <view
+        class="ele-wrapper ele-wrapper-9eb19edb-d56f-48b3-83bc-0cae29500890"
+      >
+        <scroll-list> </scroll-list>
+      </view>
+      <view
         class="ele-wrapper ele-wrapper-1489aac3-c520-426d-93db-6425e17438a3"
       >
-        <information-input-box value=""> </information-input-box>
+        <information-input-box value="" placeholder="姓名/昵称">
+        </information-input-box>
       </view>
       <view
         class="ele-wrapper ele-wrapper-9bd1715e-57b0-42d2-924b-0ac1a000960b"
@@ -222,6 +228,7 @@
 
 <script>
 import { h } from "vue";
+import ScrollList from "/@/components/dkn-h-5/scroll-list/index.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import StoreSelection from "/@/components/dkn-h-5/store-selection/index.vue";
 import EventRegistrationInformationCard from "/@/components/dkn-h-5/event-registration-information-card/index.vue";
@@ -229,6 +236,7 @@ import EventRegistrationInformationCard from "/@/components/dkn-h-5/event-regist
 export default {
   name: "Test",
   components: {
+    ScrollList,
     InformationInputBox,
     StoreSelection,
     EventRegistrationInformationCard,
