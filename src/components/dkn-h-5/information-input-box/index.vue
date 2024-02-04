@@ -90,11 +90,14 @@ export default {
     }
   },
   watch: {
-    value(value) {
-      this.cValue = value;
-      if(this.disabled && value !==""){
-      this.borderColor = false;
-    }
+    value: {
+      handler(value) {
+        this.cValue = value;
+        if (this.disabled && value !== "") {
+          this.borderColor = false;
+        }
+      },
+      immediate: true,
     },
   },
   mounted(){
