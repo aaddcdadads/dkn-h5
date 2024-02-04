@@ -216,6 +216,19 @@
                   box-shadow-blur=""
                   class="ele-16100b5f-2e20-4801-9029-85d6dd862b1d"
                 >
+                  <view
+                    class="ele-wrapper ele-wrapper-4427eec5-dbd4-4fcb-b750-b2bb21ee9f32"
+                  >
+                    <hm-uview-text> </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-ffdada98-8084-40ca-accd-e7efb42bf9cf"
+                  >
+                    <hm-uview-button
+                      class="ele-ffdada98-8084-40ca-accd-e7efb42bf9cf"
+                    >
+                    </hm-uview-button>
+                  </view>
                 </hm-uview-bg-card>
               </view>
             </hm-uview-bg-card>
@@ -234,6 +247,7 @@ import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.
 import EventRegistrationInformationCard from "/@/components/dkn-h-5/event-registration-information-card/index.vue";
 import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
+import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
   name: "NewActivityRegistrationInformation",
@@ -244,6 +258,7 @@ export default {
     EventRegistrationInformationCard,
     HmLoop,
     HmUviewField,
+    HmUviewButton,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -342,6 +357,10 @@ export default {
 }
 
 .ele-wrapper-16100b5f-2e20-4801-9029-85d6dd862b1d {
+  width: 100%;
+}
+
+.ele-wrapper-ffdada98-8084-40ca-accd-e7efb42bf9cf {
   width: 100%;
 }
 </style>
