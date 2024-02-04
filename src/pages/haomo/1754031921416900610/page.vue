@@ -187,8 +187,8 @@ export default {
 
 .ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3 {
   width: 100%;
-  background: linear-gradient(179.94deg, #ff9fc7 0%, #f32878 100%);
   /deep/.u-btn {
+    background: linear-gradient(179.94deg, #ff9fc7 0%, #f32878 100%);
     color: #ffffff;
   }
 }
