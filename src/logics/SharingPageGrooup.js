@@ -19,11 +19,6 @@ const sharingPageRequest = (logic.sharingPageRequest = async function () {
 });
 
 /**
- * 处理
- */
-const sharingPageSuc = (logic.sharingPageSuc = function () {});
-
-/**
  * 逻辑流 sharingPageInitialization 入口函数
  */
 const sharingPageInitialization = (logic.sharingPageInitialization = async (
@@ -38,9 +33,10 @@ const sharingPageInitialization = (logic.sharingPageInitialization = async (
   if (self.sharingPageRequestData.success) {
   } else {
   }
-  sharingPageSuc();
+  let result = self.sharingPageRequestData.result;
+  console.log("e", result);
 });
 
 /********************** end sharingPageInitialization 开始 *********************/
 
-export { sharingPageRequest, sharingPageSuc, sharingPageInitialization };
+export { sharingPageRequest, sharingPageInitialization };
