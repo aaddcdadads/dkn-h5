@@ -35,7 +35,8 @@
               <view
                 class="ele-wrapper ele-wrapper-08025ba6-d526-4961-8082-28c8f82e3389"
               >
-                <hm-uview-text> </hm-uview-text>
+                <hm-uview-text text="活动名称" font-size="17px" color="#FFFFFF">
+                </hm-uview-text>
               </view>
               <view
                 class="ele-wrapper ele-wrapper-21010713-c118-4c9d-8a75-30201410d520"
