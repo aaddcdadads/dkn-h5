@@ -140,6 +140,7 @@ export default {
   .ele-messageTitle {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
