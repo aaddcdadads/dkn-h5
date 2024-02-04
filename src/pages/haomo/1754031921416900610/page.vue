@@ -42,6 +42,18 @@
               </template>
             </hm-loop>
           </view>
+          <view
+            class="ele-wrapper ele-wrapper-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c"
+          >
+            <hm-uview-bg-card
+              width="100%"
+              height="100%"
+              border-radius=""
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+            >
+            </hm-uview-bg-card>
+          </view>
         </hm-uview-bg-card>
       </view>
     </view>
