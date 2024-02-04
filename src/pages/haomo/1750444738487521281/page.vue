@@ -123,6 +123,7 @@
               v-model:show="shopPop.show"
               :mode="'bottom'"
               height=""
+              :mask-close-able="false"
               class="ele-shopPop"
             >
               <view
