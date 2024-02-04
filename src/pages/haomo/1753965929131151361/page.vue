@@ -370,6 +370,11 @@ export default {
 
 .ele-wrapper-writeOffBtn {
   width: 100%;
+  .ele-writeOffBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .ele-wrapper-ab01174d-8269-443a-ab92-f2d42d6c66bb {
