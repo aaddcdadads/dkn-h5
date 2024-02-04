@@ -251,6 +251,7 @@ export default {
 .ele-wrapper-prizeImageBox {
   width: 100%;
   .ele-prizeImageBox {
+    margin-top: 10px;
     display: flex;
   }
 }
