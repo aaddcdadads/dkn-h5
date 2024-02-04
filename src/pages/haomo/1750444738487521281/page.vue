@@ -105,6 +105,7 @@
                 <information-input-box
                   ref="storeInput"
                   v-model:value="storeInput.value"
+                  :disabled="true"
                   :left-src="storeInput.leftSrc"
                   :show-code="false"
                   :show-icon="true"
