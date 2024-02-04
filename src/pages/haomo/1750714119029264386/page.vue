@@ -30,11 +30,11 @@
                 class="ele-wrapper ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe"
               >
                 <hm-uview-icon
-                  label-color="#FFFFFF"
+                  name="question-circle"
                   color="#FFFFFF"
                   size="20px"
-                  name="question-circle"
                   label="规则"
+                  label-color="#FFFFFF"
                   @click="onEle0Abf487751Bc431D8F1A3C043Bc451FeClick"
                   class="ele-0abf4877-51bc-431d-8f1a-3c043bc451fe"
                 >
@@ -46,14 +46,14 @@
             class="ele-wrapper ele-wrapper-3de94d32-48f2-495a-b447-4ba9360a1ceb"
           >
             <hm-uview-bg-card
-              padding="12"
-              box-shadow-blur="0"
-              box-shadow-v-shadow="0"
-              box-shadow-color="#00000000"
-              border-radius="0"
-              background-color="#FFFFFF00"
               width="100%"
               height=""
+              border-radius="0"
+              padding="12"
+              box-shadow-v-shadow="0"
+              box-shadow-blur="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
               class="ele-3de94d32-48f2-495a-b447-4ba9360a1ceb"
             >
             </hm-uview-bg-card>
@@ -739,7 +739,7 @@ export default {
         hidden: false,
       },
       regularPopup: {
-        show: true,
+        show: false,
       },
       phonePopup: {
         show: false,
