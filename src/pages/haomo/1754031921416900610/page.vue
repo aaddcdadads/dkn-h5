@@ -68,16 +68,15 @@
                 >
                 </hm-uview-field>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-50613a3f-87e2-4a8e-92d5-37c55929d66c"
-              >
+              <view class="ele-wrapper ele-wrapper-prizeImageBox">
                 <hm-uview-bg-card
+                  ref="prizeImageBox"
                   width="100%"
                   height="100%"
                   border-radius=""
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
-                  class="ele-50613a3f-87e2-4a8e-92d5-37c55929d66c"
+                  class="ele-prizeImageBox"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-a46c4597-9e01-4191-8f9e-fc2396ae8aea"
@@ -192,7 +191,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-50613a3f-87e2-4a8e-92d5-37c55929d66c {
+.ele-wrapper-prizeImageBox {
   width: 100%;
 }
 
