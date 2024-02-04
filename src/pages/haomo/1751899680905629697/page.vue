@@ -210,8 +210,7 @@ export default {
 }
 
 .ele-wrapper-d6daa484-d6ce-4792-9194-97a076552b17 {
-  width: calc(100% - 48rpx);
-  margin-left: 24rpx;
+  width: 100%;
   // /deep/.u-radio__icon-wrap--circle{
   //     right: 0;
   //     position: absolute;
