@@ -739,7 +739,7 @@ export default {
         hidden: false,
       },
       regularPopup: {
-        show: false,
+        show: true,
       },
       phonePopup: {
         show: false,
@@ -1730,7 +1730,7 @@ export default {
   width: 100%;
   position: fixed;
   bottom: 0px;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .ele-wrapper-isProtocol {
