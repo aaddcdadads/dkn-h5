@@ -91,7 +91,10 @@
                   <view
                     class="ele-wrapper ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816"
                   >
-                    <hm-loop :value="[{}]">
+                    <hm-loop
+                      :value="[{}]"
+                      class="ele-315c9068-5a40-4c3b-9b6d-3841b926c816"
+                    >
                       <template #default="{ item }">
                         <view
                           class="ele-wrapper ele-wrapper-fbf844c5-828e-4650-bab4-24aeaffae8ca"
@@ -206,6 +209,10 @@ export default {
   .ele-prizeImageBox {
     display: flex;
   }
+}
+
+.ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816 {
+  flex: 1;
 }
 
 .ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3 {
