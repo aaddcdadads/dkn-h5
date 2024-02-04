@@ -1339,7 +1339,8 @@ export default {
       this.shopPop.show = true;
     },
     onStoreListRadioGroupChange(e) {
-      this.storeInput.value = e;
+      console.log("123", e);
+      this.storeInput.value = e.name;
       setTimeout(() => {
         this.shopPop.show = false;
       }, 300);
