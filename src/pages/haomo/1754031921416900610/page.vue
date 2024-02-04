@@ -1,113 +1,48 @@
 <template>
   <view class="page card">
     <view class="page-wrapper">
-      <view
-        class="ele-wrapper ele-wrapper-d2f3fb59-dd6f-46a0-9ab7-5a867871dbd7"
-      >
-        <hm-uview-bg-card
-          width="100%"
-          height="100%"
-          border-radius=""
-          box-shadow-v-shadow=""
-          box-shadow-blur=""
-          class="ele-d2f3fb59-dd6f-46a0-9ab7-5a867871dbd7"
-        >
-          <view
-            class="ele-wrapper ele-wrapper-3d5cca18-be80-4c03-83e5-d43ea90a2db3"
-          >
-            <hm-loop
-              :value="[
-                { label: '姓名/昵称', placeholder: '姓名/昵称' },
-                { label: '手机号码', placeholder: '17722729038' },
-                { label: '领奖门店', placeholder: '迪卡侬深圳北站店' },
-              ]"
-              class="ele-3d5cca18-be80-4c03-83e5-d43ea90a2db3"
-            >
-              <template #default="{ item }">
-                <view
-                  class="ele-wrapper ele-wrapper-0ded82e1-3f32-400b-915d-b361c39f83db"
-                >
-                  <hm-uview-field
-                    value=""
-                    :label="item.label"
-                    :placeholder="item.placeholder"
-                    label-width="160"
-                    :label-align="'center'"
-                    icon=""
-                    right-icon=""
-                    class="ele-0ded82e1-3f32-400b-915d-b361c39f83db"
-                  >
-                  </hm-uview-field>
-                </view>
-              </template>
-            </hm-loop>
-          </view>
-          <view
-            class="ele-wrapper ele-wrapper-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c"
-          >
-            <hm-uview-bg-card
-              width="100%"
-              height="100%"
-              border-radius=""
-              box-shadow-v-shadow=""
-              box-shadow-blur=""
-              class="ele-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c"
-            >
-              <view
-                class="ele-wrapper ele-wrapper-8270ddf0-7ca3-412d-a1a2-6ede8337634c"
-              >
-                <hm-uview-field
-                  value=""
-                  label="活动名称"
-                  placeholder="活动名称"
-                  label-width="160"
-                  :label-align="'center'"
-                  icon=""
-                  right-icon=""
-                  class="ele-8270ddf0-7ca3-412d-a1a2-6ede8337634c"
-                >
-                </hm-uview-field>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-67851d6a-a953-4180-ab12-882950317850"
-              >
-                <hm-loop
-                  :value="[{}]"
-                  class="ele-67851d6a-a953-4180-ab12-882950317850"
-                >
-                  <template #default="{ item }">
-                    <view
-                      class="ele-wrapper ele-wrapper-2c2f7612-a920-4eb2-b335-bac609ea5b90"
-                    >
-                      <hm-uview-field value=""> </hm-uview-field>
-                    </view>
-                  </template>
-                </hm-loop>
-              </view>
-            </hm-uview-bg-card>
-          </view>
-          <view
-            class="ele-wrapper ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3"
-          >
-            <hm-uview-button
-              :shape="'circle'"
-              text="确认核销"
-              class="ele-fc0c5391-6bd0-4160-886a-72f353cfa0e3"
-            >
-            </hm-uview-button>
-          </view>
-        </hm-uview-bg-card>
-      </view>
+        <view class="ele-wrapper ele-wrapper-d2f3fb59-dd6f-46a0-9ab7-5a867871dbd7">
+      <hm-uview-bg-card width="100%" height="100%" border-radius="" box-shadow-v-shadow="" box-shadow-blur="" class="ele-d2f3fb59-dd6f-46a0-9ab7-5a867871dbd7"> 
+            <view class="ele-wrapper ele-wrapper-3d5cca18-be80-4c03-83e5-d43ea90a2db3">
+      <hm-loop :value='[{"label":"姓名/昵称","placeholder":"姓名/昵称"},{"label":"手机号码","placeholder":"17722729038"},{"label":"领奖门店","placeholder":"迪卡侬深圳北站店"}]' class="ele-3d5cca18-be80-4c03-83e5-d43ea90a2db3"> 
+      <template #default="{item}">
+              <view class="ele-wrapper ele-wrapper-0ded82e1-3f32-400b-915d-b361c39f83db">
+      <hm-uview-field value="" :label="item.label" :placeholder="item. placeholder" label-width="160" :label-align="'center'" icon="" right-icon="" class="ele-0ded82e1-3f32-400b-915d-b361c39f83db"> 
+    </hm-uview-field>
+    </view> 
+          </template> 
+    </hm-loop>
+    </view> 
+            <view class="ele-wrapper ele-wrapper-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c">
+      <hm-uview-bg-card width="100%" height="100%" border-radius="" box-shadow-v-shadow="" box-shadow-blur="" class="ele-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c"> 
+            <view class="ele-wrapper ele-wrapper-8270ddf0-7ca3-412d-a1a2-6ede8337634c">
+      <hm-uview-field value="" label="活动名称" placeholder="活动名称" label-width="160" :label-align="'center'" icon="" right-icon="" class="ele-8270ddf0-7ca3-412d-a1a2-6ede8337634c"> 
+    </hm-uview-field>
+    </view> 
+            <view class="ele-wrapper ele-wrapper-50613a3f-87e2-4a8e-92d5-37c55929d66c">
+      <hm-uview-bg-card width="100%" height="100%" border-radius="" box-shadow-v-shadow="" box-shadow-blur="" class="ele-50613a3f-87e2-4a8e-92d5-37c55929d66c"> 
+    </hm-uview-bg-card>
+    </view> 
+    </hm-uview-bg-card>
+    </view> 
+            <view class="ele-wrapper ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3">
+      <hm-uview-button :shape="'circle'" text="确认核销" class="ele-fc0c5391-6bd0-4160-886a-72f353cfa0e3"> 
+       
+    </hm-uview-button>
+    </view> 
+    </hm-uview-bg-card>
+    </view>
     </view>
   </view>
 </template>
 
 <script>
-import { h } from "vue";
+import { h } from 'vue';
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
+
 
 export default {
   name: "NewVerificationConfirmation",
@@ -121,75 +56,74 @@ export default {
   data() {
     let self = this;
     return {
-      "3d5cca18-be80-4c03-83e5-d43ea90a2db3": {
-        value: [
-          {
-            label: "姓名/昵称",
-            placeholder: "姓名/昵称",
-          },
-          {
-            label: "手机号码",
-            placeholder: "17722729038",
-          },
-          {
-            label: "领奖门店",
-            placeholder: "迪卡侬深圳北站店",
-          },
-        ],
+  "3d5cca18-be80-4c03-83e5-d43ea90a2db3": {
+    "value": [
+      {
+        "label": "姓名/昵称",
+        "placeholder": "姓名/昵称"
       },
-      "0ded82e1-3f32-400b-915d-b361c39f83db": {
-        value: "",
+      {
+        "label": "手机号码",
+        "placeholder": "17722729038"
       },
-      "8270ddf0-7ca3-412d-a1a2-6ede8337634c": {
-        value: "",
-      },
-      "67851d6a-a953-4180-ab12-882950317850": {
-        value: [{}],
-      },
-      "2c2f7612-a920-4eb2-b335-bac609ea5b90": {
-        value: "",
-      },
-    };
+      {
+        "label": "领奖门店",
+        "placeholder": "迪卡侬深圳北站店"
+      }
+    ]
   },
-  watch: {},
-  methods: {},
+  "0ded82e1-3f32-400b-915d-b361c39f83db": {
+    "value": ""
+  },
+  "8270ddf0-7ca3-412d-a1a2-6ede8337634c": {
+    "value": ""
+  }
+};
+  },
+  watch: {
+  },
+  methods:{
+
+  }
 };
 </script>
 
 <style lang="less" scoped>
 .page {
+  
 }
 
 .ele-wrapper-d2f3fb59-dd6f-46a0-9ab7-5a867871dbd7 {
-  width: 100%;
-  height: 100vh;
+  width:100%;
+height:100vh;
 }
 
 .ele-wrapper-3d5cca18-be80-4c03-83e5-d43ea90a2db3 {
-  width: 100%;
+  width:100%;
 }
 
 .ele-wrapper-0ded82e1-3f32-400b-915d-b361c39f83db {
-  width: 100%;
+  width:100%;
 }
 
 .ele-wrapper-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c {
-  width: 100%;
+  width:100%;
 }
 
 .ele-wrapper-8270ddf0-7ca3-412d-a1a2-6ede8337634c {
-  width: 100%;
+  width:100%;
 }
 
-.ele-wrapper-67851d6a-a953-4180-ab12-882950317850 {
-  width: 100%;
+.ele-wrapper-50613a3f-87e2-4a8e-92d5-37c55929d66c {
+  width:100%;
 }
 
 .ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3 {
-  width: 100%;
-  /deep/.u-btn {
-    background: linear-gradient(179.94deg, #ff9fc7 0%, #f32878 100%);
-    color: #ffffff;
-  }
+  width:100%;
+/deep/.u-btn{
+  background: linear-gradient(179.94deg, #FF9FC7 0%, #F32878 100%);
+color:#ffffff;
 }
+}
+
 </style>
