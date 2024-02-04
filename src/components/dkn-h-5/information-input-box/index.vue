@@ -4,7 +4,7 @@
       <image class="imageleft" :src="leftSrc[0]" v-show="!borderColor" />
       <image class="imageleft" :src="leftSrc[1]" v-show="borderColor" />
     </view>
-    <input :placeholder="placeholder" class="data_input" v-model:value="cValue" @focus="focus" @input="input" @blur="borderColor = false" :disabled="disabled"/>
+    <input :placeholder="placeholder" class="data_input" :value="cValue" @focus="focus" @input="input" @blur="borderColor = false" :disabled="disabled" :class="{'data_inputs':disabled}"/>
     <view v-show="showCode">
       <text @click="onCode" :class="showColor ? 'gcolor' : 'color'">{{ code }}</text>
     </view>
@@ -92,7 +92,7 @@ export default {
   watch: {
     value(value) {
       this.cValue = value;
-      if(this.disabled && value !=="" ){
+      if(this.disabled && this.value){
       this.borderColor = false;
     }
     },
@@ -135,6 +135,7 @@ export default {
     },
     onClick(){
         this.$emit("onClick");
+        console.log("112")
         this.borderColor = true;
     },
     focus(){
@@ -183,6 +184,9 @@ export default {
 .data_input {
   flex: 1;
   font-size: 13px;
+ 
+}
+.data_inputs{
   pointer-events: none;
 }
 
