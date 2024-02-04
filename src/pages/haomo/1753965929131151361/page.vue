@@ -219,7 +219,12 @@
                   <view
                     class="ele-wrapper ele-wrapper-4427eec5-dbd4-4fcb-b750-b2bb21ee9f32"
                   >
-                    <hm-uview-text> </hm-uview-text>
+                    <hm-uview-text
+                      text="返回活动详情页"
+                      font-size="15px"
+                      color="#D8477B"
+                    >
+                    </hm-uview-text>
                   </view>
                   <view
                     class="ele-wrapper ele-wrapper-ffdada98-8084-40ca-accd-e7efb42bf9cf"
