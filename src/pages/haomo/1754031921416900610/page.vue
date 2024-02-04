@@ -233,6 +233,9 @@ export default {
     display: flex;
     align-items: center;
   }
+  /deep/.u-label-text {
+    color: #999999;
+  }
 }
 
 .ele-wrapper-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c {
