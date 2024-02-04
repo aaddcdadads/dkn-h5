@@ -256,42 +256,41 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-76b3694d-443e-4d62-8c58-80e0356f7fa4"
-                  >
+                  <view class="ele-wrapper ele-wrapper-imgText">
                     <hm-uview-text
-                      padding="0"
-                      color="#000000"
-                      font-size="16px"
-                      text="活动奖品"
-                      bg-color="#FFFFFF00"
-                      class="ele-76b3694d-443e-4d62-8c58-80e0356f7fa4"
+                      ref="imgText"
+                      :text="imgText.text"
+                      :font-size="imgText.fontSize"
+                      :color="imgText.color"
+                      :bg-color="imgText.bgColor"
+                      :padding="imgText.padding"
+                      class="ele-imgText"
                     >
                     </hm-uview-text>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5"
-                  >
+                  <view class="ele-wrapper ele-wrapper-imgCard">
                     <hm-uview-bg-card
-                      padding="0"
-                      border-radius="12"
-                      background-color="#F797BD00"
-                      width="100%"
-                      height=""
-                      class="ele-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5"
+                      ref="imgCard"
+                      :width="imgCard.width"
+                      :height="imgCard.height"
+                      :border-radius="imgCard.borderRadius"
+                      :padding="imgCard.padding"
+                      :background-color="imgCard.backgroundColor"
+                      :hidden="imgCard.hidden"
+                      class="ele-imgCard"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-67658805-d92e-4e1f-8067-6a180eca6391"
                       >
                         <hm-uview-bg-card
-                          padding="0"
-                          box-shadow-blur="0"
-                          box-shadow-v-shadow="0"
-                          box-shadow-color="#00000000"
-                          border-radius="0"
-                          background-color="#FFFFFF00"
                           width="100%"
                           height=""
+                          border-radius="0"
+                          padding="0"
+                          box-shadow-v-shadow="0"
+                          box-shadow-blur="0"
+                          box-shadow-color="#00000000"
+                          background-color="#FFFFFF00"
                           class="ele-67658805-d92e-4e1f-8067-6a180eca6391"
                         >
                           <view class="ele-wrapper ele-wrapper-activityImgList">
@@ -826,6 +825,22 @@ export default {
             bgUrl:
               "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
           },
+          {
+            height1: "auto",
+            display: "block",
+            scoretext: "奖品",
+            textbottom: "奖品",
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+          },
+          {
+            height1: "auto",
+            display: "block",
+            scoretext: "奖品",
+            textbottom: "奖品",
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+          },
         ],
         backgroundColor: "#feeff7",
         textColor: "#000000",
@@ -912,6 +927,21 @@ export default {
         boxShadowColor: "#00000000",
         backgroundColor: "#FFFFFF",
       },
+      imgCard: {
+        hidden: false,
+        width: "100%",
+        height: "",
+        borderRadius: "12",
+        padding: "0",
+        backgroundColor: "#F797BD00",
+      },
+      imgText: {
+        text: "活动奖品",
+        fontSize: "16px",
+        color: "#000000",
+        bgColor: "#FFFFFF00",
+        padding: "0",
+      },
       activityProjectItem: {},
       activityExtItem: {},
       activityImgItem: {},
@@ -987,6 +1017,8 @@ export default {
       self.outsideBg.hidden = false;
       self.addOrderCard.hidden = false;
       self.notActivity.hidden = true;
+      self.imgCard.hidden = false;
+      self.imgText.text = "活动奖品";
       self.getActivity = async function (id) {
         let url = "/api/dkn/activity/queryByAll";
         const res = await self.$getAction(url, { id });
@@ -1081,6 +1113,10 @@ export default {
             textbottom: x.name,
           };
         });
+        if (self.activityImgList.funcList.length === 0) {
+          self.imgCard.hidden = true;
+          self.imgText.text = "";
+        }
         imgOne = imgOne.sort((a, b) => a.sortNo - b.sortNo);
         if (imgOne.length > 0) {
           self.logoImg.src = self.getImg(imgOne[0].path);
@@ -1503,19 +1539,20 @@ export default {
   }
 }
 
-.ele-wrapper-76b3694d-443e-4d62-8c58-80e0356f7fa4 {
+.ele-wrapper-imgText {
   float: left;
   margin-top: 24rpx;
   font-weight: bolder;
   margin-bottom: 12rpx;
 }
 
-.ele-wrapper-5799ec0b-0d4b-4bc5-9774-6a2ba9417af5 {
+.ele-wrapper-imgCard {
   width: 100%;
 }
 
 .ele-wrapper-67658805-d92e-4e1f-8067-6a180eca6391 {
   width: 100%;
+  over-flow: scroll;
 }
 
 .ele-wrapper-activityImgList {
