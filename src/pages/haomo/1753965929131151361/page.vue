@@ -151,7 +151,13 @@
                 class="ele-wrapper ele-wrapper-3a72f42e-dc59-431b-9a12-5719c8248610"
               >
                 <hm-loop
-                  :value="[{}, {}, {}, {}, {}]"
+                  :value="[
+                    { label: '姓名/昵称', placeholder: '姓名/昵称' },
+                    {},
+                    {},
+                    {},
+                    {},
+                  ]"
                   class="ele-3a72f42e-dc59-431b-9a12-5719c8248610"
                 >
                   <template #default="{ item }">
@@ -160,6 +166,7 @@
                     >
                       <hm-uview-field
                         value=""
+                        :label="item.label"
                         class="ele-21c5606d-d727-4143-a4ce-026bb85006c1"
                       >
                       </hm-uview-field>
@@ -199,7 +206,16 @@ export default {
     let self = this;
     return {
       "3a72f42e-dc59-431b-9a12-5719c8248610": {
-        value: [{}, {}, {}, {}, {}],
+        value: [
+          {
+            label: "姓名/昵称",
+            placeholder: "姓名/昵称",
+          },
+          {},
+          {},
+          {},
+          {},
+        ],
       },
       "21c5606d-d727-4143-a4ce-026bb85006c1": {
         value: "",
