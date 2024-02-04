@@ -99,6 +99,7 @@
               width="100%"
               height="100%"
               border-radius=""
+              padding="15"
               box-shadow-v-shadow=""
               box-shadow-blur=""
               class="ele-2da4517d-7fb0-4bdc-825d-f295b2c74751"
