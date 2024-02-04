@@ -129,6 +129,7 @@
                       text="当前门店与报名登记门店不一致，需要强制核销？核销后不可再次领取奖品！"
                       font-size="14px"
                       color="#6C6C6C"
+                      class="ele-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a"
                     >
                     </hm-uview-text>
                   </view>
@@ -307,6 +308,10 @@ export default {
 
 .ele-wrapper-fbf844c5-828e-4650-bab4-24aeaffae8ca {
   margin-right: 8px;
+}
+
+.ele-wrapper-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a {
+  margin-top: 5px;
 }
 
 .ele-wrapper-010f6de0-1635-4e55-81bb-8d3ff0846e27 {
