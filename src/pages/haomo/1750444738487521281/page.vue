@@ -150,6 +150,7 @@
                     <store-selection
                       ref="storeList"
                       :list="storeList.list"
+                      @radioGroupChange="onStoreListRadioGroupChange"
                       class="ele-storeList"
                     >
                     </store-selection>
@@ -396,6 +397,13 @@ export default {
     return {
       shopPop: {
         show: false,
+      },
+      storeInput: {
+        value: "",
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendianfuwu.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendianfuwu(1).png",
+        ],
       },
       zhifubaoRadio: {
         value: '""',
@@ -1044,13 +1052,6 @@ export default {
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan(2).png",
         ],
       },
-      storeInput: {
-        value: "",
-        leftSrc: [
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendianfuwu.png",
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/mendianfuwu(1).png",
-        ],
-      },
       phoneInput: {
         value: "",
         leftSrc: [
@@ -1335,6 +1336,9 @@ export default {
     },
     onStoreInputOnClick() {
       this.shopPop.show = true;
+    },
+    onStoreListRadioGroupChange(e) {
+      this.storeInput.value = e;
     },
     onWeixinRadioRadioChange(e) {
       this.zhifubaoRadio.value = "1";
