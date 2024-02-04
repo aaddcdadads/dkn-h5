@@ -361,6 +361,7 @@ export default {
 .ele-wrapper-5cf9158e-7842-477f-90a4-f6351085e84f {
   width: 100%;
   margin-top: 10px;
+  background-color: #ffffff;
 }
 
 .ele-wrapper-writeOffBtn {
