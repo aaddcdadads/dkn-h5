@@ -109,6 +109,7 @@
                     border-radius=""
                     box-shadow-v-shadow=""
                     box-shadow-blur=""
+                    class="ele-a4355e06-12c3-4507-8536-82e276518788"
                   >
                   </hm-uview-bg-card>
                 </view>
@@ -184,6 +185,10 @@ export default {
 }
 
 .ele-wrapper-3932b940-4da4-41bb-8579-3ebc2503bda9 {
+  width: 100%;
+}
+
+.ele-wrapper-a4355e06-12c3-4507-8536-82e276518788 {
   width: 100%;
 }
 </style>
