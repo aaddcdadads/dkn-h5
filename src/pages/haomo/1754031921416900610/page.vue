@@ -79,6 +79,16 @@
                   box-shadow-blur=""
                   class="ele-50613a3f-87e2-4a8e-92d5-37c55929d66c"
                 >
+                  <view
+                    class="ele-wrapper ele-wrapper-a46c4597-9e01-4191-8f9e-fc2396ae8aea"
+                  >
+                    <hm-uview-text> </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816"
+                  >
+                    <hm-loop :value="[]"> </hm-loop>
+                  </view>
                 </hm-uview-bg-card>
               </view>
             </hm-uview-bg-card>
@@ -104,6 +114,7 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
+import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -112,6 +123,7 @@ export default {
     HmUviewBgCard,
     HmLoop,
     HmUviewField,
+    HmUviewText,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -139,6 +151,9 @@ export default {
       },
       "8270ddf0-7ca3-412d-a1a2-6ede8337634c": {
         value: "",
+      },
+      "315c9068-5a40-4c3b-9b6d-3841b926c816": {
+        value: [],
       },
     };
   },
