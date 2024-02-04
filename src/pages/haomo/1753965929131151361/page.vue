@@ -64,32 +64,6 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-30d9aca9-d99f-43e8-a872-6af24ae1bf9c"
-              >
-                <hm-uview-text
-                  text="待核销/已核销"
-                  font-size="17px"
-                  color="#FFFFFF"
-                >
-                </hm-uview-text>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-08025ba6-d526-4961-8082-28c8f82e3389"
-              >
-                <hm-uview-text text="活动名称" font-size="17px" color="#FFFFFF">
-                </hm-uview-text>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-21010713-c118-4c9d-8a75-30201410d520"
-              >
-                <hm-uview-text
-                  text="请在 2024-03-31 23:59:59 前完成核销"
-                  font-size="12px"
-                  color="#FFFFFF"
-                >
-                </hm-uview-text>
-              </view>
             </hm-uview-bg-card>
           </view>
         </hm-uview-bg-card>
