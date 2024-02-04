@@ -73,6 +73,11 @@
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
                 >
+                  <view
+                    class="ele-wrapper ele-wrapper-3b0b65a9-03ab-4be8-89f2-1ace4afa48fd"
+                  >
+                    <hm-uview-image> </hm-uview-image>
+                  </view>
                 </hm-uview-bg-card>
               </view>
             </hm-uview-bg-card>
@@ -87,12 +92,14 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 
 export default {
   name: "NewActivityRegistrationInformation",
   components: {
     HmUviewBgCard,
     HmUviewText,
+    HmUviewImage,
   },
   options: { styleIsolation: "shared" },
   data() {
