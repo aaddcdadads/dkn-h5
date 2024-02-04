@@ -210,7 +210,7 @@ export default {
         ],
       },
       kaohe: {
-        visible: true,
+        visible: false,
       },
       "0ded82e1-3f32-400b-915d-b361c39f83db": {
         value: "",
