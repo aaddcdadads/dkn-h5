@@ -120,7 +120,7 @@
                   ref="kaohe"
                   v-model:visible="kaohe.visible"
                   title="强制核销？"
-                  height="100px"
+                  height="80px"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a"
