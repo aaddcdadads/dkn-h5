@@ -1339,7 +1339,9 @@ export default {
     },
     onStoreListRadioGroupChange(e) {
       this.storeInput.value = e;
-      this.shopPop.show = false;
+      setTimeout(() => {
+        this.shopPop.show = false;
+      }, 500);
     },
     onWeixinRadioRadioChange(e) {
       this.zhifubaoRadio.value = "1";
