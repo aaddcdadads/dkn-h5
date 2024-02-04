@@ -101,6 +101,7 @@
               border-radius=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
+              class="ele-32723c1e-9237-46a2-a91c-725c989a8ce2"
             >
             </hm-uview-bg-card>
           </view>
@@ -164,5 +165,9 @@ export default {
     display: flex;
     flex-direction: column;
   }
+}
+
+.ele-wrapper-32723c1e-9237-46a2-a91c-725c989a8ce2 {
+  width: 100%;
 }
 </style>
