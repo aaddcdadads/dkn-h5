@@ -4,7 +4,7 @@
       <image class="imageleft" :src="leftSrc[0]" v-show="!borderColor" />
       <image class="imageleft" :src="leftSrc[1]" v-show="borderColor" />
     </view>
-    <input :placeholder="placeholder" class="data_input" v-model:value="cValue" @input="input" @blur="borderColor = false" />
+    <input :placeholder="placeholder" class="data_input" v-model:value="cValue" @input="input" @blur="borderColor = false" :disabled="disabled"/>
     <view v-show="showCode">
       <text @click="onCode" :class="showColor ? 'gcolor' : 'color'">{{ code }}</text>
     </view>
@@ -22,6 +22,13 @@ export default {
     value: {
       type: String,
       default: ""
+    },
+    /**
+     * 是否禁用
+     */
+    disabled:{
+      type:Boolean,
+      default:false
     },
     /**
      * 左侧图标
