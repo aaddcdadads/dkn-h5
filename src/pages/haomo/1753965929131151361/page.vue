@@ -41,7 +41,12 @@
               <view
                 class="ele-wrapper ele-wrapper-21010713-c118-4c9d-8a75-30201410d520"
               >
-                <hm-uview-text> </hm-uview-text>
+                <hm-uview-text
+                  text="请在 2024-03-31 23:59:59 前完成核销"
+                  font-size="17px"
+                  color="#FFFFFF"
+                >
+                </hm-uview-text>
               </view>
             </hm-uview-bg-card>
           </view>
