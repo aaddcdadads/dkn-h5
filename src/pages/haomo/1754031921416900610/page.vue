@@ -54,59 +54,13 @@
               class="ele-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c"
             >
               <view
-                class="ele-wrapper ele-wrapper-f21446f1-ffe9-4863-bd6e-1ea56bc01b82"
+                class="ele-wrapper ele-wrapper-67851d6a-a953-4180-ab12-882950317850"
               >
-                <hm-uview-formily
-                  :schema="{
-                    type: 'object',
-                    properties: {
-                      form: {
-                        type: 'void',
-                        'x-component': 'Form',
-                        'x-component-props': {
-                          labelWidth: '10%',
-                          labelPosition: 'top',
-                        },
-                        properties: {
-                          input: {
-                            type: 'string',
-                            maxLength: 1,
-                            default: '输入框',
-                            'x-decorator': 'FormItem',
-                            'x-decorator-props': {
-                              label: '输入框',
-                              name: 'input',
-                              class: ['required'],
-                            },
-                            'x-component': 'Input',
-                            'x-component-props': { disabled: true },
-                          },
-                          upload: {
-                            default:
-                              'http://xh.ispace.dev.haomo-tech.com/files/1668147473752/WechatIMG2996.jpeg',
-                            type: 'string',
-                            'x-decorator': 'FormItem',
-                            'x-decorator-props': {
-                              label: '上传',
-                              name: 'upload',
-                              'label-col': { span: 2 },
-                              'wrapper-col': { span: 14 },
-                              style: { width: '100%' },
-                            },
-                            'x-component': 'Upload',
-                            'x-component-props': {
-                              action:
-                                'http://aacsb-stage.bbblackboard.com/api/obe/uploadFile',
-                              maxCount: 11,
-                            },
-                          },
-                        },
-                      },
-                    },
-                  }"
-                  class="ele-f21446f1-ffe9-4863-bd6e-1ea56bc01b82"
+                <hm-loop
+                  :value="[]"
+                  class="ele-67851d6a-a953-4180-ab12-882950317850"
                 >
-                </hm-uview-formily>
+                </hm-loop>
               </view>
             </hm-uview-bg-card>
           </view>
@@ -121,7 +75,6 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
-import HmUviewFormily from "/@/components/built-in/uniapp-uview-vue3/HmUviewFormily.vue";
 
 export default {
   name: "NewVerificationConfirmation",
@@ -129,7 +82,6 @@ export default {
     HmUviewBgCard,
     HmLoop,
     HmUviewField,
-    HmUviewFormily,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -153,6 +105,9 @@ export default {
       },
       "0ded82e1-3f32-400b-915d-b361c39f83db": {
         value: "",
+      },
+      "67851d6a-a953-4180-ab12-882950317850": {
+        value: [],
       },
     };
   },
@@ -181,7 +136,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-f21446f1-ffe9-4863-bd6e-1ea56bc01b82 {
+.ele-wrapper-67851d6a-a953-4180-ab12-882950317850 {
   width: 100%;
 }
 </style>
