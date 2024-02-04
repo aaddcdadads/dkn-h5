@@ -162,18 +162,6 @@
                           labelPosition: 'top',
                         },
                         properties: {
-                          span: {
-                            default: 'aaaa',
-                            'x-decorator': 'FormItem',
-                            'x-decorator-props': {
-                              label: '文字',
-                              name: 'span',
-                            },
-                            'x-component': 'Span',
-                            'x-component-props': {
-                              style: { overflowWrap: 'break-word' },
-                            },
-                          },
                           input: {
                             type: 'string',
                             maxLength: 1,
