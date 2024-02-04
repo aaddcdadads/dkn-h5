@@ -12,7 +12,9 @@ let logic = {};
  * 分享页请求
  */
 const sharingPageRequest = (logic.sharingPageRequest = async function () {
-  let res = await self.$Action(``);
+  let res = await self.$getAction(`/api/dkn/acvitity/list`, {
+    id: self.$route.query.activityId,
+  });
   self.sharingPageRequestData = res;
 });
 
