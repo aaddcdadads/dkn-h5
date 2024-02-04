@@ -147,7 +147,7 @@ export default {
   /deep/.ele-sharingImage {
     background-size: cover !important;
     background-repeat: no-repeat;
-    aspect-ratio: 375/667;
+    aspect-ratio: 375/607;
     position: relative;
     //height: 100%;
   }
