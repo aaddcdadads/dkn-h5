@@ -1097,7 +1097,7 @@ export default {
             name: e.name,
             description: e.synopsis,
             price: e.free === 0 ? 0 : e.expense,
-            number: 0,
+            number: 1,
           };
         });
       };
@@ -1113,12 +1113,7 @@ export default {
             shop: x.store,
           };
         });
-        self.storeList.list = [
-          {
-            anchor: "b",
-            store,
-          },
-        ];
+        self.storeList.list = [{ anchor: "b", store }];
       };
       self.getImg = function (url) {
         if (url.substring(0, 4) === "http") {
