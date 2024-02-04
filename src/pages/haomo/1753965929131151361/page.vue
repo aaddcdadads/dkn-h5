@@ -167,6 +167,8 @@
                       <hm-uview-field
                         value=""
                         :label="item.label"
+                        icon=""
+                        right-icon=""
                         class="ele-21c5606d-d727-4143-a4ce-026bb85006c1"
                       >
                       </hm-uview-field>
