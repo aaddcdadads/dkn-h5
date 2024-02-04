@@ -101,7 +101,11 @@
                         <view
                           class="ele-wrapper ele-wrapper-fbf844c5-828e-4650-bab4-24aeaffae8ca"
                         >
-                          <hm-uview-image width="80px" height="80px">
+                          <hm-uview-image
+                            width="80px"
+                            height="80px"
+                            class="ele-fbf844c5-828e-4650-bab4-24aeaffae8ca"
+                          >
                           </hm-uview-image>
                         </view>
                       </template>
@@ -230,6 +234,14 @@ export default {
 
 .ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816 {
   flex: 1;
+  /deep/.uni-scroll-view-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.ele-wrapper-fbf844c5-828e-4650-bab4-24aeaffae8ca {
+  margin: 8px;
 }
 
 .ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3 {
