@@ -107,7 +107,30 @@
               <view
                 class="ele-wrapper ele-wrapper-2060a060-910f-4964-925f-6601124d2f0d"
               >
-                <event-registration-information-card>
+                <event-registration-information-card
+                  :list="[
+                    {
+                      checked: true,
+                      image:
+                        'https://img.js.design/assets/img/65bc6430a6a4a8693349c559.png',
+                      name: '套餐A',
+                      description:
+                        '时代看风使舵丰动名称活动名称活动名称活动名称活动名称活动名称活动名动名称活动名称活动名称活动名称活动名称活动名称活动名动名称活动名称活动名称活动名称活动名称活动名称活动名富的少年疯狂是否达到减肥的步伐简单方便的',
+                      price: '29.9',
+                      number: 0,
+                    },
+                    {
+                      checked: false,
+                      image:
+                        'https://hm-static-img.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A4logo.png',
+                      name: '套餐B',
+                      description:
+                        '动名称活动名称活动名称活动名称活动名称活动名称活动名动名称活动名称活动名称活动名称活动名称活动名称活动名动名称活动名称活动名称活动名称活动名称活动名称活动名',
+                      price: '0.0',
+                      number: 0,
+                    },
+                  ]"
+                >
                 </event-registration-information-card>
               </view>
             </hm-uview-bg-card>
