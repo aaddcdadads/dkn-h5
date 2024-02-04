@@ -376,7 +376,7 @@ export default {
     flex-direction: column;
     align-items: center;
   }
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .ele-wrapper-ffdada98-8084-40ca-accd-e7efb42bf9cf {
