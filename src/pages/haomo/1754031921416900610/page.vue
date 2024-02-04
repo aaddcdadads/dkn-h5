@@ -248,7 +248,7 @@ display: flex;
 
 .ele-wrapper-a46c4597-9e01-4191-8f9e-fc2396ae8aea {
   width:83px
-text-align: right;
+text-align: right !important;
 }
 
 .ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816 {
