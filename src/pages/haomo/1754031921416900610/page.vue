@@ -86,6 +86,15 @@
               </view>
             </hm-uview-bg-card>
           </view>
+          <view
+            class="ele-wrapper ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3"
+          >
+            <hm-uview-button
+              :shape="'circle'"
+              class="ele-fc0c5391-6bd0-4160-886a-72f353cfa0e3"
+            >
+            </hm-uview-button>
+          </view>
         </hm-uview-bg-card>
       </view>
     </view>
@@ -97,6 +106,7 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
+import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
   name: "NewVerificationConfirmation",
@@ -104,6 +114,7 @@ export default {
     HmUviewBgCard,
     HmLoop,
     HmUviewField,
+    HmUviewButton,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -170,6 +181,10 @@ export default {
 }
 
 .ele-wrapper-67851d6a-a953-4180-ab12-882950317850 {
+  width: 100%;
+}
+
+.ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3 {
   width: 100%;
 }
 </style>
