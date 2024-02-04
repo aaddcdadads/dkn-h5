@@ -28,12 +28,15 @@
               class="ele-sharingImage"
             >
               <view
-                class="ele-wrapper ele-wrapper-7de2ec0e-3aba-4cc7-bf18-3112ac5089d9"
+                class="ele-wrapper ele-wrapper-5aa96d8c-a795-40cb-9b99-302ccd251a7d"
               >
-                <hm-uview-image
-                  class="ele-7de2ec0e-3aba-4cc7-bf18-3112ac5089d9"
+                <hm-uview-icon
+                  name="https://img.yzcdn.cn/vant/cat.jpeg"
+                  size="100%"
+                  label=""
+                  class="ele-5aa96d8c-a795-40cb-9b99-302ccd251a7d"
                 >
-                </hm-uview-image>
+                </hm-uview-icon>
               </view>
             </hm-uview-bg-card>
           </view>
@@ -76,17 +79,15 @@
 <script>
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
-import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
-import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
+import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 
 export default {
   name: "SharingPage",
   components: {
     HmUviewBgCard,
-    HmUviewImage,
-    HmUviewText,
     HmUviewIcon,
+    HmUviewText,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -154,10 +155,16 @@ export default {
   margin-bottom: 89px;
 }
 
-.ele-wrapper-7de2ec0e-3aba-4cc7-bf18-3112ac5089d9 {
+.ele-wrapper-5aa96d8c-a795-40cb-9b99-302ccd251a7d {
   position: absolute;
+  aspect-ratio: 1/1;
+  width: 35%;
   left: 0;
   bottom: 0;
+  /deep/ .u-icon {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .ele-wrapper-084fc45c-3b7d-42af-9042-8c47c465787c {
