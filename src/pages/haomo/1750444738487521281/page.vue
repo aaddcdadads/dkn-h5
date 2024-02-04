@@ -40,6 +40,7 @@
                   ref="eventCard"
                   :list="eventCard.list"
                   @change="onEventCardChange"
+                  @onClick="onEventCardOnClick"
                 >
                 </event-registration-card>
               </view>
@@ -1314,6 +1315,9 @@ export default {
     },
 
     onEventCardChange(e) {
+      this.checked();
+    },
+    onEventCardOnClick(e) {
       this.checked();
     },
     onSmscodeIpnutOnCode() {
