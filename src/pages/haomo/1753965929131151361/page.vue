@@ -81,6 +81,7 @@ export default {
 
 .ele-wrapper-messageTitle {
   width: 100%;
+  height: 121px;
   .ele-messageTitle {
     background: radial-gradient(
       50% 144.19%,
