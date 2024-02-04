@@ -49,6 +49,7 @@
               width="100%"
               height="100%"
               border-radius=""
+              padding=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
               class="ele-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c"
