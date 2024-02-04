@@ -126,6 +126,7 @@
               border-radius=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
+              class="ele-010f6de0-1635-4e55-81bb-8d3ff0846e27"
             >
               <view
                 class="ele-wrapper ele-wrapper-6f70c0fe-9613-40e4-b95a-888ee2363e0f"
@@ -268,6 +269,10 @@ export default {
 
 .ele-wrapper-fbf844c5-828e-4650-bab4-24aeaffae8ca {
   margin-right: 8px;
+}
+
+.ele-wrapper-010f6de0-1635-4e55-81bb-8d3ff0846e27 {
+  width: 100%;
 }
 
 .ele-wrapper-6f70c0fe-9613-40e4-b95a-888ee2363e0f {
