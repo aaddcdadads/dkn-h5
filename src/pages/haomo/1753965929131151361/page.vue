@@ -43,7 +43,7 @@
               >
                 <hm-uview-text
                   text="请在 2024-03-31 23:59:59 前完成核销"
-                  font-size="17px"
+                  font-size="12px"
                   color="#FFFFFF"
                 >
                 </hm-uview-text>
