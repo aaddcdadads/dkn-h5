@@ -203,6 +203,9 @@ export default {
 
 .ele-wrapper-prizeImageBox {
   width: 100%;
+  .ele-prizeImageBox {
+    display: flex;
+  }
 }
 
 .ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3 {
