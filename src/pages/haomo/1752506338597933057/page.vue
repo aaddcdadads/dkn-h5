@@ -152,7 +152,7 @@ export default {
     //height: 100%;
   }
   display: block;
-  margin-bottom: 89px;
+  margin-bottom: 22%;
 }
 
 .ele-wrapper-5aa96d8c-a795-40cb-9b99-302ccd251a7d {
