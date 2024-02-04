@@ -116,7 +116,16 @@
                 </hm-uview-bg-card>
               </view>
               <view class="ele-wrapper ele-wrapper-kaohe">
-                <hm-uview-modal ref="kaohe" v-model:visible="kaohe.visible">
+                <hm-uview-modal
+                  ref="kaohe"
+                  v-model:visible="kaohe.visible"
+                  title="强制核销？"
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a"
+                  >
+                    <hm-uview-text> </hm-uview-text>
+                  </view>
                 </hm-uview-modal>
               </view>
             </hm-uview-bg-card>
