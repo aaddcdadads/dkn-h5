@@ -158,9 +158,10 @@ export default {
 .ele-wrapper-5aa96d8c-a795-40cb-9b99-302ccd251a7d {
   position: absolute;
   aspect-ratio: 1/1;
-  width: 35%;
-  left: 0;
-  bottom: 0;
+  width: 21%;
+  left: 11.4%;
+  bottom: 2.3%;
+  border-radius: 10px;
   /deep/ .u-icon {
     width: 100%;
     height: 100%;
