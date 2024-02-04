@@ -27,6 +27,14 @@
               :background-image="sharingImage.backgroundImage"
               class="ele-sharingImage"
             >
+              <view
+                class="ele-wrapper ele-wrapper-7de2ec0e-3aba-4cc7-bf18-3112ac5089d9"
+              >
+                <hm-uview-image
+                  class="ele-7de2ec0e-3aba-4cc7-bf18-3112ac5089d9"
+                >
+                </hm-uview-image>
+              </view>
             </hm-uview-bg-card>
           </view>
           <view
@@ -68,6 +76,7 @@
 <script>
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
+import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 
@@ -75,6 +84,7 @@ export default {
   name: "SharingPage",
   components: {
     HmUviewBgCard,
+    HmUviewImage,
     HmUviewText,
     HmUviewIcon,
   },
@@ -142,6 +152,12 @@ export default {
   }
   display: block;
   margin-bottom: 89px;
+}
+
+.ele-wrapper-7de2ec0e-3aba-4cc7-bf18-3112ac5089d9 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .ele-wrapper-084fc45c-3b7d-42af-9042-8c47c465787c {
