@@ -397,7 +397,6 @@ export default {
     return {
       shopPop: {
         show: false,
-        visible: null,
       },
       storeInput: {
         value: "",
@@ -1340,7 +1339,7 @@ export default {
     },
     onStoreListRadioGroupChange(e) {
       this.storeInput.value = e;
-      this.shopPop.visible = false;
+      this.shopPop.show = false;
     },
     onWeixinRadioRadioChange(e) {
       this.zhifubaoRadio.value = "1";
