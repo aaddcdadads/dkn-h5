@@ -134,5 +134,8 @@ export default {
       #c6537b 100%
     ) !important;
   }
+  .ele-messageTitle {
+    display: flex;
+  }
 }
 </style>
