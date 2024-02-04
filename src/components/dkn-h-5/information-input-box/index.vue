@@ -28,7 +28,7 @@ export default {
      */
     disabled:{
       type:Boolean,
-      default:true
+      default:false
     },
     /**
      * 左侧图标
