@@ -170,7 +170,7 @@
                       <hm-uview-field
                         value=""
                         :label="item.label"
-                        placeholder="请输入:"
+                        :placeholder="item.placeholder"
                         label-width="160"
                         :label-align="'right'"
                         icon=""
