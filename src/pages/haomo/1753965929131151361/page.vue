@@ -80,6 +80,7 @@ export default {
 }
 
 .ele-wrapper-messageTitle {
+  width: 100%;
   background: radial-gradient(
     50% 144.19%,
     #ffffffff 0%,
