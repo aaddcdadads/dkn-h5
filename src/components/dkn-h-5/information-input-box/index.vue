@@ -4,7 +4,7 @@
       <image class="imageleft" :src="leftSrc[0]" v-show="!borderColor" />
       <image class="imageleft" :src="leftSrc[1]" v-show="borderColor" />
     </view>
-    <input :placeholder="placeholder" class="data_input" v-model:value="cValue" @input="input" @blur="borderColor = false" :disabled="disabled"/>
+    <input :placeholder="placeholder" class="data_input" v-model:value="cValue" @focus="focus" @input="input" @blur="borderColor = false" :disabled="disabled"/>
     <view v-show="showCode">
       <text @click="onCode" :class="showColor ? 'gcolor' : 'color'">{{ code }}</text>
     </view>
@@ -28,7 +28,7 @@ export default {
      */
     disabled:{
       type:Boolean,
-      default:false
+      default:true
     },
     /**
      * 左侧图标
@@ -94,6 +94,11 @@ export default {
       this.cValue = value;
     },
   },
+  mounted(){
+    if(this.disabled && this.value){
+      this.borderColor = false;
+    }
+  },
   methods: {
     onCode() {
       this.$emit("onCode");
@@ -125,10 +130,14 @@ export default {
       this.$emit("input");
     },
     onClick(){
-        this.borderColor = !this.borderColor;
         this.$emit("onClick");
+        this.borderColor = true;
     },
+    focus(){
+      return this.borderColor ? true :false
+    }
   }
+
 }
 </script>
 <style scoped>
