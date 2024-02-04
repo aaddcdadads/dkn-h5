@@ -81,11 +81,13 @@ export default {
 
 .ele-wrapper-messageTitle {
   width: 100%;
-  background: radial-gradient(
-    50% 144.19%,
-    #ffffffff 0%,
-    #ffe1a4b9 7.58%,
-    #ffc6537b 100%
-  );
+  .ele-messageTitle {
+    background: radial-gradient(
+      50% 144.19%,
+      #ffffffff 0%,
+      #ffe1a4b9 7.58%,
+      #ffc6537b 100%
+    );
+  }
 }
 </style>
