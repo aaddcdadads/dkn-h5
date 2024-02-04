@@ -27,14 +27,13 @@
               :background-image="sharingImage.backgroundImage"
               class="ele-sharingImage"
             >
-              <view
-                class="ele-wrapper ele-wrapper-5aa96d8c-a795-40cb-9b99-302ccd251a7d"
-              >
+              <view class="ele-wrapper ele-wrapper-code">
                 <hm-uview-icon
-                  name="https://img.yzcdn.cn/vant/cat.jpeg"
-                  size="100%"
-                  label=""
-                  class="ele-5aa96d8c-a795-40cb-9b99-302ccd251a7d"
+                  ref="code"
+                  :name="code.name"
+                  :size="code.size"
+                  :label="code.label"
+                  class="ele-code"
                 >
                 </hm-uview-icon>
               </view>
@@ -103,6 +102,11 @@ export default {
         boxShadowColor: "#00000000",
         backgroundImage: "/static/components/img/share.png",
       },
+      code: {
+        name: "https://img.yzcdn.cn/vant/cat.jpeg",
+        size: "100%",
+        label: "",
+      },
     };
   },
   watch: {},
@@ -113,6 +117,7 @@ export default {
     onCreated() {
       //注册
       this.sharingImage.backgroundImage;
+      this.code.name;
     },
 
     onEle0Ed4308BD32B4F148401Ba9Ad296Dc56Click() {
@@ -155,7 +160,7 @@ export default {
   margin-bottom: 22%;
 }
 
-.ele-wrapper-5aa96d8c-a795-40cb-9b99-302ccd251a7d {
+.ele-wrapper-code {
   position: absolute;
   aspect-ratio: 1/1;
   width: 21%;
