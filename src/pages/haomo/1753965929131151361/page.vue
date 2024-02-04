@@ -96,9 +96,23 @@
             class="ele-wrapper ele-wrapper-3932b940-4da4-41bb-8579-3ebc2503bda9"
           >
             <hm-loop
-              :value="[]"
+              :value="[{}]"
               class="ele-3932b940-4da4-41bb-8579-3ebc2503bda9"
             >
+              <template #default="{ item }">
+                <view
+                  class="ele-wrapper ele-wrapper-a4355e06-12c3-4507-8536-82e276518788"
+                >
+                  <hm-uview-bg-card
+                    width="100%"
+                    height="100%"
+                    border-radius=""
+                    box-shadow-v-shadow=""
+                    box-shadow-blur=""
+                  >
+                  </hm-uview-bg-card>
+                </view>
+              </template>
             </hm-loop>
           </view>
         </hm-uview-bg-card>
@@ -127,7 +141,7 @@ export default {
     let self = this;
     return {
       "3932b940-4da4-41bb-8579-3ebc2503bda9": {
-        value: [],
+        value: [{}],
       },
     };
   },
