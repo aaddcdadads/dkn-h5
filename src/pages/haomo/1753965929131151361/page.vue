@@ -31,6 +31,7 @@
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
                   background-color="#FFFFFF00"
+                  class="ele-messageText"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-36f2fc1e-d87f-40cb-98bc-cb8e56e54ca8"
@@ -138,6 +139,14 @@ export default {
   }
   .ele-messageTitle {
     display: flex;
+    justify-content: space-between;
+  }
+}
+
+.ele-wrapper-messageText {
+  .hm-bg-card {
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>
