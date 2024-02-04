@@ -139,6 +139,7 @@
                 <hm-uview-button
                   :shape="'circle'"
                   text="确认核销"
+                  @click="onEle6F70C0Fe961340E4B95A888Ee2363E0FClick"
                   class="ele-6f70c0fe-9613-40e4-b95a-888ee2363e0f"
                 >
                 </hm-uview-button>
@@ -192,14 +193,14 @@ export default {
           },
         ],
       },
+      kaohe: {
+        visible: true,
+      },
       "0ded82e1-3f32-400b-915d-b361c39f83db": {
         value: "",
       },
       "8270ddf0-7ca3-412d-a1a2-6ede8337634c": {
         value: "",
-      },
-      kaohe: {
-        visible: true,
       },
       "315c9068-5a40-4c3b-9b6d-3841b926c816": {
         value: [
@@ -217,7 +218,11 @@ export default {
     };
   },
   watch: {},
-  methods: {},
+  methods: {
+    onEle6F70C0Fe961340E4B95A888Ee2363E0FClick() {
+      this.kaohe.visible = true;
+    },
+  },
 };
 </script>
 
