@@ -95,7 +95,8 @@
           <view
             class="ele-wrapper ele-wrapper-2da4517d-7fb0-4bdc-825d-f295b2c74751"
           >
-            <hm-uview-bg-card> </hm-uview-bg-card>
+            <hm-uview-bg-card class="ele-2da4517d-7fb0-4bdc-825d-f295b2c74751">
+            </hm-uview-bg-card>
           </view>
         </hm-uview-bg-card>
       </view>
@@ -157,5 +158,9 @@ export default {
     display: flex;
     flex-direction: column;
   }
+}
+
+.ele-wrapper-2da4517d-7fb0-4bdc-825d-f295b2c74751 {
+  width: 100%;
 }
 </style>
