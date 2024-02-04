@@ -93,46 +93,9 @@
             </hm-uview-bg-card>
           </view>
           <view
-            class="ele-wrapper ele-wrapper-3932b940-4da4-41bb-8579-3ebc2503bda9"
+            class="ele-wrapper ele-wrapper-2da4517d-7fb0-4bdc-825d-f295b2c74751"
           >
-            <hm-loop
-              :value="[{}]"
-              class="ele-3932b940-4da4-41bb-8579-3ebc2503bda9"
-            >
-              <template #default="{ item }">
-                <view
-                  class="ele-wrapper ele-wrapper-a4355e06-12c3-4507-8536-82e276518788"
-                >
-                  <hm-uview-bg-card
-                    width="100%"
-                    height="100%"
-                    border-radius=""
-                    box-shadow-v-shadow=""
-                    box-shadow-blur=""
-                    background-color="#FFFAFAFA"
-                    class="ele-a4355e06-12c3-4507-8536-82e276518788"
-                  >
-                    <view
-                      class="ele-wrapper ele-wrapper-c56be0ca-70ca-4273-b04c-8bd4af1ae14c"
-                    >
-                      <hm-uview-image> </hm-uview-image>
-                    </view>
-                    <view
-                      class="ele-wrapper ele-wrapper-0b172b2b-78ba-4393-9b3b-13e761226949"
-                    >
-                      <hm-uview-bg-card
-                        width="100%"
-                        height="100%"
-                        border-radius=""
-                        box-shadow-v-shadow=""
-                        box-shadow-blur=""
-                      >
-                      </hm-uview-bg-card>
-                    </view>
-                  </hm-uview-bg-card>
-                </view>
-              </template>
-            </hm-loop>
+            <hm-uview-bg-card> </hm-uview-bg-card>
           </view>
         </hm-uview-bg-card>
       </view>
@@ -145,7 +108,6 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
-import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 
 export default {
   name: "NewActivityRegistrationInformation",
@@ -153,16 +115,11 @@ export default {
     HmUviewBgCard,
     HmUviewText,
     HmUviewImage,
-    HmLoop,
   },
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
-    return {
-      "3932b940-4da4-41bb-8579-3ebc2503bda9": {
-        value: [{}],
-      },
-    };
+    return {};
   },
   watch: {},
   methods: {},
@@ -200,14 +157,5 @@ export default {
     display: flex;
     flex-direction: column;
   }
-}
-
-.ele-wrapper-3932b940-4da4-41bb-8579-3ebc2503bda9 {
-  width: 100%;
-  padding: 5px;
-}
-
-.ele-wrapper-a4355e06-12c3-4507-8536-82e276518788 {
-  width: 100%;
 }
 </style>
