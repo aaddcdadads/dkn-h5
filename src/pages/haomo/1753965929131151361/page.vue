@@ -93,17 +93,13 @@
             </hm-uview-bg-card>
           </view>
           <view
-            class="ele-wrapper ele-wrapper-32723c1e-9237-46a2-a91c-725c989a8ce2"
+            class="ele-wrapper ele-wrapper-3932b940-4da4-41bb-8579-3ebc2503bda9"
           >
-            <hm-uview-bg-card
-              width="100%"
-              height="100%"
-              border-radius=""
-              box-shadow-v-shadow=""
-              box-shadow-blur=""
-              class="ele-32723c1e-9237-46a2-a91c-725c989a8ce2"
+            <hm-loop
+              :value="[]"
+              class="ele-3932b940-4da4-41bb-8579-3ebc2503bda9"
             >
-            </hm-uview-bg-card>
+            </hm-loop>
           </view>
         </hm-uview-bg-card>
       </view>
@@ -116,6 +112,7 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
+import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 
 export default {
   name: "NewActivityRegistrationInformation",
@@ -123,11 +120,16 @@ export default {
     HmUviewBgCard,
     HmUviewText,
     HmUviewImage,
+    HmLoop,
   },
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
-    return {};
+    return {
+      "3932b940-4da4-41bb-8579-3ebc2503bda9": {
+        value: [],
+      },
+    };
   },
   watch: {},
   methods: {},
@@ -167,7 +169,7 @@ export default {
   }
 }
 
-.ele-wrapper-32723c1e-9237-46a2-a91c-725c989a8ce2 {
+.ele-wrapper-3932b940-4da4-41bb-8579-3ebc2503bda9 {
   width: 100%;
 }
 </style>
