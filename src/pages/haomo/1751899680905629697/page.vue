@@ -212,10 +212,10 @@ export default {
 .ele-wrapper-d6daa484-d6ce-4792-9194-97a076552b17 {
   width: calc(100% - 48rpx);
   margin-left: 24rpx;
-  /deep/.u-radio__icon-wrap--circle {
-    right: 0;
-    position: absolute;
-  }
+  // /deep/.u-radio__icon-wrap--circle{
+  //     right: 0;
+  //     position: absolute;
+  // }
   /deep/.u-radio {
     width: 100% !important;
     position: relative;
