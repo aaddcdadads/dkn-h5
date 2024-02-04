@@ -63,6 +63,13 @@ export default {
       type: String,
       default: "* 请填写姓名/昵称",
     },
+    /**
+     * 获取状态
+     */
+     showStatus: {
+      type: Boolean,
+      default: true,
+    },
   },
   data() {
     return {
@@ -82,6 +89,9 @@ export default {
   methods: {
     onCode() {
       this.$emit("onCode");
+      if (!this.showStatus) {
+        return
+      }
       let time = 60;
       this.showColor = true;
       this.code = `${time}秒后可重新获取`;
