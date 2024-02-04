@@ -1158,6 +1158,7 @@ export default {
       //获取验证码
       self.getPhoneCode = async function () {
         if (!self.checkPhone()) {
+          self.$refs.viewInput.reset();
           return;
         }
         let url = "/api/sys/sms";
