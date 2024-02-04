@@ -293,6 +293,7 @@ export default {
   /deep/.u-btn {
     background: linear-gradient(179.94deg, #ff9fc7 0%, #f32878 100%);
     color: #ffffff;
+    height: 50px;
   }
 }
 </style>
