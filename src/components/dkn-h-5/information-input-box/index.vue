@@ -1,5 +1,5 @@
 <template>
-  <view :class="borderColor ? 'borderColor' : 'inputBox'" @click="borderColor = !borderColor">
+  <view :class="borderColor ? 'borderColor' : 'inputBox'" @click="onClick">
     <view class="image_box1">
       <image class="imageleft" :src="leftSrc[0]" v-show="!borderColor" />
       <image class="imageleft" :src="leftSrc[1]" v-show="borderColor" />
@@ -123,7 +123,11 @@ export default {
     input(e) {
       this.$emit("update:value", this.cValue);
       this.$emit("input");
-    }
+    },
+    onClick(){
+        this.borderColor = !this.borderColor;
+        this.$emit("onClick");
+    },
   }
 }
 </script>
