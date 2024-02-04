@@ -228,6 +228,11 @@ export default {
 
 .ele-wrapper-0ded82e1-3f32-400b-915d-b361c39f83db {
   width: 100%;
+  /deep/.u-field {
+    height: 56px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .ele-wrapper-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c {
