@@ -96,6 +96,7 @@
                   v-model:value="smscodeIpnut.value"
                   :left-src="smscodeIpnut.leftSrc"
                   placeholder="* 请输入短信验证码"
+                  :show-status="smscodeIpnut.showStatus"
                   @onCode="onSmscodeIpnutOnCode"
                   class="ele-smscodeIpnut"
                 >
@@ -1033,15 +1034,16 @@ export default {
       prices: {
         text: "¥ 59.00",
       },
-      nameInput: {
-        value: "",
-      },
       smscodeIpnut: {
+        showStatus: true,
         value: "",
         leftSrc: [
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan1.png",
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan(2).png",
         ],
+      },
+      nameInput: {
+        value: "",
       },
       storeInput: {
         value: "",
@@ -1079,6 +1081,7 @@ export default {
       self.activityText.text = "";
       self.countdown.text = "";
       self.prices.text = "";
+      self.smscodeIpnut.showStatus = true;
       self.getActivityProject = async function () {
         let url = "/api/dkn/activityProject/list";
         let params = {
@@ -1263,9 +1266,12 @@ export default {
       };
       //获取验证码
       self.getPhoneCode = async function () {
+        self.smscodeIpnut.showStatus = false;
         if (!self.checkPhone()) {
+          self.smscodeIpnut.showStatus = true;
           return;
         }
+
         let url = "/api/sys/sms";
         let params = {
           mobile: self.phoneInput.value,
