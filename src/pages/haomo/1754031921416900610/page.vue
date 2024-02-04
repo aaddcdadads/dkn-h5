@@ -91,7 +91,15 @@
                   <view
                     class="ele-wrapper ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816"
                   >
-                    <hm-loop :value="[]"> </hm-loop>
+                    <hm-loop :value="[{}]">
+                      <template #default="{ item }">
+                        <view
+                          class="ele-wrapper ele-wrapper-fbf844c5-828e-4650-bab4-24aeaffae8ca"
+                        >
+                          <hm-uview-image> </hm-uview-image>
+                        </view>
+                      </template>
+                    </hm-loop>
                   </view>
                 </hm-uview-bg-card>
               </view>
@@ -119,6 +127,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
+import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -128,6 +137,7 @@ export default {
     HmLoop,
     HmUviewField,
     HmUviewText,
+    HmUviewImage,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -157,7 +167,7 @@ export default {
         value: "",
       },
       "315c9068-5a40-4c3b-9b6d-3841b926c816": {
-        value: [],
+        value: [{}],
       },
     };
   },
