@@ -165,13 +165,7 @@ export default {
     },
     onClick(e) {
       this.$emit("onClick", e);
-      this.data.filter((item, index) => {
-        if (e === index) {
-          item.checked = !item.checked;
-        } else {
-          item.checked = false;
-        }
-      });
+      this.data[e].checked = !this.data[e].checked;
     },
   },
 };
