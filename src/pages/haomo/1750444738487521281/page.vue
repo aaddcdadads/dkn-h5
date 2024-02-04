@@ -111,6 +111,7 @@
                   :show-icon="true"
                   placeholder="* 请选择领奖门店"
                   @rightIcon="onStoreInputRightIcon"
+                  @onClick="onStoreInputOnClick"
                   class="ele-storeInput"
                 >
                 </information-input-box>
@@ -1333,7 +1334,8 @@ export default {
     onSmscodeIpnutOnCode() {
       this.getPhoneCode();
     },
-    onStoreInputRightIcon() {
+    onStoreInputRightIcon() {},
+    onStoreInputOnClick() {
       this.shopPop.show = true;
     },
     onWeixinRadioRadioChange(e) {
