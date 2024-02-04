@@ -81,6 +81,8 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 
+import { sharingPageInitialization } from "/@/logics/SharingPageGrooup";
+
 export default {
   name: "SharingPage",
   components: {
@@ -112,6 +114,9 @@ export default {
   watch: {},
   created(e) {
     this.onCreated(e);
+  },
+  mounted(e) {
+    sharingPageInitialization(this, arguments);
   },
   methods: {
     onCreated() {
