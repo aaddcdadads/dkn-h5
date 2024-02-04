@@ -1,28 +1,29 @@
 <template>
-    <view style="display: flex;position: relative;">
-      <scroll-view :scroll-y="true" :scroll-into-view="toView" :scroll-with-animation="true" :style="{ height: height + 'px' }">
-          <u-radio-group v-model="name" @change="radioGroupChange" style="width: 100%;">
-            <view v-for="(items, index) in data" :key="index" class="shop" :id="items.anchor">
-              <view v-for="item in items.store" class="store_list">
-                <view class="title">{{ item.city }}</view>
-                <view v-for="(itemlist, key) in item.shop" :key="key" class="shopItem">
-                  <view class="name">
-                    <u-radio :name="itemlist.name"> {{ itemlist.name }}</u-radio>
-                  </view>
-                  <view class="address">
-                    <text> {{ itemlist.address }}</text>
-                  </view>
-                </view>
+  <view style="display: flex;position: relative;">
+    <scroll-view :scroll-y="true" :scroll-into-view="toView" :scroll-with-animation="true"
+      :style="{ height: height + 'px' }">
+      <u-radio-group v-model="name" @change="radioGroupChange" style="width: 100%;">
+        <view v-for="(items, index) in data" :key="index" class="shop" :id="items.anchor">
+          <view v-for="item in items.store" class="store_list">
+            <view class="title">{{ item.city }}</view>
+            <view v-for="(itemlist, key) in item.shop" :key="key" class="shopItem">
+              <view class="name">
+                <u-radio :name="itemlist.name"> {{ itemlist.name }}</u-radio>
+              </view>
+              <view class="address">
+                <text> {{ itemlist.address }}</text>
               </view>
             </view>
-          </u-radio-group>
-      </scroll-view>
-      <view class="anchorBox">
-        <view v-for="item in anch" class="itembox">
-          <a class="anchors" @click="anchor(item)">{{ item }}</a>
+          </view>
         </view>
+      </u-radio-group>
+    </scroll-view>
+    <view class="anchorBox">
+      <view v-for="item in anch" class="itembox">
+        <a class="anchors" @click="anchor(item)">{{ item }}</a>
       </view>
     </view>
+  </view>
 </template>
 <script>
 export default {
@@ -48,7 +49,7 @@ export default {
                 city: "安庆",
                 shop: [
                   {
-                    name: "柳叶店",
+                    name: "柳叶店1-1-1",
                     address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼常德市武陵区柳叶大道与皂果交汇处万达广场一楼常德市武陵区柳叶大道与皂果交汇处万达广场一楼常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
                   },
                 ]
@@ -572,8 +573,8 @@ export default {
       data: [],
       height: 0,
       toView: '',
-      anch:[`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `q`, `r`, `s`, `t`, `u`, `v`, `w`, `x`, `y`, `z`]
-
+      item: null,
+      anch: [`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `q`, `r`, `s`, `t`, `u`, `v`, `w`, `x`, `y`, `z`]
     }
   },
   mounted() {
@@ -591,7 +592,26 @@ export default {
   },
   methods: {
     radioGroupChange(e) {
-      this.$emit("radioGroupChange",e);
+      let arr = JSON.parse(JSON.stringify(this.data));
+      this.itemArray(arr, e); 
+      this.$emit("radioGroupChange", this.item);
+    },
+    itemArray(arr, e) {
+      let length = arr.length;
+      for (let i = 0; i < length; i++) {
+        let stores = arr[i];
+        if (arr[i].name !== undefined && arr[i].name === e) {
+          this.item = arr[i]
+          return
+        } else {
+          for (let items in stores) {
+            if (Array.isArray(stores[items])) {
+             this.itemArray(stores[items], e);
+            }
+          }
+        }
+      }
+
     },
     anchor(e) {
       this.toView = e
@@ -633,13 +653,14 @@ export default {
   font-style: normal;
   font-size: 14px;
 }
-.itembox:active{
+
+.itembox:active {
   background: #2979FF;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1px;
-  border-radius:50%;
+  border-radius: 50%;
 }
 
 .anchorBox {
