@@ -195,7 +195,8 @@
               >
                 <hm-uview-field
                   value=""
-                  placeholder="订单编号"
+                  label="订单编号"
+                  placeholder="86973497296789259486"
                   label-width="160"
                   :label-align="'right'"
                   icon=""
