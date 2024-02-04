@@ -85,6 +85,7 @@
                       text="活动奖品"
                       font-size="14px"
                       color="#999999"
+                      class="ele-a46c4597-9e01-4191-8f9e-fc2396ae8aea"
                     >
                     </hm-uview-text>
                   </view>
@@ -209,6 +210,10 @@ export default {
   .ele-prizeImageBox {
     display: flex;
   }
+}
+
+.ele-wrapper-a46c4597-9e01-4191-8f9e-fc2396ae8aea {
+  width: 160px;
 }
 
 .ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816 {
