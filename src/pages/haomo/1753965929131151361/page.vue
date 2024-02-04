@@ -76,7 +76,10 @@
                   <view
                     class="ele-wrapper ele-wrapper-3b0b65a9-03ab-4be8-89f2-1ace4afa48fd"
                   >
-                    <hm-uview-image> </hm-uview-image>
+                    <hm-uview-image
+                      src="https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/ScanCode.png"
+                    >
+                    </hm-uview-image>
                   </view>
                 </hm-uview-bg-card>
               </view>
