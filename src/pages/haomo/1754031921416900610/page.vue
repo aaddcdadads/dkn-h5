@@ -140,16 +140,6 @@
               </view>
             </hm-uview-bg-card>
           </view>
-          <view
-            class="ele-wrapper ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3"
-          >
-            <hm-uview-button
-              :shape="'circle'"
-              text="确认核销"
-              class="ele-fc0c5391-6bd0-4160-886a-72f353cfa0e3"
-            >
-            </hm-uview-button>
-          </view>
         </hm-uview-bg-card>
       </view>
     </view>
@@ -276,15 +266,6 @@ export default {
 }
 
 .ele-wrapper-6f70c0fe-9613-40e4-b95a-888ee2363e0f {
-  width: 95%;
-  margin-top: 30px;
-  /deep/.u-btn {
-    background: linear-gradient(179.94deg, #ff9fc7 0%, #f32878 100%);
-    color: #ffffff;
-  }
-}
-
-.ele-wrapper-fc0c5391-6bd0-4160-886a-72f353cfa0e3 {
   width: 95%;
   margin-top: 30px;
   /deep/.u-btn {
