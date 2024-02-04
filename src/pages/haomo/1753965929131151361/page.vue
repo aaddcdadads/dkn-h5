@@ -153,10 +153,10 @@
                 <hm-loop
                   :value="[
                     { label: '姓名/昵称:', placeholder: '姓名/昵称' },
-                    {},
-                    {},
-                    {},
-                    {},
+                    { label: '手机号码:', placeholder: '17722729038' },
+                    { label: '领奖门店:', placeholder: '迪卡侬深圳北站店' },
+                    { label: '报名时间:', placeholder: '2024-03-01 08:49:59' },
+                    { label: '订单编号:', placeholder: '86973497296789259486' },
                   ]"
                   class="ele-3a72f42e-dc59-431b-9a12-5719c8248610"
                 >
@@ -214,10 +214,22 @@ export default {
             label: "姓名/昵称:",
             placeholder: "姓名/昵称",
           },
-          {},
-          {},
-          {},
-          {},
+          {
+            label: "手机号码:",
+            placeholder: "17722729038",
+          },
+          {
+            label: "领奖门店:",
+            placeholder: "迪卡侬深圳北站店",
+          },
+          {
+            label: "报名时间:",
+            placeholder: "2024-03-01 08:49:59",
+          },
+          {
+            label: "订单编号:",
+            placeholder: "86973497296789259486",
+          },
         ],
       },
       "21c5606d-d727-4143-a4ce-026bb85006c1": {
