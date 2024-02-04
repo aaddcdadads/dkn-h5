@@ -1,5 +1,5 @@
 <template>
-  <view :class="borderColor ? 'borderColor' : 'inputBox'" @click="onClick">
+  <view :class="borderColor ? 'borderColor' : 'inputBox'" @click.prevent="onClick">
     <view class="image_box1">
       <image class="imageleft" :src="leftSrc[0]" v-show="!borderColor" />
       <image class="imageleft" :src="leftSrc[1]" v-show="borderColor" />
@@ -92,14 +92,14 @@ export default {
   watch: {
     value(value) {
       this.cValue = value;
-      if(this.disabled && this.value){
+      if(this.disabled && this.value !==""){
       this.borderColor = false;
     }
     },
   },
   mounted(){
     this.cValue = this.value;
-    if(this.disabled && this.value){
+    if(this.disabled && this.value !==""){
       this.borderColor = false;
     }
   },
