@@ -209,6 +209,7 @@ export default {
 
 .ele-wrapper-3d5cca18-be80-4c03-83e5-d43ea90a2db3 {
   width: 100%;
+  background-color: #ffffff;
 }
 
 .ele-wrapper-0ded82e1-3f32-400b-915d-b361c39f83db {
