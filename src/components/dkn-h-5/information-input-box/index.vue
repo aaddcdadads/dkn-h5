@@ -98,6 +98,7 @@ export default {
     },
   },
   mounted(){
+    this.cValue = this.value;
     if(this.disabled && this.value){
       this.borderColor = false;
     }
@@ -182,6 +183,7 @@ export default {
 .data_input {
   flex: 1;
   font-size: 13px;
+  pointer-events: none;
 }
 
 .imageleft {
