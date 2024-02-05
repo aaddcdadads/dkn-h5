@@ -1575,8 +1575,7 @@ export default {
     margin-top: -12rpx !important;
   }
   /deep/.uni-countdown__number {
-    background: #d8477b !important;
-    background: rgba(0, 0, 0, 0.2) !important;
+    background: rgba(218, 74, 128, 0.5) !important;
     margin-top: -12rpx;
   }
 
