@@ -148,7 +148,7 @@ export default {
           })
     },
     focus(){
-      return this.borderColor ? true :false
+      return this.borderColor ?  this.borderColor = true :  this.borderColor = false
     }
   }
 
