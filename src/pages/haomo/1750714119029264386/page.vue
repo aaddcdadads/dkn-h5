@@ -85,11 +85,11 @@
           <view class="ele-wrapper ele-wrapper-containerBg">
             <hm-uview-bg-card
               ref="containerBg"
-              padding="0"
-              box-shadow-color="#00000000"
-              border-radius="0"
               width="100%"
               height=""
+              border-radius="0"
+              padding="0"
+              box-shadow-color="#00000000"
               class="ele-containerBg"
             >
               <view class="ele-wrapper ele-wrapper-colourCard">
@@ -334,14 +334,14 @@
                     class="ele-wrapper ele-wrapper-0d696b7e-8100-4e0a-a949-9e8788ae1cec"
                   >
                     <hm-uview-bg-card
-                      padding="0"
-                      box-shadow-blur="0"
-                      box-shadow-v-shadow="0"
-                      box-shadow-color="#00000000"
-                      border-radius="12"
-                      background-color="#F797BD00"
                       width="100%"
                       height="400"
+                      border-radius="12"
+                      padding="0"
+                      box-shadow-v-shadow="0"
+                      box-shadow-blur="0"
+                      box-shadow-color="#00000000"
+                      background-color="#F797BD00"
                       class="ele-0d696b7e-8100-4e0a-a949-9e8788ae1cec"
                     >
                       <view class="ele-wrapper ele-wrapper-listCompanent">
@@ -362,14 +362,14 @@
               <view class="ele-wrapper ele-wrapper-phoneBg">
                 <hm-uview-bg-card
                   ref="phoneBg"
-                  padding="0"
-                  box-shadow-blur="0"
-                  box-shadow-v-shadow="0"
-                  box-shadow-color="#00000000"
-                  border-radius="0"
-                  background-color="#FFFFFF"
                   width="100%"
                   height=""
+                  border-radius="0"
+                  padding="0"
+                  box-shadow-v-shadow="0"
+                  box-shadow-blur="0"
+                  box-shadow-color="#00000000"
+                  background-color="#FFFFFF"
                   class="ele-phoneBg"
                 >
                   <view
@@ -393,9 +393,9 @@
                   ref="regularPopup"
                   v-model:show="regularPopup.show"
                   :mode="'bottom'"
-                  :close-icon-pos="'top-left'"
                   width="100%"
                   height="50%"
+                  :close-icon-pos="'top-left'"
                   class="ele-regularPopup"
                 >
                   <view
@@ -1639,7 +1639,7 @@ export default {
   float: right;
   text-align: center;
   background: rgba(0, 0, 0, 0.16);
-  padding: 10rpx 10rpx;
+  padding: 10rpx 14px;
   margin: 24rpx 24rpx 0 24rpx;
 }
 
