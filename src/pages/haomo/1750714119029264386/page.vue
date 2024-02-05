@@ -1560,7 +1560,7 @@ export default {
   width: 100%;
   margin-top: 40rpx;
   padding-left: 24rpx;
-  margin-bottom: 8rpx;
+  margin-bottom: 12rpx;
 }
 
 .ele-wrapper-07beb51b-0feb-440f-9824-a723c709c3ce {
