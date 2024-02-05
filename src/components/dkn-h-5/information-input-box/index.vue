@@ -140,11 +140,6 @@ export default {
     onClick(){
         this.$emit("onClick");
         this.borderColor = true;
-      this.$nextTick(()=>{
-           if (this.disabled && this.rightIcon && this.value) {
-              this.borderColor = false;
-             }
-          })
     },
     focus(){
       return this.borderColor ?  this.borderColor = true :  this.borderColor = false
