@@ -4,7 +4,7 @@
       <image class="imageleft" :src="leftSrc[0]" v-show="!borderColor" />
       <image class="imageleft" :src="leftSrc[1]" v-show="borderColor" />
     </view>
-    <input :placeholder="placeholder" class="data_input" :value="cValue" @focus="focus" @input="input" @blur="borderColor = false" :disabled="disabled" :class="{'data_inputs':disabled}"/>
+    <input :placeholder="placeholder" class="data_input" v-model:value="cValue" @focus="focus" @input="input" @blur="borderColor = false" :disabled="disabled" :class="{'data_inputs':disabled}"/>
     <view v-show="showCode">
       <text @click="onCode" :class="showColor ? 'gcolor' : 'color'">{{ code }}</text>
     </view>
