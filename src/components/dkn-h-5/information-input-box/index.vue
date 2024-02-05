@@ -93,7 +93,9 @@ export default {
     value: {
       handler(value) {
         this.cValue = value;
-        if (this.disabled && value !== "") {
+          console.log(value);
+        if (this.disabled && this.showIcon) {
+          console.log('222');
           this.borderColor = false;
         }
       },
