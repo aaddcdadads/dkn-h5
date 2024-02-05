@@ -148,8 +148,23 @@ export default {
     },
     focus(){
       return this.borderColor ?  this.borderColor = true :  this.borderColor = false
-    }
-  }
+    },
+    handleClickOutside(event) {
+      // 检查点击是否在div外
+      const isClickInsideElement = this.$el.contains(event.target);
+         if(!isClickInsideElement){
+          this.borderColor = false;
+         }
+    },
+  },
+  created() {
+    // 监听外部点击事件
+    document.addEventListener('click', this.handleClickOutside);
+  },
+  destroyed() {
+    // 移除监听器
+    document.removeEventListener('click', this.handleClickOutside);
+  },
 
 }
 </script>
