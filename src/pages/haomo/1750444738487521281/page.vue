@@ -1053,6 +1053,7 @@ export default {
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan(2).png",
         ],
       },
+      storeItem: {},
       phoneInput: {
         value: "",
         leftSrc: [
@@ -1076,7 +1077,7 @@ export default {
       self.activityId = self.$route.query.activityId;
       self.activityName = self.$route.query.activityName;
       self.eventCard.list = [];
-      //self.storeList.list = []
+      self.storeList.list = [];
       self.payButton.text = `立即报名`;
       self.money = 0;
       self.activityText.text = "";
@@ -1117,12 +1118,7 @@ export default {
             shop: x.store,
           };
         });
-        self.storeList.list = [
-          {
-            anchor: "b",
-            store,
-          },
-        ];
+        self.storeList.list = [{ anchor: "b", store }];
       };
       self.getImg = function (url) {
         if (url.substring(0, 4) === "http") {
@@ -1184,7 +1180,7 @@ export default {
         const orderProjects = self.getOrderProjects();
         let params = {
           activityId: self.activityId,
-          storeId: self.storeInput.value,
+          storeId: self.storeItem.ids,
           paymentStatus: 1,
           phone: self.phoneInput.value,
           name: self.nameInput.value,
