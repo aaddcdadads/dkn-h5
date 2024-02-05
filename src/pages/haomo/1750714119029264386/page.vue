@@ -1566,6 +1566,7 @@ export default {
 .ele-wrapper-07beb51b-0feb-440f-9824-a723c709c3ce {
   margin-right: 4rpx;
   margin-left: 24rpx;
+  margin-bottom: 8rpx;
 }
 
 .ele-wrapper-closeTime {
@@ -1578,6 +1579,8 @@ export default {
     background: #d8477b !important;
     margin-top: -12rpx;
   }
+
+  margin-bottom: 8rpx;
 }
 
 .ele-wrapper-activityBg {
