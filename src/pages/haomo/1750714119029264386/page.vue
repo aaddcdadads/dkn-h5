@@ -1571,12 +1571,12 @@ export default {
 
 .ele-wrapper-closeTime {
   /deep/.uni-countdown__splitor {
-    color: #d8477b !important;
     font-size: 24rpx !important;
     margin-top: -12rpx !important;
   }
   /deep/.uni-countdown__number {
     background: #d8477b !important;
+    background: rgba(0, 0, 0, 0.2) !important;
     margin-top: -12rpx;
   }
 
