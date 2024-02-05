@@ -380,6 +380,7 @@
                           size="20px"
                           label="活动咨询"
                           label-color="#E06994"
+                          @click="onEle228650Bd8F5F4F58B322De6B1040Aba7Click"
                           class="ele-228650bd-8f5f-4f58-b322-de6b1040aba7"
                         >
                         </hm-uview-icon>
@@ -1402,6 +1403,9 @@ export default {
 
     onEle0Abf487751Bc431D8F1A3C043Bc451FeClick() {
       this.regularPopup.show = true;
+    },
+    onEle228650Bd8F5F4F58B322De6B1040Aba7Click() {
+      this.phonePopup.show = true;
     },
     onElef16Cae12Ff6F4D64Ac60014A613Da044Click() {
       this.phonePopup.show = true;
