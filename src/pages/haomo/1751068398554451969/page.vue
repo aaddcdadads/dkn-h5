@@ -438,7 +438,7 @@ export default {
         //保存订单信息
         this.registrationOrdersData = res.result.records[0];
 
-        this.inputMane.value = this.registrationOrdersData.realname ?? "";
+        this.inputMane.value = this.registrationOrdersData.name ?? "";
         this.inputPhoneNumber.value = this.registrationOrdersData.phone ?? "";
         this.inputActivityName.value = this.registrationOrdersData.acName ?? "";
       });
@@ -467,19 +467,26 @@ export default {
         let item = res.result.records[0];
         this.inputClaimStore.value = item.name ?? "";
       });
+      this.getImg = function (url) {
+        if (url.substring(0, 4) === "http") {
+          return url;
+        }
+        return `/api/sys/common/static/${url}`;
+      };
       //查询奖品图片
       //查询扫码的门店信息
       this.$getAction("/api/dkn/activityImg/list", {
         pageNo: 1,
         pageSize: -1,
         activityId: this.activityId,
+        type: 1,
       }).then((res) => {
         console.log("res--", res);
         if (res.code != 200 || res.result.records.length <= 0) return;
         this.prizeListComponent.funcList = res.result.records.map((item) => {
           return {
             ...item,
-            bgUrl: item.path,
+            bgUrl: this.getImg(item.path),
             textbottom: item.name,
           };
         });
