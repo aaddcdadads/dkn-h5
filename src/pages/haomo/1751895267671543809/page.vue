@@ -60,6 +60,7 @@
                         <information-input-box
                           ref="phoneBox"
                           v-model:value="phoneBox.value"
+                          :left-src="phoneBox.leftSrc"
                           right-src=""
                           :show-code="false"
                           placeholder=" 请填写报名手机号码"
@@ -71,6 +72,7 @@
                         <information-input-box
                           ref="viewInput"
                           v-model:value="viewInput.value"
+                          :left-src="viewInput.leftSrc"
                           placeholder=" 请填写手机验证码"
                           class="ele-viewInput"
                         >
@@ -149,9 +151,11 @@ export default {
       },
       phoneBox: {
         value: "",
+        leftSrc: [],
       },
       viewInput: {
         value: "",
+        leftSrc: [],
       },
       canelButton: {
         type: "info",
