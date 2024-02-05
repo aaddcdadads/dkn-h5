@@ -696,7 +696,7 @@ export default {
 }
 
 .ele-wrapper-orderCdoe {
-  margin-right: 75%;
+  margin-right: 55%;
 }
 
 .ele-wrapper-HmUviewBgCard1 {
