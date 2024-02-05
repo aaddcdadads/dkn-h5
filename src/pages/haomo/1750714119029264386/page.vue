@@ -372,6 +372,11 @@
                       class="ele-09caddfa-4979-48b3-81fd-a043baa3c683"
                     >
                       <view
+                        class="ele-wrapper ele-wrapper-def477d9-1358-42e6-80c4-ae1a738c47b6"
+                      >
+                        <uni-icons> </uni-icons>
+                      </view>
+                      <view
                         class="ele-wrapper ele-wrapper-56ff78c6-bc78-49b8-a165-3304f2ca7ca9"
                       >
                         <hm-icon :size="20"> </hm-icon>
