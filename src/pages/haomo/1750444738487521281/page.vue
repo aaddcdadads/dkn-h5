@@ -1180,7 +1180,7 @@ export default {
         const orderProjects = self.getOrderProjects();
         let params = {
           activityId: self.activityId,
-          storeId: self.storeItem.ids,
+          storeId: self.storeItem.id,
           paymentStatus: 1,
           phone: self.phoneInput.value,
           name: self.nameInput.value,
