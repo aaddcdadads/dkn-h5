@@ -108,9 +108,9 @@ export default {
   },
   computed:{
     cValue(){
-        if(this.cValue!=='' && this.disabled){
+        if(this.cValue ==='' && this.disabled && this.showIcon){
           this.borderColor = false;
-        },
+        };
           return this.cValue;
     },
   },
