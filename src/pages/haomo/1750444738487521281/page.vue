@@ -1108,7 +1108,7 @@ export default {
       };
       self.getStoreList = async function () {
         let url = "/api/dkn/store/listOrder";
-        const res = await self.$getAction(url);
+        const res = await self.$getAction(url, { status: 0 });
         if (!res.success || res.result.length === 0) {
           return;
         }
