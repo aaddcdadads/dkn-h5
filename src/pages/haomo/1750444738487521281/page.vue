@@ -124,6 +124,7 @@
               :mode="'bottom'"
               height=""
               :mask-close-able="false"
+              @close="onShopPopClose"
               class="ele-shopPop"
             >
               <view
@@ -1354,6 +1355,11 @@ export default {
     },
     onStoreInputOnClick() {
       this.shopPop.show = true;
+    },
+    onShopPopClose() {
+      if (this.storeInput.value === "") {
+        this.storeInput.value = "";
+      }
     },
     onStoreListRadioGroupChange(e) {
       this.storeInput.value = e.address;
