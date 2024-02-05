@@ -372,20 +372,10 @@
                       class="ele-09caddfa-4979-48b3-81fd-a043baa3c683"
                     >
                       <view
-                        class="ele-wrapper ele-wrapper-def477d9-1358-42e6-80c4-ae1a738c47b6"
-                      >
-                        <uni-icons> </uni-icons>
-                      </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-56ff78c6-bc78-49b8-a165-3304f2ca7ca9"
-                      >
-                        <hm-icon :size="20"> </hm-icon>
-                      </view>
-                      <view
                         class="ele-wrapper ele-wrapper-228650bd-8f5f-4f58-b322-de6b1040aba7"
                       >
                         <hm-uview-icon
-                          name="audio"
+                          name="service"
                           color="#E06994"
                           size="20px"
                           label="活动咨询"
@@ -749,7 +739,6 @@ import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vu
 import ActivityList from "/@/components/dkn-h-5/activity-list/index.vue";
 import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index.vue";
 import ScrollList from "/@/components/dkn-h-5/scroll-list/index.vue";
-import HmIcon from "/@/components/built-in/uniapp/HmIcon.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import HmRichText from "/@/components/built-in/uniapp/HmRichText.vue";
 import HmUviewParse from "/@/components/built-in/uniapp-uview-vue3/HmUviewParse.vue";
@@ -767,7 +756,6 @@ export default {
     ActivityList,
     PrizeListComponent,
     ScrollList,
-    HmIcon,
     HmUviewPopup,
     HmRichText,
     HmUviewParse,
