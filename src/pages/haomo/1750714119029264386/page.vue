@@ -107,22 +107,22 @@
                     class="ele-wrapper ele-wrapper-d54b5914-a084-4a9e-9204-991bcc25ecf5"
                   >
                     <hm-uview-bg-card
-                      padding="0"
-                      box-shadow-blur="0"
-                      box-shadow-v-shadow="0"
-                      box-shadow-color="#00000000"
-                      border-radius="0"
-                      background-color="#FFFFFF00"
                       width="100%"
                       height=""
+                      border-radius="0"
+                      padding="0"
+                      box-shadow-v-shadow="0"
+                      box-shadow-blur="0"
+                      box-shadow-color="#00000000"
+                      background-color="#FFFFFF00"
                       class="ele-d54b5914-a084-4a9e-9204-991bcc25ecf5"
                     >
                       <view class="ele-wrapper ele-wrapper-nameText">
                         <hm-uview-text
                           ref="nameText"
-                          :padding="nameText.padding"
-                          :font-size="nameText.fontSize"
                           :text="nameText.text"
+                          :font-size="nameText.fontSize"
+                          :padding="nameText.padding"
                           class="ele-nameText"
                         >
                         </hm-uview-text>
@@ -132,10 +132,10 @@
                           ref="closeTime"
                           :background-color="closeTime.backgroundColor"
                           :color="closeTime.color"
-                          :hour="closeTime.hour"
-                          :splitor-color="closeTime.splitorColor"
                           :font-size="closeTime.fontSize"
+                          :splitor-color="closeTime.splitorColor"
                           :day="closeTime.day"
+                          :hour="closeTime.hour"
                           :minute="closeTime.minute"
                           :second="closeTime.second"
                           class="ele-closeTime"
@@ -146,10 +146,10 @@
                         class="ele-wrapper ele-wrapper-6d62d75a-e400-40e6-a49e-015bd0115567"
                       >
                         <hm-uview-text
-                          padding="0"
-                          color="#666666"
-                          font-size="14px"
                           text="报名倒计时"
+                          font-size="14px"
+                          color="#666666"
+                          padding="0"
                           class="ele-6d62d75a-e400-40e6-a49e-015bd0115567"
                         >
                         </hm-uview-text>
@@ -812,13 +812,13 @@ export default {
         second: 17,
         backgroundColor: "#00000000",
         color: "#FFFFFF",
-        splitorColor: "#666666",
         fontSize: 11,
+        splitorColor: "#666666",
       },
       nameText: {
         text: "迪卡侬春节活动",
-        padding: "0",
         fontSize: "16px",
+        padding: "0",
       },
       activityList: {
         item: {
@@ -1515,7 +1515,7 @@ export default {
 
 .ele-wrapper-containerBg {
   width: 100%;
-  margin-top: 400px;
+  margin-top: 800px;
   z-index: 1000;
   /deep/.ele-containerBg {
     background: transparent;
@@ -1539,6 +1539,7 @@ export default {
 
 .ele-wrapper-nameText {
   font-weight: bolder;
+  width: 100%;
 }
 
 .ele-wrapper-closeTime {
