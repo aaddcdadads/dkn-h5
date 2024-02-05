@@ -1678,6 +1678,7 @@ export default {
 
 .ele-wrapper-phoneBg {
   width: 100%;
+  display: none;
 }
 
 .ele-wrapper-f16cae12-ff6f-4d64-ac60-014a613da044 {
