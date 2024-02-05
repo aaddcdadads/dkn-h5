@@ -106,14 +106,6 @@ export default {
       this.borderColor = false;
     }
   },
-  computed:{
-    cValue(){
-        if(this.cValue ==='' && this.disabled && this.showIcon){
-          this.borderColor = false;
-        };
-          return this.cValue;
-    },
-  },
   methods: {
     onCode() {
       this.$emit("onCode");
