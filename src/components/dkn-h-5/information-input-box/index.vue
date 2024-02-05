@@ -97,7 +97,8 @@ export default {
           this.borderColor = false;
         }
       },
-      immediate: true,
+       deep: true,
+       immediate: true,
     },
   },
   mounted(){
