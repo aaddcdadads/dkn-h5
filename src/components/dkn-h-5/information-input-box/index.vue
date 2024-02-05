@@ -95,7 +95,6 @@ export default {
         this.cValue = value;
           console.log(value);
         if (this.disabled && this.showIcon) {
-          console.log('222');
           this.borderColor = false;
         }
       },
@@ -142,6 +141,11 @@ export default {
     onClick(){
         this.$emit("onClick");
         this.borderColor = true;
+      this.$nextTick(()=>{
+             if(this.disabled && this.rightIcon){
+              this.borderColor = false;
+             }
+          })
     },
     focus(){
       return this.borderColor ? true :false
