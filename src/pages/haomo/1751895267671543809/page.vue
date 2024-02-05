@@ -174,7 +174,7 @@ margin-top:24rpx;
 .ele-wrapper-viewInput {
   width:80%;
 height:72rpx;
-/deep/.image_box{
+/deep/.image_box1{
   display:none;
 }
 /deep/.input-placeholder{
