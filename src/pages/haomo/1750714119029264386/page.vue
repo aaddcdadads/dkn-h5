@@ -1570,12 +1570,12 @@ export default {
 .ele-wrapper-closeTime {
   /deep/.uni-countdown__splitor {
     color: #d8477b !important;
-    font-size: 12px !important;
-    margin-top: -6rpx;
+    font-size: 24rpx !important;
+    margin-top: -12rpx !important;
   }
   /deep/.uni-countdown__number {
     background: #d8477b !important;
-    margin-top: -6rpx;
+    margin-top: -12rpx;
   }
 }
 
