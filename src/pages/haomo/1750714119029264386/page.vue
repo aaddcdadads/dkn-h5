@@ -282,11 +282,12 @@
                   <view class="ele-wrapper ele-wrapper-imgCard">
                     <hm-uview-bg-card
                       ref="imgCard"
-                      width="100%"
-                      height=""
-                      border-radius="12"
-                      padding=""
-                      background-color="#F797BD00"
+                      :width="imgCard.width"
+                      :height="imgCard.height"
+                      :border-radius="imgCard.borderRadius"
+                      :padding="imgCard.padding"
+                      :background-color="imgCard.backgroundColor"
+                      :hidden="imgCard.hidden"
                       class="ele-imgCard"
                     >
                       <view
@@ -980,6 +981,21 @@ export default {
         boxShadowColor: "#00000000",
         backgroundColor: "#FFFFFF",
       },
+      imgCard: {
+        hidden: false,
+        width: "100%",
+        height: "",
+        borderRadius: "12",
+        padding: "",
+        backgroundColor: "#F797BD00",
+      },
+      imgText: {
+        text: "活动奖品",
+        fontSize: "16px",
+        color: "#FFFFFF",
+        bgColor: "#FFFFFF00",
+        padding: "0",
+      },
       activityProjectItem: {},
       activityExtItem: {},
       activityImgItem: {},
@@ -988,13 +1004,6 @@ export default {
       },
       viewInput: {
         value: "",
-      },
-      imgText: {
-        text: "活动奖品",
-        fontSize: "16px",
-        color: "#FFFFFF",
-        bgColor: "#FFFFFF00",
-        padding: "0",
       },
       activityImgList1: {
         funcList: [
@@ -1112,6 +1121,8 @@ export default {
       self.outsideBg.hidden = false;
       self.addOrderCard.hidden = false;
       self.notActivity.hidden = true;
+      self.imgCard.hidden = false;
+      self.imgText.text = "活动奖品";
       self.getActivity = async function (id) {
         let url = "/api/dkn/activity/queryByAll";
         const res = await self.$getAction(url, { id });
@@ -1206,6 +1217,10 @@ export default {
             textbottom: x.name,
           };
         });
+        if (self.activityImgList.funcList.length === 0) {
+          self.imgCard.hidden = true;
+          self.imgText.text = "";
+        }
         imgOne = imgOne.sort((a, b) => a.sortNo - b.sortNo);
         if (imgOne.length > 0) {
           self.logoImg.src = self.getImg(imgOne[0].path);
