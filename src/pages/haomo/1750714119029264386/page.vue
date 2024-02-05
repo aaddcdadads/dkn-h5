@@ -375,7 +375,7 @@
                         class="ele-wrapper ele-wrapper-228650bd-8f5f-4f58-b322-de6b1040aba7"
                       >
                         <hm-uview-icon
-                          name="service"
+                          name="server-fill"
                           color="#E06994"
                           size="20px"
                           label="活动咨询"
