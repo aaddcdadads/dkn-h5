@@ -259,11 +259,11 @@
                   <view class="ele-wrapper ele-wrapper-imgText">
                     <hm-uview-text
                       ref="imgText"
-                      :padding="imgText.padding"
-                      :color="imgText.color"
-                      :font-size="imgText.fontSize"
                       :text="imgText.text"
+                      :font-size="imgText.fontSize"
+                      :color="imgText.color"
                       :bg-color="imgText.bgColor"
+                      :padding="imgText.padding"
                       class="ele-imgText"
                     >
                     </hm-uview-text>
@@ -322,9 +322,9 @@
                     class="ele-wrapper ele-wrapper-dacbdcbf-5aa6-416f-a334-d9098c8ccfda"
                   >
                     <hm-uview-text
-                      color="#000000"
-                      font-size="16px"
                       text="活动详情"
+                      font-size="16px"
+                      color="#FFFFFF"
                       bg-color="#FFFFFF00"
                       class="ele-dacbdcbf-5aa6-416f-a334-d9098c8ccfda"
                     >
@@ -949,11 +949,11 @@ export default {
         value: "",
       },
       imgText: {
-        padding: "0",
-        color: "#000000",
-        fontSize: "16px",
         text: "活动奖品",
+        fontSize: "16px",
+        color: "#FFFFFF",
         bgColor: "#FFFFFF00",
+        padding: "0",
       },
       activityImgList1: {
         funcList: [
