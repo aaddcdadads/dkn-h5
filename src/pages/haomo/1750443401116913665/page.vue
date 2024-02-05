@@ -587,7 +587,7 @@ export default {
         this.orderId = item.id;
         this.orderCdoe.text = `订单编号：${item.code}`;
         this.registrationProjectField.value = item.acName ?? "";
-        this.userNameField.value = item.realname ?? "";
+        this.userNameField.value = item.name ?? "";
         this.phoneField.value = item.phone ?? "";
         this.storeNameField.value = item.originalPickUpName ?? "";
         this.registrationTimeField.value = item.paymentTime ?? "";
