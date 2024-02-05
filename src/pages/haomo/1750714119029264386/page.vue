@@ -95,12 +95,12 @@
               <view class="ele-wrapper ele-wrapper-colourCard">
                 <hm-uview-bg-card
                   ref="colourCard"
-                  :padding="colourCard.padding"
-                  :box-shadow-color="colourCard.boxShadowColor"
-                  :border-radius="colourCard.borderRadius"
-                  :background-color="colourCard.backgroundColor"
                   :width="colourCard.width"
                   :height="colourCard.height"
+                  :border-radius="colourCard.borderRadius"
+                  :padding="colourCard.padding"
+                  :box-shadow-color="colourCard.boxShadowColor"
+                  :background-color="colourCard.backgroundColor"
                   class="ele-colourCard"
                 >
                   <view
@@ -159,11 +159,11 @@
                   <view class="ele-wrapper ele-wrapper-activityBg">
                     <hm-uview-bg-card
                       ref="activityBg"
-                      :padding="activityBg.padding"
-                      :border-radius="activityBg.borderRadius"
-                      :background-color="activityBg.backgroundColor"
                       :width="activityBg.width"
                       :height="activityBg.height"
+                      :border-radius="activityBg.borderRadius"
+                      :padding="activityBg.padding"
+                      :background-color="activityBg.backgroundColor"
                       class="ele-activityBg"
                     >
                       <view
@@ -247,8 +247,8 @@
                       <view class="ele-wrapper ele-wrapper-activityList">
                         <activity-list
                           ref="activityList"
-                          :background-color="activityList.backgroundColor"
                           :item="activityList.item"
+                          :background-color="activityList.backgroundColor"
                           :text-color="activityList.textColor"
                           class="ele-activityList"
                         >
@@ -376,11 +376,11 @@
                     class="ele-wrapper ele-wrapper-f16cae12-ff6f-4d64-ac60-014a613da044"
                   >
                     <hm-uview-icon
-                      label-color="#FFFFFF"
+                      name="phone"
                       color="#FFFFFF"
                       size="20px"
-                      name="phone"
                       label="活动咨询"
+                      label-color="#FFFFFF"
                       @click="onElef16Cae12Ff6F4D64Ac60014A613Da044Click"
                       class="ele-f16cae12-ff6f-4d64-ac60-014a613da044"
                     >
@@ -901,18 +901,18 @@ export default {
       },
       colourCard: {
         backgroundColor: "#F6D7E6",
-        padding: "12",
-        boxShadowColor: "#00000000",
-        borderRadius: "0",
         width: "100%",
         height: "",
+        borderRadius: "0",
+        padding: "12",
+        boxShadowColor: "#00000000",
       },
       activityBg: {
         backgroundColor: "#FEEFF7",
-        padding: "0",
-        borderRadius: "",
         width: "100%",
         height: "",
+        borderRadius: "",
+        padding: "0",
       },
       activityRulesText: {
         data: {
