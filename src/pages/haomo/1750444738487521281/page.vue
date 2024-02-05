@@ -1219,11 +1219,21 @@ export default {
           self.login();
           return;
         }
+        self.orderId = res.message;
+        //微信浏览器打开直接跳微信支付
+        if (self.isWeChat()) {
+          self.$pay(self.orderId, "0");
+          return;
+        }
         self.payPopup.show = true;
         self.activityText.text = self.activityName;
         self.countdown.text = "";
         self.prices.text = `¥ ${self.money}`;
-        self.orderId = res.message;
+      };
+      self.isWeChat = function () {
+        // 判断是否在微信浏览器中
+        const userAgent = navigator.userAgent.toLowerCase();
+        return userAgent.indexOf("micromessenger") !== -1;
       };
       //登录验证
       self.login = async function () {
