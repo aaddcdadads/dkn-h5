@@ -824,7 +824,7 @@ export default {
         backgroundColor: "#00000000",
         color: "#FFFFFF",
         fontSize: 11,
-        splitorColor: "#D8477B",
+        splitorColor: "#FFFFFF",
       },
       nameText: {
         text: "迪卡侬春节活动",
