@@ -130,7 +130,12 @@
                       <view
                         class="ele-wrapper ele-wrapper-80a0f605-13bf-4742-904d-a7c8cdce9da1"
                       >
-                        <hm-uview-text> </hm-uview-text>
+                        <hm-uview-text
+                          text="迪卡侬春节活动"
+                          font-size="16px"
+                          class="ele-80a0f605-13bf-4742-904d-a7c8cdce9da1"
+                        >
+                        </hm-uview-text>
                       </view>
                       <view
                         class="ele-wrapper ele-wrapper-07beb51b-0feb-440f-9824-a723c709c3ce"
@@ -1543,6 +1548,13 @@ export default {
 }
 
 .ele-wrapper-nameText {
+  font-weight: bolder;
+  display: none;
+  width: 100%;
+  margin-top: 40rpx;
+}
+
+.ele-wrapper-80a0f605-13bf-4742-904d-a7c8cdce9da1 {
   font-weight: bolder;
   width: 100%;
   margin-top: 40rpx;
