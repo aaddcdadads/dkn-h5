@@ -50,17 +50,6 @@
                     >
                     </hm-uview-text>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-646935bb-0c63-4f31-b718-c942034e0af4"
-                  >
-                    <hm-text
-                      text="订单编号："
-                      font-size="12px"
-                      color="#303133"
-                      class="ele-646935bb-0c63-4f31-b718-c942034e0af4"
-                    >
-                    </hm-text>
-                  </view>
                 </hm-uview-bg-card>
               </view>
               <view class="ele-wrapper ele-wrapper-HmUviewBgCard1">
@@ -478,7 +467,6 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
-import HmText from "/@/components/built-in/uniapp/HmText.vue";
 import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import LoopField from "/@/components/dkn-h-5/loop-field/index.vue";
@@ -489,7 +477,6 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewText,
-    HmText,
     HmLoop,
     HmUviewField,
     LoopField,
@@ -702,10 +689,6 @@ export default {
 }
 
 .ele-wrapper-bf22f4a1-bf87-45db-bf48-3cb458614952 {
-  margin-right: 75%;
-}
-
-.ele-wrapper-646935bb-0c63-4f31-b718-c942034e0af4 {
   margin-right: 75%;
 }
 
