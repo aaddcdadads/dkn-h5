@@ -1195,7 +1195,7 @@ export default {
           if (res.message === "当前活动已经报名！") {
             if (res.result.paymentStatus === 1) {
               self.error("当前活动已经报名未支付");
-              self.orderId = res.result.id;
+              self.orderId = res.result.orderId;
               if (self.isWeChat()) {
                 self.$pay(self.orderId, "0");
                 return;
