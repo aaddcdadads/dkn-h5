@@ -1064,7 +1064,7 @@ export default {
         ],
       },
       payPopup: {
-        show: true,
+        show: false,
       },
       activityItem: {},
     };
