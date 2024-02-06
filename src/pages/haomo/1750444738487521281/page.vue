@@ -1142,9 +1142,10 @@ export default {
               money += expense;
             }
           });
+          money = parseFloat(money).toFixed(2);
           console.log("money", money);
           self.payButton.text = `总费用：¥${money} 立即报名`;
-          self.money = parseFloat(money).toFixed(2);
+          self.money = money;
         });
       };
       self.checkOrder = async function () {
