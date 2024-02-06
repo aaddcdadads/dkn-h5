@@ -405,7 +405,7 @@
                           name="zhuanfa"
                           color="#E06994"
                           size="20px"
-                          label=""
+                          label="分享"
                           label-color="#E06994"
                           class="ele-a40489b1-523c-497a-8587-70b09de8a231"
                         >
