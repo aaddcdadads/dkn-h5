@@ -616,6 +616,11 @@ export default {
     },
     onOnLoad(options) {
       console.log("onLoad");
+      if (options.orderId) {
+        this.orderId = options.orderId;
+        return;
+      }
+
       //活动id
       if (!options.activityId) {
         uni.showToast({
