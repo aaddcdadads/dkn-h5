@@ -55,4 +55,43 @@ const sharingPageInitialization = (logic.sharingPageInitialization = async (
 
 /********************** end sharingPageInitialization 开始 *********************/
 
-export { getCodeRequest, getCode, sharingPageInitialization };
+/********************** getBackgroundImage 开始 *********************/
+/**
+ * 获取背景图请求
+ */
+const getBackgroundImageRequest = (logic.getBackgroundImageRequest = async function () {
+  let res = await self.$getAction(`/api/dkn/activityImg/list`, {
+    id: self.$route.query.activityId,
+  });
+  self.getBackgroundImageRequestData = res;
+});
+
+/**
+ * 逻辑流 getBackgroundImage 入口函数
+ */
+const getBackgroundImage = (logic.getBackgroundImage = async (
+  pageVm,
+  eventData
+) => {
+  console.log(`getBackgroundImage: `, pageVm, eventData);
+  self = Object.assign(pageVm, logic);
+  self.getBackgroundImageData = eventData;
+
+  await getBackgroundImageRequest();
+  if (self.getBackgroundImageRequestData.success) {
+  } else {
+  }
+  let records = self.getBackgroundImageRequestData.result.records;
+  self.code.name = records[0].qrCode;
+  self.sharingImage.backgroundImage = records[0].url;
+});
+
+/********************** end getBackgroundImage 开始 *********************/
+
+export {
+  getCodeRequest,
+  getCode,
+  sharingPageInitialization,
+  getBackgroundImageRequest,
+  getBackgroundImage,
+};
