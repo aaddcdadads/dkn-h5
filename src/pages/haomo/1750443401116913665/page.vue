@@ -559,60 +559,67 @@ export default {
     },
     onMounted() {
       console.log("mounted");
-
-      this.$getAction("/api/dkn/viewRegistrationOrders/list", {
-        pageNo: 1,
-        pageSize: 1,
-        userId: this.userId,
-        activityId: this.activityId,
-      }).then((res) => {
-        console.log("res--", res);
-        if (res.code != 200 || res.result.records.length <= 0) {
-          uni.showToast({
-            title: "请先活动报名",
-            icon: "error",
-            duration: 2000,
-          });
-          setTimeout(() => {
-            uni.navigateTo({
-              url:
-                "/pages/haomo/1750714119029264386/page?activityId=" +
-                this.activityId,
-            });
-          }, 1500);
-          return;
-        }
-        let item = res.result.records[0];
-        //保存订单id
-        this.orderId = item.id;
-        this.orderCdoe.text = `订单编号：${item.code}`;
-        this.registrationProjectField.value = item.acName ?? "";
-        this.userNameField.value = item.name ?? "";
-        this.phoneField.value = item.phone ?? "";
-        this.storeNameField.value = item.originalPickUpName ?? "";
-        this.registrationTimeField.value = item.paymentTime ?? "";
-        this.activityNameField.value = item.acName ?? "";
-        this.verificationDeadlineField.value = item.acPickUpTime ?? "";
-        this.writeStatusField.value = item.pickUpStatusText ?? "";
-        //如果已核销或者已经过了截止时间
-        if (
-          item.pickUpStatus == 0 ||
-          (item.acPickUpTime && new Date() > new Date(item.acPickUpTime))
-        ) {
-          this.buttonwan.disabled = true;
-        }
-        //根据订单id查询项目
-        this.$getAction("/api/dkn/orderProject/list", {
+      let params = {};
+      if (this.orderId) {
+        params = { id: this.orderId };
+      } else {
+        params = {
           pageNo: 1,
-          pageSize: -1,
-          orderId: item.id,
-        }).then((orderProjectRes) => {
-          if (orderProjectRes.code != 200 || res.result.records.length <= 0) {
+          pageSize: 1,
+          userId: this.userId,
+          activityId: this.activityId,
+        };
+      }
+      this.$getAction("/api/dkn/viewRegistrationOrders/list", params).then(
+        (res) => {
+          console.log("res--", res);
+          if (res.code != 200 || res.result.records.length <= 0) {
+            uni.showToast({
+              title: "请先活动报名",
+              icon: "error",
+              duration: 2000,
+            });
+            setTimeout(() => {
+              uni.navigateTo({
+                url:
+                  "/pages/haomo/1750714119029264386/page?activityId=" +
+                  this.activityId,
+              });
+            }, 1500);
             return;
           }
-          this.loopList.value = orderProjectRes.result.records;
-        });
-      });
+          let item = res.result.records[0];
+          //保存订单id
+          this.orderId = item.id;
+          this.orderCdoe.text = `订单编号：${item.code}`;
+          this.registrationProjectField.value = item.acName ?? "";
+          this.userNameField.value = item.name ?? "";
+          this.phoneField.value = item.phone ?? "";
+          this.storeNameField.value = item.originalPickUpName ?? "";
+          this.registrationTimeField.value = item.paymentTime ?? "";
+          this.activityNameField.value = item.acName ?? "";
+          this.verificationDeadlineField.value = item.acPickUpTime ?? "";
+          this.writeStatusField.value = item.pickUpStatusText ?? "";
+          //如果已核销或者已经过了截止时间
+          if (
+            item.pickUpStatus == 0 ||
+            (item.acPickUpTime && new Date() > new Date(item.acPickUpTime))
+          ) {
+            this.buttonwan.disabled = true;
+          }
+          //根据订单id查询项目
+          this.$getAction("/api/dkn/orderProject/list", {
+            pageNo: 1,
+            pageSize: -1,
+            orderId: item.id,
+          }).then((orderProjectRes) => {
+            if (orderProjectRes.code != 200 || res.result.records.length <= 0) {
+              return;
+            }
+            this.loopList.value = orderProjectRes.result.records;
+          });
+        }
+      );
     },
     onOnLoad(options) {
       console.log("onLoad");
