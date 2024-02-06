@@ -561,7 +561,11 @@ export default {
       console.log("mounted");
       let params = {};
       if (this.orderId) {
-        params = { id: this.orderId };
+        params = {
+          id: this.orderId,
+          pageNo: 1,
+          pageSize: 1,
+        };
       } else {
         params = {
           pageNo: 1,
