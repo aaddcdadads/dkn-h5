@@ -117,7 +117,7 @@ function() {
             if (res.message === '当前活动已经报名！') {
                 if (res.result.paymentStatus === 1) {
                     self.error('当前活动已经报名未支付')
-                    self.orderId = res.result.money
+                    self.orderId = res.result.orderId
                     if (self.isWeChat()) {
                         self.$pay(self.orderId, "0")
                         return
@@ -136,13 +136,13 @@ function() {
             }
             return
         }
-        uni.showToast({
-            icon: "success",
-            position: "top",
-            title: "报名成功",
-            duration: 2000,
-        });
         if (!self.money) {
+            uni.showToast({
+                icon: "success",
+                position: "top",
+                title: "报名成功",
+                duration: 2000,
+            });
             self.login()
             return
         }
