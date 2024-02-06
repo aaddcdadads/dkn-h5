@@ -132,7 +132,9 @@ export default {
       )[0];
       console.log("elementToCapture", elementToCapture);
       // 使用 html2canvas 截取特定元素
-      this.$html2canvas(elementToCapture, { useCors: true }).then((canvas) => {
+      this.$html2canvas(elementToCapture, {
+        useCors: true,
+      }).then((canvas) => {
         // 将 canvas 转换为 blob
         canvas.toBlob((blob) => {
           // 创建一个 <a> 元素
