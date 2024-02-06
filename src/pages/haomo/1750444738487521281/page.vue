@@ -166,6 +166,7 @@
               ref="payPopup"
               v-model:show="payPopup.show"
               :mode="'bottom'"
+              height="50%"
               class="ele-payPopup"
             >
               <view class="ele-wrapper ele-wrapper-activityText">
@@ -1063,7 +1064,7 @@ export default {
         ],
       },
       payPopup: {
-        show: false,
+        show: true,
       },
       activityItem: {},
     };
