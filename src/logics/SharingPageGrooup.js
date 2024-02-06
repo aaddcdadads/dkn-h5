@@ -83,7 +83,7 @@ const getBackgroundImage = (logic.getBackgroundImage = async (
   } else {
   }
   let records = self.getBackgroundImageRequestData.result.records;
-  if (records) {
+  if (records[0]) {
     self.sharingImage.backgroundImage =
       "/api/sys/common/static/" + records[0].path;
   }
