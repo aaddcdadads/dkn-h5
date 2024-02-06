@@ -7,7 +7,7 @@
       @click="onClick()"
     >
       <view class="topbox">
-        <view><img :src="item.bgUrl" /></view>
+        <view><img :src="item.bgUrl" @click="clickImg(item)" /></view>
         <view :style="{ display: item.display }"> </view>
       </view>
 
@@ -41,7 +41,7 @@ export default {
           },
           {
             bgUrl:
-              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+              "https://image-cdn.hellobike.com/repertoryImg/3006145221802065920172514679.png?Expires=1714371878&OSSAccessKeyId=LTAIwDP3dFcdWEUd&Signature=NaaxFxgeRk817OzHKjqQbu8zCX4%3D",
 
             height1: "auto",
             scoretext: "奖品",
@@ -114,21 +114,31 @@ export default {
     onClick() {
       this.$emit("onClick", this.item);
     },
+    clickImg(e) {
+      const images = this.funcList.map((item) => item.bgUrl);
+      uni.previewImage({
+        urls: images, //需要预览的图片http链接列表，多张的时候，url直接写在后面就行了
+        current: "", // 当前显示图片的http链接，默认是第一个
+        success: function (res) {},
+        fail: function (res) {},
+        complete: function (res) {},
+      });
+    },
   },
 };
 </script>
 <style lang="less" scoped>
 .kite-classify-scroll {
-padding-top: 24rpx;
+  padding-top: 24rpx;
   overflow: hidden;
   white-space: nowrap;
   background: v-bind(backgroundColor);
-  border-radius:8px;
+  border-radius: 8px;
 }
 .kite-classify-cell {
   display: inline-block;
   width: calc(25% - 20px);
-  margin:0  10px;
+  margin: 0 10px;
 }
 .topbox {
   width: 100%;
