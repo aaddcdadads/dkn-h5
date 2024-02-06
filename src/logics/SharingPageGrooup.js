@@ -50,6 +50,7 @@ const sharingPageInitialization = (logic.sharingPageInitialization = async (
   self.sharingPageInitializationData = eventData;
 
   await getCode(self);
+  await getBackgroundImage(self);
 });
 
 /********************** end sharingPageInitialization 开始 *********************/
