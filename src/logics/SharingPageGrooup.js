@@ -33,9 +33,9 @@ const sharingPageInitialization = (logic.sharingPageInitialization = async (
   if (self.sharingPageRequestData.success) {
   } else {
   }
-  let result = self.sharingPageRequestData.result;
-  self.code.name = result[0].qrCode;
-  self.sharingImage.backgroundImage = result[0].url;
+  let records = self.sharingPageRequestData.result.records;
+  self.code.name = records[0].qrCode;
+  self.sharingImage.backgroundImage = records[0].url;
 });
 
 /********************** end sharingPageInitialization 开始 *********************/
