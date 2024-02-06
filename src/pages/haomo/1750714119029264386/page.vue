@@ -1518,7 +1518,7 @@ export default {
         return;
       }
       uni.$u.route(
-        `/pages/haomo/1750444738487521281/page?activityId=${this.activityId}&activityName=${this.activityItem.name}`
+        `/pages/haomo/1750444738487521281/page?activityId=${this.activityId}&activityName=${this.activityItem.name}&channel=${this.channel}`
       );
     },
     onEle4D8Eb71C153949848Ba0E2Dd0E6Ceeb9OnClick() {
