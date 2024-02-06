@@ -102,10 +102,10 @@ export default {
         boxShadowVShadow: "0",
         boxShadowBlur: "0",
         boxShadowColor: "#00000000",
-        backgroundImage: "/static/components/img/share.png",
+        backgroundImage: "",
       },
       code: {
-        name: "https://img.yzcdn.cn/vant/cat.jpeg",
+        name: "",
         size: "100%",
         label: "",
       },
