@@ -167,57 +167,59 @@ export default {
 
 <style lang="less" scoped>
 .page {
+
 }
 
 .ele-wrapper-e006ab79-f3a9-492b-8632-73042a091b41 {
   width: 100%;
-  position: relative;
+position: relative;
 }
 
 .ele-wrapper-sharingImage {
-  width: 100%;
-  /deep/.ele-sharingImage {
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    aspect-ratio: 375/607;
-    position: relative;
-    //height: 100%;
-  }
-  display: block;
-  margin-bottom: 22%;
+  width:100%;
+/deep/.ele-sharingImage{
+  background-size: cover !important;
+  background-repeat:no-repeat;
+  aspect-ratio: 375/607;
+	position: relative;
+  //height: 100%;
+}
+display: block;
+margin-bottom: 22%;
 }
 
 .ele-wrapper-code {
   position: absolute;
-  aspect-ratio: 1/1;
-  width: 21%;
-  left: 11.4%;
-  bottom: 3%;
+aspect-ratio: 1/1;
+width: 21%;
+left: 11.4%;
+bottom: 2.6%;
+border-radius: 10px;
+/deep/ .u-icon {
+  width: 100%;
+  height: 100%
   border-radius: 10px;
-  /deep/ .u-icon {
-    width: 100%;
-    height: 100%;
-  }
+}
 }
 
 .ele-wrapper-084fc45c-3b7d-42af-9042-8c47c465787c {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  /deep/ .hm-bg-card {
-    display: flex;
-    align-items: center;
-  }
+left: 0;
+bottom: 0;
+width: 100%;
+/deep/ .hm-bg-card {
+	display: flex;
+  align-items: center;
+}
 }
 
 .ele-wrapper-0ed4308b-d32b-4f14-8401-ba9ad296dc56 {
   width: 18%;
-  margin-left: 18px;
-  margin-top: 8px;
-  aspect-ratio: 65/63;
-  /deep/ .u-icon {
+margin-left: 18px;
+margin-top: 8px;
+aspect-ratio: 65/63;
+/deep/ .u-icon {
     width: 100%;
-  }
+}
 }
 </style>
