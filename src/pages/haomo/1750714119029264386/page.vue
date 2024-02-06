@@ -133,6 +133,7 @@
                         <hm-uview-text
                           text="迪卡侬线上骑行活动"
                           font-size="16px"
+                          color="#FFFFFF"
                           padding="0"
                           class="ele-80a0f605-13bf-4742-904d-a7c8cdce9da1"
                         >
