@@ -1,3 +1,4 @@
+
 function() {
     let self = this
     //大图片
@@ -40,6 +41,8 @@ function() {
     self.outsideBg.hidden = false
     self.addOrderCard.hidden = false
     self.notActivity.hidden = true
+    self.imgCard.hidden = false
+    self.imgText.text="活动奖品"
     self.getActivity = async function (id) {
         let url = "/api/dkn/activity/queryByAll"
         const res = await self.$getAction(url, { id })
@@ -123,11 +126,15 @@ function() {
                 textbottom: x.name
             }
         })
+        if (self.activityImgList.funcList.length === 0) {
+            self.imgCard.hidden = true
+            self.imgText.text=""
+        }
         imgOne = imgOne.sort((a, b) => a.sortNo - b.sortNo)
         if (imgOne.length > 0) {
             self.logoImg.src = self.getImg(imgOne[0].path)
         }
-        imgOne.splice(0,1)
+        imgOne.splice(0, 1)
         self.listCompanent.funcList = imgOne.map(x => {
             return {
                 bgUrl: self.getImg(x.path),
@@ -198,6 +205,9 @@ function() {
     //获取验证码
     self.getPhoneCode = async function () {
         if (!self.checkPhone()) {
+            setTimeout(() => {
+                self.$refs.viewInput.reset();
+              })
             return
         }
         let url = '/api/sys/sms'
@@ -254,6 +264,69 @@ function() {
         });
         uni.setStorageSync("token", res.result.token)
         uni.setStorageSync("userInfo", res.result.userInfo)
+        uni.$u.route(
+            `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+        );
+    }
+    self.checkOrder = async function () {
+        if (!self.phoneBox.value) {
+            uni.showToast({
+                icon: "error",
+                position: "top",
+                title: "手机号不能为空",
+                duration: 2000,
+            });
+            return
+        }
+        if (!self.viewInput.value) {
+            uni.showToast({
+                icon: "error",
+                position: "top",
+                title: "验证码不能为空",
+                duration: 2000,
+            });
+            return
+        }
+        let url = '/api/sys/phoneLogin'
+        let params = {
+            mobile: self.phoneBox.value,
+            captcha: self.viewInput.value,
+        }
+        const res = await self.$postAction(url, params)
+        if (!res.success) {
+            uni.showToast({
+                icon: "error",
+                position: "top",
+                title: res.message,
+                duration: 2000,
+            });
+            return
+        }
+        self.viewPopup.show = false;
+        uni.showToast({
+            icon: "success",
+            position: "top",
+            title: res.message,
+            duration: 2000,
+        });
+        uni.setStorageSync("token", res.result.token)
+        uni.setStorageSync("userInfo", res.result.userInfo)
+        url = '/api/dkn/registrationOrders/getOne'
+        const resp = await self.$getAction(url,
+            { phone: self.phoneBox.value, activityId: self.activityId })
+        if (!resp.success || !resp.result) {
+            uni.showToast({
+                icon: "error",
+                position: "top",
+                title: "您尚未报名请前往报名活动",
+                duration: 2000,
+            });
+            uni.$u.route(
+                `/pages/haomo/1750444738487521281/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+            );
+            return
+
+        }
         uni.$u.route(
             `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
         );

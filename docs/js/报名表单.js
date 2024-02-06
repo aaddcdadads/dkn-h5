@@ -24,13 +24,13 @@ function() {
                 name: e.name,
                 description: e.synopsis,
                 price: e.free === 0 ? 0 : e.expense,
-                number: 0
+                number: 1
             }
         })
     }
     self.getStoreList = async function () {
         let url = '/api/dkn/store/listOrder'
-        const res = await self.$getAction(url)
+        const res = await self.$getAction(url, {status:0})
         if (!res.success || res.result.length === 0) {
             return
         }
@@ -103,7 +103,7 @@ function() {
         const orderProjects = self.getOrderProjects();
         let params = {
             activityId: self.activityId,
-            storeId: self.storeInput.value,
+            storeId: self.storeItem.id,
             paymentStatus: 1,
             phone: self.phoneInput.value,
             name: self.nameInput.value,
@@ -117,11 +117,15 @@ function() {
             if (res.message === '当前活动已经报名！') {
                 if (res.result.paymentStatus === 1) {
                     self.error('当前活动已经报名未支付')
+                    self.orderId = res.result.money
+                    if (self.isWeChat()) {
+                        self.$pay(self.orderId, "0")
+                        return
+                    }
                     self.payPopup.show = true;
                     self.activityText.text = self.activityName
                     self.countdown.text = ""
                     self.prices.text = `¥ ${res.result.money}`
-                    self.orderId = res.result.money
                 } else {
                     self.error(res.message)
                     self.login()
@@ -142,12 +146,22 @@ function() {
             self.login()
             return
         }
+        self.orderId = res.message
+        //微信浏览器打开直接跳微信支付
+        if (self.isWeChat()) {
+            self.$pay(self.orderId, "0")
+            return
+        }
         self.payPopup.show = true;
         self.activityText.text = self.activityName
         self.countdown.text = ""
         self.prices.text = `¥ ${self.money}`
-        self.orderId = res.message
     }
+    self.isWeChat=function() {
+        // 判断是否在微信浏览器中
+        const userAgent = navigator.userAgent.toLowerCase();
+        return userAgent.indexOf('micromessenger') !== -1;
+      }
     //登录验证
     self.login = async function () {
         let url = '/api/sys/phoneLogin'
@@ -191,8 +205,12 @@ function() {
     //获取验证码
     self.getPhoneCode = async function () {
         if (!self.checkPhone()) {
+            setTimeout(() => {
+                self.$refs.smscodeIpnut.reset();
+            })
             return
         }
+
         let url = '/api/sys/sms'
         let params = {
             mobile: self.phoneInput.value
