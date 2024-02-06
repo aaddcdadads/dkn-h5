@@ -364,7 +364,7 @@
                         class="ele-wrapper ele-wrapper-3ea4931b-f9be-449b-adfa-85aec01fa006"
                       >
                         <hm-uview-text
-                          text="核销截止:"
+                          text="核销时间:"
                           font-size="13px"
                           padding="0"
                           class="ele-3ea4931b-f9be-449b-adfa-85aec01fa006"
