@@ -5,25 +5,25 @@
         class="ele-wrapper ele-wrapper-c57e9abe-e655-4515-acc3-575489ca1e33"
       >
         <hm-uview-bg-card
-          padding=""
           width="100%"
           height="100%"
+          padding=""
           class="ele-c57e9abe-e655-4515-acc3-575489ca1e33"
         >
           <view
             class="ele-wrapper ele-wrapper-a4540298-8d72-4b6c-a4e3-fab8f56c0be2"
           >
             <hm-uview-bg-card
-              padding=""
-              box-shadow-blur=""
-              box-shadow-v-shadow=""
-              box-shadow-h-shadow=""
-              box-shadow-color="#F0F0F000"
-              border-radius=""
-              background-color="#F0F0F0"
               width="100%"
               height="100%"
+              border-radius=""
               :text-align="'center'"
+              padding=""
+              box-shadow-h-shadow=""
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+              box-shadow-color="#F0F0F000"
+              background-color="#F0F0F0"
               class="ele-a4540298-8d72-4b6c-a4e3-fab8f56c0be2"
             >
               <view
@@ -585,17 +585,11 @@ export default {
 
 .ele-wrapper-c57e9abe-e655-4515-acc3-575489ca1e33 {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .ele-wrapper-a4540298-8d72-4b6c-a4e3-fab8f56c0be2 {
   width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .ele-wrapper-4884fdaf-fa9c-460e-95ad-de4f053bfbf5 {
