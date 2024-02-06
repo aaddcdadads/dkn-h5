@@ -38,15 +38,6 @@ const getCode = (logic.getCode = async (pageVm, eventData) => {
 /********************** end getCode 开始 *********************/
 
 /********************** sharingPageInitialization 开始 *********************/
-/**
- * 分享页请求
- */
-const sharingPageRequest = (logic.sharingPageRequest = async function () {
-  let res = await self.$getAction(`/api/dkn/activity/list`, {
-    id: self.$route.query.activityId,
-  });
-  self.sharingPageRequestData = res;
-});
 
 /**
  * 逻辑流 sharingPageInitialization 入口函数
@@ -59,20 +50,9 @@ const sharingPageInitialization = (logic.sharingPageInitialization = async (
   self = Object.assign(pageVm, logic);
   self.sharingPageInitializationData = eventData;
 
-  await sharingPageRequest();
-  if (self.sharingPageRequestData.success) {
-  } else {
-  }
-  let records = self.sharingPageRequestData.result.records;
-  self.code.name = records[0].qrCode;
-  self.sharingImage.backgroundImage = records[0].url;
+  await getCode(self);
 });
 
 /********************** end sharingPageInitialization 开始 *********************/
 
-export {
-  getCodeRequest,
-  getCode,
-  sharingPageRequest,
-  sharingPageInitialization,
-};
+export { getCodeRequest, getCode, sharingPageInitialization };
