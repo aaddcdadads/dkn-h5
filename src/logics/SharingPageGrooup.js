@@ -81,8 +81,7 @@ const getBackgroundImage = (logic.getBackgroundImage = async (
   } else {
   }
   let records = self.getBackgroundImageRequestData.result.records;
-  self.code.name = records[0].qrCode;
-  self.sharingImage.backgroundImage = records[0].url;
+  // self.sharingImage.backgroundImage = records[0].url
 });
 
 /********************** end getBackgroundImage 开始 *********************/
