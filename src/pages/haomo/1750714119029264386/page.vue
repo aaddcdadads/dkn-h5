@@ -398,6 +398,11 @@
                         >
                         </hm-uview-icon>
                       </view>
+                      <view
+                        class="ele-wrapper ele-wrapper-a40489b1-523c-497a-8587-70b09de8a231"
+                      >
+                        <hm-uview-icon> </hm-uview-icon>
+                      </view>
                     </hm-uview-bg-card>
                   </view>
                 </hm-uview-bg-card>
@@ -1412,13 +1417,8 @@ export default {
         });
         if (!resp.success || !resp.result) {
           let item = new Date();
-          let startTime = new Date(self.activityItem.startTime);
-          let endTime = new Date(self.activityItem.endTime);
-          if (item.getTime() < startTime.getTIme()) {
-            self.error("活动未开始");
-            return;
-          }
-          if (item.getTime() > endTime.getTIme()) {
+          let closeTime = new Date(self.activityItem.closeTime);
+          if (item.getTime() > closeTime.getTIme()) {
             self.error("活动已结束");
             return;
           }
@@ -1436,6 +1436,14 @@ export default {
         uni.$u.route(
           `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
         );
+      };
+      self.error = function (text) {
+        uni.showToast({
+          icon: "error",
+          position: "top",
+          title: text,
+          duration: 2000,
+        });
       };
     },
 
