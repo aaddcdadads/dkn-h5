@@ -30,9 +30,8 @@ const getCode = (logic.getCode = async (pageVm, eventData) => {
   if (self.getCodeRequestData.success) {
   } else {
   }
-  let records = self.sharingPageRequestData.result.records;
+  let records = self.getCodeRequestData.result.records;
   self.code.name = records[0].qrCode;
-  self.sharingImage.backgroundImage = records[0].url;
 });
 
 /********************** end getCode 开始 *********************/
