@@ -83,7 +83,7 @@ const getBackgroundImage = (logic.getBackgroundImage = async (
   } else {
   }
   let records = self.getBackgroundImageRequestData.result.records;
-  // self.sharingImage.backgroundImage = records[0].url
+  self.sharingImage.backgroundImage = records[0].path;
 });
 
 /********************** end getBackgroundImage 开始 *********************/
