@@ -1111,9 +1111,7 @@ export default {
       self.activityImgList.textColor = "#D8477B";
       self.listCompanent.textColor = "#D8477B";
       //富文本
-      self.activityRulesText.data = {
-        html: "",
-      };
+      self.activityRulesText.data = { html: "" };
 
       self.phoneText.text = "";
       //数据对象
@@ -1128,9 +1126,7 @@ export default {
       self.imgText.text = "活动奖品";
       self.getActivity = async function (id) {
         let url = "/api/dkn/activity/queryByAll";
-        const res = await self.$getAction(url, {
-          id,
-        });
+        const res = await self.$getAction(url, { id });
         if (!res.success || !res.result) {
           self.outsideBg.hidden = true;
           self.addOrderCard.hidden = true;
@@ -1270,8 +1266,7 @@ export default {
       self.getData = function () {
         self.activityId = self.$route.query.activityId;
         if (!self.activityId) {
-          // 默认活动
-          self.activityId = "26d2fa133743ddf7e398ff720b5c6a38";
+          return;
         }
         self.getActivity(self.activityId);
       };
@@ -1416,6 +1411,17 @@ export default {
           activityId: self.activityId,
         });
         if (!resp.success || !resp.result) {
+          let item = new Date();
+          let startTime = new Date(self.activityItem.startTime);
+          let endTime = new Date(self.activityItem.endTime);
+          if (item.getTime() < startTime.getTIme()) {
+            self.error("活动未开始");
+            return;
+          }
+          if (item.getTime() > endTime.getTIme()) {
+            self.error("活动已结束");
+            return;
+          }
           uni.showToast({
             icon: "error",
             position: "top",
