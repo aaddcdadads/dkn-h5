@@ -1078,6 +1078,7 @@ export default {
       let self = this;
       self.activityId = self.$route.query.activityId;
       self.activityName = self.$route.query.activityName;
+      self.channel = self.$route.query.channel;
       self.eventCard.list = [];
       self.storeList.list = [];
       self.payButton.text = `立即报名`;
@@ -1175,10 +1176,6 @@ export default {
         self.addOrder();
       };
       self.addOrder = async function () {
-        let channel = 0;
-        if (self.weixinRadio.value === 1) {
-          channel = 1;
-        }
         let url = "/api/dkn/registrationOrders/addOrder";
         const orderProjects = self.getOrderProjects();
         let params = {
@@ -1190,7 +1187,7 @@ export default {
           smscode: self.smscodeIpnut.value,
           money: self.money,
           orderProjects,
-          channel,
+          channel: self.channel,
         };
         const res = await self.$postAction(url, params);
         if (!res.success) {
