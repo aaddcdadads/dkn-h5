@@ -1109,9 +1109,7 @@ export default {
       };
       self.getStoreList = async function () {
         let url = "/api/dkn/store/listOrder";
-        const res = await self.$getAction(url, {
-          status: 0,
-        });
+        const res = await self.$getAction(url, { status: 0 });
         if (!res.success || res.result.length === 0) {
           return;
         }
@@ -1121,12 +1119,7 @@ export default {
             shop: x.store,
           };
         });
-        self.storeList.list = [
-          {
-            anchor: "b",
-            store,
-          },
-        ];
+        self.storeList.list = [{ anchor: "b", store }];
       };
       self.getImg = function (url) {
         if (url.substring(0, 4) === "http") {
@@ -1202,7 +1195,7 @@ export default {
           if (res.message === "当前活动已经报名！") {
             if (res.result.paymentStatus === 1) {
               self.error("当前活动已经报名未支付");
-              self.orderId = res.result.money;
+              self.orderId = res.result.id;
               if (self.isWeChat()) {
                 self.$pay(self.orderId, "0");
                 return;
@@ -1221,13 +1214,13 @@ export default {
           }
           return;
         }
-        uni.showToast({
-          icon: "success",
-          position: "top",
-          title: "报名成功",
-          duration: 2000,
-        });
         if (!self.money) {
+          uni.showToast({
+            icon: "success",
+            position: "top",
+            title: "报名成功",
+            duration: 2000,
+          });
           self.login();
           return;
         }
