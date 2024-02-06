@@ -13,8 +13,7 @@ let logic = {};
  */
 const sharingPageRequest = (logic.sharingPageRequest = async function () {
   let res = await self.$getAction(`/api/dkn/activity/list`, {
-    // id: self.$route.query.activityId
-    id: "0ed5d98c96c65067dd7bc1f4ddb8573c",
+    id: self.$route.query.activityId,
   });
   self.sharingPageRequestData = res;
 });
