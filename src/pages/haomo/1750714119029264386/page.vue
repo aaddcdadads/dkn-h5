@@ -1704,6 +1704,9 @@ export default {
   /deep/.ele-listCompanent {
     display: block !important;
   }
+  /deep/.view {
+    padding: 0 !important;
+  }
 }
 
 .ele-wrapper-09caddfa-4979-48b3-81fd-a043baa3c683 {
