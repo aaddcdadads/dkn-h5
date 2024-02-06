@@ -1191,6 +1191,7 @@ export default {
           new Date(),
           new Date(self.activityItem.closeTime)
         );
+        console.log("time", time);
         self.closeTime.day = time.days;
         self.closeTime.hour = time.hour;
         self.closeTime.minute = time.minute;
@@ -1425,8 +1426,8 @@ export default {
         });
         if (!resp.success || !resp.result) {
           let item = new Date();
-          let closeTime = new Date(self.activityItem.closeTime);
-          if (item.getTime() > closeTime.getTime()) {
+          let closeTimes = new Date(self.activityItem.closeTime);
+          if (item.getTime() > closeTimes.getTime()) {
             self.error("活动已结束");
             return;
           }
