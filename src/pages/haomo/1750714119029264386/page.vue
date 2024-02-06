@@ -1280,6 +1280,7 @@ export default {
       };
       self.getData = function () {
         self.activityId = self.$route.query.activityId;
+        self.channel = self.$route.query.channel;
         if (!self.activityId) {
           return;
         }
@@ -1439,7 +1440,7 @@ export default {
             duration: 2000,
           });
           uni.$u.route(
-            `/pages/haomo/1750444738487521281/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+            `/pages/haomo/1750444738487521281/page?activityId=${self.activityId}&activityName=${self.activityItem.name}&channel=${self.channel}`
           );
           return;
         }
