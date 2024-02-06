@@ -11,28 +11,36 @@ let logic = {};
 /**
  * 获取二维码请求
  */
-const getCodeRequest = (logic.getCodeRequest = async function () {
-  let res = await self.$getAction(`/api/dkn/activity/list`, {
-    id: self.$route.query.activityId,
-  });
+const getCodeRequest = logic.getCodeRequest = async function () {
+  let res = await self.$getAction(
+    `/api/dkn/activity/list`,
+    {
+    id: self.$route.query.activityId
+}
+  )
   self.getCodeRequestData = res;
-});
+}
+
 
 /**
  * 逻辑流 getCode 入口函数
  */
-const getCode = (logic.getCode = async (pageVm, eventData) => {
-  console.log(`getCode: `, pageVm, eventData);
+const getCode = logic.getCode = async (pageVm, eventData) => {
+  console.log(`getCode: `, pageVm, eventData)
   self = Object.assign(pageVm, logic);
   self.getCodeData = eventData;
 
+  
   await getCodeRequest();
-  if (self.getCodeRequestData.success) {
-  } else {
-  }
-  let records = self.getCodeRequestData.result.records;
-  self.code.name = records[0].qrCode;
-});
+  if(self.getCodeRequestData.success){
+  
+}else{
+  
+}
+  let records = self.getCodeRequestData.result.records
+self.code.name = records[0].qrCode
+
+}
 
 /********************** end getCode 开始 *********************/
 
@@ -41,16 +49,15 @@ const getCode = (logic.getCode = async (pageVm, eventData) => {
 /**
  * 逻辑流 sharingPageInitialization 入口函数
  */
-const sharingPageInitialization = (logic.sharingPageInitialization = async (
-  pageVm,
-  eventData
-) => {
-  console.log(`sharingPageInitialization: `, pageVm, eventData);
+const sharingPageInitialization = logic.sharingPageInitialization = async (pageVm, eventData) => {
+  console.log(`sharingPageInitialization: `, pageVm, eventData)
   self = Object.assign(pageVm, logic);
   self.sharingPageInitializationData = eventData;
 
-  await getCode(self);
-});
+  
+  await getCode(self, );
+
+}
 
 /********************** end sharingPageInitialization 开始 *********************/
 
@@ -58,33 +65,39 @@ const sharingPageInitialization = (logic.sharingPageInitialization = async (
 /**
  * 获取背景图请求
  */
-const getBackgroundImageRequest = (logic.getBackgroundImageRequest = async function () {
-  let res = await self.$getAction(`/api/dkn/activityImg/list`, {
-    id: self.$route.query.activityId,
-  });
+const getBackgroundImageRequest = logic.getBackgroundImageRequest = async function () {
+  let res = await self.$getAction(
+    `/api/dkn/activityImg/list`,
+    {
+    id: self.$route.query.activityId
+}
+  )
   self.getBackgroundImageRequestData = res;
-});
+}
+
 
 /**
  * 逻辑流 getBackgroundImage 入口函数
  */
-const getBackgroundImage = (logic.getBackgroundImage = async (
-  pageVm,
-  eventData
-) => {
-  console.log(`getBackgroundImage: `, pageVm, eventData);
+const getBackgroundImage = logic.getBackgroundImage = async (pageVm, eventData) => {
+  console.log(`getBackgroundImage: `, pageVm, eventData)
   self = Object.assign(pageVm, logic);
   self.getBackgroundImageData = eventData;
 
+  
   await getBackgroundImageRequest();
-  if (self.getBackgroundImageRequestData.success) {
-  } else {
-  }
-  let records = self.getBackgroundImageRequestData.result.records;
-  // self.sharingImage.backgroundImage = records[0].url
-});
+  if(self.getBackgroundImageRequestData.success){
+  
+}else{
+  
+}
+  let records = self.getBackgroundImageRequestData.result.records
+// self.sharingImage.backgroundImage = records[0].url
+
+}
 
 /********************** end getBackgroundImage 开始 *********************/
+
 
 export {
   getCodeRequest,
@@ -92,4 +105,4 @@ export {
   sharingPageInitialization,
   getBackgroundImageRequest,
   getBackgroundImage,
-};
+}
