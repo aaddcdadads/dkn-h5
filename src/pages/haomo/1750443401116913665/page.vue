@@ -595,6 +595,7 @@ export default {
           let item = res.result.records[0];
           //保存订单id
           this.orderId = item.id;
+          this.activityId = item.activityId;
           this.orderCdoe.text = `订单编号：${item.code}`;
           this.registrationProjectField.value = item.acName ?? "";
           this.userNameField.value = item.name ?? "";
