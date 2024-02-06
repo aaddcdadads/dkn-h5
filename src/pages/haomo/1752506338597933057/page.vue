@@ -126,18 +126,38 @@ export default {
     },
 
     onEle0Ed4308BD32B4F148401Ba9Ad296Dc56Click() {
-      const link = document.createElement("a");
+      // 选择要截取的元素，例如通过 id 或者 class
+      const elementToCapture = document.querySelectorAll(
+        ".ele-sharingImage"
+      )[0];
+      console.log("elementToCapture", elementToCapture);
+      // 使用 html2canvas 截取特定元素
+      this.$html2canvas(elementToCapture, { useCors: true }).then((canvas) => {
+        // 将 canvas 转换为 blob
+        canvas.toBlob((blob) => {
+          // 创建一个 <a> 元素
+          const link = document.createElement("a");
 
-      // 将 download 属性设置为要保存的文件的名称
-      link.download = "活动分享图片";
+          // 创建一个临时的 URL，并将其作为下载链接
+          const url = URL.createObjectURL(blob);
+          link.href = url;
 
-      // 将 href 属性设置为图片的 URL
-      link.href = this.sharingImage.backgroundImage;
+          // 设置下载的文件名
+          link.download = "screenshot.png";
 
-      document.body.appendChild(link);
-      // 触发链接的点击事件
-      link.click();
-      document.body.removeChild(link);
+          // 将 <a> 元素添加到页面中
+          document.body.appendChild(link);
+
+          // 模拟点击链接以下载图片
+          link.click();
+
+          // 移除 <a> 元素
+          document.body.removeChild(link);
+
+          // 释放临时的 URL
+          URL.revokeObjectURL(url);
+        });
+      });
     },
   },
 };
