@@ -61,8 +61,8 @@ const sharingPageInitialization = (logic.sharingPageInitialization = async (
  */
 const getBackgroundImageRequest = (logic.getBackgroundImageRequest = async function () {
   let res = await self.$getAction(`/api/dkn/activityImg/list`, {
-    id: self.$route.query.activityId,
-    type: 3,
+    activityId: self.$route.query.activityId,
+    type: 2,
   });
   self.getBackgroundImageRequestData = res;
 });
