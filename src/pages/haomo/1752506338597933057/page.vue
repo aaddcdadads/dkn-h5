@@ -197,6 +197,8 @@ export default {
   /deep/ .u-icon {
     width: 100%;
     height: 100%;
+  }
+  /deep/ .u-icon__img {
     border-radius: 10px;
   }
 }
