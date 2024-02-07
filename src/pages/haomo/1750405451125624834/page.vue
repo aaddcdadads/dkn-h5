@@ -23,15 +23,14 @@
               height="80vh"
               class="ele-4b01ae23-2d04-43f2-a436-a9b3ce6bbfae"
             >
-              <view
-                class="ele-wrapper ele-wrapper-c10a3c79-ea72-4b94-9580-95ab6899844e"
-              >
+              <view class="ele-wrapper ele-wrapper-indexList">
                 <hm-index-list
-                  :list="[]"
-                  url="/api/dkn/store/listOrder"
-                  :get-data-map="{ name: 'key' }"
-                  :scroll-top="0"
-                  class="ele-c10a3c79-ea72-4b94-9580-95ab6899844e"
+                  ref="indexList"
+                  :list="indexList.list"
+                  :url="indexList.url"
+                  :get-data-map="indexList.getDataMap"
+                  :scroll-top="indexList.scrollTop"
+                  class="ele-indexList"
                 >
                 </hm-index-list>
               </view>
@@ -62,6 +61,14 @@ export default {
     return {
       "4b01ae23-2d04-43f2-a436-a9b3ce6bbfae": {
         show: true,
+      },
+      indexList: {
+        list: [],
+        url: "/api/dkn/store/listOrder",
+        getDataMap: {
+          name: "key",
+        },
+        scrollTop: 0,
       },
     };
   },
@@ -98,7 +105,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-c10a3c79-ea72-4b94-9580-95ab6899844e {
+.ele-wrapper-indexList {
   width: 100%;
 }
 </style>
