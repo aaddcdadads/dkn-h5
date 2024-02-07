@@ -19,14 +19,19 @@
             <hm-uview-popup
               :show="true"
               :mode="'bottom'"
-              width="100%"
-              height="80vh"
+              height="80%"
+              :mask-close-able="false"
               class="ele-4b01ae23-2d04-43f2-a436-a9b3ce6bbfae"
             >
               <view
                 class="ele-wrapper ele-wrapper-4e111f2f-459b-40a0-9d39-a62c56425140"
               >
-                <hm-uview-text> </hm-uview-text>
+                <hm-uview-text
+                  text="选择门店"
+                  font-size="16px"
+                  class="ele-4e111f2f-459b-40a0-9d39-a62c56425140"
+                >
+                </hm-uview-text>
               </view>
               <view class="ele-wrapper ele-wrapper-indexList">
                 <hm-index-list
@@ -38,11 +43,6 @@
                   class="ele-indexList"
                 >
                 </hm-index-list>
-              </view>
-              <view
-                class="ele-wrapper ele-wrapper-2d61873e-ed05-4f64-9c5e-6538c290e046"
-              >
-                <hm-uview-text> </hm-uview-text>
               </view>
             </hm-uview-popup>
           </view>
@@ -114,7 +114,18 @@ export default {
 }
 
 .ele-wrapper-4b01ae23-2d04-43f2-a436-a9b3ce6bbfae {
-  width: 100%;
+  /deep/.uni-scroll-view-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.ele-wrapper-4e111f2f-459b-40a0-9d39-a62c56425140 {
+  font-size: 16px;
+  color: #333333;
+  line-height: 20px;
+  margin: 10px 0;
 }
 
 .ele-wrapper-indexList {
