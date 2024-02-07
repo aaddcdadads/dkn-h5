@@ -94,7 +94,7 @@ export default {
               "/pages/haomo/1751068398554451969/page?activityId=" +
               this.activityId +
               "&storeId=" +
-              data,
+              storeId,
           });
         });
       }
