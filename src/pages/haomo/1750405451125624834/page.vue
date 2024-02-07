@@ -18,6 +18,7 @@
               ref="indexList"
               :list="indexList.list"
               :url="indexList.url"
+              :get-data-map="indexList.getDataMap"
               :scroll-top="indexList.scrollTop"
               class="ele-indexList"
             >
@@ -141,6 +142,13 @@ export default {
           },
         ],
         url: "/api/dkn/store/listOrder",
+        getDataMap: {
+          title: "title",
+          src: "src",
+          text: "text",
+          name: "key",
+          subName: "subName",
+        },
         scrollTop: 0,
       },
     };
