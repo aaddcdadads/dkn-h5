@@ -152,6 +152,9 @@
                     <store-selection
                       ref="storeList"
                       :list="storeList.list"
+                      :url="storeList.url"
+                      :get-data-map="storeList.getDataMap"
+                      :scroll-top="storeList.scrollTop"
                       @radioGroupChange="onStoreListRadioGroupChange"
                       class="ele-storeList"
                     >
@@ -1028,6 +1031,11 @@ export default {
             ],
           },
         ],
+        url: "/api/dkn/store/listOrder",
+        getDataMap: {
+          name: "key",
+        },
+        scrollTop: 0,
       },
       payButton: {
         text: "¥ 29.9 立即报名",
