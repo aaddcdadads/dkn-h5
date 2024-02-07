@@ -146,15 +146,15 @@ export default {
 
 <style lang="less" scoped>
 .page {
+  /deep/ .page-wrapper {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .ele-wrapper-b06d64c4-f458-43af-b486-f9fa892d1fa2 {
   width: 100%;
   height: 100%;
-  /deep/ .page-wrapper {
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .ele-wrapper-b7585dbe-1163-4c41-ade4-cd5a0ad7d68e {
