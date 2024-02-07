@@ -139,6 +139,8 @@ export default {
   color: #333333;
   line-height: 20px;
   margin: 10px 0;
+
+  display: none;
 }
 
 .ele-wrapper-indexListBox {
