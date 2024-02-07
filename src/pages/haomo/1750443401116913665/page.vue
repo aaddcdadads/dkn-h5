@@ -559,6 +559,7 @@ export default {
     },
     onMounted() {
       console.log("mounted");
+
       function isCurrentTimeInRange(startTime, endTime) {
         const currentTime = new Date();
         return (
@@ -609,8 +610,10 @@ export default {
           this.storeNameField.value = item.originalPickUpName ?? "";
           this.registrationTimeField.value = item.paymentTime ?? "";
           this.activityNameField.value = item.acName ?? "";
-          this.verificationDeadlineField.value =
-            item.pickUpStartTime + "-" + item.pickUpEndTime;
+          this.verificationDeadlineField.value = item.pickUpStartTime.split(
+            " "
+          )[0];
+          +"-" + item.pickUpEndTime.split(" ")[0];
           this.writeStatusField.value = item.pickUpStatusText ?? "";
           //如果已核销或者已经过了截止时间
           if (
