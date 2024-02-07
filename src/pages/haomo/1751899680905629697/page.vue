@@ -68,19 +68,13 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-d6daa484-d6ce-4792-9194-97a076552b17"
-                  >
+                  <view class="ele-wrapper ele-wrapper-activityList">
                     <hm-uview-radio
-                      value=""
+                      ref="activityList"
+                      v-model:value="activityList.value"
                       title=""
-                      :list="[
-                        { name: '活动名称', disabled: false },
-                        { name: '活动名称1', disabled: false },
-                        { name: '活动名称2', disabled: false },
-                        { name: '活动名称3', disabled: false },
-                      ]"
-                      class="ele-d6daa484-d6ce-4792-9194-97a076552b17"
+                      :list="activityList.list"
+                      class="ele-activityList"
                     >
                     </hm-uview-radio>
                   </view>
@@ -143,7 +137,7 @@ export default {
       "8e5b00d7-8606-49be-8e41-bd21c1e35237": {
         show: true,
       },
-      "d6daa484-d6ce-4792-9194-97a076552b17": {
+      activityList: {
         value: "",
         list: [
           {
@@ -229,7 +223,7 @@ export default {
   float: right;
 }
 
-.ele-wrapper-d6daa484-d6ce-4792-9194-97a076552b17 {
+.ele-wrapper-activityList {
   width: 100%;
   // /deep/.u-radio__icon-wrap--circle{
   //     right: 0;
