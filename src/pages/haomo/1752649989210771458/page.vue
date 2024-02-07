@@ -57,7 +57,7 @@ export default {
       //如果选择签到的培训管理和扫描出来的不一致
       if (!data) {
         uni.showToast({
-          title: "请选择正确的二维码",
+          title: "扫码失败",
           icon: "none",
           duration: 2500,
         });
