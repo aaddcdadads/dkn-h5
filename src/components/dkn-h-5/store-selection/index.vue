@@ -1,12 +1,29 @@
 <template>
-  <view style="display: flex;position: relative;">
-    <scroll-view :scroll-y="true" :scroll-into-view="toView" :scroll-with-animation="true"
-      :style="{ height: height + 'px' }">
-      <u-radio-group v-model="name" @change="radioGroupChange" style="width: 100%;">
-        <view v-for="(items, index) in data" :key="index" class="shop" :id="items.anchor">
-          <view v-for="item in items.store" class="store_list">
+  <view style="display: flex; position: relative">
+    <scroll-view
+      :scroll-y="true"
+      :scroll-into-view="toView"
+      :scroll-with-animation="true"
+      :style="{ height: height + 'px' }"
+    >
+      <u-radio-group
+        v-model="name"
+        @change="radioGroupChange"
+        style="width: 100%"
+      >
+        <view v-for="(items, index) in data" :key="index" class="shop">
+          <view
+            v-for="(item, itemsindex) in items.store"
+            class="store_list"
+            :id="items.anchor + itemsindex"
+            :key="itemsindex"
+          >
             <view class="title">{{ item.city }}</view>
-            <view v-for="(itemlist, key) in item.shop" :key="key" class="shopItem">
+            <view
+              v-for="(itemlist, key) in item.shop"
+              :key="key"
+              class="shopItem"
+            >
               <view class="name">
                 <u-radio :name="itemlist.name"> {{ itemlist.name }}</u-radio>
               </view>
@@ -26,6 +43,7 @@
   </view>
 </template>
 <script>
+import { pinyin } from "pinyin-pro";
 export default {
   props: {
     /**
@@ -50,11 +68,12 @@ export default {
                 shop: [
                   {
                     name: "柳叶店1-1-1",
-                    address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼常德市武陵区柳叶大道与皂果交汇处万达广场一楼常德市武陵区柳叶大道与皂果交汇处万达广场一楼常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
+                    address:
+                      "常德市武陵区柳叶大道与皂果交汇处万达广场一楼常德市武陵区柳叶大道与皂果交汇处万达广场一楼常德市武陵区柳叶大道与皂果交汇处万达广场一楼常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
                   },
-                ]
+                ],
               },
-            ]
+            ],
           },
           {
             anchor: "b",
@@ -66,7 +85,7 @@ export default {
                     name: "柳叶店",
                     address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
                   },
-                ]
+                ],
               },
               {
                 city: "长沙",
@@ -74,23 +93,20 @@ export default {
                   {
                     name: "梅溪湖店",
                     address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "湘江店路",
                     address: "湖南省长沙市丘林分三路1099号",
-
-                  },
-                  {
-                    name: "洋湖店",
-                    address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "洋湖店",
                     address: "湖南省长沙市丘林分三路1099号",
                   },
-                ]
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
               },
               {
                 city: "成都",
@@ -109,19 +125,22 @@ export default {
                   },
                   {
                     name: "洋湖店2",
-                    address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
                   },
                   {
                     name: "洋湖店3",
-                    address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
                   },
                   {
                     name: "洋湖店4",
-                    address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
                   },
-                ]
-              }
-            ]
+                ],
+              },
+            ],
           },
           {
             anchor: "c",
@@ -133,7 +152,7 @@ export default {
                     name: "柳叶店",
                     address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
                   },
-                ]
+                ],
               },
               {
                 city: "长沙",
@@ -145,18 +164,16 @@ export default {
                   {
                     name: "湘江店路",
                     address: "湖南省长沙市丘林分三路1099号",
-
-                  },
-                  {
-                    name: "洋湖店",
-                    address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "洋湖店",
                     address: "湖南省长沙市丘林分三路1099号",
                   },
-                ]
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
               },
               {
                 city: "成都",
@@ -164,36 +181,33 @@ export default {
                   {
                     name: "梅溪湖店",
                     address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "湘江店路",
                     address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
-
                   },
                   {
                     name: "洋湖店1",
                     address: "成都高新区仁和街39号6栋2层1号",
-
                   },
                   {
                     name: "洋湖店2",
-                    address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
                   },
                   {
                     name: "洋湖店3",
-                    address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
                   },
                   {
                     name: "洋湖店4",
-                    address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
                   },
-                ]
-              }
-            ]
+                ],
+              },
+            ],
           },
           {
             anchor: "d",
@@ -205,7 +219,7 @@ export default {
                     name: "柳叶店",
                     address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
                   },
-                ]
+                ],
               },
               {
                 city: "长沙",
@@ -217,18 +231,16 @@ export default {
                   {
                     name: "湘江店路",
                     address: "湖南省长沙市丘林分三路1099号",
-
-                  },
-                  {
-                    name: "洋湖店",
-                    address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "洋湖店",
                     address: "湖南省长沙市丘林分三路1099号",
                   },
-                ]
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
               },
               {
                 city: "成都",
@@ -236,36 +248,33 @@ export default {
                   {
                     name: "梅溪湖店",
                     address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "湘江店路",
                     address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
-
                   },
                   {
                     name: "洋湖店1",
                     address: "成都高新区仁和街39号6栋2层1号",
-
                   },
                   {
                     name: "洋湖店2",
-                    address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
                   },
                   {
                     name: "洋湖店3",
-                    address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
                   },
                   {
                     name: "洋湖店4",
-                    address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
                   },
-                ]
-              }
-            ]
+                ],
+              },
+            ],
           },
           {
             anchor: "e",
@@ -277,7 +286,7 @@ export default {
                     name: "柳叶店",
                     address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
                   },
-                ]
+                ],
               },
               {
                 city: "长沙",
@@ -289,18 +298,16 @@ export default {
                   {
                     name: "湘江店路",
                     address: "湖南省长沙市丘林分三路1099号",
-
-                  },
-                  {
-                    name: "洋湖店",
-                    address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "洋湖店",
                     address: "湖南省长沙市丘林分三路1099号",
                   },
-                ]
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
               },
               {
                 city: "成都",
@@ -308,36 +315,33 @@ export default {
                   {
                     name: "梅溪湖店",
                     address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "湘江店路",
                     address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
-
                   },
                   {
                     name: "洋湖店1",
                     address: "成都高新区仁和街39号6栋2层1号",
-
                   },
                   {
                     name: "洋湖店2",
-                    address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
                   },
                   {
                     name: "洋湖店3",
-                    address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
                   },
                   {
                     name: "洋湖店4",
-                    address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
                   },
-                ]
-              }
-            ]
+                ],
+              },
+            ],
           },
           {
             anchor: "f",
@@ -349,7 +353,7 @@ export default {
                     name: "柳叶店",
                     address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
                   },
-                ]
+                ],
               },
               {
                 city: "长沙",
@@ -361,18 +365,16 @@ export default {
                   {
                     name: "湘江店路",
                     address: "湖南省长沙市丘林分三路1099号",
-
-                  },
-                  {
-                    name: "洋湖店",
-                    address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "洋湖店",
                     address: "湖南省长沙市丘林分三路1099号",
                   },
-                ]
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
               },
               {
                 city: "成都",
@@ -380,36 +382,33 @@ export default {
                   {
                     name: "梅溪湖店",
                     address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "湘江店路",
                     address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
-
                   },
                   {
                     name: "洋湖店1",
                     address: "成都高新区仁和街39号6栋2层1号",
-
                   },
                   {
                     name: "洋湖店2",
-                    address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
                   },
                   {
                     name: "洋湖店3",
-                    address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
                   },
                   {
                     name: "洋湖店4",
-                    address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
                   },
-                ]
-              }
-            ]
+                ],
+              },
+            ],
           },
           {
             anchor: "g",
@@ -421,7 +420,7 @@ export default {
                     name: "柳叶店",
                     address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
                   },
-                ]
+                ],
               },
               {
                 city: "长沙",
@@ -433,18 +432,16 @@ export default {
                   {
                     name: "湘江店路",
                     address: "湖南省长沙市丘林分三路1099号",
-
-                  },
-                  {
-                    name: "洋湖店",
-                    address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "洋湖店",
                     address: "湖南省长沙市丘林分三路1099号",
                   },
-                ]
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
               },
               {
                 city: "成都",
@@ -452,36 +449,33 @@ export default {
                   {
                     name: "梅溪湖店",
                     address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "湘江店路",
                     address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
-
                   },
                   {
                     name: "洋湖店1",
                     address: "成都高新区仁和街39号6栋2层1号",
-
                   },
                   {
                     name: "洋湖店2",
-                    address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
                   },
                   {
                     name: "洋湖店3",
-                    address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
                   },
                   {
                     name: "洋湖店4",
-                    address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
                   },
-                ]
-              }
-            ]
+                ],
+              },
+            ],
           },
           {
             anchor: "j",
@@ -493,7 +487,7 @@ export default {
                     name: "柳叶店",
                     address: "常德市武陵区柳叶大道与皂果交汇处万达广场一楼",
                   },
-                ]
+                ],
               },
               {
                 city: "长沙",
@@ -505,18 +499,16 @@ export default {
                   {
                     name: "湘江店路",
                     address: "湖南省长沙市丘林分三路1099号",
-
-                  },
-                  {
-                    name: "洋湖店",
-                    address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "洋湖店",
                     address: "湖南省长沙市丘林分三路1099号",
                   },
-                ]
+                  {
+                    name: "洋湖店",
+                    address: "湖南省长沙市丘林分三路1099号",
+                  },
+                ],
               },
               {
                 city: "成都",
@@ -524,76 +516,105 @@ export default {
                   {
                     name: "梅溪湖店",
                     address: "湖南省长沙市丘林分三路1099号",
-
                   },
                   {
                     name: "湘江店路",
                     address: "成都市郫都区德源镇红旗大道北段221号5号楼11楼",
-
                   },
                   {
                     name: "洋湖店1",
                     address: "成都高新区仁和街39号6栋2层1号",
-
                   },
                   {
                     name: "洋湖店2",
-                    address: "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区益州大道中段1800号1栋22-23层2201号、2301号",
                   },
                   {
                     name: "洋湖店3",
-                    address: "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都市天府新区万安街道麓山大道二段18号附3号4栋-1层2号",
                   },
                   {
                     name: "洋湖店4",
-                    address: "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
-
+                    address:
+                      "中国（四川）自由贸易试验区成都高新区吉瑞四路399号1栋8楼5、6号",
                   },
-                ]
-              }
-            ]
+                ],
+              },
+            ],
           },
-        ]
-      }
-    }
+        ];
+      },
+    },
   },
   watch: {
     list: {
       handler: function (val) {
         this.data = val;
+        this.mapData(this.data);
       },
       deep: true,
-    }
+    },
   },
   data() {
     return {
       scrollTop: null,
       data: [],
       height: 0,
-      toView: '',
+      toView: "",
       item: null,
-      anch: [`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `q`, `r`, `s`, `t`, `u`, `v`, `w`, `x`, `y`, `z`]
-    }
+      anch: [
+        `a`,
+        `b`,
+        `c`,
+        `d`,
+        `e`,
+        `f`,
+        `g`,
+        `h`,
+        `i`,
+        `j`,
+        `k`,
+        `l`,
+        `m`,
+        `n`,
+        `o`,
+        `p`,
+        `q`,
+        `r`,
+        `s`,
+        `t`,
+        `u`,
+        `v`,
+        `w`,
+        `x`,
+        `y`,
+        `z`,
+      ],
+    };
   },
   mounted() {
     this.data = this.list;
+    this.mapData(this.data);
     this.$nextTick(() => {
       const query = uni.createSelectorQuery().in();
-      query.select('.anchorBox').boundingClientRect(data => {
-        if (data.height < 300) {
-          this.height = 300;
-        } else {
-          this.height = data.height;
-        }
-      }).exec();
-    })
+      query
+        .select(".anchorBox")
+        .boundingClientRect((data) => {
+          if (data.height < 300) {
+            this.height = 300;
+          } else {
+            this.height = data.height;
+          }
+        })
+        .exec();
+    });
   },
   methods: {
     radioGroupChange(e) {
       let arr = JSON.parse(JSON.stringify(this.data));
-      this.itemArray(arr, e); 
+      this.itemArray(arr, e);
       this.$emit("radioGroupChange", this.item);
     },
     itemArray(arr, e) {
@@ -601,25 +622,36 @@ export default {
       for (let i = 0; i < length; i++) {
         let stores = arr[i];
         if (arr[i].name !== undefined && arr[i].name === e) {
-          this.item = arr[i]
-          return
+          this.item = arr[i];
+          return;
         } else {
           for (let items in stores) {
             if (Array.isArray(stores[items])) {
-             this.itemArray(stores[items], e);
+              this.itemArray(stores[items], e);
             }
           }
         }
       }
-
     },
     anchor(e) {
-      this.toView = e
-
+      this.toView = e;
+    },
+    mapData(data) {
+      let newData = data[0].store;
+      newData.forEach((item) => {
+        let Capital = pinyin(item.city, {
+          pattern: "first",
+          toneType: "none",
+        })
+          .charAt(0)
+          .toLowerCase();
+        item.pinyinKey = Capital;
+      });
+      newData = newData.sort((a, b) => a.city.localeCompare(b.city));
+      return newData;
     },
   },
-
-}
+};
 </script>
 
 <style scoped>
@@ -632,7 +664,7 @@ export default {
 .shopItem {
   padding-top: 5px;
   margin-top: 10px;
-  border-top: 0.5px solid #FFDEDEDE;
+  border-top: 0.5px solid #ffdedede;
 }
 
 .name {
@@ -655,7 +687,7 @@ export default {
 }
 
 .itembox:active {
-  background: #2979FF;
+  background: #2979ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -669,7 +701,6 @@ export default {
   flex-direction: column;
   align-items: center;
   min-height: 300px;
-
 }
 
 .itembox {
@@ -684,6 +715,6 @@ export default {
 .store_list {
   margin-top: 10px;
   padding-bottom: 15px;
-  border-bottom: 0.5px solid #FFDEDEDE;
+  border-bottom: 0.5px solid #ffdedede;
 }
 </style>
