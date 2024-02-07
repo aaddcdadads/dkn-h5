@@ -1097,8 +1097,13 @@ export default {
         if (!res.success || res.result.records.length === 0) {
           return;
         }
-        self.eventCard.list = res.result.records.map((e) => {
-          return {
+        let list = [];
+        res.result.records.forEach((e, index) => {
+          let checked = false;
+          if (index == 0) {
+            checked = true;
+          }
+          let par = {
             ...e,
             checked: false,
             image: self.getImg(e.imgPath),
@@ -1107,7 +1112,11 @@ export default {
             price: e.free === 0 ? 0 : e.expense,
             number: 1,
           };
+          list.push(par);
         });
+        self.eventCard.list = list;
+        self.money = list[0].price;
+        self.payButton.text = `总费用：¥${self.money} 立即报名`;
       };
       self.getStoreList = async function () {
         let url = "/api/dkn/store/listOrder";
