@@ -13,6 +13,12 @@
           box-shadow-blur="0"
           class="ele-b06d64c4-f458-43af-b486-f9fa892d1fa2"
         >
+          <view
+            class="ele-wrapper ele-wrapper-4b01ae23-2d04-43f2-a436-a9b3ce6bbfae"
+          >
+            <hm-uview-popup :show="true" width="100%" height="80vh">
+            </hm-uview-popup>
+          </view>
           <view class="ele-wrapper ele-wrapper-indexList">
             <hm-index-list
               ref="indexList"
@@ -33,18 +39,23 @@
 <script>
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
+import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import HmIndexList from "/@/components/built-in/uniapp-haomo/HmIndexList.vue";
 
 export default {
   name: "Test",
   components: {
     HmUviewBgCard,
+    HmUviewPopup,
     HmIndexList,
   },
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
     return {
+      "4b01ae23-2d04-43f2-a436-a9b3ce6bbfae": {
+        show: true,
+      },
       indexList: {
         list: [],
         url: "/api/dkn/store/listOrder",
