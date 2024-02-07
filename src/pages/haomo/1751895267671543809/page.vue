@@ -158,7 +158,6 @@ export default {
         value: "",
         leftSrc: [],
       },
-      activityItem: {},
       canelButton: {
         type: "info",
         text: "取消",
@@ -176,6 +175,7 @@ export default {
   methods: {
     onMounted() {
       let self = this;
+      self.storeId = self.$route.query.storeId;
       //校验手机号
       self.checkPhone = function () {
         let mobile = self.phoneBox.value;
@@ -263,7 +263,7 @@ export default {
         uni.setStorageSync("token", res.result.token);
         uni.setStorageSync("userInfo", res.result.userInfo);
         uni.$u.route(
-          `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+          `/pages/haomo/1751899680905629697/page?storeId=${self.storeId}`
         );
       };
       self.error = function (text) {
