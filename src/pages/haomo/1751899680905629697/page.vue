@@ -213,7 +213,7 @@ export default {
           return;
         }
         uni.$u.route(
-          `/pages/haomo/1751899680905629697/page?activity=${self.activityList.list[index].id}`
+          `/pages/haomo/1751068398554451969/page?activity=${self.activityList.list[index].id}&storeId=${self.storeId}`
         );
       };
     },
