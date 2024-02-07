@@ -174,6 +174,7 @@ export default {
     },
     onSureButtonClick() {
       let url = "/api/sys/phoneLogin";
+      console.log("xja-test");
       uni.$u.route(
         "https://stage.block-design.cn/edit-page/?pageId=1751895267671543809"
       );
