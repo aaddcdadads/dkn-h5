@@ -324,6 +324,7 @@
                                 activityImgList.backgroundColor
                               "
                               :text-color="activityImgList.textColor"
+                              class="ele-activityImgList"
                             >
                             </scroll-list>
                           </view>
@@ -1724,6 +1725,10 @@ export default {
 
   border-radius: 8px;
   display: none;
+}
+
+.ele-wrapper-activityImgList {
+  width: 100%;
 }
 
 .ele-wrapper-dacbdcbf-5aa6-416f-a334-d9098c8ccfda {
