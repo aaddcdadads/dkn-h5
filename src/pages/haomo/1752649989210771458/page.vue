@@ -67,8 +67,10 @@ export default {
             this.activityId,
         });
       } else {
+        const urlParams = new URLSearchParams(data);
+        const storeId = urlParams.get("storeId");
         this.$getAction("/api/dkn/store/queryById", {
-          id: data,
+          id: storeId,
         }).then((res) => {
           if (res.code != 200) {
             uni.showToast({
