@@ -145,7 +145,7 @@ export default {
 
 .ele-wrapper-indexListBox {
   width: 100%;
-  flex: 1 1 auto;
+  height: 100%;
 }
 
 .ele-wrapper-indexList {
