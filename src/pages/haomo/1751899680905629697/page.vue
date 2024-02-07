@@ -138,7 +138,6 @@ export default {
         show: true,
       },
       activityList: {
-        value: "",
         list: [
           {
             name: "活动名称",
@@ -157,6 +156,7 @@ export default {
             disabled: false,
           },
         ],
+        value: "",
       },
     };
   },
@@ -171,12 +171,20 @@ export default {
       let userInfoString = localStorage.getItem("userInfo");
       let userInfo = JSON.parse(userInfoString);
       self.userId = userInfo.data.id || "";
+      self.activityList.list = [];
       self.getActivity = async function (userId) {
         let url = "/api/dkn/activity/userList";
         const res = await self.$getAction(url, { userId: self.userId });
         if (!res.success || !res.result) {
           return;
         }
+        self.activityList.list = res.result.map((e) => {
+          return {
+            ...e,
+            name: e.name,
+            disabled: false,
+          };
+        });
       };
       self.getActivity();
     },
