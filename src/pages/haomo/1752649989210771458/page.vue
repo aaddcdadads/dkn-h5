@@ -67,8 +67,12 @@ export default {
             this.activityId,
         });
       } else {
-        const urlParams = new URLSearchParams(data);
-        const storeId = urlParams.get("storeId");
+        const queryString = data.split("?")[1]; // 获取？后面的查询参数部分
+        const storeId =
+          queryString && queryString.indexOf("=")
+            ? queryString.split("=")[1]
+            : "-1";
+
         this.$getAction("/api/dkn/store/queryById", {
           id: storeId,
         }).then((res) => {
