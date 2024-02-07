@@ -167,7 +167,26 @@ export default {
     };
   },
   watch: {},
+  async mounted(e) {
+    this.onMounted(e);
+  },
   methods: {
+    onMounted() {
+      let self = this;
+      self.storeId = self.$route.query.storeId;
+      let userInfoString = localStorage.getItem("userInfo");
+      let userInfo = JSON.parse(userInfoString);
+      self.userId = userInfo.data.id || "";
+      self.getActivity = async function (userId) {
+        let url = "/api/dkn/activity/userList";
+        const res = await self.$getAction(url, { userId: self.userId });
+        if (!res.success || !res.result) {
+          return;
+        }
+      };
+      self.getActivity();
+    },
+
     onEle205A06F4977C4Fe1Ac28E46F34C84338Click() {
       uni.$u.route(
         "https://stage.block-design.cn/edit-page/?pageId=1751068398554451969"
