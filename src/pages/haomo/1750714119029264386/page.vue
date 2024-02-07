@@ -1122,10 +1122,20 @@ export default {
     };
   },
   watch: {},
+  created(e) {
+    this.onCreated(e);
+  },
   async mounted(e) {
     this.onMounted(e);
   },
   methods: {
+    onCreated() {
+      let self = this;
+      let type = self.$route.query.type;
+      if (type) {
+      }
+    },
+
     onMounted() {
       let self = this;
       //大图片
