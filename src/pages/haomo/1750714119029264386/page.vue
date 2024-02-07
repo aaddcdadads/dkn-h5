@@ -1535,8 +1535,6 @@ export default {
 
 .ele-wrapper-outsideBg {
   width: 100%;
-  position: relative;
-  height: calc(100vh - 120px);
   overflow-y: scroll;
   width: 100%;
 }
