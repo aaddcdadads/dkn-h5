@@ -122,7 +122,7 @@
               ref="shopPop"
               v-model:show="shopPop.show"
               :mode="'bottom'"
-              height=""
+              height="68%"
               :mask-close-able="false"
               @close="onShopPopClose"
               class="ele-shopPop"
