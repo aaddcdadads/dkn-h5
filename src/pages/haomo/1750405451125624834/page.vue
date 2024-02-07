@@ -13,108 +13,13 @@
           box-shadow-blur="0"
           class="ele-b06d64c4-f458-43af-b486-f9fa892d1fa2"
         >
-          <view
-            class="ele-wrapper ele-wrapper-b7585dbe-1163-4c41-ade4-cd5a0ad7d68e"
-          >
+          <view class="ele-wrapper ele-wrapper-indexList">
             <hm-index-list
-              :list="[
-                {
-                  title: '123',
-                  src:
-                    'https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800',
-                  text: '',
-                  name: '饿的小松鼠',
-                  subName: 'haomo',
-                },
-                {
-                  title: '321',
-                  src: '',
-                  text: '松',
-                  name: '饥饿的松鼠',
-                  subName: '',
-                },
-                {
-                  title: '123',
-                  src:
-                    'https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800',
-                  text: '',
-                  name: '饥饿的小松鼠',
-                  subName: 'haomo',
-                },
-                {
-                  title: '321',
-                  src: '',
-                  text: '松',
-                  name: '饥饿的松鼠',
-                  subName: '',
-                },
-                {
-                  title: '321',
-                  src: '',
-                  text: '松',
-                  name: 'A的松鼠',
-                  subName: '',
-                },
-                {
-                  title: '123',
-                  src:
-                    'https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800',
-                  text: '',
-                  name: '的小松鼠',
-                  subName: 'haomo',
-                },
-                {
-                  title: '123',
-                  src:
-                    'https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800',
-                  text: '',
-                  name: '小松鼠',
-                  subName: 'haomo',
-                },
-                {
-                  title: '123',
-                  src:
-                    'https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800',
-                  text: '',
-                  name: '松鼠',
-                  subName: 'haomo',
-                },
-                {
-                  title: '123',
-                  src:
-                    'https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800',
-                  text: '',
-                  name: '鼠',
-                  subName: 'haomo',
-                },
-                {
-                  title: '123',
-                  src:
-                    'https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800',
-                  text: '',
-                  name: '松xiao鼠',
-                  subName: 'haomo',
-                },
-                {
-                  title: '123',
-                  src:
-                    'https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800',
-                  text: '',
-                  name: 'xiao鼠',
-                  subName: 'haomo',
-                },
-                {
-                  title: '123',
-                  src:
-                    'https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800',
-                  text: '',
-                  name: 'ao鼠',
-                  subName: 'haomo',
-                },
-              ]"
-              url="/api/dkn/store/listOrder"
-              :scroll-top="0"
-              class="ele-b7585dbe-1163-4c41-ade4-cd5a0ad7d68e"
+              ref="indexList"
+              :list="indexList.list"
+              :url="indexList.url"
+              :scroll-top="indexList.scrollTop"
+              class="ele-indexList"
             >
             </hm-index-list>
           </view>
@@ -138,7 +43,107 @@ export default {
   options: { styleIsolation: "shared" },
   data() {
     let self = this;
-    return {};
+    return {
+      indexList: {
+        list: [
+          {
+            title: "123",
+            src:
+              "https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800",
+            text: "",
+            name: "饿的小松鼠",
+            subName: "haomo",
+          },
+          {
+            title: "321",
+            src: "",
+            text: "松",
+            name: "饥饿的松鼠",
+            subName: "",
+          },
+          {
+            title: "123",
+            src:
+              "https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800",
+            text: "",
+            name: "饥饿的小松鼠",
+            subName: "haomo",
+          },
+          {
+            title: "321",
+            src: "",
+            text: "松",
+            name: "饥饿的松鼠",
+            subName: "",
+          },
+          {
+            title: "321",
+            src: "",
+            text: "松",
+            name: "A的松鼠",
+            subName: "",
+          },
+          {
+            title: "123",
+            src:
+              "https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800",
+            text: "",
+            name: "的小松鼠",
+            subName: "haomo",
+          },
+          {
+            title: "123",
+            src:
+              "https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800",
+            text: "",
+            name: "小松鼠",
+            subName: "haomo",
+          },
+          {
+            title: "123",
+            src:
+              "https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800",
+            text: "",
+            name: "松鼠",
+            subName: "haomo",
+          },
+          {
+            title: "123",
+            src:
+              "https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800",
+            text: "",
+            name: "鼠",
+            subName: "haomo",
+          },
+          {
+            title: "123",
+            src:
+              "https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800",
+            text: "",
+            name: "松xiao鼠",
+            subName: "haomo",
+          },
+          {
+            title: "123",
+            src:
+              "https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800",
+            text: "",
+            name: "xiao鼠",
+            subName: "haomo",
+          },
+          {
+            title: "123",
+            src:
+              "https://img2.baidu.com/it/u=2969169350,1551254405&fm=253&fmt=auto&app=120&f=PNG?w=1280&h=800",
+            text: "",
+            name: "ao鼠",
+            subName: "haomo",
+          },
+        ],
+        url: "/api/dkn/store/listOrder",
+        scrollTop: 0,
+      },
+    };
   },
   watch: {},
   methods: {},
@@ -158,7 +163,7 @@ export default {
   height: 100%;
 }
 
-.ele-wrapper-b7585dbe-1163-4c41-ade4-cd5a0ad7d68e {
+.ele-wrapper-indexList {
   width: 100%;
 }
 </style>
