@@ -74,6 +74,7 @@
                           v-model:value="viewInput.value"
                           :left-src="viewInput.leftSrc"
                           placeholder=" 请填写手机验证码"
+                          @onCode="onViewInputOnCode"
                           class="ele-viewInput"
                         >
                         </information-input-box>
@@ -168,10 +169,13 @@ export default {
     };
   },
   watch: {},
-  beforeCreate(e) {
+  mounted(e) {
     this, arguments;
   },
   methods: {
+    onViewInputOnCode() {
+      this.getPhoneCode();
+    },
     onCanelButtonClick() {
       this.viewPopup.show = false;
     },
