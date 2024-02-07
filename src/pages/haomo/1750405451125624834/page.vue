@@ -137,6 +137,7 @@ export default {
 
 .ele-wrapper-893e3db6-f42a-48b1-af1a-9a1c7a25fddf {
   width: 100%;
+  flex: 1 1 auto;
 }
 
 .ele-wrapper-ccfa9bff-52de-4afa-973e-479f97ae9475 {
