@@ -33,6 +33,20 @@
                 >
                 </hm-uview-text>
               </view>
+              <view
+                class="ele-wrapper ele-wrapper-893e3db6-f42a-48b1-af1a-9a1c7a25fddf"
+              >
+                <hm-uview-bg-card
+                  width="100%"
+                  height="100%"
+                  border-radius="0"
+                  padding="0"
+                  box-shadow-v-shadow="0"
+                  box-shadow-blur="0"
+                  class="ele-893e3db6-f42a-48b1-af1a-9a1c7a25fddf"
+                >
+                </hm-uview-bg-card>
+              </view>
               <view class="ele-wrapper ele-wrapper-indexList">
                 <hm-index-list
                   ref="indexList"
@@ -126,6 +140,10 @@ export default {
   color: #333333;
   line-height: 20px;
   margin: 10px 0;
+}
+
+.ele-wrapper-893e3db6-f42a-48b1-af1a-9a1c7a25fddf {
+  width: 100%;
 }
 
 .ele-wrapper-indexList {
