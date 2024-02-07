@@ -559,6 +559,12 @@ export default {
     },
     onMounted() {
       console.log("mounted");
+      function isCurrentTimeInRange(startTime, endTime) {
+        const currentTime = new Date();
+        return (
+          currentTime >= new Date(startTime) && currentTime <= new Date(endTime)
+        );
+      }
       let params = {};
       if (this.orderId) {
         params = {
@@ -603,15 +609,17 @@ export default {
           this.storeNameField.value = item.originalPickUpName ?? "";
           this.registrationTimeField.value = item.paymentTime ?? "";
           this.activityNameField.value = item.acName ?? "";
-          this.verificationDeadlineField.value = item.acPickUpTime ?? "";
+          this.verificationDeadlineField.value =
+            item.pickUpStartTime + "-" + item.pickUpEndTime;
           this.writeStatusField.value = item.pickUpStatusText ?? "";
           //如果已核销或者已经过了截止时间
           if (
             item.pickUpStatus == 0 ||
-            (item.acPickUpTime && new Date() > new Date(item.acPickUpTime))
+            !isCurrentTimeInRange(item.pickUpStartTime, item.pickUpEndTime)
           ) {
             this.buttonwan.disabled = true;
           }
+
           //根据订单id查询项目
           this.$getAction("/api/dkn/orderProject/list", {
             pageNo: 1,

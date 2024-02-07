@@ -159,10 +159,10 @@
                           ref="closeTime"
                           :background-color="closeTime.backgroundColor"
                           :color="closeTime.color"
-                          :hour="closeTime.hour"
-                          :splitor-color="closeTime.splitorColor"
                           :font-size="closeTime.fontSize"
+                          :splitor-color="closeTime.splitorColor"
                           :day="closeTime.day"
+                          :hour="closeTime.hour"
                           :minute="closeTime.minute"
                           :second="closeTime.second"
                           class="ele-closeTime"
@@ -861,8 +861,8 @@ export default {
         second: 17,
         backgroundColor: "#00000000",
         color: "#FFFFFF",
-        splitorColor: "#FFFFFF",
         fontSize: 11,
+        splitorColor: "#FFFFFF",
       },
       nameText: {
         text: "迪卡侬春节活动",
@@ -1227,9 +1227,9 @@ export default {
         );
         console.log("time", time);
         self.closeTime.day = time.days;
-        self.closeTime.hour = time.hour;
-        self.closeTime.minute = time.minute;
-        self.closeTime.second = time.second;
+        self.closeTime.hour = time.hours;
+        self.closeTime.minute = time.minutes;
+        self.closeTime.second = time.seconds;
         self.setImg();
         self.setTextArea();
       };
@@ -1572,7 +1572,6 @@ export default {
   }
   /deep/.ele-outsideBg {
     overflow: auto;
-    min-height: 640px;
   }
   flex: 1 1 auto;
 }
