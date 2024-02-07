@@ -1331,6 +1331,9 @@ export default {
       };
       self.getData = function () {
         self.activityId = self.$route.query.activityId;
+        if (self.$route.query.i) {
+          self.activityId = self.$route.query.i;
+        }
         self.channel = self.$route.query.channel;
         if (!self.activityId) {
           return;
