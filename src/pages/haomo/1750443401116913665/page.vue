@@ -618,7 +618,10 @@ export default {
           //如果已核销或者已经过了截止时间
           if (
             item.pickUpStatus == 0 ||
-            !isCurrentTimeInRange(item.pickUpStartTime, item.pickUpEndTime)
+            !isCurrentTimeInRange(
+              item.pickUpStartTime.split(" ")[0] + " 00:00:00",
+              item.pickUpEndTime.split(" ")[0] + " 23:59:59"
+            )
           ) {
             this.buttonwan.disabled = true;
           }
