@@ -120,24 +120,21 @@
                       <view class="ele-wrapper ele-wrapper-nameText">
                         <hm-uview-text
                           ref="nameText"
-                          :padding="nameText.padding"
-                          :font-size="nameText.fontSize"
                           :text="nameText.text"
-                          :text-style="nameText.textStyle"
+                          :font-size="nameText.fontSize"
+                          :padding="nameText.padding"
                           class="ele-nameText"
                         >
                         </hm-uview-text>
                       </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-80a0f605-13bf-4742-904d-a7c8cdce9da1"
-                      >
+                      <view class="ele-wrapper ele-wrapper-nameTexts">
                         <hm-uview-text
-                          padding="0"
-                          color="#FFFFFF"
-                          font-size="16px"
-                          text="迪卡侬线上骑行活动"
-                          :text-style="{}"
-                          class="ele-80a0f605-13bf-4742-904d-a7c8cdce9da1"
+                          ref="nameTexts"
+                          :text="nameTexts.text"
+                          :font-size="nameTexts.fontSize"
+                          :color="nameTexts.color"
+                          :padding="nameTexts.padding"
+                          class="ele-nameTexts"
                         >
                         </hm-uview-text>
                       </view>
@@ -866,9 +863,8 @@ export default {
       },
       nameText: {
         text: "迪卡侬春节活动",
-        padding: "0",
         fontSize: "16px",
-        textStyle: {},
+        padding: "0",
       },
       activityList: {
         item: {
@@ -1048,6 +1044,12 @@ export default {
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
         ],
+      },
+      nameTexts: {
+        text: "迪卡侬线上骑行活动",
+        fontSize: "16px",
+        color: "#FFFFFF",
+        padding: "0",
       },
       activityImgList1: {
         funcList: [
@@ -1664,7 +1666,7 @@ export default {
   margin-top: 40rpx;
 }
 
-.ele-wrapper-80a0f605-13bf-4742-904d-a7c8cdce9da1 {
+.ele-wrapper-nameTexts {
   font-weight: bolder;
   width: 100%;
   margin-top: 40rpx;
