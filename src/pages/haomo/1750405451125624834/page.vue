@@ -23,6 +23,11 @@
               height="80vh"
               class="ele-4b01ae23-2d04-43f2-a436-a9b3ce6bbfae"
             >
+              <view
+                class="ele-wrapper ele-wrapper-4e111f2f-459b-40a0-9d39-a62c56425140"
+              >
+                <hm-uview-text> </hm-uview-text>
+              </view>
               <view class="ele-wrapper ele-wrapper-indexList">
                 <hm-index-list
                   ref="indexList"
@@ -33,6 +38,11 @@
                   class="ele-indexList"
                 >
                 </hm-index-list>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-2d61873e-ed05-4f64-9c5e-6538c290e046"
+              >
+                <hm-uview-text> </hm-uview-text>
               </view>
             </hm-uview-popup>
           </view>
@@ -46,6 +56,7 @@
 import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
+import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import HmIndexList from "/@/components/built-in/uniapp-haomo/HmIndexList.vue";
 
 export default {
@@ -53,6 +64,7 @@ export default {
   components: {
     HmUviewBgCard,
     HmUviewPopup,
+    HmUviewText,
     HmIndexList,
   },
   options: { styleIsolation: "shared" },
