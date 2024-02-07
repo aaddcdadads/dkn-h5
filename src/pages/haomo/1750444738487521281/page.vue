@@ -1213,7 +1213,7 @@ export default {
           }
           return;
         }
-        if (!self.money) {
+        if (!parseFloat(self.money) > 0) {
           uni.showToast({
             icon: "success",
             position: "top",
