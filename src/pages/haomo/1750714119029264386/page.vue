@@ -61,13 +61,13 @@
           <view class="ele-wrapper ele-wrapper-imageBg">
             <hm-uview-bg-card
               ref="imageBg"
+              width="100%"
+              height=""
+              border-radius="0"
               padding="0"
               box-shadow-v-shadow="0"
               box-shadow-color="#00000000"
-              border-radius="0"
               background-color="#FFFFFF00"
-              width="100%"
-              height=""
               class="ele-imageBg"
             >
               <view class="ele-wrapper ele-wrapper-logoImg">
@@ -1573,6 +1573,7 @@ export default {
   /deep/.ele-outsideBg {
     overflow: auto;
   }
+  flex: 1 1 auto;
 }
 
 .ele-wrapper-topBg {
@@ -1602,8 +1603,6 @@ export default {
 
 .ele-wrapper-imageBg {
   width: 100%;
-  position: absolute;
-  top: 0;
 }
 
 .ele-wrapper-logoImg {
@@ -1612,12 +1611,9 @@ export default {
 
 .ele-wrapper-containerBg {
   width: 100%;
-  margin-top: 960rpx;
   /deep/.ele-containerBg {
     background: transparent;
   }
-
-  position: absolute;
 }
 
 .ele-wrapper-colourCard {
@@ -1993,6 +1989,7 @@ export default {
   position: fixed;
   bottom: 0px;
   z-index: 100;
+  flex: 0 0 auto;
 }
 
 .ele-wrapper-isProtocol {
