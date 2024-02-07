@@ -369,8 +369,8 @@
                         <prize-list-component
                           ref="listCompanent"
                           :func-list="listCompanent.funcList"
-                          :background-color="listCompanent.backgroundColor"
                           :style="listCompanent.style"
+                          :background-color="listCompanent.backgroundColor"
                           :text-color="listCompanent.textColor"
                           class="ele-listCompanent"
                         >
@@ -382,14 +382,14 @@
                     class="ele-wrapper ele-wrapper-09caddfa-4979-48b3-81fd-a043baa3c683"
                   >
                     <hm-uview-bg-card
-                      padding="0"
-                      box-shadow-blur="0"
-                      box-shadow-v-shadow="0"
-                      box-shadow-color="#00000000"
-                      background-color="#FFFFFF00"
                       width="100%"
                       height=""
                       :text-align="'center'"
+                      padding="0"
+                      box-shadow-v-shadow="0"
+                      box-shadow-blur="0"
+                      box-shadow-color="#00000000"
+                      background-color="#FFFFFF00"
                       class="ele-09caddfa-4979-48b3-81fd-a043baa3c683"
                     >
                       <view
@@ -458,9 +458,9 @@
                   ref="regularPopup"
                   v-model:show="regularPopup.show"
                   :mode="'bottom'"
-                  :close-icon-pos="'top-left'"
                   width="100%"
                   height="50%"
+                  :close-icon-pos="'top-left'"
                   class="ele-regularPopup"
                 >
                   <view
@@ -514,10 +514,10 @@
                 <hm-uview-popup
                   ref="viewPopup"
                   v-model:show="viewPopup.show"
-                  border-radius="8px"
-                  :closeable="false"
                   width="300px"
                   height="220px"
+                  border-radius="8px"
+                  :closeable="false"
                   @open="onViewPopupOpen"
                   class="ele-viewPopup"
                 >
@@ -612,10 +612,10 @@
                 <hm-uview-popup
                   ref="phonePopup"
                   v-model:show="phonePopup.show"
-                  border-radius="8px"
-                  :closeable="false"
                   width="80%"
                   height="164px"
+                  border-radius="8px"
+                  :closeable="false"
                   class="ele-phonePopup"
                 >
                   <view
@@ -970,7 +970,7 @@ export default {
               "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
           },
         ],
-        backgroundColor: "#feeff7",
+        backgroundColor: "#FEEFF700",
         textColor: "#000000",
         style: [
           {
