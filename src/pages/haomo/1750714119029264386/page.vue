@@ -1579,6 +1579,13 @@ export default {
 
 <style lang="less" scoped>
 .page {
+  /deep/.page-wrapper {
+    flex-wrap: nowrap !important;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+  }
 }
 
 .ele-wrapper-outsideBg {
@@ -2003,10 +2010,11 @@ export default {
 
 .ele-wrapper-addOrderCard {
   width: 100%;
-  position: fixed;
-  bottom: 0px;
   z-index: 100;
   flex: 0 0 auto;
+  /deep/.ele-addOrderCard {
+    height: 100%;
+  }
 }
 
 .ele-wrapper-isProtocol {
