@@ -33,17 +33,16 @@
                 >
                 </hm-uview-text>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-893e3db6-f42a-48b1-af1a-9a1c7a25fddf"
-              >
+              <view class="ele-wrapper ele-wrapper-indexListBox">
                 <hm-uview-bg-card
+                  ref="indexListBox"
                   width="100%"
                   height="100%"
                   border-radius="0"
                   padding="0"
                   box-shadow-v-shadow="0"
                   box-shadow-blur="0"
-                  class="ele-893e3db6-f42a-48b1-af1a-9a1c7a25fddf"
+                  class="ele-indexListBox"
                 >
                   <view class="ele-wrapper ele-wrapper-indexList">
                     <hm-index-list
@@ -142,7 +141,7 @@ export default {
   margin: 10px 0;
 }
 
-.ele-wrapper-893e3db6-f42a-48b1-af1a-9a1c7a25fddf {
+.ele-wrapper-indexListBox {
   width: 100%;
   flex: 1 1 auto;
 }
