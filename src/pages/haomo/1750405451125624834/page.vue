@@ -21,7 +21,13 @@
               :mode="'bottom'"
               width="100%"
               height="80vh"
+              class="ele-4b01ae23-2d04-43f2-a436-a9b3ce6bbfae"
             >
+              <view
+                class="ele-wrapper ele-wrapper-c10a3c79-ea72-4b94-9580-95ab6899844e"
+              >
+                <hm-index-list :scroll-top="0"> </hm-index-list>
+              </view>
             </hm-uview-popup>
           </view>
           <view class="ele-wrapper ele-wrapper-indexList">
@@ -98,6 +104,10 @@ export default {
 .ele-wrapper-b06d64c4-f458-43af-b486-f9fa892d1fa2 {
   width: 100%;
   height: 100%;
+}
+
+.ele-wrapper-4b01ae23-2d04-43f2-a436-a9b3ce6bbfae {
+  width: 100%;
 }
 
 .ele-wrapper-indexList {
