@@ -179,18 +179,25 @@ export default {
       let self = this;
       let phone = self.$refs.phoneBox.cValue;
       let captcha = self.$refs.viewInput.cValue;
-      uni.navigateTo({
-        url: "1751895267671543809",
-      });
-      let params = {
-        phone: phone,
-        captcha: captcha,
-      };
-      self.$getAction("/api/sys/phoneLogin", params).then((res) => {
+      if (phone && captcha) {
+        let params = {
+          phone: phone,
+          captcha: captcha,
+        };
+        self.$getAction("/api/sys/phoneLogin", params).then((res) => {
+          uni.navigateTo({
+            url: "1751895267671543809",
+          });
+        });
+      } else {
+        uni.showToast({
+          title: "不为空",
+          duration: 2000,
+        });
         uni.navigateTo({
           url: "1751895267671543809",
         });
-      });
+      }
     },
   },
 };
