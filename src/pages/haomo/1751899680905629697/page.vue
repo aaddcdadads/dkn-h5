@@ -74,6 +74,7 @@
                       v-model:value="activityList.value"
                       title=""
                       :list="activityList.list"
+                      @radioChange="onActivityListRadioChange"
                       class="ele-activityList"
                     >
                     </hm-uview-radio>
@@ -189,6 +190,9 @@ export default {
       self.getActivity();
     },
 
+    onActivityListRadioChange(e) {
+      console.log("e", e);
+    },
     onEle205A06F4977C4Fe1Ac28E46F34C84338Click() {
       uni.$u.route(
         "https://stage.block-design.cn/edit-page/?pageId=1751068398554451969"
