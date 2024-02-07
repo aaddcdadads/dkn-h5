@@ -17,6 +17,7 @@
             <hm-index-list
               ref="indexList"
               :list="indexList.list"
+              :url="indexList.url"
               :get-data-map="indexList.getDataMap"
               :scroll-top="indexList.scrollTop"
               class="ele-indexList"
@@ -46,6 +47,7 @@ export default {
     return {
       indexList: {
         list: [],
+        url: "/api/dkn/store/listOrder",
         getDataMap: {
           title: "title",
           src: "src",
@@ -66,7 +68,7 @@ export default {
       let url = "/api/dkn/store/listOrder";
       let self = this;
       self.$getAction(url, {}).then((res) => {
-        console.log("res", res);
+        console.log("res", res.result);
       });
     },
   },
