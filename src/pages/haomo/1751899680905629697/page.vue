@@ -203,8 +203,17 @@ export default {
         const index = self.activityList.list.findIndex((a) => {
           return (a.name = self.activity);
         });
+        if (index == -1) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: "获取活动信息失败",
+            duration: 2000,
+          });
+          return;
+        }
         uni.$u.route(
-          `/pages/haomo/1751899680905629697/page?storeId=${self.storeId}`
+          `/pages/haomo/1751899680905629697/page?activity=${self.activityList.list[index].id}`
         );
       };
     },
