@@ -7,6 +7,10 @@
         <hm-uview-bg-card
           width="100%"
           height="100%"
+          border-radius="0"
+          padding="0"
+          box-shadow-v-shadow="0"
+          box-shadow-blur="0"
           class="ele-b06d64c4-f458-43af-b486-f9fa892d1fa2"
         >
         </hm-uview-bg-card>
