@@ -1242,7 +1242,7 @@ export default {
           self.closeTime.minute = time.minutes;
           self.closeTime.second = time.seconds;
           self.$refs.closeTime.countDown();
-        });
+        }, 1000);
         self.setImg();
         self.setTextArea();
       };
