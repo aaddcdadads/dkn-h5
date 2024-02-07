@@ -30,11 +30,11 @@
                 class="ele-wrapper ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe"
               >
                 <hm-uview-icon
-                  name="question-circle"
+                  label-color="#FFFFFF"
                   color="#FFFFFF"
                   size="20px"
+                  name="question-circle"
                   label="规则"
-                  label-color="#FFFFFF"
                   @click="onEle0Abf487751Bc431D8F1A3C043Bc451FeClick"
                   class="ele-0abf4877-51bc-431d-8f1a-3c043bc451fe"
                 >
@@ -95,34 +95,34 @@
               <view class="ele-wrapper ele-wrapper-colourCard">
                 <hm-uview-bg-card
                   ref="colourCard"
-                  :width="colourCard.width"
-                  :height="colourCard.height"
-                  :border-radius="colourCard.borderRadius"
                   :padding="colourCard.padding"
                   :box-shadow-color="colourCard.boxShadowColor"
+                  :border-radius="colourCard.borderRadius"
                   :background-color="colourCard.backgroundColor"
+                  :width="colourCard.width"
+                  :height="colourCard.height"
                   class="ele-colourCard"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-d54b5914-a084-4a9e-9204-991bcc25ecf5"
                   >
                     <hm-uview-bg-card
+                      padding="0"
+                      box-shadow-blur="0"
+                      box-shadow-v-shadow="0"
+                      box-shadow-color="#00000000"
+                      border-radius="0"
+                      background-color="#FFFFFF00"
                       width="100%"
                       height=""
-                      border-radius="0"
-                      padding="0"
-                      box-shadow-v-shadow="0"
-                      box-shadow-blur="0"
-                      box-shadow-color="#00000000"
-                      background-color="#FFFFFF00"
                       class="ele-d54b5914-a084-4a9e-9204-991bcc25ecf5"
                     >
                       <view class="ele-wrapper ele-wrapper-nameText">
                         <hm-uview-text
                           ref="nameText"
-                          :text="nameText.text"
-                          :font-size="nameText.fontSize"
                           :padding="nameText.padding"
+                          :font-size="nameText.fontSize"
+                          :text="nameText.text"
                           class="ele-nameText"
                         >
                         </hm-uview-text>
@@ -131,10 +131,10 @@
                         class="ele-wrapper ele-wrapper-80a0f605-13bf-4742-904d-a7c8cdce9da1"
                       >
                         <hm-uview-text
-                          text="迪卡侬线上骑行活动"
-                          font-size="16px"
-                          color="#FFFFFF"
                           padding="0"
+                          color="#FFFFFF"
+                          font-size="16px"
+                          text="迪卡侬线上骑行活动"
                           class="ele-80a0f605-13bf-4742-904d-a7c8cdce9da1"
                         >
                         </hm-uview-text>
@@ -143,10 +143,10 @@
                         class="ele-wrapper ele-wrapper-07beb51b-0feb-440f-9824-a723c709c3ce"
                       >
                         <hm-uview-text
-                          text="报名倒计时"
-                          font-size="14px"
-                          color="#FFFFFF"
                           padding="0"
+                          color="#FFFFFF"
+                          font-size="14px"
+                          text="报名倒计时"
                           class="ele-07beb51b-0feb-440f-9824-a723c709c3ce"
                         >
                         </hm-uview-text>
@@ -156,10 +156,10 @@
                           ref="closeTime"
                           :background-color="closeTime.backgroundColor"
                           :color="closeTime.color"
-                          :font-size="closeTime.fontSize"
-                          :splitor-color="closeTime.splitorColor"
-                          :day="closeTime.day"
                           :hour="closeTime.hour"
+                          :splitor-color="closeTime.splitorColor"
+                          :font-size="closeTime.fontSize"
+                          :day="closeTime.day"
                           :minute="closeTime.minute"
                           :second="closeTime.second"
                           class="ele-closeTime"
@@ -171,11 +171,11 @@
                   <view class="ele-wrapper ele-wrapper-activityBg">
                     <hm-uview-bg-card
                       ref="activityBg"
+                      :padding="activityBg.padding"
+                      :border-radius="activityBg.borderRadius"
+                      :background-color="activityBg.backgroundColor"
                       :width="activityBg.width"
                       :height="activityBg.height"
-                      :border-radius="activityBg.borderRadius"
-                      :padding="activityBg.padding"
-                      :background-color="activityBg.backgroundColor"
                       class="ele-activityBg"
                     >
                       <view
@@ -271,11 +271,11 @@
                   <view class="ele-wrapper ele-wrapper-imgText">
                     <hm-uview-text
                       ref="imgText"
-                      :text="imgText.text"
-                      :font-size="imgText.fontSize"
-                      :color="imgText.color"
-                      :bg-color="imgText.bgColor"
                       :padding="imgText.padding"
+                      :color="imgText.color"
+                      :font-size="imgText.fontSize"
+                      :text="imgText.text"
+                      :bg-color="imgText.bgColor"
                       class="ele-imgText"
                     >
                     </hm-uview-text>
@@ -283,12 +283,12 @@
                   <view class="ele-wrapper ele-wrapper-imgCard">
                     <hm-uview-bg-card
                       ref="imgCard"
+                      :padding="imgCard.padding"
+                      :hidden="imgCard.hidden"
+                      :border-radius="imgCard.borderRadius"
+                      :background-color="imgCard.backgroundColor"
                       :width="imgCard.width"
                       :height="imgCard.height"
-                      :border-radius="imgCard.borderRadius"
-                      :padding="imgCard.padding"
-                      :background-color="imgCard.backgroundColor"
-                      :hidden="imgCard.hidden"
                       class="ele-imgCard"
                     >
                       <view
@@ -335,9 +335,9 @@
                     class="ele-wrapper ele-wrapper-dacbdcbf-5aa6-416f-a334-d9098c8ccfda"
                   >
                     <hm-uview-text
-                      text="活动详情"
-                      font-size="16px"
                       color="#FFFFFF"
+                      font-size="16px"
+                      text="活动详情"
                       bg-color="#FFFFFF00"
                       class="ele-dacbdcbf-5aa6-416f-a334-d9098c8ccfda"
                     >
@@ -361,8 +361,8 @@
                         <prize-list-component
                           ref="listCompanent"
                           :func-list="listCompanent.funcList"
-                          :style="listCompanent.style"
                           :background-color="listCompanent.backgroundColor"
+                          :style="listCompanent.style"
                           :text-color="listCompanent.textColor"
                           class="ele-listCompanent"
                         >
@@ -374,25 +374,25 @@
                     class="ele-wrapper ele-wrapper-09caddfa-4979-48b3-81fd-a043baa3c683"
                   >
                     <hm-uview-bg-card
+                      padding="0"
+                      box-shadow-blur="0"
+                      box-shadow-v-shadow="0"
+                      box-shadow-color="#00000000"
+                      background-color="#FFFFFF00"
                       width="100%"
                       height=""
                       :text-align="'center'"
-                      padding="0"
-                      box-shadow-v-shadow="0"
-                      box-shadow-blur="0"
-                      box-shadow-color="#00000000"
-                      background-color="#FFFFFF00"
                       class="ele-09caddfa-4979-48b3-81fd-a043baa3c683"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-228650bd-8f5f-4f58-b322-de6b1040aba7"
                       >
                         <hm-uview-icon
-                          name="server-fill"
+                          label-color="#E06994"
                           color="#E06994"
                           size="20px"
+                          name="server-fill"
                           label="活动咨询"
-                          label-color="#E06994"
                           @click="onEle228650Bd8F5F4F58B322De6B1040Aba7Click"
                           class="ele-228650bd-8f5f-4f58-b322-de6b1040aba7"
                         >
@@ -402,11 +402,11 @@
                         class="ele-wrapper ele-wrapper-a40489b1-523c-497a-8587-70b09de8a231"
                       >
                         <hm-uview-icon
-                          name="zhuanfa"
+                          label-color="#E06994"
                           color="#E06994"
                           size="20px"
+                          name="zhuanfa"
                           label="分享"
-                          label-color="#E06994"
                           @click="onElea40489B1523C497A858770B09De8A231Click"
                           class="ele-a40489b1-523c-497a-8587-70b09de8a231"
                         >
@@ -419,25 +419,25 @@
               <view class="ele-wrapper ele-wrapper-phoneBg">
                 <hm-uview-bg-card
                   ref="phoneBg"
+                  padding="0"
+                  box-shadow-blur="0"
+                  box-shadow-v-shadow="0"
+                  box-shadow-color="#00000000"
+                  border-radius="0"
+                  background-color="#FFFFFF"
                   width="100%"
                   height=""
-                  border-radius="0"
-                  padding="0"
-                  box-shadow-v-shadow="0"
-                  box-shadow-blur="0"
-                  box-shadow-color="#00000000"
-                  background-color="#FFFFFF"
                   class="ele-phoneBg"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-f16cae12-ff6f-4d64-ac60-014a613da044"
                   >
                     <hm-uview-icon
-                      name="phone"
+                      label-color="#FFFFFF"
                       color="#FFFFFF"
                       size="20px"
+                      name="phone"
                       label="活动咨询"
-                      label-color="#FFFFFF"
                       @click="onElef16Cae12Ff6F4D64Ac60014A613Da044Click"
                       class="ele-f16cae12-ff6f-4d64-ac60-014a613da044"
                     >
@@ -450,9 +450,9 @@
                   ref="regularPopup"
                   v-model:show="regularPopup.show"
                   :mode="'bottom'"
+                  :close-icon-pos="'top-left'"
                   width="100%"
                   height="50%"
-                  :close-icon-pos="'top-left'"
                   class="ele-regularPopup"
                 >
                   <view
@@ -504,10 +504,10 @@
                 <hm-uview-popup
                   ref="viewPopup"
                   v-model:show="viewPopup.show"
-                  width="300px"
-                  height="220px"
                   border-radius="8px"
                   :closeable="false"
+                  width="300px"
+                  height="220px"
                   @open="onViewPopupOpen"
                   class="ele-viewPopup"
                 >
@@ -598,10 +598,10 @@
                 <hm-uview-popup
                   ref="phonePopup"
                   v-model:show="phonePopup.show"
-                  width="80%"
-                  height="164px"
                   border-radius="8px"
                   :closeable="false"
+                  width="80%"
+                  height="164px"
                   class="ele-phonePopup"
                 >
                   <view
@@ -688,9 +688,9 @@
           <view class="ele-wrapper ele-wrapper-isProtocol">
             <hm-uview-radio
               ref="isProtocol"
-              v-model:value="isProtocol.value"
               title=""
               :list="isProtocol.list"
+              v-model:value="isProtocol.value"
               class="ele-isProtocol"
             >
             </hm-uview-radio>
@@ -699,11 +699,11 @@
             class="ele-wrapper ele-wrapper-7a55d0c9-95ac-4729-befd-31f60ecf4707"
           >
             <hm-uview-text
-              text="《活动报名用户协议及承诺书》"
-              font-size="14px"
-              color="#D6769C"
-              :text-align="'left'"
               padding="0"
+              color="#D6769C"
+              font-size="14px"
+              text="《活动报名用户协议及承诺书》"
+              :text-align="'left'"
               @onClick="onEle7A55D0C995Ac4729Befd31F60Ecf4707OnClick"
               class="ele-7a55d0c9-95ac-4729-befd-31f60ecf4707"
             >
@@ -713,8 +713,8 @@
             class="ele-wrapper ele-wrapper-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f"
           >
             <hm-uview-button
-              :type="'success'"
               text="马上报名"
+              :type="'success'"
               @click="onElee174C2E6A7994Ccf8Fa92A81Dc515A6FClick"
               class="ele-e174c2e6-a799-4ccf-8fa9-2a81dc515a6f"
             >
@@ -724,9 +724,9 @@
             class="ele-wrapper ele-wrapper-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9"
           >
             <hm-uview-text
-              text="已报名，查看我的报名信息"
-              font-size="14px"
               color="#D6769C"
+              font-size="14px"
+              text="已报名，查看我的报名信息"
               @onClick="onEle4D8Eb71C153949848Ba0E2Dd0E6Ceeb9OnClick"
               class="ele-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9"
             >
@@ -839,13 +839,13 @@ export default {
         second: 17,
         backgroundColor: "#00000000",
         color: "#FFFFFF",
-        fontSize: 11,
         splitorColor: "#FFFFFF",
+        fontSize: 11,
       },
       nameText: {
         text: "迪卡侬春节活动",
-        fontSize: "16px",
         padding: "0",
+        fontSize: "16px",
       },
       activityList: {
         item: {
@@ -869,52 +869,52 @@ export default {
       activityImgList: {
         funcList: [
           {
-            bgUrl:
-              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
             height1: "auto",
-            scoretext: "奖品",
             display: "block",
+            scoretext: "奖品",
             textbottom: "奖品",
-          },
-          {
             bgUrl:
               "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+          },
+          {
             height1: "auto",
-            scoretext: "奖品",
             display: "block",
+            scoretext: "奖品",
             textbottom: "奖品",
-          },
-          {
             bgUrl:
               "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+          },
+          {
             height1: "auto",
-            scoretext: "奖品",
             display: "block",
+            scoretext: "奖品",
             textbottom: "奖品",
-          },
-          {
             bgUrl:
               "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
-            height1: "auto",
-            scoretext: "奖品",
-            display: "none",
-            textbottom: "奖品",
           },
           {
+            height1: "auto",
+            display: "none",
+            scoretext: "奖品",
+            textbottom: "奖品",
             bgUrl:
               "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
-            height1: "auto",
-            scoretext: "奖品",
-            display: "none",
-            textbottom: "奖品",
           },
           {
+            height1: "auto",
+            display: "none",
+            scoretext: "奖品",
+            textbottom: "奖品",
             bgUrl:
               "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
+          },
+          {
             height1: "auto",
-            scoretext: "奖品",
             display: "none",
+            scoretext: "奖品",
             textbottom: "奖品",
+            bgUrl:
+              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
           },
         ],
         backgroundColor: "#feeff7",
@@ -958,18 +958,18 @@ export default {
       },
       colourCard: {
         backgroundColor: "#F6D7E6",
-        width: "100%",
-        height: "",
-        borderRadius: "0",
         padding: "",
         boxShadowColor: "#00000000",
+        borderRadius: "0",
+        width: "100%",
+        height: "",
       },
       activityBg: {
         backgroundColor: "#FEEFF7",
+        padding: "0",
+        borderRadius: "",
         width: "100%",
         height: "",
-        borderRadius: "",
-        padding: "0",
       },
       activityRulesText: {
         data: {
@@ -998,18 +998,18 @@ export default {
       },
       imgCard: {
         hidden: false,
+        padding: "",
+        borderRadius: "12",
+        backgroundColor: "#F797BD00",
         width: "100%",
         height: "",
-        borderRadius: "12",
-        padding: "",
-        backgroundColor: "#F797BD00",
       },
       imgText: {
         text: "活动奖品",
-        fontSize: "16px",
-        color: "#FFFFFF",
-        bgColor: "#FFFFFF00",
         padding: "0",
+        color: "#FFFFFF",
+        fontSize: "16px",
+        bgColor: "#FFFFFF00",
       },
       activityProjectItem: {},
       activityExtItem: {},
@@ -1536,6 +1536,9 @@ export default {
   width: 100%;
   position: relative;
   height: calc(100vh - 120px);
+  /*  #ifdef   H5  */
+  height: calc(100vh - 220px);
+  /*  #endif  */
   overflow-y: scroll;
   width: 100%;
 }
@@ -1693,6 +1696,9 @@ export default {
   }
   /deep/.ele-activityList {
     background: #feeff700 !important;
+  }
+  /deep/.item-tag {
+    background: rgba(255, 255, 255, 0.3) !important;
   }
 }
 
