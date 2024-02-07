@@ -168,17 +168,29 @@ export default {
     };
   },
   watch: {},
+  beforeCreate(e) {
+    this, arguments;
+  },
   methods: {
     onCanelButtonClick() {
       this.viewPopup.show = false;
     },
     onSureButtonClick() {
-      let url = "/api/sys/phoneLogin";
-      console.log("xja-test", this.$refs.phoneBox);
+      let params = {
+        phone: phone,
+        captcha: captcha,
+      };
+      console.log("xja-test", this.$refs.phoneBox.cValue);
       console.log("xja-test", this.$refs.viewInput);
       uni.$u.route(
         "https://stage.block-design.cn/edit-page/?pageId=1751895267671543809"
       );
+      let self = this;
+      self.$getAction("/api/sys/phoneLogin", params).then((res) => {
+        uni.navigateTo({
+          url: "1751895267671543809",
+        });
+      });
     },
   },
 };
