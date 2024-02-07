@@ -1572,6 +1572,7 @@ export default {
   }
   /deep/.ele-outsideBg {
     overflow: auto;
+    min-height: 640px;
   }
   flex: 1 1 auto;
 }
