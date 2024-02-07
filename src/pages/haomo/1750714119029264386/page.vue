@@ -16,25 +16,25 @@
           <view class="ele-wrapper ele-wrapper-topBg">
             <hm-uview-bg-card
               ref="topBg"
-              padding="12"
-              box-shadow-blur="0"
-              box-shadow-v-shadow="0"
-              box-shadow-color="#00000000"
-              border-radius="0"
-              background-color="#FFFFFF00"
               width="100%"
               height=""
+              border-radius="0"
+              padding="12"
+              box-shadow-v-shadow="0"
+              box-shadow-blur="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
               class="ele-topBg"
             >
               <view
                 class="ele-wrapper ele-wrapper-0abf4877-51bc-431d-8f1a-3c043bc451fe"
               >
                 <hm-uview-icon
-                  label-color="#FFFFFF"
+                  name="question-circle"
                   color="#FFFFFF"
                   size="20px"
-                  name="question-circle"
                   label="规则"
+                  label-color="#FFFFFF"
                   @click="onEle0Abf487751Bc431D8F1A3C043Bc451FeClick"
                   class="ele-0abf4877-51bc-431d-8f1a-3c043bc451fe"
                 >
@@ -46,14 +46,14 @@
             class="ele-wrapper ele-wrapper-3de94d32-48f2-495a-b447-4ba9360a1ceb"
           >
             <hm-uview-bg-card
-              padding="12"
-              box-shadow-blur="0"
-              box-shadow-v-shadow="0"
-              box-shadow-color="#00000000"
-              border-radius="0"
-              background-color="#FFFFFF00"
               width="100%"
               height=""
+              border-radius="0"
+              padding="12"
+              box-shadow-v-shadow="0"
+              box-shadow-blur="0"
+              box-shadow-color="#00000000"
+              background-color="#FFFFFF00"
               class="ele-3de94d32-48f2-495a-b447-4ba9360a1ceb"
             >
             </hm-uview-bg-card>
@@ -95,26 +95,26 @@
               <view class="ele-wrapper ele-wrapper-colourCard">
                 <hm-uview-bg-card
                   ref="colourCard"
-                  :padding="colourCard.padding"
-                  :box-shadow-color="colourCard.boxShadowColor"
-                  :border-radius="colourCard.borderRadius"
-                  :background-color="colourCard.backgroundColor"
                   :width="colourCard.width"
                   :height="colourCard.height"
+                  :border-radius="colourCard.borderRadius"
+                  :padding="colourCard.padding"
+                  :box-shadow-color="colourCard.boxShadowColor"
+                  :background-color="colourCard.backgroundColor"
                   class="ele-colourCard"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-d54b5914-a084-4a9e-9204-991bcc25ecf5"
                   >
                     <hm-uview-bg-card
-                      padding="0"
-                      box-shadow-blur="0"
-                      box-shadow-v-shadow="0"
-                      box-shadow-color="#00000000"
-                      border-radius="0"
-                      background-color="#FFFFFF00"
                       width="100%"
                       height=""
+                      border-radius="0"
+                      padding="0"
+                      box-shadow-v-shadow="0"
+                      box-shadow-blur="0"
+                      box-shadow-color="#00000000"
+                      background-color="#FFFFFF00"
                       class="ele-d54b5914-a084-4a9e-9204-991bcc25ecf5"
                     >
                       <view class="ele-wrapper ele-wrapper-nameText">
@@ -822,7 +822,7 @@ export default {
         borderRadius: "0",
         padding: "0",
         boxShadowColor: "#00000000",
-        backgroundColor: "#FFE8EC",
+        backgroundColor: "#FFE8EC00",
         hidden: false,
       },
       regularPopup: {
@@ -981,11 +981,11 @@ export default {
       },
       colourCard: {
         backgroundColor: "#F6D7E6",
-        padding: "",
-        boxShadowColor: "#00000000",
-        borderRadius: "0",
         width: "100%",
         height: "",
+        borderRadius: "0",
+        padding: "",
+        boxShadowColor: "#00000000",
       },
       activityBg: {
         backgroundColor: "#FEEFF7",
