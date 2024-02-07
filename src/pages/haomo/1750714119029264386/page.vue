@@ -861,9 +861,10 @@ export default {
         fontSize: 11,
         splitorColor: "#FFFFFF",
       },
-      nameText: {
-        text: "迪卡侬春节活动",
+      nameTexts: {
+        text: "迪卡侬线上骑行活动",
         fontSize: "16px",
+        color: "#FFFFFF",
         padding: "0",
       },
       activityList: {
@@ -1045,10 +1046,9 @@ export default {
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
         ],
       },
-      nameTexts: {
-        text: "迪卡侬线上骑行活动",
+      nameText: {
+        text: "迪卡侬春节活动",
         fontSize: "16px",
-        color: "#FFFFFF",
         padding: "0",
       },
       activityImgList1: {
@@ -1153,7 +1153,7 @@ export default {
       self.closeTime.second = "";
 
       //名称
-      self.nameText.text = "";
+      self.nameTexts.text = "";
 
       //活动列表
       self.activityList.item = "";
@@ -1210,7 +1210,7 @@ export default {
         self.activityImgList.textColor = self.activityItem.textColour;
         self.listCompanent.backgroundColor = self.activityItem.colour;
         self.listCompanent.textColor = self.activityItem.textColour;
-        self.nameText.text = self.activityItem.name;
+        self.nameTexts.text = self.activityItem.name;
         let number = self.activityItem.orders;
         if (self.activityItem.unrealStatus === 0) {
           number = self.activityItem.unrealCount + number;
