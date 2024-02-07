@@ -123,6 +123,7 @@
                           :padding="nameText.padding"
                           :font-size="nameText.fontSize"
                           :text="nameText.text"
+                          :text-style="nameText.textStyle"
                           class="ele-nameText"
                         >
                         </hm-uview-text>
@@ -135,6 +136,7 @@
                           color="#FFFFFF"
                           font-size="16px"
                           text="迪卡侬线上骑行活动"
+                          :text-style="{}"
                           class="ele-80a0f605-13bf-4742-904d-a7c8cdce9da1"
                         >
                         </hm-uview-text>
@@ -147,6 +149,7 @@
                           color="#FFFFFF"
                           font-size="14px"
                           text="报名倒计时"
+                          :text-style="{}"
                           class="ele-07beb51b-0feb-440f-9824-a723c709c3ce"
                         >
                         </hm-uview-text>
@@ -211,6 +214,7 @@
                               color="#FFFFFF"
                               font-size="12px"
                               text="Keep ·HelloKitty系列"
+                              :text-style="{}"
                               class="ele-ad039bb7-8f55-4ab8-98a8-54d1f73db365"
                             >
                             </hm-uview-text>
@@ -250,6 +254,7 @@
                               color="#FFFFFF99"
                               font-size="10px"
                               text="线上马拉松"
+                              :text-style="{}"
                               class="ele-f0bdc2b0-8112-4546-8c75-84df79598453"
                             >
                             </hm-uview-text>
@@ -276,6 +281,7 @@
                       :font-size="imgText.fontSize"
                       :text="imgText.text"
                       :bg-color="imgText.bgColor"
+                      :text-style="imgText.textStyle"
                       class="ele-imgText"
                     >
                     </hm-uview-text>
@@ -340,6 +346,7 @@
                       font-size="16px"
                       text="活动详情"
                       bg-color="#FFFFFF00"
+                      :text-style="{}"
                       class="ele-dacbdcbf-5aa6-416f-a334-d9098c8ccfda"
                     >
                     </hm-uview-text>
@@ -462,6 +469,7 @@
                     <hm-uview-text
                       font-size="16px"
                       text="活动规则"
+                      :text-style="{}"
                       class="ele-dc91ed40-34d2-458d-a7fb-c67671b736c2"
                     >
                     </hm-uview-text>
@@ -496,6 +504,7 @@
                       ref="activityRulesText"
                       :data="activityRulesText.data"
                       :show-height="activityRulesText.showHeight"
+                      :tag-style="activityRulesText.tagStyle"
                     >
                     </hm-uview-parse>
                   </view>
@@ -531,6 +540,7 @@
                         <hm-uview-text
                           font-size="16px"
                           text="用户登录查看报名信息"
+                          :text-style="{}"
                           class="ele-ff8c8f6d-abf3-4690-89dd-cab3e0f9c77f"
                         >
                         </hm-uview-text>
@@ -549,6 +559,7 @@
                       <view class="ele-wrapper ele-wrapper-viewInput">
                         <information-input-box
                           ref="viewInput"
+                          :left-src="viewInput.leftSrc"
                           placeholder=" 请填写手机验证码"
                           v-model:value="viewInput.value"
                           @onCode="onViewInputOnCode"
@@ -574,6 +585,7 @@
                       <view class="ele-wrapper ele-wrapper-canel1Button">
                         <hm-uview-button
                           ref="canel1Button"
+                          :custom-style="canel1Button.customStyle"
                           :text="canel1Button.text"
                           :type="canel1Button.type"
                           @click="onCanel1ButtonClick"
@@ -584,6 +596,7 @@
                       <view class="ele-wrapper ele-wrapper-sure1Button">
                         <hm-uview-button
                           ref="sure1Button"
+                          :custom-style="sure1Button.customStyle"
                           :text="sure1Button.text"
                           :type="sure1Button.type"
                           @click="onSure1ButtonClick"
@@ -621,13 +634,18 @@
                       <view
                         class="ele-wrapper ele-wrapper-6102459c-f347-4922-ad1d-8cd25812aa57"
                       >
-                        <hm-uview-text font-size="16px" text="活动咨询电话">
+                        <hm-uview-text
+                          font-size="16px"
+                          text="活动咨询电话"
+                          :text-style="{}"
+                        >
                         </hm-uview-text>
                       </view>
                       <view class="ele-wrapper ele-wrapper-phoneText">
                         <hm-uview-text
                           ref="phoneText"
                           :text="phoneText.text"
+                          :text-style="phoneText.textStyle"
                           class="ele-phoneText"
                         >
                         </hm-uview-text>
@@ -650,6 +668,7 @@
                       <view class="ele-wrapper ele-wrapper-canelButton">
                         <hm-uview-button
                           ref="canelButton"
+                          :custom-style="canelButton.customStyle"
                           :text="canelButton.text"
                           :type="canelButton.type"
                           @click="onCanelButtonClick"
@@ -660,6 +679,7 @@
                       <view class="ele-wrapper ele-wrapper-sureButton">
                         <hm-uview-button
                           ref="sureButton"
+                          :custom-style="sureButton.customStyle"
                           :text="sureButton.text"
                           :type="sureButton.type"
                           @click="onSureButtonClick"
@@ -816,6 +836,7 @@ export default {
       },
       phoneText: {
         text: "400-888-88888",
+        textStyle: {},
       },
       isProtocol: {
         value: "",
@@ -847,6 +868,7 @@ export default {
         text: "迪卡侬春节活动",
         padding: "0",
         fontSize: "16px",
+        textStyle: {},
       },
       activityList: {
         item: {
@@ -978,6 +1000,7 @@ export default {
             '<p style="text-align: left;">第一步 报名</p><p style="text-align: left;">点击页面下方的「马上报名」，选择自己要挑战的公里数。</p><p>-- 选择公里数对应的奖牌套餐，提交订单支付并填写收件信息即可在完赛后获得奖牌/奖牌配件/周边。</p><p> 第二步 比赛</p><p>在比赛时间内，打开 Keep，一次性跑完您挑战的公里数即可。</p><p>-- 户外/跑步机皆可。</p><p>奖牌及奖牌配件/周边将在完赛后 30 个工作日内发货；</p><p  style="color: red;">请注意！！若未完赛，则奖牌将无法发出，但配件/周边仍可以在活动结束后发货；（30 个工作日从完赛后第一个工作日开始计算）</p>',
         },
         showHeight: 0,
+        tagStyle: {},
       },
       addOrderCard: {
         hidden: false,
@@ -1011,6 +1034,7 @@ export default {
         color: "#FFFFFF",
         fontSize: "16px",
         bgColor: "#FFFFFF00",
+        textStyle: {},
       },
       activityProjectItem: {},
       activityExtItem: {},
@@ -1020,6 +1044,10 @@ export default {
       },
       viewInput: {
         value: "",
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+        ],
       },
       activityImgList1: {
         funcList: [
@@ -1072,18 +1100,22 @@ export default {
         ],
       },
       canel1Button: {
+        customStyle: {},
         text: "取消",
         type: "info",
       },
       sure1Button: {
+        customStyle: {},
         text: "登录",
         type: "info",
       },
       canelButton: {
+        customStyle: {},
         text: "取消",
         type: "info",
       },
       sureButton: {
+        customStyle: {},
         text: "拨打",
         type: "info",
       },
@@ -1535,6 +1567,8 @@ export default {
 
 .ele-wrapper-outsideBg {
   width: 100%;
+  position: relative;
+  height: calc(100vh - 120px);
   overflow-y: scroll;
   width: 100%;
 }
