@@ -139,24 +139,7 @@ export default {
         show: true,
       },
       activityList: {
-        list: [
-          {
-            name: "活动名称",
-            disabled: false,
-          },
-          {
-            name: "活动名称1",
-            disabled: false,
-          },
-          {
-            name: "活动名称2",
-            disabled: false,
-          },
-          {
-            name: "活动名称3",
-            disabled: false,
-          },
-        ],
+        list: [],
         value: "",
       },
     };
