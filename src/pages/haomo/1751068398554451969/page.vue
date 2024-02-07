@@ -289,12 +289,13 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
-              <view class="ele-wrapper ele-wrapper-Buttonwan">
+              <view class="ele-wrapper ele-wrapper-buttonwan">
                 <hm-uview-button
-                  ref="Buttonwan"
-                  :text="Buttonwan.text"
+                  ref="buttonwan"
+                  :disabled="buttonwan.disabled"
+                  :text="buttonwan.text"
                   @click="onButtonwanClick"
-                  class="ele-Buttonwan"
+                  class="ele-buttonwan"
                 >
                 </hm-uview-button>
               </view>
@@ -331,8 +332,9 @@ export default {
   data() {
     let self = this;
     return {
-      Buttonwan: {
+      buttonwan: {
         text: "确认核销",
+        disabled: false,
       },
       registrationOrdersData: {},
       inputClaimStore: {
@@ -380,6 +382,7 @@ export default {
       this.writeOffModal.visible;
       this.writeOffText.text;
       this.writeOffModal.title;
+      this.buttonwan.disabled;
 
       this.getTime = () => {
         // 创建一个新的 Date 对象来获取当前时间
@@ -427,6 +430,9 @@ export default {
         this.inputMane.value = this.registrationOrdersData.name ?? "";
         this.inputPhoneNumber.value = this.registrationOrdersData.phone ?? "";
         this.inputActivityName.value = this.registrationOrdersData.acName ?? "";
+        if (this.registrationOrdersData.paymentStatus != 0) {
+          this.buttonwan.disabled = true;
+        }
       });
       //查询扫码的门店信息
       this.$getAction("/api/dkn/store/list", {
@@ -757,7 +763,7 @@ export default {
   margin-top: 10px;
 }
 
-.ele-wrapper-Buttonwan {
+.ele-wrapper-buttonwan {
   width: 80%;
   margin-top: 30%;
   height: 50px;
