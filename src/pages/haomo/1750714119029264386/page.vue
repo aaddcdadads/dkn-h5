@@ -1581,7 +1581,6 @@ export default {
 .ele-wrapper-containerBg {
   width: 100%;
   margin-top: 960rpx;
-  z-index: 1000;
   /deep/.ele-containerBg {
     background: transparent;
   }
