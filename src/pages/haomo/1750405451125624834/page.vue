@@ -2,9 +2,14 @@
   <view class="page card">
     <view class="page-wrapper">
       <view
-        class="ele-wrapper ele-wrapper-fc786e8b-a5f8-47d5-ba91-8f43a9fd88b9"
+        class="ele-wrapper ele-wrapper-b06d64c4-f458-43af-b486-f9fa892d1fa2"
       >
-        <scroll-list> </scroll-list>
+        <hm-uview-bg-card
+          width="100%"
+          height="100%"
+          class="ele-b06d64c4-f458-43af-b486-f9fa892d1fa2"
+        >
+        </hm-uview-bg-card>
       </view>
     </view>
   </view>
@@ -12,12 +17,12 @@
 
 <script>
 import { h } from "vue";
-import ScrollList from "/@/components/dkn-h-5/scroll-list/index.vue";
+import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 
 export default {
   name: "Test",
   components: {
-    ScrollList,
+    HmUviewBgCard,
   },
   options: { styleIsolation: "shared" },
   data() {
@@ -31,5 +36,10 @@ export default {
 
 <style lang="less" scoped>
 .page {
+}
+
+.ele-wrapper-b06d64c4-f458-43af-b486-f9fa892d1fa2 {
+  width: 100%;
+  height: 400px;
 }
 </style>
