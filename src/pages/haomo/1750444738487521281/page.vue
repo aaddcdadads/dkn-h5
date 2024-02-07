@@ -1380,6 +1380,11 @@ export default {
 <style lang="less" scoped>
 .page {
   background-color: #fafafa;
+  position: relative;
+  width: 100%;
+  overflow-y: auto;
+  height: 100vh;
+  min-height: 640px;
 }
 
 .ele-wrapper-formbgCard {
