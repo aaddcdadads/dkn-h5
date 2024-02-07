@@ -183,10 +183,14 @@ export default {
           });
           return;
         }
-        const index = self.activityList.list.findIndex((a) => {
-          return (a.name = self.activity);
+        let id = "";
+        self.activityList.list.forEach((e) => {
+          if (e.name === self.activity) {
+            id = e.id;
+          }
         });
-        if (index == -1) {
+        console.log("index", id);
+        if (!id) {
           uni.showToast({
             icon: "error",
             position: "top",
@@ -196,7 +200,7 @@ export default {
           return;
         }
         uni.$u.route(
-          `/pages/haomo/1751068398554451969/page?activityId=${self.activityList.list[index].id}&storeId=${self.storeId}`
+          `/pages/haomo/1751068398554451969/page?activityId=${id}&storeId=${self.storeId}`
         );
       };
     },
