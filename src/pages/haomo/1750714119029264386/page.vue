@@ -1570,7 +1570,7 @@ export default {
   /deep/.ele-wrapper-outsideBg {
     overflow: hidden;
   }
-  deep/.ele-outsideBg {
+  /deep/.ele-outsideBg {
     overflow: auto;
   }
 }
