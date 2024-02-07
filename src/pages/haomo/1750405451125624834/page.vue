@@ -16,7 +16,12 @@
           <view
             class="ele-wrapper ele-wrapper-4b01ae23-2d04-43f2-a436-a9b3ce6bbfae"
           >
-            <hm-uview-popup :show="true" width="100%" height="80vh">
+            <hm-uview-popup
+              :show="true"
+              :mode="'bottom'"
+              width="100%"
+              height="80vh"
+            >
             </hm-uview-popup>
           </view>
           <view class="ele-wrapper ele-wrapper-indexList">
