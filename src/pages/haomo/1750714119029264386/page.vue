@@ -1537,9 +1537,6 @@ export default {
   width: 100%;
   position: relative;
   height: calc(100vh - 120px);
-  /*  #ifdef   H5  */
-  height: calc(100vh - 220px);
-  /*  #endif  */
   overflow-y: scroll;
   width: 100%;
 }
