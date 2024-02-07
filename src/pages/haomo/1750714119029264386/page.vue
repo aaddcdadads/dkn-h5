@@ -1643,6 +1643,10 @@ export default {
 .ele-wrapper-colourCard {
   width: 100%;
   border-radius: 20px 20px 0px 0px;
+  position: relative;
+  /* z-index: 2; */
+  margin-top: -20px;
+
   /deep/.hm-bg-card {
     border-radius: 20px 20px 0px 0px;
   }
