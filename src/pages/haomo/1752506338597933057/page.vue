@@ -55,6 +55,21 @@
                 <hm-uview-text text="分享给好友" font-size="18px">
                 </hm-uview-text>
               </view>
+              <view class="ele-wrapper ele-wrapper-downloadImage">
+                <hm-uview-bg-card
+                  ref="downloadImage"
+                  width="100%"
+                  height="100%"
+                  border-radius="0"
+                  padding="0"
+                  box-shadow-v-shadow="0"
+                  box-shadow-blur="0"
+                  box-shadow-color="#00000000"
+                  background-image="/static/components/img/save.png"
+                  class="ele-downloadImage"
+                >
+                </hm-uview-bg-card>
+              </view>
               <view
                 class="ele-wrapper ele-wrapper-0ed4308b-d32b-4f14-8401-ba9ad296dc56"
               >
@@ -212,6 +227,20 @@ export default {
     display: flex;
     align-items: center;
   }
+}
+
+.ele-wrapper-downloadImage {
+  width: 18%;
+  /deep/.ele-downloadImage {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    aspect-ratio: 65/63;
+    position: relative;
+    //height: 100%;
+  }
+  display: block;
+  margin-left: 18px;
+  margin-top: 8px;
 }
 
 .ele-wrapper-0ed4308b-d32b-4f14-8401-ba9ad296dc56 {
