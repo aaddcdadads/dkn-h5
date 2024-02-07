@@ -284,27 +284,7 @@ export default {
     },
     onSureButtonClick() {
       let self = this;
-      let phone = self.$refs.phoneBox.cValue;
-      let captcha = self.$refs.viewInput.cValue;
-      if (phone && captcha) {
-        let params = {
-          phone: phone,
-          captcha: captcha,
-        };
-        self.$getAction("/api/sys/phoneLogin", params).then((res) => {
-          uni.navigateTo({
-            url: "/pages/haomo/1751899680905629697/page",
-          });
-        });
-      } else {
-        uni.showToast({
-          title: "不为空",
-          duration: 2000,
-        });
-        uni.navigateTo({
-          url: "/pages/haomo/1751899680905629697/page",
-        });
-      }
+      self.login();
     },
   },
 };
