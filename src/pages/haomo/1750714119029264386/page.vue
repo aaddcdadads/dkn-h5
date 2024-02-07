@@ -1226,10 +1226,13 @@ export default {
           new Date(self.activityItem.closeTime)
         );
         console.log("time", time);
-        self.closeTime.day = time.days;
-        self.closeTime.hour = time.hours;
-        self.closeTime.minute = time.minutes;
-        self.closeTime.second = time.seconds;
+        setTimeout(() => {
+          self.closeTime.day = time.days;
+          self.closeTime.hour = time.hours;
+          self.closeTime.minute = time.minutes;
+          self.closeTime.second = time.seconds;
+          self.$refs.closeTime.countDown();
+        });
         self.setImg();
         self.setTextArea();
       };
