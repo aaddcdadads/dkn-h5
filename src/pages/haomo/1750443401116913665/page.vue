@@ -682,6 +682,7 @@ export default {
     },
 
     onEleae2F68EaD21D4A628255Bc0Fbe3Dd451OnClick() {
+      location.reload();
       uni.navigateTo({
         url:
           "/pages/haomo/1750714119029264386/page?activityId=" + this.activityId,
