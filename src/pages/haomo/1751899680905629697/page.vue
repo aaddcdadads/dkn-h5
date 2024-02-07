@@ -173,6 +173,7 @@ export default {
       let userInfo = JSON.parse(userInfoString);
       self.userId = userInfo.data.id || "";
       self.activityList.list = [];
+      self.activity = "";
       self.getActivity = async function (userId) {
         let url = "/api/dkn/activity/userList";
         const res = await self.$getAction(url, { userId: self.userId });
@@ -188,6 +189,24 @@ export default {
         });
       };
       self.getActivity();
+
+      self.gotoActivity = function () {
+        if (!self.activity) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: "请选择活动",
+            duration: 2000,
+          });
+          return;
+        }
+        const index = self.activityList.list.findIndex((a) => {
+          return (a.name = self.activity);
+        });
+        uni.$u.route(
+          `/pages/haomo/1751899680905629697/page?storeId=${self.storeId}`
+        );
+      };
     },
 
     onActivityListRadioChange(e) {
