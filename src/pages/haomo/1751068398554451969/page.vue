@@ -408,7 +408,7 @@ export default {
         userId: this.userId,
         activityId: this.activityId,
       }).then((res) => {
-        console.log("res--", res);
+        console.log("res111--", res);
         if (res.code != 200 || res.result.records.length <= 0) {
           uni.showToast({
             title: "请重新查看活动信息",
