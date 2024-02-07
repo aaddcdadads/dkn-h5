@@ -356,21 +356,7 @@ export default {
         value: "",
       },
       prizeListComponent: {
-        funcList: [
-          {
-            bgUrl:
-              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
-            textbottom: "奖品2",
-          },
-          {
-            bgUrl:
-              "https://static2.keepcdn.com/2023/10/24/1698128990564_500x500.png?imageMogr2/thumbnail/200x/quality/95",
-            height1: "auto",
-            scoretext: "奖品",
-            display: "block",
-            textbottom: "奖品",
-          },
-        ],
+        funcList: [],
         backgroundColor: "#FFFFFF",
       },
     };
