@@ -186,7 +186,7 @@ export default {
         };
         self.$getAction("/api/sys/phoneLogin", params).then((res) => {
           uni.navigateTo({
-            url: "/pages/haomo/1751895267671543809/page",
+            url: "/pages/haomo/1751899680905629697/page",
           });
         });
       } else {
@@ -195,7 +195,7 @@ export default {
           duration: 2000,
         });
         uni.navigateTo({
-          url: "/pages/haomo/1751895267671543809/page",
+          url: "/pages/haomo/1751899680905629697/page",
         });
       }
     },
