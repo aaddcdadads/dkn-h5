@@ -192,6 +192,7 @@ export default {
 
     onActivityListRadioChange(e) {
       console.log("e", e);
+      this.activity = e;
     },
     onEle205A06F4977C4Fe1Ac28E46F34C84338Click() {
       uni.$u.route(
