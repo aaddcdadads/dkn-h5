@@ -1105,7 +1105,7 @@ export default {
           }
           let par = {
             ...e,
-            checked: false,
+            checked,
             image: self.getImg(e.imgPath),
             name: e.name,
             description: e.synopsis,
