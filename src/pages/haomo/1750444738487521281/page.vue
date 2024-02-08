@@ -1473,9 +1473,7 @@ export default {
 
 .ele-wrapper-storeList {
   width: 100%;
-  /deep/ .anchorBox {
-    display: none;
-  }
+  
 }
 
 .ele-wrapper-payPopup {
