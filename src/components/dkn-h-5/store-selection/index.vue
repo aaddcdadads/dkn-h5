@@ -36,8 +36,8 @@
       </u-radio-group>
     </scroll-view>
     <view class="anchorBox">
-      <view v-for="(item, index) in anch" class="itembox">
-        <a class="anchors" @click="anchor(item + index)">{{ item }}</a>
+      <view v-for="item in anch" class="itembox">
+        <a class="anchors" @click="anchor(item)">{{ item }}</a>
       </view>
     </view>
   </view>
