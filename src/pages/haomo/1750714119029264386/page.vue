@@ -1183,8 +1183,12 @@ export default {
       self.imgCard.hidden = false;
       self.imgText.text = "活动奖品";
       self.getActivity = async function (id) {
+        let params = { id };
+        if (!id) {
+          params.code = self.code;
+        }
         let url = "/api/dkn/activity/queryByAll";
-        const res = await self.$getAction(url, { id });
+        const res = await self.$getAction(url, params);
         if (!res.success || !res.result) {
           self.outsideBg.hidden = true;
           self.addOrderCard.hidden = true;
@@ -1192,6 +1196,7 @@ export default {
           return;
         }
         self.activityItem = res.result;
+        self.activityId = self.activityItem.id;
         self.activityExtItem = self.activityItem.activityExts[0];
         self.activityImgItem = self.activityItem.activityImgs;
         self.activityProjectItem = self.activityItem.activityProjects;
@@ -1495,19 +1500,14 @@ export default {
           duration: 2000,
         });
       };
-      self.getCode = function () {
-        const currentURL = window.location.href;
-        const lastSegment = currentURL.match(/[^/]+$/)[0];
-        console.log(lastSegment);
-      };
       self.getData = function () {
-        self.getCode();
+        self.code = self.$route.query.code;
         self.activityId = self.$route.query.activityId;
         if (self.$route.query.i) {
           self.activityId = self.$route.query.i;
         }
         self.channel = self.$route.query.channel;
-        if (!self.activityId) {
+        if (!self.activityId && !self.code) {
           return;
         }
         self.getActivity(self.activityId);
