@@ -582,9 +582,8 @@
                       <view class="ele-wrapper ele-wrapper-canel1Button">
                         <hm-uview-button
                           ref="canel1Button"
-                          :custom-style="canel1Button.customStyle"
-                          :text="canel1Button.text"
                           :type="canel1Button.type"
+                          :text="canel1Button.text"
                           @click="onCanel1ButtonClick"
                           class="ele-canel1Button"
                         >
@@ -593,9 +592,8 @@
                       <view class="ele-wrapper ele-wrapper-sure1Button">
                         <hm-uview-button
                           ref="sure1Button"
-                          :custom-style="sure1Button.customStyle"
-                          :text="sure1Button.text"
                           :type="sure1Button.type"
+                          :text="sure1Button.text"
                           @click="onSure1ButtonClick"
                           class="ele-sure1Button"
                         >
@@ -742,9 +740,9 @@
             class="ele-wrapper ele-wrapper-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9"
           >
             <hm-uview-text
-              color="#D6769C"
-              font-size="14px"
               text="已报名，查看我的报名信息"
+              font-size="14px"
+              color="#D6769C"
               @onClick="onEle4D8Eb71C153949848Ba0E2Dd0E6Ceeb9OnClick"
               class="ele-4d8eb71c-1539-4984-8ba0-e2dd0e6ceeb9"
             >
@@ -1102,14 +1100,12 @@ export default {
         ],
       },
       canel1Button: {
-        customStyle: {},
-        text: "取消",
         type: "info",
+        text: "取消",
       },
       sure1Button: {
-        customStyle: {},
-        text: "登录",
         type: "info",
+        text: "登录",
       },
       canelButton: {
         customStyle: {},
@@ -1503,7 +1499,7 @@ export default {
           return;
         }
         uni.$u.route(
-          `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+          `/pages/haomo/1753965929131151361/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
         );
       };
       self.error = function (text) {
