@@ -244,7 +244,7 @@ export default {
           captcha: self.viewInput.value,
         };
         const res = await self.$postAction(url, params);
-        if (!res.success) {
+        if (!res.success || res.message === "手机验证码错误") {
           uni.showToast({
             icon: "error",
             position: "top",
