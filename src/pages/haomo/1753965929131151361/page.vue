@@ -352,7 +352,7 @@ export default {
       }
       this.$getAction("/api/dkn/viewRegistrationOrders/list", params).then(
         (res) => {
-          console.log("res--", res);
+          console.log("res--viewRegistrationOrders", res);
           if (res.code != 200 || res.result.records.length <= 0) {
             uni.showToast({
               title: "请先活动报名",
