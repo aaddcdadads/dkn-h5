@@ -154,7 +154,7 @@
               >
                 <hm-loop
                   :value="[
-                    { label: '姓名/昵称', placeholder: '姓名/昵称', value: '' },
+                    { label: '姓名/昵称', placeholder: '', value: '222321' },
                     {
                       label: '手机号码',
                       placeholder: '17722729038',
@@ -192,18 +192,17 @@
                   </template>
                 </hm-loop>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-5cf9158e-7842-477f-90a4-f6351085e84f"
-              >
+              <view class="ele-wrapper ele-wrapper-orderCode">
                 <hm-uview-field
-                  value=""
+                  ref="orderCode"
+                  v-model:value="orderCode.value"
                   label="订单编号"
                   placeholder="86973497296789259486"
                   label-width="160"
                   :label-align="'center'"
                   icon=""
                   right-icon=""
-                  class="ele-5cf9158e-7842-477f-90a4-f6351085e84f"
+                  class="ele-orderCode"
                 >
                 </hm-uview-field>
               </view>
@@ -279,8 +278,8 @@ export default {
         value: [
           {
             label: "姓名/昵称",
-            placeholder: "姓名/昵称",
-            value: "",
+            placeholder: "",
+            value: "222321",
           },
           {
             label: "手机号码",
@@ -299,6 +298,9 @@ export default {
           },
         ],
       },
+      orderCode: {
+        value: "",
+      },
       orderCdoe: {},
       registrationProjectField: {},
       userNameField: {},
@@ -310,15 +312,15 @@ export default {
       writeStatusField: {},
       buttonwan: {},
       loopList: {},
-      "5cf9158e-7842-477f-90a4-f6351085e84f": {
-        value: "",
-      },
       "21c5606d-d727-4143-a4ce-026bb85006c1": {
         value: "item.value",
       },
     };
   },
   watch: {},
+  created(e) {
+    this.onCreated(e);
+  },
   mounted(e) {
     this.onMounted(e);
   },
@@ -326,6 +328,9 @@ export default {
     this.onOnLoad(e);
   },
   methods: {
+    onCreated() {
+      this.orderCode.value;
+    },
     onMounted() {
       console.log("mounted");
 
@@ -370,20 +375,41 @@ export default {
           }
           let item = res.result.records[0];
           //保存订单id
-          this.orderId = item.id;
+          this.orderCode.value = item.code;
           this.activityId = item.activityId;
-          this.orderCdoe.text = `订单编号：${item.code}`;
-          this.registrationProjectField.value = item.acName ?? "";
-          this.userNameField.value = item.name ?? "";
-          this.phoneField.value = item.phone ?? "";
-          this.storeNameField.value = item.originalPickUpName ?? "";
-          this.registrationTimeField.value = item.paymentTime ?? "";
-          this.activityNameField.value = item.acName ?? "";
-          this.verificationDeadlineField.value =
-            item.pickUpStartTime.split(" ")[0] +
-            " - " +
-            item.pickUpEndTime.split(" ")[0];
-          this.writeStatusField.value = item.pickUpStatusText ?? "";
+
+          this.list = [
+            {
+              label: "姓名/昵称",
+              placeholder: "姓名/昵称",
+              value: "",
+            },
+            {
+              label: "手机号码",
+              placeholder: "17722729038",
+              value: "",
+            },
+            {
+              label: "领奖门店",
+              placeholder: "迪卡侬深圳北站店",
+              value: "",
+            },
+            {
+              label: "报名时间",
+              placeholder: "2024-03-01 08:49:59",
+              value: "",
+            },
+          ];
+
+          /*this.orderCdoe.text = `订单编号：${item.code}`
+    this.registrationProjectField.value = item.acName ?? "";
+    this.userNameField.value = item.name ?? "";
+    this.phoneField.value = item.phone ?? "";
+    this.storeNameField.value = item.originalPickUpName ?? "";
+    this.registrationTimeField.value = item.paymentTime ?? "";
+    this.activityNameField.value = item.acName ?? "";
+    this.verificationDeadlineField.value = item.pickUpStartTime.split(' ')[0] + " - " + item.pickUpEndTime.split(' ')[0];
+    this.writeStatusField.value = item.pickUpStatusText ?? "";*/
           //如果已核销或者已经过了截止时间
           if (
             item.pickUpStatus == 0 ||
@@ -529,7 +555,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-5cf9158e-7842-477f-90a4-f6351085e84f {
+.ele-wrapper-orderCode {
   width: 100%;
   margin-top: 10px;
   background-color: #ffffff;
