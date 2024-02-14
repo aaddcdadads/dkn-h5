@@ -209,14 +209,14 @@
                 >
                 </hm-uview-text>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-ab01174d-8269-443a-ab92-f2d42d6c66bb"
-              >
+              <view class="ele-wrapper ele-wrapper-buttonwan">
                 <hm-uview-button
-                  :shape="'circle'"
-                  text="核销"
-                  @click="onEleab01174D8269443AAb92F2D42D6C66BbClick"
-                  class="ele-ab01174d-8269-443a-ab92-f2d42d6c66bb"
+                  ref="buttonwan"
+                  :disabled="buttonwan.disabled"
+                  :shape="buttonwan.shape"
+                  :text="buttonwan.text"
+                  @click="onButtonwanClick"
+                  class="ele-buttonwan"
                 >
                 </hm-uview-button>
               </view>
@@ -273,6 +273,11 @@ export default {
         color: "#FFFFFF",
         padding: "2",
       },
+      buttonwan: {
+        disabled: false,
+        shape: "circle",
+        text: "核销",
+      },
       loopList: {
         value: [
           {
@@ -306,7 +311,6 @@ export default {
       activityNameField: {},
       verificationDeadlineField: {},
       writeStatusField: {},
-      buttonwan: {},
       "21c5606d-d727-4143-a4ce-026bb85006c1": {
         value: "item.value",
       },
@@ -328,6 +332,7 @@ export default {
       this.pickUpStatusText.text;
       this.acNameText.text;
       this.pickUpTime.text;
+      this.buttonwan.disabled;
     },
     onMounted() {
       console.log("mounted");
@@ -383,6 +388,13 @@ export default {
           this.loopList.value[2].value = item.originalPickUpName;
           //报名时间
           this.loopList.value[3].value = item.paymentTime;
+          this.pickUpStatusText.text = item.pickUpStatusText;
+          this.acNameText.text = item.acName;
+          let timeText =
+            item.pickUpStartTime.split(" ")[0] +
+            " - " +
+            item.pickUpEndTime.split(" ")[0];
+          this.pickUpTime.text = "请在" + timeText + "之内完成核销";
 
           /*this.orderCdoe.text = `订单编号：${item.code}`
     this.registrationProjectField.value = item.acName ?? "";
@@ -413,7 +425,7 @@ export default {
             if (orderProjectRes.code != 200 || res.result.records.length <= 0) {
               return;
             }
-            this.loopList.value = orderProjectRes.result.records;
+            //this.loopList.value = orderProjectRes.result.records
           });
         }
       );
@@ -470,7 +482,7 @@ export default {
           "&type=1",
       });
     },
-    onEleab01174D8269443AAb92F2D42D6C66BbClick() {
+    onButtonwanClick() {
       uni.navigateTo({
         url:
           "/pages/haomo/1752649989210771458/page?activityId=" + this.activityId,
@@ -554,7 +566,7 @@ export default {
   margin-top: 30px;
 }
 
-.ele-wrapper-ab01174d-8269-443a-ab92-f2d42d6c66bb {
+.ele-wrapper-buttonwan {
   width: 100%;
   /deep/.u-btn {
     color: #ffffff;
