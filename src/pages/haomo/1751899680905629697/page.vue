@@ -200,7 +200,7 @@ export default {
           return;
         }
         uni.$u.route(
-          `/pages/haomo/1751068398554451969/page?activityId=${id}&storeId=${self.storeId}`
+          `/pages/haomo/1750443401116913665/page?activityId=${id}&storeId=${self.storeId}`
         );
       };
     },
