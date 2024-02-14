@@ -2,6 +2,7 @@ function() {
     let self = this
     self.activityId = self.$route.query.activityId
     self.activityName = self.$route.query.activityName
+    self.channel = self.$route.query.channel
     self.eventCard.list = []
     self.storeList.list = []
     self.payButton.text = `立即报名`
@@ -16,21 +17,30 @@ function() {
         if (!res.success || res.result.records.length === 0) {
             return
         }
-        self.eventCard.list = res.result.records.map(e => {
-            return {
+        let list = []
+        res.result.records.forEach((e, index) => {
+            let checked = false
+            if (index == 0) {
+                checked = true
+            }
+            let par = {
                 ...e,
-                checked: false,
+                checked,
                 image: self.getImg(e.imgPath),
                 name: e.name,
                 description: e.synopsis,
                 price: e.free === 0 ? 0 : e.expense,
                 number: 1
             }
+            list.push(par)
         })
+        self.eventCard.list = list
+        self.money = list[0].price
+        self.payButton.text = `总费用：¥${self.money} 立即报名`;
     }
     self.getStoreList = async function () {
         let url = '/api/dkn/store/listOrder'
-        const res = await self.$getAction(url, {status:0})
+        const res = await self.$getAction(url, { status: 0 })
         if (!res.success || res.result.length === 0) {
             return
         }
@@ -64,7 +74,8 @@ function() {
                     money += expense;
                 }
             });
-            console.log('money', money)
+            money = parseFloat(money).toFixed(2)
+            console.log("money", money);
             self.payButton.text = `总费用：¥${money} 立即报名`;
             self.money = money;
         })
@@ -95,10 +106,6 @@ function() {
         self.addOrder();
     }
     self.addOrder = async function () {
-        let channel = 0
-        if (self.weixinRadio.value === 1) {
-            channel = 1
-        }
         let url = '/api/dkn/registrationOrders/addOrder'
         const orderProjects = self.getOrderProjects();
         let params = {
@@ -110,7 +117,7 @@ function() {
             smscode: self.smscodeIpnut.value,
             money: self.money,
             orderProjects,
-            channel
+            channel: self.channel
         }
         const res = await self.$postAction(url, params)
         if (!res.success) {
@@ -136,7 +143,7 @@ function() {
             }
             return
         }
-        if (!self.money) {
+        if (!parseFloat(self.money) > 0) {
             uni.showToast({
                 icon: "success",
                 position: "top",
@@ -157,11 +164,11 @@ function() {
         self.countdown.text = ""
         self.prices.text = `¥ ${self.money}`
     }
-    self.isWeChat=function() {
+    self.isWeChat = function () {
         // 判断是否在微信浏览器中
         const userAgent = navigator.userAgent.toLowerCase();
         return userAgent.indexOf('micromessenger') !== -1;
-      }
+    }
     //登录验证
     self.login = async function () {
         let url = '/api/sys/phoneLogin'
