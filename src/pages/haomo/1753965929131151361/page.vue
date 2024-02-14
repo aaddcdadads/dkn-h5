@@ -35,35 +35,32 @@
                   background-color="#FFFFFF00"
                   class="ele-messageText"
                 >
-                  <view
-                    class="ele-wrapper ele-wrapper-36f2fc1e-d87f-40cb-98bc-cb8e56e54ca8"
-                  >
+                  <view class="ele-wrapper ele-wrapper-pickUpStatusText">
                     <hm-uview-text
-                      text="待核销/已核销"
-                      font-size="17px"
-                      color="#FFFFFF"
+                      ref="pickUpStatusText"
+                      :text="pickUpStatusText.text"
+                      :font-size="pickUpStatusText.fontSize"
+                      :color="pickUpStatusText.color"
                     >
                     </hm-uview-text>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-d8c285e5-318c-441c-8246-12398d4f880c"
-                  >
+                  <view class="ele-wrapper ele-wrapper-acNameText">
                     <hm-uview-text
-                      text="活动名称"
-                      font-size="17px"
-                      color="#FFFFFF"
-                      padding="3"
+                      ref="acNameText"
+                      :text="acNameText.text"
+                      :font-size="acNameText.fontSize"
+                      :color="acNameText.color"
+                      :padding="acNameText.padding"
                     >
                     </hm-uview-text>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-3239cafa-d69b-4857-821d-3eb017166e18"
-                  >
+                  <view class="ele-wrapper ele-wrapper-pickUpTime">
                     <hm-uview-text
-                      text="请在 2024-03-31 23:59:59 前完成核销"
-                      font-size="12px"
-                      color="#FFFFFF"
-                      padding="2"
+                      ref="pickUpTime"
+                      :text="pickUpTime.text"
+                      :font-size="pickUpTime.fontSize"
+                      :color="pickUpTime.color"
+                      :padding="pickUpTime.padding"
                     >
                     </hm-uview-text>
                   </view>
@@ -256,6 +253,14 @@ export default {
   data() {
     let self = this;
     return {
+      pickUpStatusText: {
+        text: "待核销/已核销",
+        fontSize: "17px",
+        color: "#FFFFFF",
+      },
+      orderCode: {
+        value: "",
+      },
       loopList: {
         value: [
           {
@@ -280,9 +285,6 @@ export default {
           },
         ],
       },
-      orderCode: {
-        value: "",
-      },
       orderCdoe: {},
       registrationProjectField: {},
       userNameField: {},
@@ -293,6 +295,18 @@ export default {
       verificationDeadlineField: {},
       writeStatusField: {},
       buttonwan: {},
+      acNameText: {
+        text: "活动名称",
+        fontSize: "17px",
+        color: "#FFFFFF",
+        padding: "3",
+      },
+      pickUpTime: {
+        text: "请在 2024-03-31 23:59:59 前完成核销",
+        fontSize: "12px",
+        color: "#FFFFFF",
+        padding: "2",
+      },
       "21c5606d-d727-4143-a4ce-026bb85006c1": {
         value: "item.value",
       },
