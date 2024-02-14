@@ -149,29 +149,11 @@
               background-color="#FAFAFA"
               class="ele-25fbac4b-fb00-45c5-9cf7-ed73dec88f58"
             >
-              <view
-                class="ele-wrapper ele-wrapper-3a72f42e-dc59-431b-9a12-5719c8248610"
-              >
+              <view class="ele-wrapper ele-wrapper-loopList">
                 <hm-loop
-                  :value="[
-                    { label: '姓名/昵称', placeholder: '', value: '222321' },
-                    {
-                      label: '手机号码',
-                      placeholder: '17722729038',
-                      value: '',
-                    },
-                    {
-                      label: '领奖门店',
-                      placeholder: '迪卡侬深圳北站店',
-                      value: '',
-                    },
-                    {
-                      label: '报名时间',
-                      placeholder: '2024-03-01 08:49:59',
-                      value: '',
-                    },
-                  ]"
-                  class="ele-3a72f42e-dc59-431b-9a12-5719c8248610"
+                  ref="loopList"
+                  v-model:value="loopList.value"
+                  class="ele-loopList"
                 >
                   <template #default="{ item }">
                     <view
@@ -274,7 +256,7 @@ export default {
   data() {
     let self = this;
     return {
-      "3a72f42e-dc59-431b-9a12-5719c8248610": {
+      loopList: {
         value: [
           {
             label: "姓名/昵称",
@@ -297,6 +279,7 @@ export default {
             value: "",
           },
         ],
+        list: null,
       },
       orderCode: {
         value: "",
@@ -311,7 +294,6 @@ export default {
       verificationDeadlineField: {},
       writeStatusField: {},
       buttonwan: {},
-      loopList: {},
       "21c5606d-d727-4143-a4ce-026bb85006c1": {
         value: "item.value",
       },
@@ -378,7 +360,7 @@ export default {
           this.orderCode.value = item.code;
           this.activityId = item.activityId;
 
-          this.list = [
+          this.loopList.list = [
             {
               label: "姓名/昵称",
               placeholder: "姓名/昵称",
@@ -545,7 +527,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-3a72f42e-dc59-431b-9a12-5719c8248610 {
+.ele-wrapper-loopList {
   width: 100%;
   background-color: #ffffff;
   margin-top: 10px;
