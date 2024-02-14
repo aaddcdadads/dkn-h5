@@ -227,6 +227,7 @@
                   text="返回活动详情页"
                   font-size="15px"
                   color="#D8477B"
+                  @onClick="onEle47B84E9587E04Feb8373Dfa45Ddaae2EOnClick"
                 >
                 </hm-uview-text>
               </view>
@@ -449,6 +450,15 @@ export default {
         }, 1500);
         return;
       }
+    },
+
+    onEle47B84E9587E04Feb8373Dfa45Ddaae2EOnClick() {
+      uni.navigateTo({
+        url:
+          "/pages/haomo/1750714119029264386/page?activityId=" +
+          this.activityId +
+          "&type=1",
+      });
     },
   },
 };
