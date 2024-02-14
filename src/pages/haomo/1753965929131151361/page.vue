@@ -237,6 +237,7 @@
                 <hm-uview-button
                   :shape="'circle'"
                   text="核销"
+                  @click="onEleab01174D8269443AAb92F2D42D6C66BbClick"
                   class="ele-ab01174d-8269-443a-ab92-f2d42d6c66bb"
                 >
                 </hm-uview-button>
@@ -459,6 +460,18 @@ export default {
           this.activityId +
           "&type=1",
       });
+    },
+    onEleab01174D8269443AAb92F2D42D6C66BbClick() {
+      uni.navigateTo({
+        url:
+          "/pages/haomo/1752649989210771458/page?activityId=" + this.activityId,
+      });
+
+      /*uni.navigateTo({
+    url: "/pages/haomo/1751068398554451969/page?activityId=" +
+      this.activityId +
+      "&storeId=2e1dc2b5514216c2e8da190b17577d12",
+  })*/
     },
   },
 };
