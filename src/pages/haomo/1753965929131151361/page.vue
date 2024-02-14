@@ -285,21 +285,21 @@ export default {
           {
             label: "姓名/昵称",
             placeholder: "",
-            value: "222321",
+            value: "",
           },
           {
             label: "手机号码",
-            placeholder: "17722729038",
+            placeholder: "",
             value: "",
           },
           {
             label: "领奖门店",
-            placeholder: "迪卡侬深圳北站店",
+            placeholder: "",
             value: "",
           },
           {
             label: "报名时间",
-            placeholder: "2024-03-01 08:49:59",
+            placeholder: "",
             value: "",
           },
         ],
