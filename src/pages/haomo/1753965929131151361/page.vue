@@ -359,13 +359,13 @@ export default {
           this.orderCode.value = item.code;
           this.activityId = item.activityId;
           //姓名
-          this.loopList.value[0].value = 1;
+          this.loopList.value[0].value = item.realname;
           //手机号
-          this.loopList.value[1].value = 2;
+          this.loopList.value[1].value = item.phone;
           //领奖门店
-          this.loopList.value[2].value = 3;
+          this.loopList.value[2].value = item.originalPickUpName;
           //报名时间
-          this.loopList.value[3].value = 4;
+          this.loopList.value[3].value = item.paymentTime;
 
           /*this.orderCdoe.text = `订单编号：${item.code}`
     this.registrationProjectField.value = item.acName ?? "";
