@@ -177,7 +177,7 @@
                   ref="orderCode"
                   v-model:value="orderCode.value"
                   label="订单编号"
-                  placeholder="86973497296789259486"
+                  placeholder=""
                   label-width="160"
                   :label-align="'center'"
                   icon=""
@@ -270,7 +270,7 @@ export default {
         padding: "3",
       },
       pickUpTime: {
-        text: "请在 2024-03-31 23:59:59 前完成核销",
+        text: "",
         fontSize: "12px",
         color: "#FFFFFF",
         padding: "2",
