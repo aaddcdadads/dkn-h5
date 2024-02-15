@@ -311,7 +311,7 @@ export default {
         //保存订单信息
         this.registrationOrdersData = res.result.records[0];
         //姓名
-        this.loopList.value[0].value = this.registrationOrdersData.realname;
+        this.loopList.value[0].value = this.registrationOrdersData.name;
         //手机号
         this.loopList.value[1].value = this.registrationOrdersData.phone;
         //活动名称
