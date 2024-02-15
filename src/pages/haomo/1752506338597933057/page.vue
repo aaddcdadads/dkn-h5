@@ -128,7 +128,7 @@ export default {
     };
   },
   watch: {},
-  created(e) {
+  async created(e) {
     this.onCreated(e);
   },
   mounted(e) {
@@ -139,6 +139,22 @@ export default {
       //注册
       this.sharingImage.backgroundImage;
       this.code.name;
+
+      let self = this;
+      self.getQrCode = async function () {
+        let url = `http://dkn-h5.dev.haomo-tech.com?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
+        setTimeout(() => {
+          const container = document.querySelector(".ele-wrapper-code");
+          console.log("container", container);
+          new self.$QrCode(container, {
+            text: url,
+            width: 128,
+            height: 128,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+          });
+        });
+      };
     },
 
     onDownloadImageBgClick() {
