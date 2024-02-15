@@ -98,7 +98,12 @@
                         <view
                           class="ele-wrapper ele-wrapper-2b090494-74e9-4208-93de-43455651c087"
                         >
-                          <loop-img :src="item.src" width="80px" height="80px">
+                          <loop-img
+                            :src="item.src"
+                            width="80px"
+                            height="80px"
+                            class="ele-2b090494-74e9-4208-93de-43455651c087"
+                          >
                           </loop-img>
                         </view>
                       </template>
@@ -517,6 +522,10 @@ export default {
     display: flex;
     flex-wrap: wrap;
   }
+}
+
+.ele-wrapper-2b090494-74e9-4208-93de-43455651c087 {
+  margin-left: 6rpx;
 }
 
 .ele-wrapper-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a {
