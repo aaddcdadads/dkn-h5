@@ -165,15 +165,24 @@ export default {
 
       let self = this;
       self.getQrCode = async function () {
-        const QRCode = require("qrcode");
-        const qrCodeDiv = document.getElementsByClassName("code");
+        const qrCodeDiv = document.getElementsByClassName(
+          "ele-wrapper-code"
+        )[0];
+        console.log("aaa", qrCodeDiv);
         let qrUrl = `http://dkn-h5.dev.haomo-tech.com?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
 
-        const qr = new QRCode(qrCodeDiv, {
-          text: qrUrl,
-          width: 128,
-          height: 128,
-        });
+        self.$QRCode.toCanvas(
+          qrCodeDiv,
+          qrUrl,
+          { width: 128, height: 128 },
+          function (error) {
+            if (error) {
+              console.error(error);
+            } else {
+              console.log("QR code generated");
+            }
+          }
+        );
       };
     },
 
