@@ -373,7 +373,9 @@ export default {
               uni.navigateTo({
                 url:
                   "/pages/haomo/1750714119029264386/page?activityId=" +
-                  this.activityId,
+                  this.activityId +
+                  "&channelId=" +
+                  this.channelId,
               });
             }, 1500);
             return;
@@ -472,7 +474,9 @@ export default {
           uni.navigateTo({
             url:
               "/pages/haomo/1750714119029264386/page?activityId=" +
-              this.activityId,
+              this.activityId +
+              "&channelId=" +
+              this.channelId,
           });
         }, 1500);
         return;
@@ -492,16 +496,16 @@ export default {
       });
     },
     onButtonwanClick() {
+      /*uni.navigateTo({
+    url: "/pages/haomo/1752649989210771458/page?activityId=" + this.activityId
+  })*/
+
       uni.navigateTo({
         url:
-          "/pages/haomo/1752649989210771458/page?activityId=" + this.activityId,
+          "/pages/haomo/1751068398554451969/page?activityId=" +
+          this.activityId +
+          "&storeId=2e1dc2b5514216c2e8da190b17577d12",
       });
-
-      /*uni.navigateTo({
-    url: "/pages/haomo/1751068398554451969/page?activityId=" +
-      this.activityId +
-      "&storeId=2e1dc2b5514216c2e8da190b17577d12",
-  })*/
     },
   },
 };
