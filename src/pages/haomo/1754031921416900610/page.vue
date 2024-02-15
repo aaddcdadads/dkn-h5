@@ -208,7 +208,6 @@ export default {
         ],
       },
       registrationOrdersData: {},
-      inputClaimStore: {},
       writeOffModal: {
         title: "核销",
         visible: false,
@@ -315,7 +314,7 @@ export default {
         //手机号
         this.loopList.value[1].value = this.registrationOrdersData.phone;
         //活动名称
-        this.loopList.value[2].value = this.registrationOrdersData.acName;
+        this.acNameField.value = this.registrationOrdersData.acName;
 
         if (this.registrationOrdersData.paymentStatus != 0) {
           this.buttonwanCard.hidden = true;
@@ -347,7 +346,7 @@ export default {
         }
         let item = res.result.records[0];
         //领奖门店
-        this.acNameField.value = item.name ?? "";
+        this.loopList.value[2].value = item.name ?? "";
       });
 
       //查询奖品图片
@@ -448,7 +447,7 @@ export default {
     onButtonwanClick() {
       if (
         this.registrationOrdersData.originalPickUpName !=
-        this.inputClaimStore.value
+        this.loopList.value[2].value
       ) {
         this.writeOffModal.title = "强制核销";
         this.writeOffText.text =
