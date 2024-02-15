@@ -87,6 +87,7 @@ const getBackgroundImage = (logic.getBackgroundImage = async (
     self.sharingImage.backgroundImage =
       "/api/sys/common/static/" + records[0].path;
   }
+  self.getQrCode();
 });
 
 /********************** end getBackgroundImage 开始 *********************/
