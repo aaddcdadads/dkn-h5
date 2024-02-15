@@ -173,12 +173,17 @@ export default {
 
         // 创建一个canvas元素
         const canvas = document.createElement("canvas");
+        canvas.width = qrCodeDiv.offsetWidth; // 设置canvas宽度为容器宽度
+        canvas.height = qrCodeDiv.offsetHeight; // 设置canvas高度为容器高度
 
         // 生成二维码并渲染到隐藏的canvas元素中
         self.$QRCode.toCanvas(
           canvas,
           qrUrl,
-          { width: "100%", height: "100%", borderRadius: 10 },
+          {
+            width: canvas.width,
+            height: canvas.height,
+          },
           function (error) {
             if (error) {
               console.error(error);
