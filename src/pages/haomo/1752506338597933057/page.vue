@@ -128,7 +128,7 @@ export default {
     };
   },
   watch: {},
-  created(e) {
+  async created(e) {
     this.onCreated(e);
   },
   mounted(e) {
@@ -139,6 +139,19 @@ export default {
       //注册
       this.sharingImage.backgroundImage;
       this.code.name;
+
+      let self = this;
+      self.getQrCode = async function () {
+        const QRCode = require("qrcode");
+        const qrCodeDiv = document.getElementsByClassName("code");
+        let qrUrl = `http://dkn-h5.dev.haomo-tech.com?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
+
+        const qr = new QRCode(qrCodeDiv, {
+          text: qrUrl,
+          width: 128,
+          height: 128,
+        });
+      };
     },
 
     onDownloadImageBgClick() {
