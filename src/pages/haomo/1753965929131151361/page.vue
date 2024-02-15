@@ -102,32 +102,10 @@
               box-shadow-blur=""
               class="ele-2da4517d-7fb0-4bdc-825d-f295b2c74751"
             >
-              <view
-                class="ele-wrapper ele-wrapper-2060a060-910f-4964-925f-6601124d2f0d"
-              >
+              <view class="ele-wrapper ele-wrapper-imgList">
                 <event-registration-information-card
-                  :list="[
-                    {
-                      checked: true,
-                      image:
-                        'https://img.js.design/assets/img/65bc6430a6a4a8693349c559.png',
-                      name: '套餐A',
-                      description:
-                        '时代看风使舵丰动名称活动名称活动名称活动名称活动名称活动名称活动名动名称活动名称活动名称活动名称活动名称活动名称活动名动名称活动名称活动名称活动名称活动名称活动名称活动名富的少年疯狂是否达到减肥的步伐简单方便的',
-                      price: '29.9',
-                      number: 0,
-                    },
-                    {
-                      checked: false,
-                      image:
-                        'https://hm-static-img.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A4logo.png',
-                      name: '套餐B',
-                      description:
-                        '动名称活动名称活动名称活动名称活动名称活动名称活动名动名称活动名称活动名称活动名称活动名称活动名称活动名动名称活动名称活动名称活动名称活动名称活动名称活动名',
-                      price: '0.0',
-                      number: 0,
-                    },
-                  ]"
+                  ref="imgList"
+                  :list="imgList.list"
                 >
                 </event-registration-information-card>
               </view>
@@ -336,6 +314,30 @@ export default {
       activityNameField: {},
       verificationDeadlineField: {},
       writeStatusField: {},
+      imgList: {
+        list: [
+          {
+            checked: true,
+            image:
+              "https://img.js.design/assets/img/65bc6430a6a4a8693349c559.png",
+            name: "套餐A",
+            description:
+              "时代看风使舵丰动名称活动名称活动名称活动名称活动名称活动名称活动名动名称活动名称活动名称活动名称活动名称活动名称活动名动名称活动名称活动名称活动名称活动名称活动名称活动名富的少年疯狂是否达到减肥的步伐简单方便的",
+            price: "29.9",
+            number: 0,
+          },
+          {
+            checked: false,
+            image:
+              "https://hm-static-img.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A4logo.png",
+            name: "套餐B",
+            description:
+              "动名称活动名称活动名称活动名称活动名称活动名称活动名动名称活动名称活动名称活动名称活动名称活动名称活动名动名称活动名称活动名称活动名称活动名称活动名称活动名",
+            price: "0.0",
+            number: 0,
+          },
+        ],
+      },
       "21c5606d-d727-4143-a4ce-026bb85006c1": {
         value: "item.value",
       },
@@ -359,6 +361,12 @@ export default {
       this.pickUpTime.text;
       this.buttonwan.disabled;
       this.buttonwanCard.hidden;
+      this.getImg = function (url) {
+        if (url.substring(0, 4) === "http") {
+          return url;
+        }
+        return `/api/sys/common/static/${url}`;
+      };
     },
     onMounted() {
       console.log("mounted");
@@ -454,6 +462,18 @@ export default {
               return;
             }
             //this.loopList.value = orderProjectRes.result.records
+
+            this.imgList.list = res.result.records.map((item) => {
+              return {
+                ...item,
+                checked: true,
+                image: this.getImg(item.path),
+                name: "套餐A",
+                description: "时代",
+                price: "29.9",
+                number: item.num,
+              };
+            });
           });
         }
       );
