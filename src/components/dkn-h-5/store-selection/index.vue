@@ -11,9 +11,23 @@
         @change="radioGroupChange"
         style="width: 100%"
       >
-        <view v-for="(items, index) in data" :key="index" class="shop">
+        <view v-for="(items, index) in data" :key="index" class="dataItemCard">
+          <view class="dataItemCard-title" :id="items.pinyinKey">{{ items.city }}</view>
           <view
-            v-for="(item, itemsindex) in items.store"
+            v-for="(itemlist, key) in items.shop"
+            :key="key"
+            class="dataItemCard_list"
+          >
+            <view class="dataItemCard_list_name">
+              <u-radio :name="itemlist.name">{{ itemlist.name }}</u-radio>
+            </view>
+            <view class="dataItemCard_list_address">
+              <text> {{ itemlist.address }}</text>
+            </view>
+          </view>
+
+          <!-- <view
+            v-for="(item, itemsindex) in items.shop"
             class="store_list"
             :id="items.anchor + itemsindex"
             :key="itemsindex"
@@ -31,13 +45,13 @@
                 <text> {{ itemlist.address }}</text>
               </view>
             </view>
-          </view>
+          </view> -->
         </view>
       </u-radio-group>
     </scroll-view>
-    <view class="anchorBox">
-      <view v-for="(item, index) in anch" class="itembox">
-        <a class="anchors" @click="anchor(item + index)">{{ item }}</a>
+    <view class="anchorBox" >
+      <view v-for="(item, index) in anch" :key="index" class="itembox">
+        <a class="anchors" @click="anchor(item)">{{ item }}</a>
       </view>
     </view>
   </view>
@@ -552,7 +566,7 @@ export default {
     list: {
       handler: function (val) {
         this.data = val;
-        this.mapData(this.data);
+        this.data = this.mapData(this.data);
       },
       deep: true,
     },
@@ -596,7 +610,6 @@ export default {
   },
   mounted() {
     this.data = this.list;
-    this.mapData(this.data);
     this.$nextTick(() => {
       const query = uni.createSelectorQuery().in();
       query
@@ -610,6 +623,7 @@ export default {
         })
         .exec();
     });
+    this.data = this.mapData(this.data);
   },
   methods: {
     radioGroupChange(e) {
@@ -654,7 +668,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .shop {
   width: 100%;
   margin-left: 20px;
@@ -697,7 +711,7 @@ export default {
 
 .anchorBox {
   width: 20px;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   min-height: 300px;
@@ -716,5 +730,27 @@ export default {
   margin-top: 10px;
   padding-bottom: 15px;
   border-bottom: 0.5px solid #ffdedede;
+}
+.dataItemCard {
+  width: 100%;
+  padding: 0px 20px;
+  &-title {
+    width: 100%;
+    line-height: 44px;
+    border-bottom: 0.5px solid #ffdedede;
+  }
+  &_list {
+    width: 100%;
+    padding: 6px 0px;
+    &_name {
+      font-weight: 750;
+      display: flex;
+      align-items: center;
+    }
+    &_address {
+      margin-left: 23px;
+      font-size: 12px;
+    }
+  }
 }
 </style>
