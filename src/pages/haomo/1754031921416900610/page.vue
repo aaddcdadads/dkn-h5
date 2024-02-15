@@ -102,7 +102,8 @@
                         <view
                           class="ele-wrapper ele-wrapper-2b090494-74e9-4208-93de-43455651c087"
                         >
-                          <loop-img :src="item.src"> </loop-img>
+                          <loop-img :src="item.src" width="80px" height="80px">
+                          </loop-img>
                         </view>
                       </template>
                     </hm-loop>
