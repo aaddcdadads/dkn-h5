@@ -88,12 +88,11 @@
                     >
                     </hm-uview-text>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816"
-                  >
+                  <view class="ele-wrapper ele-wrapper-imgList">
                     <hm-loop
-                      :value="[{ src: 'https://img.yzcdn.cn/vant/cat.jpeg' }]"
-                      class="ele-315c9068-5a40-4c3b-9b6d-3841b926c816"
+                      ref="imgList"
+                      v-model:value="imgList.value"
+                      class="ele-imgList"
                     >
                       <template #default="{ item }">
                         <view
@@ -223,16 +222,15 @@ export default {
         value: "",
       },
       registrationOrdersDatathis: {},
-      prizeListComponent: {},
-      "0ded82e1-3f32-400b-915d-b361c39f83db": {
-        value: "",
-      },
-      "315c9068-5a40-4c3b-9b6d-3841b926c816": {
+      imgList: {
         value: [
           {
             src: "https://img.yzcdn.cn/vant/cat.jpeg",
           },
         ],
+      },
+      "0ded82e1-3f32-400b-915d-b361c39f83db": {
+        value: "",
       },
       buttonwan: {
         shape: "circle",
@@ -360,7 +358,7 @@ export default {
       }).then((res) => {
         console.log("res--", res);
         if (res.code != 200 || res.result.records.length <= 0) return;
-        this.prizeListComponent.funcList = res.result.records.map((item) => {
+        this.imgList.value = res.result.records.map((item) => {
           return {
             ...item,
             src: this.getImg(item.path),
@@ -514,7 +512,7 @@ export default {
   text-align: right !important;
 }
 
-.ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816 {
+.ele-wrapper-imgList {
   flex: 1;
   margin-left: 12px;
   /deep/.uni-scroll-view-content {
