@@ -92,12 +92,7 @@
                     class="ele-wrapper ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816"
                   >
                     <hm-loop
-                      :value="[
-                        { src: '' },
-                        { src: '' },
-                        { src: '' },
-                        { src: '' },
-                      ]"
+                      :value="[]"
                       class="ele-315c9068-5a40-4c3b-9b6d-3841b926c816"
                     >
                       <template #default="{ item }">
@@ -105,6 +100,7 @@
                           class="ele-wrapper ele-wrapper-fbf844c5-828e-4650-bab4-24aeaffae8ca"
                         >
                           <hm-uview-image
+                            src=""
                             width="80px"
                             height="80px"
                             class="ele-fbf844c5-828e-4650-bab4-24aeaffae8ca"
@@ -233,20 +229,7 @@ export default {
         value: "",
       },
       "315c9068-5a40-4c3b-9b6d-3841b926c816": {
-        value: [
-          {
-            src: "",
-          },
-          {
-            src: "",
-          },
-          {
-            src: "",
-          },
-          {
-            src: "",
-          },
-        ],
+        value: [],
       },
       buttonwan: {
         shape: "circle",
