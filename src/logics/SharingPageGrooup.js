@@ -101,7 +101,7 @@ const getBackgroundImage = (logic.getBackgroundImage = async (
       });
     });
   };
-  self.getQrCode;
+  self.getQrCode();
 });
 
 /********************** end getBackgroundImage 开始 *********************/
