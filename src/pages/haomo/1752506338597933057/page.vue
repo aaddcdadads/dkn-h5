@@ -97,7 +97,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 
-import { getBackgroundImage } from "/@/logics/SharingPageGrooup";
+import { sharingPageInitialization } from "/@/logics/SharingPageGrooup";
 
 export default {
   name: "SharingPage",
@@ -128,30 +128,17 @@ export default {
     };
   },
   watch: {},
-  async created(e) {
+  created(e) {
     this.onCreated(e);
   },
   mounted(e) {
-    getBackgroundImage(this, arguments);
+    sharingPageInitialization(this, arguments);
   },
   methods: {
     onCreated() {
       //注册
       this.sharingImage.backgroundImage;
       this.code.name;
-
-      let self = this;
-      self.getQrCode = async function () {
-        const QRCode = require("qrcode");
-        const qrCodeDiv = document.getElementsByClassName("code");
-        let qrUrl = `http://dkn-h5.dev.haomo-tech.com?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
-
-        const qr = new QRCode(qrCodeDiv, {
-          text: qrUrl,
-          width: 128,
-          height: 128,
-        });
-      };
     },
 
     onDownloadImageBgClick() {
