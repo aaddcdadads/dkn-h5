@@ -165,9 +165,7 @@ export default {
 
       let self = this;
       self.getQrCode = async function () {
-        const qrCodeDiv = document.getElementsByClassName(
-          "ele-wrapper-code"
-        )[0];
+        const qrCodeDiv = document.getElementsByClassName("ele-code")[0];
         console.log("aaa", qrCodeDiv);
         let qrUrl = `http://dkn-h5.dev.haomo-tech.com?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
 
