@@ -211,14 +211,27 @@
                 >
                 </hm-uview-text>
               </view>
-              <view class="ele-wrapper ele-wrapper-buttonwan">
+            </hm-uview-bg-card>
+          </view>
+          <view
+            class="ele-wrapper ele-wrapper-1bb24331-ac5b-4aee-9aca-bfa7e69d3de7"
+          >
+            <hm-uview-bg-card
+              width="100%"
+              height="100%"
+              border-radius=""
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+              background-color="#FAFAFA"
+              class="ele-1bb24331-ac5b-4aee-9aca-bfa7e69d3de7"
+            >
+              <view
+                class="ele-wrapper ele-wrapper-2c8fe4eb-cc2c-4966-8a42-75908a6b8555"
+              >
                 <hm-uview-button
-                  ref="buttonwan"
-                  :disabled="buttonwan.disabled"
-                  :shape="buttonwan.shape"
-                  :text="buttonwan.text"
-                  @click="onButtonwanClick"
-                  class="ele-buttonwan"
+                  :shape="'circle'"
+                  text="核销"
+                  class="ele-2c8fe4eb-cc2c-4966-8a42-75908a6b8555"
                 >
                 </hm-uview-button>
               </view>
@@ -275,11 +288,7 @@ export default {
         color: "#FFFFFF",
         padding: "2",
       },
-      buttonwan: {
-        disabled: false,
-        shape: "circle",
-        text: "核销",
-      },
+      buttonwan: {},
       loopList: {
         value: [
           {
@@ -495,20 +504,6 @@ export default {
         url: url,
       });
     },
-    onButtonwanClick() {
-      /*uni.navigateTo({
-    url: "/pages/haomo/1752649989210771458/page?activityId=" + this.activityId
-  })*/
-
-      uni.navigateTo({
-        url:
-          "/pages/haomo/1754031921416900610/page?activityId=" +
-          this.activityId +
-          "&storeId=0f79951222fd4a8a8b815177b29f013a" +
-          "&channelId=" +
-          this.channelId,
-      });
-    },
   },
 };
 </script>
@@ -581,7 +576,17 @@ export default {
   margin-top: 30px;
 }
 
-.ele-wrapper-buttonwan {
+.ele-wrapper-1bb24331-ac5b-4aee-9aca-bfa7e69d3de7 {
+  width: 100%;
+  .ele-writeOffBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  margin-top: 30px;
+}
+
+.ele-wrapper-2c8fe4eb-cc2c-4966-8a42-75908a6b8555 {
   width: 100%;
   /deep/.u-btn {
     color: #ffffff;
