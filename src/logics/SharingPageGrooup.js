@@ -87,7 +87,7 @@ const getBackgroundImage = (logic.getBackgroundImage = async (
     self.sharingImage.backgroundImage =
       "/api/sys/common/static/" + records[0].path;
   }
-  self.getQrCode = async function (id) {
+  self.getQrCode = async function () {
     let url = `http://dkn-h5.dev.haomo-tech.com?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
     setTimeout(() => {
       const container = document.querySelector(".ele-wrapper-code");
@@ -101,6 +101,7 @@ const getBackgroundImage = (logic.getBackgroundImage = async (
       });
     });
   };
+  self.getQrCode;
 });
 
 /********************** end getBackgroundImage 开始 *********************/
