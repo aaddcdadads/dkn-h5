@@ -97,7 +97,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 
-import { sharingPageInitialization } from "/@/logics/SharingPageGrooup";
+import { getBackgroundImage } from "/@/logics/SharingPageGrooup";
 
 export default {
   name: "SharingPage",
@@ -132,7 +132,7 @@ export default {
     this.onCreated(e);
   },
   mounted(e) {
-    sharingPageInitialization(this, arguments);
+    getBackgroundImage(this, arguments);
   },
   methods: {
     onCreated() {
