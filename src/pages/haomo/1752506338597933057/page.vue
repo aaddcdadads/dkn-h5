@@ -28,12 +28,28 @@
               class="ele-sharingImage"
             >
               <view class="ele-wrapper ele-wrapper-code">
-                <hm-uview-icon
+                <hm-uview-bg-card
                   ref="code"
-                  :name="code.name"
-                  :size="code.size"
-                  :label="code.label"
+                  :width="code.width"
+                  :height="code.height"
+                  :border-radius="code.borderRadius"
+                  :border-color="code.borderColor"
+                  :padding="code.padding"
+                  :box-shadow-v-shadow="code.boxShadowVShadow"
+                  :box-shadow-blur="code.boxShadowBlur"
+                  :box-shadow-color="code.boxShadowColor"
+                  :background-color="code.backgroundColor"
                   class="ele-code"
+                >
+                </hm-uview-bg-card>
+              </view>
+              <view class="ele-wrapper ele-wrapper-codea">
+                <hm-uview-icon
+                  ref="codea"
+                  name=""
+                  size="100%"
+                  label=""
+                  class="ele-codea"
                 >
                 </hm-uview-icon>
               </view>
@@ -121,9 +137,16 @@ export default {
         backgroundImage: "",
       },
       code: {
-        name: "",
-        size: "100%",
-        label: "",
+        name: null,
+        width: "100%",
+        height: "100%",
+        borderRadius: "10",
+        borderColor: "#FFFFFF00",
+        padding: "0",
+        boxShadowVShadow: "0",
+        boxShadowBlur: "0",
+        boxShadowColor: "#00000000",
+        backgroundColor: "#FFFFFF00",
       },
     };
   },
@@ -254,6 +277,20 @@ export default {
 
 .ele-wrapper-code {
   position: absolute;
+  width: 21%;
+  left: 11.4%;
+  bottom: 2.6%;
+  /deep/.ele-code {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+    position: relative;
+    //height: 100%;
+  }
+}
+
+.ele-wrapper-codea {
+  position: absolute;
   aspect-ratio: 1/1;
   width: 21%;
   left: 11.4%;
@@ -266,6 +303,7 @@ export default {
   /deep/ .u-icon__img {
     border-radius: 10px;
   }
+  display: none;
 }
 
 .ele-wrapper-084fc45c-3b7d-42af-9042-8c47c465787c {
