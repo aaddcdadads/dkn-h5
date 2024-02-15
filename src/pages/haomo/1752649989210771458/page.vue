@@ -84,14 +84,14 @@ export default {
             });
             uni.redirectTo({
               url:
-                "/pages/haomo/1750443401116913665/page?activityId=" +
+                "/pages/haomo/1753965929131151361/page?activityId=" +
                 this.activityId,
             });
             return;
           }
           uni.redirectTo({
             url:
-              "/pages/haomo/1751068398554451969/page?activityId=" +
+              "/pages/haomo/1754031921416900610/page?activityId=" +
               this.activityId +
               "&storeId=" +
               storeId,
