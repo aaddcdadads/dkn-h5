@@ -121,15 +121,21 @@
                   height="80px"
                   @onConfirm="onWriteOffModalOnConfirm"
                 >
-                  <view class="ele-wrapper ele-wrapper-writeOffText">
-                    <hm-uview-text
-                      ref="writeOffText"
-                      :text="writeOffText.text"
-                      :font-size="writeOffText.fontSize"
-                      :color="writeOffText.color"
-                      class="ele-writeOffText"
-                    >
-                    </hm-uview-text>
+                  <view
+                    class="ele-wrapper ele-wrapper-37812c82-78a2-4dfe-b077-d34a6cc52c59"
+                  >
+                    <hm-uview-bg-card>
+                      <view class="ele-wrapper ele-wrapper-writeOffText">
+                        <hm-uview-text
+                          ref="writeOffText"
+                          :text="writeOffText.text"
+                          :font-size="writeOffText.fontSize"
+                          :color="writeOffText.color"
+                          class="ele-writeOffText"
+                        >
+                        </hm-uview-text>
+                      </view>
+                    </hm-uview-bg-card>
                   </view>
                 </hm-uview-modal>
               </view>
