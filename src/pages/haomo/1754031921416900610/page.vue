@@ -437,7 +437,7 @@ export default {
         setTimeout(() => {
           uni.navigateTo({
             url:
-              "/pages/haomo/1750443401116913665/page?activityId=" +
+              "/pages/haomo/1753965929131151361/page?activityId=" +
               this.activityId +
               "&channelId=" +
               this.channelId,
