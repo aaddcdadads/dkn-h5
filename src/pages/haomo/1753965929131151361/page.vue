@@ -106,6 +106,7 @@
                 <event-registration-information-card
                   ref="imgList"
                   :list="imgList.list"
+                  class="ele-imgList"
                 >
                 </event-registration-information-card>
               </view>
@@ -594,6 +595,10 @@ export default {
 }
 
 .ele-wrapper-2da4517d-7fb0-4bdc-825d-f295b2c74751 {
+  width: 100%;
+}
+
+.ele-wrapper-imgList {
   width: 100%;
 }
 
