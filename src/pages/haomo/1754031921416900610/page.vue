@@ -221,7 +221,6 @@ export default {
       acNameField: {
         value: "",
       },
-      registrationOrdersDatathis: {},
       imgList: {
         value: [
           {
@@ -309,7 +308,7 @@ export default {
         //姓名
         this.loopList.value[0].value = this.registrationOrdersData.realname;
         //手机号
-        this.loopList.value[1].value = this.registrationOrdersDatathis.registrationOrdersData.phone;
+        this.loopList.value[1].value = this.registrationOrdersData.phone;
         //活动名称
         this.loopList.value[2].value = this.registrationOrdersData.acName;
 
