@@ -37,6 +37,9 @@ export default {
   methods: {
     onMounted() {},
     onOnLoad(options) {
+      if (options.channelId) {
+        this.channelId = options.channelId;
+      }
       if (!options.activityId) {
         uni.showToast({
           title: "数据获取失败",
@@ -63,8 +66,10 @@ export default {
         });
         uni.redirectTo({
           url:
-            "/pages/haomo/1750443401116913665/page?activityId=" +
-            this.activityId,
+            "/pages/haomo/1753965929131151361/page?activityId=" +
+            this.activityId +
+            "&channelId=" +
+            this.channelId,
         });
       } else {
         const queryString = data.split("?")[1]; // 获取？后面的查询参数部分
@@ -85,7 +90,9 @@ export default {
             uni.redirectTo({
               url:
                 "/pages/haomo/1753965929131151361/page?activityId=" +
-                this.activityId,
+                this.activityId +
+                "&channelId=" +
+                this.channelId,
             });
             return;
           }
@@ -94,7 +101,9 @@ export default {
               "/pages/haomo/1754031921416900610/page?activityId=" +
               this.activityId +
               "&storeId=" +
-              storeId,
+              storeId +
+              "&channelId=" +
+              this.channelId,
           });
         });
       }
