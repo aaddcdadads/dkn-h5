@@ -96,7 +96,12 @@
                     class="ele-wrapper ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816"
                   >
                     <hm-loop
-                      :value="[{ src: '' }, { src: '' }, { src: '' }]"
+                      :value="[
+                        { src: '' },
+                        { src: '' },
+                        { src: '' },
+                        { src: '' },
+                      ]"
                       class="ele-315c9068-5a40-4c3b-9b6d-3841b926c816"
                     >
                       <template #default="{ item }">
@@ -231,6 +236,9 @@ export default {
       },
       "315c9068-5a40-4c3b-9b6d-3841b926c816": {
         value: [
+          {
+            src: "",
+          },
           {
             src: "",
           },
