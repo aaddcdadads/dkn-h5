@@ -171,15 +171,21 @@ export default {
         console.log("aaa", qrCodeDiv);
         let qrUrl = `http://dkn-h5.dev.haomo-tech.com?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
 
+        // 创建一个canvas元素
+        const canvas = document.createElement("canvas");
+
+        // 生成二维码并渲染到隐藏的canvas元素中
         self.$QRCode.toCanvas(
-          qrCodeDiv,
+          canvas,
           qrUrl,
-          { width: 128, height: 128 },
+          { width: "100%", height: "100%", borderRadius: 10 },
           function (error) {
             if (error) {
               console.error(error);
             } else {
               console.log("QR code generated");
+              // 将canvas元素内容复制到目标容器中
+              qrCodeDiv.appendChild(canvas);
             }
           }
         );
