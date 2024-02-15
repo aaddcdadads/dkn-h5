@@ -147,18 +147,18 @@
           <view class="ele-wrapper ele-wrapper-buttonwanCard">
             <hm-uview-bg-card
               ref="buttonwanCard"
-              width="100%"
-              height="100%"
-              border-radius=""
-              box-shadow-v-shadow=""
-              box-shadow-blur=""
-              background-color="#FAFAFA"
+              :width="buttonwanCard.width"
+              :height="buttonwanCard.height"
+              :border-radius="buttonwanCard.borderRadius"
+              :box-shadow-v-shadow="buttonwanCard.boxShadowVShadow"
+              :box-shadow-blur="buttonwanCard.boxShadowBlur"
+              :background-color="buttonwanCard.backgroundColor"
+              :hidden="buttonwanCard.hidden"
               class="ele-buttonwanCard"
             >
               <view class="ele-wrapper ele-wrapper-buttonwan">
                 <hm-uview-button
                   ref="buttonwan"
-                  :disabled="buttonwan.disabled"
                   :shape="buttonwan.shape"
                   :text="buttonwan.text"
                   @click="onButtonwanClick"
@@ -218,16 +218,14 @@ export default {
       kaohe: {
         visible: false,
       },
-      inputMane: {},
-      inputPhoneNumber: {},
-      inputClaimStore: {},
-      inputActivityName: {},
-      writeOffModal: {},
-      writeOffText: {},
-      buttonwan: {
-        disabled: false,
-        shape: "circle",
-        text: "确认核销",
+      buttonwanCard: {
+        hidden: false,
+        width: "100%",
+        height: "100%",
+        borderRadius: "",
+        boxShadowVShadow: "",
+        boxShadowBlur: "",
+        backgroundColor: "#FAFAFA",
       },
       loopList: {},
       registrationOrdersData: {},
@@ -255,6 +253,10 @@ export default {
           },
         ],
       },
+      buttonwan: {
+        shape: "circle",
+        text: "确认核销",
+      },
     };
   },
   watch: {},
@@ -269,14 +271,7 @@ export default {
   },
   methods: {
     onCreated() {
-      this.inputMane.value;
-      this.inputPhoneNumber.value;
-      this.inputClaimStore.value;
-      this.inputActivityName.value;
-      this.writeOffModal.visible;
-      this.writeOffText.text;
-      this.writeOffModal.title;
-      this.buttonwan.disabled;
+      this.buttonwanCard.hidden;
 
       this.getTime = () => {
         // 创建一个新的 Date 对象来获取当前时间
@@ -329,7 +324,6 @@ export default {
         }
         //保存订单信息
         this.registrationOrdersData = res.result.records[0];
-
         //姓名
         this.loopList.value[0].value = this.registrationOrdersData.realname;
         //手机号
@@ -338,7 +332,7 @@ export default {
         this.loopList.value[3].value = this.registrationOrdersData.acName;
 
         if (this.registrationOrdersData.paymentStatus != 0) {
-          this.buttonwan.disabled = true;
+          this.buttonwanCard.hidden = true;
         }
       });
       //查询扫码的门店信息
