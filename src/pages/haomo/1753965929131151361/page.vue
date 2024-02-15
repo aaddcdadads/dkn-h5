@@ -213,25 +213,24 @@
               </view>
             </hm-uview-bg-card>
           </view>
-          <view
-            class="ele-wrapper ele-wrapper-1bb24331-ac5b-4aee-9aca-bfa7e69d3de7"
-          >
+          <view class="ele-wrapper ele-wrapper-buttonwanCard">
             <hm-uview-bg-card
+              ref="buttonwanCard"
               width="100%"
               height="100%"
               border-radius=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
               background-color="#FAFAFA"
-              class="ele-1bb24331-ac5b-4aee-9aca-bfa7e69d3de7"
+              class="ele-buttonwanCard"
             >
-              <view
-                class="ele-wrapper ele-wrapper-2c8fe4eb-cc2c-4966-8a42-75908a6b8555"
-              >
+              <view class="ele-wrapper ele-wrapper-buttonwan">
                 <hm-uview-button
-                  :shape="'circle'"
-                  text="核销"
-                  class="ele-2c8fe4eb-cc2c-4966-8a42-75908a6b8555"
+                  ref="buttonwan"
+                  :disabled="buttonwan.disabled"
+                  :shape="buttonwan.shape"
+                  :text="buttonwan.text"
+                  class="ele-buttonwan"
                 >
                 </hm-uview-button>
               </view>
@@ -288,7 +287,11 @@ export default {
         color: "#FFFFFF",
         padding: "2",
       },
-      buttonwan: {},
+      buttonwan: {
+        disabled: false,
+        shape: "circle",
+        text: "核销",
+      },
       loopList: {
         value: [
           {
@@ -576,7 +579,7 @@ export default {
   margin-top: 30px;
 }
 
-.ele-wrapper-1bb24331-ac5b-4aee-9aca-bfa7e69d3de7 {
+.ele-wrapper-buttonwanCard {
   width: 100%;
   .ele-writeOffBtn {
     display: flex;
@@ -586,7 +589,7 @@ export default {
   margin-top: 30px;
 }
 
-.ele-wrapper-2c8fe4eb-cc2c-4966-8a42-75908a6b8555 {
+.ele-wrapper-buttonwan {
   width: 100%;
   /deep/.u-btn {
     color: #ffffff;
