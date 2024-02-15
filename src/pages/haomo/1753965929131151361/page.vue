@@ -185,6 +185,11 @@
                   :disabled="true"
                   class="ele-orderCode"
                 >
+                  <view
+                    class="ele-wrapper ele-wrapper-530da743-5b84-4e4b-acc7-7ecd54b70167"
+                  >
+                    <hm-uview-button> </hm-uview-button>
+                  </view>
                 </hm-uview-field>
               </view>
             </hm-uview-bg-card>
