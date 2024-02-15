@@ -226,7 +226,9 @@ export default {
       writeOffModal: {},
       writeOffText: {},
       buttonwan: {},
+      loopList: {},
       registrationOrdersData: {},
+      registrationOrdersDatathis: {},
       prizeListComponent: {},
       "0ded82e1-3f32-400b-915d-b361c39f83db": {
         value: "",
@@ -324,6 +326,15 @@ export default {
         }
         //保存订单信息
         this.registrationOrdersData = res.result.records[0];
+
+        //姓名
+        this.loopList.value[0].value = this.registrationOrdersData.realname;
+        //手机号
+        this.loopList.value[1].value = this.registrationOrdersDatathis.registrationOrdersData.phone;
+        //领奖门店
+        this.loopList.value[2].value = this.registrationOrdersData.originalPickUpName;
+        //报名时间
+        this.loopList.value[3].value = this.registrationOrdersData.paymentTime;
 
         this.inputMane.value = this.registrationOrdersData.name ?? "";
         this.inputPhoneNumber.value = this.registrationOrdersData.phone ?? "";
