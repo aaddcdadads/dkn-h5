@@ -463,7 +463,7 @@ export default {
             }
             //this.loopList.value = orderProjectRes.result.records
 
-            this.imgList.list = res.result.records.map((item) => {
+            this.imgList.list = orderProjectRes.result.records.map((item) => {
               return {
                 ...item,
                 checked: true,
