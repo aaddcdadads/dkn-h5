@@ -209,7 +209,7 @@ export default {
       registrationOrdersData: {},
       inputClaimStore: {},
       writeOffModal: {
-        title: "强制核销？",
+        title: "核销",
         visible: false,
       },
       writeOffText: {},
