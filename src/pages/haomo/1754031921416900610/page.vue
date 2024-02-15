@@ -121,14 +121,13 @@
                   height="80px"
                   @onConfirm="onWriteOffModalOnConfirm"
                 >
-                  <view
-                    class="ele-wrapper ele-wrapper-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a"
-                  >
+                  <view class="ele-wrapper ele-wrapper-writeOffText">
                     <hm-uview-text
-                      text="核销后不可再次领取奖品！"
-                      font-size="14px"
-                      color="#6C6C6C"
-                      class="ele-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a"
+                      ref="writeOffText"
+                      :text="writeOffText.text"
+                      :font-size="writeOffText.fontSize"
+                      :color="writeOffText.color"
+                      class="ele-writeOffText"
                     >
                     </hm-uview-text>
                   </view>
@@ -212,7 +211,11 @@ export default {
         title: "核销",
         visible: false,
       },
-      writeOffText: {},
+      writeOffText: {
+        text: "核销后不可再次领取奖品！",
+        fontSize: "14px",
+        color: "#6C6C6C",
+      },
       buttonwanCard: {
         hidden: false,
         width: "100%",
@@ -527,7 +530,7 @@ export default {
   margin-left: 6rpx;
 }
 
-.ele-wrapper-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a {
+.ele-wrapper-writeOffText {
   margin: 10px;
 }
 
