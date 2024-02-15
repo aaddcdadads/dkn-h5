@@ -385,7 +385,7 @@ export default {
           this.orderCode.value = item.code;
           this.activityId = item.activityId;
           //姓名
-          this.loopList.value[0].value = item.realname;
+          this.loopList.value[0].value = item.name;
           //手机号
           this.loopList.value[1].value = item.phone;
           //领奖门店
