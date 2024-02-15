@@ -25,7 +25,7 @@
                   class="ele-wrapper ele-wrapper-0ded82e1-3f32-400b-915d-b361c39f83db"
                 >
                   <hm-uview-field
-                    value=""
+                    :value="item.value"
                     :label="item.label"
                     placeholder=""
                     label-width="160"
@@ -230,7 +230,7 @@ export default {
         ],
       },
       "0ded82e1-3f32-400b-915d-b361c39f83db": {
-        value: "",
+        value: "item.value",
       },
       buttonwan: {
         shape: "circle",
