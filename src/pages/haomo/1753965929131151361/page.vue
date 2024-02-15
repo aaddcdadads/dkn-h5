@@ -521,8 +521,8 @@ export default {
     },
     onButtonwanClick() {
       /*uni.navigateTo({
-    url: "/pages/haomo/1752649989210771458/page?activityId=" + this.activityId
-  })*/
+     url: "/pages/haomo/1752649989210771458/page?activityId=" + this.activityId"&channelId=" +this.channelId,
+   })*/
 
       uni.navigateTo({
         url:
