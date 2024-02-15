@@ -443,7 +443,9 @@ export default {
           uni.navigateTo({
             url:
               "/pages/haomo/1750443401116913665/page?activityId=" +
-              this.activityId,
+              this.activityId +
+              "&channelId=" +
+              this.channelId,
           });
         }, 1500);
       });
