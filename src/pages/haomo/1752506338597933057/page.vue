@@ -142,14 +142,13 @@ export default {
 
       let self = this;
       self.getQrCode = async function () {
-        let url = `http://dkn-h5.dev.haomo-tech.com?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
-        const QRCode = require("qrcode");
-        //const fs = require('fs');
+        const qrCodeDiv = document.getElementsByClassName("code");
+        let qrUrl = `http://dkn-h5.dev.haomo-tech.com?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
 
-        // 生成二维码图片并保存到文件
-        QRCode.toFile("qrcode.png", url, (err) => {
-          if (err) throw err;
-          console.log("QR Code generated successfully");
+        const qr = new QRCode(qrCodeDiv, {
+          text: qrUrl,
+          width: 128,
+          height: 128,
         });
       };
     },
