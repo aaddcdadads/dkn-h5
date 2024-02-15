@@ -14,16 +14,11 @@
           background-color="#FAFAFA"
           class="ele-d2f3fb59-dd6f-46a0-9ab7-5a867871dbd7"
         >
-          <view
-            class="ele-wrapper ele-wrapper-3d5cca18-be80-4c03-83e5-d43ea90a2db3"
-          >
+          <view class="ele-wrapper ele-wrapper-loopList">
             <hm-loop
-              :value="[
-                { label: '姓名/昵称', value: '' },
-                { label: '手机号码', value: '' },
-                { label: '领奖门店', value: '' },
-              ]"
-              class="ele-3d5cca18-be80-4c03-83e5-d43ea90a2db3"
+              ref="loopList"
+              v-model:value="loopList.value"
+              class="ele-loopList"
             >
               <template #default="{ item }">
                 <view
@@ -37,6 +32,7 @@
                     :label-align="'center'"
                     icon=""
                     right-icon=""
+                    :disabled="true"
                     class="ele-0ded82e1-3f32-400b-915d-b361c39f83db"
                   >
                   </hm-uview-field>
@@ -56,18 +52,18 @@
               box-shadow-blur=""
               class="ele-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c"
             >
-              <view
-                class="ele-wrapper ele-wrapper-8270ddf0-7ca3-412d-a1a2-6ede8337634c"
-              >
+              <view class="ele-wrapper ele-wrapper-acNameField">
                 <hm-uview-field
-                  value=""
+                  ref="acNameField"
+                  v-model:value="acNameField.value"
                   label="活动名称"
                   placeholder="活动名称"
                   label-width="160"
                   :label-align="'center'"
                   icon=""
                   right-icon=""
-                  class="ele-8270ddf0-7ca3-412d-a1a2-6ede8337634c"
+                  :disabled="true"
+                  class="ele-acNameField"
                 >
                 </hm-uview-field>
               </view>
@@ -199,7 +195,7 @@ export default {
   data() {
     let self = this;
     return {
-      "3d5cca18-be80-4c03-83e5-d43ea90a2db3": {
+      loopList: {
         value: [
           {
             label: "姓名/昵称",
@@ -227,14 +223,13 @@ export default {
         boxShadowBlur: "",
         backgroundColor: "#FAFAFA",
       },
-      loopList: {},
+      acNameField: {
+        value: "",
+      },
       registrationOrdersData: {},
       registrationOrdersDatathis: {},
       prizeListComponent: {},
       "0ded82e1-3f32-400b-915d-b361c39f83db": {
-        value: "",
-      },
-      "8270ddf0-7ca3-412d-a1a2-6ede8337634c": {
         value: "",
       },
       "315c9068-5a40-4c3b-9b6d-3841b926c816": {
@@ -272,6 +267,7 @@ export default {
   methods: {
     onCreated() {
       this.buttonwanCard.hidden;
+      this.acNameField.value;
 
       this.getTime = () => {
         // 创建一个新的 Date 对象来获取当前时间
@@ -329,7 +325,7 @@ export default {
         //手机号
         this.loopList.value[1].value = this.registrationOrdersDatathis.registrationOrdersData.phone;
         //活动名称
-        this.loopList.value[3].value = this.registrationOrdersData.acName;
+        this.loopList.value[2].value = this.registrationOrdersData.acName;
 
         if (this.registrationOrdersData.paymentStatus != 0) {
           this.buttonwanCard.hidden = true;
@@ -361,7 +357,7 @@ export default {
         }
         let item = res.result.records[0];
         //领奖门店
-        this.loopList.value[2].value = item.name ?? "";
+        this.acNameField.value = item.name ?? "";
       });
 
       //查询奖品图片
@@ -442,7 +438,7 @@ export default {
   height: 100vh;
 }
 
-.ele-wrapper-3d5cca18-be80-4c03-83e5-d43ea90a2db3 {
+.ele-wrapper-loopList {
   width: 100%;
   background-color: #ffffff;
 }
@@ -463,7 +459,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-8270ddf0-7ca3-412d-a1a2-6ede8337634c {
+.ele-wrapper-acNameField {
   width: 100%;
   /deep/.u-field {
     height: 56px;
