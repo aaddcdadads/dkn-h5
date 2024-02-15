@@ -10,7 +10,7 @@ function() {
     self.closeTime.second = ""
 
     //名称
-    self.nameText.text = ""
+    self.nameTexts.text = ""
 
     //活动列表
     self.activityList.item = ""
@@ -42,10 +42,14 @@ function() {
     self.addOrderCard.hidden = false
     self.notActivity.hidden = true
     self.imgCard.hidden = false
-    self.imgText.text="活动奖品"
+    self.imgText.text = "活动奖品"
     self.getActivity = async function (id) {
+        let params = {id}
+        if (!id) {
+            params.code=self.code
+        }
         let url = "/api/dkn/activity/queryByAll"
-        const res = await self.$getAction(url, { id })
+        const res = await self.$getAction(url, params)
         if (!res.success || !res.result) {
             self.outsideBg.hidden = true
             self.addOrderCard.hidden = true
@@ -53,6 +57,7 @@ function() {
             return
         }
         self.activityItem = res.result
+        self.activityId=self.activityItem.id
         self.activityExtItem = self.activityItem.activityExts[0]
         self.activityImgItem = self.activityItem.activityImgs
         self.activityProjectItem = self.activityItem.activityProjects
@@ -67,7 +72,7 @@ function() {
         self.activityImgList.textColor = self.activityItem.textColour
         self.listCompanent.backgroundColor = self.activityItem.colour
         self.listCompanent.textColor = self.activityItem.textColour
-        self.nameText.text = self.activityItem.name
+        self.nameTexts.text = self.activityItem.name
         let number = self.activityItem.orders
         if (self.activityItem.unrealStatus === 0) {
             number = self.activityItem.unrealCount + number
@@ -88,10 +93,14 @@ function() {
             "number": number
         }
         const time = self.getTimeDifference(new Date(), new Date(self.activityItem.closeTime))
-        self.closeTime.day = time.days
-        self.closeTime.hour = time.hour
-        self.closeTime.minute = time.minute
-        self.closeTime.second = time.second
+        console.log('time', time)
+        setTimeout(() => {
+            self.closeTime.day = time.days;
+            self.closeTime.hour = time.hours;
+            self.closeTime.minute = time.minutes;
+            self.closeTime.second = time.seconds;
+            self.$refs.closeTime.countDown()
+        }, 1000)
         self.setImg()
         self.setTextArea()
     }
@@ -128,7 +137,7 @@ function() {
         })
         if (self.activityImgList.funcList.length === 0) {
             self.imgCard.hidden = true
-            self.imgText.text=""
+            self.imgText.text = ""
         }
         imgOne = imgOne.sort((a, b) => a.sortNo - b.sortNo)
         if (imgOne.length > 0) {
@@ -169,14 +178,7 @@ function() {
             seconds
         };
     }
-    self.getData = function () {
-        self.activityId = self.$route.query.activityId
-        if (!self.activityId) {
-            return
-        }
-        self.getActivity(self.activityId)
-    }
-    self.getData()
+
     //页面事件
     //校验手机号
     self.checkPhone = function () {
@@ -207,7 +209,7 @@ function() {
         if (!self.checkPhone()) {
             setTimeout(() => {
                 self.$refs.viewInput.reset();
-              })
+            })
             return
         }
         let url = '/api/sys/sms'
@@ -314,7 +316,13 @@ function() {
         url = '/api/dkn/registrationOrders/getOne'
         const resp = await self.$getAction(url,
             { phone: self.phoneBox.value, activityId: self.activityId })
-        if (!resp.success || !resp.result) {
+        if (!resp.success || !resp.result || resp.result.paymentStatus === 2) {
+            let item = new Date()
+            let closeTimes = new Date(self.activityItem.closeTime)
+            if (item.getTime() > closeTimes.getTime()) {
+                self.error("活动已结束")
+                return
+            }
             uni.showToast({
                 icon: "error",
                 position: "top",
@@ -322,7 +330,7 @@ function() {
                 duration: 2000,
             });
             uni.$u.route(
-                `/pages/haomo/1750444738487521281/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+                `/pages/haomo/1750444738487521281/page?activityId=${self.activityId}&activityName=${self.activityItem.name}&channel=${self.channel}`
             );
             return
 
@@ -330,5 +338,27 @@ function() {
         uni.$u.route(
             `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
         );
+
     }
+    self.error = function (text) {
+        uni.showToast({
+            icon: "error",
+            position: "top",
+            title: text,
+            duration: 2000,
+        });
+    }
+    self.getData = function () {
+        self.code = self.$route.query.code
+        self.activityId = self.$route.query.activityId
+        if (self.$route.query.i) {
+            self.activityId = self.$route.query.i
+        }
+        self.channel = self.$route.query.channel
+        if (!self.activityId && ! self.code) {
+            return
+        }
+        self.getActivity(self.activityId)
+    }
+    self.getData()
 }

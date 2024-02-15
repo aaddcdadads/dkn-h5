@@ -15,6 +15,19 @@ export default {
   onHide: function () {
     console.log('App Hide')
   },
+  mounted () {
+    const currentPath = window.location.href;
+    const url = currentPath.split("?");
+    console.log('url====',url)
+    if (url.length > 1) {
+      return
+    }
+    const lastSegment = currentPath.split(`${window.location.origin}/`);
+    console.log('lastSegment====',lastSegment)
+    if (lastSegment.length === 2) {
+      window.location.href = `${window.location.origin}/?code=${lastSegment[1]}`
+    }
+  }
 }
 </script>
 
