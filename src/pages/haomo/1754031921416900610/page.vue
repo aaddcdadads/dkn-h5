@@ -260,6 +260,8 @@ export default {
     onCreated() {
       this.buttonwanCard.hidden;
       this.acNameField.value;
+      this.writeOffModal.title;
+      this.writeOffText.text;
 
       this.getTime = () => {
         // 创建一个新的 Date 对象来获取当前时间
