@@ -144,26 +144,25 @@
               </view>
             </hm-uview-bg-card>
           </view>
-          <view
-            class="ele-wrapper ele-wrapper-010f6de0-1635-4e55-81bb-8d3ff0846e27"
-          >
+          <view class="ele-wrapper ele-wrapper-buttonwanCard">
             <hm-uview-bg-card
+              ref="buttonwanCard"
               width="100%"
               height="100%"
               border-radius=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
               background-color="#FAFAFA"
-              class="ele-010f6de0-1635-4e55-81bb-8d3ff0846e27"
+              class="ele-buttonwanCard"
             >
-              <view
-                class="ele-wrapper ele-wrapper-6f70c0fe-9613-40e4-b95a-888ee2363e0f"
-              >
+              <view class="ele-wrapper ele-wrapper-buttonwan">
                 <hm-uview-button
-                  :shape="'circle'"
-                  text="确认核销"
-                  @click="onEle6F70C0Fe961340E4B95A888Ee2363E0FClick"
-                  class="ele-6f70c0fe-9613-40e4-b95a-888ee2363e0f"
+                  ref="buttonwan"
+                  :disabled="buttonwan.disabled"
+                  :shape="buttonwan.shape"
+                  :text="buttonwan.text"
+                  @click="onButtonwanClick"
+                  class="ele-buttonwan"
                 >
                 </hm-uview-button>
               </view>
@@ -225,7 +224,11 @@ export default {
       inputActivityName: {},
       writeOffModal: {},
       writeOffText: {},
-      buttonwan: {},
+      buttonwan: {
+        disabled: false,
+        shape: "circle",
+        text: "确认核销",
+      },
       loopList: {},
       registrationOrdersData: {},
       registrationOrdersDatathis: {},
@@ -331,7 +334,6 @@ export default {
         this.loopList.value[0].value = this.registrationOrdersData.realname;
         //手机号
         this.loopList.value[1].value = this.registrationOrdersDatathis.registrationOrdersData.phone;
-
         //活动名称
         this.loopList.value[3].value = this.registrationOrdersData.acName;
 
@@ -430,7 +432,7 @@ export default {
       }
     },
 
-    onEle6F70C0Fe961340E4B95A888Ee2363E0FClick() {
+    onButtonwanClick() {
       this.kaohe.visible = true;
     },
   },
@@ -509,14 +511,14 @@ export default {
   margin: 10px;
 }
 
-.ele-wrapper-010f6de0-1635-4e55-81bb-8d3ff0846e27 {
+.ele-wrapper-buttonwanCard {
   width: 100%;
   position: fixed;
   bottom: 40px;
   left: 0px;
 }
 
-.ele-wrapper-6f70c0fe-9613-40e4-b95a-888ee2363e0f {
+.ele-wrapper-buttonwan {
   width: 100%;
   margin-top: 30px;
   /deep/.u-btn {
