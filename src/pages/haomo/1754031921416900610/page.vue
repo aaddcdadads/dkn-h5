@@ -299,8 +299,10 @@ export default {
           setTimeout(() => {
             uni.navigateTo({
               url:
-                "/pages/haomo/1750443401116913665/page?activityId=" +
-                this.activityId,
+                "/pages/haomo/1753965929131151361/page?activityId=" +
+                this.activityId +
+                "&channelId=" +
+                this.channelId,
             });
           }, 1500);
           return;
@@ -332,7 +334,9 @@ export default {
             uni.navigateTo({
               url:
                 "/pages/haomo/1752649989210771458/page?activityId=" +
-                this.activityId,
+                this.activityId +
+                "&channelId=" +
+                this.channelId,
             });
           }, 1500);
           return;
@@ -368,6 +372,9 @@ export default {
       });
     },
     onOnLoad(options) {
+      if (options.channelId) {
+        this.channelId = options.channelId;
+      }
       if (!options.activityId || !options.storeId) {
         uni.showToast({
           title: "数据获取失败",
