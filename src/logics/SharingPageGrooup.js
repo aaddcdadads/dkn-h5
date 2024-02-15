@@ -90,7 +90,7 @@ const getBackgroundImage = (logic.getBackgroundImage = async (
   self.getQrCode = async function (id) {
     let url = `http://dkn-h5.dev.haomo-tech.com?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
     setTimeout(() => {
-      const container = document.querySelector(".ele-wrapper-qrcode");
+      const container = document.querySelector(".ele-wrapper-code");
       console.log("container", container);
       new self.$QrCode(container, {
         text: url,
