@@ -467,10 +467,9 @@ export default {
               return {
                 ...item,
                 checked: true,
-                image: this.getImg(item.path),
-                name: "套餐A",
-                description: "时代",
-                price: "29.9",
+                image: this.getImg(item.imgPath),
+                description: item.synopsis,
+                price: item.expense,
                 number: item.num,
               };
             });
