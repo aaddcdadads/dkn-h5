@@ -19,9 +19,9 @@
           >
             <hm-loop
               :value="[
-                { label: '姓名/昵称', placeholder: '姓名/昵称' },
-                { label: '手机号码', placeholder: '17722729038' },
-                { label: '领奖门店', placeholder: '迪卡侬深圳北站店' },
+                { label: '姓名/昵称', value: '' },
+                { label: '手机号码', value: '' },
+                { label: '领奖门店', value: '' },
               ]"
               class="ele-3d5cca18-be80-4c03-83e5-d43ea90a2db3"
             >
@@ -199,15 +199,15 @@ export default {
         value: [
           {
             label: "姓名/昵称",
-            placeholder: "姓名/昵称",
+            value: "",
           },
           {
             label: "手机号码",
-            placeholder: "17722729038",
+            value: "",
           },
           {
             label: "领奖门店",
-            placeholder: "迪卡侬深圳北站店",
+            value: "",
           },
         ],
       },
