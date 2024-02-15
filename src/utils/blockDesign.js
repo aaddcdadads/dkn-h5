@@ -30,6 +30,7 @@ import mqttTool from "./libs/mqttTool";
 // import { Linking } from 'react-native';
 
 import html2canvas from 'html2canvas';
+import QRCode from 'qrcode';
 
 /**
  * 注册设计云相关的组件
@@ -51,6 +52,7 @@ export default {
     app.config.globalProperties.$aliH5Pay = aliH5Pay;
     app.config.globalProperties.$wxWebPay = wxWebPay
     app.config.globalProperties.$html2canvas = html2canvas
+    app.config.globalProperties.$QRCode = QRCode
 
     app.config.globalProperties.$getCssUnit = function (value) {
         if (isNaN(Number(value))) {
