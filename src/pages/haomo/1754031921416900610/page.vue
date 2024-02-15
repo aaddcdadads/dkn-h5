@@ -164,7 +164,6 @@
               <view class="ele-wrapper ele-wrapper-buttonwan">
                 <hm-uview-button
                   ref="buttonwan"
-                  :disabled="buttonwan.disabled"
                   :shape="buttonwan.shape"
                   :text="buttonwan.text"
                   @click="onButtonwanClick"
@@ -244,11 +243,6 @@ export default {
       acNameField: {
         value: "",
       },
-      buttonwan: {
-        disabled: false,
-        shape: "circle",
-        text: "确认核销",
-      },
       imgList: {
         value: [
           {
@@ -258,6 +252,10 @@ export default {
       },
       "0ded82e1-3f32-400b-915d-b361c39f83db": {
         value: "item.value",
+      },
+      buttonwan: {
+        shape: "circle",
+        text: "确认核销",
       },
     };
   },
@@ -337,7 +335,7 @@ export default {
         this.acNameField.value = this.registrationOrdersData.acName;
 
         if (this.registrationOrdersData.paymentStatus != 0) {
-          this.buttonwan.disabled = true;
+          this.buttonwanCard.hidden = true;
         }
       });
       //查询扫码的门店信息
