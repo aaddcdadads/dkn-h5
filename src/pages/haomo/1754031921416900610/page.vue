@@ -128,6 +128,7 @@
                       width="100%"
                       height="100%"
                       :text-align="'center'"
+                      padding="0"
                       box-shadow-color="#00000000"
                       class="ele-37812c82-78a2-4dfe-b077-d34a6cc52c59"
                     >
@@ -137,6 +138,7 @@
                           :text="writeOffText.text"
                           :font-size="writeOffText.fontSize"
                           :color="writeOffText.color"
+                          :padding="writeOffText.padding"
                           class="ele-writeOffText"
                         >
                         </hm-uview-text>
@@ -227,6 +229,7 @@ export default {
         text: "核销后不可再次领取奖品！",
         fontSize: "14px",
         color: "#6C6C6C",
+        padding: "0",
       },
       buttonwanCard: {
         hidden: false,
