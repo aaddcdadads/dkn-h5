@@ -110,14 +110,15 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
-              <view class="ele-wrapper ele-wrapper-kaohe">
+              <view class="ele-wrapper ele-wrapper-writeOffModal">
                 <hm-uview-modal
-                  ref="kaohe"
-                  v-model:visible="kaohe.visible"
-                  title="强制核销？"
+                  ref="writeOffModal"
+                  v-model:visible="writeOffModal.visible"
+                  :title="writeOffModal.title"
                   confirm-color="#2979FF"
                   :show-close-icon="false"
                   height="80px"
+                  @onConfirm="onWriteOffModalOnConfirm"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a"
@@ -205,9 +206,13 @@ export default {
           },
         ],
       },
-      kaohe: {
+      registrationOrdersData: {},
+      inputClaimStore: {},
+      writeOffModal: {
+        title: "强制核销？",
         visible: false,
       },
+      writeOffText: {},
       buttonwanCard: {
         hidden: false,
         width: "100%",
@@ -220,7 +225,6 @@ export default {
       acNameField: {
         value: "",
       },
-      registrationOrdersData: {},
       registrationOrdersDatathis: {},
       prizeListComponent: {},
       "0ded82e1-3f32-400b-915d-b361c39f83db": {
@@ -410,8 +414,48 @@ export default {
       }
     },
 
+    onWriteOffModalOnConfirm() {
+      this.$postAction("/api/dkn/orderPickUp/add", {
+        orderId: this.registrationOrdersData.id,
+        activityId: this.activityId,
+        storeId: this.storeId,
+        pickUpStatus: 0,
+        pickUpTime: this.getTime(),
+      }).then((res) => {
+        console.log("res--", res);
+        if (!res.success) {
+          uni.showToast({
+            title: "核销失败",
+            icon: "error",
+            duration: 1000,
+          });
+          return;
+        } else {
+          uni.showToast({
+            title: "核销成功",
+            icon: "success",
+            duration: 1000,
+          });
+        }
+        setTimeout(() => {
+          uni.navigateTo({
+            url:
+              "/pages/haomo/1750443401116913665/page?activityId=" +
+              this.activityId,
+          });
+        }, 1500);
+      });
+    },
     onButtonwanClick() {
-      this.kaohe.visible = true;
+      if (
+        this.registrationOrdersData.originalPickUpName !=
+        this.inputClaimStore.value
+      ) {
+        this.writeOffModal.title = "强制核销";
+        this.writeOffText.text =
+          "当前门店与报名登记门店不一致，需要强制核销？核销后不可再次领取奖品！";
+      }
+      this.writeOffModal.visible = true;
     },
   },
 };
