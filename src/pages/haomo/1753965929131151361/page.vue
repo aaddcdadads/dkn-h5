@@ -520,18 +520,21 @@ export default {
       });
     },
     onButtonwanClick() {
-      /*uni.navigateTo({
-     url: "/pages/haomo/1752649989210771458/page?activityId=" + this.activityId"&channelId=" +this.channelId,
-   })*/
-
       uni.navigateTo({
         url:
-          "/pages/haomo/1754031921416900610/page?activityId=" +
+          "/pages/haomo/1752649989210771458/page?activityId=" +
           this.activityId +
-          "&storeId=0f79951222fd4a8a8b815177b29f013a" +
           "&channelId=" +
           this.channelId,
       });
+
+      /*uni.navigateTo({
+    url: "/pages/haomo/1754031921416900610/page?activityId=" +
+      this.activityId +
+      "&storeId=0f79951222fd4a8a8b815177b29f013a" +
+      "&channelId=" +
+      this.channelId,
+  });*/
     },
   },
 };
