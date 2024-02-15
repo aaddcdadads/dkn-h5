@@ -92,20 +92,14 @@
                     class="ele-wrapper ele-wrapper-315c9068-5a40-4c3b-9b6d-3841b926c816"
                   >
                     <hm-loop
-                      :value="[]"
+                      :value="[{ src: 'https://img.yzcdn.cn/vant/cat.jpeg' }]"
                       class="ele-315c9068-5a40-4c3b-9b6d-3841b926c816"
                     >
                       <template #default="{ item }">
                         <view
-                          class="ele-wrapper ele-wrapper-fbf844c5-828e-4650-bab4-24aeaffae8ca"
+                          class="ele-wrapper ele-wrapper-2b090494-74e9-4208-93de-43455651c087"
                         >
-                          <hm-uview-image
-                            src=""
-                            width="80px"
-                            height="80px"
-                            class="ele-fbf844c5-828e-4650-bab4-24aeaffae8ca"
-                          >
-                          </hm-uview-image>
+                          <loop-img :src="item.src"> </loop-img>
                         </view>
                       </template>
                     </hm-loop>
@@ -172,7 +166,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
-import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
+import LoopImg from "/@/components/dkn-h-5/loop-img/index.vue";
 import HmUviewModal from "/@/components/built-in/uniapp-uview-vue3/HmUviewModal.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
@@ -183,7 +177,7 @@ export default {
     HmLoop,
     HmUviewField,
     HmUviewText,
-    HmUviewImage,
+    LoopImg,
     HmUviewModal,
     HmUviewButton,
   },
@@ -229,7 +223,11 @@ export default {
         value: "",
       },
       "315c9068-5a40-4c3b-9b6d-3841b926c816": {
-        value: [],
+        value: [
+          {
+            src: "https://img.yzcdn.cn/vant/cat.jpeg",
+          },
+        ],
       },
       buttonwan: {
         shape: "circle",
@@ -474,10 +472,6 @@ export default {
     display: flex;
     flex-wrap: wrap;
   }
-}
-
-.ele-wrapper-fbf844c5-828e-4650-bab4-24aeaffae8ca {
-  margin-right: 8px;
 }
 
 .ele-wrapper-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a {
