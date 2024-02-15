@@ -4,7 +4,7 @@
         :scroll-y="true"
         :scroll-into-view="toView"
         :scroll-with-animation="true"
-        :style="{ height: height + 'px' }"
+        :style="{ height: 'calc(78vh - 56px)' }"
       >
         <u-radio-group
           v-model="name"
@@ -25,31 +25,10 @@
                 <text> {{ itemlist.address }}</text>
               </view>
             </view>
-  
-            <!-- <view
-              v-for="(item, itemsindex) in items.shop"
-              class="store_list"
-              :id="items.anchor + itemsindex"
-              :key="itemsindex"
-            >
-              <view class="title">{{ item.city }}</view>
-              <view
-                v-for="(itemlist, key) in item.shop"
-                :key="key"
-                class="shopItem"
-              >
-                <view class="name">
-                  <u-radio :name="itemlist.name"> {{ itemlist.name }}</u-radio>
-                </view>
-                <view class="address">
-                  <text> {{ itemlist.address }}</text>
-                </view>
-              </view>
-            </view> -->
           </view>
         </u-radio-group>
       </scroll-view>
-      <view class="anchorBox" >
+      <view class="anchorBox" style="height: calc(78vh - 56px);overflow-y: auto;">
         <view v-for="(item, index) in anch" :key="index" class="itembox">
           <a class="anchors" @click="anchor(item)">{{ item }}</a>
         </view>
