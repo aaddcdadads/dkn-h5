@@ -216,12 +216,13 @@
           <view class="ele-wrapper ele-wrapper-buttonwanCard">
             <hm-uview-bg-card
               ref="buttonwanCard"
-              width="100%"
-              height="100%"
-              border-radius=""
-              box-shadow-v-shadow=""
-              box-shadow-blur=""
-              background-color="#FAFAFA"
+              :width="buttonwanCard.width"
+              :height="buttonwanCard.height"
+              :border-radius="buttonwanCard.borderRadius"
+              :box-shadow-v-shadow="buttonwanCard.boxShadowVShadow"
+              :box-shadow-blur="buttonwanCard.boxShadowBlur"
+              :background-color="buttonwanCard.backgroundColor"
+              :hidden="buttonwanCard.hidden"
               class="ele-buttonwanCard"
             >
               <view class="ele-wrapper ele-wrapper-buttonwan">
@@ -267,13 +268,22 @@ export default {
   data() {
     let self = this;
     return {
+      buttonwanCard: {
+        width: "100%",
+        height: "100%",
+        borderRadius: "",
+        boxShadowVShadow: "",
+        boxShadowBlur: "",
+        backgroundColor: "#FAFAFA",
+        hidden: false,
+      },
+      orderCode: {
+        value: "",
+      },
       pickUpStatusText: {
         text: "待核销/已核销",
         fontSize: "17px",
         color: "#FFFFFF",
-      },
-      orderCode: {
-        value: "",
       },
       acNameText: {
         text: "活动名称",
@@ -347,6 +357,7 @@ export default {
       this.acNameText.text;
       this.pickUpTime.text;
       this.buttonwan.disabled;
+      this.buttonwanCard.hidden;
     },
     onMounted() {
       console.log("mounted");
@@ -429,7 +440,7 @@ export default {
               item.pickUpEndTime.split(" ")[0] + " 23:59:59"
             )
           ) {
-            this.buttonwan.disabled = true;
+            this.buttonwanCard.hidden = true;
           }
 
           //根据订单id查询项目
