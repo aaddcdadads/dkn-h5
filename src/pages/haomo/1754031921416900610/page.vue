@@ -125,7 +125,7 @@
                     class="ele-wrapper ele-wrapper-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a"
                   >
                     <hm-uview-text
-                      text="当前门店与报名登记门店不一致，需要强制核销？核销后不可再次领取奖品！"
+                      text="核销后不可再次领取奖品！"
                       font-size="14px"
                       color="#6C6C6C"
                       class="ele-ac98e48c-05a4-4736-bcc2-9a8d99ceb35a"
@@ -449,7 +449,7 @@ export default {
         this.registrationOrdersData.originalPickUpName !=
         this.loopList.value[2].value
       ) {
-        this.writeOffModal.title = "强制核销";
+        this.writeOffModal.title = "强制核销？";
         this.writeOffText.text =
           "当前门店与报名登记门店不一致，需要强制核销？核销后不可再次领取奖品！";
       }
