@@ -504,7 +504,7 @@ export default {
         url:
           "/pages/haomo/1754031921416900610/page?activityId=" +
           this.activityId +
-          "&storeId=2e1dc2b5514216c2e8da190b17577d12" +
+          "&storeId=0f79951222fd4a8a8b815177b29f013a" +
           "&channelId=" +
           this.channelId,
       });
