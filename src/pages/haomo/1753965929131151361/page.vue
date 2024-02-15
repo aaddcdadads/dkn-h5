@@ -445,7 +445,7 @@ export default {
           }
 
           //根据订单id查询项目
-          this.$getAction("/api/dkn/orderProject/list", {
+          this.$getAction("/api/dkn/viewOrderActivityProject/list", {
             pageNo: 1,
             pageSize: -1,
             orderId: item.id,
