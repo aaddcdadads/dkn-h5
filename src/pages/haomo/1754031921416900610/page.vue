@@ -362,7 +362,6 @@ export default {
           return {
             ...item,
             src: this.getImg(item.path),
-            textbottom: item.name,
           };
         });
       });
