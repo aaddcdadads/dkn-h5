@@ -125,8 +125,11 @@
                     class="ele-wrapper ele-wrapper-37812c82-78a2-4dfe-b077-d34a6cc52c59"
                   >
                     <hm-uview-bg-card
+                      width="100%"
+                      height="100%"
                       :text-align="'center'"
                       box-shadow-color="#00000000"
+                      class="ele-37812c82-78a2-4dfe-b077-d34a6cc52c59"
                     >
                       <view class="ele-wrapper ele-wrapper-writeOffText">
                         <hm-uview-text
@@ -537,6 +540,12 @@ export default {
 
 .ele-wrapper-2b090494-74e9-4208-93de-43455651c087 {
   margin-left: 6rpx;
+}
+
+.ele-wrapper-37812c82-78a2-4dfe-b077-d34a6cc52c59 {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
 }
 
 .ele-wrapper-writeOffText {
