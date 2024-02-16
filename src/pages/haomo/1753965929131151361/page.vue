@@ -160,11 +160,10 @@
                   box-shadow-color="#00000000"
                   class="ele-orderCard"
                 >
-                  <view
-                    class="ele-wrapper ele-wrapper-746112cc-5e08-4544-b7c2-3063828fb42e"
-                  >
+                  <view class="ele-wrapper ele-wrapper-orderCode">
                     <hm-uview-field
-                      value=""
+                      ref="orderCode"
+                      v-model:value="orderCode.value"
                       label="订单编号"
                       placeholder=""
                       label-width="160"
@@ -173,16 +172,15 @@
                       right-icon=""
                       :border-bottom="false"
                       :disabled="true"
-                      class="ele-746112cc-5e08-4544-b7c2-3063828fb42e"
+                      class="ele-orderCode"
                     >
                     </hm-uview-field>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-56983658-9328-4199-9010-a825c2e59a41"
-                  >
+                  <view class="ele-wrapper ele-wrapper-orderCodeBut">
                     <hm-uview-button
-                      :size="'mini'"
-                      class="ele-56983658-9328-4199-9010-a825c2e59a41"
+                      ref="orderCodeBut"
+                      :size="orderCodeBut.size"
+                      class="ele-orderCodeBut"
                     >
                     </hm-uview-button>
                   </view>
@@ -279,7 +277,9 @@ export default {
         backgroundColor: "#FAFAFA",
         hidden: false,
       },
-      orderCode: {},
+      orderCode: {
+        value: "",
+      },
       pickUpStatusText: {
         text: "待核销/已核销",
         fontSize: "17px",
@@ -341,8 +341,8 @@ export default {
       "21c5606d-d727-4143-a4ce-026bb85006c1": {
         value: "item.value",
       },
-      "746112cc-5e08-4544-b7c2-3063828fb42e": {
-        value: "",
+      orderCodeBut: {
+        size: "mini",
       },
     };
   },
@@ -623,13 +623,13 @@ export default {
   margin-top: 10px;
 }
 
-.ele-wrapper-746112cc-5e08-4544-b7c2-3063828fb42e {
+.ele-wrapper-orderCode {
   width: 82%;
 
   background-color: #ffffff;
 }
 
-.ele-wrapper-56983658-9328-4199-9010-a825c2e59a41 {
+.ele-wrapper-orderCodeBut {
   width: 18%;
 }
 
