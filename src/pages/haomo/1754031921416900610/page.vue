@@ -115,11 +115,10 @@
                 <hm-uview-modal
                   ref="writeOffModal"
                   v-model:visible="writeOffModal.visible"
-                  :show-title="false"
                   :title="writeOffModal.title"
                   confirm-color="#2979FF"
                   :show-close-icon="false"
-                  height="120px"
+                  height="80px"
                   @onConfirm="onWriteOffModalOnConfirm"
                 >
                   <view
@@ -141,18 +140,6 @@
                           :color="writeOffText.color"
                           :padding="writeOffText.padding"
                           class="ele-writeOffText"
-                        >
-                        </hm-uview-text>
-                      </view>
-                      <view
-                        class="ele-wrapper ele-wrapper-f6bbf80c-4ef0-4d49-acc5-3177a79d8e8a"
-                      >
-                        <hm-uview-text
-                          text="核销后不可再次领取奖品！"
-                          font-size="14px"
-                          color="#6C6C6C"
-                          padding="0"
-                          class="ele-f6bbf80c-4ef0-4d49-acc5-3177a79d8e8a"
                         >
                         </hm-uview-text>
                       </view>
@@ -235,11 +222,12 @@ export default {
       },
       registrationOrdersData: {},
       writeOffModal: {
-        title: "",
+        title: "核销",
         visible: false,
       },
       writeOffText: {
-        text: "【请寻找工作人员进行核销操作，私自核销后果自负】",
+        text:
+          "【请寻找工作人员进行核销操作，私自核销后果自负】核销后不可再次领取奖品！",
         fontSize: "14px",
         color: "#6C6C6C",
         padding: "0",
@@ -565,10 +553,6 @@ export default {
 }
 
 .ele-wrapper-writeOffText {
-  margin: 10px;
-}
-
-.ele-wrapper-f6bbf80c-4ef0-4d49-acc5-3177a79d8e8a {
   margin: 10px;
 }
 
