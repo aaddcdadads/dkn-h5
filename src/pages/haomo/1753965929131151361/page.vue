@@ -179,7 +179,11 @@
                   <view
                     class="ele-wrapper ele-wrapper-56983658-9328-4199-9010-a825c2e59a41"
                   >
-                    <hm-uview-button :size="'mini'"> </hm-uview-button>
+                    <hm-uview-button
+                      :size="'mini'"
+                      class="ele-56983658-9328-4199-9010-a825c2e59a41"
+                    >
+                    </hm-uview-button>
                   </view>
                 </hm-uview-bg-card>
               </view>
@@ -632,12 +636,17 @@ export default {
 
 .ele-wrapper-orderCard {
   width: 100%;
+  margin-top: 10px;
 }
 
 .ele-wrapper-746112cc-5e08-4544-b7c2-3063828fb42e {
   width: 80%;
-  margin-top: 10px;
+
   background-color: #ffffff;
+}
+
+.ele-wrapper-56983658-9328-4199-9010-a825c2e59a41 {
+  width: 20%;
 }
 
 .ele-wrapper-orderCode {
