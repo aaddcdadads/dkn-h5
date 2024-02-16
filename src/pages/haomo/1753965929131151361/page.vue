@@ -181,6 +181,7 @@
                       ref="orderCodeBut"
                       :size="orderCodeBut.size"
                       :text="orderCodeBut.text"
+                      @click="onOrderCodeButClick"
                       class="ele-orderCodeBut"
                     >
                     </hm-uview-button>
@@ -531,6 +532,14 @@ export default {
       }
     },
 
+    onOrderCodeButClick() {
+      uni.setClipboardData({
+        data: "hello",
+        success: function () {
+          console.log("success");
+        },
+      });
+    },
     onEle47B84E9587E04Feb8373Dfa45Ddaae2EOnClick() {
       let url =
         "/pages/haomo/1750714119029264386/page?activityId=" +
