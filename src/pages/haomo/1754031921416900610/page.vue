@@ -470,7 +470,7 @@ export default {
       ) {
         this.writeOffModal.title = "强制核销？";
         this.writeOffText.text =
-          "当前门店与报名登记门店不一致，需要强制核销？核销后不可再次领取奖品！";
+          "【请寻找工作人员进行核销操作，私自核销后果自负】当前门店与报名登记门店不一致，需要强制核销? 核销后不可再次领取奖品!";
       }
       this.writeOffModal.visible = true;
     },
