@@ -118,7 +118,7 @@
                   :title="writeOffModal.title"
                   confirm-color="#2979FF"
                   :show-close-icon="false"
-                  height="80px"
+                  height="100px"
                   @onConfirm="onWriteOffModalOnConfirm"
                 >
                   <view
