@@ -180,6 +180,7 @@
                     <hm-uview-button
                       ref="orderCodeBut"
                       :size="orderCodeBut.size"
+                      :text="orderCodeBut.text"
                       class="ele-orderCodeBut"
                     >
                     </hm-uview-button>
@@ -343,6 +344,7 @@ export default {
       },
       orderCodeBut: {
         size: "mini",
+        text: "复制",
       },
     };
   },
