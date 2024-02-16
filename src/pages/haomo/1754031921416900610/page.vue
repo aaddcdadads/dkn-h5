@@ -236,7 +236,7 @@ export default {
       registrationOrdersData: {},
       writeOffModal: {
         title: "",
-        visible: true,
+        visible: false,
       },
       writeOffText: {
         text: "【请寻找工作人员进行核销操作，私自核销后果自负】",
