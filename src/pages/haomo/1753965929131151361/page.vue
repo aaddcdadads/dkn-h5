@@ -188,21 +188,6 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
-              <view class="ele-wrapper ele-wrapper-orderCode">
-                <hm-uview-field
-                  ref="orderCode"
-                  v-model:value="orderCode.value"
-                  label="订单编号"
-                  placeholder=""
-                  label-width="160"
-                  :label-align="'center'"
-                  icon=""
-                  right-icon=""
-                  :disabled="true"
-                  class="ele-orderCode"
-                >
-                </hm-uview-field>
-              </view>
             </hm-uview-bg-card>
           </view>
           <view class="ele-wrapper ele-wrapper-writeOffBtn">
@@ -294,9 +279,7 @@ export default {
         backgroundColor: "#FAFAFA",
         hidden: false,
       },
-      orderCode: {
-        value: "",
-      },
+      orderCode: {},
       pickUpStatusText: {
         text: "待核销/已核销",
         fontSize: "17px",
@@ -648,12 +631,6 @@ export default {
 
 .ele-wrapper-56983658-9328-4199-9010-a825c2e59a41 {
   width: 18%;
-}
-
-.ele-wrapper-orderCode {
-  width: 100%;
-  margin-top: 10px;
-  background-color: #ffffff;
 }
 
 .ele-wrapper-writeOffBtn {
