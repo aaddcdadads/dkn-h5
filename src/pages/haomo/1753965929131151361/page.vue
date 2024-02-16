@@ -534,9 +534,9 @@ export default {
 
     onOrderCodeButClick() {
       uni.setClipboardData({
-        data: "hello",
+        data: this.orderCode.value,
         success: function () {
-          console.log("success");
+          console.log(this.orderCode.value);
         },
       });
     },
