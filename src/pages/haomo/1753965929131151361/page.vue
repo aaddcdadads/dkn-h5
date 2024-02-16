@@ -171,6 +171,7 @@
                       :label-align="'center'"
                       icon=""
                       right-icon=""
+                      :border-bottom="false"
                       :disabled="true"
                       class="ele-746112cc-5e08-4544-b7c2-3063828fb42e"
                     >
