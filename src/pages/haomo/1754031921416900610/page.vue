@@ -147,7 +147,14 @@
                       <view
                         class="ele-wrapper ele-wrapper-f6bbf80c-4ef0-4d49-acc5-3177a79d8e8a"
                       >
-                        <hm-uview-text> </hm-uview-text>
+                        <hm-uview-text
+                          text="核销后不可再次领取奖品！"
+                          font-size="14px"
+                          color="#6C6C6C"
+                          padding="0"
+                          class="ele-f6bbf80c-4ef0-4d49-acc5-3177a79d8e8a"
+                        >
+                        </hm-uview-text>
                       </view>
                     </hm-uview-bg-card>
                   </view>
@@ -558,6 +565,10 @@ export default {
 }
 
 .ele-wrapper-writeOffText {
+  margin: 10px;
+}
+
+.ele-wrapper-f6bbf80c-4ef0-4d49-acc5-3177a79d8e8a {
   margin: 10px;
 }
 
