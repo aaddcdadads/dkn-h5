@@ -341,7 +341,7 @@ export default {
         value: "",
       },
       writeOffModal: {
-        visible: false,
+        visible: true,
         title: "核销",
       },
       writeOffText: {
@@ -418,7 +418,7 @@ export default {
           setTimeout(() => {
             uni.navigateTo({
               url:
-                "/pages/haomo/1750443401116913665/page?activityId=" +
+                "/pages/haomo/1753965929131151361/page?activityId=" +
                 this.activityId,
             });
           }, 1500);
