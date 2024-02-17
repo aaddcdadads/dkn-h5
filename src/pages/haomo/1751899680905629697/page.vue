@@ -159,7 +159,9 @@ export default {
       self.activity = "";
       self.getActivity = async function (userId) {
         let url = "/api/dkn/activity/userList";
-        const res = await self.$getAction(url, { userId: self.userId });
+        const res = await self.$getAction(url, {
+          userId: self.userId,
+        });
         if (!res.success || !res.result) {
           return;
         }
@@ -200,7 +202,7 @@ export default {
           return;
         }
         uni.$u.route(
-          `/pages/haomo/1750443401116913665/page?activityId=${id}&storeId=${self.storeId}`
+          `/pages/haomo/1753965929131151361/page?activityId=${id}&storeId=${self.storeId}`
         );
       };
     },
