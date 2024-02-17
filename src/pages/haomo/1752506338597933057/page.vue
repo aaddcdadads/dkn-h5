@@ -167,7 +167,7 @@ export default {
       self.getQrCode = async function () {
         const qrCodeDiv = document.getElementsByClassName("ele-code")[0];
         console.log("aaa", qrCodeDiv);
-        let qrUrl = `http://dkn-h5.dev.haomo-tech.com?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
+        let qrUrl = `https://dkn-h5.dev.haumo.cn/?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
 
         // 创建一个canvas元素
         const canvas = document.createElement("canvas");
