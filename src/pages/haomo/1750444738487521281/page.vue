@@ -1120,7 +1120,9 @@ export default {
       };
       self.getStoreList = async function () {
         let url = "/api/dkn/store/listOrder";
-        const res = await self.$getAction(url, { status: 0 });
+        const res = await self.$getAction(url, {
+          status: 0,
+        });
         if (!res.success || res.result.length === 0) {
           return;
         }
@@ -1130,7 +1132,12 @@ export default {
             shop: x.store,
           };
         });
-        self.storeList.list = [{ anchor: "b", store }];
+        self.storeList.list = [
+          {
+            anchor: "b",
+            store,
+          },
+        ];
       };
       self.getImg = function (url) {
         if (url.substring(0, 4) === "http") {
@@ -1262,7 +1269,7 @@ export default {
         uni.setStorageSync("token", res.result.token);
         uni.setStorageSync("userInfo", res.result.userInfo);
         uni.$u.route(
-          `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+          `/pages/haomo/1753965929131151361/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
         );
       };
       self.getOrderProjects = function () {
