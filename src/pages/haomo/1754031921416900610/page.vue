@@ -245,11 +245,7 @@ export default {
         value: "",
       },
       imgList: {
-        value: [
-          {
-            src: "https://img.yzcdn.cn/vant/cat.jpeg",
-          },
-        ],
+        value: [],
       },
       "0ded82e1-3f32-400b-915d-b361c39f83db": {
         value: "item.value",
