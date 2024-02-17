@@ -1132,7 +1132,6 @@ export default {
         window.location.href = u[0];
       }
     },
-
     onMounted() {
       let self = this;
       //大图片
@@ -1165,7 +1164,9 @@ export default {
       self.activityImgList.textColor = "#D8477B";
       self.listCompanent.textColor = "#D8477B";
       //富文本
-      self.activityRulesText.data = { html: "" };
+      self.activityRulesText.data = {
+        html: "",
+      };
 
       self.phoneText.text = "";
       //数据对象
@@ -1179,7 +1180,9 @@ export default {
       self.imgCard.hidden = false;
       self.imgText.text = "活动奖品";
       self.getActivity = async function (id) {
-        let params = { id };
+        let params = {
+          id,
+        };
         if (!id) {
           params.code = self.code;
         }
