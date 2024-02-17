@@ -1415,7 +1415,7 @@ export default {
         uni.setStorageSync("token", res.result.token);
         uni.setStorageSync("userInfo", res.result.userInfo);
         uni.$u.route(
-          `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+          `/pages/haomo/1753965929131151361/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
         );
       };
       self.checkOrder = async function () {
@@ -1485,7 +1485,7 @@ export default {
           return;
         }
         uni.$u.route(
-          `/pages/haomo/1750443401116913665/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+          `/pages/haomo/1753965929131151361/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
         );
       };
       self.error = function (text) {
