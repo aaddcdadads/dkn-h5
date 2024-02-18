@@ -671,9 +671,8 @@
                       <view class="ele-wrapper ele-wrapper-sureButton">
                         <hm-uview-button
                           ref="sureButton"
-                          :custom-style="sureButton.customStyle"
-                          :text="sureButton.text"
                           :type="sureButton.type"
+                          :text="sureButton.text"
                           @click="onSureButtonClick"
                           class="ele-sureButton"
                         >
@@ -1109,9 +1108,8 @@ export default {
         type: "info",
       },
       sureButton: {
-        customStyle: {},
-        text: "拨打",
         type: "info",
+        text: "拨打",
       },
     };
   },
@@ -1522,7 +1520,7 @@ export default {
     },
     onElea40489B1523C497A858770B09De8A231Click() {
       uni.$u.route(
-        `/pages/haomo/1752506338597933057/page?activityId=${this.activityId}&channel=${this.channel}`
+        `/pages/haomo/1759167108790358017/page?activityId=${this.activityId}&channel=${this.channel}`
       );
     },
     onElef16Cae12Ff6F4D64Ac60014A613Da044Click() {
