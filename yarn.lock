@@ -1161,7 +1161,7 @@ ansi-styles@^6.1.0:
 
 anymatch@~3.1.2:
   version "3.1.2"
-  resolved "https://registry.npm.taobao.org/anymatch/download/anymatch-3.1.2.tgz"
+  resolved "https://registry.npmmirror.com/anymatch/download/anymatch-3.1.2.tgz"
   integrity sha1-wFV8CWrzLxBhmPT04qODU343hxY=
   dependencies:
     normalize-path "^3.0.0"
@@ -1262,7 +1262,7 @@ base64url@^3.0.1:
 
 binary-extensions@^2.0.0:
   version "2.2.0"
-  resolved "https://registry.npm.taobao.org/binary-extensions/download/binary-extensions-2.2.0.tgz?cache=0&sync_timestamp=1610299308660&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbinary-extensions%2Fdownload%2Fbinary-extensions-2.2.0.tgz"
+  resolved "https://registry.npmmirror.com/binary-extensions/download/binary-extensions-2.2.0.tgz?cache=0&sync_timestamp=1610299308660&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fbinary-extensions%2Fdownload%2Fbinary-extensions-2.2.0.tgz"
   integrity sha1-dfUC7q+f/eQvyYgpZFvk6na9ni0=
 
 bl@^4.0.2:
@@ -1309,7 +1309,7 @@ brace-expansion@^2.0.1:
 
 braces@^3.0.2, braces@~3.0.2:
   version "3.0.2"
-  resolved "https://registry.npm.taobao.org/braces/download/braces-3.0.2.tgz"
+  resolved "https://registry.npmmirror.com/braces/download/braces-3.0.2.tgz"
   integrity sha1-NFThpGLujVmeI23zNs2epPiv4Qc=
   dependencies:
     fill-range "^7.0.1"
@@ -1434,7 +1434,7 @@ chokidar@^3.5.3:
 
 clamp@^1.0.1:
   version "1.0.1"
-  resolved "https://registry.npm.taobao.org/clamp/download/clamp-1.0.1.tgz"
+  resolved "https://registry.npmmirror.com/clamp/download/clamp-1.0.1.tgz"
   integrity sha1-ZqDmQBGBbjcZaCj9yMjBRzEshjQ=
 
 cliui@^6.0.0:
@@ -2220,7 +2220,7 @@ fastq@^1.6.0:
 
 fill-range@^7.0.1:
   version "7.0.1"
-  resolved "https://registry.npm.taobao.org/fill-range/download/fill-range-7.0.1.tgz"
+  resolved "https://registry.npmmirror.com/fill-range/download/fill-range-7.0.1.tgz"
   integrity sha1-GRmmp8df44ssfHflGYU12prN2kA=
   dependencies:
     to-regex-range "^5.0.1"
@@ -2556,7 +2556,7 @@ is-arguments@^1.0.4:
 
 is-binary-path@~2.1.0:
   version "2.1.0"
-  resolved "https://registry.npm.taobao.org/is-binary-path/download/is-binary-path-2.1.0.tgz"
+  resolved "https://registry.npmmirror.com/is-binary-path/download/is-binary-path-2.1.0.tgz"
   integrity sha1-6h9/O4DwZCNug0cPhsCcJU+0Wwk=
   dependencies:
     binary-extensions "^2.0.0"
@@ -2583,7 +2583,7 @@ is-expression@^4.0.0:
 
 is-extglob@^2.1.0, is-extglob@^2.1.1:
   version "2.1.1"
-  resolved "https://registry.npm.taobao.org/is-extglob/download/is-extglob-2.1.1.tgz"
+  resolved "https://registry.npmmirror.com/is-extglob/download/is-extglob-2.1.1.tgz"
   integrity sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=
 
 is-fullwidth-code-point@^3.0.0:
@@ -2627,7 +2627,7 @@ is-negated-glob@^1.0.0:
 
 is-number@^7.0.0:
   version "7.0.0"
-  resolved "https://registry.npm.taobao.org/is-number/download/is-number-7.0.0.tgz"
+  resolved "https://registry.npmmirror.com/is-number/download/is-number-7.0.0.tgz"
   integrity sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=
 
 is-promise@^2.0.0:
@@ -2840,7 +2840,7 @@ lodash.camelcase@^4.3.0:
 
 lodash.throttle@^4.1.1:
   version "4.1.1"
-  resolved "https://registry.npm.taobao.org/lodash.throttle/download/lodash.throttle-4.1.1.tgz"
+  resolved "https://registry.npmmirror.com/lodash.throttle/download/lodash.throttle-4.1.1.tgz"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
 lodash@^4.17.21:
@@ -2888,7 +2888,7 @@ magic-string@^0.26.1:
 
 make-dir@^2.1.0:
   version "2.1.0"
-  resolved "https://registry.npm.taobao.org/make-dir/download/make-dir-2.1.0.tgz"
+  resolved "https://registry.npmmirror.com/make-dir/download/make-dir-2.1.0.tgz"
   integrity sha1-XwMQ4YuL6JjMBwCSlaMK5B6R5vU=
   dependencies:
     pify "^4.0.1"
@@ -2896,7 +2896,7 @@ make-dir@^2.1.0:
 
 material-colors@^1.2.6:
   version "1.2.6"
-  resolved "https://registry.npm.taobao.org/material-colors/download/material-colors-1.2.6.tgz"
+  resolved "https://registry.npmmirror.com/material-colors/download/material-colors-1.2.6.tgz"
   integrity sha1-bRlYhxEmmSzuzHL0vMTY8BCGX0Y=
 
 media-typer@0.3.0:
@@ -3094,12 +3094,12 @@ node-releases@^2.0.14:
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
-  resolved "https://registry.npm.taobao.org/normalize-path/download/normalize-path-3.0.0.tgz"
+  resolved "https://registry.npmmirror.com/normalize-path/download/normalize-path-3.0.0.tgz"
   integrity sha1-Dc1p/yOhybEf0JeDFmRKA4ghamU=
 
 normalize-range@^0.1.2:
   version "0.1.2"
-  resolved "https://registry.npm.taobao.org/normalize-range/download/normalize-range-0.1.2.tgz"
+  resolved "https://registry.npmmirror.com/normalize-range/download/normalize-range-0.1.2.tgz"
   integrity sha1-LRDAa9/TEuqXd2laTShDlFa3WUI=
 
 npm-run-path@^4.0.1:
@@ -3285,7 +3285,7 @@ pify@^2.3.0:
 
 pify@^4.0.1:
   version "4.0.1"
-  resolved "https://registry.npm.taobao.org/pify/download/pify-4.0.1.tgz"
+  resolved "https://registry.npmmirror.com/pify/download/pify-4.0.1.tgz"
   integrity sha1-SyzSXFDVmHNcUCkiJP2MbfQeMjE=
 
 pinyin-pro@^3.13.0:
@@ -3625,7 +3625,7 @@ readable-stream@^3.0.0, readable-stream@^3.4.0:
 
 readdirp@~3.6.0:
   version "3.6.0"
-  resolved "https://registry.npm.taobao.org/readdirp/download/readdirp-3.6.0.tgz?cache=0&sync_timestamp=1615717369278&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freaddirp%2Fdownload%2Freaddirp-3.6.0.tgz"
+  resolved "https://registry.npmmirror.com/readdirp/download/readdirp-3.6.0.tgz?cache=0&sync_timestamp=1615717369278&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Freaddirp%2Fdownload%2Freaddirp-3.6.0.tgz"
   integrity sha1-dKNwvYVxFuJFspzJc0DNQxoCpsc=
   dependencies:
     picomatch "^2.2.1"
@@ -3958,7 +3958,7 @@ through2@^2.0.1, through2@~2.0.0:
 
 tinycolor2@^1.4.2:
   version "1.4.2"
-  resolved "https://registry.npm.taobao.org/tinycolor2/download/tinycolor2-1.4.2.tgz"
+  resolved "https://registry.npmmirror.com/tinycolor2/download/tinycolor2-1.4.2.tgz"
   integrity sha1-P2pNEHGtB2dtf6Ry4frECnGdiAM=
 
 to-absolute-glob@^2.0.0:
@@ -3976,7 +3976,7 @@ to-fast-properties@^2.0.0:
 
 to-regex-range@^5.0.1:
   version "5.0.1"
-  resolved "https://registry.npm.taobao.org/to-regex-range/download/to-regex-range-5.0.1.tgz"
+  resolved "https://registry.npmmirror.com/to-regex-range/download/to-regex-range-5.0.1.tgz"
   integrity sha1-FkjESq58jZiKMmAY7XL1tN0DkuQ=
   dependencies:
     is-number "^7.0.0"
