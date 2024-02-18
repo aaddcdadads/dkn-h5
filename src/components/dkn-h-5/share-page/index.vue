@@ -1,6 +1,19 @@
 <template>
   <view class="page card">
-    <view class="page-wrapper">
+    <canvas :style="{ width: canvasWidth + 'px', height: canvasHeight + 'px' }">
+      <img :src="imgPath" />
+    </canvas>
+    <!-- <canvas
+      id="hide-canvas"
+      class="hide-canvas"
+      :style="{ width: canvasWidth + 'px', height: canvasHeight + 'px' }"
+    ></canvas> -->
+    <view
+      class="ele-wrapper ele-wrapper-084fc45c-3b7d-42af-9042-8c47c465787c"
+    >
+      <hm-uview-text text="长按图片进行保存" font-size="18px"></hm-uview-text>
+    </view>
+    <!-- <view class="page-wrapper">
       <view
         class="ele-wrapper ele-wrapper-e006ab79-f3a9-492b-8632-73042a091b41"
       >
@@ -103,7 +116,7 @@
           </view>
         </hm-uview-bg-card>
       </view>
-    </view>
+    </view> -->
   </view>
 </template>
 
@@ -112,7 +125,7 @@ import { h } from "vue";
 import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCard.vue";
 import HmUviewIcon from "/@/components/built-in/uniapp-uview-vue3/HmUviewIcon.vue";
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
-
+import QRCode from "qrcode";
 import { getBackgroundImage } from "/@/logics/SharingPageGrooup";
 
 export default {
@@ -126,6 +139,9 @@ export default {
   data() {
     let self = this;
     return {
+      imgPath: "",
+      canvasWidth: 0,
+      canvasHeight: 0,
       sharingImage: {
         width: "100%",
         height: "100%",
@@ -151,13 +167,91 @@ export default {
     };
   },
   watch: {},
-  async created(e) {
-    this.onCreated(e);
+  /**
+   * 375*667图片的画布
+   */
+  created() {
+    this.canvasWidth = window.innerWidth; // 屏幕宽度
+    this.canvasHeight = (this.canvasWidth / 375) * 607;
+    console.log("imgWidth imgHeight", this.canvasWidth, this.canvasHeight);
   },
-  mounted(e) {
-    getBackgroundImage(this, arguments);
+  async mounted(e) {
+    // 获取背景图片
+    let backendImg = await this.getBackendImg();
+
+    // 生成二维码图片
+    let qrCodeImg = await this.getQrCodeImg();
+
+    // canvas绘制图片
+    await this.canvasDrawImg(backendImg, qrCodeImg);
   },
   methods: {
+    async canvasDrawImg(backendImg, qrCodeImg){
+      const imgWidth = this.canvasWidth;
+      const imgHeight = this.canvasHeight;
+
+      var canvas = document.createElement('canvas');
+      canvas.width = imgWidth;
+      canvas.height = imgHeight;
+      var ctx = canvas.getContext('2d');
+
+      const backendImage = new Image();
+      backendImage.src = backendImg;
+      backendImage.onload = () => {
+        ctx.drawImage(backendImage, 0, 0, imgWidth, imgHeight);
+        
+        const qrImage = new Image();
+        qrImage.src = qrCodeImg;
+        qrImage.onload = () => {
+          ctx.drawImage(qrImage, imgWidth * 0.114, imgHeight * 0.845, imgWidth * 0.2, imgWidth * 0.2);
+          // 转换为base64
+          var dataURL = canvas.toDataURL('image/png');
+          this.imgPath = dataURL
+        };
+      };
+    },
+    getImageBase64(url, callback) {
+      // 创建一个Image对象
+      var image = new Image();
+      // 解决跨域Canvas污染问题
+      image.setAttribute("crossOrigin", 'Anonymous');
+      image.onload = function() {
+        var canvas = document.createElement('canvas');
+        canvas.width = this.naturalWidth;
+        canvas.height = this.naturalHeight;
+
+        // 将Image画到Canvas上
+        var ctx = canvas.getContext('2d');
+        ctx.drawImage(this, 0, 0);
+
+        // 转换为base64
+        var dataURL = canvas.toDataURL('image/png');
+        
+        // 调用回调函数
+        callback(dataURL);
+      };
+      // 设定src，这将触发onload事件
+      image.src = url;
+    },
+    async getBackendImg() {
+      let self = this;
+      let res = await self.$getAction(`/api/dkn/activityImg/list`, {
+        activityId: self.$route.query.activityId,
+        type: 2,
+      });
+      if (!res.success) {
+        return;
+      }
+
+      let activityImg = res.result.records[0];
+      let imagePath = "/files/" + activityImg.path;
+      return imagePath;
+    },
+    async getQrCodeImg() {
+      let self = this;
+      let qrCodeUrl = `https://dkn-h5.dev.haumo.cn/?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
+      return await QRCode.toDataURL(qrCodeUrl);
+    },
     onCreated() {
       //注册
       this.sharingImage.backgroundImage;
@@ -197,9 +291,8 @@ export default {
 
     onDownloadImageBgClick() {
       // 选择要截取的元素，例如通过 id 或者 class
-      const elementToCapture = document.querySelectorAll(
-        ".ele-sharingImage"
-      )[0];
+      const elementToCapture =
+        document.querySelectorAll(".ele-sharingImage")[0];
       console.log("elementToCapture", elementToCapture);
       // 使用 html2canvas 截取特定元素
       this.$html2canvas(elementToCapture, {
@@ -233,9 +326,8 @@ export default {
     },
     onEle0Ed4308BD32B4F148401Ba9Ad296Dc56Click() {
       // 选择要截取的元素，例如通过 id 或者 class
-      const elementToCapture = document.querySelectorAll(
-        ".ele-sharingImage"
-      )[0];
+      const elementToCapture =
+        document.querySelectorAll(".ele-sharingImage")[0];
       console.log("elementToCapture", elementToCapture);
       // 使用 html2canvas 截取特定元素
       this.$html2canvas(elementToCapture, {
@@ -325,14 +417,10 @@ export default {
 }
 
 .ele-wrapper-084fc45c-3b7d-42af-9042-8c47c465787c {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  /deep/ .hm-bg-card {
-    display: flex;
-    align-items: center;
-  }
 }
 
 .ele-wrapper-downloadImage {
