@@ -2109,5 +2109,6 @@ export default {
 .ele-wrapper-activityRulesText {
   overflow: auto !important;
   height: 380px;
+  width: 100%;
 }
 </style>
