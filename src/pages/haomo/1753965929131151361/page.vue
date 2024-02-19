@@ -137,6 +137,7 @@
                     >
                       <hm-uview-field
                         :value="item.value"
+                        :type="type.area"
                         :label="item.label"
                         :placeholder="item.placeholder"
                         label-width="160"
@@ -319,6 +320,7 @@ export default {
           },
           {
             label: "领奖门店",
+            type: "textarea",
             placeholder:
               "但是分开大煞风景撒看到冯绍峰的看法啊是剪短发短发都是发疯",
             value: "",
