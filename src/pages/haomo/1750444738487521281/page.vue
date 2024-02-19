@@ -1194,6 +1194,10 @@ export default {
       self.addOrder = async function () {
         let url = "/api/dkn/registrationOrders/addOrder";
         const orderProjects = self.getOrderProjects();
+        let channel = "";
+        if (self.channel && self.channel != "undefined") {
+          channel = self.channel;
+        }
         let params = {
           activityId: self.activityId,
           storeId: self.storeItem.id,
@@ -1203,7 +1207,7 @@ export default {
           smscode: self.smscodeIpnut.value,
           money: self.money,
           orderProjects,
-          channel: self.channel || "",
+          channel,
         };
         const res = await self.$postAction(url, params);
         if (!res.success) {
