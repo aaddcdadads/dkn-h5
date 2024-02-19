@@ -429,7 +429,7 @@ export default {
           //领奖门店
           this.loopList.value[2].value = item.originalPickUpName;
           //报名时间
-          this.loopList.value[3].value = item.paymentTime;
+          this.loopList.value[3].value = item.createTime;
           this.pickUpStatusText.text = item.pickUpStatusText;
           this.acNameText.text = item.acName;
           let timeText =
