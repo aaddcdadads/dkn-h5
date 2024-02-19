@@ -816,7 +816,7 @@ export default {
         hidden: false,
       },
       regularPopup: {
-        show: false,
+        show: true,
       },
       phonePopup: {
         show: false,
@@ -1866,7 +1866,7 @@ export default {
 
 .ele-wrapper-activityRulesText {
   /deep/.select {
-    overflow-y: scroll !important;
+    overflow: auto !important;
     height: 380px;
   }
 }
