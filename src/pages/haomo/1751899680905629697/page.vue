@@ -271,7 +271,7 @@ export default {
     font-size: 14px !important;
   }
   height: 300px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .ele-wrapper-5ceb1472-5f57-4275-9fb8-0975865d8443 {
