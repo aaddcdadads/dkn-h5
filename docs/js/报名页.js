@@ -6,7 +6,8 @@ function() {
     self.closeTime.day = ""
     self.closeTime.hour = ""
     self.closeTime.minute = ""
-    self.closeTime.second = ""
+  self.closeTime.second = ""
+  self.closeTime.backgroundColor=""
   
     //名称
     self.nameTexts.text = ""
@@ -43,7 +44,8 @@ function() {
     self.addOrderCard.hidden = false
     self.notActivity.hidden = true
     self.imgCard.hidden = false
-    self.imgText.text = "活动奖品"
+  self.imgText.text = "活动奖品"
+  self.orderId=""
     self.getActivity = async function(id) {
       let params = {
         id
@@ -75,6 +77,7 @@ function() {
       self.activityImgList.textColor = self.activityItem.textColour
       self.listCompanent.backgroundColor = self.activityItem.colour
       self.listCompanent.textColor = self.activityItem.textColour
+      self.closeTime.backgroundColor=self.activityItem.textColour
       self.nameTexts.text = self.activityItem.name
       let number = self.activityItem.orders
       if (self.activityItem.unrealStatus === 0) {
@@ -342,8 +345,9 @@ function() {
         return
   
       }
+      self.orderId=resp.result.id
       uni.$u.route(
-        `/pages/haomo/1753965929131151361/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+        `/pages/haomo/1753965929131151361/page?orderId=${self.orderId}`
       );
   
     }

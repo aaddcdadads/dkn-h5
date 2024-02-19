@@ -25,7 +25,9 @@ export default {
     const lastSegment = currentPath.split(`${window.location.origin}/`);
     console.log('lastSegment====',lastSegment)
     if (lastSegment.length === 2) {
-      window.location.href = `${window.location.origin}/?code=${lastSegment[1]}`
+      let l = lastSegment[1]
+      const codes = l.split("C")
+      window.location.href = `${window.location.origin}/?code=${codes[0]}&channel=${codes[1]}`
     }
   }
 }
