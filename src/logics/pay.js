@@ -52,11 +52,12 @@ function wxPay(orderId) {
   if (uAgent.indexOf("MicroMessenger") > 0) {
     //微信浏览器
     //跳转授权
-    // let appId = "wx991ac0c9f256b78b"
-    // let redirectUri = "https://dkn-h5.dev.haomo-tech.com:8443/pages/haomo/wxPay/page"
-    // location.href = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=code&scope=snsapi_base&state=${orderId}#wechat_redirect`
+    let appId = "wx9775e83fd0bb0fb3"
+    let redirectUri = "https://dkn-h5.dev.haumo.cn/pages/haomo/wxPay/page"
+    // let redirectUri = "http://192.168.202.158:3000/pages/haomo/wxPay/page"
+    location.href = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=code&scope=snsapi_base&state=${orderId}#wechat_redirect`
     
-    wxCodePay(orderId)
+    // wxCodePay(orderId)
   } else {
     //其他浏览器
     // wxWapPay(orderId);
