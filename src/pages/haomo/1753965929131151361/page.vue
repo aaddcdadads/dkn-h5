@@ -137,7 +137,7 @@
                     >
                       <hm-uview-field
                         :value="item.value"
-                        :type="type.area"
+                        :type="item.type"
                         :label="item.label"
                         :placeholder="item.placeholder"
                         label-width="160"
