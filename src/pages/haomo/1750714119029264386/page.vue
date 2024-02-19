@@ -461,9 +461,8 @@
                     class="ele-wrapper ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2"
                   >
                     <hm-uview-text
-                      font-size="16px"
                       text="活动规则"
-                      :text-style="{}"
+                      font-size="16px"
                       class="ele-dc91ed40-34d2-458d-a7fb-c67671b736c2"
                     >
                     </hm-uview-text>
@@ -498,6 +497,7 @@
                       ref="activityRulesText"
                       :data="activityRulesText.data"
                       :show-height="activityRulesText.showHeight"
+                      class="ele-activityRulesText"
                     >
                     </hm-uview-parse>
                   </view>
@@ -816,7 +816,7 @@ export default {
         hidden: false,
       },
       regularPopup: {
-        show: false,
+        show: true,
       },
       phonePopup: {
         show: false,
@@ -1862,6 +1862,13 @@ export default {
 
 .ele-wrapper-720c2355-c756-4d18-9400-34ab42449b92 {
   display: none;
+}
+
+.ele-wrapper-activityRulesText {
+  /deep/.select {
+    overflow: scroll;
+    height: 30px;
+  }
 }
 
 .ele-wrapper-viewPopup {
