@@ -556,6 +556,18 @@ export default {
       });
     },
     onButtonwanClick() {
+      if (this.type) {
+        uni.navigateTo({
+          url:
+            "/pages/haomo/1754031921416900610/page?activityId=" +
+            this.activityId +
+            "&channelId=" +
+            this.channelId +
+            "&storeId=" +
+            this.storeId,
+        });
+        return;
+      }
       uni.navigateTo({
         url:
           "/pages/haomo/1752649989210771458/page?activityId=" +
