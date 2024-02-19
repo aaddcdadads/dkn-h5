@@ -753,7 +753,12 @@
           <view
             class="ele-wrapper ele-wrapper-4c8afa9c-0775-4fb5-8f59-2cd7f7534f46"
           >
-            <hm-uview-text> </hm-uview-text>
+            <hm-uview-text
+              text="活动规则"
+              font-size="16px"
+              class="ele-4c8afa9c-0775-4fb5-8f59-2cd7f7534f46"
+            >
+            </hm-uview-text>
           </view>
           <view class="ele-wrapper ele-wrapper-activityRulesText">
             <hm-uview-parse
@@ -2095,10 +2100,14 @@ export default {
   // position: relative;
 }
 
+.ele-wrapper-4c8afa9c-0775-4fb5-8f59-2cd7f7534f46 {
+  width: 100%;
+  text-align: center;
+  margin-top: 12rpx;
+}
+
 .ele-wrapper-activityRulesText {
-  /deep/.select {
-    overflow: auto !important;
-    height: 380px;
-  }
+  overflow: auto !important;
+  height: 380px;
 }
 </style>
