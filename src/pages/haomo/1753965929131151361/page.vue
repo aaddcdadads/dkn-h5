@@ -427,7 +427,7 @@ export default {
           //手机号
           this.loopList.value[1].value = item.phone;
           //领奖门店
-          this.loopList.value[2].value = item.originalPickUpName;
+          this.loopList.value[2].value = item.address;
           //报名时间
           this.loopList.value[3].value = item.createTime;
           this.pickUpStatusText.text = item.pickUpStatusText;
