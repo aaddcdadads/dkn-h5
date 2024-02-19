@@ -498,7 +498,6 @@
                       ref="activityRulesText"
                       :data="activityRulesText.data"
                       :show-height="activityRulesText.showHeight"
-                      :tag-style="activityRulesText.tagStyle"
                     >
                     </hm-uview-parse>
                   </view>
@@ -850,7 +849,7 @@ export default {
         hour: 15,
         minute: 13,
         second: 17,
-        backgroundColor: "#00000000",
+        backgroundColor: "#D03F3F2B",
         color: "#FFFFFF",
         fontSize: 11,
         splitorColor: "#000000",
@@ -991,7 +990,6 @@ export default {
             '<p style="text-align: left;">第一步 报名</p><p style="text-align: left;">点击页面下方的「马上报名」，选择自己要挑战的公里数。</p><p>-- 选择公里数对应的奖牌套餐，提交订单支付并填写收件信息即可在完赛后获得奖牌/奖牌配件/周边。</p><p> 第二步 比赛</p><p>在比赛时间内，打开 Keep，一次性跑完您挑战的公里数即可。</p><p>-- 户外/跑步机皆可。</p><p>奖牌及奖牌配件/周边将在完赛后 30 个工作日内发货；</p><p  style="color: red;">请注意！！若未完赛，则奖牌将无法发出，但配件/周边仍可以在活动结束后发货；（30 个工作日从完赛后第一个工作日开始计算）</p>',
         },
         showHeight: 0,
-        tagStyle: {},
       },
       addOrderCard: {
         hidden: false,
@@ -1140,6 +1138,7 @@ export default {
       self.closeTime.hour = "";
       self.closeTime.minute = "";
       self.closeTime.second = "";
+      self.closeTime.backgroundColor = "";
 
       //名称
       self.nameTexts.text = "";
@@ -1209,6 +1208,7 @@ export default {
         self.activityImgList.textColor = self.activityItem.textColour;
         self.listCompanent.backgroundColor = self.activityItem.colour;
         self.listCompanent.textColor = self.activityItem.textColour;
+        self.closeTime.backgroundColor = self.activityItem.textColour;
         self.nameTexts.text = self.activityItem.name;
         let number = self.activityItem.orders;
         if (self.activityItem.unrealStatus === 0) {
