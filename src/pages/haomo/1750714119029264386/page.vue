@@ -1177,6 +1177,7 @@ export default {
       self.notActivity.hidden = true;
       self.imgCard.hidden = false;
       self.imgText.text = "活动奖品";
+      self.orderId = "";
       self.getActivity = async function (id) {
         let params = {
           id,
@@ -1485,8 +1486,9 @@ export default {
           );
           return;
         }
+        self.orderId = resp.result.id;
         uni.$u.route(
-          `/pages/haomo/1753965929131151361/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+          `/pages/haomo/1753965929131151361/page?orderId=${self.orderId}`
         );
       };
       self.error = function (text) {
