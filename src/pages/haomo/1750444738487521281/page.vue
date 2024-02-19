@@ -1066,7 +1066,6 @@ export default {
       payPopup: {
         show: false,
       },
-      activityItem: {},
     };
   },
   watch: {},
@@ -1086,6 +1085,7 @@ export default {
       self.activityText.text = "";
       self.countdown.text = "";
       self.prices.text = "";
+      self.orderId = "";
       self.getActivityProject = async function () {
         let url = "/api/dkn/activityProject/list";
         let params = {
@@ -1207,10 +1207,12 @@ export default {
         };
         const res = await self.$postAction(url, params);
         if (!res.success) {
+          self.orderId = res.result.orderId;
           if (res.message === "当前活动已经报名！") {
             if (res.result.paymentStatus === 1) {
               self.error("当前活动已经报名未支付");
-              self.orderId = res.result.orderId;
+              self.$pay(self.orderId, "1");
+              return;
               if (self.isWeChat()) {
                 self.$pay(self.orderId, "0");
                 return;
@@ -1229,6 +1231,7 @@ export default {
           }
           return;
         }
+        self.orderId = res.message;
         if (!parseFloat(self.money) > 0) {
           uni.showToast({
             icon: "success",
@@ -1239,7 +1242,9 @@ export default {
           self.login();
           return;
         }
-        self.orderId = res.message;
+        self.$pay(self.orderId, "1");
+        return;
+
         //微信浏览器打开直接跳微信支付
         if (self.isWeChat()) {
           self.$pay(self.orderId, "0");
@@ -1269,7 +1274,7 @@ export default {
         uni.setStorageSync("token", res.result.token);
         uni.setStorageSync("userInfo", res.result.userInfo);
         uni.$u.route(
-          `/pages/haomo/1753965929131151361/page?activityId=${self.activityId}&activityName=${self.activityItem.name}`
+          `/pages/haomo/1753965929131151361/page?orderId=${self.orderId}`
         );
       };
       self.getOrderProjects = function () {
