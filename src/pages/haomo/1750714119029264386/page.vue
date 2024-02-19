@@ -447,15 +447,15 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
-              <view class="ele-wrapper ele-wrapper-regularPopup">
+              <view class="ele-wrapper ele-wrapper-regularPopupp">
                 <hm-uview-popup
-                  ref="regularPopup"
-                  v-model:show="regularPopup.show"
+                  ref="regularPopupp"
+                  v-model:show="regularPopupp.show"
                   :mode="'bottom'"
                   width="100%"
                   height="450px"
                   :close-icon-pos="'top-left'"
-                  class="ele-regularPopup"
+                  class="ele-regularPopupp"
                 >
                   <view
                     class="ele-wrapper ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2"
@@ -815,9 +815,7 @@ export default {
         backgroundColor: "#FFE8EC00",
         hidden: false,
       },
-      regularPopup: {
-        show: false,
-      },
+      regularPopup: {},
       phonePopup: {
         show: false,
       },
@@ -1038,6 +1036,9 @@ export default {
         ],
       },
       "52397198-ef67-4a2a-a56c-a99734eec856": {
+        show: false,
+      },
+      regularPopupp: {
         show: false,
       },
       nameText: {
@@ -1855,7 +1856,7 @@ export default {
   margin: 24rpx 24rpx 0 24rpx;
 }
 
-.ele-wrapper-regularPopup {
+.ele-wrapper-regularPopupp {
   /deep/.uni-scroll-view-content {
     margin-left: 4%;
     width: 92% !important;
