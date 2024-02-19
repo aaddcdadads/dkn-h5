@@ -453,7 +453,7 @@
                   v-model:show="regularPopup.show"
                   :mode="'bottom'"
                   width="100%"
-                  height="50%"
+                  height="450px"
                   :close-icon-pos="'top-left'"
                   class="ele-regularPopup"
                 >
@@ -1866,7 +1866,7 @@ export default {
 
 .ele-wrapper-activityRulesText {
   /deep/.select {
-    overflow: scroll;
+    overflow-y: scroll !important;
     height: 30px;
   }
 }
