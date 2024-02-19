@@ -740,16 +740,15 @@
           </view>
         </hm-uview-bg-card>
       </view>
-      <view
-        class="ele-wrapper ele-wrapper-52397198-ef67-4a2a-a56c-a99734eec856"
-      >
+      <view class="ele-wrapper ele-wrapper-regularPopup">
         <hm-uview-popup
-          :show="false"
+          ref="regularPopup"
+          v-model:show="regularPopup.show"
           :mode="'bottom'"
           width="100%"
           height="450px"
           :close-icon-pos="'top-left'"
-          class="ele-52397198-ef67-4a2a-a56c-a99734eec856"
+          class="ele-regularPopup"
         >
           <view
             class="ele-wrapper ele-wrapper-4c8afa9c-0775-4fb5-8f59-2cd7f7534f46"
@@ -815,7 +814,9 @@ export default {
         backgroundColor: "#FFE8EC00",
         hidden: false,
       },
-      regularPopup: {},
+      regularPopup: {
+        show: true,
+      },
       phonePopup: {
         show: false,
       },
@@ -1034,9 +1035,6 @@ export default {
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
         ],
-      },
-      "52397198-ef67-4a2a-a56c-a99734eec856": {
-        show: false,
       },
       regularPopupp: {
         show: false,
@@ -2088,7 +2086,7 @@ export default {
   margin-top: 20%;
 }
 
-.ele-wrapper-52397198-ef67-4a2a-a56c-a99734eec856 {
+.ele-wrapper-regularPopup {
   /deep/.uni-scroll-view-content {
     margin-left: 4%;
     width: 92% !important;
