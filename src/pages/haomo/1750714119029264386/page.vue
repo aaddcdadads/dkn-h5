@@ -1851,7 +1851,7 @@ export default {
     width: 92% !important;
   }
   z-index: 1000;
-  position: relative;
+  // position: relative;
 }
 
 .ele-wrapper-dc91ed40-34d2-458d-a7fb-c67671b736c2 {
