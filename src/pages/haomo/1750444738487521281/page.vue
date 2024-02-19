@@ -1077,7 +1077,7 @@ export default {
       let self = this;
       self.activityId = self.$route.query.activityId;
       self.activityName = self.$route.query.activityName;
-      self.channel = self.$route.query.channel;
+      self.channel = self.$route.query.channel || null;
       self.eventCard.list = [];
       self.storeList.list = [];
       self.payButton.text = `立即报名`;
