@@ -141,7 +141,7 @@
                         :placeholder="item.placeholder"
                         label-width="160"
                         :label-align="'center'"
-                        maxlength="240"
+                        maxlength="740"
                         icon=""
                         right-icon=""
                         :disabled="true"
