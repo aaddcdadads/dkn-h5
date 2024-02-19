@@ -467,37 +467,12 @@
                     >
                     </hm-uview-text>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-720c2355-c756-4d18-9400-34ab42449b92"
-                  >
-                    <hm-rich-text
-                      :nodes="[
-                        {
-                          children: [
-                            {
-                              text:
-                                '第一步 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;报名点击页面下方的「马上报名」，选择自己要挑战的公里数。-- 选择公里数对应的奖牌套餐，提交订单支付并填写收件信息即可在完赛后获得奖牌/奖牌配件/周边。第二步 比赛在比赛时间内，打开 Keep，一次性跑完您挑战的公里数即可。-- 户外/跑步机皆可。奖牌及奖牌配件/周边将在完赛后 30 个工作日内发货；请注意！！若未完赛，则奖牌将无法发出，但配件/周边仍可以在活动结束后发货；（30 个工作日从完赛后第一个工作日开始计算）',
-                              type: 'text',
-                            },
-                          ],
-                          name: 'div',
-                          attrs: {
-                            style:
-                              'line-height: 40px; color: #000; text-align:left;',
-                            class: 'div-class',
-                          },
-                        },
-                      ]"
-                      class="ele-720c2355-c756-4d18-9400-34ab42449b92"
-                    >
-                    </hm-rich-text>
-                  </view>
-                  <view class="ele-wrapper ele-wrapper-activityRulesText">
+                  <view class="ele-wrapper ele-wrapper-activityRulesText1">
                     <hm-uview-parse
-                      ref="activityRulesText"
-                      :data="activityRulesText.data"
-                      :show-height="activityRulesText.showHeight"
-                      class="ele-activityRulesText"
+                      ref="activityRulesText1"
+                      :data="activityRulesText1.data"
+                      :show-height="activityRulesText1.showHeight"
+                      class="ele-activityRulesText1"
                     >
                     </hm-uview-parse>
                   </view>
@@ -765,6 +740,33 @@
           </view>
         </hm-uview-bg-card>
       </view>
+      <view
+        class="ele-wrapper ele-wrapper-52397198-ef67-4a2a-a56c-a99734eec856"
+      >
+        <hm-uview-popup
+          :show="false"
+          :mode="'bottom'"
+          width="100%"
+          height="450px"
+          :close-icon-pos="'top-left'"
+          class="ele-52397198-ef67-4a2a-a56c-a99734eec856"
+        >
+          <view
+            class="ele-wrapper ele-wrapper-4c8afa9c-0775-4fb5-8f59-2cd7f7534f46"
+          >
+            <hm-uview-text> </hm-uview-text>
+          </view>
+          <view class="ele-wrapper ele-wrapper-activityRulesText">
+            <hm-uview-parse
+              ref="activityRulesText"
+              :data="activityRulesText.data"
+              :show-height="activityRulesText.showHeight"
+              class="ele-activityRulesText"
+            >
+            </hm-uview-parse>
+          </view>
+        </hm-uview-popup>
+      </view>
     </view>
   </view>
 </template>
@@ -779,7 +781,6 @@ import ActivityList from "/@/components/dkn-h-5/activity-list/index.vue";
 import PrizeListComponent from "/@/components/dkn-h-5/prize-list-component/index.vue";
 import ScrollList from "/@/components/dkn-h-5/scroll-list/index.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
-import HmRichText from "/@/components/built-in/uniapp/HmRichText.vue";
 import HmUviewParse from "/@/components/built-in/uniapp-uview-vue3/HmUviewParse.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
@@ -796,7 +797,6 @@ export default {
     PrizeListComponent,
     ScrollList,
     HmUviewPopup,
-    HmRichText,
     HmUviewParse,
     InformationInputBox,
     HmUviewButton,
@@ -1037,6 +1037,9 @@ export default {
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
         ],
       },
+      "52397198-ef67-4a2a-a56c-a99734eec856": {
+        show: false,
+      },
       nameText: {
         text: "迪卡侬春节活动",
         fontSize: "16px",
@@ -1091,6 +1094,13 @@ export default {
             width: "100%",
           },
         ],
+      },
+      activityRulesText1: {
+        data: {
+          html:
+            '<p style="text-align: left;">第一步 报名</p><p style="text-align: left;">点击页面下方的「马上报名」，选择自己要挑战的公里数。</p><p>-- 选择公里数对应的奖牌套餐，提交订单支付并填写收件信息即可在完赛后获得奖牌/奖牌配件/周边。</p><p> 第二步 比赛</p><p>在比赛时间内，打开 Keep，一次性跑完您挑战的公里数即可。</p><p>-- 户外/跑步机皆可。</p><p>奖牌及奖牌配件/周边将在完赛后 30 个工作日内发货；</p><p  style="color: red;">请注意！！若未完赛，则奖牌将无法发出，但配件/周边仍可以在活动结束后发货；（30 个工作日从完赛后第一个工作日开始计算）</p>',
+        },
+        showHeight: 0,
       },
       canel1Button: {
         type: "info",
@@ -1860,11 +1870,7 @@ export default {
   margin-top: 12rpx;
 }
 
-.ele-wrapper-720c2355-c756-4d18-9400-34ab42449b92 {
-  display: none;
-}
-
-.ele-wrapper-activityRulesText {
+.ele-wrapper-activityRulesText1 {
   /deep/.select {
     overflow: auto !important;
     height: 380px;
@@ -2079,5 +2085,21 @@ export default {
   overflow-y: scroll;
   width: 100%;
   margin-top: 20%;
+}
+
+.ele-wrapper-52397198-ef67-4a2a-a56c-a99734eec856 {
+  /deep/.uni-scroll-view-content {
+    margin-left: 4%;
+    width: 92% !important;
+  }
+  z-index: 1000;
+  // position: relative;
+}
+
+.ele-wrapper-activityRulesText {
+  /deep/.select {
+    overflow: auto !important;
+    height: 380px;
+  }
 }
 </style>
