@@ -1203,7 +1203,7 @@ export default {
           smscode: self.smscodeIpnut.value,
           money: self.money,
           orderProjects,
-          channel: self.channel,
+          channel: self.channel || "",
         };
         const res = await self.$postAction(url, params);
         if (!res.success) {
