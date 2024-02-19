@@ -488,6 +488,9 @@ export default {
       if (options.channelId) {
         this.channelId = options.channelId;
       }
+      if (options.type) {
+        this.type = options.type;
+      }
       if (options.orderId) {
         this.orderId = options.orderId;
         return;
