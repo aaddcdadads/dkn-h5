@@ -322,8 +322,7 @@ export default {
             label: "领奖门店",
             type: "textarea",
             placeholder: "",
-            value:
-              "df舒服的方法富士康似懂非懂克己复礼发的v上的v放松的方法是对方",
+            value: "",
           },
           {
             label: "报名时间",
