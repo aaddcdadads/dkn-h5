@@ -1867,7 +1867,7 @@ export default {
 .ele-wrapper-activityRulesText {
   /deep/.select {
     overflow-y: scroll !important;
-    height: 30px;
+    height: 380px;
   }
 }
 
