@@ -97,7 +97,7 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'https://dkn-h5.dev.haumo.cn',
-        // target: 'http://localhost:8083',
+        // target: 'http://localhost:8080',
         changeOrigin: true,
       },
       '/files': {
