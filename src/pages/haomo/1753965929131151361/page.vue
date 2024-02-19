@@ -491,6 +491,9 @@ export default {
       if (options.type) {
         this.type = options.type;
       }
+      if (options.storeId) {
+        this.storeId = options.storeId;
+      }
       if (options.orderId) {
         this.orderId = options.orderId;
         return;
