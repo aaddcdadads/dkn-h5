@@ -138,12 +138,9 @@ export default {
       "8e5b00d7-8606-49be-8e41-bd21c1e35237": {
         show: true,
       },
-      phoneBox: {},
-      viewInput: {},
-      viewPopup: {},
       activityList: {
-        value: "",
         list: [],
+        value: "",
       },
     };
   },
@@ -155,103 +152,58 @@ export default {
     onMounted() {
       let self = this;
       self.storeId = self.$route.query.storeId;
-      //校验手机号
-      self.checkPhone = function () {
-        let mobile = self.phoneBox.value;
-        if (!mobile) {
-          uni.showToast({
-            icon: "error",
-            position: "top",
-            title: "手机号不能为空",
-            duration: 2000,
-          });
-          return false;
-        }
-        const phoneRegex = /^1[3456789]\d{9}$/;
-        const status = phoneRegex.test(mobile);
-        if (!status) {
-          uni.showToast({
-            icon: "error",
-            position: "top",
-            title: "手机号格式不正确",
-            duration: 2000,
-          });
-        }
-        return status;
-      };
-      //获取验证码
-      self.getPhoneCode = async function () {
-        if (!self.checkPhone()) {
-          setTimeout(() => {
-            self.$refs.viewInput.reset();
-          });
+      let userInfoString = localStorage.getItem("userInfo");
+      let userInfo = JSON.parse(userInfoString);
+      self.userId = userInfo.data.id || "";
+      self.activityList.list = [];
+      self.activity = "";
+      self.getActivity = async function (userId) {
+        let url = "/api/dkn/activity/userList";
+        const res = await self.$getAction(url, {
+          userId: self.userId,
+        });
+        if (!res.success || !res.result) {
           return;
         }
-        let url = "/api/sys/sms";
-        let params = {
-          mobile: self.phoneBox.value,
-        };
-        const res = await self.$postAction(url, params);
-        uni.showToast({
-          title: res.message,
-          duration: 2000,
+        self.activityList.list = res.result.map((e) => {
+          return {
+            ...e,
+            name: e.name,
+            disabled: false,
+          };
         });
       };
-      //登录验证
-      self.login = async function () {
-        if (!self.phoneBox.value) {
+      self.getActivity();
+
+      self.gotoActivity = function () {
+        if (!self.activity) {
           uni.showToast({
             icon: "error",
             position: "top",
-            title: "手机号不能为空",
+            title: "请选择活动",
             duration: 2000,
           });
           return;
         }
-        if (!self.viewInput.value) {
-          uni.showToast({
-            icon: "error",
-            position: "top",
-            title: "验证码不能为空",
-            duration: 2000,
-          });
-          return;
-        }
-        let url = "/api/sys/phoneLogin";
-        let params = {
-          mobile: self.phoneBox.value,
-          captcha: self.viewInput.value,
-        };
-        const res = await self.$postAction(url, params);
-        if (!res.success || res.message === "手机验证码错误") {
-          uni.showToast({
-            icon: "error",
-            position: "top",
-            title: res.message,
-            duration: 2000,
-          });
-          return;
-        }
-        self.viewPopup.show = false;
-        uni.showToast({
-          icon: "success",
-          position: "top",
-          title: res.message,
-          duration: 2000,
+        let id = "";
+        self.activityList.list.forEach((e) => {
+          if (e.name === self.activity) {
+            id = e.id;
+          }
         });
-        uni.setStorageSync("token", res.result.token);
-        uni.setStorageSync("userInfo", res.result.userInfo);
+        console.log("index", id);
+        if (!id) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: "获取活动信息失败",
+            duration: 2000,
+          });
+          return;
+        }
         uni.$u.route(
-          `/pages/haomo/1751899680905629697/page?storeId=${self.storeId}&type=1`
+          `/pages/haomo/1753965929131151361/page?activityId=${id}&storeId=${self.storeId}&type=1`
         );
-      };
-      self.error = function (text) {
-        uni.showToast({
-          icon: "error",
-          position: "top",
-          title: text,
-          duration: 2000,
-        });
       };
     },
 
