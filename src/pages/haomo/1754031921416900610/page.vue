@@ -218,6 +218,10 @@ export default {
             label: "领奖门店",
             value: "",
           },
+          {
+            label: "核销门店",
+            value: "",
+          },
         ],
       },
       registrationOrdersData: {},
