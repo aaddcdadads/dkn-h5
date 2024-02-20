@@ -15,7 +15,7 @@ export default {
   onHide: function () {
     console.log('App Hide')
   },
-  mounted () {
+  async mounted () {
     const currentPath = window.location.href;
     const url = currentPath.split("?");
     console.log('url====',url)
@@ -23,11 +23,16 @@ export default {
       return
     }
     const lastSegment = currentPath.split(`${window.location.origin}/`);
-    console.log('lastSegment====',lastSegment)
     if (lastSegment.length === 2) {
       let l = lastSegment[1]
-      const codes = l.split("C")
-      window.location.href = `${window.location.origin}/?code=${codes[0]}&channel=${codes[1]}`
+      if ( l.length > 8) {
+        return
+      }
+      const res = await this.$getAction('/api/dkn/activityUrl/list', { urlKey: l })
+      if (!res.success || res.result.records===0) {
+        return
+      }
+      window.location.href = `${window.location.origin}/${res.result.records[0].urlValue}`
     }
   }
 }
