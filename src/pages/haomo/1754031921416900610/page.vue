@@ -332,6 +332,7 @@ export default {
         this.loopList.value[0].value = this.registrationOrdersData.name;
         //手机号
         this.loopList.value[1].value = this.registrationOrdersData.phone;
+        this.loopList.value[2].value = this.registrationOrdersData.originalPickUpName;
         //活动名称
         this.acNameField.value = this.registrationOrdersData.acName;
 
@@ -365,7 +366,7 @@ export default {
         }
         let item = res.result.records[0];
         //领奖门店
-        this.loopList.value[2].value = item.name ?? "";
+        this.loopList.value[3].value = item.name ?? "";
       });
 
       //查询奖品图片
