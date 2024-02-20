@@ -467,7 +467,7 @@ export default {
     onButtonwanClick() {
       if (
         this.registrationOrdersData.originalPickUpName !=
-        this.loopList.value[2].value
+        this.loopList.value[3].value
       ) {
         this.writeOffModal.title = "强制核销？";
         this.writeOffText.text =
