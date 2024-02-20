@@ -29,7 +29,6 @@ export default {
     this.src = option.url
     this.orderId = option.orderId
     // this.setOrderStatusInterval()
-    alert(JSON.stringify(option))
     this.$wxWebPay(option.state, option.code)
   },
   methods: {

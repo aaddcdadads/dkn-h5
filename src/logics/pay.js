@@ -80,33 +80,75 @@ export function wxWebPay(orderId, code) {
     orderId,
     code
   }).then((res) => {
-    if (res.code == 0) {
-      let data = JSON.parse(res.data);
+    if (res.success) {
+      let data = JSON.parse(res.result);
+      let self = this;
+        jweixin.config({ //全局参数配置
+          debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+          appId: data.appId, // 必填，公众号的唯一标识
+          timestamp: data.timeStamp, // 必填，生成签名的时间戳
+          nonceStr: data.nonceStr, // 必填，生成签名的随机串
+          signature: data.paySign, // 必填，签名，见附录1
+          jsApiList: ['chooseWXPay'] // 必填
+        });
+      
+      
+        jweixin.ready(function() {//预请求，看能否发起微信支付
+          jweixin.checkJsApi({ //判断当前版本是否支持指定js接口
+            jsApiList: ['chooseWXPay'], // 需要检测的JS接口列表
+            success: function(res) {
+              console.log('成功信息1');
+              console.log(res);
+            },
+            fail: function(res) {
+              console.log('失败信息1');
+              console.log(res);
+            }
+          });
+      
+          jweixin.chooseWXPay({ //发起一个微信的支付请求
+            timestamp: data.timeStamp, // 支付签名时间戳
+            nonceStr: data.nonceStr, // 支付签名随机串，不长于 32 位
+            package: data.package, // 统一支付接口返回的prepay_id参数值，提交格式如：prepay_id=***）
+            signType: data.signType, // 签名方式，默认为'SHA1'，使用新版支付需传入'MD5'
+            paySign: data.paySign, // 支付签名,与签名是一个东西
+            success: async function(res) {
+              console.log(res, "成功信息2");
+            },
+            cancel: function(res) {
+              console.log(res, "取消信息2")
+            },
+            fail: function(res) {
+              console.log(res, "失败信息2");
+            }
+          });
+      
+        });
+      
+        jweixin.error(function(res) {
+          console.log(res, "失败信息3");
+        });
+      // alert("data:" + JSON.stringify(data))
+      // alert("WeixinJSBridge:" + typeof WeixinJSBridge)
 
-      if (typeof WeixinJSBridge == "undefined") {
-        if (document.addEventListener) {
-          document.addEventListener(
-            "WeixinJSBridgeReady",
-            onBridgeReady(data),
-            false
-          );
-        } else if (document.attachEvent) {
-          document.attachEvent("WeixinJSBridgeReady", onBridgeReady(data));
-          document.attachEvent("onWeixinJSBridgeReady", onBridgeReady(data));
-        }
-      } else {
-        onBridgeReady(data);
-      }
+      // if (typeof WeixinJSBridge == "undefined") {
+      //   if (document.addEventListener) {
+      //     document.addEventListener(
+      //       "WeixinJSBridgeReady",
+      //       onBridgeReady(data),
+      //       false
+      //     );
+      //   } else if (document.attachEvent) {
+      //     document.attachEvent("WeixinJSBridgeReady", onBridgeReady(data));
+      //     document.attachEvent("onWeixinJSBridgeReady", onBridgeReady(data));
+      //   }
+      // } else {
+      //   onBridgeReady(data);
+      // }
     } else {
-      if (res.code == 2) {
-        uni.showToast({
-          title: res.message,
-        });
-      } else {
-        uni.showToast({
-          title: "error：" + res.message,
-        });
-      }
+      uni.showToast({
+        title: "error：" + res.message,
+      });
     }
   });
 }
