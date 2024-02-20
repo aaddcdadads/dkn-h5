@@ -820,7 +820,7 @@ export default {
         hidden: false,
       },
       regularPopup: {
-        show: false,
+        show: true,
       },
       phonePopup: {
         show: false,
@@ -2108,7 +2108,7 @@ export default {
 
 .ele-wrapper-activityRulesText {
   width: 100%;
-  /deep/.select {
+  /deep/.hm-block {
     overflow: auto !important;
     height: 380px;
   }
