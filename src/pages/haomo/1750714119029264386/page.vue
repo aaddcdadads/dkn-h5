@@ -820,7 +820,7 @@ export default {
         hidden: false,
       },
       regularPopup: {
-        show: true,
+        show: false,
       },
       phonePopup: {
         show: false,
