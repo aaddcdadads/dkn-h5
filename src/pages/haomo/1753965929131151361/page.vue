@@ -435,10 +435,11 @@ export default {
           this.loopList.value[0].value = item.name;
           //手机号
           this.loopList.value[1].value = item.phone;
+          this.loopList.value[2].value = item.originalPickUpName;
           //领奖门店
-          this.loopList.value[2].value = item.address;
+          this.loopList.value[3].value = item.address;
           //报名时间
-          this.loopList.value[3].value = item.createTime;
+          this.loopList.value[4].value = item.createTime;
           this.pickUpStatusText.text = item.pickUpStatusText;
           this.acNameText.text = item.acName;
           let timeText =
