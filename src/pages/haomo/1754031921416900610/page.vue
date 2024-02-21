@@ -226,7 +226,7 @@ export default {
       },
       registrationOrdersData: {},
       writeOffModal: {
-        title: "核销",
+        title: "请寻找工作人员进行核销",
         visible: false,
       },
       writeOffText: {
