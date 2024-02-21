@@ -249,7 +249,8 @@ export default {
     },
     async getQrCodeImg() {
       let self = this;
-      let qrCodeUrl = `https://dkn-h5.dev.haumo.cn/?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
+      console.log("aaa", import.meta.env, import.meta.env.VITE_DOMAIN);
+      let qrCodeUrl = `${import.meta.env.VITE_DOMAIN}/?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
       return await QRCode.toDataURL(qrCodeUrl);
     },
     onCreated() {
@@ -261,7 +262,7 @@ export default {
       self.getQrCode = async function () {
         const qrCodeDiv = document.getElementsByClassName("ele-code")[0];
         console.log("aaa", qrCodeDiv);
-        let qrUrl = `https://dkn-h5.dev.haumo.cn/?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
+        let qrUrl = `${import.meta.env.VITE_DOMAIN}/?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
 
         // 创建一个canvas元素
         const canvas = document.createElement("canvas");
