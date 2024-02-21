@@ -166,8 +166,8 @@ export default {
       let self = this;
       self.getQrCode = async function () {
         const qrCodeDiv = document.getElementsByClassName("ele-code")[0];
-        console.log("aaa", qrCodeDiv, import.meta.env.VITE_DOMAIN);
-        let qrUrl = `${import.meta.env.VITE_DOMAIN}/?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
+        console.log("aaa", qrCodeDiv);
+        let qrUrl = `https://dkn-h5.dev.haumo.cn/?activityId=${self.$route.query.activityId}&channel=${self.$route.query.channel}`;
 
         // 创建一个canvas元素
         const canvas = document.createElement("canvas");

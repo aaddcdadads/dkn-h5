@@ -1,0 +1,50 @@
+<template>
+  <view>
+    <hm-yq-avatar
+    selWidth="200px"
+    selHeight="200px"
+    :noTab="true"
+    avatarSrc="https://img0.baidu.com/it/u=3232582821,3516640051&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1704560400&t=7ae88f72661b2051a148574a408cbef6"
+    avatarStyle="width:150px;height:150px;margin:40px"
+    expWidth="100px"
+    expHeight="100px"
+    :inner="true"
+    :quality=0.1
+    index="index"
+    fileType="jpg"
+    :minScale=0.2
+    :maxScale=5
+    :canRotate="false"
+    :canScale="true"
+    stretch="longSel"
+    lock="long"
+    @upload="upload"
+    @init="init"
+    @end="end"
+    ></hm-yq-avatar>
+  </view>
+</template>
+<script>
+import HmYqAvatar from '../../components/built-in/third-party/HmYqAvatar.vue';
+export default {
+  components:{
+    HmYqAvatar
+  },
+  data(){
+    return{}
+  },
+  methods:{
+    upload(e){
+      console.log("upload",e);
+    },
+    init(){
+      console.log("init");
+    },
+    end(){
+      console.log("end");
+    }
+
+  }
+  
+}
+</script>
