@@ -8,7 +8,7 @@
         /></view>
   
         <view class="content"
-          ><span>活动报名时间：{{ item.time }}</span></view
+          ><span>活动时间：{{ item.time }}</span></view
         >
       </view>
       <view class="div">
