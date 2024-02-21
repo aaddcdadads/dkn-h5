@@ -1652,6 +1652,7 @@ export default {
 
 .ele-wrapper-logoImg {
   width: 100%;
+  height: auto;
 }
 
 .ele-wrapper-containerBg {
