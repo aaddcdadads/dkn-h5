@@ -68,14 +68,38 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                  <view class="ele-wrapper ele-wrapper-activityList">
+                  <view
+                    class="ele-wrapper ele-wrapper-cb89eeb1-aea5-4d7b-b956-6c87a8b143d5"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height="300"
+                      border-radius="0"
+                      padding="0"
+                      box-shadow-color="#00000000"
+                      class="ele-cb89eeb1-aea5-4d7b-b956-6c87a8b143d5"
+                    >
+                      <view class="ele-wrapper ele-wrapper-activityList">
+                        <hm-uview-radio
+                          ref="activityList"
+                          v-model:value="activityList.value"
+                          title=""
+                          :list="activityList.list"
+                          @radioChange="onActivityListRadioChange"
+                          class="ele-activityList"
+                        >
+                        </hm-uview-radio>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
+                  <view class="ele-wrapper ele-wrapper-activityList1">
                     <hm-uview-radio
-                      ref="activityList"
-                      v-model:value="activityList.value"
+                      ref="activityList1"
+                      v-model:value="activityList1.value"
                       title=""
-                      :list="activityList.list"
-                      @radioChange="onActivityListRadioChange"
-                      class="ele-activityList"
+                      :list="activityList1.list"
+                      @radioChange="onActivityList1RadioChange"
+                      class="ele-activityList1"
                     >
                     </hm-uview-radio>
                   </view>
@@ -141,6 +165,10 @@ export default {
       activityList: {
         list: [],
         value: "",
+      },
+      activityList1: {
+        value: "",
+        list: [],
       },
     };
   },
@@ -211,6 +239,10 @@ export default {
       console.log("e", e);
       this.activity = e;
     },
+    onActivityList1RadioChange(e) {
+      console.log("e", e);
+      this.activity = e;
+    },
     onEle205A06F4977C4Fe1Ac28E46F34C84338Click() {
       this.gotoActivity();
     },
@@ -251,7 +283,34 @@ export default {
   float: right;
 }
 
+.ele-wrapper-cb89eeb1-aea5-4d7b-b956-6c87a8b143d5 {
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+}
+
 .ele-wrapper-activityList {
+  width: 100%;
+  // /deep/.u-radio__icon-wrap--circle{
+  //     right: 0;
+  //     position: absolute;
+  // }
+  /deep/.u-radio {
+    width: 100% !important;
+    position: relative;
+    padding-left: 24rpx;
+    height: 72rpx;
+    border-bottom: 1px solid #f5f5f5 !important;
+  }
+  /deep/.u-clearfix {
+    width: 100% !important;
+  }
+  /deep/.u-radio__label {
+    font-size: 14px !important;
+  }
+}
+
+.ele-wrapper-activityList1 {
   width: 100%;
   // /deep/.u-radio__icon-wrap--circle{
   //     right: 0;
