@@ -26,8 +26,18 @@ export default {
     console.log('lastSegment====',lastSegment)
     if (lastSegment.length === 2) {
       let l = lastSegment[1]
-      const codes = l.split("C")
-      window.location.href = `${window.location.origin}/?code=${codes[0]}&channel=${codes[1]}`
+      console.log('l====',l,l.length)
+      if ( l.length > 8) {
+        return
+      }
+      console.log('l1====',l,l.length)
+      setTimeout(async () => {
+        const res = await this.$getAction('/api/dkn/activityUrl/list', { urlKey: l })
+        if (!res.success || res.result.records===0) {
+          return
+        }
+        window.location.href = `${window.location.origin}/${res.result.records[0].urlValue}`
+      })
     }
   }
 }
