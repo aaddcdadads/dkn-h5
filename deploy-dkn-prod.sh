@@ -10,5 +10,5 @@ rm -rf src/pages/test
 # rm -rf src/components/built-in/third-party/HmLottery.vue
 # rm -rf src/components/built-in/third-party/HmLimeSignature.vue
 ./fix-component.sh
-npm run build:h5
-rsync -avz --delete --progress dist/build/h5/* sports@121.4.21.205:/var/www/html/dkn-h5
+npm run build:h5-dkn-prod
+rsync -avz --delete --progress dist/build/h5/* sports@121.4.21.205:/var/www/html/dkn-h5-test
