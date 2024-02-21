@@ -846,7 +846,7 @@ export default {
         src:
           "https://static1.keepcdn.com/teyvat-cms/2023/10/24/1698136514335c25agsam_750x1000.jpg",
         width: "100%",
-        height: "",
+        height: "500px",
       },
       closeTime: {
         day: 19,
