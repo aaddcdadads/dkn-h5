@@ -110,19 +110,24 @@ export default {
   methods: {
     onCode() {
       this.$emit("onCode");
-      let time = 60;
-      this.showColor = true;
-      this.code = `${time}秒后可重新获取`;
-      this.set = setInterval(() => {
-        if (time > 0) {
-          time--;
-          this.code = `${time}秒后可重新获取`;
-        } else {
-          clearInterval(this.set);
-          this.code = '重新获取验证码';
-          this.showColor = false;
-        }
-      }, 1000);
+      if(!this.showColor){
+        let time = 60;
+        this.showColor = true;
+        this.code = `${time}秒后可重新获取`;
+        this.set = setInterval(() => {
+          setTimeout(() => {
+            console.log("setInterval", time)
+            if (time > 0) {
+              time--;
+              this.code = `${time}秒后可重新获取`;
+            } else {
+              clearInterval(this.set);
+              this.code = '重新获取验证码';
+              this.showColor = false;
+            }
+          }, 0)
+        }, 1000);
+      }
     },
     reset() {
       this.code = '获取验证码';
