@@ -329,13 +329,7 @@ export default {
   /deep/.u-radio__label {
     font-size: 14px !important;
   }
-
-  height: 300px;
-  overflow: auto;
-  /deep/.u-clearfix {
-    height: 300px;
-    overflow: auto;
-  }
+  display: none;
 }
 
 .ele-wrapper-5ceb1472-5f57-4275-9fb8-0975865d8443 {
