@@ -1603,7 +1603,7 @@ export default {
   /deep/.page-wrapper {
     flex-wrap: nowrap !important;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     flex-direction: column;
     overflow: hidden;
   }
