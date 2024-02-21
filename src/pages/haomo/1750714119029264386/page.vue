@@ -1607,15 +1607,18 @@ export default {
     flex-direction: column;
     overflow: hidden;
   }
+  max-height: 100vh;
 }
 
 .ele-wrapper-outsideBg {
   width: 100%;
-  /deep/.ele-wrapper-outsideBg {
-    overflow: hidden;
-  }
   overflow: auto;
-
+  // /deep/.ele-wrapper-outsideBg{
+  //     overflow: hidden;
+  // }
+  // /deep/.ele-outsideBg{
+  //     overflow: auto;
+  // }
   flex: 1 1 auto;
 }
 
