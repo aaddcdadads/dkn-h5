@@ -139,12 +139,12 @@ function() {
       if (res.message === '当前活动已经报名！') {
         if (res.result.paymentStatus === 1) {
           self.error('当前活动已经报名未支付')
-          self.$pay(self.orderId, "1");
-          return;
-          if (self.isWeChat()) {
-            self.$pay(self.orderId, "0")
-            return
-          }
+          // self.$pay(self.orderId, "1");
+          // return;
+          // if (self.isWeChat()) {
+          //   self.$pay(self.orderId, "0")
+          //   return
+          // }
           self.payPopup.show = true;
           self.activityText.text = self.activityName
           self.countdown.text = ""
@@ -170,14 +170,14 @@ function() {
       self.login()
       return
     }
-    self.$pay(self.orderId, "1")
-    return
+    // self.$pay(self.orderId, "1")
+    // return
 
-    //微信浏览器打开直接跳微信支付
-    if (self.isWeChat()) {
-      self.$pay(self.orderId, "0")
-      return
-    }
+    // //微信浏览器打开直接跳微信支付
+    // if (self.isWeChat()) {
+    //   self.$pay(self.orderId, "0")
+    //   return
+    // }
     self.payPopup.show = true;
     self.activityText.text = self.activityName
     self.countdown.text = ""
