@@ -116,6 +116,7 @@
                   ref="writeOffModal"
                   v-model:visible="writeOffModal.visible"
                   :title="writeOffModal.title"
+                  confirm-text="员工已确认"
                   confirm-color="#2979FF"
                   :show-close-icon="false"
                   height="100px"
@@ -231,7 +232,7 @@ export default {
       },
       writeOffText: {
         text:
-          "【请寻找工作人员进行核销操作，私自核销后果自负】核销后不可再次领取奖品！",
+          "请寻找工作人员进行核销操作，私自核销后果自负】核销后不可再次领取奖品！",
         fontSize: "14px",
         color: "#6C6C6C",
         padding: "0",
