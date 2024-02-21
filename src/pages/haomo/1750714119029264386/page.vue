@@ -1611,13 +1611,11 @@ export default {
 
 .ele-wrapper-outsideBg {
   width: 100%;
-  overflow: hidden;
   /deep/.ele-wrapper-outsideBg {
     overflow: hidden;
   }
-  /deep/.ele-outsideBg {
-    overflow: auto;
-  }
+  overflow: auto;
+
   flex: 1 1 auto;
 }
 
