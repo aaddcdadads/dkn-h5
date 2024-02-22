@@ -1,12 +1,26 @@
 <template>
-  <view :class="borderColor ? 'borderColor' : 'inputBox'" @click.prevent="onClick">
+  <view
+    :class="borderColor ? 'borderColor' : 'inputBox'"
+    @click.prevent="onClick"
+  >
     <view class="image_box1">
       <image class="imageleft" :src="leftSrc[0]" v-show="!borderColor" />
       <image class="imageleft" :src="leftSrc[1]" v-show="borderColor" />
     </view>
-    <input :placeholder="placeholder" class="data_input" v-model:value="cValue" @focus="focus" @input="input" @blur="borderColor = false" :disabled="disabled" :class="{'data_inputs':disabled}"/>
+    <input
+      :placeholder="placeholder"
+      class="data_input"
+      v-model:value="cValue"
+      @focus="focus"
+      @input="input"
+      @blur="borderColor = false"
+      :disabled="disabled"
+      :class="{ data_inputs: disabled }"
+    />
     <view v-show="showCode">
-      <text @click="onCode" :class="showColor ? 'gcolor' : 'color'">{{ code }}</text>
+      <text @click="onCode" :class="showColor ? 'gcolor' : 'color'">{{
+        code
+      }}</text>
     </view>
     <view class="image_box" v-show="showIcon">
       <image :src="rightSrc" class="image" @click="rightIcon"></image>
@@ -21,14 +35,14 @@ export default {
      */
     value: {
       type: String,
-      default: ""
+      default: "",
     },
     /**
      * 是否禁用
      */
-    disabled:{
-      type:Boolean,
-      default:false
+    disabled: {
+      type: Boolean,
+      default: false,
     },
     /**
      * 左侧图标
@@ -38,16 +52,17 @@ export default {
       default: function () {
         return [
           "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-          'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png'
-        ]
-      }
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+        ];
+      },
     },
     /**
      * 右侧图标
      */
     rightSrc: {
       type: String,
-      default: 'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/jiantouyou.png'
+      default:
+        "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/jiantouyou.png",
     },
     /**
      * 显示获取验证码
@@ -73,7 +88,7 @@ export default {
     /**
      * 获取状态
      */
-     showStatus: {
+    showStatus: {
       type: Boolean,
       default: true,
     },
@@ -81,13 +96,13 @@ export default {
   data() {
     return {
       border: true,
-      type: 'text',
+      type: "text",
       code: "获取验证码",
       showColor: false,
       borderColor: false,
       cValue: "",
-      set:""
-    }
+      set: "",
+    };
   },
   watch: {
     value: {
@@ -97,43 +112,46 @@ export default {
           this.borderColor = false;
         }
       },
-       deep: true,
-       immediate: true,
+      deep: true,
+      immediate: true,
     },
   },
-  mounted(){
+  mounted() {
     this.cValue = this.value;
-    if(this.disabled && this.cValue !==""){
+    if (this.disabled && this.cValue !== "") {
       this.borderColor = false;
     }
   },
   methods: {
     onCode() {
       this.$emit("onCode");
-      if(!this.showColor){
+      if (!this.showColor) {
         let time = 60;
         this.showColor = true;
         this.code = `${time}秒后可重新获取`;
-        this.set = setInterval(() => {
+
+        const countdown = () => {
           setTimeout(() => {
-            console.log("setInterval", time)
-            if (time > 0) {
-              time--;
-              this.code = `${time}秒后可重新获取`;
-            } else {
-              clearInterval(this.set);
-              this.code = '重新获取验证码';
+            console.log("setTimeout", time);
+            time--;
+            this.code = `${time}秒后可重新获取`;
+            
+            if (time <= 0) {
+              this.code = "重新获取验证码";
               this.showColor = false;
+            } else {
+              countdown(); // 递归调用
             }
-          }, 0)
-        }, 1000);
+          }, 1000);
+        };
+
+        countdown(); // 开始倒计时
       }
     },
     reset() {
-      this.code = '获取验证码';
+      this.code = "获取验证码";
       this.showColor = false;
       clearInterval(this.set);
-
     },
     rightIcon() {
       this.$emit("rightIcon");
@@ -142,31 +160,32 @@ export default {
       this.$emit("update:value", this.cValue);
       this.$emit("input");
     },
-    onClick(){
-        this.$emit("onClick");
-        this.borderColor = true;
+    onClick() {
+      this.$emit("onClick");
+      this.borderColor = true;
     },
-    focus(){
-      return this.borderColor ?  this.borderColor = true :  this.borderColor = false
+    focus() {
+      return this.borderColor
+        ? (this.borderColor = true)
+        : (this.borderColor = false);
     },
     handleClickOutside(event) {
       // 检查点击是否在div外
       const isClickInsideElement = this.$el.contains(event.target);
-         if(!isClickInsideElement){
-          this.borderColor = false;
-         }
+      if (!isClickInsideElement) {
+        this.borderColor = false;
+      }
     },
   },
   created() {
     // 监听外部点击事件
-    document.addEventListener('click', this.handleClickOutside);
+    document.addEventListener("click", this.handleClickOutside);
   },
   destroyed() {
     // 移除监听器
-    document.removeEventListener('click', this.handleClickOutside);
+    document.removeEventListener("click", this.handleClickOutside);
   },
-
-}
+};
 </script>
 <style scoped>
 .inputBox,
@@ -207,9 +226,8 @@ export default {
 .data_input {
   flex: 1;
   font-size: 13px;
- 
 }
-.data_inputs{
+.data_inputs {
   pointer-events: none;
 }
 
@@ -227,9 +245,10 @@ export default {
 }
 
 .inputBox {
-  border: 1px solid #CFCFCF;
+  border: 1px solid #cfcfcf;
 }
 
 .borderColor {
-  border: 1px solid #F32878;
-}</style>
+  border: 1px solid #f32878;
+}
+</style>
