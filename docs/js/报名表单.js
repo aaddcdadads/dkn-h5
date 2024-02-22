@@ -11,6 +11,7 @@ function() {
   self.countdown.text = ""
   self.prices.text = ""
   self.orderId = ""
+  self.alipayChannel=""
   self.getActivityProject = async function () {
     let url = '/api/dkn/activityProject/list'
     let params = {
@@ -68,9 +69,15 @@ function() {
     }
     return `/api/sys/common/static/${url}`;
   }
+  self.getAlipayChannel = async function () {
+    let url = `/api/sys/dict/getDictText/alipay_channel/${self.channel}`
+    const res = await self.$getAction(url)
+    self.alipayChannel=res.result
+  }
   self.getData = function () {
     self.getActivityProject()
     self.getStoreList()
+    self.getAlipayChannel()
   }
   self.getData()
 
@@ -145,6 +152,10 @@ function() {
           //   self.$pay(self.orderId, "0")
           //   return
           // }
+          if (self.alipayChannel) {
+            self.$pay(self.orderId, "1")
+            return
+          }
           self.payPopup.show = true;
           self.activityText.text = self.activityName
           self.countdown.text = ""
@@ -178,6 +189,11 @@ function() {
     //   self.$pay(self.orderId, "0")
     //   return
     // }
+    if (self.alipayChannel) {
+      self.$pay(self.orderId, "1")
+      return
+    }
+    
     self.payPopup.show = true;
     self.activityText.text = self.activityName
     self.countdown.text = ""
