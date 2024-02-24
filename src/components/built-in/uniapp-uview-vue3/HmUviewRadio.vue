@@ -13,7 +13,7 @@
         :icon-size="iconSize"
         :active-color="activeColor"
       >
-        <p v-if="!textLocation" style>{{ item.name }}</p>
+        <p v-if="!textLocation" style>{{ item.label || item.name }}</p>
       </u-radio>
     </u-radio-group>
   </view>
