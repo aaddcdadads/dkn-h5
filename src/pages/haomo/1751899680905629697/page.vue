@@ -216,12 +216,7 @@ export default {
           });
           return;
         }
-        let id = "";
-        self.activityList.list.forEach((e) => {
-          if (e.name === self.activity) {
-            id = e.id;
-          }
-        });
+        let id = self.activity;
         console.log("index", id);
         if (!id) {
           uni.showToast({
