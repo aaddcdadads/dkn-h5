@@ -198,7 +198,8 @@ export default {
         self.activityList.list = res.result.map((e) => {
           return {
             ...e,
-            name: e.name,
+            name: e.id,
+            label: e.name,
             disabled: false,
           };
         });
