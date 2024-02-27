@@ -60,7 +60,6 @@
                           text="取消"
                           font-size="12px"
                           color="#409EFF"
-                          class="ele-bf1a747a-2f34-4286-a58b-55db1afa6d9d"
                         >
                         </hm-uview-text>
                       </view>
@@ -269,12 +268,7 @@ export default {
 }
 
 .ele-wrapper-e5983f9a-4d28-4b8d-a5be-8026fae669f5 {
-  float: left;
   font-weight: bolder;
-}
-
-.ele-wrapper-bf1a747a-2f34-4286-a58b-55db1afa6d9d {
-  float: right;
 }
 
 .ele-wrapper-cb89eeb1-aea5-4d7b-b956-6c87a8b143d5 {
