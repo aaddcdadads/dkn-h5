@@ -1,20 +1,26 @@
 <template>
   <view class="radio-class">
     {{ title }}
-    <u-radio-group v-model:value="cValue" :wrap="wrap" @change="radioGroupChange">
-      <p v-if="textLocation" style="margin-left: 1px; margin-right: 5px">{{ item.name }}</p>
-      <u-radio
-        v-for="(item, index) in cList"
-        @change="radioChange"
-        :key="index"
-        :name="item.name"
-        :disabled=" disabled || item.disabled"
-        :shape="shape"
-        :icon-size="iconSize"
-        :active-color="activeColor"
-      >
-        <p v-if="!textLocation" style>{{ item.name }}</p>
-      </u-radio>
+    <u-radio-group
+      v-model:value="cValue"
+      :wrap="wrap"
+      @change="radioGroupChange"
+    >
+      <div v-for="(item, index) in cList" :key="index" class="radio-item">
+        <p v-if="textLocation" style="margin-left: 1px; margin-right: 5px">
+          {{ getLabel(item) }}
+        </p>
+        <u-radio
+          @change="radioChange"
+          :name="item.name"
+          :disabled="disabled || item.disabled"
+          :shape="shape"
+          :icon-size="iconSize"
+          :active-color="activeColor"
+        >
+          <p v-if="!textLocation" style>{{ getLabel(item) }}</p>
+        </u-radio>
+      </div>
     </u-radio-group>
   </view>
 </template>
@@ -59,7 +65,7 @@ export default {
      */
     params: {
       type: Object,
-      default: function() {
+      default: function () {
         return {};
       },
     },
@@ -68,7 +74,7 @@ export default {
      */
     dataMap: {
       type: Object,
-      default: function() {
+      default: function () {
         return {
           name: "name",
           disabled: "disabled",
@@ -80,7 +86,7 @@ export default {
      */
     list: {
       type: Array,
-      default: function() {
+      default: function () {
         return [
           {
             name: "apple",
@@ -96,6 +102,13 @@ export default {
           },
         ];
       },
+    },
+    /**
+     * labelKey
+     */
+    labelKey:{
+      type:String,
+      default:"label"
     },
     /**
      * 排列方向
@@ -137,7 +150,7 @@ export default {
      */
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   computed: {},
@@ -145,10 +158,12 @@ export default {
     return {
       cList: [],
       cValue: "",
+      cLabelKey:""
     };
   },
   mounted() {
     this.cValue = this.value;
+    this.cLabelKey = this.labelKey;
     this.cList = this.mapData(this.list);
     this.getData();
   },
@@ -160,7 +175,7 @@ export default {
       this.getData(value);
     },
     params: {
-      handler: function(value, oldValue) {
+      handler: function (value, oldValue) {
         if (JSON.stringify(value) == JSON.stringify(oldValue)) {
           return;
         }
@@ -169,13 +184,22 @@ export default {
       deep: true,
     },
     list: {
-      handler: function(value, oldValue) {
+      handler: function (value, oldValue) {
         this.cList = this.mapData(value);
       },
       deep: true,
     },
+    labelKey(value) {
+      this.cLabelKey = value;
+    },
   },
   methods: {
+    getLabel(item){
+      let label,key;
+      key = this.cLabelKey;
+      label = item[key] ? item[key] : item.name;
+      return label;
+    },
     // 选中某个单选框时，由radio时触发
     radioChange(e) {
       //console.log("1", e);
@@ -232,4 +256,9 @@ export default {
 </script>
 
 <style lang="less">
+.radio-item {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <!-- <hm-uview-button @click="click">123</hm-uview-button> -->
   <view>
-    <hm-uview-radio v-model:value="cValue" :list="list"></hm-uview-radio>
+    <hm-uview-radio v-model:value="cValue" :textLocation="false" :list="list"></hm-uview-radio>
+    <hm-uview-radio v-model:value="cValue" :textLocation="true" :list="list" label-key="key"></hm-uview-radio>
     <hm-uview-radio
       v-model:value="cValue2"
       title="标题1"
@@ -31,13 +31,22 @@ export default {
         {
           name: "apple",
           disabled: false,
+          key:"apple--test" 
         },
         {
           name: "banner",
           disabled: false,
+          key:"banner--test"
         },
         {
           name: "orange",
+          disabled: false,
+          key:"orange--test"
+        },
+        {
+          name: "apple",
+          label:"12",
+          key:"apple--test2",
           disabled: false,
         },
       ],
