@@ -270,7 +270,7 @@ export default {
 
 .ele-wrapper-radioListBg {
   width: 100%;
-  margin: 58px 0px 54px;
+  margin: 58px 0px;
 }
 
 .ele-wrapper-activityList {
@@ -298,7 +298,7 @@ export default {
 
 .ele-wrapper-bottomBtnBg {
   width: 100%;
-  height: 54px;
+  height: 58px;
   background: #fff;
   position: absolute;
   bottom: 0px;
