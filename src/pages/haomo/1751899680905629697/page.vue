@@ -34,16 +34,15 @@
                   box-shadow-color="#00000000"
                   class="ele-outsideBg"
                 >
-                  <view
-                    class="ele-wrapper ele-wrapper-a8421160-2261-4a40-ad96-c72052540372"
-                  >
+                  <view class="ele-wrapper ele-wrapper-titleBg">
                     <hm-uview-bg-card
+                      ref="titleBg"
                       width="100%"
                       height=""
                       border-radius="0"
                       padding="12"
                       box-shadow-color="#00000000"
-                      class="ele-a8421160-2261-4a40-ad96-c72052540372"
+                      class="ele-titleBg"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-e5983f9a-4d28-4b8d-a5be-8026fae669f5"
@@ -267,7 +266,7 @@ export default {
   position: relative;
 }
 
-.ele-wrapper-a8421160-2261-4a40-ad96-c72052540372 {
+.ele-wrapper-titleBg {
   width: 100%;
   border-bottom: 1px solid #f5f5f5;
 }
