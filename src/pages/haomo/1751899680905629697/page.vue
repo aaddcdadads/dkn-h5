@@ -301,6 +301,7 @@ export default {
   }
   /deep/.u-clearfix {
     width: 100% !important;
+    flex-direction: column;
   }
   /deep/.u-radio__label {
     font-size: 14px !important;
