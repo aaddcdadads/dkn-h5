@@ -265,6 +265,9 @@ export default {
 .ele-wrapper-titleBg {
   width: 100%;
   border-bottom: 1px solid #f5f5f5;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   .ele-titleBg {
     display: flex;
     align-items: center;
