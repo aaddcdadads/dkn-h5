@@ -239,7 +239,7 @@ export default {
   /deep/ .u-drawer__scroll-view {
     position: relative;
     .uni-scroll-view {
-      position: none !important;
+      position: static !important;
     }
   }
 }
