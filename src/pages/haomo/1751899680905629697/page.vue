@@ -28,7 +28,7 @@
                 <hm-uview-bg-card
                   ref="outsideBg"
                   width="100%"
-                  height="400px"
+                  height="100%"
                   border-radius="0"
                   padding="0"
                   box-shadow-color="#00000000"
@@ -104,16 +104,15 @@
                     >
                     </hm-uview-radio>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-5ceb1472-5f57-4275-9fb8-0975865d8443"
-                  >
+                  <view class="ele-wrapper ele-wrapper-bottomBtnBg">
                     <hm-uview-bg-card
+                      ref="bottomBtnBg"
                       width="100%"
-                      height=""
+                      height="100%"
                       border-radius="0"
                       padding="0"
                       box-shadow-color="#00000000"
-                      class="ele-5ceb1472-5f57-4275-9fb8-0975865d8443"
+                      class="ele-bottomBtnBg"
                     >
                       <view
                         class="ele-wrapper ele-wrapper-205a06f4-977c-4fe1-ac28-e46f34c84338"
@@ -330,7 +329,7 @@ export default {
   display: none;
 }
 
-.ele-wrapper-5ceb1472-5f57-4275-9fb8-0975865d8443 {
+.ele-wrapper-bottomBtnBg {
   width: 100%;
 }
 
