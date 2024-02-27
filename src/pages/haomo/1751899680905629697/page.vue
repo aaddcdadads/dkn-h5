@@ -284,7 +284,7 @@ export default {
     width: 100% !important;
     position: relative;
     padding-left: 24rpx;
-    height: 72rpx;
+    height: 80rpx;
     border-bottom: 1px solid #f5f5f5 !important;
   }
   /deep/.u-clearfix {
