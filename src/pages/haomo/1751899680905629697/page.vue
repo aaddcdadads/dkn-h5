@@ -288,9 +288,14 @@ export default {
 
 .ele-wrapper-bottomBtnBg {
   width: 100%;
+  height: 54px;
   position: absolute;
   bottom: 0px;
   left: 0px;
+  .ele-bottomBtnBg {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .ele-wrapper-205a06f4-977c-4fe1-ac28-e46f34c84338 {
