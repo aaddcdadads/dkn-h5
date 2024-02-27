@@ -265,6 +265,10 @@ export default {
 .ele-wrapper-titleBg {
   width: 100%;
   border-bottom: 1px solid #f5f5f5;
+  .ele-titleBg {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .ele-wrapper-e5983f9a-4d28-4b8d-a5be-8026fae669f5 {
