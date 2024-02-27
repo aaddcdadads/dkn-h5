@@ -90,17 +90,6 @@
                       </view>
                     </hm-uview-bg-card>
                   </view>
-                  <view class="ele-wrapper ele-wrapper-activityList1">
-                    <hm-uview-radio
-                      ref="activityList1"
-                      v-model:value="activityList1.value"
-                      title=""
-                      :list="activityList1.list"
-                      @radioChange="onActivityList1RadioChange"
-                      class="ele-activityList1"
-                    >
-                    </hm-uview-radio>
-                  </view>
                   <view class="ele-wrapper ele-wrapper-bottomBtnBg">
                     <hm-uview-bg-card
                       ref="bottomBtnBg"
@@ -162,10 +151,6 @@ export default {
       activityList: {
         list: [],
         value: "",
-      },
-      activityList1: {
-        value: "",
-        list: [],
       },
     };
   },
@@ -229,10 +214,6 @@ export default {
     },
 
     onActivityListRadioChange(e) {
-      console.log("e", e);
-      this.activity = e;
-    },
-    onActivityList1RadioChange(e) {
       console.log("e", e);
       this.activity = e;
     },
@@ -303,28 +284,6 @@ export default {
   /deep/.u-radio__label {
     font-size: 14px !important;
   }
-}
-
-.ele-wrapper-activityList1 {
-  width: 100%;
-  // /deep/.u-radio__icon-wrap--circle{
-  //     right: 0;
-  //     position: absolute;
-  // }
-  /deep/.u-radio {
-    width: 100% !important;
-    position: relative;
-    padding-left: 24rpx;
-    height: 72rpx;
-    border-bottom: 1px solid #f5f5f5 !important;
-  }
-  /deep/.u-clearfix {
-    width: 100% !important;
-  }
-  /deep/.u-radio__label {
-    font-size: 14px !important;
-  }
-  display: none;
 }
 
 .ele-wrapper-bottomBtnBg {
