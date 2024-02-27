@@ -288,6 +288,9 @@ export default {
 
 .ele-wrapper-bottomBtnBg {
   width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
 }
 
 .ele-wrapper-205a06f4-977c-4fe1-ac28-e46f34c84338 {
