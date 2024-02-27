@@ -250,6 +250,7 @@ export default {
   position: absolute;
   top: 0px;
   left: 0px;
+  z-index: 1;
   .ele-titleBg {
     display: flex;
     align-items: center;
@@ -295,6 +296,7 @@ export default {
   position: absolute;
   bottom: 0px;
   left: 0px;
+  z-index: 1;
   .ele-bottomBtnBg {
     display: flex;
     align-items: center;
