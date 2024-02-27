@@ -291,6 +291,7 @@ export default {
 .ele-wrapper-bottomBtnBg {
   width: 100%;
   height: 54px;
+  background: #fff;
   position: absolute;
   bottom: 0px;
   left: 0px;
