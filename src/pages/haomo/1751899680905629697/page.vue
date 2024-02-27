@@ -236,6 +236,12 @@ export default {
   /deep/.u-drawer-content-visible {
     border-radius: 8px 8px 0px 0px;
   }
+  /deep/ .u-drawer__scroll-view {
+    position: relative;
+    .uni-scroll-view {
+      position: none !important;
+    }
+  }
 }
 
 .ele-wrapper-outsideBg {
