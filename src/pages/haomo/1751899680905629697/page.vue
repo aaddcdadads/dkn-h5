@@ -12,17 +12,16 @@
           box-shadow-color="#00000000"
           class="ele-dbd7f3bd-da08-446b-beec-b1dc37f4621c"
         >
-          <view
-            class="ele-wrapper ele-wrapper-8e5b00d7-8606-49be-8e41-bd21c1e35237"
-          >
+          <view class="ele-wrapper ele-wrapper-hmUviewPopup">
             <hm-uview-popup
-              :show="true"
+              ref="hmUviewPopup"
+              v-model:show="hmUviewPopup.show"
               :mode="'bottom'"
               height="420px"
               :mask-close-able="false"
               border-radius="8px"
               :closeable="false"
-              class="ele-8e5b00d7-8606-49be-8e41-bd21c1e35237"
+              class="ele-hmUviewPopup"
             >
               <view class="ele-wrapper ele-wrapper-outsideBg">
                 <hm-uview-bg-card
@@ -159,7 +158,7 @@ export default {
   data() {
     let self = this;
     return {
-      "8e5b00d7-8606-49be-8e41-bd21c1e35237": {
+      hmUviewPopup: {
         show: true,
       },
       activityList: {
@@ -254,7 +253,7 @@ export default {
   width: 100%;
 }
 
-.ele-wrapper-8e5b00d7-8606-49be-8e41-bd21c1e35237 {
+.ele-wrapper-hmUviewPopup {
   /deep/.u-drawer-content-visible {
     border-radius: 8px 8px 0px 0px;
   }
