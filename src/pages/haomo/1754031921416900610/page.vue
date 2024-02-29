@@ -148,6 +148,42 @@
                   </view>
                 </hm-uview-modal>
               </view>
+              <view class="ele-wrapper ele-wrapper-loseModal">
+                <hm-uview-modal
+                  ref="loseModal"
+                  v-model:visible="loseModal.visible"
+                  title="核销失败！"
+                  confirm-color="#2979FF"
+                  :show-close-icon="false"
+                  height="100px"
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-6ff52555-3ffe-4b39-be25-816910b258c2"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height="100%"
+                      :text-align="'center'"
+                      padding="0"
+                      box-shadow-color="#00000000"
+                      class="ele-6ff52555-3ffe-4b39-be25-816910b258c2"
+                    >
+                      <view
+                        class="ele-wrapper ele-wrapper-c405710c-2544-4899-be45-7d87c1305304"
+                      >
+                        <hm-uview-text
+                          text="当前门店与报名登记门店范围不一致，不可进行核销，请移步到对应范围的门店进行核销！"
+                          font-size="14px"
+                          color="#6C6C6C"
+                          padding="0"
+                          class="ele-c405710c-2544-4899-be45-7d87c1305304"
+                        >
+                        </hm-uview-text>
+                      </view>
+                    </hm-uview-bg-card>
+                  </view>
+                </hm-uview-modal>
+              </view>
             </hm-uview-bg-card>
           </view>
           <view class="ele-wrapper ele-wrapper-buttonwanCard">
@@ -254,6 +290,9 @@ export default {
       },
       "0ded82e1-3f32-400b-915d-b361c39f83db": {
         value: "item.value",
+      },
+      loseModal: {
+        visible: false,
       },
       buttonwan: {
         shape: "circle",
@@ -555,6 +594,16 @@ export default {
 }
 
 .ele-wrapper-writeOffText {
+  margin: 10px;
+}
+
+.ele-wrapper-6ff52555-3ffe-4b39-be25-816910b258c2 {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.ele-wrapper-c405710c-2544-4899-be45-7d87c1305304 {
   margin: 10px;
 }
 
