@@ -47,7 +47,8 @@ function() {
   self.getStoreList = async function () {
     let url = '/api/dkn/store/listOrder'
     const res = await self.$getAction(url, {
-      status: 0
+      status: 0,
+      activityId:self.activityId
     })
     if (!res.success || res.result.length === 0) {
       return
