@@ -153,6 +153,7 @@
                   ref="loseModal"
                   v-model:visible="loseModal.visible"
                   title="核销失败！"
+                  :show-confirm-btn="false"
                   confirm-color="#2979FF"
                   :show-close-icon="false"
                   height="100px"
@@ -262,6 +263,7 @@ export default {
         ],
       },
       registrationOrdersData: {},
+      storeList: {},
       writeOffModal: {
         title: "请寻找工作人员进行核销",
         visible: false,
@@ -269,6 +271,7 @@ export default {
       writeOffText: {
         text:
           "请寻找店铺工作人员确认，核销后不可再次领奖，请勿私自核销 。感谢参与，祝您生活愉快！",
+        showConfirmBtn: null,
         fontSize: "14px",
         color: "#6C6C6C",
         padding: "0",
@@ -316,6 +319,7 @@ export default {
       this.acNameField.value;
       this.writeOffModal.title;
       this.writeOffText.text;
+      this.writeOffText.showConfirmBtn;
 
       this.getTime = () => {
         // 创建一个新的 Date 对象来获取当前时间
@@ -420,6 +424,18 @@ export default {
           };
         });
       });
+
+      //查询活动是否配置门店
+      this.$getAction("/api/dkn/viewActivityStore/list", {
+        pageNo: 1,
+        pageSize: -1,
+        activityId: this.activityId,
+      }).then((res) => {
+        console.log("viewActivityStore=res--", res);
+        if (res.code != 200 || res.result.records.length <= 0) return;
+        //配置门店list
+        this.storeList = res.result.records;
+      });
     },
     onOnLoad(options) {
       if (options.channelId) {
@@ -497,15 +513,29 @@ export default {
       });
     },
     onButtonwanClick() {
-      //核销门店不一致
-      if (
-        this.registrationOrdersData.originalPickUpName !=
-        this.loopList.value[3].value
-      ) {
-        this.writeOffModal.title = "请寻找工作人员进行核销？";
-        this.writeOffText.text =
-          "【当前门店与报名领奖登记门店不一致】请寻找店铺工作人员确认，核销后订单将失效，请勿私自核销!";
+      //活动配置了门店
+      if (this.storeList && this.storeList.length > 0) {
+        if (!this.storeList.some((obj) => obj.id === this.storeId)) {
+          this.writeOffModal.title = "核销失败！";
+          this.writeOffText.text =
+            "当前门店与报名登记门店范围不一致，不可进行核销，请移步到对应范围的门店进行核销！";
+          this.writeOffText.showConfirmBtn = false;
+        } else {
+          if (this.registrationOrdersData.id != this.storeId) {
+            this.writeOffModal.title = "请寻找工作人员进行核销？";
+            this.writeOffText.text =
+              "【当前门店与报名领奖登记门店不一致】请寻找店铺工作人员确认，核销后订单将失效，请勿私自核销!";
+          }
+        }
+      } else {
+        //核销门店不一致
+        if (this.registrationOrdersData.id != this.storeId) {
+          this.writeOffModal.title = "请寻找工作人员进行核销？";
+          this.writeOffText.text =
+            "【当前门店与报名领奖登记门店不一致】请寻找店铺工作人员确认，核销后订单将失效，请勿私自核销!";
+        }
       }
+
       this.writeOffModal.visible = true;
     },
   },
