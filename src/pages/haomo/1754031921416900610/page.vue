@@ -530,7 +530,7 @@ export default {
             "当前门店与报名登记门店范围不一致，不可进行核销，请移步到对应范围的门店进行核销！";
           this.writeOffModal.showConfirmBtn = false;
         } else {
-          if (this.registrationOrdersData.id != this.storeId) {
+          if (this.registrationOrdersData.storeId != this.storeId) {
             this.writeOffModal.title = "请寻找工作人员进行核销？";
             this.writeOffText.text =
               "【当前门店与报名领奖登记门店不一致】请寻找店铺工作人员确认，核销后订单将失效，请勿私自核销!";
@@ -538,7 +538,7 @@ export default {
         }
       } else {
         //核销门店不一致
-        if (this.registrationOrdersData.id != this.storeId) {
+        if (this.registrationOrdersData.storeId != this.storeId) {
           this.writeOffModal.title = "请寻找工作人员进行核销？";
           this.writeOffText.text =
             "【当前门店与报名领奖登记门店不一致】请寻找店铺工作人员确认，核销后订单将失效，请勿私自核销!";
