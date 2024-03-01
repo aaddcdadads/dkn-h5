@@ -355,15 +355,11 @@ export default {
             icon: "error",
             duration: 1000,
           });
-          setTimeout(() => {
-            uni.navigateTo({
-              url:
-                "/pages/haomo/1753965929131151361/page?activityId=" +
-                this.activityId +
-                "&channelId=" +
-                this.channelId,
-            });
-          }, 1500);
+          /*setTimeout(() => {
+        uni.navigateTo({
+          url: "/pages/haomo/1753965929131151361/page?activityId=" + this.activityId + "&channelId=" + this.channelId
+        })
+      }, 1500);*/
           return;
         }
         //保存订单信息
@@ -393,15 +389,11 @@ export default {
             icon: "error",
             duration: 1000,
           });
-          setTimeout(() => {
-            uni.navigateTo({
-              url:
-                "/pages/haomo/1752649989210771458/page?activityId=" +
-                this.activityId +
-                "&channelId=" +
-                this.channelId,
-            });
-          }, 1500);
+          /*setTimeout(() => {
+        uni.navigateTo({
+          url: "/pages/haomo/1752649989210771458/page?activityId=" + this.activityId + "&channelId=" + this.channelId
+        })
+      }, 1500);*/
           return;
         }
         let item = res.result.records[0];
