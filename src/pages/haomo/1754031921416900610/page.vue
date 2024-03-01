@@ -116,6 +116,7 @@
                   ref="writeOffModal"
                   v-model:visible="writeOffModal.visible"
                   :title="writeOffModal.title"
+                  :show-confirm-btn="writeOffModal.showConfirmBtn"
                   confirm-text="员工已确认"
                   confirm-color="#2979FF"
                   :show-close-icon="false"
@@ -266,12 +267,12 @@ export default {
       storeList: {},
       writeOffModal: {
         title: "请寻找工作人员进行核销",
+        showConfirmBtn: true,
         visible: false,
       },
       writeOffText: {
         text:
           "请寻找店铺工作人员确认，核销后不可再次领奖，请勿私自核销 。感谢参与，祝您生活愉快！",
-        showConfirmBtn: null,
         fontSize: "14px",
         color: "#6C6C6C",
         padding: "0",
@@ -319,7 +320,7 @@ export default {
       this.acNameField.value;
       this.writeOffModal.title;
       this.writeOffText.text;
-      this.writeOffText.showConfirmBtn;
+      this.writeOffModal.showConfirmBtn;
 
       this.getTime = () => {
         // 创建一个新的 Date 对象来获取当前时间
@@ -519,7 +520,7 @@ export default {
           this.writeOffModal.title = "核销失败！";
           this.writeOffText.text =
             "当前门店与报名登记门店范围不一致，不可进行核销，请移步到对应范围的门店进行核销！";
-          this.writeOffText.showConfirmBtn = false;
+          this.writeOffModal.showConfirmBtn = false;
         } else {
           if (this.registrationOrdersData.id != this.storeId) {
             this.writeOffModal.title = "请寻找工作人员进行核销？";
