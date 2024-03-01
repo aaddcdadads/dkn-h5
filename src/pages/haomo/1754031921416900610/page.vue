@@ -505,6 +505,7 @@ export default {
       });
     },
     onButtonwanClick() {
+      //核销门店不一致
       if (
         this.registrationOrdersData.originalPickUpName !=
         this.loopList.value[3].value
