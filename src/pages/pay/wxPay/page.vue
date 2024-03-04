@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <div style="width: 100%;display: flex;margin-top:50px;justify-content: center;">
+    支付中...
+    <!-- <div style="width: 100%;display: flex;margin-top:50px;justify-content: center;">
       <u-image
         :src="src"
         :width="300"
@@ -13,7 +14,7 @@
             <p>打开微信扫一扫</p>
             <p>扫描二维码</p>
         </div>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
@@ -26,35 +27,52 @@ export default {
     };
   },
   onLoad(option) {
-    this.src = option.url
-    this.orderId = option.orderId
-    // this.setOrderStatusInterval()
+    this.orderId = option.state
+    this.setOrderStatusInterval()
     this.$wxWebPay(option.state, option.code)
   },
   methods: {
     /**
      * 设置订单状态轮询定时器
      */
-    // setOrderStatusInterval(){
-    //   let self = this
-    //   this.orderStatusInterval = setInterval(async () => {
-    //     let res = await self.$getAction("/api/dkn/registrationOrders/queryById", {
-    //       id: self.orderId
-    //     })
-    //     //支付成功
-    //     if(res.success && res.result && res.result.paymentStatus == 0){
-    //       this.$router.push("/pay-success/index");
-    //     }
-    //   }, 2000)
-    // },
+    setOrderStatusInterval(){
+      let self = this
+
+      const getOrderStatus = () => {
+        setTimeout(async () => {
+          let res = await self.$getAction("/api/dkn/registrationOrders/queryById", {
+            id: self.orderId
+          })
+          //支付成功
+          if(res.success && res.result && res.result.paymentStatus == 0){
+            this.$router.push("/pages/haomo/1753965929131151361/page?orderId=" + self.orderId);
+          }else{
+            getOrderStatus(); // 递归调用
+          }
+        }, 2000);
+      };
+
+      getOrderStatus(); // 开始倒计时
+
+      // this.orderStatusInterval = setInterval(async () => {
+      //   let res = await self.$getAction("/api/dkn/registrationOrders/queryById", {
+      //     id: self.orderId
+      //   })
+      //   //支付成功
+      //   if(res.success && res.result && res.result.paymentStatus == 0){
+      //     this.$router.push("/pages/haomo/1753965929131151361/page?orderId=" + self.orderId);
+      //   }
+      // }, 2000)
+    },
   }
 }
 </script>
 <style scoped>
 .container {
-  display: flex;
-  justify-content: center; /* 水平居中 */
-  flex-wrap: wrap;
+  /* display: flex;
+  justify-content: center;
+  flex-wrap: wrap; */
+  font-size: 18px;
 }
 .tip {
   margin-top:50px;
