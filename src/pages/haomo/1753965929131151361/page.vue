@@ -153,6 +153,115 @@
                   </template>
                 </hm-loop>
               </view>
+              <view
+                class="ele-wrapper ele-wrapper-a6cd4a45-fa66-4a6f-adbb-468a3084b102"
+              >
+                <hm-uview-bg-card
+                  width="100%"
+                  height="100%"
+                  border-radius=""
+                  box-shadow-v-shadow=""
+                  box-shadow-blur=""
+                  class="ele-a6cd4a45-fa66-4a6f-adbb-468a3084b102"
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-56be6aaa-dd55-4898-a56f-d9e9f214001b"
+                  >
+                    <hm-uview-text
+                      text="活动奖品"
+                      font-size="14px"
+                      color="#999999"
+                      class="ele-56be6aaa-dd55-4898-a56f-d9e9f214001b"
+                    >
+                    </hm-uview-text>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-f64d3d96-dfd5-48c4-bd8f-3e13c286a291"
+                  >
+                    <hm-loop
+                      :value="[]"
+                      class="ele-f64d3d96-dfd5-48c4-bd8f-3e13c286a291"
+                    >
+                      <template #default="{ item }">
+                        <view
+                          class="ele-wrapper ele-wrapper-46d21dbb-f211-4800-b3ef-9d3f082f1920"
+                        >
+                          <hm-uview-image
+                            src="item.src"
+                            width="80px"
+                            height="80px"
+                            class="ele-46d21dbb-f211-4800-b3ef-9d3f082f1920"
+                          >
+                          </hm-uview-image>
+                        </view>
+                      </template>
+                    </hm-loop>
+                  </view>
+                </hm-uview-bg-card>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-9e394a0e-dc6c-49b2-b6a4-cd9d8ed65001"
+              >
+                <hm-uview-bg-card
+                  width="100%"
+                  height="100%"
+                  padding=""
+                  box-shadow-color="#00000000"
+                  class="ele-9e394a0e-dc6c-49b2-b6a4-cd9d8ed65001"
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-d6fce4cb-04be-422f-92ad-0574acb7bb6e"
+                  >
+                    <hm-uview-field
+                      value=""
+                      label="活动名称"
+                      placeholder="活动名称"
+                      label-width="160"
+                      :label-align="'center'"
+                      maxlength="740"
+                      icon=""
+                      right-icon=""
+                      :disabled="true"
+                      class="ele-d6fce4cb-04be-422f-92ad-0574acb7bb6e"
+                    >
+                    </hm-uview-field>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-fd6a981c-8148-4be4-b176-9fd3de2528a2"
+                  >
+                    <hm-uview-field
+                      value=""
+                      label="核销截止"
+                      placeholder=""
+                      label-width="160"
+                      :label-align="'center'"
+                      maxlength="740"
+                      icon=""
+                      right-icon=""
+                      :disabled="true"
+                      class="ele-fd6a981c-8148-4be4-b176-9fd3de2528a2"
+                    >
+                    </hm-uview-field>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-7a7c7e9f-3619-4060-a495-72ad01e1b0ea"
+                  >
+                    <hm-uview-field
+                      value=""
+                      label="核销状态"
+                      placeholder="待核销/已核销"
+                      label-width="160"
+                      :label-align="'center'"
+                      maxlength="740"
+                      icon=""
+                      right-icon=""
+                      :disabled="true"
+                      class="ele-7a7c7e9f-3619-4060-a495-72ad01e1b0ea"
+                    >
+                    </hm-uview-field>
+                  </view>
+                </hm-uview-bg-card>
+              </view>
               <view class="ele-wrapper ele-wrapper-orderCard">
                 <hm-uview-bg-card
                   ref="orderCard"
@@ -368,6 +477,18 @@ export default {
       },
       "21c5606d-d727-4143-a4ce-026bb85006c1": {
         value: "item.value",
+      },
+      "f64d3d96-dfd5-48c4-bd8f-3e13c286a291": {
+        value: [],
+      },
+      "d6fce4cb-04be-422f-92ad-0574acb7bb6e": {
+        value: "",
+      },
+      "fd6a981c-8148-4be4-b176-9fd3de2528a2": {
+        value: "",
+      },
+      "7a7c7e9f-3619-4060-a495-72ad01e1b0ea": {
+        value: "",
       },
       orderCodeBut: {
         size: "mini",
@@ -674,6 +795,59 @@ export default {
 }
 
 .ele-wrapper-21c5606d-d727-4143-a4ce-026bb85006c1 {
+  width: 100%;
+  /deep/.u-textarea-class {
+    min-height: 0 !important;
+  }
+}
+
+.ele-wrapper-a6cd4a45-fa66-4a6f-adbb-468a3084b102 {
+  width: 100%;
+  .ele-prizeImageBox {
+    margin-top: 10px;
+    display: flex;
+  }
+  background-color: #fff;
+}
+
+.ele-wrapper-56be6aaa-dd55-4898-a56f-d9e9f214001b {
+  width: 83px;
+  text-align: right !important;
+}
+
+.ele-wrapper-f64d3d96-dfd5-48c4-bd8f-3e13c286a291 {
+  flex: 1;
+  margin-left: 12px;
+  /deep/.uni-scroll-view-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.ele-wrapper-46d21dbb-f211-4800-b3ef-9d3f082f1920 {
+  margin-left: 6rpx;
+}
+
+.ele-wrapper-9e394a0e-dc6c-49b2-b6a4-cd9d8ed65001 {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.ele-wrapper-d6fce4cb-04be-422f-92ad-0574acb7bb6e {
+  width: 100%;
+  /deep/.u-textarea-class {
+    min-height: 0 !important;
+  }
+}
+
+.ele-wrapper-fd6a981c-8148-4be4-b176-9fd3de2528a2 {
+  width: 100%;
+  /deep/.u-textarea-class {
+    min-height: 0 !important;
+  }
+}
+
+.ele-wrapper-7a7c7e9f-3619-4060-a495-72ad01e1b0ea {
   width: 100%;
   /deep/.u-textarea-class {
     min-height: 0 !important;
