@@ -112,11 +112,10 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-c0139046-0fb4-4399-8e1c-80df4cf6b530"
-              >
+              <view class="ele-wrapper ele-wrapper-RoundField">
                 <hm-uview-field
-                  value=""
+                  ref="RoundField"
+                  v-model:value="RoundField.value"
                   label="当前核销"
                   placeholder="当前核销轮次"
                   label-width="160"
@@ -124,15 +123,14 @@
                   icon=""
                   right-icon=""
                   :disabled="true"
-                  class="ele-c0139046-0fb4-4399-8e1c-80df4cf6b530"
+                  class="ele-RoundField"
                 >
                 </hm-uview-field>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-ba617f2b-7c6a-46bc-973b-eefe2b363c76"
-              >
+              <view class="ele-wrapper ele-wrapper-timeField">
                 <hm-uview-field
-                  value=""
+                  ref="timeField"
+                  v-model:value="timeField.value"
                   label="核销时间"
                   placeholder="当前核销轮次核销时间范围"
                   label-width="160"
@@ -140,7 +138,7 @@
                   icon=""
                   right-icon=""
                   :disabled="true"
-                  class="ele-ba617f2b-7c6a-46bc-973b-eefe2b363c76"
+                  class="ele-timeField"
                 >
                 </hm-uview-field>
               </view>
@@ -328,10 +326,10 @@ export default {
       "0ded82e1-3f32-400b-915d-b361c39f83db": {
         value: "item.value",
       },
-      "c0139046-0fb4-4399-8e1c-80df4cf6b530": {
+      RoundField: {
         value: "",
       },
-      "ba617f2b-7c6a-46bc-973b-eefe2b363c76": {
+      timeField: {
         value: "",
       },
       loseModal: {
@@ -660,7 +658,7 @@ export default {
   margin-left: 6rpx;
 }
 
-.ele-wrapper-c0139046-0fb4-4399-8e1c-80df4cf6b530 {
+.ele-wrapper-RoundField {
   width: 100%;
   /deep/.u-field {
     height: 56px;
@@ -674,7 +672,7 @@ export default {
   margin-top: 4px;
 }
 
-.ele-wrapper-ba617f2b-7c6a-46bc-973b-eefe2b363c76 {
+.ele-wrapper-timeField {
   width: 100%;
   /deep/.u-field {
     height: 56px;
