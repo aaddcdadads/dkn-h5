@@ -169,7 +169,7 @@
                       <information-input-box
                         value=""
                         :show-code="false"
-                        placeholder="* 姓名/昵称"
+                        placeholder="* 请填写参与人真实姓名"
                         class="ele-02f3d2be-8987-4eb3-8188-5d1325ad1ab5"
                       >
                       </information-input-box>
@@ -180,7 +180,7 @@
                       <information-input-box
                         value=""
                         :show-code="false"
-                        placeholder="* 身份证号"
+                        placeholder="* 请填写参与人身份证号"
                         class="ele-874f6942-fe03-4fed-90f8-05045f957f19"
                       >
                       </information-input-box>
