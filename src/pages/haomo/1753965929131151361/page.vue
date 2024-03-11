@@ -179,7 +179,7 @@
                     class="ele-wrapper ele-wrapper-f64d3d96-dfd5-48c4-bd8f-3e13c286a291"
                   >
                     <hm-loop
-                      :value="[]"
+                      :value="[{ id: '1' }]"
                       class="ele-f64d3d96-dfd5-48c4-bd8f-3e13c286a291"
                     >
                       <template #default="{ item }">
@@ -478,7 +478,11 @@ export default {
         value: "item.value",
       },
       "f64d3d96-dfd5-48c4-bd8f-3e13c286a291": {
-        value: [],
+        value: [
+          {
+            id: "1",
+          },
+        ],
       },
       "d6fce4cb-04be-422f-92ad-0574acb7bb6e": {
         value: "",
