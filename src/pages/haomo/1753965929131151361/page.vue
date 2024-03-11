@@ -186,7 +186,13 @@
                         <view
                           class="ele-wrapper ele-wrapper-f02e475f-dcaa-4baa-af0d-dec9fd130516"
                         >
-                          <hm-uview-bg-card width="80" height="" padding="0">
+                          <hm-uview-bg-card
+                            width="80"
+                            height=""
+                            padding="0"
+                            box-shadow-color="#00000000"
+                            class="ele-f02e475f-dcaa-4baa-af0d-dec9fd130516"
+                          >
                             <view
                               class="ele-wrapper ele-wrapper-41068093-4315-486b-9510-85a9b68ae7f7"
                             >
@@ -855,6 +861,10 @@ export default {
     display: flex;
     flex-wrap: wrap;
   }
+}
+
+.ele-wrapper-f02e475f-dcaa-4baa-af0d-dec9fd130516 {
+  margin-right: 12rpx;
 }
 
 .ele-wrapper-41068093-4315-486b-9510-85a9b68ae7f7 {
