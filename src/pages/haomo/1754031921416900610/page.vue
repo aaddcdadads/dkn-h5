@@ -50,6 +50,7 @@
               padding=""
               box-shadow-v-shadow=""
               box-shadow-blur=""
+              background-color="#FAFAFA"
               class="ele-bd3f0318-13d0-4d2d-bfdd-2d31bb69e33c"
             >
               <view class="ele-wrapper ele-wrapper-acNameField">
