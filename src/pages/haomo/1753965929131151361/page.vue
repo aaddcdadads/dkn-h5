@@ -193,8 +193,24 @@
                           >
                           </hm-uview-image>
                         </view>
+                        <view
+                          class="ele-wrapper ele-wrapper-b6296838-6e29-4c83-bec1-ee87c9e8dc82"
+                        >
+                          <hm-uview-text> </hm-uview-text>
+                        </view>
                       </template>
                     </hm-loop>
+                  </view>
+                  <view
+                    class="ele-wrapper ele-wrapper-8d2821d9-d7dc-4815-b575-a23d170a81e3"
+                  >
+                    <hm-uview-bg-card
+                      width="100%"
+                      height=""
+                      border-radius=""
+                      class="ele-8d2821d9-d7dc-4815-b575-a23d170a81e3"
+                    >
+                    </hm-uview-bg-card>
                   </view>
                 </hm-uview-bg-card>
               </view>
@@ -833,6 +849,10 @@ export default {
 
 .ele-wrapper-46d21dbb-f211-4800-b3ef-9d3f082f1920 {
   margin-left: 6rpx;
+}
+
+.ele-wrapper-8d2821d9-d7dc-4815-b575-a23d170a81e3 {
+  width: 100%;
 }
 
 .ele-wrapper-9e394a0e-dc6c-49b2-b6a4-cd9d8ed65001 {
