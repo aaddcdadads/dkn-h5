@@ -40,8 +40,16 @@
           src="https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E5%AF%BC%E5%87%BAicon/%E4%BA%BA%E6%95%B0%402x.png"
           alt="" /></view>
 
+      <view class="content"><span>活动地址：{{ item.address }}</span></view>
+    </view>
+    <view class="div">
+      <view class="imgleft"><img
+          src="https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E5%AF%BC%E5%87%BAicon/%E4%BA%BA%E6%95%B0%402x.png"
+          alt="" /></view>
+
       <view class="content"><span>已报名人数：{{ item.number }}人</span></view>
     </view>
+ 
   </view>
 </template>
 
@@ -60,6 +68,7 @@ export default {
           activityType: "跑步",
           requirements: "1.314km/5.20km/9.99km",
           projectList: [{ name: "活动1" }, { name: "活动2" }],
+          address: "上海市浦东新区世博大道1368号世博园五区B层11-14号（邮编：200120）",
           number: "12331"
         };
       },
