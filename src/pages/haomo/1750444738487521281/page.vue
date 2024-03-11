@@ -141,11 +141,6 @@
                 </hm-uview-text>
               </view>
               <view
-                class="ele-wrapper ele-wrapper-d9bb9b64-bfd1-4be1-97f6-a7afd8093dc6"
-              >
-                <uni-tooltip content="111"> </uni-tooltip>
-              </view>
-              <view
                 class="ele-wrapper ele-wrapper-2bb118e7-6403-448b-8985-fd3619976ad9"
               >
                 <hm-loop
@@ -1600,7 +1595,7 @@ export default {
 
 .ele-wrapper-874f6942-fe03-4fed-90f8-05045f957f19 {
   width: 100%;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 .ele-wrapper-shopPop {
