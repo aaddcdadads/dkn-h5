@@ -170,7 +170,7 @@
                     <hm-uview-text
                       text="活动奖品"
                       font-size="14px"
-                      color="#999999"
+                      color="#303133"
                       class="ele-56be6aaa-dd55-4898-a56f-d9e9f214001b"
                     >
                     </hm-uview-text>
@@ -187,7 +187,6 @@
                           class="ele-wrapper ele-wrapper-46d21dbb-f211-4800-b3ef-9d3f082f1920"
                         >
                           <hm-uview-image
-                            src="item.src"
                             width="80px"
                             height="80px"
                             class="ele-46d21dbb-f211-4800-b3ef-9d3f082f1920"
