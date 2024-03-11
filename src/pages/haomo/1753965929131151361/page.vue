@@ -960,7 +960,7 @@ export default {
 }
 
 .ele-wrapper-b335835b-d865-4eb1-923f-df865a96a324 {
-  width: 83px;
+  width: 80px;
   text-align: right !important;
   float: left;
 }
@@ -997,7 +997,7 @@ export default {
 }
 
 .ele-wrapper-56be6aaa-dd55-4898-a56f-d9e9f214001b {
-  width: 83px;
+  width: 80px;
   text-align: right !important;
   float: left;
 }
