@@ -204,7 +204,7 @@
                               <hm-uview-image
                                 width="80px"
                                 height="80px"
-                                border-redius="8"
+                                border-redius="12px"
                                 class="ele-41068093-4315-486b-9510-85a9b68ae7f7"
                               >
                               </hm-uview-image>
@@ -875,6 +875,7 @@ export default {
 
 .ele-wrapper-41068093-4315-486b-9510-85a9b68ae7f7 {
   width: 100%;
+  border-radius: 12px;
 }
 
 .ele-wrapper-1a96e10e-6c33-42db-a254-9399b96eeaf6 {
