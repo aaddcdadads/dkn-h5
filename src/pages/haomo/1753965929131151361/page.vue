@@ -176,6 +176,41 @@
                     </hm-uview-text>
                   </view>
                   <view
+                    class="ele-wrapper ele-wrapper-c9cce6fb-99dd-4ab1-9f49-3e8189ceabfb"
+                  >
+                    <hm-loop
+                      :value="[{ id: '1' }, { id: '2' }]"
+                      class="ele-c9cce6fb-99dd-4ab1-9f49-3e8189ceabfb"
+                    >
+                      <template #default="{ item }">
+                        <view
+                          class="ele-wrapper ele-wrapper-f02e475f-dcaa-4baa-af0d-dec9fd130516"
+                        >
+                          <hm-uview-bg-card width="80" height="">
+                            <view
+                              class="ele-wrapper ele-wrapper-41068093-4315-486b-9510-85a9b68ae7f7"
+                            >
+                              <hm-uview-image
+                                width="80px"
+                                height="80px"
+                                class="ele-41068093-4315-486b-9510-85a9b68ae7f7"
+                              >
+                              </hm-uview-image>
+                            </view>
+                            <view
+                              class="ele-wrapper ele-wrapper-1a96e10e-6c33-42db-a254-9399b96eeaf6"
+                            >
+                              <hm-uview-text
+                                class="ele-1a96e10e-6c33-42db-a254-9399b96eeaf6"
+                              >
+                              </hm-uview-text>
+                            </view>
+                          </hm-uview-bg-card>
+                        </view>
+                      </template>
+                    </hm-loop>
+                  </view>
+                  <view
                     class="ele-wrapper ele-wrapper-f64d3d96-dfd5-48c4-bd8f-3e13c286a291"
                   >
                     <hm-loop
@@ -492,6 +527,16 @@ export default {
       },
       "21c5606d-d727-4143-a4ce-026bb85006c1": {
         value: "item.value",
+      },
+      "c9cce6fb-99dd-4ab1-9f49-3e8189ceabfb": {
+        value: [
+          {
+            id: "1",
+          },
+          {
+            id: "2",
+          },
+        ],
       },
       "f64d3d96-dfd5-48c4-bd8f-3e13c286a291": {
         value: [
@@ -836,6 +881,24 @@ export default {
   width: 83px;
   text-align: right !important;
   float: left;
+}
+
+.ele-wrapper-c9cce6fb-99dd-4ab1-9f49-3e8189ceabfb {
+  flex: 1;
+  margin-left: 12px;
+  /deep/.uni-scroll-view-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.ele-wrapper-41068093-4315-486b-9510-85a9b68ae7f7 {
+  width: 100%;
+}
+
+.ele-wrapper-1a96e10e-6c33-42db-a254-9399b96eeaf6 {
+  width: 100%;
+  text-align: center;
 }
 
 .ele-wrapper-f64d3d96-dfd5-48c4-bd8f-3e13c286a291 {
