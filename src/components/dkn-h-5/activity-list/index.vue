@@ -37,10 +37,10 @@
     </view>
     <view class="div">
       <view class="imgleft"><img
-          src="https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E5%AF%BC%E5%87%BAicon/%E4%BA%BA%E6%95%B0%402x.png"
+          src="https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E5%9C%B0%E5%9D%80.png"
           alt="" /></view>
 
-      <view class="content"><span>活动地址：{{ item.address }}</span></view>
+      <view class="content"><span>活动地址：{{ item.address }}人</span></view>
     </view>
     <view class="div">
       <view class="imgleft"><img
@@ -133,11 +133,10 @@ export default {
 
 .imgleft {
   margin: 0 24rpx;
-  width: 28rpx;
-  height: 28rpx;
-
+width: 28rpx;
+height: 28rpx;
   >img {
-    width: 100%;
+    width: 28rpx;
     height: auto;
   }
 }
