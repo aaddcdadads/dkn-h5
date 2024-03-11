@@ -111,6 +111,38 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
+              <view
+                class="ele-wrapper ele-wrapper-c0139046-0fb4-4399-8e1c-80df4cf6b530"
+              >
+                <hm-uview-field
+                  value=""
+                  label="当前核销"
+                  placeholder="当前核销轮次"
+                  label-width="160"
+                  :label-align="'center'"
+                  icon=""
+                  right-icon=""
+                  :disabled="true"
+                  class="ele-c0139046-0fb4-4399-8e1c-80df4cf6b530"
+                >
+                </hm-uview-field>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-ba617f2b-7c6a-46bc-973b-eefe2b363c76"
+              >
+                <hm-uview-field
+                  value=""
+                  label="核销时间"
+                  placeholder="当前核销轮次核销时间范围"
+                  label-width="160"
+                  :label-align="'center'"
+                  icon=""
+                  right-icon=""
+                  :disabled="true"
+                  class="ele-ba617f2b-7c6a-46bc-973b-eefe2b363c76"
+                >
+                </hm-uview-field>
+              </view>
               <view class="ele-wrapper ele-wrapper-writeOffModal">
                 <hm-uview-modal
                   ref="writeOffModal"
@@ -294,6 +326,12 @@ export default {
       },
       "0ded82e1-3f32-400b-915d-b361c39f83db": {
         value: "item.value",
+      },
+      "c0139046-0fb4-4399-8e1c-80df4cf6b530": {
+        value: "",
+      },
+      "ba617f2b-7c6a-46bc-973b-eefe2b363c76": {
+        value: "",
       },
       loseModal: {
         visible: false,
@@ -617,6 +655,30 @@ export default {
 
 .ele-wrapper-2b090494-74e9-4208-93de-43455651c087 {
   margin-left: 6rpx;
+}
+
+.ele-wrapper-c0139046-0fb4-4399-8e1c-80df4cf6b530 {
+  width: 100%;
+  /deep/.u-field {
+    height: 56px;
+    display: flex;
+    align-items: center;
+  }
+  /deep/.u-label-text {
+    color: #999999;
+  }
+}
+
+.ele-wrapper-ba617f2b-7c6a-46bc-973b-eefe2b363c76 {
+  width: 100%;
+  /deep/.u-field {
+    height: 56px;
+    display: flex;
+    align-items: center;
+  }
+  /deep/.u-label-text {
+    color: #999999;
+  }
 }
 
 .ele-wrapper-37812c82-78a2-4dfe-b077-d34a6cc52c59 {
