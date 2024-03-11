@@ -160,6 +160,7 @@
                   width="100%"
                   height="100%"
                   border-radius=""
+                  padding="0"
                   box-shadow-v-shadow=""
                   box-shadow-blur=""
                   class="ele-175f2356-1c32-4ff9-ada5-4a2ca1772149"
@@ -184,13 +185,24 @@
                             class="ele-5b4f54be-8ce1-4562-9307-6f48f029b641"
                           >
                             <view
+                              class="ele-wrapper ele-wrapper-b335835b-d865-4eb1-923f-df865a96a324"
+                            >
+                              <hm-uview-text
+                                text="套餐A"
+                                font-size="14px"
+                                color="#303133"
+                                class="ele-b335835b-d865-4eb1-923f-df865a96a324"
+                              >
+                              </hm-uview-text>
+                            </view>
+                            <view
                               class="ele-wrapper ele-wrapper-8b1acc9a-b790-49dc-a469-23a65da4ce6f"
                             >
                               <hm-uview-field
                                 value=""
-                                label="套餐A"
+                                label=""
                                 placeholder=""
-                                label-width="160"
+                                label-width="0"
                                 :label-align="'center'"
                                 maxlength="740"
                                 icon=""
@@ -947,15 +959,23 @@ export default {
   background-color: #fff;
 }
 
+.ele-wrapper-b335835b-d865-4eb1-923f-df865a96a324 {
+  width: 83px;
+  text-align: right !important;
+  float: left;
+}
+
 .ele-wrapper-8b1acc9a-b790-49dc-a469-23a65da4ce6f {
-  width: 100%;
+  width: calc(100% - 83px);
   /deep/.u-textarea-class {
     min-height: 0 !important;
   }
+  float: right;
 }
 
 .ele-wrapper-702558c6-4649-40cc-9382-689b7a34f77f {
-  width: 100%;
+  width: calc(100% - 83px);
+  float: right;
   /deep/.u-field {
     height: 56px;
     display: flex;
