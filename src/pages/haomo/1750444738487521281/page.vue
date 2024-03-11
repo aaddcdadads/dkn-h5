@@ -163,6 +163,10 @@
                     >
                       <information-input-box
                         value=""
+                        :left-src="[
+                          'https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E7%94%A8%E6%88%B7%20(1).png',
+                          'https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E7%94%A8%E6%88%B7.png',
+                        ]"
                         :show-code="false"
                         placeholder="* 请填写参与人真实姓名"
                         class="ele-02f3d2be-8987-4eb3-8188-5d1325ad1ab5"
@@ -174,6 +178,10 @@
                     >
                       <information-input-box
                         value=""
+                        :left-src="[
+                          'https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E8%BA%AB%E4%BB%BD%E8%AF%81%E9%9D%A2%E6%80%A7.png',
+                          'https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E8%BA%AB%E4%BB%BD%E8%AF%81%E9%9D%A2%E6%80%A7%20(1).png',
+                        ]"
                         :show-code="false"
                         placeholder="* 请填写参与人身份证号"
                         class="ele-874f6942-fe03-4fed-90f8-05045f957f19"
@@ -1145,9 +1153,17 @@ export default {
       },
       "02f3d2be-8987-4eb3-8188-5d1325ad1ab5": {
         value: "",
+        leftSrc: [
+          "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E7%94%A8%E6%88%B7%20(1).png",
+          "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E7%94%A8%E6%88%B7.png",
+        ],
       },
       "874f6942-fe03-4fed-90f8-05045f957f19": {
         value: "",
+        leftSrc: [
+          "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E8%BA%AB%E4%BB%BD%E8%AF%81%E9%9D%A2%E6%80%A7.png",
+          "https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E8%BA%AB%E4%BB%BD%E8%AF%81%E9%9D%A2%E6%80%A7%20(1).png",
+        ],
       },
     };
   },
