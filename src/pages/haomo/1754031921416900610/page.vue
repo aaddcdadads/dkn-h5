@@ -630,6 +630,7 @@ export default {
   /deep/.u-label-text {
     color: #999999;
   }
+  background-color: #fff;
 }
 
 .ele-wrapper-prizeImageBox {
