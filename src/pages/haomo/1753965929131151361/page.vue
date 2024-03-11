@@ -186,7 +186,7 @@
                         <view
                           class="ele-wrapper ele-wrapper-f02e475f-dcaa-4baa-af0d-dec9fd130516"
                         >
-                          <hm-uview-bg-card width="80" height="">
+                          <hm-uview-bg-card width="80" height="" padding="0">
                             <view
                               class="ele-wrapper ele-wrapper-41068093-4315-486b-9510-85a9b68ae7f7"
                             >
@@ -201,37 +201,12 @@
                               class="ele-wrapper ele-wrapper-1a96e10e-6c33-42db-a254-9399b96eeaf6"
                             >
                               <hm-uview-text
+                                font-size="14px"
                                 class="ele-1a96e10e-6c33-42db-a254-9399b96eeaf6"
                               >
                               </hm-uview-text>
                             </view>
                           </hm-uview-bg-card>
-                        </view>
-                      </template>
-                    </hm-loop>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-f64d3d96-dfd5-48c4-bd8f-3e13c286a291"
-                  >
-                    <hm-loop
-                      :value="[{ id: '1' }, { id: '2' }]"
-                      class="ele-f64d3d96-dfd5-48c4-bd8f-3e13c286a291"
-                    >
-                      <template #default="{ item }">
-                        <view
-                          class="ele-wrapper ele-wrapper-46d21dbb-f211-4800-b3ef-9d3f082f1920"
-                        >
-                          <hm-uview-image
-                            width="80px"
-                            height="80px"
-                            class="ele-46d21dbb-f211-4800-b3ef-9d3f082f1920"
-                          >
-                          </hm-uview-image>
-                        </view>
-                        <view
-                          class="ele-wrapper ele-wrapper-b6296838-6e29-4c83-bec1-ee87c9e8dc82"
-                        >
-                          <hm-uview-text> </hm-uview-text>
                         </view>
                       </template>
                     </hm-loop>
@@ -529,16 +504,6 @@ export default {
         value: "item.value",
       },
       "c9cce6fb-99dd-4ab1-9f49-3e8189ceabfb": {
-        value: [
-          {
-            id: "1",
-          },
-          {
-            id: "2",
-          },
-        ],
-      },
-      "f64d3d96-dfd5-48c4-bd8f-3e13c286a291": {
         value: [
           {
             id: "1",
@@ -885,7 +850,7 @@ export default {
 
 .ele-wrapper-c9cce6fb-99dd-4ab1-9f49-3e8189ceabfb {
   flex: 1;
-  margin-left: 12px;
+  margin-left: 24rpx;
   /deep/.uni-scroll-view-content {
     display: flex;
     flex-wrap: wrap;
@@ -899,19 +864,6 @@ export default {
 .ele-wrapper-1a96e10e-6c33-42db-a254-9399b96eeaf6 {
   width: 100%;
   text-align: center;
-}
-
-.ele-wrapper-f64d3d96-dfd5-48c4-bd8f-3e13c286a291 {
-  flex: 1;
-  margin-left: 12px;
-  /deep/.uni-scroll-view-content {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.ele-wrapper-46d21dbb-f211-4800-b3ef-9d3f082f1920 {
-  margin-left: 6rpx;
 }
 
 .ele-wrapper-8d2821d9-d7dc-4815-b575-a23d170a81e3 {
