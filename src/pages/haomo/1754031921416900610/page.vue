@@ -671,6 +671,7 @@ export default {
     color: #999999;
   }
   background-color: #fff;
+  margin-top: 4px;
 }
 
 .ele-wrapper-ba617f2b-7c6a-46bc-973b-eefe2b363c76 {
