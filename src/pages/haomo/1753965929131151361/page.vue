@@ -156,7 +156,71 @@
               <view
                 class="ele-wrapper ele-wrapper-175f2356-1c32-4ff9-ada5-4a2ca1772149"
               >
-                <hm-uview-bg-card> </hm-uview-bg-card>
+                <hm-uview-bg-card
+                  width="100%"
+                  height="100%"
+                  border-radius=""
+                  box-shadow-v-shadow=""
+                  box-shadow-blur=""
+                  class="ele-175f2356-1c32-4ff9-ada5-4a2ca1772149"
+                >
+                  <view
+                    class="ele-wrapper ele-wrapper-4be55d50-74e3-43fe-99f0-7976d160f032"
+                  >
+                    <hm-loop
+                      :value="[{ id: '1' }]"
+                      class="ele-4be55d50-74e3-43fe-99f0-7976d160f032"
+                    >
+                      <template #default="{ item }">
+                        <view
+                          class="ele-wrapper ele-wrapper-5b4f54be-8ce1-4562-9307-6f48f029b641"
+                        >
+                          <hm-uview-bg-card
+                            width="100%"
+                            height="100%"
+                            border-radius=""
+                            box-shadow-v-shadow=""
+                            box-shadow-blur=""
+                            class="ele-5b4f54be-8ce1-4562-9307-6f48f029b641"
+                          >
+                            <view
+                              class="ele-wrapper ele-wrapper-8b1acc9a-b790-49dc-a469-23a65da4ce6f"
+                            >
+                              <hm-uview-field
+                                value=""
+                                label="套餐A"
+                                placeholder=""
+                                label-width="160"
+                                :label-align="'center'"
+                                icon=""
+                                right-icon=""
+                                :disabled="true"
+                                class="ele-8b1acc9a-b790-49dc-a469-23a65da4ce6f"
+                              >
+                              </hm-uview-field>
+                            </view>
+                            <view
+                              class="ele-wrapper ele-wrapper-702558c6-4649-40cc-9382-689b7a34f77f"
+                            >
+                              <hm-uview-field
+                                value=""
+                                label=""
+                                placeholder=""
+                                label-width="160"
+                                :label-align="'center'"
+                                icon=""
+                                right-icon=""
+                                :disabled="true"
+                                class="ele-702558c6-4649-40cc-9382-689b7a34f77f"
+                              >
+                              </hm-uview-field>
+                            </view>
+                          </hm-uview-bg-card>
+                        </view>
+                      </template>
+                    </hm-loop>
+                  </view>
+                </hm-uview-bg-card>
               </view>
               <view
                 class="ele-wrapper ele-wrapper-a6cd4a45-fa66-4a6f-adbb-468a3084b102"
@@ -515,6 +579,19 @@ export default {
       "21c5606d-d727-4143-a4ce-026bb85006c1": {
         value: "item.value",
       },
+      "4be55d50-74e3-43fe-99f0-7976d160f032": {
+        value: [
+          {
+            id: "1",
+          },
+        ],
+      },
+      "8b1acc9a-b790-49dc-a469-23a65da4ce6f": {
+        value: "",
+      },
+      "702558c6-4649-40cc-9382-689b7a34f77f": {
+        value: "",
+      },
       "c9cce6fb-99dd-4ab1-9f49-3e8189ceabfb": {
         value: [
           {
@@ -843,6 +920,56 @@ export default {
   /deep/.u-textarea-class {
     min-height: 0 !important;
   }
+}
+
+.ele-wrapper-175f2356-1c32-4ff9-ada5-4a2ca1772149 {
+  width: 100%;
+  .ele-prizeImageBox {
+    margin-top: 10px;
+    display: flex;
+  }
+  background-color: #fff;
+}
+
+.ele-wrapper-4be55d50-74e3-43fe-99f0-7976d160f032 {
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 10px;
+}
+
+.ele-wrapper-5b4f54be-8ce1-4562-9307-6f48f029b641 {
+  width: 100%;
+  .ele-prizeImageBox {
+    margin-top: 10px;
+    display: flex;
+  }
+  background-color: #fff;
+}
+
+.ele-wrapper-8b1acc9a-b790-49dc-a469-23a65da4ce6f {
+  width: 100%;
+  /deep/.u-field {
+    height: 56px;
+    display: flex;
+    align-items: center;
+  }
+  /deep/.u-label-text {
+    color: #999999;
+  }
+  background-color: #fff;
+}
+
+.ele-wrapper-702558c6-4649-40cc-9382-689b7a34f77f {
+  width: 100%;
+  /deep/.u-field {
+    height: 56px;
+    display: flex;
+    align-items: center;
+  }
+  /deep/.u-label-text {
+    color: #999999;
+  }
+  background-color: #fff;
 }
 
 .ele-wrapper-a6cd4a45-fa66-4a6f-adbb-468a3084b102 {
