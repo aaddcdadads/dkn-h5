@@ -117,6 +117,36 @@
               </view>
             </hm-uview-bg-card>
           </view>
+          <view
+            class="ele-wrapper ele-wrapper-c04e86cb-8d7d-4cf7-970b-f6c1a35dd6d2"
+          >
+            <hm-uview-bg-card
+              width="100%"
+              height="100%"
+              padding="18"
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+              box-shadow-spread=""
+              background-color="#FFFFFF"
+              class="ele-c04e86cb-8d7d-4cf7-970b-f6c1a35dd6d2"
+            >
+              <view
+                class="ele-wrapper ele-wrapper-fc61ffbc-5000-4008-be66-490d31c2dc31"
+              >
+                <hm-uview-text
+                  text="参与人员信息填写"
+                  font-size="16px"
+                  class="ele-fc61ffbc-5000-4008-be66-490d31c2dc31"
+                >
+                </hm-uview-text>
+              </view>
+              <view
+                class="ele-wrapper ele-wrapper-d9bb9b64-bfd1-4be1-97f6-a7afd8093dc6"
+              >
+                <uni-tooltip content="111"> </uni-tooltip>
+              </view>
+            </hm-uview-bg-card>
+          </view>
           <view class="ele-wrapper ele-wrapper-shopPop">
             <hm-uview-popup
               ref="shopPop"
@@ -1481,6 +1511,15 @@ export default {
 .ele-wrapper-storeInput {
   width: 100%;
   margin-top: 20px;
+}
+
+.ele-wrapper-c04e86cb-8d7d-4cf7-970b-f6c1a35dd6d2 {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.ele-wrapper-fc61ffbc-5000-4008-be66-490d31c2dc31 {
+  margin-bottom: 13px;
 }
 
 .ele-wrapper-shopPop {
