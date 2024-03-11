@@ -166,7 +166,7 @@
                     <hm-uview-field
                       ref="orderCode"
                       v-model:value="orderCode.value"
-                      label="订单编号"
+                      label="报名项目"
                       placeholder=""
                       label-width="160"
                       :label-align="'center'"
