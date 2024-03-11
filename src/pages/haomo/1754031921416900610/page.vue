@@ -639,6 +639,7 @@ export default {
     margin-top: 10px;
     display: flex;
   }
+  background-color: #fff;
 }
 
 .ele-wrapper-a46c4597-9e01-4191-8f9e-fc2396ae8aea {
@@ -669,6 +670,7 @@ export default {
   /deep/.u-label-text {
     color: #999999;
   }
+  background-color: #fff;
 }
 
 .ele-wrapper-ba617f2b-7c6a-46bc-973b-eefe2b363c76 {
@@ -681,6 +683,7 @@ export default {
   /deep/.u-label-text {
     color: #999999;
   }
+  background-color: #fff;
 }
 
 .ele-wrapper-37812c82-78a2-4dfe-b077-d34a6cc52c59 {
