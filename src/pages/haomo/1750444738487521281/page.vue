@@ -145,6 +145,49 @@
               >
                 <uni-tooltip content="111"> </uni-tooltip>
               </view>
+              <view
+                class="ele-wrapper ele-wrapper-2bb118e7-6403-448b-8985-fd3619976ad9"
+              >
+                <hm-loop
+                  :value="[{ id: '1' }]"
+                  class="ele-2bb118e7-6403-448b-8985-fd3619976ad9"
+                >
+                  <template #default="{ item }">
+                    <view
+                      class="ele-wrapper ele-wrapper-fc4f02c0-21ff-451d-8808-04e971cf8711"
+                    >
+                      <hm-uview-text
+                        text="套餐A-参与人1："
+                        font-size="14px"
+                        class="ele-fc4f02c0-21ff-451d-8808-04e971cf8711"
+                      >
+                      </hm-uview-text>
+                    </view>
+                    <view
+                      class="ele-wrapper ele-wrapper-02f3d2be-8987-4eb3-8188-5d1325ad1ab5"
+                    >
+                      <information-input-box
+                        value=""
+                        :show-code="false"
+                        placeholder="* 姓名/昵称"
+                        class="ele-02f3d2be-8987-4eb3-8188-5d1325ad1ab5"
+                      >
+                      </information-input-box>
+                    </view>
+                    <view
+                      class="ele-wrapper ele-wrapper-874f6942-fe03-4fed-90f8-05045f957f19"
+                    >
+                      <information-input-box
+                        value=""
+                        :show-code="false"
+                        placeholder="* 身份证号"
+                        class="ele-874f6942-fe03-4fed-90f8-05045f957f19"
+                      >
+                      </information-input-box>
+                    </view>
+                  </template>
+                </hm-loop>
+              </view>
             </hm-uview-bg-card>
           </view>
           <view class="ele-wrapper ele-wrapper-shopPop">
@@ -405,6 +448,7 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import EventRegistrationCard from "/@/components/dkn-h-5/event-registration-card/index.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
+import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import StoreSelection from "/@/components/dkn-h-5/store-selection/index.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
@@ -418,6 +462,7 @@ export default {
     HmUviewText,
     EventRegistrationCard,
     InformationInputBox,
+    HmLoop,
     HmUviewPopup,
     StoreSelection,
     HmUviewImage,
@@ -1096,6 +1141,19 @@ export default {
       payPopup: {
         show: false,
       },
+      "2bb118e7-6403-448b-8985-fd3619976ad9": {
+        value: [
+          {
+            id: "1",
+          },
+        ],
+      },
+      "02f3d2be-8987-4eb3-8188-5d1325ad1ab5": {
+        value: "",
+      },
+      "874f6942-fe03-4fed-90f8-05045f957f19": {
+        value: "",
+      },
     };
   },
   watch: {},
@@ -1520,6 +1578,29 @@ export default {
 
 .ele-wrapper-fc61ffbc-5000-4008-be66-490d31c2dc31 {
   margin-bottom: 13px;
+}
+
+.ele-wrapper-2bb118e7-6403-448b-8985-fd3619976ad9 {
+  width: 100%;
+  .ele-prizeImageBox {
+    margin-top: 10px;
+    display: flex;
+  }
+  background-color: #fff;
+}
+
+.ele-wrapper-fc4f02c0-21ff-451d-8808-04e971cf8711 {
+  margin-bottom: 13px;
+}
+
+.ele-wrapper-02f3d2be-8987-4eb3-8188-5d1325ad1ab5 {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.ele-wrapper-874f6942-fe03-4fed-90f8-05045f957f19 {
+  width: 100%;
+  margin-top: 5px;
 }
 
 .ele-wrapper-shopPop {
