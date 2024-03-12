@@ -4,7 +4,10 @@
       <view
         class="ele-wrapper ele-wrapper-b186075d-5075-4af4-b62d-99ae640fb900"
       >
-        <package-number-component> </package-number-component>
+        <package-number-component
+          class="ele-b186075d-5075-4af4-b62d-99ae640fb900"
+        >
+        </package-number-component>
       </view>
     </view>
   </view>
@@ -31,5 +34,11 @@ export default {
 
 <style lang="less" scoped>
 .page {
+}
+
+.ele-wrapper-b186075d-5075-4af4-b62d-99ae640fb900 {
+  /deep/.input {
+    height: 39px !important;
+  }
 }
 </style>
