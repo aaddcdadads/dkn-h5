@@ -783,7 +783,12 @@ export default {
             if (res.code != 200 || res.result.records.length <= 0) return;
             this.personnelInformationList.value = res.result.records.map(
               (personnelItem) => {
-                if (!personnelItem.participants) return;
+                if (!personnelItem.participants) {
+                  return {
+                    ...personnelItem,
+                    list: [],
+                  };
+                }
                 let list = JSON.parse(personnelItem.participants);
                 list.forEach((listItem) => {
                   listItem.value = listItem.name + " - " + listItem.id_card;
