@@ -190,7 +190,7 @@
                         },
                         {
                           id: '1',
-                          name: '妞妞',
+                          name: '23123',
                           list: [
                             {
                               id: '1',
@@ -607,7 +607,7 @@ export default {
           },
           {
             id: "1",
-            name: "妞妞",
+            name: "23123",
             list: [
               {
                 id: "1",
