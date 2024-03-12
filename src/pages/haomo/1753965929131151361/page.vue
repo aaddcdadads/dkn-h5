@@ -211,6 +211,14 @@
                     >
                       <template #default="{ item }">
                         <view
+                          class="ele-wrapper ele-wrapper-8ae6c1ae-5d0c-40f6-836c-616584055652"
+                        >
+                          <package-number-component
+                            class="ele-8ae6c1ae-5d0c-40f6-836c-616584055652"
+                          >
+                          </package-number-component>
+                        </view>
+                        <view
                           class="ele-wrapper ele-wrapper-aa10b0d2-6c06-433e-bdf5-edaf9a2139d0"
                         >
                           <package-number-component
@@ -1000,6 +1008,16 @@ export default {
   width: 100%;
   background-color: #ffffff;
   margin-top: 10px;
+}
+
+.ele-wrapper-8ae6c1ae-5d0c-40f6-836c-616584055652 {
+  width: 100%;
+  /deep/.uni-input-input {
+    font-size: 14px !important;
+  }
+  /deep/.input {
+    height: 39px !important;
+  }
 }
 
 .ele-wrapper-aa10b0d2-6c06-433e-bdf5-edaf9a2139d0 {
