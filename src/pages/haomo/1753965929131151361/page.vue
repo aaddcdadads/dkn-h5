@@ -791,9 +791,12 @@ export default {
             console.log("viewRegistrationOrdersActivityProject--", res);
             if (res.code != 200 || res.result.records.length <= 0) return;
             this.personnelInformationList.value = res.result.records.map(
-              (item) => {
+              (personnelItem) => {
+                if (!personnelItem.participants) return;
+                let list = JSON.parse(personnelItem.participants);
+                console.log("personnelItemlist---", list);
                 return {
-                  ...item,
+                  ...personnelItem,
                   list: [
                     {
                       id: "1",
