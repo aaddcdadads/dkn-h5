@@ -159,12 +159,12 @@
                 class="ele-wrapper ele-wrapper-175f2356-1c32-4ff9-ada5-4a2ca1772149"
               >
                 <hm-uview-bg-card
-                  padding="0"
-                  box-shadow-blur=""
-                  box-shadow-v-shadow=""
-                  border-radius=""
                   width="100%"
                   height="100%"
+                  border-radius=""
+                  padding="0"
+                  box-shadow-v-shadow=""
+                  box-shadow-blur=""
                   class="ele-175f2356-1c32-4ff9-ada5-4a2ca1772149"
                 >
                   <view
@@ -662,7 +662,7 @@ export default {
       this.buttonwan.disabled;
       this.buttonwanCard.hidden;
       this.getImg = function (url) {
-        if (url.substring(0, 4) === "http") {
+        if (!url || url.substring(0, 4) === "http") {
           return url;
         }
         return `/api/sys/common/static/${url}`;
