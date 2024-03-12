@@ -257,18 +257,11 @@
                     >
                     </hm-uview-text>
                   </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-c9cce6fb-99dd-4ab1-9f49-3e8189ceabfb"
-                  >
+                  <view class="ele-wrapper ele-wrapper-activityImgList">
                     <hm-loop
-                      :value="[
-                        { id: '1' },
-                        { id: '2' },
-                        { id: '3' },
-                        { id: '5' },
-                        { id: '5' },
-                      ]"
-                      class="ele-c9cce6fb-99dd-4ab1-9f49-3e8189ceabfb"
+                      ref="activityImgList"
+                      v-model:value="activityImgList.value"
+                      class="ele-activityImgList"
                     >
                       <template #default="{ item }">
                         <view
@@ -595,6 +588,13 @@ export default {
       imgList: {
         list: [],
       },
+      activityImgList: {
+        value: [
+          {
+            id: "1",
+          },
+        ],
+      },
       "21c5606d-d727-4143-a4ce-026bb85006c1": {
         value: "item.value",
       },
@@ -613,25 +613,6 @@ export default {
       },
       "702558c6-4649-40cc-9382-689b7a34f77f": {
         value: "",
-      },
-      "c9cce6fb-99dd-4ab1-9f49-3e8189ceabfb": {
-        value: [
-          {
-            id: "1",
-          },
-          {
-            id: "2",
-          },
-          {
-            id: "3",
-          },
-          {
-            id: "5",
-          },
-          {
-            id: "5",
-          },
-        ],
       },
       "d6fce4cb-04be-422f-92ad-0574acb7bb6e": {
         value: "",
@@ -771,7 +752,6 @@ export default {
               return;
             }
             //this.loopList.value = orderProjectRes.result.records
-
             this.imgList.list = orderProjectRes.result.records.map((item) => {
               return {
                 ...item,
@@ -785,7 +765,27 @@ export default {
           });
         }
       );
+
+      //查询奖品图片
+      this.$getAction("/api/dkn/activityImg/list", {
+        pageNo: 1,
+        pageSize: -1,
+        activityId: this.activityId,
+        type: 1,
+        column: "sortNo",
+        order: "asc",
+      }).then((res) => {
+        console.log("activityImg--", res);
+        if (res.code != 200 || res.result.records.length <= 0) return;
+        this.activityImgList.value = res.result.records.map((item) => {
+          return {
+            ...item,
+            src: this.getImg(item.path),
+          };
+        });
+      });
     },
+
     onOnLoad(options) {
       console.log("onLoad");
       if (options.channelId) {
@@ -1020,7 +1020,7 @@ export default {
   float: left;
 }
 
-.ele-wrapper-c9cce6fb-99dd-4ab1-9f49-3e8189ceabfb {
+.ele-wrapper-activityImgList {
   flex: 1;
   margin-left: 24rpx;
   /deep/.uni-scroll-view-content {
