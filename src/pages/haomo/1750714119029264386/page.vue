@@ -1271,11 +1271,18 @@ export default {
         self.phoneText.text = self.activityExtItem.customerService;
       };
       self.getDateToFormat = function (date) {
-        const dateTime = new Date(date);
-        const year = dateTime.getFullYear();
-        const month = dateTime.getMonth() + 1;
-        const day = dateTime.getDate();
-        return `${year}-${month}-${day}`;
+        // const dateTime = new Date(date);
+        // const year = dateTime.getFullYear();
+        // const month = dateTime.getMonth() + 1;
+        // const day = dateTime.getDate();
+        if (!date) {
+          return ""
+        }
+        date = date.split(" ")
+        if (!date.length) {
+          return
+        }
+        return date[0];
       };
       self.setImg = function () {
         let imgOne = [];
