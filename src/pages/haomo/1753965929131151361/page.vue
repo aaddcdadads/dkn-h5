@@ -744,6 +744,7 @@ export default {
           this.pickUpStatusText.text = item.pickUpStatusText;
           this.acNameText.text = item.acName;
 
+          //获取当前第几轮信息
           //let dateString = "2024-03-01 15:07:04 至 2024-03-02 15:07:12,2024-03-03 15:07:31 至 2024-03-04 15:07:37,2024-03-05 15:07:53 至 2024-03-06 15:07:56";
           let roundDates = item.writeTimeGroups.split(",");
           let currentTime = new Date();
@@ -757,6 +758,11 @@ export default {
               times[1].trim().split(" ")[0];
             this.pickUpTime.text =
               "请在" + timeText + "之内完成第" + (currentRound + 1) + "轮核销";
+            //查询当前轮有没有核销
+            let writes = item.writeStatusGroups.splic(",");
+            if (writes[currentRound] == "已核销") {
+              this.buttonwanCard.hidden = true;
+            }
           } else {
             let startTime = roundDates[0].split(" ")[0];
             let endTime = roundDates[roundDates.length - 1]
@@ -764,18 +770,14 @@ export default {
               .trim()
               .split(" ")[0];
             this.pickUpTime.text = `请在${startTime} - ${endTime}之内完成核销`;
+            //不在核销时间段内禁用核销按钮
+            this.buttonwanCard.hidden = true;
           }
 
           //如果已核销或者已经过了截止时间
-          if (
-            item.pickUpStatus == 0 ||
-            !isCurrentTimeInRange(
-              item.pickUpStartTime.split(" ")[0] + " 00:00:00",
-              item.pickUpEndTime.split(" ")[0] + " 23:59:59"
-            )
-          ) {
-            this.buttonwanCard.hidden = true;
-          }
+          //if (item.pickUpStatus == 0 || !isCurrentTimeInRange(item.pickUpStartTime.split(' ')[0] + " 00:00:00", item.pickUpEndTime.split(' ')[0] + " 23:59:59")) {
+          //this.buttonwanCard.hidden = true;
+          //}
 
           //根据订单id查询项目
           this.$getAction("/api/dkn/viewOrderActivityProject/list", {
