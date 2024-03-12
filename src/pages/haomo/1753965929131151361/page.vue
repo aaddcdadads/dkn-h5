@@ -183,7 +183,7 @@
                         >
                           <package-number-component
                             :func-list="item.list"
-                            :title="item.name"
+                            :title="item.activityProjectName"
                             class="ele-8ae6c1ae-5d0c-40f6-836c-616584055652"
                           >
                           </package-number-component>
@@ -539,7 +539,7 @@ export default {
         value: [
           {
             id: "1",
-            name: "妞妞",
+            activityProjectName: "妞妞",
             list: [
               {
                 id: "1",
@@ -554,7 +554,7 @@ export default {
           },
           {
             id: "1",
-            name: "23123",
+            activityProjectName: "23123",
             list: [
               {
                 id: "1",
