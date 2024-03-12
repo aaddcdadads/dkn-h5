@@ -171,6 +171,7 @@
                     class="ele-wrapper ele-wrapper-4be55d50-74e3-43fe-99f0-7976d160f032"
                   >
                     <hm-loop
+                      :value="[{ id: '1' }, { id: '1' }]"
                       :get-data-map="{ total: '', list: '' }"
                       :refresh-config="{
                         contentrefresh: '正在加载...',
@@ -178,66 +179,33 @@
                         contentnomore: '没有更多数据了',
                         contentdown: '显示更多',
                       }"
-                      :value="[{ id: '1' }, { id: '1' }]"
                       class="ele-4be55d50-74e3-43fe-99f0-7976d160f032"
                     >
                       <template #default="{ item }">
                         <view
-                          class="ele-wrapper ele-wrapper-5b4f54be-8ce1-4562-9307-6f48f029b641"
+                          class="ele-wrapper ele-wrapper-95f81c4d-c791-4519-9c99-e4470c524235"
                         >
-                          <hm-uview-bg-card
-                            width="100%"
-                            height="100%"
-                            border-radius=""
-                            box-shadow-v-shadow=""
-                            box-shadow-blur=""
-                            class="ele-5b4f54be-8ce1-4562-9307-6f48f029b641"
+                          <package-number-component
+                            :func-list="[
+                              {
+                                id: '1',
+                                placeholder: '参与人真实姓名+身份证号',
+                                disabled: false,
+                              },
+                              {
+                                id: '2',
+                                placeholder: '参与人真实姓名+身份证号',
+                                disabled: false,
+                              },
+                              {
+                                id: '3',
+                                placeholder: '参与人真实姓名+身份证号',
+                                disabled: false,
+                              },
+                            ]"
+                            class="ele-95f81c4d-c791-4519-9c99-e4470c524235"
                           >
-                            <view
-                              class="ele-wrapper ele-wrapper-b335835b-d865-4eb1-923f-df865a96a324"
-                            >
-                              <hm-uview-text
-                                text="套餐A"
-                                font-size="14px"
-                                color="#303133"
-                                class="ele-b335835b-d865-4eb1-923f-df865a96a324"
-                              >
-                              </hm-uview-text>
-                            </view>
-                            <view
-                              class="ele-wrapper ele-wrapper-8b1acc9a-b790-49dc-a469-23a65da4ce6f"
-                            >
-                              <hm-uview-field
-                                value=""
-                                label=""
-                                placeholder=""
-                                label-width="0"
-                                :label-align="'center'"
-                                maxlength="740"
-                                icon=""
-                                right-icon=""
-                                :disabled="true"
-                                class="ele-8b1acc9a-b790-49dc-a469-23a65da4ce6f"
-                              >
-                              </hm-uview-field>
-                            </view>
-                            <view
-                              class="ele-wrapper ele-wrapper-702558c6-4649-40cc-9382-689b7a34f77f"
-                            >
-                              <hm-uview-field
-                                value=""
-                                label=""
-                                placeholder=""
-                                label-width="160"
-                                :label-align="'center'"
-                                icon=""
-                                right-icon=""
-                                :disabled="true"
-                                class="ele-702558c6-4649-40cc-9382-689b7a34f77f"
-                              >
-                              </hm-uview-field>
-                            </view>
-                          </hm-uview-bg-card>
+                          </package-number-component>
                         </view>
                       </template>
                     </hm-loop>
@@ -399,15 +367,15 @@
                   <view class="ele-wrapper ele-wrapper-orderCode">
                     <hm-uview-field
                       ref="orderCode"
+                      v-model:value="orderCode.value"
+                      label="订单编号"
+                      placeholder=""
+                      label-width="160"
                       :label-align="'center'"
                       icon=""
-                      label="订单编号"
-                      label-width="160"
                       right-icon=""
                       :border-bottom="false"
                       :disabled="true"
-                      placeholder=""
-                      v-model:value="orderCode.value"
                       class="ele-orderCode"
                     >
                     </hm-uview-field>
@@ -489,6 +457,7 @@ import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.
 import EventRegistrationInformationCard from "/@/components/dkn-h-5/event-registration-information-card/index.vue";
 import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewField from "/@/components/built-in/uniapp-uview-vue3/HmUviewField.vue";
+import PackageNumberComponent from "/@/components/dkn-h-5/package-number-component/index.vue";
 import HmUviewButton from "/@/components/built-in/uniapp-uview-vue3/HmUviewButton.vue";
 
 export default {
@@ -500,6 +469,7 @@ export default {
     EventRegistrationInformationCard,
     HmLoop,
     HmUviewField,
+    PackageNumberComponent,
     HmUviewButton,
   },
   options: { styleIsolation: "shared" },
@@ -605,6 +575,14 @@ export default {
         value: "item.value",
       },
       "4be55d50-74e3-43fe-99f0-7976d160f032": {
+        value: [
+          {
+            id: "1",
+          },
+          {
+            id: "1",
+          },
+        ],
         getDataMap: {
           total: "",
           list: "",
@@ -615,20 +593,6 @@ export default {
           contentnomore: "没有更多数据了",
           contentdown: "显示更多",
         },
-        value: [
-          {
-            id: "1",
-          },
-          {
-            id: "1",
-          },
-        ],
-      },
-      "8b1acc9a-b790-49dc-a469-23a65da4ce6f": {
-        value: "",
-      },
-      "702558c6-4649-40cc-9382-689b7a34f77f": {
-        value: "",
       },
       "d6fce4cb-04be-422f-92ad-0574acb7bb6e": {
         value: "",
@@ -1004,41 +968,12 @@ export default {
   margin-top: 10px;
 }
 
-.ele-wrapper-5b4f54be-8ce1-4562-9307-6f48f029b641 {
+.ele-wrapper-95f81c4d-c791-4519-9c99-e4470c524235 {
   width: 100%;
-  .ele-prizeImageBox {
-    margin-top: 10px;
-    display: flex;
+  height: 60px;
+  /deep/.uni-input-input {
+    font-size: 14px !important;
   }
-  background-color: #fff;
-}
-
-.ele-wrapper-b335835b-d865-4eb1-923f-df865a96a324 {
-  width: 80px;
-  text-align: right !important;
-  float: left;
-}
-
-.ele-wrapper-8b1acc9a-b790-49dc-a469-23a65da4ce6f {
-  width: calc(100% - 83px);
-  /deep/.u-textarea-class {
-    min-height: 0 !important;
-  }
-  float: right;
-}
-
-.ele-wrapper-702558c6-4649-40cc-9382-689b7a34f77f {
-  width: calc(100% - 83px);
-  float: right;
-  /deep/.u-field {
-    height: 56px;
-    display: flex;
-    align-items: center;
-  }
-  /deep/.u-label-text {
-    color: #999999;
-  }
-  background-color: #fff;
 }
 
 .ele-wrapper-a6cd4a45-fa66-4a6f-adbb-468a3084b102 {
