@@ -550,12 +550,7 @@ export default {
         },
       },
       activityImgList: {
-        value: [
-          {
-            id: "1",
-            src: "https://img.yzcdn.cn/vant/cat.jpeg",
-          },
-        ],
+        value: [],
         getDataMap: {
           total: "",
           list: "",
