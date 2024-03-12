@@ -94,7 +94,7 @@ export default {
   width: calc(100% - 160rpx);
 }
 .input {
-  height: 56px;
+  height: 78px;
   text-align: left;
   position: relative;
   border-bottom: 1px solid #e4e7ed;
