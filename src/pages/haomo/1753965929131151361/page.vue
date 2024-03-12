@@ -243,7 +243,6 @@
                               class="ele-wrapper ele-wrapper-41068093-4315-486b-9510-85a9b68ae7f7"
                             >
                               <hm-uview-image
-                                :src="item.src"
                                 width="80px"
                                 height="80px"
                                 border-redius="12px"
@@ -557,7 +556,11 @@ export default {
         },
       },
       activityImgList: {
-        value: [],
+        value: [
+          {
+            src: "https://img.yzcdn.cn/vant/cat.jpeg",
+          },
+        ],
         getDataMap: {
           total: "",
           list: "",
