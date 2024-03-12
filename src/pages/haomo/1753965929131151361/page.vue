@@ -306,6 +306,7 @@
                       width="100%"
                       height=""
                       border-radius=""
+                      box-shadow-color="#00000000"
                       class="ele-8d2821d9-d7dc-4815-b575-a23d170a81e3"
                     >
                     </hm-uview-bg-card>
