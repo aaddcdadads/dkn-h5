@@ -957,6 +957,9 @@ export default {
     font-size: 14px !important;
     height: 78rpx !important;
   }
+  /deep/.uni-input-wrapper {
+    height: 78rpx !important;
+  }
 }
 
 .ele-wrapper-a6cd4a45-fa66-4a6f-adbb-468a3084b102 {
