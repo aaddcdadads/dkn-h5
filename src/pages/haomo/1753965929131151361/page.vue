@@ -183,10 +183,10 @@
                     >
                       <template #default="{ item }">
                         <view
-                          class="ele-wrapper ele-wrapper-95f81c4d-c791-4519-9c99-e4470c524235"
+                          class="ele-wrapper ele-wrapper-8aa1d0fa-43ec-4b7a-a66c-e0d440ea2892"
                         >
                           <package-number-component
-                            class="ele-95f81c4d-c791-4519-9c99-e4470c524235"
+                            class="ele-8aa1d0fa-43ec-4b7a-a66c-e0d440ea2892"
                           >
                           </package-number-component>
                         </view>
@@ -951,7 +951,7 @@ export default {
   margin-top: 10px;
 }
 
-.ele-wrapper-95f81c4d-c791-4519-9c99-e4470c524235 {
+.ele-wrapper-8aa1d0fa-43ec-4b7a-a66c-e0d440ea2892 {
   width: 100%;
   /deep/.uni-input-input {
     font-size: 14px !important;
