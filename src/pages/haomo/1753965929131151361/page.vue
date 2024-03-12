@@ -536,19 +536,7 @@ export default {
         list: [],
       },
       personnelInformationList: {
-        value: [
-          {
-            id: "1",
-            activityProjectName: "妞妞",
-            list: [
-              {
-                id: "1",
-                value: "参与人真实姓名+身份证号1",
-                disabled: false,
-              },
-            ],
-          },
-        ],
+        value: [],
         getDataMap: {
           total: "",
           list: "",
