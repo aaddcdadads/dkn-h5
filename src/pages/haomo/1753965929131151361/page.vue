@@ -186,23 +186,6 @@
                           class="ele-wrapper ele-wrapper-95f81c4d-c791-4519-9c99-e4470c524235"
                         >
                           <package-number-component
-                            :func-list="[
-                              {
-                                id: '1',
-                                placeholder: '参与人真实姓名+身份证号',
-                                disabled: false,
-                              },
-                              {
-                                id: '2',
-                                placeholder: '参与人真实姓名+身份证号',
-                                disabled: false,
-                              },
-                              {
-                                id: '3',
-                                placeholder: '参与人真实姓名+身份证号',
-                                disabled: false,
-                              },
-                            ]"
                             class="ele-95f81c4d-c791-4519-9c99-e4470c524235"
                           >
                           </package-number-component>
