@@ -799,7 +799,7 @@ export default {
             {
               pageNo: 1,
               pageSize: -1,
-              activityId: item.id,
+              id: item.id,
             }
           ).then((res) => {
             console.log("viewRegistrationOrdersActivityProject--", res);
