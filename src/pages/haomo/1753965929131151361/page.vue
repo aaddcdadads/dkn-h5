@@ -761,7 +761,8 @@ export default {
             let startTime = roundDates[0].split(" ")[0];
             let endTime = roundDates[roundDates.length - 1]
               .split("至")[1]
-              .split(" ")[0];
+              .trim()
+              .split(" ")[0];
             this.pickUpTime.text = `请在${startTime} - ${endTime}之内完成核销`;
           }
 
