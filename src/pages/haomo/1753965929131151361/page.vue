@@ -1041,13 +1041,13 @@ export default {
 }
 
 .ele-wrapper-41068093-4315-486b-9510-85a9b68ae7f7 {
-  width: 100%;
-  border-radius: 12px;
+  //width:100%;
+  //border-radius:12px;
 }
 
 .ele-wrapper-1a96e10e-6c33-42db-a254-9399b96eeaf6 {
-  width: 100%;
-  text-align: center;
+  //width:100%;
+  //text-align:center;
 }
 
 .ele-wrapper-8d2821d9-d7dc-4815-b575-a23d170a81e3 {
