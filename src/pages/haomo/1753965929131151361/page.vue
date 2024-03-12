@@ -250,7 +250,7 @@
                     class="ele-wrapper ele-wrapper-56be6aaa-dd55-4898-a56f-d9e9f214001b"
                   >
                     <hm-uview-text
-                      text="套餐A"
+                      text="奖品"
                       font-size="14px"
                       color="#303133"
                       class="ele-56be6aaa-dd55-4898-a56f-d9e9f214001b"
