@@ -388,7 +388,7 @@
                     <hm-uview-field
                       ref="orderCode"
                       v-model:value="orderCode.value"
-                      label="报名项目"
+                      label="订单编号"
                       placeholder=""
                       label-width="160"
                       :label-align="'center'"
@@ -409,23 +409,6 @@
                       class="ele-orderCodeBut"
                     >
                     </hm-uview-button>
-                  </view>
-                  <view
-                    class="ele-wrapper ele-wrapper-3d3d9dba-1b49-466c-9618-dc94b24d7d81"
-                  >
-                    <hm-uview-field
-                      value=""
-                      label=""
-                      placeholder=""
-                      label-width="160"
-                      :label-align="'center'"
-                      icon=""
-                      right-icon=""
-                      :border-bottom="false"
-                      :disabled="true"
-                      class="ele-3d3d9dba-1b49-466c-9618-dc94b24d7d81"
-                    >
-                    </hm-uview-field>
                   </view>
                 </hm-uview-bg-card>
               </view>
@@ -626,9 +609,6 @@ export default {
       orderCodeBut: {
         size: "mini",
         text: "复制",
-      },
-      "3d3d9dba-1b49-466c-9618-dc94b24d7d81": {
-        value: "",
       },
     };
   },
@@ -1086,12 +1066,6 @@ export default {
 
 .ele-wrapper-orderCodeBut {
   width: 18%;
-}
-
-.ele-wrapper-3d3d9dba-1b49-466c-9618-dc94b24d7d81 {
-  width: 82%;
-
-  background-color: #ffffff;
 }
 
 .ele-wrapper-writeOffBtn {
