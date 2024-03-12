@@ -171,7 +171,35 @@
                     class="ele-wrapper ele-wrapper-4be55d50-74e3-43fe-99f0-7976d160f032"
                   >
                     <hm-loop
-                      :value="[{ id: '1' }, { id: '1' }]"
+                      :value="[
+                        {
+                          id: '1',
+                          name: '妞妞',
+                          list: [
+                            {
+                              id: '1',
+                              placeholder: '参与人真实姓名+身份证号',
+                              disabled: false,
+                            },
+                            {
+                              id: '2',
+                              placeholder: '参与人真实姓名+身份证号',
+                              disabled: false,
+                            },
+                          ],
+                        },
+                        {
+                          id: '1',
+                          name: '妞妞',
+                          list: [
+                            {
+                              id: '1',
+                              placeholder: '参与人真实姓名+身份证号',
+                              disabled: false,
+                            },
+                          ],
+                        },
+                      ]"
                       :get-data-map="{ total: '', list: '' }"
                       :refresh-config="{
                         contentrefresh: '正在加载...',
@@ -186,6 +214,8 @@
                           class="ele-wrapper ele-wrapper-aa10b0d2-6c06-433e-bdf5-edaf9a2139d0"
                         >
                           <package-number-component
+                            :func-list="item.list"
+                            :title="item.name"
                             class="ele-aa10b0d2-6c06-433e-bdf5-edaf9a2139d0"
                           >
                           </package-number-component>
@@ -199,11 +229,11 @@
                 class="ele-wrapper ele-wrapper-a6cd4a45-fa66-4a6f-adbb-468a3084b102"
               >
                 <hm-uview-bg-card
-                  box-shadow-blur=""
-                  box-shadow-v-shadow=""
-                  border-radius=""
                   width="100%"
                   height="100%"
+                  border-radius=""
+                  box-shadow-v-shadow=""
+                  box-shadow-blur=""
                   class="ele-a6cd4a45-fa66-4a6f-adbb-468a3084b102"
                 >
                   <view
@@ -561,9 +591,30 @@ export default {
         value: [
           {
             id: "1",
+            name: "妞妞",
+            list: [
+              {
+                id: "1",
+                placeholder: "参与人真实姓名+身份证号",
+                disabled: false,
+              },
+              {
+                id: "2",
+                placeholder: "参与人真实姓名+身份证号",
+                disabled: false,
+              },
+            ],
           },
           {
             id: "1",
+            name: "妞妞",
+            list: [
+              {
+                id: "1",
+                placeholder: "参与人真实姓名+身份证号",
+                disabled: false,
+              },
+            ],
           },
         ],
         getDataMap: {
