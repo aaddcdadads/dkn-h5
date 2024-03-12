@@ -5,21 +5,13 @@
 
       <view class="right">
         <view v-for="(item, index) in funcList" :key="index">
-<hm-uview-field
-                        :value="item.value"
-                        :type=""
-                        :label=""
-                        :placeholder="参与人真实姓名+身份证号"
-                        label-width="160"
-                        :label-align="'center'"
-                        maxlength="740"
-                        icon=""
-                        right-icon=""
-                        :disabled="true"
-                        
-                      >
-                      </hm-uview-field>
-          
+					<u-field
+            class="input"
+            v-model="item.value"
+            placeholder="参与人真实姓名+身份证号"
+            :disabled="true"
+            label-width="0"
+          ></u-field>          
         </view>
       </view>
     </view>
