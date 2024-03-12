@@ -782,15 +782,13 @@ export default {
               (personnelItem) => {
                 if (!personnelItem.participants) return;
                 let list = JSON.parse(personnelItem.participants);
+                list.forEach((listItem) => {
+                  listItem.value = listItem.name + " - " + listItem.id_card;
+                });
                 console.log("personnelItemlist---", list);
                 return {
                   ...personnelItem,
-                  list: [
-                    {
-                      id: "1",
-                      value: "参与人真实姓名+身份证号3",
-                    },
-                  ],
+                  list: list,
                 };
               }
             );
