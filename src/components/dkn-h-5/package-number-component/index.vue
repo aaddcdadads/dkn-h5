@@ -5,14 +5,21 @@
 
       <view class="right">
         <view v-for="(item, index) in funcList" :key="index">
-          <input
-            class="input"
-            :placeholder="item.placeholder"
-            v-model:value="item.cValue"
-            @input="input"
+<hm-uview-field
+                        :value="item.value"
+                        :type=""
+                        :label=""
+                        :placeholder="参与人真实姓名+身份证号"
+                        label-width="160"
+                        :label-align="'center'"
+                        maxlength="740"
+                        icon=""
+                        right-icon=""
+                        :disabled="true"
+                        
+                      >
+                      </hm-uview-field>
           
-            :disabled="item.disabled"
-          />
         </view>
       </view>
     </view>
@@ -30,8 +37,8 @@ export default {
       type: Array,
       default: function () {
         return [
-          { id: "1", placeholder: "参与人真实姓名+身份证号", disabled: false },
-          { id: "2", placeholder: "参与人真实姓名+身份证号", disabled: false },
+          { id: "1", value: "参与人真实姓名+身份证号"  },
+          { id: "2", value: "参与人真实姓名+身份证号" },
         ];
       },
     },
