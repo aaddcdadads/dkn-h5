@@ -38,5 +38,8 @@ export default {
 
 .ele-wrapper-d0d10e22-b044-4597-a920-0b42ccc9a357 {
   width: 100%;
+  /deep/.uni-input-input {
+    font-size: 14px !important;
+  }
 }
 </style>
