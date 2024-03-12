@@ -953,7 +953,6 @@ export default {
 
 .ele-wrapper-95f81c4d-c791-4519-9c99-e4470c524235 {
   width: 100%;
-  height: 60px;
   /deep/.uni-input-input {
     font-size: 14px !important;
   }
