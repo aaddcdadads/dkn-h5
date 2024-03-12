@@ -754,7 +754,7 @@ export default {
             let timeText =
               times[0].trim().split(" ")[0] +
               " - " +
-              times[0].trim().split(" ")[1];
+              times[1].trim().split(" ")[0];
             this.pickUpTime.text =
               "请在" + timeText + "之内完成第" + (currentRound + 1) + "轮核销";
           } else {
