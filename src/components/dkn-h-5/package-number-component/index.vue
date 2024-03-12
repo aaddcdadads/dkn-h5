@@ -99,5 +99,6 @@ export default {
   position: relative;
   border-bottom: 1px solid #e4e7ed;
   color: #303133;
+  font-size: 28rpx;
 }
 </style>
