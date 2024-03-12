@@ -546,20 +546,6 @@ export default {
                 value: "参与人真实姓名+身份证号1",
                 disabled: false,
               },
-              {
-                id: "2",
-                value: "参与人真实姓名+身份证号2",
-              },
-            ],
-          },
-          {
-            id: "1",
-            activityProjectName: "23123",
-            list: [
-              {
-                id: "1",
-                value: "参与人真实姓名+身份证号3",
-              },
             ],
           },
         ],
