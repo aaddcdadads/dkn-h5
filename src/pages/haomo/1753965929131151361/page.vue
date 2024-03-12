@@ -178,25 +178,17 @@
                           list: [
                             {
                               id: '1',
-                              placeholder: '参与人真实姓名+身份证号',
+                              value: '参与人真实姓名+身份证号1',
                               disabled: false,
                             },
-                            {
-                              id: '2',
-                              placeholder: '参与人真实姓名+身份证号',
-                              disabled: false,
-                            },
+                            { id: '2', value: '参与人真实姓名+身份证号2' },
                           ],
                         },
                         {
                           id: '1',
                           name: '23123',
                           list: [
-                            {
-                              id: '1',
-                              placeholder: '参与人真实姓名+身份证号',
-                              disabled: false,
-                            },
+                            { id: '1', value: '参与人真实姓名+身份证号3' },
                           ],
                         },
                       ]"
@@ -595,13 +587,12 @@ export default {
             list: [
               {
                 id: "1",
-                placeholder: "参与人真实姓名+身份证号",
+                value: "参与人真实姓名+身份证号1",
                 disabled: false,
               },
               {
                 id: "2",
-                placeholder: "参与人真实姓名+身份证号",
-                disabled: false,
+                value: "参与人真实姓名+身份证号2",
               },
             ],
           },
@@ -611,8 +602,7 @@ export default {
             list: [
               {
                 id: "1",
-                placeholder: "参与人真实姓名+身份证号",
-                disabled: false,
+                value: "参与人真实姓名+身份证号3",
               },
             ],
           },
