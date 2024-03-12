@@ -23,6 +23,14 @@
 export default {
   props: {
     /**
+     * item
+     */
+     item: {
+      type: Object,
+      default: function(){
+        return {}
+      },
+    /**
      * 数据
      */
     funcList: {
