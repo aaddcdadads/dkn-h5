@@ -5,6 +5,23 @@
         class="ele-wrapper ele-wrapper-d0d10e22-b044-4597-a920-0b42ccc9a357"
       >
         <package-number-component
+          :func-list="[
+            {
+              id: '1',
+              placeholder: '参与人真实姓名+身份证号',
+              disabled: false,
+            },
+            {
+              id: '2',
+              placeholder: '参与人真实姓名+身份证号',
+              disabled: false,
+            },
+            {
+              id: '3',
+              placeholder: '参与人真实姓名+身份证号',
+              disabled: false,
+            },
+          ]"
           class="ele-d0d10e22-b044-4597-a920-0b42ccc9a357"
         >
         </package-number-component>
