@@ -27,7 +27,7 @@
         class="data_input"
         :value="i.cValue"
         @focus="focus($event, i, index, childIndex)"
-        @input="input"
+        @input="input($event,index, childIndex)"
         @blur="blur"
         :disabled="i.disabled"
         :class="{ data_inputs: i.disabled }"
@@ -111,7 +111,8 @@ export default {
       activeIndex: -1,
       cValue: "",
       set: "",
-      cList:[]
+      cList: [],
+      items:[]
     };
   },
   watch: {
@@ -145,7 +146,8 @@ export default {
     blur() {
       this.activeIndex = "";
     },
-    input(e) {
+    input(e,index, childIndex) {
+      this.cList[index].funcList[childIndex].value=e.detail.value
       this.$emit("update:value", this.cValue);
       this.$emit("input");
     },
