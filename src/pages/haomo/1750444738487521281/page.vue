@@ -151,11 +151,7 @@
                     <view
                       class="ele-wrapper ele-wrapper-fc4f02c0-21ff-451d-8808-04e971cf8711"
                     >
-                      <hm-uview-text
-                        text="套餐A-参与人1："
-                        font-size="14px"
-                        class="ele-fc4f02c0-21ff-451d-8808-04e971cf8711"
-                      >
+                      <hm-uview-text text="套餐A-参与人1：" font-size="14px">
                       </hm-uview-text>
                     </view>
                     <view
@@ -1424,10 +1420,6 @@ export default {
     display: flex;
   }
   background-color: #fff;
-}
-
-.ele-wrapper-fc4f02c0-21ff-451d-8808-04e971cf8711 {
-  margin-bottom: 13px;
 }
 
 .ele-wrapper-7b9f5bcb-d657-4fa1-a77b-6957db366ea5 {
