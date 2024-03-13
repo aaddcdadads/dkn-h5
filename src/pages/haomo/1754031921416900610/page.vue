@@ -567,6 +567,7 @@ export default {
         activityId: this.activityId,
         storeId: this.storeId,
         pickUpStatus: 0,
+        activityPickUpId: this.activityPickUpId,
         pickUpTime: this.getTime(),
       }).then((res) => {
         console.log("res--", res);
