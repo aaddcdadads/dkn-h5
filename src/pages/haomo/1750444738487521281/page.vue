@@ -1326,7 +1326,7 @@ export default {
           self.error("领奖门店不能为空");
           return;
         }
-
+        self.checkParticipants();
         const orderProjects = self.getOrderProjects();
 
         if (orderProjects.length == 0) {
@@ -1528,9 +1528,9 @@ export default {
       self.getParticipants = function () {
         const item = self.getOrderProjects();
         let list = [];
-
         item.forEach((e) => {
-          for (let i = 0; i < e.num; i++) {
+          let index = e.num * e.orderNumber;
+          for (let i = 0; i < index; i++) {
             let l = self.participantsList.map((s) => {
               return {
                 ...s,
@@ -1551,6 +1551,8 @@ export default {
       setTimeout(() => {
         self.getParticipants();
       });
+
+      self.checkParticipants = function () {};
     },
 
     onEventCardChange(e) {
