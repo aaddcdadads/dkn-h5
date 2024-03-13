@@ -1691,6 +1691,7 @@ export default {
     display: flex;
   }
   background-color: #fff;
+  display: none;
 }
 
 .ele-wrapper-placeholder {
