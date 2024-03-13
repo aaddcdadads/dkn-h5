@@ -139,19 +139,83 @@
                 <hm-uview-text
                   text="参与人员信息填写"
                   font-size="16px"
-                  :text-style="{}"
                   class="ele-fc61ffbc-5000-4008-be66-490d31c2dc31"
                 >
                 </hm-uview-text>
               </view>
+              <view
+                class="ele-wrapper ele-wrapper-48f17d03-ca08-4f2e-b092-32b76ae466e9"
+              >
+                <registration-form-package-components
+                  :list="[
+                    {
+                      title: '1',
+                      funcList: [
+                        {
+                          value: '',
+                          leftSrc1:
+                            'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
+                          leftSrc2:
+                            'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
+                          disabled: false,
+                          placeholder: '* 请填写姓名/昵称',
+                        },
+                        {
+                          value: '',
+                          leftSrc1:
+                            'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
+                          leftSrc2:
+                            'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
+                          disabled: false,
+                          placeholder: '* 请填写姓名/昵称',
+                        },
+                        {
+                          value: '',
+                          leftSrc1:
+                            'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
+                          leftSrc2:
+                            'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
+                          disabled: false,
+                          placeholder: '* 请填写姓名/昵称',
+                        },
+                        {
+                          value: '',
+                          leftSrc1:
+                            'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
+                          leftSrc2:
+                            'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
+                          disabled: false,
+                          placeholder: '* 请填写姓名/昵称',
+                        },
+                      ],
+                    },
+                    {
+                      title: '1',
+                      funcList: [
+                        {
+                          value: '',
+                          leftSrc1:
+                            'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
+                          leftSrc2:
+                            'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
+                          disabled: false,
+                          placeholder: '* 请填写姓名/昵称',
+                        },
+                      ],
+                    },
+                  ]"
+                  class="ele-48f17d03-ca08-4f2e-b092-32b76ae466e9"
+                >
+                </registration-form-package-components>
+              </view>
               <view class="ele-wrapper ele-wrapper-loop">
                 <hm-loop ref="loop" v-model:value="loop.value" class="ele-loop">
                   <template #default="{ item }">
-                    <view class="ele-wrapper ele-wrapper-placeholder">
+                    <view class="ele-wrapper ele-wrapper-placeholdersss">
                       <registration-form-package-components
-                        ref="placeholder"
-                        :list="placeholder.list"
-                        class="ele-placeholder"
+                        ref="placeholdersss"
+                        :list="placeholdersss.list"
+                        class="ele-placeholdersss"
                       >
                       </registration-form-package-components>
                     </view>
@@ -436,8 +500,8 @@ import HmUviewBgCard from "/@/components/built-in/uniapp-uview-vue3/HmUviewBgCar
 import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vue";
 import EventRegistrationCard from "/@/components/dkn-h-5/event-registration-card/index.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
-import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import RegistrationFormPackageComponents from "/@/components/dkn-h-5/registration-form-package-components/index.vue";
+import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import StoreSelection from "/@/components/dkn-h-5/store-selection/index.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
@@ -451,8 +515,8 @@ export default {
     HmUviewText,
     EventRegistrationCard,
     InformationInputBox,
-    HmLoop,
     RegistrationFormPackageComponents,
+    HmLoop,
     HmUviewPopup,
     StoreSelection,
     HmUviewImage,
@@ -1124,7 +1188,41 @@ export default {
         text: "¥ 59.00",
         textStyle: {},
       },
-      placeholder: {
+      placeholder: {},
+      nameInput: {
+        value: "",
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+        ],
+      },
+      smscodeIpnut: {
+        value: "",
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan1.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan(2).png",
+        ],
+      },
+      storeItem: {},
+      phoneInput: {
+        value: "",
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji(2).png",
+        ],
+      },
+      payPopup: {
+        show: false,
+      },
+      participantsList: {},
+      loop: {
+        value: [
+          {
+            id: "1",
+          },
+        ],
+      },
+      placeholdersss: {
         list: [
           {
             title: "1",
@@ -1180,39 +1278,6 @@ export default {
                 placeholder: "* 请填写姓名/昵称",
               },
             ],
-          },
-        ],
-      },
-      nameInput: {
-        value: "",
-        leftSrc: [
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-        ],
-      },
-      smscodeIpnut: {
-        value: "",
-        leftSrc: [
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan1.png",
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan(2).png",
-        ],
-      },
-      storeItem: {},
-      phoneInput: {
-        value: "",
-        leftSrc: [
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji.png",
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji(2).png",
-        ],
-      },
-      payPopup: {
-        show: false,
-      },
-      participantsList: {},
-      loop: {
-        value: [
-          {
-            id: "1",
           },
         ],
       },
@@ -1684,6 +1749,11 @@ export default {
   margin-bottom: 13px;
 }
 
+.ele-wrapper-48f17d03-ca08-4f2e-b092-32b76ae466e9 {
+  width: 100%;
+  margin-top: 10px;
+}
+
 .ele-wrapper-loop {
   width: 100%;
   .ele-prizeImageBox {
@@ -1694,7 +1764,7 @@ export default {
   display: none;
 }
 
-.ele-wrapper-placeholder {
+.ele-wrapper-placeholdersss {
   width: 100%;
   margin-top: 10px;
 }
