@@ -139,7 +139,6 @@
                   maxlength="-1"
                   icon=""
                   right-icon=""
-                  :disabled="true"
                   class="ele-timeField"
                 >
                 </hm-uview-field>
