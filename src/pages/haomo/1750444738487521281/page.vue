@@ -144,13 +144,8 @@
                 >
                 </hm-uview-text>
               </view>
-              <view
-                class="ele-wrapper ele-wrapper-2bb118e7-6403-448b-8985-fd3619976ad9"
-              >
-                <hm-loop
-                  :value="[{ id: '1' }]"
-                  class="ele-2bb118e7-6403-448b-8985-fd3619976ad9"
-                >
+              <view class="ele-wrapper ele-wrapper-loop">
+                <hm-loop ref="loop" v-model:value="loop.value" class="ele-loop">
                   <template #default="{ item }">
                     <view class="ele-wrapper ele-wrapper-placeholder">
                       <registration-form-package-components
@@ -1214,7 +1209,7 @@ export default {
         show: false,
       },
       participantsList: {},
-      "2bb118e7-6403-448b-8985-fd3619976ad9": {
+      loop: {
         value: [
           {
             id: "1",
@@ -1689,7 +1684,7 @@ export default {
   margin-bottom: 13px;
 }
 
-.ele-wrapper-2bb118e7-6403-448b-8985-fd3619976ad9 {
+.ele-wrapper-loop {
   width: 100%;
   .ele-prizeImageBox {
     margin-top: 10px;
