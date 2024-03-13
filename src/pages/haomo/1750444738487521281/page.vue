@@ -149,14 +149,6 @@
               >
                 <hm-loop
                   :value="[{ id: '1' }]"
-                  :params="{}"
-                  :get-data-map="{ list: '', total: '' }"
-                  :refresh-config="{
-                    show: false,
-                    contentdown: '显示更多',
-                    contentrefresh: '正在加载...',
-                    contentnomore: '没有更多数据了',
-                  }"
                   class="ele-2bb118e7-6403-448b-8985-fd3619976ad9"
                 >
                   <template #default="{ item }">
@@ -1225,17 +1217,6 @@ export default {
             id: "1",
           },
         ],
-        params: {},
-        getDataMap: {
-          list: "",
-          total: "",
-        },
-        refreshConfig: {
-          show: false,
-          contentdown: "显示更多",
-          contentrefresh: "正在加载...",
-          contentnomore: "没有更多数据了",
-        },
       },
     };
   },
