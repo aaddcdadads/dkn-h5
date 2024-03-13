@@ -136,6 +136,7 @@
                   placeholder="当前核销轮次核销时间范围"
                   label-width="160"
                   :label-align="'center'"
+                  maxlength="-1"
                   icon=""
                   right-icon=""
                   :disabled="true"
