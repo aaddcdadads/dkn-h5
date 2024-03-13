@@ -1,6 +1,6 @@
 <template>
   <view v-for="(item, index) in List" :key="index">
-    <text>{{ item.title }}-{{ index }}</text>
+   <view style="margin-bottom: 7px;"> <text class="title">{{ item.title }}-{{ index }}</text></view>
     <view
       v-for="(i, childIndex) in item.funcList"
       :key="childIndex"
@@ -45,7 +45,7 @@ export default {
       default: function () {
         return [
           {
-            title: "1",
+            title: "套餐A-参与人1：",
             funcList: [
               {
                 value: "",
@@ -86,7 +86,7 @@ export default {
             ],
           },
           {
-            title: "1",
+            title: "套餐A-参与人2：",
             funcList: [
               {
                 value: "",
@@ -179,8 +179,13 @@ export default {
   background-color: #fff;
   border-radius: 4px;
   padding: 8px 5px;
+  margin-bottom: 20px;
 }
-
+.title{
+  font-size: 14px;
+  color:#000000;
+ 
+}
 .image_box {
   width: 40px;
   height: 100%;
