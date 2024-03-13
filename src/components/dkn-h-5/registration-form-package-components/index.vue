@@ -1,5 +1,5 @@
 <template>
-  <view v-for="(item, index) in List" :key="index">
+  <view v-for="(item, index) in cList" :key="index">
    <view style="margin-bottom: 7px;"> <text class="title">{{ item.title }}</text></view>
     <view
       v-for="(i, childIndex) in item.funcList"
@@ -40,7 +40,7 @@ export default {
     /**
      * 数据
      */
-    List: {
+    list: {
       type: Array,
       default: function () {
         return [
@@ -111,9 +111,14 @@ export default {
       activeIndex: -1,
       cValue: "",
       set: "",
+      cList:[]
     };
   },
   watch: {
+    list(value) {
+        console.log('value',value)
+        this.cList = value;
+    },
     value: {
       handler(value) {
         this.cValue = value;
@@ -127,6 +132,7 @@ export default {
   },
   mounted() {
     this.cValue = this.value;
+    this.cList = this.list;
     if (this.disabled && this.cValue !== "") {
       // this.borderColor = false;
     }
