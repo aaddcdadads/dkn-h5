@@ -1222,6 +1222,7 @@ export default {
       self.orderId = "";
       self.alipayChannel = "";
       self.placeholder.list = [];
+      self.orderParticipantsList = [];
       self.getActivityProject = async function () {
         let url = "/api/dkn/activityProject/list";
         let params = {
@@ -1311,6 +1312,9 @@ export default {
         });
       };
       self.checkOrder = async function () {
+        if (!self.checkParticipants()) {
+          return;
+        }
         if (!self.nameInput.value) {
           self.error("姓名/昵称不能为空");
           return;
@@ -1326,7 +1330,7 @@ export default {
           self.error("领奖门店不能为空");
           return;
         }
-        self.checkParticipants();
+
         const orderProjects = self.getOrderProjects();
 
         if (orderProjects.length == 0) {
@@ -1552,7 +1556,38 @@ export default {
         self.getParticipants();
       });
 
-      self.checkParticipants = function () {};
+      self.checkParticipants = function () {
+        const items = self.$refs.placeholder.cList;
+        let list = [];
+        let status = true;
+        for (let i = 0; i < items.length; i++) {
+          const item = items[i];
+          if (item.funcList.length > 0) {
+            for (let j = 0; j < item.funcList.length; j++) {
+              try {
+                const f = item.funcList[j];
+                if (!f.value) {
+                  throw new Error();
+                }
+                let par = {
+                  uid: item.id,
+                  key: f.itemValue,
+                  value: f.value,
+                };
+                list.push(par);
+              } catch {
+                list = [];
+                status = false;
+                self.error(
+                  `${item.title}：${item.funcList[j].itemText} 不能为空`
+                );
+              }
+            }
+          }
+        }
+        self.orderParticipantsList = list;
+        return status;
+      };
     },
 
     onEventCardChange(e) {
