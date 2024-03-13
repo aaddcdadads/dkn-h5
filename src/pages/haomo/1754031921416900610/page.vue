@@ -698,8 +698,8 @@ export default {
   width: 100%;
   /deep/.u-field {
     height: 56px;
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
   }
   /deep/.u-label-text {
     color: #999999;
