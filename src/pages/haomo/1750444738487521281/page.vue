@@ -151,20 +151,6 @@
                 >
                 </registration-form-package-components>
               </view>
-              <view class="ele-wrapper ele-wrapper-loop">
-                <hm-loop ref="loop" v-model:value="loop.value" class="ele-loop">
-                  <template #default="{ item }">
-                    <view class="ele-wrapper ele-wrapper-placeholdersss">
-                      <registration-form-package-components
-                        ref="placeholdersss"
-                        :list="placeholdersss.list"
-                        class="ele-placeholdersss"
-                      >
-                      </registration-form-package-components>
-                    </view>
-                  </template>
-                </hm-loop>
-              </view>
             </hm-uview-bg-card>
           </view>
           <view class="ele-wrapper ele-wrapper-shopPop">
@@ -444,7 +430,6 @@ import HmUviewText from "/@/components/built-in/uniapp-uview-vue3/HmUviewText.vu
 import EventRegistrationCard from "/@/components/dkn-h-5/event-registration-card/index.vue";
 import InformationInputBox from "/@/components/dkn-h-5/information-input-box/index.vue";
 import RegistrationFormPackageComponents from "/@/components/dkn-h-5/registration-form-package-components/index.vue";
-import HmLoop from "/@/components/built-in/uniapp-haomo/HmLoop.vue";
 import HmUviewPopup from "/@/components/built-in/uniapp-uview-vue3/HmUviewPopup.vue";
 import StoreSelection from "/@/components/dkn-h-5/store-selection/index.vue";
 import HmUviewImage from "/@/components/built-in/uniapp-uview-vue3/HmUviewImage.vue";
@@ -459,7 +444,6 @@ export default {
     EventRegistrationCard,
     InformationInputBox,
     RegistrationFormPackageComponents,
-    HmLoop,
     HmUviewPopup,
     StoreSelection,
     HmUviewImage,
@@ -1216,72 +1200,6 @@ export default {
         show: false,
       },
       participantsList: {},
-      loop: {
-        value: [
-          {
-            id: "1",
-          },
-        ],
-      },
-      placeholdersss: {
-        list: [
-          {
-            title: "1",
-            funcList: [
-              {
-                value: "",
-                leftSrc1:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-                leftSrc2:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-                disabled: false,
-                placeholder: "* 请填写姓名/昵称",
-              },
-              {
-                value: "",
-                leftSrc1:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-                leftSrc2:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-                disabled: false,
-                placeholder: "* 请填写姓名/昵称",
-              },
-              {
-                value: "",
-                leftSrc1:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-                leftSrc2:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-                disabled: false,
-                placeholder: "* 请填写姓名/昵称",
-              },
-              {
-                value: "",
-                leftSrc1:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-                leftSrc2:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-                disabled: false,
-                placeholder: "* 请填写姓名/昵称",
-              },
-            ],
-          },
-          {
-            title: "1",
-            funcList: [
-              {
-                value: "",
-                leftSrc1:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-                leftSrc2:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-                disabled: false,
-                placeholder: "* 请填写姓名/昵称",
-              },
-            ],
-          },
-        ],
-      },
     };
   },
   watch: {},
@@ -1751,21 +1669,6 @@ export default {
 }
 
 .ele-wrapper-placeholder {
-  width: 100%;
-  margin-top: 10px;
-}
-
-.ele-wrapper-loop {
-  width: 100%;
-  .ele-prizeImageBox {
-    margin-top: 10px;
-    display: flex;
-  }
-  background-color: #fff;
-  display: none;
-}
-
-.ele-wrapper-placeholdersss {
   width: 100%;
   margin-top: 10px;
 }
