@@ -1250,6 +1250,7 @@ export default {
             : "",
           projectList: projectList,
           number: number,
+          address: self.activityItem.address,
         };
         const time = self.getTimeDifference(
           new Date(),
