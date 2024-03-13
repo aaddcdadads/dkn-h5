@@ -152,68 +152,11 @@
                   class="ele-2bb118e7-6403-448b-8985-fd3619976ad9"
                 >
                   <template #default="{ item }">
-                    <view
-                      class="ele-wrapper ele-wrapper-7b9f5bcb-d657-4fa1-a77b-6957db366ea5"
-                    >
+                    <view class="ele-wrapper ele-wrapper-placeholder">
                       <registration-form-package-components
-                        :list="[
-                          {
-                            title: '1',
-                            funcList: [
-                              {
-                                value: '',
-                                leftSrc1:
-                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
-                                leftSrc2:
-                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
-                                disabled: false,
-                                placeholder: '* 请填写姓名/昵称',
-                              },
-                              {
-                                value: '',
-                                leftSrc1:
-                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
-                                leftSrc2:
-                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
-                                disabled: false,
-                                placeholder: '* 请填写姓名/昵称',
-                              },
-                              {
-                                value: '',
-                                leftSrc1:
-                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
-                                leftSrc2:
-                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
-                                disabled: false,
-                                placeholder: '* 请填写姓名/昵称',
-                              },
-                              {
-                                value: '',
-                                leftSrc1:
-                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
-                                leftSrc2:
-                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
-                                disabled: false,
-                                placeholder: '* 请填写姓名/昵称',
-                              },
-                            ],
-                          },
-                          {
-                            title: '1',
-                            funcList: [
-                              {
-                                value: '',
-                                leftSrc1:
-                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
-                                leftSrc2:
-                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
-                                disabled: false,
-                                placeholder: '* 请填写姓名/昵称',
-                              },
-                            ],
-                          },
-                        ]"
-                        class="ele-7b9f5bcb-d657-4fa1-a77b-6957db366ea5"
+                        ref="placeholder"
+                        :list="placeholder.list"
+                        class="ele-placeholder"
                       >
                       </registration-form-package-components>
                     </view>
@@ -1186,6 +1129,65 @@ export default {
         text: "¥ 59.00",
         textStyle: {},
       },
+      placeholder: {
+        list: [
+          {
+            title: "1",
+            funcList: [
+              {
+                value: "",
+                leftSrc1:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+                leftSrc2:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+                disabled: false,
+                placeholder: "* 请填写姓名/昵称",
+              },
+              {
+                value: "",
+                leftSrc1:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+                leftSrc2:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+                disabled: false,
+                placeholder: "* 请填写姓名/昵称",
+              },
+              {
+                value: "",
+                leftSrc1:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+                leftSrc2:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+                disabled: false,
+                placeholder: "* 请填写姓名/昵称",
+              },
+              {
+                value: "",
+                leftSrc1:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+                leftSrc2:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+                disabled: false,
+                placeholder: "* 请填写姓名/昵称",
+              },
+            ],
+          },
+          {
+            title: "1",
+            funcList: [
+              {
+                value: "",
+                leftSrc1:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+                leftSrc2:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+                disabled: false,
+                placeholder: "* 请填写姓名/昵称",
+              },
+            ],
+          },
+        ],
+      },
       nameInput: {
         value: "",
         leftSrc: [
@@ -1211,6 +1213,7 @@ export default {
       payPopup: {
         show: false,
       },
+      participantsList: {},
       "2bb118e7-6403-448b-8985-fd3619976ad9": {
         value: [
           {
@@ -1239,6 +1242,7 @@ export default {
       self.prices.text = "";
       self.orderId = "";
       self.alipayChannel = "";
+      self.placeholder.list = [];
       self.getActivityProject = async function () {
         let url = "/api/dkn/activityProject/list";
         let params = {
@@ -1459,6 +1463,7 @@ export default {
         });
         list = list.map((x) => {
           return {
+            ...x,
             activityProjectId: x.id,
             num: x.number,
           };
@@ -1528,6 +1533,46 @@ export default {
         }
         self.$pay(self.orderId, channel);
       };
+
+      //参与人
+      self.getDict = async function () {
+        let url = "/api/dkn/viewActivityDictItem/list";
+        let params = {
+          activityId: self.activityId,
+          type: 1,
+        };
+        const res = await self.$getAction(url, params);
+        self.participantsList = res.result.records;
+      };
+      self.getDict();
+      self.getParticipants = function () {
+        const item = self.getOrderProjects();
+        console.log("aaa", self.getOrderProjects());
+        console.log("self.participantsList", self.participantsList);
+        let list = [];
+
+        item.forEach((e) => {
+          for (let i = 0; i < e.num; i++) {
+            let l = self.participantsList.map((s) => {
+              return {
+                ...s,
+                value: "",
+                disabled: false,
+                placeholder: `* 请填写${s.itemText}`,
+              };
+            });
+            let par = {
+              title: e.name,
+              funcList: l,
+            };
+            list.push(par);
+          }
+        });
+        console.log("list", list);
+      };
+      setTimeout(() => {
+        self.getParticipants();
+      });
     },
 
     onEventCardChange(e) {
@@ -1653,7 +1698,7 @@ export default {
   background-color: #fff;
 }
 
-.ele-wrapper-7b9f5bcb-d657-4fa1-a77b-6957db366ea5 {
+.ele-wrapper-placeholder {
   width: 100%;
   margin-top: 10px;
 }
