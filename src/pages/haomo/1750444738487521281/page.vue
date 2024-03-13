@@ -31,6 +31,7 @@
                 <hm-uview-text
                   text="选择奖品套餐"
                   font-size="16px"
+                  :text-style="{}"
                   class="ele-a9b61974-4b4c-4f4b-bf36-c799e54a8505"
                 >
                 </hm-uview-text>
@@ -65,6 +66,7 @@
                 <hm-uview-text
                   text="填写资料信息"
                   font-size="16px"
+                  :text-style="{}"
                   class="ele-41e260d8-66e3-4a5a-8600-e82cd01f5d1c"
                 >
                 </hm-uview-text>
@@ -73,6 +75,7 @@
                 <information-input-box
                   ref="nameInput"
                   v-model:value="nameInput.value"
+                  :left-src="nameInput.leftSrc"
                   :show-code="false"
                   placeholder="* 姓名/昵称"
                   class="ele-nameInput"
@@ -136,6 +139,7 @@
                 <hm-uview-text
                   text="参与人员信息填写"
                   font-size="16px"
+                  :text-style="{}"
                   class="ele-fc61ffbc-5000-4008-be66-490d31c2dc31"
                 >
                 </hm-uview-text>
@@ -145,46 +149,76 @@
               >
                 <hm-loop
                   :value="[{ id: '1' }]"
+                  :params="{}"
+                  :get-data-map="{ list: '', total: '' }"
+                  :refresh-config="{
+                    show: false,
+                    contentdown: '显示更多',
+                    contentrefresh: '正在加载...',
+                    contentnomore: '没有更多数据了',
+                  }"
                   class="ele-2bb118e7-6403-448b-8985-fd3619976ad9"
                 >
                   <template #default="{ item }">
                     <view
-                      class="ele-wrapper ele-wrapper-fc4f02c0-21ff-451d-8808-04e971cf8711"
-                    >
-                      <hm-uview-text text="套餐A-参与人1：" font-size="14px">
-                      </hm-uview-text>
-                    </view>
-                    <view
                       class="ele-wrapper ele-wrapper-7b9f5bcb-d657-4fa1-a77b-6957db366ea5"
                     >
                       <registration-form-package-components
-                        :func-list="[
+                        :list="[
                           {
-                            value: '',
-                            leftSrc1:
-                              'https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E7%94%A8%E6%88%B7%20(1).png',
-                            leftSrc2:
-                              'https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E7%94%A8%E6%88%B7.png',
-                            disabled: false,
-                            placeholder: '* 请填写姓名/昵称',
+                            title: '1',
+                            funcList: [
+                              {
+                                value: '',
+                                leftSrc1:
+                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
+                                leftSrc2:
+                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
+                                disabled: false,
+                                placeholder: '* 请填写姓名/昵称',
+                              },
+                              {
+                                value: '',
+                                leftSrc1:
+                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
+                                leftSrc2:
+                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
+                                disabled: false,
+                                placeholder: '* 请填写姓名/昵称',
+                              },
+                              {
+                                value: '',
+                                leftSrc1:
+                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
+                                leftSrc2:
+                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
+                                disabled: false,
+                                placeholder: '* 请填写姓名/昵称',
+                              },
+                              {
+                                value: '',
+                                leftSrc1:
+                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
+                                leftSrc2:
+                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
+                                disabled: false,
+                                placeholder: '* 请填写姓名/昵称',
+                              },
+                            ],
                           },
                           {
-                            value: '',
-                            leftSrc1:
-                              'https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E8%BA%AB%E4%BB%BD%E8%AF%81%E9%9D%A2%E6%80%A7.png',
-                            leftSrc2:
-                              'https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E8%BA%AB%E4%BB%BD%E8%AF%81%E9%9D%A2%E6%80%A7%20(1).png',
-                            disabled: false,
-                            placeholder: '* 请填写姓名/昵称',
-                          },
-                          {
-                            value: '',
-                            leftSrc1:
-                              'https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E8%BA%AB%E4%BB%BD%E8%AF%81%E9%9D%A2%E6%80%A7.png',
-                            leftSrc2:
-                              'https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E8%BA%AB%E4%BB%BD%E8%AF%81%E9%9D%A2%E6%80%A7%20(1).png',
-                            disabled: false,
-                            placeholder: '* 请填写姓名/昵称',
+                            title: '1',
+                            funcList: [
+                              {
+                                value: '',
+                                leftSrc1:
+                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png',
+                                leftSrc2:
+                                  'https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png',
+                                disabled: false,
+                                placeholder: '* 请填写姓名/昵称',
+                              },
+                            ],
                           },
                         ]"
                         class="ele-7b9f5bcb-d657-4fa1-a77b-6957db366ea5"
@@ -212,6 +246,7 @@
                 <hm-uview-text
                   text="选择门店"
                   font-size="16px"
+                  :text-style="{}"
                   class="ele-9fb51c90-145e-4b04-a74d-99794d96d8b3"
                 >
                 </hm-uview-text>
@@ -253,6 +288,7 @@
                   ref="activityText"
                   :text="activityText.text"
                   :font-size="activityText.fontSize"
+                  :text-style="activityText.textStyle"
                   class="ele-activityText"
                 >
                 </hm-uview-text>
@@ -263,6 +299,7 @@
                   :text="countdown.text"
                   :font-size="countdown.fontSize"
                   :color="countdown.color"
+                  :text-style="countdown.textStyle"
                   class="ele-countdown"
                 >
                 </hm-uview-text>
@@ -271,6 +308,7 @@
                 <hm-uview-text
                   ref="prices"
                   :text="prices.text"
+                  :text-style="prices.textStyle"
                   class="ele-prices"
                 >
                 </hm-uview-text>
@@ -320,7 +358,11 @@
                           <view
                             class="ele-wrapper ele-wrapper-62635a9e-6ebb-4a1d-ba42-c9d2cab1fb7a"
                           >
-                            <hm-uview-text text="微信" font-size="14px">
+                            <hm-uview-text
+                              text="微信"
+                              font-size="14px"
+                              :text-style="{}"
+                            >
                             </hm-uview-text>
                           </view>
                         </hm-uview-bg-card>
@@ -330,6 +372,8 @@
                           ref="weixinRadio"
                           v-model:value="weixinRadio.value"
                           title=""
+                          :params="weixinRadio.params"
+                          :data-map="weixinRadio.dataMap"
                           :list="weixinRadio.list"
                           active-color="#22C386"
                           @radioChange="onWeixinRadioRadioChange"
@@ -371,7 +415,11 @@
                           <view
                             class="ele-wrapper ele-wrapper-b35bc98b-a78b-4d94-a7ca-3a39c30ec0ff"
                           >
-                            <hm-uview-text text="支付宝" font-size="14px">
+                            <hm-uview-text
+                              text="支付宝"
+                              font-size="14px"
+                              :text-style="{}"
+                            >
                             </hm-uview-text>
                           </view>
                         </hm-uview-bg-card>
@@ -381,6 +429,8 @@
                           ref="zhifubaoRadio"
                           v-model:value="zhifubaoRadio.value"
                           title=""
+                          :params="zhifubaoRadio.params"
+                          :data-map="zhifubaoRadio.dataMap"
                           :list="zhifubaoRadio.list"
                           active-color="#22C386"
                           @radioChange="onZhifubaoRadioRadioChange"
@@ -409,6 +459,7 @@
                       :type="'primary'"
                       :shape="'circle'"
                       text="确认支付"
+                      :custom-style="{}"
                       @click="onElecc32D6578Fd941629086B69B68Cf0BddClick"
                       class="ele-cc32d657-8fd9-4162-9086-b69b68cf0bdd"
                     >
@@ -435,6 +486,7 @@
                   ref="payButton"
                   :shape="payButton.shape"
                   :text="payButton.text"
+                  :custom-style="payButton.customStyle"
                   @click="onPayButtonClick"
                   class="ele-payButton"
                 >
@@ -493,6 +545,11 @@ export default {
       },
       zhifubaoRadio: {
         value: '""',
+        params: {},
+        dataMap: {
+          name: "name",
+          disabled: "disabled",
+        },
         list: [
           {
             name: "",
@@ -502,6 +559,11 @@ export default {
       },
       weixinRadio: {
         value: "",
+        params: {},
+        dataMap: {
+          name: "name",
+          disabled: "disabled",
+        },
         list: [
           {
             name: "",
@@ -553,6 +615,10 @@ export default {
       },
       nameInput: {
         value: "",
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+        ],
       },
       phoneInput: {
         value: "",
@@ -574,6 +640,17 @@ export default {
             id: "1",
           },
         ],
+        params: {},
+        getDataMap: {
+          list: "",
+          total: "",
+        },
+        refreshConfig: {
+          show: false,
+          contentdown: "显示更多",
+          contentrefresh: "正在加载...",
+          contentnomore: "没有更多数据了",
+        },
       },
       storeList: {
         list: [
@@ -1159,18 +1236,22 @@ export default {
       activityText: {
         text: "派对甜心奖牌趣味玩款5.2公里",
         fontSize: "18px",
+        textStyle: {},
       },
       countdown: {
         text: "剩下时间 23:59:59",
         fontSize: "14px",
         color: "#999999",
+        textStyle: {},
       },
       prices: {
         text: "¥ 59.00",
+        textStyle: {},
       },
       payButton: {
         shape: "circle",
         text: "¥ 29.9 立即报名",
+        customStyle: {},
       },
     };
   },
@@ -1433,7 +1514,7 @@ export default {
 
 .ele-wrapper-7b9f5bcb-d657-4fa1-a77b-6957db366ea5 {
   width: 100%;
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 .ele-wrapper-shopPop {
