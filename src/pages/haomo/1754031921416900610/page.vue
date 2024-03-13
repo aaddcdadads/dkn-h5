@@ -569,6 +569,7 @@ export default {
         pickUpStatus: 0,
         activityPickUpId: this.activityPickUpId,
         pickUpTime: this.getTime(),
+        originalStoreId: this.registrationOrdersData.storeId,
       }).then((res) => {
         console.log("res--", res);
         if (!res.success) {
