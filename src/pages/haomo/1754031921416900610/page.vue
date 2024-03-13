@@ -442,7 +442,11 @@ export default {
         let currentTime = new Date();
         let currentRound = this.getCurrentRound(roundDates, currentTime);
         this.roundField.value = "第" + (currentRound + 1) + "轮核销";
-        this.timeField.value = roundDates[currentRound];
+        const result = roundDates[currentRound].replace(
+          / \d{2}:\d{2}:\d{2} /g,
+          " "
+        );
+        this.timeField.value = result;
         console.log("resqewqw--", currentRound, roundDates[currentRound]);
       });
       //查询扫码的门店信息
