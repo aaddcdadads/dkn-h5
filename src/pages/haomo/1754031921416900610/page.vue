@@ -373,12 +373,27 @@ export default {
         let formattedTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
         return formattedTime;
       };
-
+      //处理图片
       this.getImg = function (url) {
-        if (url.substring(0, 4) === "http") {
+        if (!url || url.substring(0, 4) === "http") {
           return url;
         }
         return `/api/sys/common/static/${url}`;
+      };
+
+      //计算当前第几轮
+      this.getCurrentRound = function (roundDates, currentTime) {
+        // 将时间段字符串按逗号分割成数组
+        let currentRound = -1;
+        roundDates.forEach((round, index) => {
+          let startEnd = round.split("至");
+          let startDate = new Date(startEnd[0].trim());
+          let endDate = new Date(startEnd[1].trim());
+          if (currentTime >= startDate && currentTime <= endDate) {
+            currentRound = index; // 返回轮次编号（从1开始）
+          }
+        });
+        return currentRound;
       };
     },
     onMounted() {
