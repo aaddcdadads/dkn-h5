@@ -419,8 +419,8 @@
               <view class="ele-wrapper ele-wrapper-buttonwan">
                 <hm-uview-button
                   ref="buttonwan"
-                  :shape="buttonwan.shape"
                   :disabled="buttonwan.disabled"
+                  :shape="buttonwan.shape"
                   :text="buttonwan.text"
                   @click="onButtonwanClick"
                   class="ele-buttonwan"
