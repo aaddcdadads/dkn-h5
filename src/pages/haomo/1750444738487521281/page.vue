@@ -177,6 +177,15 @@
                             disabled: false,
                             placeholder: '* 请填写姓名/昵称',
                           },
+                          {
+                            value: '',
+                            leftSrc1:
+                              'https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E8%BA%AB%E4%BB%BD%E8%AF%81%E9%9D%A2%E6%80%A7.png',
+                            leftSrc2:
+                              'https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E8%BA%AB%E4%BB%BD%E8%AF%81%E9%9D%A2%E6%80%A7%20(1).png',
+                            disabled: false,
+                            placeholder: '* 请填写姓名/昵称',
+                          },
                         ]"
                         class="ele-7b9f5bcb-d657-4fa1-a77b-6957db366ea5"
                       >
