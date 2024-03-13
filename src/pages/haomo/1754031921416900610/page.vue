@@ -112,10 +112,10 @@
                   </view>
                 </hm-uview-bg-card>
               </view>
-              <view class="ele-wrapper ele-wrapper-RoundField">
+              <view class="ele-wrapper ele-wrapper-roundField">
                 <hm-uview-field
-                  ref="RoundField"
-                  v-model:value="RoundField.value"
+                  ref="roundField"
+                  v-model:value="roundField.value"
                   label="当前核销"
                   placeholder="当前核销轮次"
                   label-width="160"
@@ -123,7 +123,7 @@
                   icon=""
                   right-icon=""
                   :disabled="true"
-                  class="ele-RoundField"
+                  class="ele-roundField"
                 >
                 </hm-uview-field>
               </view>
@@ -326,7 +326,7 @@ export default {
       "0ded82e1-3f32-400b-915d-b361c39f83db": {
         value: "item.value",
       },
-      RoundField: {
+      roundField: {
         value: "",
       },
       timeField: {
@@ -677,7 +677,7 @@ export default {
   margin-left: 6rpx;
 }
 
-.ele-wrapper-RoundField {
+.ele-wrapper-roundField {
   width: 100%;
   /deep/.u-field {
     height: 56px;
