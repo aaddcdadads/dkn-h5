@@ -438,14 +438,26 @@ export default {
         if (this.registrationOrdersData.paymentStatus != 0) {
           this.buttonwanCard.hidden = true;
         }
+        //保存所有轮的核销时间段数组
         let roundDates = this.registrationOrdersData.writeTimeGroups.split(",");
+        let activityPickUpIds = this.registrationOrdersData.activityPickUpIds.split(
+          ","
+        );
         let currentTime = new Date();
-        let currentRound = this.getCurrentRound(roundDates, currentTime);
-        this.roundField.value = "第" + (currentRound + 1) + "轮核销";
+        //查询第几轮
+        this.currentRound = this.getCurrentRound(roundDates, currentTime);
+        //保存当前轮的活动配置id
+        this.activityPickUpId = activityPickUpIds[this.currentRound];
+        //处理时间数据
+        this.roundField.value = "第" + (this.currentRound + 1) + "轮核销";
         const pattern = /\b\d{4}-\d{2}-\d{2}\b/g; // 匹配年月日的正则表达式
-        const times = roundDates[currentRound].match(pattern);
+        const times = roundDates[this.currentRound].match(pattern);
         this.timeField.value = times[0] + "至" + times[1];
-        console.log("resqewqw--", currentRound, roundDates[currentRound]);
+        console.log(
+          "resqewqw--",
+          this.currentRound,
+          roundDates[this.currentRound]
+        );
       });
       //查询扫码的门店信息
       this.$getAction("/api/dkn/store/list", {
