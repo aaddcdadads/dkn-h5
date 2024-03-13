@@ -120,6 +120,7 @@
                   placeholder="当前核销轮次"
                   label-width="160"
                   :label-align="'center'"
+                  maxlength="-1"
                   icon=""
                   right-icon=""
                   :disabled="true"
