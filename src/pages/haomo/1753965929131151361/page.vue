@@ -700,7 +700,7 @@ export default {
             this.pickUpTime.text =
               "请在" + timeText + "之内完成第" + (currentRound + 1) + "轮核销";
             //查询当前轮有没有核销
-            let writes = item.writeStatusGroups.splic(",");
+            let writes = item.writeStatusGroups.split(",");
             if (writes[currentRound] == "已核销") {
               this.buttonwanCard.hidden = true;
             }
@@ -741,34 +741,6 @@ export default {
               };
             });
           });
-
-          let ar22r = [
-            {
-              id: "1",
-              name: "妞妞",
-              list: [
-                {
-                  id: "1",
-                  value: "参与人真实姓名+身份证号1",
-                  disabled: false,
-                },
-                {
-                  id: "2",
-                  value: "参与人真实姓名+身份证号2",
-                },
-              ],
-            },
-            {
-              id: "1",
-              name: "23123",
-              list: [
-                {
-                  id: "1",
-                  value: "参与人真实姓名+身份证号3",
-                },
-              ],
-            },
-          ];
 
           //查询参与人
           this.$getAction(
