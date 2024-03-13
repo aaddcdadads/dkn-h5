@@ -150,7 +150,7 @@
                     <view class="ele-wrapper ele-wrapper-placeholder">
                       <registration-form-package-components
                         ref="placeholder"
-                        :list="item"
+                        :list="placeholder.list"
                         class="ele-placeholder"
                       >
                       </registration-form-package-components>
@@ -1127,7 +1127,7 @@ export default {
       placeholder: {
         list: [
           {
-            title: "套餐A-参与人1：",
+            title: "1",
             funcList: [
               {
                 value: "",
@@ -1168,7 +1168,7 @@ export default {
             ],
           },
           {
-            title: "套餐A-参与人2：",
+            title: "1",
             funcList: [
               {
                 value: "",
