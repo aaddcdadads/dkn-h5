@@ -1,6 +1,6 @@
 <template>
   <view v-for="(item, index) in List" :key="index">
-   <view style="margin-bottom: 7px;"> <text class="title">{{ item.title }}-{{ index }}</text></view>
+   <view style="margin-bottom: 7px;"> <text class="title">{{ item.title }}</text></view>
     <view
       v-for="(i, childIndex) in item.funcList"
       :key="childIndex"
