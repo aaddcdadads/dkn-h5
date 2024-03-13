@@ -1307,6 +1307,7 @@ export default {
           console.log("money", money);
           self.payButton.text = `总费用：¥${money} 立即报名`;
           self.money = money;
+          self.getParticipants();
         });
       };
       self.checkOrder = async function () {
