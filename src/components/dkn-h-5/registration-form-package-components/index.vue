@@ -119,6 +119,7 @@ this.activeIndex = -1;
 <style scoped>
 .inputBox,
 .borderColor {
+  margin-top: 20px;
   width: 100%;
   display: flex;
   align-items: center;
