@@ -1,28 +1,38 @@
 <template>
-  <view
-    v-for="(item, index) in funcList"
-    :key="index"
-    :class="{
-      'inputBox':true,
-      'borderColor':activeIndex == index
-    }"
-    @click.prevent="onClick(index)"
-  >
-    <view class="image_box1">
-      <image class="imageleft" :src="item.leftSrc1" v-show="activeIndex != index" />
-      <image class="imageleft" :src="item.leftSrc2" v-show="activeIndex == index" />
-    </view>
-    <input
-      :placeholder="item.placeholder"
-      class="data_input"
-      :value="item.cValue"
-      @focus="focus($event,item,index)"
-      @input="input"
-      @blur="blur"
-      :disabled="item.disabled"
-      :class="{ data_inputs: item.disabled }"
-    />
-  </view>
+  <view v-for="(item, index) in List" :key="index">
+    <text>{{ item.title }}-{{ index }}</text>
+    <view
+      v-for="(i, childIndex) in item.funcList"
+      :key="childIndex"
+      :class="{
+        inputBox: true,
+        borderColor: getOnlyIndex(index, childIndex),
+      }"
+      @click.prevent="onClick(index, childIndex)"
+    >
+      <view class="image_box1">
+        <image
+          class="imageleft 1"
+          :src="i.leftSrc2"
+          v-if="getOnlyIndex(index, childIndex)"
+        />
+        <image
+          class="imageleft 2"
+          :src="i.leftSrc1"
+          v-else
+        />
+      </view>
+      <input
+        :placeholder="i.placeholder"
+        class="data_input"
+        :value="i.cValue"
+        @focus="focus($event, i, index, childIndex)"
+        @input="input"
+        @blur="blur"
+        :disabled="i.disabled"
+        :class="{ data_inputs: i.disabled }"
+      /> </view
+  ></view>
 </template>
 <script>
 export default {
@@ -30,30 +40,68 @@ export default {
     /**
      * 数据
      */
-    funcList: {
+    List: {
       type: Array,
       default: function () {
         return [
-          {value:"",
-            leftSrc1:
-              "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-            leftSrc2: "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-            disabled:false,
-            placeholder:"* 请填写姓名/昵称"
-
+          {
+            title: "1",
+            funcList: [
+              {
+                value: "",
+                leftSrc1:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+                leftSrc2:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+                disabled: false,
+                placeholder: "* 请填写姓名/昵称",
+              },
+              {
+                value: "",
+                leftSrc1:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+                leftSrc2:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+                disabled: false,
+                placeholder: "* 请填写姓名/昵称",
+              },
+              {
+                value: "",
+                leftSrc1:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+                leftSrc2:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+                disabled: false,
+                placeholder: "* 请填写姓名/昵称",
+              },
+              {
+                value: "",
+                leftSrc1:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+                leftSrc2:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+                disabled: false,
+                placeholder: "* 请填写姓名/昵称",
+              },
+            ],
           },
-          {value:"",
-            leftSrc1:
-              "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-            leftSrc2: "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-            disabled:false,
-            placeholder:"* 请填写姓名/昵称"
-
+          {
+            title: "1",
+            funcList: [
+              {
+                value: "",
+                leftSrc1:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+                leftSrc2:
+                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+                disabled: false,
+                placeholder: "* 请填写姓名/昵称",
+              },
+            ],
           },
         ];
       },
     },
-  
   },
   data() {
     return {
@@ -84,25 +132,30 @@ export default {
     }
   },
   methods: {
-    blur(){
-this.activeIndex = -1;
+    getOnlyIndex(a, b) {
+      let Index = a + "/" + b;
+      return this.activeIndex == Index;
+    },
+    blur() {
+      this.activeIndex = "";
     },
     input(e) {
       this.$emit("update:value", this.cValue);
       this.$emit("input");
     },
-    onClick(index) {
+    onClick(index, childIndex) {
       this.$emit("onClick");
-      this.borderColor = index;
+      this.activeIndex = index + "/" + childIndex;
+      this.$forceUpdate();
     },
-    focus(e,item,index) {
-      this.activeIndex = index;
+    focus(e, i, index, childIndex) {
+      this.activeIndex = index + "/" + childIndex;
     },
     handleClickOutside(event) {
       // 检查点击是否在div外
       const isClickInsideElement = this.$el.contains(event.target);
       if (!isClickInsideElement) {
-        this.borderColor = false;
+        // this.activeIndex = "";
       }
     },
   },
@@ -119,7 +172,6 @@ this.activeIndex = -1;
 <style scoped>
 .inputBox,
 .borderColor {
-  margin-top: 20px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -134,7 +186,7 @@ this.activeIndex = -1;
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-is: center;
 }
 
 .color {
