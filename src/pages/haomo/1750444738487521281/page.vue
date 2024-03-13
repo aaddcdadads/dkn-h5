@@ -571,26 +571,6 @@ export default {
           },
         ],
       },
-      orderCode: {},
-      loopList: {},
-      pickUpStatusText: {},
-      acNameText: {},
-      pickUpTime: {},
-      orderCdoe: {},
-      registrationProjectField: {},
-      userNameField: {},
-      phoneField: {},
-      storeNameField: {},
-      registrationTimeField: {},
-      activityNameField: {},
-      verificationDeadlineField: {},
-      writeStatusField: {},
-      buttonwanCard: {},
-      imgList: {},
-      activityImgList: {},
-      payPopup: {
-        show: false,
-      },
       eventCard: {
         list: [
           {
@@ -612,45 +592,6 @@ export default {
             number: 0,
           },
         ],
-      },
-      nameInput: {
-        value: "",
-        leftSrc: [
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-        ],
-      },
-      phoneInput: {
-        value: "",
-        leftSrc: [
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji.png",
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji(2).png",
-        ],
-      },
-      smscodeIpnut: {
-        value: "",
-        leftSrc: [
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan1.png",
-          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan(2).png",
-        ],
-      },
-      "2bb118e7-6403-448b-8985-fd3619976ad9": {
-        value: [
-          {
-            id: "1",
-          },
-        ],
-        params: {},
-        getDataMap: {
-          list: "",
-          total: "",
-        },
-        refreshConfig: {
-          show: false,
-          contentdown: "显示更多",
-          contentrefresh: "正在加载...",
-          contentnomore: "没有更多数据了",
-        },
       },
       storeList: {
         list: [
@@ -1233,6 +1174,11 @@ export default {
           },
         ],
       },
+      payButton: {
+        text: "¥ 29.9 立即报名",
+        shape: "circle",
+        customStyle: {},
+      },
       activityText: {
         text: "派对甜心奖牌趣味玩款5.2公里",
         fontSize: "18px",
@@ -1248,145 +1194,359 @@ export default {
         text: "¥ 59.00",
         textStyle: {},
       },
-      payButton: {
-        shape: "circle",
-        text: "¥ 29.9 立即报名",
-        customStyle: {},
+      nameInput: {
+        value: "",
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
+        ],
+      },
+      smscodeIpnut: {
+        value: "",
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan1.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/anquan(2).png",
+        ],
+      },
+      storeItem: {},
+      phoneInput: {
+        value: "",
+        leftSrc: [
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji.png",
+          "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/shouji(2).png",
+        ],
+      },
+      payPopup: {
+        show: false,
+      },
+      "2bb118e7-6403-448b-8985-fd3619976ad9": {
+        value: [
+          {
+            id: "1",
+          },
+        ],
+        params: {},
+        getDataMap: {
+          list: "",
+          total: "",
+        },
+        refreshConfig: {
+          show: false,
+          contentdown: "显示更多",
+          contentrefresh: "正在加载...",
+          contentnomore: "没有更多数据了",
+        },
       },
     };
   },
   watch: {},
-  mounted(e) {
+  async mounted(e) {
     this.onMounted(e);
   },
   methods: {
     onMounted() {
-      console.log("mounted");
-
-      function isCurrentTimeInRange(startTime, endTime) {
-        const currentTime = new Date();
-        return (
-          currentTime >= new Date(startTime) && currentTime <= new Date(endTime)
-        );
-      }
-      let params = {};
-      if (this.orderId) {
-        params = {
-          id: this.orderId,
-          pageNo: 1,
-          pageSize: 1,
+      let self = this;
+      self.activityId = self.$route.query.activityId;
+      self.activityName = self.$route.query.activityName;
+      self.channel = self.$route.query.channel || null;
+      self.eventCard.list = [];
+      self.storeList.list = [];
+      self.payButton.text = `立即报名`;
+      self.money = 0;
+      self.activityText.text = "";
+      self.countdown.text = "";
+      self.prices.text = "";
+      self.orderId = "";
+      self.alipayChannel = "";
+      self.getActivityProject = async function () {
+        let url = "/api/dkn/activityProject/list";
+        let params = {
+          activityId: self.activityId,
+          column: "sortNo",
+          order: "asc",
         };
-      } else {
-        params = {
-          pageNo: 1,
-          pageSize: 1,
-          userId: this.userId,
-          activityId: this.activityId,
-        };
-      }
-      this.$getAction("/api/dkn/viewRegistrationOrders/list", params).then(
-        (res) => {
-          console.log("res--viewRegistrationOrders", res);
-          if (res.code != 200 || res.result.records.length <= 0) {
-            uni.showToast({
-              title: "请先活动报名",
-              icon: "error",
-              duration: 2000,
-            });
-            setTimeout(() => {
-              uni.navigateTo({
-                url:
-                  "/pages/haomo/1750714119029264386/page?activityId=" +
-                  this.activityId +
-                  "&channelId=" +
-                  this.channelId,
-              });
-            }, 1500);
-            return;
-          }
-          let item = res.result.records[0];
-          //保存订单id
-          this.orderCode.value = item.code;
-          this.activityId = item.activityId;
-          //姓名
-          this.loopList.value[0].value = item.name;
-          //手机号
-          this.loopList.value[1].value = item.phone;
-          this.loopList.value[2].value = item.originalPickUpName;
-          //领奖门店
-          this.loopList.value[3].value = item.address;
-          //报名时间
-          this.loopList.value[4].value = item.createTime;
-          this.pickUpStatusText.text = item.pickUpStatusText;
-          this.acNameText.text = item.acName;
-          let timeText =
-            item.pickUpStartTime.split(" ")[0] +
-            " - " +
-            item.pickUpEndTime.split(" ")[0];
-          this.pickUpTime.text = "请在" + timeText + "之内完成核销";
-
-          /*this.orderCdoe.text = `订单编号：${item.code}`
-    this.registrationProjectField.value = item.acName ?? "";
-    this.userNameField.value = item.name ?? "";
-    this.phoneField.value = item.phone ?? "";
-    this.storeNameField.value = item.originalPickUpName ?? "";
-    this.registrationTimeField.value = item.paymentTime ?? "";
-    this.activityNameField.value = item.acName ?? "";
-    this.verificationDeadlineField.value = item.pickUpStartTime.split(' ')[0] + " - " + item.pickUpEndTime.split(' ')[0];
-    this.writeStatusField.value = item.pickUpStatusText ?? "";*/
-          //如果已核销或者已经过了截止时间
-          if (
-            item.pickUpStatus == 0 ||
-            !isCurrentTimeInRange(
-              item.pickUpStartTime.split(" ")[0] + " 00:00:00",
-              item.pickUpEndTime.split(" ")[0] + " 23:59:59"
-            )
-          ) {
-            this.buttonwanCard.hidden = true;
-          }
-
-          //根据订单id查询项目
-          this.$getAction("/api/dkn/viewOrderActivityProject/list", {
-            pageNo: 1,
-            pageSize: -1,
-            orderId: item.id,
-          }).then((orderProjectRes) => {
-            if (orderProjectRes.code != 200 || res.result.records.length <= 0) {
-              return;
-            }
-            //this.loopList.value = orderProjectRes.result.records
-            this.imgList.list = orderProjectRes.result.records.map((item) => {
-              return {
-                ...item,
-                checked: true,
-                image: this.getImg(item.imgPath),
-                description: item.synopsis,
-                price: item.expense,
-                number: item.num,
-              };
-            });
-          });
+        const res = await self.$getAction(url, params);
+        if (!res.success || res.result.records.length === 0) {
+          return;
         }
-      );
-
-      //查询奖品图片
-      this.$getAction("/api/dkn/activityImg/list", {
-        pageNo: 1,
-        pageSize: -1,
-        activityId: this.activityId,
-        type: 1,
-        column: "sortNo",
-        order: "asc",
-      }).then((res) => {
-        console.log("activityImg--", res);
-        if (res.code != 200 || res.result.records.length <= 0) return;
-        this.activityImgList.value = res.result.records.map((item) => {
+        let list = [];
+        res.result.records.forEach((e, index) => {
+          let checked = false;
+          if (index == 0) {
+            checked = true;
+          }
+          let par = {
+            ...e,
+            checked,
+            image: self.getImg(e.imgPath),
+            name: e.name,
+            description: e.synopsis,
+            price: e.free === 0 ? 0 : e.expense,
+            number: 1,
+          };
+          list.push(par);
+        });
+        self.eventCard.list = list;
+        self.money = list[0].price;
+        self.payButton.text = `总费用：¥${self.money} 立即报名`;
+      };
+      self.getStoreList = async function () {
+        let url = "/api/dkn/store/listOrder";
+        const res = await self.$getAction(url, {
+          status: 0,
+          activityId: self.activityId,
+        });
+        if (!res.success || res.result.length === 0) {
+          return;
+        }
+        let store = res.result.map((x) => {
           return {
-            ...item,
-            src: this.getImg(item.path),
+            city: x.key,
+            shop: x.store,
           };
         });
-      });
+        self.storeList.list = [
+          {
+            anchor: "b",
+            store,
+          },
+        ];
+      };
+      self.getImg = function (url) {
+        if (url.substring(0, 4) === "http") {
+          return url;
+        }
+        return `/api/sys/common/static/${url}`;
+      };
+      self.getAlipayChannel = async function () {
+        let url = `/api/sys/dict/getDictText/alipay_channel/${self.channel}`;
+        const res = await self.$getAction(url);
+        self.alipayChannel = res.result;
+      };
+      self.getData = function () {
+        self.getActivityProject();
+        self.getStoreList();
+        self.getAlipayChannel();
+      };
+      self.getData();
+
+      self.checked = function () {
+        setTimeout(() => {
+          let money = 0;
+          self.eventCard.list.forEach((e) => {
+            if (e.checked && e.free !== 0) {
+              let expense = e.expense * e.number;
+              money += expense;
+            }
+          });
+          money = parseFloat(money).toFixed(2);
+          console.log("money", money);
+          self.payButton.text = `总费用：¥${money} 立即报名`;
+          self.money = money;
+        });
+      };
+      self.checkOrder = async function () {
+        if (!self.nameInput.value) {
+          self.error("姓名/昵称不能为空");
+          return;
+        }
+        if (!self.checkPhone()) {
+          return;
+        }
+        if (!self.smscodeIpnut.value) {
+          self.error("验证码不能为空");
+          return;
+        }
+        if (!self.storeInput.value) {
+          self.error("领奖门店不能为空");
+          return;
+        }
+
+        const orderProjects = self.getOrderProjects();
+
+        if (orderProjects.length == 0) {
+          self.error("请至少选择一个活动项目");
+          return;
+        }
+        self.addOrder();
+      };
+      self.addOrder = async function () {
+        let url = "/api/dkn/registrationOrders/addOrder";
+        const orderProjects = self.getOrderProjects();
+        let channel = "";
+        if (self.channel && self.channel != "undefined") {
+          channel = self.channel;
+        }
+        let params = {
+          activityId: self.activityId,
+          storeId: self.storeItem.id,
+          paymentStatus: 1,
+          phone: self.phoneInput.value,
+          name: self.nameInput.value,
+          smscode: self.smscodeIpnut.value,
+          money: self.money,
+          orderProjects,
+          channel,
+        };
+        const res = await self.$postAction(url, params);
+        if (!res.success) {
+          self.orderId = res.result.orderId;
+          if (res.message === "当前活动已经报名！") {
+            if (res.result.paymentStatus === 1) {
+              self.error("当前活动已经报名未支付");
+              // self.$pay(self.orderId, "1");
+              // return;
+              // if (self.isWeChat()) {
+              //   self.$pay(self.orderId, "0")
+              //   return
+              // }
+              if (self.alipayChannel) {
+                self.$pay(self.orderId, "1");
+                return;
+              }
+              self.payPopup.show = true;
+              self.activityText.text = self.activityName;
+              self.countdown.text = "";
+              self.prices.text = `¥ ${res.result.money}`;
+            } else {
+              self.error(res.message);
+              self.login();
+              return;
+            }
+          } else {
+            self.error(res.message);
+          }
+          return;
+        }
+        self.orderId = res.message;
+        if (!parseFloat(self.money) > 0) {
+          uni.showToast({
+            icon: "success",
+            position: "top",
+            title: "报名成功",
+            duration: 2000,
+          });
+          self.login();
+          return;
+        }
+        // self.$pay(self.orderId, "1")
+        // return
+
+        // //微信浏览器打开直接跳微信支付
+        // if (self.isWeChat()) {
+        //   self.$pay(self.orderId, "0")
+        //   return
+        // }
+        if (self.alipayChannel) {
+          self.$pay(self.orderId, "1");
+          return;
+        }
+
+        self.payPopup.show = true;
+        self.activityText.text = self.activityName;
+        self.countdown.text = "";
+        self.prices.text = `¥ ${self.money}`;
+      };
+      self.isWeChat = function () {
+        // 判断是否在微信浏览器中
+        const userAgent = navigator.userAgent.toLowerCase();
+        return userAgent.indexOf("micromessenger") !== -1;
+      };
+      //登录验证
+      self.login = async function () {
+        let url = "/api/sys/phoneLogin";
+        let params = {
+          mobile: self.phoneInput.value,
+          captcha: self.smscodeIpnut.value,
+        };
+        const res = await self.$postAction(url, params);
+        if (!res.success) {
+          return;
+        }
+        uni.setStorageSync("token", res.result.token);
+        uni.setStorageSync("userInfo", res.result.userInfo);
+        uni.$u.route(
+          `/pages/haomo/1753965929131151361/page?orderId=${self.orderId}`
+        );
+      };
+      self.getOrderProjects = function () {
+        let list = [];
+        self.eventCard.list.forEach((e) => {
+          if (e.checked && e.number) {
+            list.push(e);
+          }
+        });
+        list = list.map((x) => {
+          return {
+            activityProjectId: x.id,
+            num: x.number,
+          };
+        });
+        return list;
+      };
+      self.error = function (text) {
+        uni.showToast({
+          icon: "error",
+          position: "top",
+          title: text,
+          duration: 2000,
+        });
+      };
+      //获取验证码
+      self.getPhoneCode = async function () {
+        if (!self.checkPhone()) {
+          setTimeout(() => {
+            self.$refs.smscodeIpnut.reset();
+          });
+          return;
+        }
+
+        let url = "/api/sys/sms";
+        let params = {
+          mobile: self.phoneInput.value,
+        };
+        const res = await self.$postAction(url, params);
+        uni.showToast({
+          title: res.message,
+          duration: 2000,
+        });
+      };
+      //校验手机号
+      self.checkPhone = function () {
+        let mobile = self.phoneInput.value;
+        if (!mobile) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: "手机号不能为空",
+            duration: 2000,
+          });
+          return false;
+        }
+        const phoneRegex = /^1[3456789]\d{9}$/;
+        const status = phoneRegex.test(mobile);
+        if (!status) {
+          uni.showToast({
+            icon: "error",
+            position: "top",
+            title: "手机号格式不正确",
+            duration: 2000,
+          });
+        }
+        return status;
+      };
+
+      //支付
+      self.orderPayment = function () {
+        if (!self.orderId) {
+          return;
+        }
+        let channel = "0";
+        if (self.weixinRadio.value === "1") {
+          channel = "1";
+        }
+        self.$pay(self.orderId, channel);
+      };
     },
 
     onEventCardChange(e) {
