@@ -25,7 +25,7 @@
       <input
         :placeholder="i.placeholder"
         class="data_input"
-        :value="i.cValue"
+        :value="i.value"
         @focus="focus($event, i, index, childIndex)"
         @input="input($event,index, childIndex)"
         @blur="blur"
