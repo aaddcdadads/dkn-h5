@@ -1587,6 +1587,7 @@ export default {
                 }
                 let par = {
                   uid: item.id,
+                  cid: i,
                   key: f.itemValue,
                   value: f.value,
                 };
