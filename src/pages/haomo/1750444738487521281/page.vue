@@ -1200,6 +1200,7 @@ export default {
         show: false,
       },
       participantsList: {},
+      orderParticipantsList: {},
     };
   },
   watch: {},
@@ -1341,7 +1342,7 @@ export default {
       };
       self.addOrder = async function () {
         let url = "/api/dkn/registrationOrders/addOrder";
-        const orderProjects = self.getOrderProjects();
+        const orderProjects = self.getProjects();
         let channel = "";
         if (self.channel && self.channel != "undefined") {
           channel = self.channel;
@@ -1544,6 +1545,7 @@ export default {
               };
             });
             let par = {
+              ...e,
               title: `${e.name}-参与人${i + 1}`,
               funcList: l,
             };
@@ -1587,6 +1589,36 @@ export default {
         }
         self.orderParticipantsList = list;
         return status;
+      };
+      self.getProjects = function () {
+        const orderProjects = self.getOrderProjects();
+        orderProjects.map((e) => {
+          let p = [];
+          self.orderParticipantsList.forEach((s) => {
+            if (s.uid === e.id) {
+              p.push(s);
+            }
+          });
+
+          let participants = [];
+          p.forEach((ss) => {
+            let par = { cid: ss.cid };
+            const i = participants.findIndex((a) => a.cid === ss.cid);
+            if (i != -1) {
+              participants[i][ss.key] = ss.value;
+              return;
+            }
+            par[ss.key] = ss.value;
+            participants.push(par);
+          });
+          participants.forEach((sss) => {
+            delete sss.cid;
+          });
+          return {
+            ...e,
+            participants: JSON.stringify(participants),
+          };
+        });
       };
     },
 
