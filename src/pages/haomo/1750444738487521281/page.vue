@@ -1592,7 +1592,7 @@ export default {
       };
       self.getProjects = function () {
         const orderProjects = self.getOrderProjects();
-        orderProjects.map((e) => {
+        return orderProjects.map((e) => {
           let p = [];
           self.orderParticipantsList.forEach((s) => {
             if (s.uid === e.id) {
@@ -1602,7 +1602,9 @@ export default {
 
           let participants = [];
           p.forEach((ss) => {
-            let par = { cid: ss.cid };
+            let par = {
+              cid: ss.cid,
+            };
             const i = participants.findIndex((a) => a.cid === ss.cid);
             if (i != -1) {
               participants[i][ss.key] = ss.value;
