@@ -11,7 +11,9 @@ function() {
   self.countdown.text = ""
   self.prices.text = ""
   self.orderId = ""
-  self.alipayChannel=""
+  self.alipayChannel = ""
+  self.placeholder.list = []
+  self.orderParticipantsList=[]
   self.getActivityProject = async function () {
     let url = '/api/dkn/activityProject/list'
     let params = {
@@ -96,9 +98,13 @@ function() {
       console.log("money", money);
       self.payButton.text = `总费用：¥${money} 立即报名`;
       self.money = money;
+      self.getParticipants();
     })
   }
   self.checkOrder = async function () {
+    if (!self.checkParticipants()) {
+      return
+    }
     if (!self.nameInput.value) {
       self.error("姓名/昵称不能为空")
       return
@@ -114,7 +120,7 @@ function() {
       self.error("领奖门店不能为空")
       return
     }
-
+    
     const orderProjects = self.getOrderProjects();
 
     if (orderProjects.length == 0) {
@@ -125,7 +131,7 @@ function() {
   }
   self.addOrder = async function () {
     let url = '/api/dkn/registrationOrders/addOrder'
-    const orderProjects = self.getOrderProjects();
+    const orderProjects = self.getProjects()
     let channel = ""
     if (self.channel && self.channel != 'undefined') {
       channel = self.channel
@@ -231,6 +237,7 @@ function() {
     });
     list = list.map(x => {
       return {
+        ...x,
         activityProjectId: x.id,
         num: x.number
       }
@@ -301,4 +308,114 @@ function() {
     self.$pay(self.orderId, channel)
   }
 
+  //参与人
+  self.getDict = async function () {
+    let url = "/api/dkn/viewActivityDictItem/list";
+      let params = {
+        activityId: self.activityId,
+        type: 1
+      }
+    const res = await self.$getAction(url, params)
+    self.participantsList = res.result.records
+  }
+  self.getDict()
+  self.getParticipants = function () {
+    const item = self.getOrderProjects();
+    let list = [];
+    const cList = self.placeholder.list
+    item.forEach((e) => {
+      let index = e.num * e.orderNumber;
+      for (let i = 0; i < index; i++) {
+        let title = `${e.name}-参与人${i + 1}`
+         const fi = cList.findIndex(f=> f.id===e.id && f.title ===title )
+        let l = self.participantsList.map((s) => {
+          let value =""
+          if (fi != -1) {
+            const fis = cList[fi].funcList.findIndex(fs => fs.id === s.id)
+            if (fis != -1) {
+              value = cList[fi].funcList[fis].value
+            }
+          }
+          return {
+            ...s,
+            value,
+            disabled: false,
+            placeholder: `* 请填写${s.itemText}`,
+          };
+        });
+        let par = {
+          ...e,
+          title,
+          funcList: l,
+        };
+        list.push(par);
+      }
+    });
+    self.placeholder.list = list;
+  };
+  setTimeout(() => { 
+    self.getParticipants()
+  })
+
+  self.checkParticipants = function () {
+    const items = self.$refs.placeholder.cList
+        let list = []
+        let status = true
+        for (let i = 0; i < items.length; i++){
+          const item = items[i]
+          if (item.funcList.length > 0) {
+              for (let j = 0; j < item.funcList.length; j++) {
+                try {
+                  const f =item.funcList[j]
+                  if (!f.value) {
+                    throw new Error()
+                  }
+                  let par = {
+                    uid: item.id,
+                    cid:i,
+                    key: f.itemValue,
+                    value:f.value
+                  }
+                  list.push(par)
+                } catch {
+                  list=[]
+                  status = false
+                  self.error(`${item.title}：${item.funcList[j].itemText} 不能为空`)
+                }
+              }
+          }
+        }
+        self.orderParticipantsList = list
+        return status
+  }
+  self.getProjects = function () {
+    const orderProjects = self.getOrderProjects();
+    return orderProjects.map(e => { 
+      let p=[]
+      self.orderParticipantsList.forEach(s => { 
+        if (s.uid===e.id) {
+          p.push(s)
+        }
+      })
+      
+      let participants = []
+      p.forEach(ss => {
+        let par = { cid: ss.cid }
+        const i = participants.findIndex(a => a.cid === ss.cid)
+        if (i != -1) {
+          participants[i][ss.key] = ss.value
+          return
+        }
+        par[ss.key] = ss.value
+        participants.push(par)
+      })
+      participants.forEach(sss => { 
+        delete sss.cid
+      })
+      return {
+        ...e,
+        participants:JSON.stringify(participants)
+      }
+    })
+  }
 }
