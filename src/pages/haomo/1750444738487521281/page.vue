@@ -1533,20 +1533,34 @@ export default {
       self.getParticipants = function () {
         const item = self.getOrderProjects();
         let list = [];
+        const cList = self.placeholder.list;
         item.forEach((e) => {
           let index = e.num * e.orderNumber;
           for (let i = 0; i < index; i++) {
+            let title = `${e.name}-参与人${i + 1}`;
+            const fi = cList.findIndex(
+              (f) => f.id === e.id && f.title === title
+            );
             let l = self.participantsList.map((s) => {
+              let value = "";
+              if (fi != -1) {
+                const fis = cList[fi].funcList.findIndex(
+                  (fs) => fs.id === s.id
+                );
+                if (fis != -1) {
+                  value = cList[fi].funcList[fis].value;
+                }
+              }
               return {
                 ...s,
-                value: "",
+                value,
                 disabled: false,
                 placeholder: `* 请填写${s.itemText}`,
               };
             });
             let par = {
               ...e,
-              title: `${e.name}-参与人${i + 1}`,
+              title,
               funcList: l,
             };
             list.push(par);
@@ -1602,9 +1616,7 @@ export default {
 
           let participants = [];
           p.forEach((ss) => {
-            let par = {
-              cid: ss.cid,
-            };
+            let par = { cid: ss.cid };
             const i = participants.findIndex((a) => a.cid === ss.cid);
             if (i != -1) {
               participants[i][ss.key] = ss.value;
