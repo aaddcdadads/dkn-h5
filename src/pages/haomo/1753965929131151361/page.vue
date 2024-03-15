@@ -763,7 +763,7 @@ export default {
                 }
                 let list = JSON.parse(personnelItem.participants);
                 list.forEach((listItem) => {
-                  listItem.value = listItem.name + " - " + listItem.id_card;
+                  listItem.value = Object.values(listItem).join("-");
                 });
                 console.log("personnelItemlist---", list);
                 return {
