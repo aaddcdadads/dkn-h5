@@ -96,7 +96,8 @@ function() {
         "activityType": self.activityExtItem ? self.activityExtItem.activityType : "",
         "requirements": self.activityExtItem ? self.activityExtItem.requirements : "",
         "projectList": projectList,
-        "number": number
+        "number": number,
+        "address":self.activityItem.address
       }
       const time = self.getTimeDifference(new Date(), new Date(self.activityItem.closeTime))
       console.log('time', time)
