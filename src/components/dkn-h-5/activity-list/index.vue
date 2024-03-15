@@ -35,7 +35,7 @@
         </view>
       </view>
     </view>
-    <view class="div">
+    <view class="div" v-if="item.address">
       <view class="imgleft"><img
           src="https://block-design.oss-cn-shenzhen.aliyuncs.com/project-imgs/uniapp-png/%E5%9C%B0%E5%9D%80.png"
           alt="" /></view>
