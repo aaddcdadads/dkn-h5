@@ -4,43 +4,46 @@
       :scroll-y="true"
       :scroll-into-view="toView"
       :scroll-with-animation="true"
-      :style="{ height: 'calc(78vh - 56px)' }"
+      :style="{ height: height + 'px' }"
     >
       <u-radio-group
         v-model="name"
         @change="radioGroupChange"
         style="width: 100%"
       >
-        <view v-for="(items, index) in data" :key="index" class="dataItemCard">
-          <view class="dataItemCard-title" :id="items.pinyinKey">{{
-            items.city
-          }}</view>
+        <view v-for="(items, index) in data" :key="index" class="shop">
           <view
-            v-for="(itemlist, key) in items.shop"
-            :key="key"
-            class="dataItemCard_list"
+            v-for="(item, itemsindex) in items.store"
+            class="store_list"
+            :id="items.anchor + itemsindex"
+            :key="itemsindex"
           >
-            <view class="dataItemCard_list_name">
-              <u-radio :name="itemlist.name">{{ itemlist.name }}</u-radio>
-            </view>
-            <view class="dataItemCard_list_address">
-              <text> {{ itemlist.address }}</text>
+            <view class="title">{{ item.city }}</view>
+            <view
+              v-for="(itemlist, key) in item.shop"
+              :key="key"
+              class="shopItem"
+            >
+              <view class="name">
+                <u-radio :name="itemlist.name"> {{ itemlist.name }}</u-radio>
+              </view>
+              <view class="address">
+                <text> {{ itemlist.address }}</text>
+              </view>
             </view>
           </view>
         </view>
       </u-radio-group>
     </scroll-view>
-    <view class="anchorBox" style="height: calc(78vh - 56px); overflow-y: auto">
-      <view v-for="(item, index) in anch" :key="index" class="itembox">
-        <a class="anchors" @click="anchor(item)">{{ item }}</a>
+    <view class="anchorBox">
+      <view v-for="(item, index) in anch" class="itembox">
+        <a class="anchors" @click="anchor(item + index)">{{ item }}</a>
       </view>
     </view>
   </view>
 </template>
 <script>
-import { pinyin, customPinyin } from "pinyin-pro";
-import _ from 'lodash';
-
+import { pinyin } from "pinyin-pro";
 export default {
   props: {
     /**
@@ -549,7 +552,7 @@ export default {
     list: {
       handler: function (val) {
         this.data = val;
-        this.data = this.mapData(this.data);
+        this.mapData(this.data);
       },
       deep: true,
     },
@@ -593,6 +596,7 @@ export default {
   },
   mounted() {
     this.data = this.list;
+    this.mapData(this.data);
     this.$nextTick(() => {
       const query = uni.createSelectorQuery().in();
       query
@@ -606,7 +610,6 @@ export default {
         })
         .exec();
     });
-    this.data = this.mapData(this.data);
   },
   methods: {
     radioGroupChange(e) {
@@ -636,23 +639,22 @@ export default {
     mapData(data) {
       let newData = data[0].store;
       newData.forEach((item) => {
-        let pinyinStr = pinyin(item.city, {
+        let Capital = pinyin(item.city, {
+          pattern: "first",
           toneType: "none",
-        }).toLowerCase()
-        let first = pinyinStr.charAt(0);
-        item.pinyin = pinyinStr;
-        item.pinyinKey = first;
+        })
+          .charAt(0)
+          .toLowerCase();
+        item.pinyinKey = Capital;
       });
-      newData = _.sortBy(newData, 'pinyin');
-      console.log("newData", newData)
-      // newData = newData.sort((a, b) => a.city.localeCompare(b.city));
+      newData = newData.sort((a, b) => a.city.localeCompare(b.city));
       return newData;
     },
   },
 };
 </script>
 
-<style lang="less" scoped>
+<style scoped>
 .shop {
   width: 100%;
   margin-left: 20px;
@@ -681,7 +683,7 @@ export default {
   text-decoration: none;
   font-weight: 500;
   font-style: normal;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .itembox:active {
@@ -695,7 +697,7 @@ export default {
 
 .anchorBox {
   width: 20px;
-  display: flex !important;
+  display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 300px;
@@ -714,27 +716,5 @@ export default {
   margin-top: 10px;
   padding-bottom: 15px;
   border-bottom: 0.5px solid #ffdedede;
-}
-.dataItemCard {
-  width: 100%;
-  padding: 0px 20px;
-  &-title {
-    width: 100%;
-    line-height: 44px;
-    border-bottom: 0.5px solid #ffdedede;
-  }
-  &_list {
-    width: 100%;
-    padding: 6px 0px;
-    &_name {
-      font-weight: 750;
-      display: flex;
-      align-items: center;
-    }
-    &_address {
-      margin-left: 23px;
-      font-size: 12px;
-    }
-  }
 }
 </style>
