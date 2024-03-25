@@ -1530,7 +1530,7 @@ export default {
       });
 
       self.checkParticipants = function () {
-        const items = self.$refs.placeholder.cList;
+        const items = self.$refs.placeholder?.cList || [];
         let list = [];
         let status = true;
         for (let i = 0; i < items.length; i++) {
