@@ -1313,9 +1313,9 @@ export default {
         });
       };
       self.checkOrder = async function () {
-        if (!self.checkParticipants()) {
-          return;
-        }
+        // if (!self.checkParticipants()) {
+        //   return
+        // }
         if (!self.nameInput.value) {
           self.error("姓名/昵称不能为空");
           return;
@@ -1617,7 +1617,9 @@ export default {
 
           let participants = [];
           p.forEach((ss) => {
-            let par = { cid: ss.cid };
+            let par = {
+              cid: ss.cid,
+            };
             const i = participants.findIndex((a) => a.cid === ss.cid);
             if (i != -1) {
               participants[i][ss.key] = ss.value;
