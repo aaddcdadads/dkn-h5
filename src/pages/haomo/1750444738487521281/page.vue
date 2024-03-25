@@ -1313,9 +1313,9 @@ export default {
         });
       };
       self.checkOrder = async function () {
-        // if (!self.checkParticipants()) {
-        //   return
-        // }
+        if (!self.checkParticipants()) {
+          return;
+        }
         if (!self.nameInput.value) {
           self.error("姓名/昵称不能为空");
           return;
@@ -1583,7 +1583,7 @@ export default {
               try {
                 const f = item.funcList[j];
                 if (!f.value) {
-                  throw new Error();
+                  //throw new Error()
                 }
                 let par = {
                   uid: item.id,
