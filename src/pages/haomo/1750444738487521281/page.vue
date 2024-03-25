@@ -1116,63 +1116,7 @@ export default {
         textStyle: {},
       },
       placeholder: {
-        list: [
-          {
-            title: "1",
-            funcList: [
-              {
-                value: "",
-                leftSrc1:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-                leftSrc2:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-                disabled: false,
-                placeholder: "* 请填写姓名/昵称",
-              },
-              {
-                value: "",
-                leftSrc1:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-                leftSrc2:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-                disabled: false,
-                placeholder: "* 请填写姓名/昵称",
-              },
-              {
-                value: "",
-                leftSrc1:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-                leftSrc2:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-                disabled: false,
-                placeholder: "* 请填写姓名/昵称",
-              },
-              {
-                value: "",
-                leftSrc1:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-                leftSrc2:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-                disabled: false,
-                placeholder: "* 请填写姓名/昵称",
-              },
-            ],
-          },
-          {
-            title: "1",
-            funcList: [
-              {
-                value: "",
-                leftSrc1:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang.png",
-                leftSrc2:
-                  "https://hm-static-img.oss-cn-beijing.aliyuncs.com/DecathlonSpringFestivalActivities/touxiang(1).png",
-                disabled: false,
-                placeholder: "* 请填写姓名/昵称",
-              },
-            ],
-          },
-        ],
+        list: [],
       },
       nameInput: {
         value: "",
