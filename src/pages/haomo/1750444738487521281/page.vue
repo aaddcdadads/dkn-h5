@@ -120,18 +120,18 @@
               </view>
             </hm-uview-bg-card>
           </view>
-          <view
-            class="ele-wrapper ele-wrapper-c04e86cb-8d7d-4cf7-970b-f6c1a35dd6d2"
-          >
+          <view class="ele-wrapper ele-wrapper-placeholderCard">
             <hm-uview-bg-card
-              width="100%"
-              height="100%"
-              padding="18"
-              box-shadow-v-shadow=""
-              box-shadow-blur=""
-              box-shadow-spread=""
-              background-color="#FFFFFF"
-              class="ele-c04e86cb-8d7d-4cf7-970b-f6c1a35dd6d2"
+              ref="placeholderCard"
+              :width="placeholderCard.width"
+              :height="placeholderCard.height"
+              :padding="placeholderCard.padding"
+              :box-shadow-v-shadow="placeholderCard.boxShadowVShadow"
+              :box-shadow-blur="placeholderCard.boxShadowBlur"
+              :box-shadow-spread="placeholderCard.boxShadowSpread"
+              :background-color="placeholderCard.backgroundColor"
+              :hidden="placeholderCard.hidden"
+              class="ele-placeholderCard"
             >
               <view
                 class="ele-wrapper ele-wrapper-fc61ffbc-5000-4008-be66-490d31c2dc31"
@@ -454,6 +454,16 @@ export default {
   data() {
     let self = this;
     return {
+      placeholderCard: {
+        width: "100%",
+        height: "100%",
+        padding: "18",
+        boxShadowVShadow: "",
+        boxShadowBlur: "",
+        boxShadowSpread: "",
+        backgroundColor: "#FFFFFF",
+        hidden: false,
+      },
       shopPop: {
         show: false,
       },
@@ -1507,10 +1517,13 @@ export default {
               title,
               funcList: l,
             };
-            list.push(par);
+            if (l.length > 0) {
+              list.push(par);
+            }
           }
         });
         self.placeholder.list = list;
+        self.placeholderCard.hidden = list.length == 0 ? true : false;
       };
       setTimeout(() => {
         self.getParticipants();
@@ -1688,7 +1701,7 @@ export default {
   margin-top: 20px;
 }
 
-.ele-wrapper-c04e86cb-8d7d-4cf7-970b-f6c1a35dd6d2 {
+.ele-wrapper-placeholderCard {
   width: 100%;
   margin-top: 18px;
 }
