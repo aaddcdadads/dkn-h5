@@ -834,23 +834,19 @@ export default {
       let userInfoString = localStorage.getItem("userInfo");
       let userInfo = JSON.parse(userInfoString);
       this.userId = userInfo.data.id || "";
-      if (!this.userId) {
-        uni.showToast({
-          title: "数据获取失败",
-          icon: "error",
-          duration: 1000,
-        });
-        setTimeout(() => {
-          uni.navigateTo({
-            url:
-              "/pages/haomo/1750714119029264386/page?activityId=" +
-              this.activityId +
-              "&channelId=" +
-              this.channelId,
-          });
-        }, 1500);
-        return;
-      }
+      /*if (!this.userId) {
+    uni.showToast({
+      title: "数据获取失败",
+      icon: "error",
+      duration: 1000
+    });
+    setTimeout(() => {
+      uni.navigateTo({
+        url: "/pages/haomo/1750714119029264386/page?activityId=" + this.activityId + "&channelId=" + this.channelId
+      })
+    }, 1500);
+    return
+  }*/
     },
 
     onOrderCodeButClick() {
@@ -882,7 +878,9 @@ export default {
             "&channelId=" +
             this.channelId +
             "&storeId=" +
-            this.storeId,
+            this.storeId +
+            "&orderId=" +
+            this.orderId,
         });
         return;
       }
@@ -891,7 +889,9 @@ export default {
           "/pages/haomo/1752649989210771458/page?activityId=" +
           this.activityId +
           "&channelId=" +
-          this.channelId,
+          this.channelId +
+          "&orderId=" +
+          this.orderId,
       });
 
       /*uni.navigateTo({
