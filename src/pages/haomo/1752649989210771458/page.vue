@@ -40,20 +40,27 @@ export default {
       if (options.channelId) {
         this.channelId = options.channelId;
       }
-      if (!options.activityId) {
-        uni.showToast({
-          title: "数据获取失败",
-          icon: "error",
-          duration: 1000,
-        });
-        setTimeout(() => {
-          uni.navigateTo({
-            url: "/pages/haomo/1750714119029264386/page",
-          });
-        }, 1500);
-        return;
+      if (options.orderId) {
+        this.orderId = options.orderId;
       }
-      this.activityId = options.activityId;
+
+      if (options.activityId) {
+        this.activityId = options.activityId;
+      }
+
+      /*if (!options.activityId || !options.orderId) {
+    uni.showToast({
+      title: "数据获取失败",
+      icon: "error",
+      duration: 1000
+    });
+    setTimeout(() => {
+      uni.navigateTo({
+        url: "/pages/haomo/1750714119029264386/page"
+      })
+    }, 1500);
+    return
+  }*/
     },
 
     onHmH5ScanCodeQrcodeSucess(data) {
@@ -69,7 +76,9 @@ export default {
             "/pages/haomo/1753965929131151361/page?activityId=" +
             this.activityId +
             "&channelId=" +
-            this.channelId,
+            this.channelId +
+            "&orderId=" +
+            this.orderId,
         });
       } else {
         const queryString = data.split("?")[1]; // 获取？后面的查询参数部分
@@ -92,7 +101,9 @@ export default {
                 "/pages/haomo/1753965929131151361/page?activityId=" +
                 this.activityId +
                 "&channelId=" +
-                this.channelId,
+                this.channelId +
+                "&orderId=" +
+                this.orderId,
             });
             return;
           }
@@ -103,7 +114,9 @@ export default {
               "&storeId=" +
               storeId +
               "&channelId=" +
-              this.channelId,
+              this.channelId +
+              "&orderId=" +
+              this.orderId,
           });
         });
       }
