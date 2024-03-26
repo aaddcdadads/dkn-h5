@@ -524,41 +524,45 @@ export default {
       if (options.channelId) {
         this.channelId = options.channelId;
       }
-      if (!options.activityId || !options.storeId) {
-        uni.showToast({
-          title: "数据获取失败",
-          icon: "error",
-          duration: 2000,
-        });
-        setTimeout(() => {
-          uni.navigateTo({
-            url: "/pages/haomo/1750714119029264386/page",
-          });
-        }, 2500);
-        return;
+      if (options.orderId) {
+        this.orderId = options.orderId;
       }
-      this.activityId = options.activityId;
-      this.storeId = options.storeId;
-
+      if (options.storeId) {
+        this.storeId = options.storeId;
+      }
+      if (options.activityId) {
+        this.activityId = options.activityId;
+      }
       // 从本地缓存中获取userInfo
       let userInfoString = localStorage.getItem("userInfo");
       let userInfo = JSON.parse(userInfoString);
       this.userId = userInfo.data.id || "";
-      if (!this.userId) {
-        uni.showToast({
-          title: "数据获取失败",
-          icon: "error",
-          duration: 1000,
-        });
-        setTimeout(() => {
-          uni.navigateTo({
-            url:
-              "/pages/haomo/1750714119029264386/page?activityId=" +
-              this.activityId,
-          });
-        }, 1500);
-        return;
-      }
+
+      /*if (!options.orderId || !options.storeId ) {
+    uni.showToast({
+      title: "数据获取失败",
+      icon: "error",
+      duration: 2000
+    });
+    setTimeout(() => {
+      uni.navigateTo({
+        url: "/pages/haomo/1750714119029264386/page?activityId=" + this.activityId
+      })
+    }, 2500);
+    
+  }else if (!options.activityId || !options.storeId || !this.userId) {
+    uni.showToast({
+      title: "数据获取失败",
+      icon: "error",
+      duration: 2000
+    });
+    setTimeout(() => {
+      uni.navigateTo({
+        url: "/pages/haomo/1750714119029264386/page?activityId=" + this.activityId
+      })
+    }, 2500);
+
+  }*/
     },
 
     onWriteOffModalOnConfirm() {
