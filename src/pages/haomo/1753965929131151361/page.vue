@@ -387,12 +387,12 @@
           <view class="ele-wrapper ele-wrapper-writeOffBtn">
             <hm-uview-bg-card
               ref="writeOffBtn"
-              box-shadow-blur=""
-              box-shadow-v-shadow=""
-              border-radius=""
-              background-color="#FAFAFA"
               width="100%"
               height="100%"
+              border-radius=""
+              box-shadow-v-shadow=""
+              box-shadow-blur=""
+              background-color="#FAFAFA"
               class="ele-writeOffBtn"
             >
               <view
@@ -804,36 +804,35 @@ export default {
       if (options.channelId) {
         this.channelId = options.channelId;
       }
-      if (options.type) {
-        this.type = options.type;
-      }
       if (options.storeId) {
         this.storeId = options.storeId;
       }
+      if (options.activityId) {
+        this.activityId = options.activityId;
+      }
       if (options.orderId) {
         this.orderId = options.orderId;
-        return;
       }
 
       //活动id
-      if (!options.activityId) {
-        uni.showToast({
-          title: "数据获取失败",
-          icon: "error",
-          duration: 1000,
-        });
-        setTimeout(() => {
-          uni.navigateTo({
-            url: "/pages/haomo/1750714119029264386/page",
-          });
-        }, 1500);
-        return;
-      }
-      this.activityId = options.activityId;
+      /*if (!options.activityId) {
+    uni.showToast({
+      title: "数据获取失败",
+      icon: "error",
+      duration: 1000
+    });
+    setTimeout(() => {
+      uni.navigateTo({
+        url: "/pages/haomo/1750714119029264386/page"
+      })
+    }, 1500);
+    return
+  }
+  this.activityId = options.activityId;*/
 
       // 从本地缓存中获取userInfo
       let userInfoString = localStorage.getItem("userInfo");
-      let userInfo = JSON.parse(userInfoString);
+      let userInfo = userInfoString ? JSON.parse(userInfoString) : {};
       this.userId = userInfo.data.id || "";
       /*if (!this.userId) {
     uni.showToast({
@@ -871,7 +870,7 @@ export default {
       });
     },
     onButtonwanClick() {
-      if (this.type) {
+      if (this.storeId) {
         uni.navigateTo({
           url:
             "/pages/haomo/1754031921416900610/page?activityId=" +
