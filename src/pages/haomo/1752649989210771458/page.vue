@@ -48,19 +48,19 @@ export default {
         this.activityId = options.activityId;
       }
 
-      /*if (!options.activityId || !options.orderId) {
-    uni.showToast({
-      title: "数据获取失败",
-      icon: "error",
-      duration: 1000
-    });
-    setTimeout(() => {
-      uni.navigateTo({
-        url: "/pages/haomo/1750714119029264386/page"
-      })
-    }, 1500);
-    return
-  }*/
+      if (!options.activityId || !options.orderId) {
+        uni.showToast({
+          title: "数据获取失败",
+          icon: "error",
+          duration: 1000,
+        });
+        setTimeout(() => {
+          uni.navigateTo({
+            url: "/pages/haomo/1750714119029264386/page",
+          });
+        }, 1500);
+        return;
+      }
     },
 
     onHmH5ScanCodeQrcodeSucess(data) {
