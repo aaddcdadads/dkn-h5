@@ -758,7 +758,11 @@ export default {
             console.log("viewRegistrationOrdersActivityProject--", res);
             if (res.code != 200 || res.result.records.length <= 0) return;
             this.personnelInformationList.value = res.result.records
-              .filter((personnelItem) => personnelItem.participants) // 过滤掉 participants 为 false 的条目
+              .filter(
+                (personnelItem) =>
+                  personnelItem.participants &&
+                  personnelItem.participants != "[]"
+              ) // 过滤掉 participants 为 false 的条目
               .map((personnelItem) => {
                 let list = JSON.parse(personnelItem.participants);
                 list.forEach((listItem) => {
