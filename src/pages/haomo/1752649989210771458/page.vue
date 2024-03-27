@@ -65,6 +65,7 @@ export default {
 
     onHmH5ScanCodeQrcodeSucess(data) {
       console.log("扫描内容--", data);
+
       //如果选择签到的培训管理和扫描出来的不一致
       if (!data) {
         uni.showToast({
@@ -82,12 +83,18 @@ export default {
             this.orderId,
         });
       } else {
+        uni.showToast({
+          title: data,
+          icon: "none",
+          duration: 8000,
+        });
         const queryString = data.split("?")[1]; // 获取？后面的查询参数部分
         const storeId =
           queryString && queryString.indexOf("=")
             ? queryString.split("=")[1]
             : "-1";
         console.log("获取的门店id--", storeId);
+
         //http://192.168.202.142:3000/pages/haomo/1751895267671543809/page?storeId=297b0ebf1dc44a6c9d32678bc4d1ef6f
         this.$getAction("/api/dkn/store/queryById", {
           id: storeId,
