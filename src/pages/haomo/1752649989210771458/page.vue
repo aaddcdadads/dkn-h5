@@ -83,11 +83,6 @@ export default {
             this.orderId,
         });
       } else {
-        uni.showToast({
-          title: data,
-          icon: "none",
-          duration: 8000,
-        });
         const queryString = data.split("?")[1]; // 获取？后面的查询参数部分
         const storeId =
           queryString && queryString.indexOf("=")
