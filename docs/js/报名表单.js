@@ -13,7 +13,7 @@ function() {
   self.orderId = ""
   self.alipayChannel = ""
   self.placeholder.list = []
-  self.orderParticipantsList=[]
+  self.orderParticipantsList = []
   self.getActivityProject = async function () {
     let url = '/api/dkn/activityProject/list'
     let params = {
@@ -50,7 +50,7 @@ function() {
     let url = '/api/dkn/store/listOrder'
     const res = await self.$getAction(url, {
       status: 0,
-      activityId:self.activityId
+      activityId: self.activityId
     })
     if (!res.success || res.result.length === 0) {
       return
@@ -75,7 +75,7 @@ function() {
   self.getAlipayChannel = async function () {
     let url = `/api/sys/dict/getDictText/alipay_channel/${self.channel}`
     const res = await self.$getAction(url)
-    self.alipayChannel=res.result
+    self.alipayChannel = res.result
   }
   self.getData = function () {
     self.getActivityProject()
@@ -120,7 +120,7 @@ function() {
       self.error("领奖门店不能为空")
       return
     }
-    
+
     const orderProjects = self.getOrderProjects();
 
     if (orderProjects.length == 0) {
@@ -200,7 +200,7 @@ function() {
       self.$pay(self.orderId, "1")
       return
     }
-    
+
     self.payPopup.show = true;
     self.activityText.text = self.activityName
     self.countdown.text = ""
@@ -311,10 +311,10 @@ function() {
   //参与人
   self.getDict = async function () {
     let url = "/api/dkn/viewActivityDictItem/list";
-      let params = {
-        activityId: self.activityId,
-        type: 1
-      }
+    let params = {
+      activityId: self.activityId,
+      type: 1
+    }
     const res = await self.$getAction(url, params)
     self.participantsList = res.result.records
   }
@@ -327,9 +327,9 @@ function() {
       let index = e.num * e.orderNumber;
       for (let i = 0; i < index; i++) {
         let title = `${e.name}-参与人${i + 1}`
-         const fi = cList.findIndex(f=> f.id===e.id && f.title ===title )
+        const fi = cList.findIndex(f => f.id === e.id && f.title === title)
         let l = self.participantsList.map((s) => {
-          let value =""
+          let value = ""
           if (fi != -1) {
             const fis = cList[fi].funcList.findIndex(fs => fs.id === s.id)
             if (fis != -1) {
@@ -348,59 +348,64 @@ function() {
           title,
           funcList: l,
         };
-        list.push(par);
+        if (l.length > 0) {
+          list.push(par);
+        }
       }
     });
     self.placeholder.list = list;
+    self.placeholderCard.hidden = list.length == 0 ? true : false
   };
-  setTimeout(() => { 
+  setTimeout(() => {
     self.getParticipants()
   })
 
   self.checkParticipants = function () {
-    const items = self.$refs.placeholder.cList
-        let list = []
-        let status = true
-        for (let i = 0; i < items.length; i++){
-          const item = items[i]
-          if (item.funcList.length > 0) {
-              for (let j = 0; j < item.funcList.length; j++) {
-                try {
-                  const f =item.funcList[j]
-                  if (!f.value) {
-                    throw new Error()
-                  }
-                  let par = {
-                    uid: item.id,
-                    cid:i,
-                    key: f.itemValue,
-                    value:f.value
-                  }
-                  list.push(par)
-                } catch {
-                  list=[]
-                  status = false
-                  self.error(`${item.title}：${item.funcList[j].itemText} 不能为空`)
-                }
-              }
+    const items = self.$refs.placeholder?.cList || [];
+    let list = []
+    let status = true
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i]
+      if (item.funcList.length > 0) {
+        for (let j = 0; j < item.funcList.length; j++) {
+          try {
+            const f = item.funcList[j]
+            if (!f.value) {
+              //throw new Error()
+            }
+            let par = {
+              uid: item.id,
+              cid: i,
+              key: f.itemValue,
+              value: f.value
+            }
+            list.push(par)
+          } catch {
+            list = []
+            status = false
+            self.error(`${item.title}：${item.funcList[j].itemText} 不能为空`)
           }
         }
-        self.orderParticipantsList = list
-        return status
+      }
+    }
+    self.orderParticipantsList = list
+    return status
   }
   self.getProjects = function () {
     const orderProjects = self.getOrderProjects();
-    return orderProjects.map(e => { 
-      let p=[]
-      self.orderParticipantsList.forEach(s => { 
-        if (s.uid===e.id) {
+    return orderProjects.map(e => {
+      let p = []
+      self.orderParticipantsList.forEach(s => {
+        if (s.uid === e.id) {
           p.push(s)
         }
       })
-      
+
       let participants = []
       p.forEach(ss => {
-        let par = { cid: ss.cid }
+        let par = {
+          cid: ss.cid
+        }
         const i = participants.findIndex(a => a.cid === ss.cid)
         if (i != -1) {
           participants[i][ss.key] = ss.value
@@ -409,12 +414,12 @@ function() {
         par[ss.key] = ss.value
         participants.push(par)
       })
-      participants.forEach(sss => { 
+      participants.forEach(sss => {
         delete sss.cid
       })
       return {
         ...e,
-        participants:JSON.stringify(participants)
+        participants: JSON.stringify(participants)
       }
     })
   }
