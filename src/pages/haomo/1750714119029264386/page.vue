@@ -1237,10 +1237,12 @@ export default {
           };
         });
         projectList = projectList.sort((a, b) => a.sortNo - b.sortNo);
+        let startTime = self.getDateToFormat(self.activityItem.startTime);
+        let endTime = self.getDateToFormat(self.activityItem.endTime);
+        let ListTime =
+          startTime === endTime ? startTime : `${startTime}-${endTime}`;
         self.activityList.item = {
-          time: `${self.getDateToFormat(
-            self.activityItem.startTime
-          )}-${self.getDateToFormat(self.activityItem.endTime)}`,
+          time: ListTime,
           closeTime: self.activityItem.closeTime,
           activityType: self.activityExtItem
             ? self.activityExtItem.activityType
